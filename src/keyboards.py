@@ -115,12 +115,15 @@ def presets_kb() -> InlineKeyboardMarkup:
 def provider_detail_kb(provider_id: int) -> InlineKeyboardMarkup:
     kb = InlineKeyboardBuilder()
     kb.button(text="➕ Добавить модель", callback_data=f"prov:add_model:{provider_id}")
-    kb.button(text="⬆️ Поднять приоритет", callback_data=f"prov:up:{provider_id}")
-    kb.button(text="⬇️ Опустить приоритет", callback_data=f"prov:down:{provider_id}")
+    kb.button(text="🔝 На первое место", callback_data=f"prov:top:{provider_id}")
+    kb.button(text="⬆️ Поднять", callback_data=f"prov:up:{provider_id}")
+    kb.button(text="⬇️ Опустить", callback_data=f"prov:down:{provider_id}")
+    kb.button(text="🔚 На последнее место", callback_data=f"prov:bottom:{provider_id}")
+    kb.button(text="🔢 Задать позицию", callback_data=f"prov:pos:{provider_id}")
     kb.button(text="🔄 Включить/выключить", callback_data=f"prov:toggle:{provider_id}")
     kb.button(text="🗑 Удалить", callback_data=f"prov:delete:{provider_id}")
     kb.button(text="🔙 К списку", callback_data="menu:providers")
-    kb.adjust(1, 1, 1, 1, 1, 1)
+    kb.adjust(1, 2, 2, 1, 1, 1, 1)
     return kb.as_markup()
 
 

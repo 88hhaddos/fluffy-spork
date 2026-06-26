@@ -35,6 +35,7 @@ class AdminStates(StatesGroup):
     add_prov_key = State()
     add_prov_model = State()
     add_model_to_prov = State()
+    set_prov_position = State()
 
     edit_base_prompt = State()
     edit_topic = State()
@@ -446,6 +447,48 @@ async def process_prov_model(message: Message, state: FSMContext, db):
     await _save_providers_batch(message, state, db, raw)
 
 
+async def _move_provider(db, pid: int, direction: str):
+    """Перемещает провайдера: up, down, top, bottom."""
+    providers = await db.get_providers()
+    current = next((p for p in providers if p["id"] == pid), None)
+    if not current:
+        return
+
+    same_type = sorted(
+        [p for p in providers if p["provider_type"] == current["provider_type"]],
+        key=lambda x: x["priority"],
+    )
+    idx = next((i for i, p in enumerate(same_type) if p["id"] == pid), -1)
+    if idx == -1:
+        return
+
+    if direction == "up" and idx > 0:
+        other = same_type[idx - 1]
+        await db.update_provider(pid, priority=other["priority"])
+        await db.update_provider(other["id"], priority=current["priority"])
+    elif direction == "down" and idx < len(same_type) - 1:
+        other = same_type[idx + 1]
+        await db.update_provider(pid, priority=other["priority"])
+        await db.update_provider(other["id"], priority=current["priority"])
+    elif direction == "top" and idx > 0:
+        await _reorder_to_position(db, same_type, pid, 0)
+    elif direction == "bottom" and idx < len(same_type) - 1:
+        await _reorder_to_position(db, same_type, pid, len(same_type) - 1)
+
+
+async def _reorder_to_position(db, same_type: list, pid: int, target_idx: int):
+    """Переставляет провайдера на target_idx и сдвигает остальные."""
+    current_idx = next((i for i, p in enumerate(same_type) if p["id"] == pid), -1)
+    if current_idx == -1 or current_idx == target_idx:
+        return
+
+    item = same_type.pop(current_idx)
+    same_type.insert(target_idx, item)
+
+    for new_prio, p in enumerate(same_type):
+        await db.update_provider(p["id"], priority=new_prio)
+
+
 async def _save_providers_batch(message: Message, state: FSMContext, db, raw_models: str):
     data = await state.get_data()
     ptype = data.get("provider_type", "text")
@@ -532,6 +575,50 @@ async def process_add_model_to_prov(message: Message, state: FSMContext, db):
     await message.answer(result, reply_markup=main_menu_kb())
 
 
+@router.message(AdminStates.set_prov_position, IsAdmin())
+async def process_set_position(message: Message, state: FSMContext, db):
+    try:
+        pos = int(message.text.strip())
+        if pos < 1:
+            raise ValueError
+    except ValueError:
+        await message.answer("Введите число (1 = первая позиция):")
+        return
+
+    data = await state.get_data()
+    pid = data.get("prov_id")
+    if not pid:
+        await state.clear()
+        await message.answer("Ошибка: провайдер не найден", reply_markup=main_menu_kb())
+        return
+
+    providers = await db.get_providers()
+    current = next((p for p in providers if p["id"] == pid), None)
+    if not current:
+        await state.clear()
+        await message.answer("Провайдер не найден", reply_markup=main_menu_kb())
+        return
+
+    same_type = sorted(
+        [p for p in providers if p["provider_type"] == current["provider_type"]],
+        key=lambda x: x["priority"],
+    )
+
+    target_idx = min(pos - 1, len(same_type) - 1)
+    old_pos = next((i + 1 for i, p in enumerate(same_type) if p["id"] == pid), 0)
+
+    await _reorder_to_position(db, same_type, pid, target_idx)
+    await state.clear()
+
+    await message.answer(
+        f"✅ Позиция изменена!\n\n"
+        f"Модель: {current['model']}\n"
+        f"Было: #{old_pos}\n"
+        f"Стало: #{target_idx + 1}",
+        reply_markup=main_menu_kb(),
+    )
+
+
 @router.callback_query(F.data.startswith("prov:"), IsAdmin())
 async def cb_provider_detail(callback: CallbackQuery, db, state: FSMContext):
     data = callback.data
@@ -550,35 +637,49 @@ async def cb_provider_detail(callback: CallbackQuery, db, state: FSMContext):
     if data.startswith("prov:up:") or data.startswith("prov:down:"):
         pid = int(data.split(":")[2])
         direction = "up" if data.startswith("prov:up:") else "down"
-        providers = await db.get_providers()
-        current = next((p for p in providers if p["id"] == pid), None)
-        if not current:
-            await callback.answer("Не найдено")
-            return
-
-        same_type = [p for p in providers if p["provider_type"] == current["provider_type"]]
-        same_type.sort(key=lambda x: x["priority"])
-
-        idx = next((i for i, p in enumerate(same_type) if p["id"] == pid), -1)
-        if idx == -1:
-            await callback.answer("Не найдено")
-            return
-
-        if direction == "up" and idx > 0:
-            other = same_type[idx - 1]
-            await db.update_provider(pid, priority=other["priority"])
-            await db.update_provider(other["id"], priority=current["priority"])
-        elif direction == "down" and idx < len(same_type) - 1:
-            other = same_type[idx + 1]
-            await db.update_provider(pid, priority=other["priority"])
-            await db.update_provider(other["id"], priority=current["priority"])
-
+        await _move_provider(db, pid, direction)
         await callback.answer("Приоритет изменён")
         providers = await db.get_providers()
         await callback.message.edit_text(
             "🤖 <b>AI Провайдеры</b>",
             reply_markup=providers_kb(providers),
         )
+        return
+
+    if data.startswith("prov:top:") or data.startswith("prov:bottom:"):
+        pid = int(data.split(":")[2])
+        direction = "top" if data.startswith("prov:top:") else "bottom"
+        await _move_provider(db, pid, direction)
+        await callback.answer("Перемещено")
+        providers = await db.get_providers()
+        await callback.message.edit_text(
+            "🤖 <b>AI Провайдеры</b>",
+            reply_markup=providers_kb(providers),
+        )
+        return
+
+    if data.startswith("prov:pos:"):
+        pid = int(data.split(":")[2])
+        providers = await db.get_providers()
+        current = next((p for p in providers if p["id"] == pid), None)
+        if not current:
+            await callback.answer("Не найдено")
+            return
+        same_type = [p for p in providers if p["provider_type"] == current["provider_type"]]
+        same_type.sort(key=lambda x: x["priority"])
+        current_pos = next((i + 1 for i, p in enumerate(same_type) if p["id"] == pid), 0)
+        total = len(same_type)
+
+        await state.set_state(AdminStates.set_prov_position)
+        await state.update_data(prov_id=pid)
+        await callback.message.edit_text(
+            f"🔢 <b>Задать позицию</b>\n\n"
+            f"Модель: {current['model']}\n"
+            f"Текущая позиция: {current_pos} из {total}\n\n"
+            f"Введите номер позиции (1 = первая, {total} = последняя):",
+            reply_markup=cancel_kb(),
+        )
+        await callback.answer()
         return
 
     if data.startswith("prov:delete:"):
