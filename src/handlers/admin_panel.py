@@ -1671,59 +1671,80 @@ async def cb_rel_detail(callback: CallbackQuery, db):
 
 @router.callback_query(F.data == "menu:say", IsAdmin())
 async def cb_say_menu(callback: CallbackQuery, state: FSMContext, db):
-    bot_name = await db.get_setting("bot_name") or "Дракончик Закури"
+    await state.set_state(AdminStates.say_as_bot)
+    await state.update_data(target_chat_id=callback.message.chat.id)
     await callback.message.edit_text(
-        f"📨 <b>Написать от лица бота</b>\n\n"
-        f"Бот: {bot_name}\n\n"
-        f"Что отправить?\n\n"
-        f"• Текст — просто напишите\n"
-        f"• Фото — отправьте фото с подписью\n"
-        f"• Голосовое — отправьте голосовое\n"
-        f"• Стикер — отправьте стикер\n\n"
-        f"Отправится в этот чат от лица бота.\n"
-        f"Для группы: /say [текст] в группе.",
+        "📨 <b>Написать от лица бота</b>\n\n"
+        "Отправьте то что бот должен отправить:\n"
+        "• Текст — просто напишите\n"
+        "• Фото — отправьте фото (можно с подписью)\n"
+        "• Стикер — отправьте стикер\n"
+        "• Голосовое — отправьте голосовое\n\n"
+        "Отправится в этот чат (ЛС бота).\n\n"
+        "Чтобы отправить в группу — перешлите сообщение из группы, "
+        "бот запомнит чат. Затем отправьте что отправить.\n\n"
+        "Или используйте /say [текст] прямо в группе.",
         reply_markup=cancel_kb(),
     )
-    await state.set_state(AdminStates.say_as_bot)
     await callback.answer()
 
 
 @router.message(AdminStates.say_as_bot, IsAdmin())
 async def process_say_as_bot(message: Message, state: FSMContext, db, bot):
+    data = await state.get_data()
+    target_chat_id = data.get("target_chat_id", message.chat.id)
+
+    if message.forward_origin or (message.text and message.text.strip().startswith("Переслано")):
+        target_chat_id = message.chat.id
+        await state.update_data(target_chat_id=target_chat_id)
+        await message.answer(
+            f"✅ Чат выбран!\n\nТеперь отправьте что бот должен отправить в этот чат:\n"
+            f"• Текст\n• Фото\n• Стикер\n• Голосовое"
+        )
+        return
+
+    if message.forward_from_chat:
+        target_chat_id = message.forward_from_chat.id
+        await state.update_data(target_chat_id=target_chat_id)
+        await message.answer(
+            f"✅ Чат выбран: {message.forward_from_chat.title or target_chat_id}\n\n"
+            f"Теперь отправьте что бот должен отправить:"
+        )
+        return
+
     await state.clear()
     bot_name = await db.get_setting("bot_name") or "Закури"
-    chat_id = message.chat.id
 
     try:
         if message.photo:
             photo = message.photo[-1]
             caption = message.caption or ""
-            sent = await bot.send_photo(chat_id, photo.file_id, caption=caption[:1024] if caption else None)
+            sent = await bot.send_photo(target_chat_id, photo.file_id, caption=caption[:1024] if caption else None)
             stored_text = f"[Фото: {caption}]" if caption else "[Фото]"
 
         elif message.voice:
             voice = message.voice
-            sent = await bot.send_voice(chat_id, voice.file_id)
+            sent = await bot.send_voice(target_chat_id, voice.file_id)
             stored_text = "[Голосовое]"
 
         elif message.sticker:
-            sent = await bot.send_sticker(chat_id, message.sticker.file_id)
+            sent = await bot.send_sticker(target_chat_id, message.sticker.file_id)
             stored_text = f"[Стикер: {message.sticker.emoji or ''}]"
 
         elif message.animation:
-            sent = await bot.send_animation(chat_id, message.animation.file_id, caption=message.caption)
+            sent = await bot.send_animation(target_chat_id, message.animation.file_id, caption=message.caption)
             stored_text = "[GIF]"
 
         elif message.video:
-            sent = await bot.send_video(chat_id, message.video.file_id, caption=message.caption)
+            sent = await bot.send_video(target_chat_id, message.video.file_id, caption=message.caption)
             stored_text = "[Видео]"
 
         elif message.document:
-            sent = await bot.send_document(chat_id, message.document.file_id, caption=message.caption)
+            sent = await bot.send_document(target_chat_id, message.document.file_id, caption=message.caption)
             stored_text = f"[Документ: {message.document.file_name}]"
 
         elif message.text:
-            sent = await bot.send_message(chat_id, message.text[:4096])
+            sent = await bot.send_message(target_chat_id, message.text[:4096])
             stored_text = message.text[:4096]
 
         else:
@@ -1731,7 +1752,7 @@ async def process_say_as_bot(message: Message, state: FSMContext, db, bot):
             return
 
         await db.store_message(
-            chat_id=chat_id,
+            chat_id=target_chat_id,
             user_id=0,
             username=bot_name,
             first_name="",
@@ -1742,7 +1763,8 @@ async def process_say_as_bot(message: Message, state: FSMContext, db, bot):
             message_id=sent.message_id,
         )
 
-        await message.answer("✅ Отправлено от лица бота!", reply_markup=main_menu_kb())
+        chat_name = "группу" if target_chat_id != message.chat.id else "ЛС"
+        await message.answer(f"✅ Отправлено от лица бота в {chat_name}!", reply_markup=main_menu_kb())
 
     except Exception as e:
         logger.error(f"Say as bot error: {e}", exc_info=True)
