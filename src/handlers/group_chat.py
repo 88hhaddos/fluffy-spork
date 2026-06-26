@@ -425,12 +425,42 @@ async def _generate_and_send_response(
     try:
         await bot.send_chat_action(chat_id=message.chat.id, action=ChatAction.TYPING)
 
+        user_id = message.from_user.id if message.from_user else 0
+        username = (message.from_user.username or message.from_user.first_name) if message.from_user else ""
+
+        text_lower = (message.text or message.caption or "").lower()
+
+        INSULT_WORDS = [
+            "рот шатал", "пошёл нахуй", "пошел нахуй", "иди нахуй", "нахуй", "пидор",
+            "мразь", "тварь", "сволочь", "урод", "дурак", "дебил", "даун", "тупой",
+            "ненавижу", "ненавижу тебя", "ты лох", "лох", "чмо", "шлюха", "шалава",
+            "закури говно", "ты говно", "ты мусор", "ублюдок", "соси", "сосать",
+            "заткнись", "захлопни", "душила", "терпила", "ты терпила",
+        ]
+        COMPLIMENT_WORDS = [
+            "красавчик", "молодец", "умница", "хороший", "лучший", "закури лучший",
+            "люблю тебя", "обожаю", "ты крутой", "закури красавчик", "закури молодец",
+            "спасибо закури", "спасибо", "закури ты лучший", "добрый", "милый",
+            "закури милый", "закури добрый", "классный", "закури классный",
+        ]
+
+        if user_id:
+            insult_detected = any(w in text_lower for w in INSULT_WORDS)
+            compliment_detected = any(w in text_lower for w in COMPLIMENT_WORDS)
+
+            if insult_detected:
+                new_rel = await db.adjust_relationship(user_id, username, -15)
+                logger.info(f"Relationship {username}: -15 → {new_rel}/100 (insult)")
+            elif compliment_detected:
+                new_rel = await db.adjust_relationship(user_id, username, +10)
+                logger.info(f"Relationship {username}: +10 → {new_rel}/100 (compliment)")
+
         status_msg = await message.reply(random.choice(THINKING_MESSAGES))
 
         system_prompt = await build_system_prompt(
             db, message.chat.id,
-            user_id=message.from_user.id if message.from_user else 0,
-            username=(message.from_user.username or message.from_user.first_name) if message.from_user else "",
+            user_id=user_id,
+            username=username,
         )
 
         username = ""
