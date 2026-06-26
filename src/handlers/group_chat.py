@@ -325,14 +325,14 @@ async def _generate_and_send_response(
             response = "Хм, Закури задумался. Спроси ещё раз."
 
         await bot.send_chat_action(chat_id=message.chat.id, action=ChatAction.TYPING)
-        sent = await message.reply(response[:4096])
+        await status_msg.edit_text(response[:4096])
 
         bot_name = await db.get_setting("bot_name") or "Закури"
         await context_manager.store_bot_message(
             chat_id=message.chat.id,
             bot_username=bot_name,
             text=response[:4096],
-            message_id=sent.message_id,
+            message_id=status_msg.message_id,
         )
 
         await context_manager.maybe_summarize(message.chat.id)
@@ -386,14 +386,11 @@ async def handle_photo_generation(
     try:
         image_bytes = await ai_manager.generate_image(prompt)
 
-        await update_status(f"✅ Готово! Закури дорисовал.\n\n💬 Промпт: {short_prompt}")
-        await asyncio.sleep(0.5)
-
         from aiogram.types import BufferedInputFile
         photo = BufferedInputFile(image_bytes, filename="zakuri_art.png")
         await message.answer_photo(photo, caption=f"🎨 Закури нарисовал: {short_prompt}")
 
-        await status_msg.delete()
+        await update_status(f"✅ Готово!\n\n💬 Промпт: {short_prompt}")
 
         bot_name = "Закури"
         await context_manager.store_bot_message(
@@ -457,14 +454,11 @@ async def handle_photo_edit(
 
         edited_bytes = await ai_manager.edit_image(image_bytes, prompt)
 
-        await update_status(f"✅ Готово! Закури закончил редактирование.")
-        await asyncio.sleep(0.5)
-
         from aiogram.types import BufferedInputFile
         result_photo = BufferedInputFile(edited_bytes, filename="zakuri_edit.png")
         await message.answer_photo(result_photo, caption=f"🎨 Закури отредактировал: {prompt}")
 
-        await status_msg.delete()
+        await update_status(f"✅ Готово!\n\n💬 Инструкции: {prompt}")
 
         await context_manager.store_bot_message(
             chat_id=message.chat.id,
