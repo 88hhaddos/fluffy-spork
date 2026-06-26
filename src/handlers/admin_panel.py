@@ -19,6 +19,7 @@ from src.keyboards import (
     admin_detail_kb,
     cancel_kb,
     presets_kb,
+    priority_kb,
     NVIDIA_PRESETS,
     OPENROUTER_PRESETS,
 )
@@ -447,6 +448,29 @@ async def process_prov_model(message: Message, state: FSMContext, db):
     await _save_providers_batch(message, state, db, raw)
 
 
+async def _show_priority_menu(callback: CallbackQuery, db, pid: int):
+    """Показывает меню приоритета для провайдера."""
+    providers = await db.get_providers()
+    current = next((p for p in providers if p["id"] == pid), None)
+    if not current:
+        await callback.answer("Не найдено")
+        return
+    same_type = sorted(
+        [p for p in providers if p["provider_type"] == current["provider_type"]],
+        key=lambda x: x["priority"],
+    )
+    pos = next((i + 1 for i, p in enumerate(same_type) if p["id"] == pid), 0)
+    total = len(same_type)
+
+    await callback.message.edit_text(
+        f"⚡ <b>Приоритет модели</b>\n\n"
+        f"Модель: {current['model']}\n"
+        f"Позиция: <b>#{pos}</b> из {total}\n\n"
+        f"💡 Верхние = используются первыми",
+        reply_markup=priority_kb(pid, pos, total),
+    )
+
+
 async def _move_provider(db, pid: int, direction: str):
     """Перемещает провайдера: up, down, top, bottom."""
     providers = await db.get_providers()
@@ -634,16 +658,36 @@ async def cb_provider_detail(callback: CallbackQuery, db, state: FSMContext):
         )
         return
 
+    if data.startswith("prov:priority:"):
+        pid = int(data.split(":")[2])
+        providers = await db.get_providers()
+        current = next((p for p in providers if p["id"] == pid), None)
+        if not current:
+            await callback.answer("Не найдено")
+            return
+        same_type = sorted(
+            [p for p in providers if p["provider_type"] == current["provider_type"]],
+            key=lambda x: x["priority"],
+        )
+        pos = next((i + 1 for i, p in enumerate(same_type) if p["id"] == pid), 0)
+        total = len(same_type)
+
+        await callback.message.edit_text(
+            f"⚡ <b>Приоритет модели</b>\n\n"
+            f"Модель: {current['model']}\n"
+            f"Позиция: <b>#{pos}</b> из {total}\n\n"
+            f"💡 Верхние = используются первыми",
+            reply_markup=priority_kb(pid, pos, total),
+        )
+        await callback.answer()
+        return
+
     if data.startswith("prov:up:") or data.startswith("prov:down:"):
         pid = int(data.split(":")[2])
         direction = "up" if data.startswith("prov:up:") else "down"
         await _move_provider(db, pid, direction)
-        await callback.answer("Приоритет изменён")
-        providers = await db.get_providers()
-        await callback.message.edit_text(
-            "🤖 <b>AI Провайдеры</b>",
-            reply_markup=providers_kb(providers),
-        )
+        await callback.answer("Перемещено")
+        await _show_priority_menu(callback, db, pid)
         return
 
     if data.startswith("prov:top:") or data.startswith("prov:bottom:"):
@@ -651,11 +695,7 @@ async def cb_provider_detail(callback: CallbackQuery, db, state: FSMContext):
         direction = "top" if data.startswith("prov:top:") else "bottom"
         await _move_provider(db, pid, direction)
         await callback.answer("Перемещено")
-        providers = await db.get_providers()
-        await callback.message.edit_text(
-            "🤖 <b>AI Провайдеры</b>",
-            reply_markup=providers_kb(providers),
-        )
+        await _show_priority_menu(callback, db, pid)
         return
 
     if data.startswith("prov:pos:"):
@@ -719,8 +759,7 @@ async def cb_provider_detail(callback: CallbackQuery, db, state: FSMContext):
         await callback.answer()
         return
 
-    if data in ("prov:add_text", "prov:add_image", "prov:presets", "prov:test_image",
-                "prov:nvidia_presets"):
+    if data in ("prov:add_text", "prov:add_image", "prov:presets", "prov:test_image"):
         return
 
     pid = int(data.split(":")[1])
