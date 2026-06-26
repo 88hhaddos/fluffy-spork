@@ -322,8 +322,6 @@ async def _generate_and_send_response(
         messages = await context_manager.build_messages_for_ai(
             chat_id=message.chat.id,
             system_prompt=system_prompt,
-            current_message=text,
-            current_username=username,
         )
 
         async def keep_typing():
@@ -391,10 +389,7 @@ async def handle_photo_generation(
         )
         return
 
-    if not any(w in prompt.lower() for w in ["робот", "robot", "мех", "киборг", "android", "droid"]):
-        prompt = prompt + ", realistic person or animal, natural style, no robots"
-
-    short_prompt = prompt.split(",")[0].strip()
+    short_prompt = prompt
 
     status_msg = await message.reply(random.choice(PHOTO_MESSAGES))
     await bot.send_chat_action(chat_id=message.chat.id, action=ChatAction.UPLOAD_PHOTO)
@@ -406,9 +401,42 @@ async def handle_photo_generation(
             pass
 
     await asyncio.sleep(1)
-    await update_status(f"🖌️ Закури набрасывает эскиз...\n\n💬 Промпт: {short_prompt}")
-    await asyncio.sleep(1.5)
-    await update_status(f"🎨 Закури раскрашивает...\n\n💬 Промпт: {short_prompt}")
+    await update_status(f"🧠 Закури продумывает детали...\n\n💬 Промпт: {short_prompt}")
+
+    try:
+        enhanced = await ai_manager.chat_completion(
+            messages=[
+                {
+                    "role": "system",
+                    "content": (
+                        "Ты ассистент который улучшает промпты для генерации изображений. "
+                        "На вход получаешь короткий промпт на русском. "
+                        "Улучши его: добавь детали, стиль, освещение, качество. "
+                        "Переведи на английский. Не добавляй людей если не просят. "
+                        "Если не указан стиль — добавь 'realistic, high quality, detailed'. "
+                        "Отвечай ТОЛЬКО улучшенным промптом на английском, без объяснений."
+                    ),
+                },
+                {
+                    "role": "user",
+                    "content": prompt,
+                },
+            ],
+            temperature=0.3,
+            max_tokens=200,
+        )
+
+        if enhanced and len(enhanced) > 10:
+            prompt = enhanced.strip()
+        else:
+            if not any(w in prompt.lower() for w in ["робот", "robot", "мех", "киборг"]):
+                prompt = prompt + ", realistic, high quality, detailed, no robots"
+
+    except Exception:
+        if not any(w in prompt.lower() for w in ["робот", "robot", "мех", "киборг"]):
+            prompt = prompt + ", realistic, high quality, detailed, no robots"
+
+    await update_status(f"🖌️ Закури рисует...\n\n💬 Промпт: {short_prompt}")
     await bot.send_chat_action(chat_id=message.chat.id, action=ChatAction.UPLOAD_PHOTO)
 
     try:
