@@ -22,6 +22,8 @@ from src.keyboards import (
     priority_kb,
     photo_style_kb,
     PHOTO_STYLES as KB_PHOTO_STYLES,
+    bans_kb,
+    ban_detail_kb,
     NVIDIA_PRESETS,
     OPENROUTER_PRESETS,
 )
@@ -52,6 +54,7 @@ class AdminStates(StatesGroup):
     set_triggers = State()
     set_anger = State()
     set_photo_custom = State()
+    add_ban = State()
 
     add_admin = State()
 
@@ -1325,6 +1328,112 @@ async def cb_admin_detail(callback: CallbackQuery, db):
     await callback.message.edit_text(
         f"👤 <b>{name}</b>\nID: {admin['user_id']}",
         reply_markup=admin_detail_kb(uid),
+    )
+    await callback.answer()
+
+
+# ─── Ban List ───
+
+@router.callback_query(F.data == "menu:bans", IsAdmin())
+async def cb_bans(callback: CallbackQuery, db):
+    banned = await db.get_banned_users()
+    if not banned:
+        text = "🚫 <b>Бан-лист</b>\n\nПусто. Никто не забанен."
+    else:
+        lines = []
+        for u in banned:
+            name = u.get("username") or str(u["user_id"])
+            w = u.get("warnings", 0)
+            reason = u.get("reason") or ""
+            lines.append(f"🚫 {name} (⚠️{w}) — {reason[:30]}")
+        text = "🚫 <b>Бан-лист</b>\n\n" + "\n".join(lines)
+    await callback.message.edit_text(text, reply_markup=bans_kb(banned))
+    await callback.answer()
+
+
+@router.callback_query(F.data == "ban:add", IsAdmin())
+async def cb_ban_add(callback: CallbackQuery, state: FSMContext):
+    await state.set_state(AdminStates.add_ban)
+    await callback.message.edit_text(
+        "🚫 <b>Забанить юзера</b>\n\n"
+        "Введите ID юзера или перешлите его сообщение.\n"
+        "Можно указать причину через двоеточие: <code>123456789: спам</code>\n\n"
+        "ID можно узнать у @userinfobot",
+        reply_markup=cancel_kb(),
+    )
+    await callback.answer()
+
+
+@router.message(AdminStates.add_ban, IsAdmin())
+async def process_ban(message: Message, state: FSMContext, db):
+    user_id = None
+    username = ""
+    reason = ""
+
+    if message.forward_origin:
+        origin = message.forward_origin
+        if hasattr(origin, "sender_user") and origin.sender_user:
+            user_id = origin.sender_user.id
+            username = origin.sender_user.username or ""
+    elif message.text:
+        parts = message.text.strip().split(":", 1)
+        try:
+            user_id = int(parts[0].strip())
+        except ValueError:
+            await message.answer("Введите числовой ID или перешлите сообщение:")
+            return
+        if len(parts) > 1:
+            reason = parts[1].strip()
+
+    if not user_id:
+        await message.answer("Не удалось определить ID:")
+        return
+
+    await db.ban_user(user_id, username, message.from_user.id, reason)
+    await state.clear()
+    await message.answer(
+        f"🚫 Юзер забанен!\n\nID: {user_id}\nИмя: {username or 'неизвестно'}\nПричина: {reason or 'не указана'}",
+        reply_markup=main_menu_kb(),
+    )
+
+
+@router.callback_query(F.data.startswith("ban:unban:"), IsAdmin())
+async def cb_unban(callback: CallbackQuery, db):
+    uid = int(callback.data.split(":")[2])
+    await db.unban_user(uid)
+    await callback.answer("Разбанен")
+    banned = await db.get_banned_users()
+    await callback.message.edit_text(
+        "🚫 <b>Бан-лист</b>",
+        reply_markup=bans_kb(banned),
+    )
+
+
+@router.callback_query(F.data.startswith("ban:clear_warn:"), IsAdmin())
+async def cb_clear_warn(callback: CallbackQuery, db):
+    uid = int(callback.data.split(":")[2])
+    await db.clear_warnings(uid)
+    await callback.answer("Предупреждения очищены")
+
+
+@router.callback_query(F.data.startswith("ban:"), IsAdmin())
+async def cb_ban_detail(callback: CallbackQuery, db):
+    if callback.data.startswith("ban:unban:") or callback.data.startswith("ban:clear_warn:") or callback.data == "ban:add":
+        return
+    uid = int(callback.data.split(":")[1])
+    banned = await db.get_banned_users()
+    user = next((u for u in banned if u["user_id"] == uid), None)
+    if not user:
+        await callback.answer("Не найден")
+        return
+    name = user.get("username") or str(uid)
+    await callback.message.edit_text(
+        f"🚫 <b>{name}</b>\n\n"
+        f"ID: {uid}\n"
+        f"Предупреждения: {user.get('warnings', 0)}\n"
+        f"Причина: {user.get('reason') or 'не указана'}\n"
+        f"Забанен: {user.get('banned_at', 'неизвестно')}",
+        reply_markup=ban_detail_kb(uid),
     )
     await callback.answer()
 

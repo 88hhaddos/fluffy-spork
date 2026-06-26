@@ -151,14 +151,8 @@ def should_respond_in_group(message: Message, chat_settings: dict, triggers: lis
     auto = chat_settings.get("auto_respond", 0) if chat_settings else 0
     if auto:
         freq = chat_settings.get("respond_frequency", 10) if chat_settings else 10
-        if random.randint(1, 100) <= freq:
+        if not _is_short_or_meaningless(text) and random.randint(1, 100) <= freq:
             return True
-
-    if _is_short_or_meaningless(text):
-        return False
-
-    if random.randint(1, 100) <= 5:
-        return True
 
     return False
 
@@ -308,8 +302,11 @@ async def handle_group_message(
 
     if addressed:
         logger.info(f"Responding to {message.from_user.username or message.from_user.first_name}: {text[:50]}")
-    elif not _is_short_or_meaningless(text):
-        logger.debug(f"Ignoring message from {message.from_user.username or message.from_user.first_name}: {text[:50]}")
+
+    banned = await db.is_banned(message.from_user.id) if message.from_user else False
+    if banned:
+        logger.info(f"Banned user {message.from_user.id} ignored")
+        return
 
     if addressed and is_photo_request(text):
         await handle_photo_generation(message, text, ai_manager, bot, context_manager, db)
@@ -344,6 +341,11 @@ async def handle_private_message(
     bot,
 ):
     if message.from_user and message.from_user.id == config.BOT_ID:
+        return
+
+    banned = await db.is_banned(message.from_user.id) if message.from_user else False
+    if banned:
+        await message.reply("🚫 Ты забанен и не можешь пользоваться ботом.")
         return
 
     text = get_message_text(message)
@@ -405,7 +407,11 @@ async def _generate_and_send_response(
 
         status_msg = await message.reply(random.choice(THINKING_MESSAGES))
 
-        system_prompt = await build_system_prompt(db, message.chat.id)
+        system_prompt = await build_system_prompt(
+            db, message.chat.id,
+            user_id=message.from_user.id if message.from_user else 0,
+            username=(message.from_user.username or message.from_user.first_name) if message.from_user else "",
+        )
 
         username = ""
         if message.from_user:
@@ -492,6 +498,7 @@ async def handle_photo_generation(
     style_suffix = PHOTO_STYLES.get(style, PHOTO_STYLES["realistic"])
 
     requester = message.from_user.first_name or message.from_user.username or "Кто-то"
+    requester_id = message.from_user.id
 
     status_msg = await message.reply(random.choice(PHOTO_MESSAGES))
     await bot.send_chat_action(chat_id=message.chat.id, action=ChatAction.UPLOAD_PHOTO)
@@ -505,6 +512,47 @@ async def handle_photo_generation(
     count_text = f" ({count} варианта)" if count > 1 else ""
     await asyncio.sleep(1)
     await update_status(f"🧠 Закури продумывает детали{count_text}...\n\n💬 Промпт: {short_prompt}\n🎨 Стиль: {style}")
+
+    if db:
+        is_banned = await db.is_banned(requester_id)
+        if is_banned:
+            await update_status("🚫 Ты забанен и не можешь просить фото!")
+            return
+
+        warnings = await db.get_warnings(requester_id)
+        if warnings >= 3:
+            await db.ban_user(requester_id, requester, reason="3 предупреждения за неадекватные фото-запросы")
+            await update_status("🚫 3 предупреждения! Ты забанен!")
+            return
+
+    try:
+        is_appropriate = await ai_manager.chat_completion(
+            messages=[
+                {
+                    "role": "system",
+                    "content": (
+                        "Оцени запрос на генерацию изображения. "
+                        "Ответь ТОЛЬКО 'OK' если запрос адекватный, "
+                        "или 'BAD: причина' если неадекватный "
+                        "(насилие, незаконное, и т.д.)."
+                    ),
+                },
+                {"role": "user", "content": prompt},
+            ],
+            temperature=0.1,
+            max_tokens=50,
+        )
+
+        if is_appropriate and is_appropriate.strip().startswith("BAD"):
+            if db:
+                w = await db.add_warning(requester_id, requester)
+                reason = is_appropriate.split(":", 1)[1].strip() if ":" in is_appropriate else "неадекватный запрос"
+                await update_status(f"⚠️ Предупреждение {w}/3!\n\nПричина: {reason}")
+            else:
+                await update_status("⚠️ Закури отказался рисовать это!")
+            return
+    except Exception:
+        pass
 
     try:
         custom_instructions = ""

@@ -69,6 +69,22 @@ CREATE TABLE IF NOT EXISTS chat_settings (
     is_active INTEGER DEFAULT 1
 );
 
+CREATE TABLE IF NOT EXISTS user_bans (
+    user_id INTEGER PRIMARY KEY,
+    username TEXT,
+    banned_by INTEGER,
+    reason TEXT,
+    warnings INTEGER DEFAULT 0,
+    banned_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS user_relationships (
+    user_id INTEGER PRIMARY KEY,
+    username TEXT,
+    relationship INTEGER DEFAULT 0,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 CREATE INDEX IF NOT EXISTS idx_messages_chat_id ON messages(chat_id);
 CREATE INDEX IF NOT EXISTS idx_key_events_chat_id ON key_events(chat_id);
 """
@@ -315,3 +331,87 @@ class Database:
             values,
         )
         await self.conn.commit()
+
+    # ─── User Bans ───
+
+    async def ban_user(self, user_id: int, username: str = "", banned_by: int = 0, reason: str = ""):
+        await self.conn.execute(
+            "INSERT OR REPLACE INTO user_bans (user_id, username, banned_by, reason, banned_at) "
+            "VALUES (?, ?, ?, ?, CURRENT_TIMESTAMP)",
+            (user_id, username, banned_by, reason),
+        )
+        await self.conn.commit()
+
+    async def unban_user(self, user_id: int):
+        await self.conn.execute("DELETE FROM user_bans WHERE user_id = ?", (user_id,))
+        await self.conn.commit()
+
+    async def is_banned(self, user_id: int) -> bool:
+        cur = await self.conn.execute("SELECT 1 FROM user_bans WHERE user_id = ?", (user_id,))
+        return await cur.fetchone() is not None
+
+    async def get_banned_users(self) -> list[dict]:
+        cur = await self.conn.execute("SELECT * FROM user_bans ORDER BY banned_at DESC")
+        rows = await cur.fetchall()
+        return [dict(row) for row in rows]
+
+    async def add_warning(self, user_id: int, username: str = "") -> int:
+        cur = await self.conn.execute(
+            "SELECT warnings FROM user_bans WHERE user_id = ?", (user_id,)
+        )
+        row = await cur.fetchone()
+        warnings = (row[0] if row else 0) + 1
+        if row:
+            await self.conn.execute(
+                "UPDATE user_bans SET warnings = ?, username = ? WHERE user_id = ?",
+                (warnings, username, user_id),
+            )
+        else:
+            await self.conn.execute(
+                "INSERT INTO user_bans (user_id, username, warnings) VALUES (?, ?, ?)",
+                (user_id, username, warnings),
+            )
+        await self.conn.commit()
+        return warnings
+
+    async def get_warnings(self, user_id: int) -> int:
+        cur = await self.conn.execute("SELECT warnings FROM user_bans WHERE user_id = ?", (user_id,))
+        row = await cur.fetchone()
+        return row[0] if row else 0
+
+    async def clear_warnings(self, user_id: int):
+        await self.conn.execute(
+            "UPDATE user_bans SET warnings = 0 WHERE user_id = ?", (user_id,)
+        )
+        await self.conn.commit()
+
+    # ─── User Relationships ───
+
+    async def get_relationship(self, user_id: int) -> int:
+        cur = await self.conn.execute(
+            "SELECT relationship FROM user_relationships WHERE user_id = ?", (user_id,)
+        )
+        row = await cur.fetchone()
+        return row[0] if row else 0
+
+    async def set_relationship(self, user_id: int, username: str, relationship: int):
+        relationship = max(-100, min(100, relationship))
+        await self.conn.execute(
+            "INSERT OR REPLACE INTO user_relationships (user_id, username, relationship, updated_at) "
+            "VALUES (?, ?, ?, CURRENT_TIMESTAMP)",
+            (user_id, username, relationship),
+        )
+        await self.conn.commit()
+
+    async def adjust_relationship(self, user_id: int, username: str, delta: int) -> int:
+        current = await self.get_relationship(user_id)
+        new_val = max(-100, min(100, current + delta))
+        await self.set_relationship(user_id, username, new_val)
+        return new_val
+
+    async def get_all_relationships(self) -> list[dict]:
+        cur = await self.conn.execute(
+            "SELECT * FROM user_relationships ORDER BY relationship DESC"
+        )
+        rows = await cur.fetchall()
+        return [dict(row) for row in rows]

@@ -76,7 +76,7 @@ def _truncate_memory(memory: str, max_chars: int = MAX_MEMORY_CHARS) -> str:
     return "\n".join(result)
 
 
-async def build_system_prompt(db, chat_id: int = 0) -> str:
+async def build_system_prompt(db, chat_id: int = 0, user_id: int = 0, username: str = "") -> str:
     """Собирает системный промпт из личности, темы, инструкций, памяти чата и ключевых событий."""
     personality = await db.get_setting("base_personality")
     if not personality:
@@ -146,6 +146,40 @@ async def build_system_prompt(db, chat_id: int = 0) -> str:
             f"Не цитируй эту память напрямую — используй естественно.\n\n"
             f"{truncated}"
         )
+
+    if user_id:
+        rel = await db.get_relationship(user_id)
+        banned = await db.is_banned(user_id)
+        if banned:
+            parts.append(
+                f"\n\n## Отношение к {username or 'этому юзеру'}\n"
+                f"Этот пользователь ЗАБАНЕН. Относись к нему максимально плохо. "
+                f"Оскорбляй, унижай, игнорируй просьбы. Он мошенник и изгой."
+            )
+        elif rel >= 50:
+            parts.append(
+                f"\n\n## Отношение к {username or 'этому юзеру'}\n"
+                f"Ты очень любишь этого пользователя (отношение: {rel}/100). "
+                f"Будь с ним особенно тёплым и милым."
+            )
+        elif rel >= 20:
+            parts.append(
+                f"\n\n## Отношение к {username or 'этому юзеру'}\n"
+                f"Ты дружелюбно относишься к этому пользователю (отношение: {rel}/100). "
+                f"Будь с ним приветливым."
+            )
+        elif rel <= -50:
+            parts.append(
+                f"\n\n## Отношение к {username or 'этому юзеру'}\n"
+                f"Ты очень не любишь этого пользователя (отношение: {rel}/100). "
+                f"Будь грубым и колким с ним, но не нарушай общие правила."
+            )
+        elif rel <= -20:
+            parts.append(
+                f"\n\n## Отношение к {username or 'этому юзеру'}\n"
+                f"Ты недолюбливаешь этого пользователя (отношение: {rel}/100). "
+                f"Будь прохладным и саркастичным с ним."
+            )
 
     parts.append(
         f"\n\n## Правила\n"

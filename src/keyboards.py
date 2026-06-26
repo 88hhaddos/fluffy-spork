@@ -9,9 +9,10 @@ def main_menu_kb() -> InlineKeyboardMarkup:
     kb.button(text="📝 Личность и промпт", callback_data="menu:personality")
     kb.button(text="🧠 Контекст и память", callback_data="menu:context")
     kb.button(text="👥 Админы", callback_data="menu:admins")
+    kb.button(text="🚫 Бан-лист", callback_data="menu:bans")
     kb.button(text="📊 Статистика", callback_data="menu:stats")
     kb.button(text="❌ Закрыть", callback_data="menu:close")
-    kb.adjust(1, 1, 1, 1, 1, 1, 1)
+    kb.adjust(1, 1, 1, 1, 1, 1, 1, 1)
     return kb.as_markup()
 
 
@@ -211,4 +212,25 @@ def admin_detail_kb(user_id: int) -> InlineKeyboardMarkup:
 def cancel_kb() -> InlineKeyboardMarkup:
     kb = InlineKeyboardBuilder()
     kb.button(text="❌ Отмена", callback_data="cancel")
+    return kb.as_markup()
+
+
+def bans_kb(banned_users: list[dict]) -> InlineKeyboardMarkup:
+    kb = InlineKeyboardBuilder()
+    for u in banned_users:
+        name = u.get("username") or str(u["user_id"])
+        warnings = u.get("warnings", 0)
+        kb.button(text=f"🚫 {name} (⚠️{warnings})", callback_data=f"ban:{u['user_id']}")
+    kb.button(text="➕ Забанить юзера", callback_data="ban:add")
+    kb.button(text="🔙 Назад", callback_data="menu:main")
+    kb.adjust(1, 1)
+    return kb.as_markup()
+
+
+def ban_detail_kb(user_id: int) -> InlineKeyboardMarkup:
+    kb = InlineKeyboardBuilder()
+    kb.button(text="🔓 Разбанить", callback_data=f"ban:unban:{user_id}")
+    kb.button(text="🗑 Очистить предупреждения", callback_data=f"ban:clear_warn:{user_id}")
+    kb.button(text="🔙 К списку", callback_data="menu:bans")
+    kb.adjust(1, 1, 1)
     return kb.as_markup()
