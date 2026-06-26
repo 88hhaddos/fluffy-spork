@@ -126,6 +126,33 @@ OPENROUTER_PRESETS = {
     },
 }
 
+FREE_IMAGE_PRESETS = {
+    "poll_flux": {
+        "name": "Pollinations FLUX (free, без ключа)",
+        "base_url": "https://image.pollinations.ai",
+        "model": "pollinations/flux",
+        "provider_type": "image",
+    },
+    "poll_turbo": {
+        "name": "Pollinations Turbo (free, без ключа)",
+        "base_url": "https://image.pollinations.ai",
+        "model": "pollinations/turbo",
+        "provider_type": "image",
+    },
+    "hf_sdxl": {
+        "name": "HuggingFace SDXL (free, нужен ключ)",
+        "base_url": "https://api-inference.huggingface.co",
+        "model": "hf/stabilityai/stable-diffusion-xl-base-1.0",
+        "provider_type": "image",
+    },
+    "hf_flux": {
+        "name": "HuggingFace FLUX (free, нужен ключ)",
+        "base_url": "https://api-inference.huggingface.co",
+        "model": "hf/black-forest-labs/FLUX.1-schnell",
+        "provider_type": "image",
+    },
+}
+
 
 def presets_kb() -> InlineKeyboardMarkup:
     kb = InlineKeyboardBuilder()
@@ -137,8 +164,13 @@ def presets_kb() -> InlineKeyboardMarkup:
     kb.button(text="📝 OpenRouter Mistral 7B (free)", callback_data="or_preset:or_free_mistral")
     kb.button(text="📝 OpenRouter GPT-4o mini", callback_data="or_preset:or_gpt4o")
     kb.button(text="📝 OpenRouter Claude 3.5 Sonnet", callback_data="or_preset:or_claude")
+    kb.button(text="─ 🎨 Фото пресеты ─", callback_data="noop")
+    kb.button(text="🎨 Pollinations FLUX (free, без ключа)", callback_data="fi_preset:poll_flux")
+    kb.button(text="🎨 Pollinations Turbo (free, без ключа)", callback_data="fi_preset:poll_turbo")
+    kb.button(text="🎨 HuggingFace SDXL (free, ключ HF)", callback_data="fi_preset:hf_sdxl")
+    kb.button(text="🎨 HuggingFace FLUX (free, ключ HF)", callback_data="fi_preset:hf_flux")
     kb.button(text="🔙 К списку", callback_data="menu:providers")
-    kb.adjust(1, 1, 1, 1, 1, 1, 1, 1, 1)
+    kb.adjust(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
     return kb.as_markup()
 
 

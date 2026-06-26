@@ -28,6 +28,7 @@ from src.keyboards import (
     relation_detail_kb,
     NVIDIA_PRESETS,
     OPENROUTER_PRESETS,
+    FREE_IMAGE_PRESETS,
 )
 from src.personality import load_personality_from_file
 
@@ -472,6 +473,30 @@ async def cb_or_preset(callback: CallbackQuery, state: FSMContext):
 
 
 async def _start_preset(callback: CallbackQuery, state: FSMContext, preset: dict):
+    is_pollinations = "pollinations" in preset["base_url"]
+
+    if is_pollinations:
+        await state.set_state(AdminStates.add_prov_key)
+        await state.update_data(
+            provider_type=preset["provider_type"],
+            prov_name=preset["name"],
+            prov_url=preset["base_url"],
+            preset_model=preset["model"],
+        )
+        await callback.message.edit_text(
+            f"⚡ <b>{preset['name']}</b>\n\n"
+            f"Тип: Изображения (free)\n"
+            f"URL: {preset['base_url']}\n"
+            f"Модель: {preset['model']}\n\n"
+            f"Pollinations — ключ НЕ нужен!\n"
+            f"Просто напишите «нет» или любое слово чтобы продолжить.",
+            reply_markup=cancel_kb(),
+        )
+        await callback.answer()
+        return
+
+    is_hf = "huggingface" in preset["base_url"]
+
     await state.set_state(AdminStates.add_prov_key)
     await state.update_data(
         provider_type=preset["provider_type"],
@@ -479,14 +504,35 @@ async def _start_preset(callback: CallbackQuery, state: FSMContext, preset: dict
         prov_url=preset["base_url"],
         preset_model=preset["model"],
     )
+
+    if is_hf:
+        key_hint = "Введите <b>HuggingFace токен</b> (hf_xxx):\nПолучить: huggingface.co → Settings → Access Tokens"
+    else:
+        key_hint = "Введите <b>API ключ</b>:"
+
     await callback.message.edit_text(
         f"⚡ <b>{preset['name']}</b>\n\n"
         f"Тип: {'Текст' if preset['provider_type'] == 'text' else 'Изображения'}\n"
         f"URL: {preset['base_url']}\n"
         f"Модель: {preset['model']}\n\n"
-        f"Введите <b>API ключ</b>:",
+        f"{key_hint}",
         reply_markup=cancel_kb(),
     )
+    await callback.answer()
+
+
+@router.callback_query(F.data.startswith("fi_preset:"), IsAdmin())
+async def cb_fi_preset(callback: CallbackQuery, state: FSMContext):
+    preset_key = callback.data.split(":", 1)[1]
+    preset = FREE_IMAGE_PRESETS.get(preset_key)
+    if not preset:
+        await callback.answer("Пресет не найден")
+        return
+    await _start_preset(callback, state, preset)
+
+
+@router.callback_query(F.data == "noop", IsAdmin())
+async def cb_noop(callback: CallbackQuery):
     await callback.answer()
 
 
@@ -563,6 +609,9 @@ async def process_prov_key(message: Message, state: FSMContext):
     data = await state.get_data()
     if data.get("preset_model"):
         model = data["preset_model"]
+        if "pollinations" in data.get("prov_url", ""):
+            key = "no-key-needed"
+            await state.update_data(prov_key=key)
         await _save_providers_batch(message, state, db=None, raw_models=model)
         return
 

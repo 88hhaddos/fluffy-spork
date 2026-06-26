@@ -138,9 +138,67 @@ class AIProviderManager:
         raise RuntimeError(f"Все image-провайдеры недоступны: {'; '.join(errors)}")
 
     async def _call_image_gen(self, provider: dict, prompt: str, size: str) -> bytes:
+        url = provider["base_url"].lower()
+        if "pollinations" in url:
+            return await self._call_pollinations_image_gen(provider, prompt, size)
+        if "huggingface" in url or "hf.co" in url:
+            return await self._call_hf_image_gen(provider, prompt, size)
         if _is_nvidia_url(provider["base_url"]):
             return await self._call_nvidia_image_gen(provider, prompt, size)
         return await self._call_openai_image_gen(provider, prompt, size)
+
+    # ─── Pollinations (free, no key) ───
+
+    async def _call_pollinations_image_gen(self, provider: dict, prompt: str, size: str) -> bytes:
+        import urllib.parse
+        session = await self.get_session()
+
+        w, h = size.split("x") if "x" in size else ("1024", "1024")
+        model = provider.get("model", "flux")
+        if model.startswith("pollinations/"):
+            model = model.replace("pollinations/", "")
+
+        encoded_prompt = urllib.parse.quote(prompt)
+        url = f"https://image.pollinations.ai/prompt/{encoded_prompt}?width={w}&height={h}&model={model}&nologo=true"
+
+        headers = {}
+        if provider.get("api_key") and provider["api_key"].startswith("atms_"):
+            headers["Authorization"] = f"Bearer {provider['api_key']}"
+
+        async with session.get(url, headers=headers, timeout=aiohttp.ClientTimeout(total=180)) as resp:
+            if resp.status != 200:
+                text = await resp.text()
+                raise RuntimeError(f"Pollinations HTTP {resp.status}: {text[:200]}")
+            return await resp.read()
+
+    # ─── Hugging Face Inference API ───
+
+    async def _call_hf_image_gen(self, provider: dict, prompt: str, size: str) -> bytes:
+        session = await self.get_session()
+        model = provider["model"]
+        if model.startswith("hf/"):
+            model = model.replace("hf/", "")
+        url = f"https://api-inference.huggingface.co/models/{model}"
+
+        headers = {
+            "Authorization": f"Bearer {provider['api_key']}",
+            "Content-Type": "application/json",
+        }
+        payload = {"inputs": prompt}
+
+        async with session.post(url, json=payload, headers=headers, timeout=aiohttp.ClientTimeout(total=180)) as resp:
+            if resp.status == 503:
+                import asyncio
+                await asyncio.sleep(5)
+                async with session.post(url, json=payload, headers=headers, timeout=aiohttp.ClientTimeout(total=180)) as resp2:
+                    if resp2.status != 200:
+                        text = await resp2.text()
+                        raise RuntimeError(f"HF HTTP {resp2.status}: {text[:200]}")
+                    return await resp2.read()
+            if resp.status != 200:
+                text = await resp.text()
+                raise RuntimeError(f"HF HTTP {resp.status}: {text[:200]}")
+            return await resp.read()
 
     # ─── OpenAI-compatible image generation ───
 
