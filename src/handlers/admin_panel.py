@@ -106,10 +106,12 @@ async def cb_settings(callback: CallbackQuery):
 
 
 @router.callback_query(F.data == "set:bot_name", IsAdmin())
-async def cb_set_bot_name(callback: CallbackQuery, state: FSMContext):
+async def cb_set_bot_name(callback: CallbackQuery, state: FSMContext, db):
+    current = await db.get_setting("bot_name") or "Дракончик Закури"
     await state.set_state(AdminStates.set_bot_name)
     await callback.message.edit_text(
-        "Введите новое имя бота:",
+        f"Текущее имя: <b>{current}</b>\n\n"
+        f"Введите новое имя бота:",
         reply_markup=cancel_kb(),
     )
     await callback.answer()
@@ -133,10 +135,12 @@ async def process_bot_name(message: Message, state: FSMContext, db):
 
 
 @router.callback_query(F.data == "set:frequency", IsAdmin())
-async def cb_set_frequency(callback: CallbackQuery, state: FSMContext):
+async def cb_set_frequency(callback: CallbackQuery, state: FSMContext, db):
+    current = await db.get_setting("auto_respond_frequency") or "10"
     await state.set_state(AdminStates.set_frequency)
     await callback.message.edit_text(
-        "Введите частоту авто-ответов (0-100, процент сообщений):",
+        f"Текущая частота: <b>{current}%</b>\n\n"
+        f"Введите частоту авто-ответов (0-100, процент сообщений):",
         reply_markup=cancel_kb(),
     )
     await callback.answer()
@@ -163,10 +167,12 @@ async def process_frequency(message: Message, state: FSMContext, db):
 
 
 @router.callback_query(F.data == "set:context_size", IsAdmin())
-async def cb_set_context_size(callback: CallbackQuery, state: FSMContext):
+async def cb_set_context_size(callback: CallbackQuery, state: FSMContext, db):
+    current = await db.get_setting("global_context_size") or "50"
     await state.set_state(AdminStates.set_context_size)
     await callback.message.edit_text(
-        "Введите размер контекста (количество последних сообщений, 10-200):",
+        f"Текущий размер: <b>{current} сообщений</b>\n\n"
+        f"Введите размер контекста (10-200):",
         reply_markup=cancel_kb(),
     )
     await callback.answer()
@@ -637,11 +643,13 @@ async def cb_pers_view(callback: CallbackQuery, db):
 
 
 @router.callback_query(F.data == "pers:edit_base", IsAdmin())
-async def cb_pers_edit_base(callback: CallbackQuery, state: FSMContext):
+async def cb_pers_edit_base(callback: CallbackQuery, state: FSMContext, db):
+    current = await db.get_setting("base_personality") or "(стандартный из PERSONALITY.md)"
     await state.set_state(AdminStates.edit_base_prompt)
     await callback.message.edit_text(
-        "Отправьте новый базовый промпт (личность бота).\n"
-        "Или отправьте /reset для сброса к стандартному из PERSONALITY.md",
+        f"<b>Текущий промпт:</b>\n\n{current[:500]}{'...' if len(current) > 500 else ''}\n\n"
+        f"Отправьте новый базовый промпт (личность бота).\n"
+        f"Или /reset для сброса к стандартному из PERSONALITY.md",
         reply_markup=cancel_kb(),
     )
     await callback.answer()
@@ -674,11 +682,13 @@ async def process_edit_base(message: Message, state: FSMContext, db):
 
 
 @router.callback_query(F.data == "pers:edit_topic", IsAdmin())
-async def cb_pers_edit_topic(callback: CallbackQuery, state: FSMContext):
+async def cb_pers_edit_topic(callback: CallbackQuery, state: FSMContext, db):
+    current = await db.get_setting("topic") or "(не задана)"
     await state.set_state(AdminStates.edit_topic)
     await callback.message.edit_text(
-        "Отправьте тему для обсуждения.\n"
-        "Или /clear чтобы убрать тему.",
+        f"Текущая тема: <b>{current}</b>\n\n"
+        f"Отправьте новую тему для обсуждения.\n"
+        f"Или /clear чтобы убрать тему.",
         reply_markup=cancel_kb(),
     )
     await callback.answer()
@@ -705,11 +715,13 @@ async def process_edit_topic(message: Message, state: FSMContext, db):
 
 
 @router.callback_query(F.data == "pers:edit_custom", IsAdmin())
-async def cb_pers_edit_custom(callback: CallbackQuery, state: FSMContext):
+async def cb_pers_edit_custom(callback: CallbackQuery, state: FSMContext, db):
+    current = await db.get_setting("custom_instructions") or "(нет)"
     await state.set_state(AdminStates.edit_custom)
     await callback.message.edit_text(
-        "Отправьте дополнительные инструкции для бота.\n"
-        "Или /clear чтобы убрать инструкции.",
+        f"Текущие инструкции:\n<b>{current[:300]}</b>\n\n"
+        f"Отправьте новые дополнительные инструкции для бота.\n"
+        f"Или /clear чтобы убрать инструкции.",
         reply_markup=cancel_kb(),
     )
     await callback.answer()
