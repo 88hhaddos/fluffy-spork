@@ -20,6 +20,8 @@ from src.keyboards import (
     cancel_kb,
     presets_kb,
     priority_kb,
+    photo_style_kb,
+    PHOTO_STYLES as KB_PHOTO_STYLES,
     NVIDIA_PRESETS,
     OPENROUTER_PRESETS,
 )
@@ -49,6 +51,7 @@ class AdminStates(StatesGroup):
     set_context_size = State()
     set_triggers = State()
     set_anger = State()
+    set_photo_custom = State()
 
     add_admin = State()
 
@@ -194,6 +197,72 @@ async def process_anger(message: Message, state: FSMContext, db):
         f"✅ Злость изменена!\n\n"
         f"Было: {old}%\n"
         f"Стало: {val}% — {desc}",
+        reply_markup=main_menu_kb(),
+    )
+
+
+@router.callback_query(F.data == "set:photo_style", IsAdmin())
+async def cb_photo_style(callback: CallbackQuery, db):
+    current = await db.get_setting("photo_style") or "realistic"
+    await callback.message.edit_text(
+        f"🎨 <b>Стиль фото</b>\n\n"
+        f"Текущий: <b>{KB_PHOTO_STYLES.get(current, current)}</b>\n\n"
+        f"Выберите стиль:",
+        reply_markup=photo_style_kb(current),
+    )
+    await callback.answer()
+
+
+@router.callback_query(F.data.startswith("pstyle:"), IsAdmin())
+async def cb_set_photo_style(callback: CallbackQuery, db):
+    style = callback.data.split(":", 1)[1]
+    if style not in KB_PHOTO_STYLES:
+        await callback.answer("Стиль не найден")
+        return
+    old = await db.get_setting("photo_style") or "realistic"
+    await db.set_setting("photo_style", style)
+    await callback.answer("Стиль изменён")
+    await callback.message.edit_text(
+        f"✅ Стиль изменён!\n\n"
+        f"Было: {KB_PHOTO_STYLES.get(old, old)}\n"
+        f"Стало: {KB_PHOTO_STYLES.get(style, style)}",
+        reply_markup=photo_style_kb(style),
+    )
+
+
+@router.callback_query(F.data == "set:photo_custom", IsAdmin())
+async def cb_photo_custom(callback: CallbackQuery, state: FSMContext, db):
+    current = await db.get_setting("photo_custom_prompt") or "(не задан)"
+    await state.set_state(AdminStates.set_photo_custom)
+    await callback.message.edit_text(
+        f"🖼️ <b>Кастомный фото-промпт</b>\n\n"
+        f"Этот текст добавляется ко ВСЕМ промптам для фото.\n"
+        f"Например: «всегда рисовать в стиле акварели, без людей»\n\n"
+        f"Текущий:\n<b>{current[:300]}</b>\n\n"
+        f"Введите новый или /clear чтобы убрать:",
+        reply_markup=cancel_kb(),
+    )
+    await callback.answer()
+
+
+@router.message(AdminStates.set_photo_custom, IsAdmin())
+async def process_photo_custom(message: Message, state: FSMContext, db):
+    text = message.text.strip()
+    old = await db.get_setting("photo_custom_prompt") or "(не задан)"
+    if text.lower() == "/clear":
+        await db.set_setting("photo_custom_prompt", "")
+        await state.clear()
+        await message.answer(
+            f"✅ Кастомный промпт очищен!\n\nБыло: {old[:100]}\nСтало: (не задан)",
+            reply_markup=main_menu_kb(),
+        )
+        return
+    await db.set_setting("photo_custom_prompt", text)
+    await state.clear()
+    await message.answer(
+        f"✅ Кастомный промпт обновлён!\n\n"
+        f"Было: {old[:100]}\n"
+        f"Стало: {text[:100]}",
         reply_markup=main_menu_kb(),
     )
 

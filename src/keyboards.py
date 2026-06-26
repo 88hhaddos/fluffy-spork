@@ -19,11 +19,37 @@ def settings_kb() -> InlineKeyboardMarkup:
     kb = InlineKeyboardBuilder()
     kb.button(text="✏️ Имя бота", callback_data="set:bot_name")
     kb.button(text="😈 Злость (0-100%)", callback_data="set:anger")
+    kb.button(text="🎨 Стиль фото", callback_data="set:photo_style")
+    kb.button(text="🖼️ Кастомный фото-промпт", callback_data="set:photo_custom")
     kb.button(text="🎲 Частота авто-ответов", callback_data="set:frequency")
     kb.button(text="📏 Размер контекста", callback_data="set:context_size")
     kb.button(text="🎯 Триггер-слова", callback_data="set:triggers")
     kb.button(text="🔙 Назад", callback_data="menu:main")
-    kb.adjust(1, 1, 1, 1, 1, 1)
+    kb.adjust(1, 1, 1, 1, 1, 1, 1, 1)
+    return kb.as_markup()
+
+
+PHOTO_STYLES = {
+    "realistic": "реалистичное, фото",
+    "anime": "аниме",
+    "cartoon": "мультяшное",
+    "art": "картина маслом",
+    "digital": "цифровой арт",
+    "watercolor": "акварель",
+    "pixel": "пиксель-арт",
+    "3d": "3D рендер",
+    "dark": "тёмное фэнтези",
+    "cute": "милый, каваий",
+}
+
+
+def photo_style_kb(current: str) -> InlineKeyboardMarkup:
+    kb = InlineKeyboardBuilder()
+    for key, label in PHOTO_STYLES.items():
+        marker = "✅ " if key == current else "  "
+        kb.button(text=f"{marker}{label}", callback_data=f"pstyle:{key}")
+    kb.button(text="🔙 Назад", callback_data="menu:settings")
+    kb.adjust(2, 2, 2, 2, 2, 1)
     return kb.as_markup()
 
 

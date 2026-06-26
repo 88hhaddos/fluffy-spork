@@ -210,42 +210,6 @@ PHOTO_STYLES = {
 }
 
 
-@router.message(Command("style"), IsGroupChat())
-@router.message(Command("style"), IsPrivateChat())
-async def cmd_style(message: Message, db):
-    args = message.text or ""
-    args = args.replace("/style", "", 1).strip().lower()
-
-    if not args:
-        current = await db.get_setting("photo_style") or "realistic"
-        styles_list = "\n".join(f"  • {s}" for s in PHOTO_STYLES)
-        await message.reply(
-            f"🎨 <b>Стиль фото</b>\n\n"
-            f"Текущий: <b>{current}</b>\n\n"
-            f"Доступные:\n{styles_list}\n\n"
-            f"Установить: /style anime\n"
-            f"Сбросить: /style reset"
-        )
-        return
-
-    if args == "reset":
-        await db.set_setting("photo_style", "realistic")
-        await message.reply("✅ Стиль сброшен на realistic")
-        return
-
-    if args in PHOTO_STYLES:
-        old = await db.get_setting("photo_style") or "realistic"
-        await db.set_setting("photo_style", args)
-        await message.reply(
-            f"✅ Стиль изменён!\n\n"
-            f"Было: {old}\n"
-            f"Стало: {args}\n\n"
-            f"Теперь все фото будут в стиле «{args}»"
-        )
-    else:
-        await message.reply(f"Стиль «{args}» не найден. Доступные: {', '.join(PHOTO_STYLES.keys())}")
-
-
 def extract_edit_prompt(text: str) -> str:
     text_lower = text.lower()
     for kw in EDIT_KEYWORDS:
@@ -284,7 +248,6 @@ async def cmd_help(message: Message):
         "  • «закури, нарисуй [промпт]» — сгенерирую фото\n"
         "  • «закури, нарисуй 3 варианта кота» — несколько вариантов\n\n"
         "Команды:\n"
-        "  /style — стиль фото (anime, realistic, art...)\n"
         "  /dice — кинуть кубик 🎲\n"
         "  /coin — подбросить монетку 🪙\n"
         "  /8ball — магический шар 🎱\n"
@@ -560,6 +523,12 @@ async def handle_photo_generation(
 
         if custom_instructions:
             system_content += f"\n\nДОПОЛНИТЕЛЬНЫЕ ИНСТРУКЦИИ ОТ АДМИНА (ОБЯЗАТЕЛЬНЫ):\n{custom_instructions}"
+
+        photo_custom = ""
+        if db:
+            photo_custom = await db.get_setting("photo_custom_prompt") or ""
+        if photo_custom:
+            system_content += f"\n\nКАСТОМНЫЙ ФОТО-ПРОМПТ (ДОБАВЛЯТЬ ВСЕГДА): {photo_custom}"
 
         enhanced = await ai_manager.chat_completion(
             messages=[
