@@ -1671,50 +1671,82 @@ async def cb_rel_detail(callback: CallbackQuery, db):
 
 @router.callback_query(F.data == "menu:say", IsAdmin())
 async def cb_say_menu(callback: CallbackQuery, state: FSMContext, db):
-    await state.set_state(AdminStates.say_as_bot)
     bot_name = await db.get_setting("bot_name") or "Дракончик Закури"
     await callback.message.edit_text(
         f"📨 <b>Написать от лица бота</b>\n\n"
         f"Бот: {bot_name}\n\n"
-        f"Отправьте текст сообщения.\n"
-        f"Сообщение будет отправлено от имени бота в этот чат.\n\n"
-        f"Для отправки в группу — перешлите сообщение из группы сначала, "
-        f"затем текст.\nИли просто напишите текст — отправится сюда (в ЛС боту).",
+        f"Что отправить?\n\n"
+        f"• Текст — просто напишите\n"
+        f"• Фото — отправьте фото с подписью\n"
+        f"• Голосовое — отправьте голосовое\n"
+        f"• Стикер — отправьте стикер\n\n"
+        f"Отправится в этот чат от лица бота.\n"
+        f"Для группы: /say [текст] в группе.",
         reply_markup=cancel_kb(),
     )
+    await state.set_state(AdminStates.say_as_bot)
     await callback.answer()
 
 
 @router.message(AdminStates.say_as_bot, IsAdmin())
 async def process_say_as_bot(message: Message, state: FSMContext, db, bot):
-    text = message.text or message.caption or ""
-
-    if not text:
-        await message.answer("Отправьте текст:")
-        return
-
     await state.clear()
-
     bot_name = await db.get_setting("bot_name") or "Закури"
+    chat_id = message.chat.id
 
-    sent = await message.answer(text[:4096])
+    try:
+        if message.photo:
+            photo = message.photo[-1]
+            caption = message.caption or ""
+            sent = await bot.send_photo(chat_id, photo.file_id, caption=caption[:1024] if caption else None)
+            stored_text = f"[Фото: {caption}]" if caption else "[Фото]"
 
-    await db.store_message(
-        chat_id=message.chat.id,
-        user_id=0,
-        username=bot_name,
-        first_name="",
-        message_text=text[:4096],
-        is_forwarded=False,
-        forwarded_from="",
-        is_bot=True,
-        message_id=sent.message_id,
-    )
+        elif message.voice:
+            voice = message.voice
+            sent = await bot.send_voice(chat_id, voice.file_id)
+            stored_text = "[Голосовое]"
 
-    await message.answer(
-        "✅ Сообщение отправлено от лица бота!",
-        reply_markup=main_menu_kb(),
-    )
+        elif message.sticker:
+            sent = await bot.send_sticker(chat_id, message.sticker.file_id)
+            stored_text = f"[Стикер: {message.sticker.emoji or ''}]"
+
+        elif message.animation:
+            sent = await bot.send_animation(chat_id, message.animation.file_id, caption=message.caption)
+            stored_text = "[GIF]"
+
+        elif message.video:
+            sent = await bot.send_video(chat_id, message.video.file_id, caption=message.caption)
+            stored_text = "[Видео]"
+
+        elif message.document:
+            sent = await bot.send_document(chat_id, message.document.file_id, caption=message.caption)
+            stored_text = f"[Документ: {message.document.file_name}]"
+
+        elif message.text:
+            sent = await bot.send_message(chat_id, message.text[:4096])
+            stored_text = message.text[:4096]
+
+        else:
+            await message.answer("Не поддерживается. Отправьте текст, фото, голосовое или стикер.")
+            return
+
+        await db.store_message(
+            chat_id=chat_id,
+            user_id=0,
+            username=bot_name,
+            first_name="",
+            message_text=stored_text,
+            is_forwarded=False,
+            forwarded_from="",
+            is_bot=True,
+            message_id=sent.message_id,
+        )
+
+        await message.answer("✅ Отправлено от лица бота!", reply_markup=main_menu_kb())
+
+    except Exception as e:
+        logger.error(f"Say as bot error: {e}", exc_info=True)
+        await message.answer(f"❌ Ошибка: {str(e)[:200]}", reply_markup=main_menu_kb())
 
 
 # ─── Statistics ───

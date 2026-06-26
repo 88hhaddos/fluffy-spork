@@ -464,6 +464,21 @@ async def handle_group_message(
         await handle_photo_generation(message, text, ai_manager, bot, context_manager, db)
         return
 
+    if addressed and message.reply_to_message:
+        reply_msg = message.reply_to_message
+        if reply_msg.from_user and reply_msg.from_user.id == config.BOT_ID:
+            reply_text = (reply_msg.text or reply_msg.caption or "").lower()
+            user_text = text.lower().strip()
+
+            AGREE_WORDS = ["давай", "да", "ок", "окей", "хочу", "го", "дава", "ладно", "попробуем", "согласен", "хорошо"]
+            PHOTO_HINT_WORDS = ["нарисую", "нарисовать", "фото", "изображение", "картин", "сгенерир", "нарисовать тебе", "хочешь"]
+
+            if any(w in user_text for w in AGREE_WORDS) and any(w in reply_text for w in PHOTO_HINT_WORDS):
+                prompt = await _extract_photo_idea_from_bot_message(reply_msg.text or reply_msg.caption or "", ai_manager)
+                if prompt:
+                    await handle_photo_generation(message, prompt, ai_manager, bot, context_manager, db)
+                    return
+
     if addressed and is_photo_edit_request(text):
         if message.photo:
             await handle_photo_edit_direct(message, text, ai_manager, bot, context_manager)
@@ -554,6 +569,29 @@ async def handle_private_message(
         return
 
     await _generate_and_send_response(message, db, ai_manager, context_manager, bot)
+
+
+async def _extract_photo_idea_from_bot_message(bot_text: str, ai_manager) -> str:
+    """Извлекает идею для фото из сообщения бота где он предложил нарисовать."""
+    try:
+        result = await ai_manager.chat_completion(
+            messages=[
+                {
+                    "role": "system",
+                    "content": (
+                        "Из текста сообщения бота извлеки что он предлагал нарисовать. "
+                        "Ответь ТОЛЬКО коротким промптом для генерации на русском, без объяснений. "
+                        "Если ничего про рисунок нет — ответь пустой строкой."
+                    ),
+                },
+                {"role": "user", "content": bot_text[:500]},
+            ],
+            temperature=0.1,
+            max_tokens=50,
+        )
+        return result.strip() if result else ""
+    except Exception:
+        return ""
 
 
 async def _generate_and_send_response(
