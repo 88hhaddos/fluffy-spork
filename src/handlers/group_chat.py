@@ -340,6 +340,11 @@ async def handle_group_message(
     chat_settings = await db.get_chat_settings(message.chat.id)
     addressed = should_respond_in_group(message, chat_settings, triggers)
 
+    if addressed:
+        logger.info(f"Responding to {message.from_user.username or message.from_user.first_name}: {text[:50]}")
+    elif not _is_short_or_meaningless(text):
+        logger.debug(f"Ignoring message from {message.from_user.username or message.from_user.first_name}: {text[:50]}")
+
     if addressed and is_photo_request(text):
         await handle_photo_generation(message, text, ai_manager, bot, context_manager, db)
         return
@@ -520,6 +525,8 @@ async def handle_photo_generation(
         style = await db.get_setting("photo_style") or "realistic"
     style_suffix = PHOTO_STYLES.get(style, PHOTO_STYLES["realistic"])
 
+    requester = message.from_user.first_name or message.from_user.username or "Кто-то"
+
     status_msg = await message.reply(random.choice(PHOTO_MESSAGES))
     await bot.send_chat_action(chat_id=message.chat.id, action=ChatAction.UPLOAD_PHOTO)
 
@@ -540,16 +547,17 @@ async def handle_photo_generation(
                     "role": "system",
                     "content": (
                         "Ты ассистент который улучшает промпты для генерации изображений. "
-                        "На вход получаешь короткий промпт на русском. "
+                        "На вход получаешь короткий промпт на русском от конкретного пользователя. "
                         "Улучши его: добавь детали, освещение, качество. "
                         f"Обязательно добавь стиль: {style_suffix}. "
                         "Переведи на английский. Не добавляй людей если не просят. "
+                        "Учитывай контекст: кто просит и для кого/чего. "
                         "Отвечай ТОЛЬКО улучшенным промптом на английском, без объяснений."
                     ),
                 },
                 {
                     "role": "user",
-                    "content": prompt,
+                    "content": f"Пользователь {requester} просит: {prompt}",
                 },
             ],
             temperature=0.3,
