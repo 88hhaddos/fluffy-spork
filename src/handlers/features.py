@@ -7,7 +7,7 @@ from typing import Optional
 
 from aiogram import Router, F
 from aiogram.filters import Command
-from aiogram.types import Message, CallbackQuery, ReactionTypeEmoji
+from aiogram.types import Message, CallbackQuery
 from aiogram.enums import ChatAction
 
 from src.config import config
@@ -45,15 +45,17 @@ async def welcome_new_members(message: Message, db):
         await message.reply(random.choice(WELCOME_MESSAGES).format(name=name))
 
 
-# ─── Emoji reactions (random, ~8% chance) ───
+# ─── Emoji reactions — moved to group_chat to avoid blocking ───
 
-@router.message(IsGroupChat())
+REACTION_EMOJIS = ["👍", "❤️", "🔥", "😄", "🎉", "💚", "🐉", "😂", "👏", "💯"]
+
+
 async def maybe_react(message: Message, bot):
+    """Random emoji reaction on ~8% of messages. Non-blocking."""
     if message.from_user and message.from_user.id == config.BOT_ID:
         return
     if not message.text or len(message.text) < 3:
         return
-
     if random.randint(1, 100) <= 8:
         try:
             emoji = random.choice(REACTION_EMOJIS)

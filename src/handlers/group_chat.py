@@ -340,6 +340,9 @@ async def handle_group_message(
     chat_settings = await db.get_chat_settings(message.chat.id)
     addressed = should_respond_in_group(message, chat_settings, triggers)
 
+    from src.handlers.features import maybe_react
+    await maybe_react(message, bot)
+
     if addressed:
         logger.info(f"Responding to {message.from_user.username or message.from_user.first_name}: {text[:50]}")
     elif not _is_short_or_meaningless(text):
