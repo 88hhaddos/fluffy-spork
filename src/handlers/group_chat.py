@@ -141,10 +141,10 @@ def should_respond_in_group(message: Message, chat_settings: dict, triggers: lis
     if message.reply_to_message:
         if message.reply_to_message.from_user and message.reply_to_message.from_user.id == config.BOT_ID:
             if _is_short_or_meaningless(text):
-                if random.randint(1, 100) <= 15:
+                if random.randint(1, 100) <= 20:
                     return True
                 return False
-            if random.randint(1, 100) <= 70:
+            if random.randint(1, 100) <= 90:
                 return True
             return False
 
@@ -544,24 +544,27 @@ async def handle_photo_generation(
     await update_status(f"🧠 Закури продумывает детали{count_text}...\n\n💬 Промпт: {short_prompt}\n🎨 Стиль: {style}")
 
     try:
+        custom_instructions = ""
+        if db:
+            custom_instructions = await db.get_setting("custom_instructions") or ""
+
+        system_content = (
+            "Ты ассистент который улучшает промпты для генерации изображений. "
+            "На вход получаешь короткий промпт на русском от конкретного пользователя. "
+            "Улучши его: добавь детали, освещение, качество. "
+            f"Обязательно добавь стиль: {style_suffix}. "
+            "Переведи на английский. Не добавляй людей если не просят. "
+            "Учитывай контекст: кто просит и для кого/чего. "
+            "Отвечай ТОЛЬКО улучшенным промптом на английском, без объяснений."
+        )
+
+        if custom_instructions:
+            system_content += f"\n\nДОПОЛНИТЕЛЬНЫЕ ИНСТРУКЦИИ ОТ АДМИНА (ОБЯЗАТЕЛЬНЫ):\n{custom_instructions}"
+
         enhanced = await ai_manager.chat_completion(
             messages=[
-                {
-                    "role": "system",
-                    "content": (
-                        "Ты ассистент который улучшает промпты для генерации изображений. "
-                        "На вход получаешь короткий промпт на русском от конкретного пользователя. "
-                        "Улучши его: добавь детали, освещение, качество. "
-                        f"Обязательно добавь стиль: {style_suffix}. "
-                        "Переведи на английский. Не добавляй людей если не просят. "
-                        "Учитывай контекст: кто просит и для кого/чего. "
-                        "Отвечай ТОЛЬКО улучшенным промптом на английском, без объяснений."
-                    ),
-                },
-                {
-                    "role": "user",
-                    "content": f"Пользователь {requester} просит: {prompt}",
-                },
+                {"role": "system", "content": system_content},
+                {"role": "user", "content": f"Пользователь {requester} просит: {prompt}"},
             ],
             temperature=0.3,
             max_tokens=200,
