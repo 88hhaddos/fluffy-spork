@@ -104,6 +104,26 @@ async def _get_triggers_async(db) -> list[str]:
     return DEFAULT_TRIGGERS
 
 
+SHORT_IGNORE_PATTERNS = [
+    "ахах", "ахаха", "хах", "хаха", "хахаха", "лол", "lol", "кек", "kek",
+    "ок", "окей", "да", "нет", "+", "спс", "спасибо", "норм", "пон",
+    "агп", "понял", "окл", " Keck", "ор", "ору", "lmao", "rofl",
+    "хз", "нзч", "жиза", "рили", "даа", "нее", "вообще", "крч",
+]
+
+
+def _is_short_or_meaningless(text: str) -> bool:
+    text_lower = text.lower().strip()
+    if len(text_lower) <= 4:
+        return True
+    for pattern in SHORT_IGNORE_PATTERNS:
+        if text_lower == pattern or text_lower.startswith(pattern + " ") or text_lower == pattern + ".":
+            return True
+    if all(c in "хацтyuыq!?.," for c in text_lower):
+        return True
+    return False
+
+
 def should_respond_in_group(message: Message, chat_settings: dict, triggers: list[str] = None) -> bool:
     text = (message.text or message.caption or "").lower()
     bot_username_lower = config.BOT_USERNAME.lower() if config.BOT_USERNAME else ""
@@ -120,7 +140,13 @@ def should_respond_in_group(message: Message, chat_settings: dict, triggers: lis
 
     if message.reply_to_message:
         if message.reply_to_message.from_user and message.reply_to_message.from_user.id == config.BOT_ID:
-            return True
+            if _is_short_or_meaningless(text):
+                if random.randint(1, 100) <= 15:
+                    return True
+                return False
+            if random.randint(1, 100) <= 70:
+                return True
+            return False
 
     auto = chat_settings.get("auto_respond", 0) if chat_settings else 0
     if auto:
