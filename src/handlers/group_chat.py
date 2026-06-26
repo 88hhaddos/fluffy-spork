@@ -174,8 +174,70 @@ def extract_photo_prompt(text: str) -> str:
         if idx != -1:
             prompt = text[idx + len(kw):].strip()
             prompt = prompt.lstrip(", .!?:;—- ")
+            import re as _re
+            prompt = _re.sub(r'\d+\s+вариант(а|ов)?', '', prompt, flags=_re.IGNORECASE).strip()
+            prompt = _re.sub(r'\d+\s+шт', '', prompt, flags=_re.IGNORECASE).strip()
             return prompt
     return ""
+
+
+def extract_photo_count(text: str) -> int:
+    import re as _re
+    m = _re.search(r'(\d+)\s+(?:вариант|шт)', text, _re.IGNORECASE)
+    if m:
+        n = int(m.group(1))
+        return min(n, 4)
+    return 1
+
+
+PHOTO_STYLES = {
+    "realistic": "realistic, photorealistic, high quality, 8k",
+    "anime": "anime style, manga style, japanese animation",
+    "cartoon": "cartoon style, colorful, fun",
+    "art": "oil painting, artistic, detailed brush strokes",
+    "digital": "digital art, concept art, trending on artstation",
+    "watercolor": "watercolor painting, soft colors, artistic",
+    "pixel": "pixel art, 8-bit, retro game style",
+    "3d": "3d render, octane render, cinematic lighting",
+    "dark": "dark fantasy, moody, dramatic lighting",
+    "cute": "cute, kawaii, adorable, soft pastel colors",
+}
+
+
+@router.message(Command("style"), IsGroupChat())
+@router.message(Command("style"), IsPrivateChat())
+async def cmd_style(message: Message, db):
+    args = message.text or ""
+    args = args.replace("/style", "", 1).strip().lower()
+
+    if not args:
+        current = await db.get_setting("photo_style") or "realistic"
+        styles_list = "\n".join(f"  • {s}" for s in PHOTO_STYLES)
+        await message.reply(
+            f"🎨 <b>Стиль фото</b>\n\n"
+            f"Текущий: <b>{current}</b>\n\n"
+            f"Доступные:\n{styles_list}\n\n"
+            f"Установить: /style anime\n"
+            f"Сбросить: /style reset"
+        )
+        return
+
+    if args == "reset":
+        await db.set_setting("photo_style", "realistic")
+        await message.reply("✅ Стиль сброшен на realistic")
+        return
+
+    if args in PHOTO_STYLES:
+        old = await db.get_setting("photo_style") or "realistic"
+        await db.set_setting("photo_style", args)
+        await message.reply(
+            f"✅ Стиль изменён!\n\n"
+            f"Было: {old}\n"
+            f"Стало: {args}\n\n"
+            f"Теперь все фото будут в стиле «{args}»"
+        )
+    else:
+        await message.reply(f"Стиль «{args}» не найден. Доступные: {', '.join(PHOTO_STYLES.keys())}")
 
 
 def extract_edit_prompt(text: str) -> str:
@@ -212,8 +274,20 @@ async def cmd_help(message: Message):
         "  • Reply на фото + «измени [инструкции]» — отредактирую фото\n\n"
         "В группе:\n"
         "  • Напиши «закури» или @бот чтобы обратиться ко мне\n"
-        "  • Reply на моё сообщение — отвечу\n"
-        "  • «закури, нарисуй [промпт]» — сгенерирую фото\n\n"
+        "  • Reply на моё сообщение — отвечу (иногда)\n"
+        "  • «закури, нарисуй [промпт]» — сгенерирую фото\n"
+        "  • «закури, нарисуй 3 варианта кота» — несколько вариантов\n\n"
+        "Команды:\n"
+        "  /style — стиль фото (anime, realistic, art...)\n"
+        "  /dice — кинуть кубик 🎲\n"
+        "  /coin — подбросить монетку 🪙\n"
+        "  /8ball — магический шар 🎱\n"
+        "  /time — текущее время 🕐\n\n"
+        "Фичи:\n"
+        "  • «закури переведи на английский [текст]» 🌐\n"
+        "  • «закури напомни через час [текст]» ⏰\n"
+        "  • «закури запомни что я люблю кофе» 🧠\n"
+        "  • Голосовые — транскрибация + ответ 🎤\n\n"
         "Админам:\n"
         "  • /admin — панель управления"
     )
@@ -261,12 +335,21 @@ async def handle_group_message(
     addressed = should_respond_in_group(message, chat_settings, triggers)
 
     if addressed and is_photo_request(text):
-        await handle_photo_generation(message, text, ai_manager, bot, context_manager)
+        await handle_photo_generation(message, text, ai_manager, bot, context_manager, db)
         return
 
     if addressed and is_photo_edit_request(text):
         if message.reply_to_message and message.reply_to_message.photo:
             await handle_photo_edit(message, text, ai_manager, bot, context_manager)
+            return
+
+    if addressed:
+        from src.handlers.features import handle_translate, handle_reminder, handle_user_fact
+        if await handle_translate(message, text, ai_manager, bot):
+            return
+        if await handle_reminder(message, text, bot):
+            return
+        if await handle_user_fact(message, text, db):
             return
 
     if not addressed:
@@ -309,7 +392,7 @@ async def handle_private_message(
     )
 
     if is_photo_request(text):
-        await handle_photo_generation(message, text, ai_manager, bot, context_manager)
+        await handle_photo_generation(message, text, ai_manager, bot, context_manager, db)
         return
 
     if (
@@ -318,6 +401,14 @@ async def handle_private_message(
         and message.reply_to_message.photo
     ):
         await handle_photo_edit(message, text, ai_manager, bot, context_manager)
+        return
+
+    from src.handlers.features import handle_translate, handle_reminder, handle_user_fact
+    if await handle_translate(message, text, ai_manager, bot):
+        return
+    if await handle_reminder(message, text, bot):
+        return
+    if await handle_user_fact(message, text, db):
         return
 
     await _generate_and_send_response(message, db, ai_manager, context_manager, bot)
@@ -403,10 +494,12 @@ async def handle_photo_generation(
     ai_manager,
     bot,
     context_manager: ContextManager,
+    db=None,
 ):
     import asyncio
 
     prompt = extract_photo_prompt(text)
+    count = extract_photo_count(text)
 
     if not prompt:
         await message.reply(
@@ -416,6 +509,10 @@ async def handle_photo_generation(
         return
 
     short_prompt = prompt
+    style = "realistic"
+    if db:
+        style = await db.get_setting("photo_style") or "realistic"
+    style_suffix = PHOTO_STYLES.get(style, PHOTO_STYLES["realistic"])
 
     status_msg = await message.reply(random.choice(PHOTO_MESSAGES))
     await bot.send_chat_action(chat_id=message.chat.id, action=ChatAction.UPLOAD_PHOTO)
@@ -426,8 +523,9 @@ async def handle_photo_generation(
         except Exception:
             pass
 
+    count_text = f" ({count} варианта)" if count > 1 else ""
     await asyncio.sleep(1)
-    await update_status(f"🧠 Закури продумывает детали...\n\n💬 Промпт: {short_prompt}")
+    await update_status(f"🧠 Закури продумывает детали{count_text}...\n\n💬 Промпт: {short_prompt}\n🎨 Стиль: {style}")
 
     try:
         enhanced = await ai_manager.chat_completion(
@@ -437,9 +535,9 @@ async def handle_photo_generation(
                     "content": (
                         "Ты ассистент который улучшает промпты для генерации изображений. "
                         "На вход получаешь короткий промпт на русском. "
-                        "Улучши его: добавь детали, стиль, освещение, качество. "
+                        "Улучши его: добавь детали, освещение, качество. "
+                        f"Обязательно добавь стиль: {style_suffix}. "
                         "Переведи на английский. Не добавляй людей если не просят. "
-                        "Если не указан стиль — добавь 'realistic, high quality, detailed'. "
                         "Отвечай ТОЛЬКО улучшенным промптом на английском, без объяснений."
                     ),
                 },
@@ -455,30 +553,39 @@ async def handle_photo_generation(
         if enhanced and len(enhanced) > 10:
             prompt = enhanced.strip()
         else:
-            if not any(w in prompt.lower() for w in ["робот", "robot", "мех", "киборг"]):
-                prompt = prompt + ", realistic, high quality, detailed, no robots"
+            prompt = prompt + ", " + style_suffix
 
     except Exception:
-        if not any(w in prompt.lower() for w in ["робот", "robot", "мех", "киборг"]):
-            prompt = prompt + ", realistic, high quality, detailed, no robots"
+        prompt = prompt + ", " + style_suffix
 
-    await update_status(f"🖌️ Закури рисует...\n\n💬 Промпт: {short_prompt}")
+    await update_status(f"🖌️ Закури рисует{count_text}...\n\n💬 Промпт: {short_prompt}\n🎨 Стиль: {style}")
     await bot.send_chat_action(chat_id=message.chat.id, action=ChatAction.UPLOAD_PHOTO)
 
     try:
-        image_bytes = await ai_manager.generate_image(prompt)
-
         from aiogram.types import BufferedInputFile
-        photo = BufferedInputFile(image_bytes, filename="zakuri_art.png")
-        await message.answer_photo(photo, caption=f"🎨 Закури нарисовал: {short_prompt}")
 
-        await update_status(f"✅ Готово!\n\n💬 Промпт: {short_prompt}")
+        generated = 0
+        for i in range(count):
+            if i > 0:
+                await asyncio.sleep(1)
+                await update_status(f"🖌️ Закури рисует вариант {i+1}/{count}...\n\n💬 Промпт: {short_prompt}")
+                await bot.send_chat_action(chat_id=message.chat.id, action=ChatAction.UPLOAD_PHOTO)
+
+            image_bytes = await ai_manager.generate_image(prompt)
+            caption = f"🎨 Закури нарисовал: {short_prompt}"
+            if count > 1:
+                caption += f" (вариант {i+1}/{count})"
+            photo = BufferedInputFile(image_bytes, filename=f"zakuri_art_{i+1}.png")
+            await message.answer_photo(photo, caption=caption)
+            generated += 1
+
+        await update_status(f"✅ Готово! ({generated} фото)\n\n💬 Промпт: {short_prompt}\n🎨 Стиль: {style}")
 
         bot_name = "Закури"
         await context_manager.store_bot_message(
             chat_id=message.chat.id,
             bot_username=bot_name,
-            text=f"[Сгенерировал фото: {short_prompt}]",
+            text=f"[Сгенерировал фото: {short_prompt}, стиль: {style}]",
             message_id=message.message_id,
         )
 

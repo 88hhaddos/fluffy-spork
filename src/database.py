@@ -91,6 +91,7 @@ class Database:
             "chat_memory": "",
             "trigger_words": "",
             "anger_level": "30",
+            "photo_style": "realistic",
             "global_context_size": "50",
             "auto_respond_frequency": "10",
             "max_context_tokens": "8000",

@@ -16,6 +16,7 @@ from src.personality import load_personality_from_file, load_chat_memory_from_fi
 from src.handlers.admin_panel import router as admin_router
 from src.handlers.photo_gen import router as photo_router
 from src.handlers.group_chat import router as group_router
+from src.handlers.features import router as features_router
 
 logging.basicConfig(
     level=logging.INFO,
@@ -118,6 +119,7 @@ async def main():
     dp.workflow_data["context_manager"] = context_manager
 
     dp.include_router(admin_router)
+    dp.include_router(features_router)
     dp.include_router(photo_router)
     dp.include_router(group_router)
 

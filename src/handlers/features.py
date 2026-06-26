@@ -1,0 +1,435 @@
+"""Новые фичи: приветствия, реакции, голосовые, игры, переводчик, время, напоминания."""
+import random
+import logging
+import asyncio
+import datetime
+from typing import Optional
+
+from aiogram import Router, F
+from aiogram.filters import Command
+from aiogram.types import Message, CallbackQuery, ReactionTypeEmoji
+from aiogram.enums import ChatAction
+
+from src.config import config
+from src.filters import IsGroupChat, IsPrivateChat
+
+logger = logging.getLogger(__name__)
+
+router = Router(name="features")
+
+
+WELCOME_MESSAGES = [
+    "О, новенький! Привет, {name}! Я Закури — местный плюшевый дракон. Не обижай меня и будет нам дружба 💚",
+    "Добро пожаловать, {name}! Закури уже смотрит на тебя своими золотыми глазками. Шутки про драконов — сразу бан 🔥",
+    "Хей, {name}! Ещё один смельчак в логово к дракону. Я Закури, не кусаюсь... обычно 🐉",
+    "Новенький! {name}, ты знаешь с кем здороваешься? Я Закури — самый умный дракон в этом чате 💕",
+    "Привет-привет, {name}! Закури рад новому другу. Или врагу. Покажешь себя — разберёмся 😏",
+]
+
+REACTION_EMOJIS = ["👍", "❤️", "🔥", "😄", "🎉", "💚", "🐉", "😂", "👏", "💯"]
+
+
+# ─── Welcome new members ───
+
+@router.message(F.new_chat_members, IsGroupChat())
+async def welcome_new_members(message: Message, db):
+    for member in message.new_chat_members:
+        if member.id == config.BOT_ID:
+            await message.reply(
+                "🐉 Закури прилетел! Всем привет, я местный дракончик. "
+                "Пишите мне, и я отвечу. «закури, нарисуй кота» — умею рисовать!"
+            )
+            continue
+
+        name = member.first_name or member.username or "новенький"
+        await message.reply(random.choice(WELCOME_MESSAGES).format(name=name))
+
+
+# ─── Emoji reactions (random, ~8% chance) ───
+
+@router.message(IsGroupChat())
+async def maybe_react(message: Message, bot):
+    if message.from_user and message.from_user.id == config.BOT_ID:
+        return
+    if not message.text or len(message.text) < 3:
+        return
+
+    if random.randint(1, 100) <= 8:
+        try:
+            emoji = random.choice(REACTION_EMOJIS)
+            await message.react([ReactionTypeEmoji(emoji=emoji)])
+        except Exception:
+            pass
+
+
+# ─── Voice messages ───
+
+@router.message(F.voice, IsGroupChat())
+@router.message(F.voice, IsPrivateChat())
+async def handle_voice(message: Message, db, ai_manager, context_manager, bot):
+    if message.from_user and message.from_user.id == config.BOT_ID:
+        return
+
+    status_msg = await message.reply("🎤 Закури слушает голосовое...")
+
+    try:
+        file = await bot.get_file(message.voice.file_id)
+        downloaded = await bot.download_file(file.file_path)
+        audio_bytes = downloaded.read()
+
+        import aiohttp
+        session = ai_manager.get_session()
+        if not session:
+            await session.close()
+            session = await ai_manager.get_session()
+
+        from src.db_backend import IS_POSTGRES
+
+        text = await _transcribe_voice(audio_bytes, ai_manager)
+        if not text:
+            await status_msg.edit_text("Закури не расслышал голосовое 😔 Попробуй текстом!")
+            return
+
+        await status_msg.edit_text(f"🎤 Закури услышал: «{text[:200]}»")
+
+        username = message.from_user.username or message.from_user.first_name or "Кто-то"
+        await context_manager.store_user_message(
+            chat_id=message.chat.id,
+            user_id=message.from_user.id,
+            username=username,
+            first_name=message.from_user.first_name or "",
+            text=f"[Голосовое]: {text}",
+            message_id=message.message_id,
+        )
+
+        from src.personality import build_system_prompt
+        system_prompt = await build_system_prompt(db, message.chat.id)
+        messages = await context_manager.build_messages_for_ai(
+            chat_id=message.chat.id,
+            system_prompt=system_prompt,
+        )
+
+        await bot.send_chat_action(chat_id=message.chat.id, action=ChatAction.TYPING)
+        response = await ai_manager.chat_completion(messages=messages, temperature=0.7, max_tokens=800)
+
+        if response and response.strip():
+            try:
+                await status_msg.edit_text(response[:4096])
+            except Exception:
+                await message.reply(response[:4096])
+
+            bot_name = await db.get_setting("bot_name") or "Закури"
+            await context_manager.store_bot_message(
+                chat_id=message.chat.id,
+                bot_username=bot_name,
+                text=response[:4096],
+                message_id=status_msg.message_id,
+            )
+
+    except Exception as e:
+        logger.error(f"Voice error: {e}", exc_info=True)
+        try:
+            await status_msg.edit_text("Закури не понял голосовое 😔 Напиши текстом!")
+        except Exception:
+            pass
+
+
+async def _transcribe_voice(audio_bytes: bytes, ai_manager) -> Optional[str]:
+    """Транскрибация через AI провайдер (если поддерживает audio)."""
+    try:
+        providers = await ai_manager.db.get_active_providers("text")
+        if not providers:
+            return None
+
+        for p in providers:
+            try:
+                base = p["base_url"].rstrip("/")
+                if "openrouter" in base:
+                    url = base + "/audio/transcriptions"
+                elif "openai" in base:
+                    url = base + "/audio/transcriptions"
+                else:
+                    continue
+
+                session = await ai_manager.get_session()
+                import aiohttp
+                form = aiohttp.FormData()
+                form.add_field("file", audio_bytes, filename="voice.ogg", content_type="audio/ogg")
+                form.add_field("model", "whisper-1")
+
+                headers = {"Authorization": f"Bearer {p['api_key']}"}
+                async with session.post(url, data=form, headers=headers) as resp:
+                    if resp.status == 200:
+                        data = await resp.json()
+                        return data.get("text", "")
+            except Exception:
+                continue
+        return None
+    except Exception:
+        return None
+
+
+# ─── Mini-games ───
+
+@router.message(Command("dice"), IsGroupChat())
+@router.message(Command("dice"), IsPrivateChat())
+async def cmd_dice(message: Message):
+    result = random.randint(1, 6)
+    emojis = ["🎲", "🎲", "🎲"]
+    await message.reply(f"{random.choice(emojis)} Закури кинул кубик: {result}!")
+
+
+@router.message(Command("coin"), IsGroupChat())
+@router.message(Command("coin"), IsPrivateChat())
+async def cmd_coin(message: Message):
+    result = random.choice(["Орёл 🦅", "Решка 🪙"])
+    await message.reply(f"Закури подбросил монетку: {result}!")
+
+
+@router.message(Command("8ball"), IsGroupChat())
+@router.message(Command("8ball"), IsPrivateChat())
+async def cmd_8ball(message: Message):
+    answers = [
+        "Да, определённо 🔥",
+        "100% да 💚",
+        "Закури говорит: да 🐉",
+        "Хм, скорее да чем нет 🤔",
+        "Спроси позже, Закури занят 😏",
+        "Лучше не рассказывать 😈",
+        "Закури сомневается... 😕",
+        "Нет, точно нет 🚫",
+        "Даже не думай ❌",
+        "Абсолютно точно! ✅",
+    ]
+    await message.reply(f"🎱 {random.choice(answers)}")
+
+
+# ─── Time ───
+
+@router.message(Command("time"), IsGroupChat())
+@router.message(Command("time"), IsPrivateChat())
+async def cmd_time(message: Message):
+    now = datetime.datetime.now()
+    await message.reply(f"🕐 У Закури на часах: {now.strftime('%H:%M:%S')}\n📅 {now.strftime('%d.%m.%Y')}")
+
+
+# ─── Translator ───
+
+TRANSLATE_KEYWORDS = ["переведи", "перевод", "translate"]
+
+LANG_MAP = {
+    "английский": "English", "english": "English", "en": "English",
+    "испанский": "Spanish", "spanish": "Spanish", "es": "Spanish",
+    "немецкий": "German", "german": "German", "de": "German",
+    "французский": "French", "french": "French", "fr": "French",
+    "итальянский": "Italian", "italian": "Italian", "it": "Italian",
+    "японский": "Japanese", "japanese": "Japanese", "ja": "Japanese",
+    "китайский": "Chinese", "chinese": "Chinese", "zh": "Chinese",
+    "русский": "Russian", "russian": "Russian", "ru": "Russian",
+    "украинский": "Ukrainian", "ukrainian": "Ukrainian", "uk": "Ukrainian",
+}
+
+
+def detect_translate_request(text: str) -> Optional[tuple]:
+    """Returns (target_lang, text_to_translate) or None."""
+    text_lower = text.lower()
+    for kw in TRANSLATE_KEYWORDS:
+        idx = text_lower.find(kw)
+        if idx == -1:
+            continue
+        rest = text[idx + len(kw):].strip()
+
+        for lang_key, lang_val in LANG_MAP.items():
+            if rest.lower().startswith("на " + lang_key):
+                content = rest[len("на " + lang_key):].strip()
+                if content:
+                    return (lang_val, content)
+            if rest.lower().startswith(lang_key):
+                content = rest[len(lang_key):].strip()
+                if content:
+                    return (lang_val, content)
+
+        if rest.lower().startswith("на "):
+            after_na = rest[3:].strip()
+            for lang_key, lang_val in LANG_MAP.items():
+                if after_na.lower().startswith(lang_key):
+                    content = after_na[len(lang_key):].strip()
+                    if content:
+                        return (lang_val, content)
+    return None
+
+
+async def handle_translate(message: Message, text: str, ai_manager, bot):
+    result = detect_translate_request(text)
+    if not result:
+        return False
+
+    target_lang, content = result
+
+    status_msg = await message.reply(f"🌐 Закури переводит на {target_lang}...")
+
+    try:
+        translation = await ai_manager.chat_completion(
+            messages=[
+                {
+                    "role": "system",
+                    "content": f"Translate the following text to {target_lang}. Reply ONLY with the translation, nothing else.",
+                },
+                {"role": "user", "content": content},
+            ],
+            temperature=0.1,
+            max_tokens=500,
+        )
+
+        if translation and translation.strip():
+            await status_msg.edit_text(f"🌐 {target_lang}:\n\n{translation.strip()}")
+        else:
+            await status_msg.edit_text("Закури не смог перевести 😔")
+        return True
+    except Exception as e:
+        logger.error(f"Translate error: {e}")
+        try:
+            await status_msg.edit_text("Закури запутался в языках 😔")
+        except Exception:
+            pass
+        return True
+
+
+# ─── Reminders ───
+
+REMINDER_KEYWORDS = ["напомни", "напомнить", "reminder"]
+
+import re as _re
+
+_TIME_PATTERNS = [
+    (_re.compile(r"через\s+(\d+)\s+(секунд|секунд[ау]|сек|минут|минут[ауы]|мин|часов|часа|час|дней|дня|день)"), "relative"),
+    (_re.compile(r"в\s+(\d{1,2}):(\d{2})"), "absolute"),
+]
+
+
+def parse_reminder(text: str) -> Optional[tuple]:
+    """Returns (delay_seconds, reminder_text) or None."""
+    text_lower = text.lower()
+
+    for pattern, kind in _TIME_PATTERNS:
+        m = pattern.search(text_lower)
+        if not m:
+            continue
+
+        if kind == "relative":
+            num = int(m.group(1))
+            unit = m.group(2)
+            if "сек" in unit:
+                seconds = num
+            elif "мин" in unit:
+                seconds = num * 60
+            elif "час" in unit:
+                seconds = num * 3600
+            elif "дн" in unit:
+                seconds = num * 86400
+            else:
+                continue
+
+            after = text[m.end():].strip().strip(",.!:;—- ")
+            for prefix in ["про ", "о ", "на ", "что "]:
+                if after.lower().startswith(prefix):
+                    after = after[len(prefix):].strip()
+                    break
+            if not after:
+                after = "что-то важное"
+            return (seconds, after)
+
+        elif kind == "absolute":
+            hour = int(m.group(1))
+            minute = int(m.group(2))
+            now = datetime.datetime.now()
+            target = now.replace(hour=hour, minute=minute, second=0, microsecond=0)
+            if target <= now:
+                target += datetime.timedelta(days=1)
+            seconds = (target - now).total_seconds()
+
+            after = text[m.end():].strip().strip(",.!:;—- ")
+            for prefix in ["про ", "о ", "на ", "что "]:
+                if after.lower().startswith(prefix):
+                    after = after[len(prefix):].strip()
+                    break
+            if not after:
+                after = "что-то важное"
+            return (int(seconds), after)
+
+    return None
+
+
+async def handle_reminder(message: Message, text: str, bot):
+    result = parse_reminder(text)
+    if not result:
+        return False
+
+    delay, reminder_text = result
+
+    if delay > 86400 * 7:
+        await message.reply("Закури не может напомнить больше чем через неделю 🐉")
+        return True
+
+    username = message.from_user.first_name or message.from_user.username or "Кто-то"
+
+    mins = delay // 60
+    if mins < 60:
+        time_str = f"{mins} мин"
+    elif mins < 1440:
+        time_str = f"{mins // 60} ч {mins % 60} мин"
+    else:
+        time_str = f"{mins // 1440} д {((mins % 1440) // 60)} ч"
+
+    await message.reply(f"⏰ Закури запомнил! Напомню через {time_str}:\n📝 {reminder_text}")
+
+    async def remind():
+        await asyncio.sleep(delay)
+        try:
+            await message.reply(f"⏰ {username}, напоминаю!\n\n📝 {reminder_text}")
+        except Exception as e:
+            logger.error(f"Reminder failed: {e}")
+
+    asyncio.create_task(remind())
+    return True
+
+
+# ─── User facts memory ───
+
+FACT_KEYWORDS = [
+    "запомни что", "запомни:", "запомни", "помни что",
+    "я люблю", "я ненавижу", "мне нравится", "я обожаю",
+    "у меня", "я работаю", "я учусь", "я живу",
+]
+
+
+def detect_fact(text: str) -> Optional[str]:
+    text_lower = text.lower().strip()
+    for kw in FACT_KEYWORDS:
+        if text_lower.startswith(kw):
+            fact = text[len(kw):].strip().strip(":").strip()
+            if len(fact) > 3:
+                return fact
+    return None
+
+
+async def handle_user_fact(message: Message, text: str, db):
+    fact = detect_fact(text)
+    if not fact:
+        return False
+
+    username = message.from_user.username or message.from_user.first_name or "Кто-то"
+    user_id = message.from_user.id
+
+    existing = await db.get_setting(f"fact_{user_id}") or ""
+    if existing:
+        facts = [f.strip() for f in existing.split("||") if f.strip()]
+    else:
+        facts = []
+
+    if fact not in facts:
+        facts.append(fact)
+        await db.set_setting(f"fact_{user_id}", "||".join(facts[-20:]))
+
+    await message.reply(f"🧠 Закури запомнил про {username}: {fact}")
+    return True
