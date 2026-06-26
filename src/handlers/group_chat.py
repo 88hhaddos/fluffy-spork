@@ -305,6 +305,7 @@ async def _generate_and_send_response(
         if not response or not response.strip():
             response = "Хм, Закури задумался. Спроси ещё раз."
 
+        await bot.send_chat_action(chat_id=message.chat.id, action=ChatAction.TYPING)
         sent = await message.reply(response[:4096])
 
         bot_name = await db.get_setting("bot_name") or "Закури"
@@ -341,29 +342,41 @@ async def handle_photo_generation(
         )
         return
 
-    try:
-        await bot.send_chat_action(chat_id=message.chat.id, action=ChatAction.UPLOAD_PHOTO)
+    if not any(w in prompt.lower() for w in ["робот", "robot", "мех", "киборг", "android", "droid"]):
+        prompt = prompt + ", realistic person or animal, natural style, no robots"
 
+    status_msg = await message.reply("🎨 Закури достаёт кисточки...")
+    await bot.send_chat_action(chat_id=message.chat.id, action=ChatAction.UPLOAD_PHOTO)
+
+    try:
         image_bytes = await ai_manager.generate_image(prompt)
+
+        await status_msg.delete()
 
         from aiogram.types import BufferedInputFile
         photo = BufferedInputFile(image_bytes, filename="zakuri_art.png")
-        await message.answer_photo(photo, caption=f"Закури нарисовал: {prompt}")
+        await message.answer_photo(photo, caption=f"Закури нарисовал: {prompt.split(',')[0]}")
 
         bot_name = "Закури"
         await context_manager.store_bot_message(
             chat_id=message.chat.id,
             bot_username=bot_name,
-            text=f"[Сгенерировал фото: {prompt}]",
+            text=f"[Сгенерировал фото: {prompt.split(',')[0]}]",
             message_id=message.message_id,
         )
 
     except RuntimeError as e:
         logger.error(f"Image generation error: {e}")
-        await message.reply(f"Закури не может рисовать сейчас: {e}")
+        try:
+            await status_msg.edit_text(f"Закури не может рисовать сейчас: {e}")
+        except Exception:
+            await message.reply(f"Закури не может рисовать сейчас: {e}")
     except Exception as e:
         logger.error(f"Image generation error: {e}", exc_info=True)
-        await message.reply("Закури уронил кисточку. Попробуй ещё раз.")
+        try:
+            await status_msg.edit_text("Закури уронил кисточку. Попробуй ещё раз.")
+        except Exception:
+            await message.reply("Закури уронил кисточку. Попробуй ещё раз.")
 
 
 async def handle_photo_edit(
@@ -382,15 +395,18 @@ async def handle_photo_edit(
         )
         return
 
-    try:
-        await bot.send_chat_action(chat_id=message.chat.id, action=ChatAction.UPLOAD_PHOTO)
+    status_msg = await message.reply("🎨 Закури редактирует фото...")
+    await bot.send_chat_action(chat_id=message.chat.id, action=ChatAction.UPLOAD_PHOTO)
 
+    try:
         photo = message.reply_to_message.photo[-1]
         file = await bot.get_file(photo.file_id)
         downloaded = await bot.download_file(file.file_path)
         image_bytes = downloaded.read()
 
         edited_bytes = await ai_manager.edit_image(image_bytes, prompt)
+
+        await status_msg.delete()
 
         from aiogram.types import BufferedInputFile
         result_photo = BufferedInputFile(edited_bytes, filename="zakuri_edit.png")
@@ -405,7 +421,13 @@ async def handle_photo_edit(
 
     except RuntimeError as e:
         logger.error(f"Image edit error: {e}")
-        await message.reply(f"Закури не может редактировать сейчас: {e}")
+        try:
+            await status_msg.edit_text(f"Закури не может редактировать сейчас: {e}")
+        except Exception:
+            await message.reply(f"Закури не может редактировать сейчас: {e}")
     except Exception as e:
         logger.error(f"Image edit error: {e}", exc_info=True)
-        await message.reply("Закури уронил кисточку при редактировании. Попробуй ещё раз.")
+        try:
+            await status_msg.edit_text("Закури уронил кисточку. Попробуй ещё раз.")
+        except Exception:
+            await message.reply("Закури уронил кисточку при редактировании. Попробуй ещё раз.")
