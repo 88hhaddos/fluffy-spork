@@ -154,6 +154,12 @@ def should_respond_in_group(message: Message, chat_settings: dict, triggers: lis
         if random.randint(1, 100) <= freq:
             return True
 
+    if _is_short_or_meaningless(text):
+        return False
+
+    if random.randint(1, 100) <= 5:
+        return True
+
     return False
 
 
@@ -579,7 +585,10 @@ async def handle_photo_generation(
             await message.answer_photo(photo, caption=caption)
             generated += 1
 
-        await update_status(f"✅ Готово! ({generated} фото)\n\n💬 Промпт: {short_prompt}\n🎨 Стиль: {style}")
+        try:
+            await status_msg.delete()
+        except Exception:
+            pass
 
         bot_name = "Закури"
         await context_manager.store_bot_message(
