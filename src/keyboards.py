@@ -20,8 +20,9 @@ def settings_kb() -> InlineKeyboardMarkup:
     kb.button(text="✏️ Имя бота", callback_data="set:bot_name")
     kb.button(text="🎲 Частота авто-ответов", callback_data="set:frequency")
     kb.button(text="📏 Размер контекста", callback_data="set:context_size")
+    kb.button(text="🎯 Триггер-слова", callback_data="set:triggers")
     kb.button(text="🔙 Назад", callback_data="menu:main")
-    kb.adjust(1, 1, 1, 1)
+    kb.adjust(1, 1, 1, 1, 1)
     return kb.as_markup()
 
 
@@ -34,9 +35,10 @@ def providers_kb(providers: list[dict]) -> InlineKeyboardMarkup:
         kb.button(text=label, callback_data=f"prov:{p['id']}")
     kb.button(text="➕ Добавить text-провайдер", callback_data="prov:add_text")
     kb.button(text="➕ Добавить image-провайдер", callback_data="prov:add_image")
-    kb.button(text="⚡ NVIDIA пресеты", callback_data="prov:nvidia_presets")
+    kb.button(text="⚡ Готовые пресеты", callback_data="prov:presets")
+    kb.button(text="🧪 Тест генерации фото", callback_data="prov:test_image")
     kb.button(text="🔙 Назад", callback_data="menu:main")
-    kb.adjust(1, 1, 1, 1)
+    kb.adjust(1, 1, 1, 1, 1)
     return kb.as_markup()
 
 
@@ -55,22 +57,68 @@ NVIDIA_PRESETS = {
     },
 }
 
+OPENROUTER_PRESETS = {
+    "or_free_llama": {
+        "name": "OpenRouter Llama 3.3 70B (free)",
+        "base_url": "https://openrouter.ai/api/v1",
+        "model": "meta-llama/llama-3.3-70b-instruct:free",
+        "provider_type": "text",
+    },
+    "or_free_qwen": {
+        "name": "OpenRouter Qwen 2.5 72B (free)",
+        "base_url": "https://openrouter.ai/api/v1",
+        "model": "qwen/qwen-2.5-72b-instruct:free",
+        "provider_type": "text",
+    },
+    "or_free_deepseek": {
+        "name": "OpenRouter DeepSeek R1 (free)",
+        "base_url": "https://openrouter.ai/api/v1",
+        "model": "deepseek/deepseek-r1:free",
+        "provider_type": "text",
+    },
+    "or_free_mistral": {
+        "name": "OpenRouter Mistral 7B (free)",
+        "base_url": "https://openrouter.ai/api/v1",
+        "model": "mistralai/mistral-7b-instruct:free",
+        "provider_type": "text",
+    },
+    "or_gpt4o": {
+        "name": "OpenRouter GPT-4o mini",
+        "base_url": "https://openrouter.ai/api/v1",
+        "model": "openai/gpt-4o-mini",
+        "provider_type": "text",
+    },
+    "or_claude": {
+        "name": "OpenRouter Claude 3.5 Sonnet",
+        "base_url": "https://openrouter.ai/api/v1",
+        "model": "anthropic/claude-3.5-sonnet",
+        "provider_type": "text",
+    },
+}
 
-def nvidia_presets_kb() -> InlineKeyboardMarkup:
+
+def presets_kb() -> InlineKeyboardMarkup:
     kb = InlineKeyboardBuilder()
-    kb.button(text="📝 NVIDIA Nemotron 70B (text)", callback_data="nv_preset:nv_text_nemotron")
-    kb.button(text="📝 NVIDIA Llama 405B (text)", callback_data="nv_preset:nv_text_llama")
+    kb.button(text="📝 NVIDIA Nemotron 70B", callback_data="nv_preset:nv_text_nemotron")
+    kb.button(text="📝 NVIDIA Llama 405B", callback_data="nv_preset:nv_text_llama")
+    kb.button(text="📝 OpenRouter Llama 3.3 70B (free)", callback_data="or_preset:or_free_llama")
+    kb.button(text="📝 OpenRouter Qwen 2.5 72B (free)", callback_data="or_preset:or_free_qwen")
+    kb.button(text="📝 OpenRouter DeepSeek R1 (free)", callback_data="or_preset:or_free_deepseek")
+    kb.button(text="📝 OpenRouter Mistral 7B (free)", callback_data="or_preset:or_free_mistral")
+    kb.button(text="📝 OpenRouter GPT-4o mini", callback_data="or_preset:or_gpt4o")
+    kb.button(text="📝 OpenRouter Claude 3.5 Sonnet", callback_data="or_preset:or_claude")
     kb.button(text="🔙 К списку", callback_data="menu:providers")
-    kb.adjust(1, 1, 1)
+    kb.adjust(1, 1, 1, 1, 1, 1, 1, 1, 1)
     return kb.as_markup()
 
 
 def provider_detail_kb(provider_id: int) -> InlineKeyboardMarkup:
     kb = InlineKeyboardBuilder()
+    kb.button(text="➕ Добавить модель", callback_data=f"prov:add_model:{provider_id}")
     kb.button(text="🔄 Включить/выключить", callback_data=f"prov:toggle:{provider_id}")
     kb.button(text="🗑 Удалить", callback_data=f"prov:delete:{provider_id}")
     kb.button(text="🔙 К списку", callback_data="menu:providers")
-    kb.adjust(1, 1, 1)
+    kb.adjust(1, 1, 1, 1)
     return kb.as_markup()
 
 

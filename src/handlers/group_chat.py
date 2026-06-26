@@ -20,6 +20,8 @@ PHOTO_KEYWORDS = [
     "нарисуй", "сгенерируй", "создай фото", "сделай картинку",
     "сгенерируй изображение", "сделай фото", "создай изображение",
     "сгенерируй картинку", "сгенерируй картину", "generate image",
+    "сфотографируй", "сделай селфи", "дай фото", "как выглядит",
+    "покажи как выглядит", "дай изображение", "покажи фото",
 ]
 
 EDIT_KEYWORDS = [
@@ -50,15 +52,45 @@ def get_message_text(message: Message) -> str:
     return ""
 
 
-def should_respond_in_group(message: Message, chat_settings: dict) -> bool:
+DEFAULT_TRIGGERS = [
+    "закури", "зак", "заку", "драко", "дракон", "дракончик",
+    "дракоша", "драк", "закурий", "бот",
+]
+
+
+def _get_triggers(db) -> list[str]:
+    """Возвращает список триггер-слов из БД или стандартный."""
+    import asyncio
+    try:
+        custom = asyncio.get_event_loop().run_until_complete(
+            db.get_setting("trigger_words")
+        ) if not asyncio.get_event_loop().is_running() else None
+    except Exception:
+        custom = None
+    return DEFAULT_TRIGGERS
+
+
+async def _get_triggers_async(db) -> list[str]:
+    custom = await db.get_setting("trigger_words")
+    if custom:
+        words = [w.strip().lower() for w in custom.split(",") if w.strip()]
+        return words if words else DEFAULT_TRIGGERS
+    return DEFAULT_TRIGGERS
+
+
+def should_respond_in_group(message: Message, chat_settings: dict, triggers: list[str] = None) -> bool:
     text = (message.text or message.caption or "").lower()
     bot_username_lower = config.BOT_USERNAME.lower() if config.BOT_USERNAME else ""
 
     if f"@{bot_username_lower}" in text:
         return True
 
-    if "закури" in text:
-        return True
+    if triggers is None:
+        triggers = DEFAULT_TRIGGERS
+
+    for trigger in triggers:
+        if trigger in text:
+            return True
 
     if message.reply_to_message:
         if message.reply_to_message.from_user and message.reply_to_message.from_user.id == config.BOT_ID:
@@ -109,9 +141,12 @@ def extract_edit_prompt(text: str) -> str:
 async def cmd_start_private(message: Message, db):
     name = await db.get_setting("bot_name") or "Дракончик Закури"
     await message.answer(
-        f"Привет! Я {name} — плюшевый дракончик.\n"
-        f"Добавь меня в групповой чат и я буду общаться!\n\n"
-        f"Если ты админ — отправь /admin для настройки."
+        f"Привет! Я {name} — плюшевый дракончик.\n\n"
+        f"Можешь просто написать мне сюда, и мы поболтаем!\n"
+        f"Ещё я умею рисовать: «нарисуй [промпт]»\n\n"
+        f"Команды:\n"
+        f"  /help — помощь\n"
+        f"  /admin — панель управления (для админов)"
     )
 
 
@@ -119,12 +154,15 @@ async def cmd_start_private(message: Message, db):
 async def cmd_help(message: Message):
     help_text = (
         "🟢 Дракончик Закури\n\n"
+        "В личке:\n"
+        "  • Просто пиши мне — я отвечу!\n"
+        "  • «нарисуй [промпт]» — сгенерирую фото\n"
+        "  • Reply на фото + «измени [инструкции]» — отредактирую фото\n\n"
         "В группе:\n"
         "  • Напиши «закури» или @бот чтобы обратиться ко мне\n"
         "  • Reply на моё сообщение — отвечу\n"
-        "  • «закури, нарисуй [промпт]» — сгенерирую фото\n"
-        "  • Reply на фото + «закури, измени [инструкции]» — отредактирую фото\n\n"
-        "В личке (для админов):\n"
+        "  • «закури, нарисуй [промпт]» — сгенерирую фото\n\n"
+        "Админам:\n"
         "  • /admin — панель управления"
     )
     await message.answer(help_text)
@@ -166,21 +204,20 @@ async def handle_group_message(
         message_id=message.message_id,
     )
 
-    if is_photo_request(text):
+    triggers = await _get_triggers_async(db)
+    chat_settings = await db.get_chat_settings(message.chat.id)
+    addressed = should_respond_in_group(message, chat_settings, triggers)
+
+    if addressed and is_photo_request(text):
         await handle_photo_generation(message, text, ai_manager, bot, context_manager)
         return
 
-    if (
-        is_photo_edit_request(text)
-        and message.reply_to_message
-        and message.reply_to_message.photo
-    ):
-        await handle_photo_edit(message, text, ai_manager, bot, context_manager)
-        return
+    if addressed and is_photo_edit_request(text):
+        if message.reply_to_message and message.reply_to_message.photo:
+            await handle_photo_edit(message, text, ai_manager, bot, context_manager)
+            return
 
-    chat_settings = await db.get_chat_settings(message.chat.id)
-
-    if not should_respond_in_group(message, chat_settings):
+    if not addressed:
         return
 
     await _generate_and_send_response(message, db, ai_manager, context_manager, bot)
