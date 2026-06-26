@@ -633,7 +633,22 @@ async def handle_photo_generation(
             if count > 1:
                 caption += f" (вариант {i+1}/{count})"
             photo = BufferedInputFile(image_bytes, filename=f"zakuri_art_{i+1}.png")
-            sent_photo = await message.answer_photo(photo, caption=caption)
+
+            sent_photo = None
+            for attempt in range(3):
+                try:
+                    sent_photo = await message.answer_photo(photo, caption=caption)
+                    break
+                except Exception as send_err:
+                    logger.warning(f"Photo send attempt {attempt+1} failed: {send_err}")
+                    if attempt < 2:
+                        await asyncio.sleep(2)
+                    else:
+                        raise
+
+            if not sent_photo:
+                raise RuntimeError("Не удалось отправить фото после 3 попыток")
+
             generated += 1
 
             if db:

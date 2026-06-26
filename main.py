@@ -111,6 +111,7 @@ async def main():
     bot = Bot(
         token=config.BOT_TOKEN,
         default=DefaultBotProperties(parse_mode=ParseMode.HTML),
+        request_timeout=300,
     )
     dp = Dispatcher(storage=MemoryStorage())
 
