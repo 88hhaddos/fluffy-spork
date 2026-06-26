@@ -172,7 +172,9 @@ async def cb_set_context_size(callback: CallbackQuery, state: FSMContext, db):
     await state.set_state(AdminStates.set_context_size)
     await callback.message.edit_text(
         f"Текущий размер: <b>{current} сообщений</b>\n\n"
-        f"Введите размер контекста (10-200):",
+        f"Введите размер контекста (10-5000):\n\n"
+        f"Большие значения = больше памяти, но выше расход токенов.\n"
+        f"Старые сообщения автоматически суммаризуются в ключевые события.",
         reply_markup=cancel_kb(),
     )
     await callback.answer()
@@ -182,10 +184,10 @@ async def cb_set_context_size(callback: CallbackQuery, state: FSMContext, db):
 async def process_context_size(message: Message, state: FSMContext, db):
     try:
         size = int(message.text.strip())
-        if not 10 <= size <= 200:
+        if not 10 <= size <= 5000:
             raise ValueError
     except ValueError:
-        await message.answer("Введите число от 10 до 200:")
+        await message.answer("Введите число от 10 до 5000:")
         return
     old = await db.get_setting("global_context_size") or "50"
     await db.set_setting("global_context_size", str(size))

@@ -4,7 +4,8 @@ from typing import Optional
 logger = logging.getLogger(__name__)
 
 DEFAULT_CONTEXT_SIZE = 50
-SUMMARIZE_THRESHOLD = 30
+SUMMARIZE_THRESHOLD = 50
+MAX_SUMMARY_CHUNK = 200
 
 
 class ContextManager:
@@ -110,7 +111,11 @@ class ContextManager:
         return messages
 
     async def maybe_summarize(self, chat_id: int):
-        """Суммаризует старые сообщения если их слишком много."""
+        """Суммаризует старые сообщения если их слишком много.
+        
+        Порог: context_size + SUMMARIZE_THRESHOLD.
+        Если старых сообщений больше MAX_SUMMARY_CHUNK — суммаризует по частям.
+        """
         context_size = await self.get_context_size(chat_id)
         msg_count = await self.db.get_message_count(chat_id)
 
@@ -121,27 +126,31 @@ class ContextManager:
         if len(old_messages) < 10:
             return
 
-        try:
-            text_parts = []
-            for m in old_messages:
-                if m["is_forwarded"]:
-                    fwd = m["forwarded_from"] or "неизвестно"
-                    text_parts.append(f"[Переслано от {fwd}]: {m['message_text']}")
-                else:
-                    name = m["username"] or m["first_name"] or "Кто-то"
-                    role = "Закури" if m["is_bot_message"] else name
-                    text_parts.append(f"{role}: {m['message_text']}")
+        chunks = [old_messages[i:i + MAX_SUMMARY_CHUNK] for i in range(0, len(old_messages), MAX_SUMMARY_CHUNK)]
 
-            combined = "\n".join(text_parts)
-            summary = await self.ai.summarize(combined)
+        for chunk in chunks:
+            try:
+                text_parts = []
+                for m in chunk:
+                    if m["is_forwarded"]:
+                        fwd = m["forwarded_from"] or "неизвестно"
+                        text_parts.append(f"[Переслано от {fwd}]: {m['message_text']}")
+                    else:
+                        name = m["username"] or m["first_name"] or "Кто-то"
+                        role = "Закури" if m["is_bot_message"] else name
+                        text_parts.append(f"{role}: {m['message_text']}")
 
-            if summary:
-                await self.db.add_key_event(chat_id, summary)
-                ids = [m["id"] for m in old_messages]
-                await self.db.delete_messages_by_ids(ids)
-                logger.info(f"Суммаризовано {len(old_messages)} сообщений для chat {chat_id}")
-        except Exception as e:
-            logger.error(f"Ошибка суммаризации для chat {chat_id}: {e}")
+                combined = "\n".join(text_parts)
+                summary = await self.ai.summarize(combined)
+
+                if summary:
+                    await self.db.add_key_event(chat_id, summary)
+                    ids = [m["id"] for m in chunk]
+                    await self.db.delete_messages_by_ids(ids)
+                    logger.info(f"Суммаризовано {len(chunk)} сообщений для chat {chat_id}")
+            except Exception as e:
+                logger.error(f"Ошибка суммаризации для chat {chat_id}: {e}")
+                break
 
     async def load_large_context(self, chat_id: int, text: str) -> int:
         """Загрузка большого контекста (до 100k символов).
