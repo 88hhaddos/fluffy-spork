@@ -696,12 +696,19 @@ async def process_set_position(message: Message, state: FSMContext, db):
     await _reorder_to_position(db, same_type, pid, target_idx)
     await state.clear()
 
+    providers = await db.get_providers()
+    same_type2 = sorted(
+        [p for p in providers if p["provider_type"] == current["provider_type"]],
+        key=lambda x: x["priority"],
+    )
+    new_pos = next((i + 1 for i, p in enumerate(same_type2) if p["id"] == pid), 0)
+    total = len(same_type2)
+
     await message.answer(
         f"✅ Позиция изменена!\n\n"
-        f"Модель: {current['model']}\n"
         f"Было: #{old_pos}\n"
-        f"Стало: #{target_idx + 1}",
-        reply_markup=main_menu_kb(),
+        f"Стало: #{new_pos}",
+        reply_markup=priority_kb(pid, new_pos, total),
     )
 
 
