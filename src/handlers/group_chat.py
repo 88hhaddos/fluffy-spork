@@ -320,7 +320,7 @@ async def _generate_and_send_response(
 
     except RuntimeError as e:
         logger.error(f"AI error: {e}")
-        await message.reply(f"Закури не может ответить прямо сейчас: {e}")
+        await message.reply(f"Закури не может ответить: {str(e)[:200]}")
     except Exception as e:
         logger.error(f"Unexpected error: {e}", exc_info=True)
         await message.reply("Закури отвлёкся. Попробуй ещё раз.")

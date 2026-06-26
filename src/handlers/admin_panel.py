@@ -267,17 +267,18 @@ async def cb_providers(callback: CallbackQuery, db):
         if text_providers:
             active_t = sum(1 for p in text_providers if p["is_active"])
             lines.append(f"📝 <b>Текст ({len(text_providers)}, активных {active_t}):</b>")
-            for p in text_providers:
+            for i, p in enumerate(text_providers, 1):
                 status = "✅" if p["is_active"] else "❌"
-                lines.append(f"  {status} {p['name']} — {p['model']}")
+                lines.append(f"  {i}. {status} {p['name']} — {p['model']}")
 
         if image_providers:
             active_i = sum(1 for p in image_providers if p["is_active"])
             lines.append(f"\n🎨 <b>Изображения ({len(image_providers)}, активных {active_i}):</b>")
-            for p in image_providers:
+            for i, p in enumerate(image_providers, 1):
                 status = "✅" if p["is_active"] else "❌"
-                lines.append(f"  {status} {p['name']} — {p['model']}")
+                lines.append(f"  {i}. {status} {p['name']} — {p['model']}")
 
+        lines.append(f"\n💡 Порядок = приоритет. Верхние используются первыми.")
         text = "🤖 <b>AI Провайдеры</b>\n\n" + "\n".join(lines)
     await callback.message.edit_text(text, reply_markup=providers_kb(providers))
     await callback.answer()
@@ -546,6 +547,40 @@ async def cb_provider_detail(callback: CallbackQuery, db, state: FSMContext):
         )
         return
 
+    if data.startswith("prov:up:") or data.startswith("prov:down:"):
+        pid = int(data.split(":")[2])
+        direction = "up" if data.startswith("prov:up:") else "down"
+        providers = await db.get_providers()
+        current = next((p for p in providers if p["id"] == pid), None)
+        if not current:
+            await callback.answer("Не найдено")
+            return
+
+        same_type = [p for p in providers if p["provider_type"] == current["provider_type"]]
+        same_type.sort(key=lambda x: x["priority"])
+
+        idx = next((i for i, p in enumerate(same_type) if p["id"] == pid), -1)
+        if idx == -1:
+            await callback.answer("Не найдено")
+            return
+
+        if direction == "up" and idx > 0:
+            other = same_type[idx - 1]
+            await db.update_provider(pid, priority=other["priority"])
+            await db.update_provider(other["id"], priority=current["priority"])
+        elif direction == "down" and idx < len(same_type) - 1:
+            other = same_type[idx + 1]
+            await db.update_provider(pid, priority=other["priority"])
+            await db.update_provider(other["id"], priority=current["priority"])
+
+        await callback.answer("Приоритет изменён")
+        providers = await db.get_providers()
+        await callback.message.edit_text(
+            "🤖 <b>AI Провайдеры</b>",
+            reply_markup=providers_kb(providers),
+        )
+        return
+
     if data.startswith("prov:delete:"):
         pid = int(data.split(":")[2])
         await db.delete_provider(pid)
@@ -583,7 +618,8 @@ async def cb_provider_detail(callback: CallbackQuery, db, state: FSMContext):
         await callback.answer()
         return
 
-    if data in ("prov:add_text", "prov:add_image", "prov:presets", "prov:test_image"):
+    if data in ("prov:add_text", "prov:add_image", "prov:presets", "prov:test_image",
+                "prov:nvidia_presets"):
         return
 
     pid = int(data.split(":")[1])
