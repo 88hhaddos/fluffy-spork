@@ -322,6 +322,9 @@ async def handle_group_message(
         return
 
     if addressed and is_photo_edit_request(text):
+        if message.photo:
+            await handle_photo_edit_direct(message, text, ai_manager, bot, context_manager)
+            return
         if message.reply_to_message and message.reply_to_message.photo:
             await handle_photo_edit(message, text, ai_manager, bot, context_manager)
             return
@@ -389,13 +392,13 @@ async def handle_private_message(
         await handle_photo_generation(message, text, ai_manager, bot, context_manager, db)
         return
 
-    if (
-        is_photo_edit_request(text)
-        and message.reply_to_message
-        and message.reply_to_message.photo
-    ):
-        await handle_photo_edit(message, text, ai_manager, bot, context_manager)
-        return
+    if is_photo_edit_request(text):
+        if message.photo:
+            await handle_photo_edit_direct(message, text, ai_manager, bot, context_manager)
+            return
+        if message.reply_to_message and message.reply_to_message.photo:
+            await handle_photo_edit(message, text, ai_manager, bot, context_manager)
+            return
 
     from src.handlers.features import handle_translate, handle_reminder, handle_user_fact, handle_poll
     if await handle_poll(message, text, bot):
@@ -669,6 +672,65 @@ async def handle_photo_generation(
             f"🚫 Изображение не создано\n\n"
             f"💬 Закури уронил кисточку. Попробуй ещё раз."
         )
+
+
+async def handle_photo_edit_direct(
+    message: Message,
+    text: str,
+    ai_manager,
+    bot,
+    context_manager: ContextManager,
+):
+    """Редактирование фото которое юзер прислал напрямую (с подписью)."""
+    import asyncio
+
+    prompt = extract_edit_prompt(text)
+    if not prompt:
+        prompt = text
+
+    if not prompt:
+        await message.reply("Напиши что изменить в фото!")
+        return
+
+    status_msg = await message.reply(random.choice(PHOTO_MESSAGES))
+    await bot.send_chat_action(chat_id=message.chat.id, action=ChatAction.UPLOAD_PHOTO)
+
+    async def update_status(t: str):
+        try:
+            await status_msg.edit_text(t)
+        except Exception:
+            pass
+
+    try:
+        photo = message.photo[-1]
+        file = await bot.get_file(photo.file_id)
+        downloaded = await bot.download_file(file.file_path)
+        image_bytes = downloaded.read()
+
+        await update_status(f"🖌️ Закури редактирует твоё фото...\n\n💬 Инструкции: {prompt}")
+        await bot.send_chat_action(chat_id=message.chat.id, action=ChatAction.UPLOAD_PHOTO)
+
+        edited_bytes = await ai_manager.edit_image(image_bytes, prompt)
+
+        from aiogram.types import BufferedInputFile
+        result_photo = BufferedInputFile(edited_bytes, filename="zakuri_edit.png")
+        await message.answer_photo(result_photo, caption=f"🎨 Закури отредактировал: {prompt}")
+
+        await update_status(f"✅ Готово!\n\n💬 Инструкции: {prompt}")
+
+        await context_manager.store_bot_message(
+            chat_id=message.chat.id,
+            bot_username="Закури",
+            text="🎨 Отредактировал фото",
+            message_id=message.message_id,
+        )
+
+    except RuntimeError as e:
+        logger.error(f"Image edit direct error: {e}")
+        await update_status(f"🚫 Редактирование не удалось\n\n💬 {str(e)[:300]}")
+    except Exception as e:
+        logger.error(f"Image edit direct error: {e}", exc_info=True)
+        await update_status("🚫 Закури уронил кисточку. Попробуй ещё раз.")
 
 
 async def handle_photo_edit(
