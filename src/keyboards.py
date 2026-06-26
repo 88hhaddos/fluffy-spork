@@ -18,11 +18,12 @@ def main_menu_kb() -> InlineKeyboardMarkup:
 def settings_kb() -> InlineKeyboardMarkup:
     kb = InlineKeyboardBuilder()
     kb.button(text="✏️ Имя бота", callback_data="set:bot_name")
+    kb.button(text="😈 Злость (0-100%)", callback_data="set:anger")
     kb.button(text="🎲 Частота авто-ответов", callback_data="set:frequency")
     kb.button(text="📏 Размер контекста", callback_data="set:context_size")
     kb.button(text="🎯 Триггер-слова", callback_data="set:triggers")
     kb.button(text="🔙 Назад", callback_data="menu:main")
-    kb.adjust(1, 1, 1, 1, 1)
+    kb.adjust(1, 1, 1, 1, 1, 1)
     return kb.as_markup()
 
 

@@ -48,6 +48,7 @@ class AdminStates(StatesGroup):
     set_frequency = State()
     set_context_size = State()
     set_triggers = State()
+    set_anger = State()
 
     add_admin = State()
 
@@ -132,6 +133,67 @@ async def process_bot_name(message: Message, state: FSMContext, db):
         f"✅ Имя бота изменено!\n\n"
         f"Было: {old}\n"
         f"Стало: {name}",
+        reply_markup=main_menu_kb(),
+    )
+
+
+@router.callback_query(F.data == "set:anger", IsAdmin())
+async def cb_set_anger(callback: CallbackQuery, state: FSMContext, db):
+    current = int(await db.get_setting("anger_level") or "30")
+    if current <= 10:
+        desc = "😇 Очень милый"
+    elif current <= 30:
+        desc = "😊 Добрый, с характером"
+    elif current <= 60:
+        desc = "😏 Саркастичный"
+    elif current <= 85:
+        desc = "😠 Дерзкий и грубый"
+    else:
+        desc = "😈 Очень злой"
+
+    await state.set_state(AdminStates.set_anger)
+    await callback.message.edit_text(
+        f"😈 <b>Уровень злости</b>\n\n"
+        f"Текущий: <b>{current}%</b> — {desc}\n\n"
+        f"0% = милый, добрый, сердечки 💕\n"
+        f"30% = добрый, но с характером (по умолчанию)\n"
+        f"60% = саркастичный, подкалывает\n"
+        f"85% = дерзкий, грубит\n"
+        f"100% = максимально злой и агрессивный\n\n"
+        f"Введите число от 0 до 100:",
+        reply_markup=cancel_kb(),
+    )
+    await callback.answer()
+
+
+@router.message(AdminStates.set_anger, IsAdmin())
+async def process_anger(message: Message, state: FSMContext, db):
+    try:
+        val = int(message.text.strip())
+        if not 0 <= val <= 100:
+            raise ValueError
+    except ValueError:
+        await message.answer("Введите число от 0 до 100:")
+        return
+    old = await db.get_setting("anger_level") or "30"
+    await db.set_setting("anger_level", str(val))
+    await state.clear()
+
+    if val <= 10:
+        desc = "😇 Очень милый"
+    elif val <= 30:
+        desc = "😊 Добрый"
+    elif val <= 60:
+        desc = "😏 Саркастичный"
+    elif val <= 85:
+        desc = "😠 Дерзкий"
+    else:
+        desc = "😈 Очень злой"
+
+    await message.answer(
+        f"✅ Злость изменена!\n\n"
+        f"Было: {old}%\n"
+        f"Стало: {val}% — {desc}",
         reply_markup=main_menu_kb(),
     )
 

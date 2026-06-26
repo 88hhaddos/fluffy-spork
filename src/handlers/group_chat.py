@@ -16,6 +16,32 @@ logger = logging.getLogger(__name__)
 
 router = Router(name="group_chat")
 
+THINKING_MESSAGES = [
+    "💭 Закури думает...",
+    "🤔 М-м-м, дай-ка подумаю...",
+    "🐉 Закури чесает чешуйку...",
+    "💭 Хвостиком шевелит и думает...",
+    "🧠 Закури напрягает мозги...",
+    "✨ Закури придумывает ответ...",
+    "💕 Закури думает о тебе...",
+    "🤗 Закури готовит что-то милое...",
+    "👀 Закури присматривается к вопросу...",
+    "🔥 Закури разжигает мысли...",
+    "💭 М-м... интересный вопрос...",
+    "🐉 Крылышки шевелятся, Закури думает...",
+]
+
+PHOTO_MESSAGES = [
+    "🎨 Закури достаёт кисточки...",
+    "🖌️ Закури ищет краски...",
+    "🎭 Закури вдохновляется...",
+    "✨ Закури творит магию...",
+    "🐉 Закури расправляет крылья для творчества...",
+    "💕 Закури рисует с любовью...",
+    "🎨 М-м-м, что бы такое нарисовать...",
+    "🖌️ Закури макает кисть в огонь...",
+]
+
 PHOTO_KEYWORDS = [
     "нарисуй", "сгенерируй", "создай фото", "сделай картинку",
     "сгенерируй изображение", "сделай фото", "создай изображение",
@@ -283,7 +309,7 @@ async def _generate_and_send_response(
     try:
         await bot.send_chat_action(chat_id=message.chat.id, action=ChatAction.TYPING)
 
-        status_msg = await message.reply("💭 Закури думает...")
+        status_msg = await message.reply(random.choice(THINKING_MESSAGES))
 
         system_prompt = await build_system_prompt(db, message.chat.id)
 
@@ -370,7 +396,7 @@ async def handle_photo_generation(
 
     short_prompt = prompt.split(",")[0].strip()
 
-    status_msg = await message.reply("🎨 Закури думает что нарисовать...")
+    status_msg = await message.reply(random.choice(PHOTO_MESSAGES))
     await bot.send_chat_action(chat_id=message.chat.id, action=ChatAction.UPLOAD_PHOTO)
 
     async def update_status(text: str):
@@ -434,7 +460,7 @@ async def handle_photo_edit(
         )
         return
 
-    status_msg = await message.reply("🎨 Закури смотрит на фото...")
+    status_msg = await message.reply(random.choice(PHOTO_MESSAGES))
     await bot.send_chat_action(chat_id=message.chat.id, action=ChatAction.UPLOAD_PHOTO)
 
     async def update_status(text: str):
