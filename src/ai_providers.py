@@ -61,9 +61,11 @@ class AIProviderManager:
         errors = []
         for p in providers:
             try:
-                return await self._call_chat(p, messages, temperature, max_tokens)
+                result = await self._call_chat(p, messages, temperature, max_tokens)
+                logger.info(f"✅ Ответ от: {p['name']} — {p['model']}")
+                return result
             except Exception as e:
-                logger.warning(f"Провайдер {p['name']} ({p['model']}) failed: {e}")
+                logger.warning(f"❌ Провайдер {p['name']} ({p['model']}) failed: {e}")
                 errors.append(f"{p['name']}: {e}")
                 continue
 
@@ -125,9 +127,11 @@ class AIProviderManager:
         errors = []
         for p in providers:
             try:
-                return await self._call_image_gen(p, prompt, size)
+                result = await self._call_image_gen(p, prompt, size)
+                logger.info(f"✅ Фото от: {p['name']} — {p['model']}")
+                return result
             except Exception as e:
-                logger.warning(f"Image провайдер {p['name']} failed: {e}")
+                logger.warning(f"❌ Image провайдер {p['name']} ({p['model']}) failed: {e}")
                 errors.append(f"{p['name']}: {e}")
                 continue
 
