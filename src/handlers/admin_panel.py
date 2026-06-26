@@ -1,0 +1,787 @@
+import logging
+
+from aiogram import Router, F
+from aiogram.filters import Command
+from aiogram.fsm.context import FSMContext
+from aiogram.fsm.state import State, StatesGroup
+from aiogram.types import Message, CallbackQuery, BufferedInputFile
+
+from src.config import config
+from src.filters import IsAdmin, IsPrivateChat
+from src.keyboards import (
+    main_menu_kb,
+    settings_kb,
+    providers_kb,
+    provider_detail_kb,
+    personality_kb,
+    context_kb,
+    admins_kb,
+    admin_detail_kb,
+    cancel_kb,
+    nvidia_presets_kb,
+    NVIDIA_PRESETS,
+)
+from src.personality import load_personality_from_file
+
+logger = logging.getLogger(__name__)
+
+router = Router(name="admin_panel")
+
+
+class AdminStates(StatesGroup):
+    add_prov_name = State()
+    add_prov_url = State()
+    add_prov_key = State()
+    add_prov_model = State()
+
+    edit_base_prompt = State()
+    edit_topic = State()
+    edit_custom = State()
+    load_context = State()
+    load_memory = State()
+
+    set_bot_name = State()
+    set_frequency = State()
+    set_context_size = State()
+
+    add_admin = State()
+
+
+# ─── /admin command ───
+
+@router.message(Command("admin"), IsAdmin(), IsPrivateChat())
+async def cmd_admin(message: Message):
+    await message.answer(
+        "🮠 <b>Панель управления</b>\n\n"
+        "Дракончик Закури — настройки бота",
+        reply_markup=main_menu_kb(),
+    )
+
+
+@router.message(Command("admin"), IsPrivateChat())
+async def cmd_admin_denied(message: Message):
+    await message.answer("У вас нет прав администратора.")
+
+
+# ─── Main menu navigation ───
+
+@router.callback_query(F.data == "menu:main", IsAdmin())
+async def cb_main(callback: CallbackQuery):
+    await callback.message.edit_text(
+        "🮠 <b>Панель управления</b>\n\nДракончик Закури — настройки бота",
+        reply_markup=main_menu_kb(),
+    )
+    await callback.answer()
+
+
+@router.callback_query(F.data == "menu:close", IsAdmin())
+async def cb_close(callback: CallbackQuery, state: FSMContext):
+    await state.clear()
+    await callback.message.delete()
+    await callback.answer("Меню закрыто")
+
+
+@router.callback_query(F.data == "cancel", IsAdmin())
+async def cb_cancel(callback: CallbackQuery, state: FSMContext):
+    await state.clear()
+    await callback.message.edit_text(
+        "🮠 <b>Панель управления</b>",
+        reply_markup=main_menu_kb(),
+    )
+    await callback.answer("Отменено")
+
+
+# ─── Settings ───
+
+@router.callback_query(F.data == "menu:settings", IsAdmin())
+async def cb_settings(callback: CallbackQuery):
+    await callback.message.edit_text(
+        "⚙️ <b>Настройки бота</b>",
+        reply_markup=settings_kb(),
+    )
+    await callback.answer()
+
+
+@router.callback_query(F.data == "set:bot_name", IsAdmin())
+async def cb_set_bot_name(callback: CallbackQuery, state: FSMContext):
+    await state.set_state(AdminStates.set_bot_name)
+    await callback.message.edit_text(
+        "Введите новое имя бота:",
+        reply_markup=cancel_kb(),
+    )
+    await callback.answer()
+
+
+@router.message(AdminStates.set_bot_name, IsAdmin())
+async def process_bot_name(message: Message, state: FSMContext, db):
+    name = message.text.strip()
+    if not name:
+        await message.answer("Имя не может быть пустым. Попробуйте ещё раз:")
+        return
+    await db.set_setting("bot_name", name)
+    await state.clear()
+    await message.answer(f"✅ Имя бота изменено на: {name}", reply_markup=main_menu_kb())
+
+
+@router.callback_query(F.data == "set:frequency", IsAdmin())
+async def cb_set_frequency(callback: CallbackQuery, state: FSMContext):
+    await state.set_state(AdminStates.set_frequency)
+    await callback.message.edit_text(
+        "Введите частоту авто-ответов (0-100, процент сообщений):",
+        reply_markup=cancel_kb(),
+    )
+    await callback.answer()
+
+
+@router.message(AdminStates.set_frequency, IsAdmin())
+async def process_frequency(message: Message, state: FSMContext, db):
+    try:
+        freq = int(message.text.strip())
+        if not 0 <= freq <= 100:
+            raise ValueError
+    except ValueError:
+        await message.answer("Введите число от 0 до 100:")
+        return
+    await db.set_setting("auto_respond_frequency", str(freq))
+    await state.clear()
+    await message.answer(f"✅ Частота авто-ответов: {freq}%", reply_markup=main_menu_kb())
+
+
+@router.callback_query(F.data == "set:context_size", IsAdmin())
+async def cb_set_context_size(callback: CallbackQuery, state: FSMContext):
+    await state.set_state(AdminStates.set_context_size)
+    await callback.message.edit_text(
+        "Введите размер контекста (количество последних сообщений, 10-200):",
+        reply_markup=cancel_kb(),
+    )
+    await callback.answer()
+
+
+@router.message(AdminStates.set_context_size, IsAdmin())
+async def process_context_size(message: Message, state: FSMContext, db):
+    try:
+        size = int(message.text.strip())
+        if not 10 <= size <= 200:
+            raise ValueError
+    except ValueError:
+        await message.answer("Введите число от 10 до 200:")
+        return
+    await db.set_setting("global_context_size", str(size))
+    await state.clear()
+    await message.answer(f"✅ Размер контекста: {size} сообщений", reply_markup=main_menu_kb())
+
+
+# ─── AI Providers ───
+
+@router.callback_query(F.data == "menu:providers", IsAdmin())
+async def cb_providers(callback: CallbackQuery, db):
+    providers = await db.get_providers()
+    if not providers:
+        text = "🤖 <b>AI Провайдеры</b>\n\nПровайдеров пока нет. Добавьте новый:"
+    else:
+        lines = []
+        for p in providers:
+            status = "✅" if p["is_active"] else "❌"
+            ptype = "📝" if p["provider_type"] == "text" else "🎨"
+            lines.append(f"{status} {ptype} <b>{p['name']}</b> — {p['model']}")
+        text = "🤖 <b>AI Провайдеры</b>\n\n" + "\n".join(lines)
+    await callback.message.edit_text(text, reply_markup=providers_kb(providers))
+    await callback.answer()
+
+
+@router.callback_query(F.data.startswith("prov:add_"), IsAdmin())
+async def cb_add_provider(callback: CallbackQuery, state: FSMContext):
+    ptype = "text" if callback.data == "prov:add_text" else "image"
+    await state.set_state(AdminStates.add_prov_name)
+    await state.update_data(provider_type=ptype)
+    await callback.message.edit_text(
+        f"➕ Добавление {ptype}-провайдера\n\n"
+        "Шаг 1/4: Введите <b>название</b> провайдера\n"
+        "(например: NVIDIA NIM, OpenAI, Groq)",
+        reply_markup=cancel_kb(),
+    )
+    await callback.answer()
+
+
+@router.callback_query(F.data == "prov:nvidia_presets", IsAdmin())
+async def cb_nvidia_presets(callback: CallbackQuery):
+    await callback.message.edit_text(
+        "⚡ <b>NVIDIA пресеты</b>\n\n"
+        "Выберите готовый пресет. Вам понадобится только API ключ.\n"
+        "Получить: build.nvidia.com → Sign in → 1000 бесплатных кредитов.",
+        reply_markup=nvidia_presets_kb(),
+    )
+    await callback.answer()
+
+
+@router.callback_query(F.data.startswith("nv_preset:"), IsAdmin())
+async def cb_nv_preset(callback: CallbackQuery, state: FSMContext):
+    preset_key = callback.data.split(":", 1)[1]
+    preset = NVIDIA_PRESETS.get(preset_key)
+    if not preset:
+        await callback.answer("Пресет не найден")
+        return
+
+    await state.set_state(AdminStates.add_prov_key)
+    await state.update_data(
+        provider_type=preset["provider_type"],
+        prov_name=preset["name"],
+        prov_url=preset["base_url"],
+        preset_model=preset["model"],
+    )
+    await callback.message.edit_text(
+        f"⚡ <b>{preset['name']}</b>\n\n"
+        f"Тип: {'Текст' if preset['provider_type'] == 'text' else 'Изображения'}\n"
+        f"URL: {preset['base_url']}\n"
+        f"Модель: {preset['model']}\n\n"
+        f"Введите <b>API ключ</b> NVIDIA (nvapi-xxx):\n"
+        f"Получить на build.nvidia.com",
+        reply_markup=cancel_kb(),
+    )
+    await callback.answer()
+
+
+@router.message(AdminStates.add_prov_name, IsAdmin())
+async def process_prov_name(message: Message, state: FSMContext):
+    name = message.text.strip()
+    if not name:
+        await message.answer("Название не может быть пустым:")
+        return
+    await state.update_data(prov_name=name)
+    await state.set_state(AdminStates.add_prov_url)
+    await message.answer(
+        "Шаг 2/4: Введите <b>base URL</b> провайдера\n"
+        "(например: https://integrate.api.nvidia.com/v1)",
+        reply_markup=cancel_kb(),
+    )
+
+
+@router.message(AdminStates.add_prov_url, IsAdmin())
+async def process_prov_url(message: Message, state: FSMContext):
+    url = message.text.strip()
+    if not url.startswith("http"):
+        await message.answer("URL должен начинаться с http:// или https://:")
+        return
+    await state.update_data(prov_url=url)
+    await state.set_state(AdminStates.add_prov_key)
+    await message.answer(
+        "Шаг 3/4: Введите <b>API ключ</b>\n"
+        "(например: nvapi-xxx, sk-xxx)",
+        reply_markup=cancel_kb(),
+    )
+
+
+@router.message(AdminStates.add_prov_key, IsAdmin())
+async def process_prov_key(message: Message, state: FSMContext):
+    key = message.text.strip()
+    if not key:
+        await message.answer("API ключ не может быть пустым:")
+        return
+    await state.update_data(prov_key=key)
+
+    data = await state.get_data()
+    if data.get("preset_model"):
+        model = data["preset_model"]
+        await state.set_state(AdminStates.add_prov_model)
+        await _save_provider(message, state, db=None, model=model)
+        return
+
+    await state.set_state(AdminStates.add_prov_model)
+    await message.answer(
+        "Шаг 4/4: Введите <b>модель</b>\n"
+        "(например: nvidia/llama-3.1-nemotron-70b-instruct, gpt-4o, dall-e-3)",
+        reply_markup=cancel_kb(),
+    )
+
+
+@router.message(AdminStates.add_prov_model, IsAdmin())
+async def process_prov_model(message: Message, state: FSMContext, db):
+    model = message.text.strip()
+    if not model:
+        await message.answer("Модель не может быть пустой:")
+        return
+    await _save_provider(message, state, db, model)
+
+
+async def _save_provider(message: Message, state: FSMContext, db, model: str):
+    data = await state.get_data()
+    ptype = data.get("provider_type", "text")
+
+    if db is None:
+        from src.database import Database
+        db = Database()
+        await db.init()
+
+    count = len(await db.get_providers(ptype))
+
+    await db.add_provider(
+        name=data["prov_name"],
+        base_url=data["prov_url"],
+        api_key=data["prov_key"],
+        model=model,
+        provider_type=ptype,
+        priority=count,
+    )
+    await state.clear()
+    await message.answer(
+        f"✅ Провайдер добавлен!\n\n"
+        f"Название: {data['prov_name']}\n"
+        f"Тип: {ptype}\n"
+        f"URL: {data['prov_url']}\n"
+        f"Модель: {model}",
+        reply_markup=main_menu_kb(),
+    )
+
+
+@router.callback_query(F.data.startswith("prov:"), IsAdmin())
+async def cb_provider_detail(callback: CallbackQuery, db):
+    data = callback.data
+    if data.startswith("prov:toggle:"):
+        pid = int(data.split(":")[2])
+        await db.toggle_provider(pid)
+        await callback.answer("Статус изменён")
+        providers = await db.get_providers()
+        await callback.message.edit_text(
+            "🤖 <b>AI Провайдеры</b>",
+            reply_markup=providers_kb(providers),
+        )
+        return
+
+    if data.startswith("prov:delete:"):
+        pid = int(data.split(":")[2])
+        await db.delete_provider(pid)
+        await callback.answer("Провайдер удалён")
+        providers = await db.get_providers()
+        await callback.message.edit_text(
+            "🤖 <b>AI Провайдеры</b>",
+            reply_markup=providers_kb(providers),
+        )
+        return
+
+    if data in ("prov:add_text", "prov:add_image"):
+        return
+
+    pid = int(data.split(":")[1])
+    providers = await db.get_providers()
+    provider = next((p for p in providers if p["id"] == pid), None)
+    if not provider:
+        await callback.answer("Провайдер не найден")
+        return
+
+    status = "✅ Активен" if provider["is_active"] else "❌ Выключен"
+    ptype = "Текст" if provider["provider_type"] == "text" else "Изображения"
+    key_masked = provider["api_key"][:8] + "..." if len(provider["api_key"]) > 8 else "***"
+
+    await callback.message.edit_text(
+        f"🤖 <b>{provider['name']}</b>\n\n"
+        f"Тип: {ptype}\n"
+        f"Статус: {status}\n"
+        f"URL: {provider['base_url']}\n"
+        f"Модель: {provider['model']}\n"
+        f"Ключ: {key_masked}\n"
+        f"Приоритет: {provider['priority']}",
+        reply_markup=provider_detail_kb(pid),
+    )
+    await callback.answer()
+
+
+# ─── Personality & Prompt ───
+
+@router.callback_query(F.data == "menu:personality", IsAdmin())
+async def cb_personality(callback: CallbackQuery):
+    await callback.message.edit_text(
+        "📝 <b>Личность и промпт</b>",
+        reply_markup=personality_kb(),
+    )
+    await callback.answer()
+
+
+@router.callback_query(F.data == "pers:view", IsAdmin())
+async def cb_pers_view(callback: CallbackQuery, db):
+    personality = await db.get_setting("base_personality") or "(стандартный из PERSONALITY.md)"
+    topic = await db.get_setting("topic") or "(не задана)"
+    custom = await db.get_setting("custom_instructions") or "(нет)"
+    memory = await db.get_setting("chat_memory") or ""
+    memory_info = f"{len(memory):,} символов" if memory else "(не загружена)"
+
+    text = (
+        f"📝 <b>Текущий промпт</b>\n\n"
+        f"<b>Личность:</b>\n{personality[:800]}{'...' if len(personality) > 800 else ''}\n\n"
+        f"<b>Тема:</b> {topic}\n\n"
+        f"<b>Инструкции:</b> {custom[:200] if custom else '(нет)'}\n\n"
+        f"<b>Память чата:</b> {memory_info}"
+    )
+    await callback.message.edit_text(text, reply_markup=personality_kb())
+    await callback.answer()
+
+
+@router.callback_query(F.data == "pers:edit_base", IsAdmin())
+async def cb_pers_edit_base(callback: CallbackQuery, state: FSMContext):
+    await state.set_state(AdminStates.edit_base_prompt)
+    await callback.message.edit_text(
+        "Отправьте новый базовый промпт (личность бота).\n"
+        "Или отправьте /reset для сброса к стандартному из PERSONALITY.md",
+        reply_markup=cancel_kb(),
+    )
+    await callback.answer()
+
+
+@router.message(AdminStates.edit_base_prompt, IsAdmin())
+async def process_edit_base(message: Message, state: FSMContext, db):
+    text = message.text.strip()
+    if text.lower() == "/reset":
+        from src.personality import load_personality_from_file
+        default = load_personality_from_file()
+        await db.set_setting("base_personality", default)
+        await state.clear()
+        await message.answer("✅ Промпт сброшен к стандартному", reply_markup=main_menu_kb())
+        return
+    await db.set_setting("base_personality", text)
+    await state.clear()
+    await message.answer("✅ Базовый промпт обновлён", reply_markup=main_menu_kb())
+
+
+@router.callback_query(F.data == "pers:edit_topic", IsAdmin())
+async def cb_pers_edit_topic(callback: CallbackQuery, state: FSMContext):
+    await state.set_state(AdminStates.edit_topic)
+    await callback.message.edit_text(
+        "Отправьте тему для обсуждения.\n"
+        "Или /clear чтобы убрать тему.",
+        reply_markup=cancel_kb(),
+    )
+    await callback.answer()
+
+
+@router.message(AdminStates.edit_topic, IsAdmin())
+async def process_edit_topic(message: Message, state: FSMContext, db):
+    text = message.text.strip()
+    if text.lower() == "/clear":
+        await db.set_setting("topic", "")
+        await state.clear()
+        await message.answer("✅ Тема очищена", reply_markup=main_menu_kb())
+        return
+    await db.set_setting("topic", text)
+    await state.clear()
+    await message.answer(f"✅ Тема установлена: {text}", reply_markup=main_menu_kb())
+
+
+@router.callback_query(F.data == "pers:edit_custom", IsAdmin())
+async def cb_pers_edit_custom(callback: CallbackQuery, state: FSMContext):
+    await state.set_state(AdminStates.edit_custom)
+    await callback.message.edit_text(
+        "Отправьте дополнительные инструкции для бота.\n"
+        "Или /clear чтобы убрать инструкции.",
+        reply_markup=cancel_kb(),
+    )
+    await callback.answer()
+
+
+@router.message(AdminStates.edit_custom, IsAdmin())
+async def process_edit_custom(message: Message, state: FSMContext, db):
+    text = message.text.strip()
+    if text.lower() == "/clear":
+        await db.set_setting("custom_instructions", "")
+        await state.clear()
+        await message.answer("✅ Инструкции очищены", reply_markup=main_menu_kb())
+        return
+    await db.set_setting("custom_instructions", text)
+    await state.clear()
+    await message.answer("✅ Инструкции обновлены", reply_markup=main_menu_kb())
+
+
+@router.callback_query(F.data == "pers:reset", IsAdmin())
+async def cb_pers_reset(callback: CallbackQuery, db):
+    default = load_personality_from_file()
+    await db.set_setting("base_personality", default)
+    await db.set_setting("topic", "")
+    await db.set_setting("custom_instructions", "")
+    await callback.answer("Сброшено к стандартному")
+    await callback.message.edit_text(
+        "✅ Личность сброшена к стандартному из PERSONALITY.md",
+        reply_markup=personality_kb(),
+    )
+
+
+@router.callback_query(F.data == "pers:load_context", IsAdmin())
+async def cb_pers_load_context(callback: CallbackQuery, state: FSMContext):
+    await state.set_state(AdminStates.load_context)
+    await callback.message.edit_text(
+        "📥 <b>Загрузка контекста (суммаризация)</b>\n\n"
+        "Отправьте текст или .txt файл с контекстом (до 100k символов).\n"
+        "Бот суммаризует его и сохранит как ключевые события.\n\n"
+        "Текущий чат будет использоваться как целевой.",
+        reply_markup=cancel_kb(),
+    )
+    await callback.answer()
+
+
+@router.message(AdminStates.load_context, IsAdmin())
+async def process_load_context(
+    message: Message, state: FSMContext, db, ai_manager, context_manager,
+):
+    chat_id = message.chat.id
+
+    if message.document:
+        try:
+            file = await message.bot.get_file(message.document.file_id)
+            downloaded = await message.bot.download_file(file.file_path)
+            content = downloaded.read().decode("utf-8", errors="replace")
+        except Exception as e:
+            await message.answer(f"Ошибка чтения файла: {e}")
+            return
+    elif message.text:
+        content = message.text
+    else:
+        await message.answer("Отправьте текст или .txt файл.")
+        return
+
+    if len(content) > 100_000:
+        content = content[:100_000]
+        await message.answer("⚠️ Текст обрезан до 100k символов.")
+
+    await message.answer("⏳ Обрабатываю контекст...")
+
+    try:
+        count = await context_manager.load_large_context(chat_id, content)
+        await state.clear()
+        await message.answer(
+            f"✅ Контекст загружен! Создано {count} ключевых событий.",
+            reply_markup=main_menu_kb(),
+        )
+    except Exception as e:
+        logger.error(f"Context load error: {e}", exc_info=True)
+        await message.answer(f"Ошибка: {e}")
+
+
+@router.callback_query(F.data == "pers:load_memory", IsAdmin())
+async def cb_pers_load_memory(callback: CallbackQuery, state: FSMContext):
+    await state.set_state(AdminStates.load_memory)
+    await callback.message.edit_text(
+        "📥 <b>Загрузка памяти чата (raw)</b>\n\n"
+        "Отправьте .txt/.md файл или текст с памятью чата.\n"
+        "Файл сохранится целиком — без суммаризации.\n"
+        "Будет включаться в системный промпт напрямую.\n\n"
+        "Максимум 100k символов. Умное обрезание при превышении лимита модели.",
+        reply_markup=cancel_kb(),
+    )
+    await callback.answer()
+
+
+@router.message(AdminStates.load_memory, IsAdmin())
+async def process_load_memory(
+    message: Message, state: FSMContext, db,
+):
+    if message.document:
+        try:
+            file = await message.bot.get_file(message.document.file_id)
+            downloaded = await message.bot.download_file(file.file_path)
+            content = downloaded.read().decode("utf-8", errors="replace")
+        except Exception as e:
+            await message.answer(f"Ошибка чтения файла: {e}")
+            return
+    elif message.text:
+        content = message.text
+    else:
+        await message.answer("Отправьте текст или .txt/.md файл.")
+        return
+
+    if len(content) > 100_000:
+        content = content[:100_000]
+
+    await db.set_setting("chat_memory", content)
+    await state.clear()
+
+    from src.personality import _truncate_memory, MAX_MEMORY_CHARS
+    truncated_len = len(_truncate_memory(content))
+
+    await message.answer(
+        f"✅ Память чата загружена!\n\n"
+        f"Размер: {len(content):,} символов\n"
+        f"В промпте: ~{truncated_len:,} символов (лимит {MAX_MEMORY_CHARS:,})\n\n"
+        f"Бот теперь знает участников, жаргон и легенды чата.",
+        reply_markup=main_menu_kb(),
+    )
+
+
+# ─── Context & Memory ───
+
+@router.callback_query(F.data == "menu:context", IsAdmin())
+async def cb_context(callback: CallbackQuery):
+    await callback.message.edit_text(
+        "🧠 <b>Контекст и память</b>",
+        reply_markup=context_kb(),
+    )
+    await callback.answer()
+
+
+@router.callback_query(F.data == "ctx:events", IsAdmin())
+async def cb_ctx_events(callback: CallbackQuery, db):
+    chat_id = callback.message.chat.id
+    from src.context_manager import ContextManager
+    events = await db.get_key_events(chat_id, limit=50)
+    if not events:
+        text = "🧠 <b>Ключевые события</b>\n\nКлючевых событий нет."
+    else:
+        lines = [f"• {e['event_text'][:200]}" for e in reversed(events)]
+        text = "🧠 <b>Ключевые события</b>\n\n" + "\n".join(lines)
+    await callback.message.edit_text(text, reply_markup=context_kb())
+    await callback.answer()
+
+
+@router.callback_query(F.data == "ctx:clear", IsAdmin())
+async def cb_ctx_clear(callback: CallbackQuery, db):
+    chat_id = callback.message.chat.id
+    await db.clear_messages(chat_id)
+    await callback.answer("Контекст очищен")
+    await callback.message.edit_text(
+        "✅ Контекст чата очищен",
+        reply_markup=context_kb(),
+    )
+
+
+@router.callback_query(F.data == "ctx:clear_events", IsAdmin())
+async def cb_ctx_clear_events(callback: CallbackQuery, db):
+    chat_id = callback.message.chat.id
+    await db.clear_key_events(chat_id)
+    await callback.answer("События очищены")
+    await callback.message.edit_text(
+        "✅ Ключевые события очищены",
+        reply_markup=context_kb(),
+    )
+
+
+@router.callback_query(F.data == "ctx:clear_memory", IsAdmin())
+async def cb_ctx_clear_memory(callback: CallbackQuery, db):
+    await db.set_setting("chat_memory", "")
+    await callback.answer("Память чата очищена")
+    await callback.message.edit_text(
+        "✅ Память чата очищена",
+        reply_markup=context_kb(),
+    )
+
+
+# ─── Admins ───
+
+@router.callback_query(F.data == "menu:admins", IsAdmin())
+async def cb_admins(callback: CallbackQuery, db):
+    admins = await db.get_admins()
+    env_admins = [uid for uid in config.ADMIN_IDS if uid not in [a["user_id"] for a in admins]]
+    if not admins and not env_admins:
+        text = "👥 <b>Админы</b>\n\nАдминов нет."
+    else:
+        lines = []
+        for a in admins:
+            name = a["username"] or str(a["user_id"])
+            lines.append(f"👤 {name} ({a['user_id']})")
+        for uid in env_admins:
+            lines.append(f"👤 (env) {uid}")
+        text = "👥 <b>Админы</b>\n\n" + "\n".join(lines)
+    await callback.message.edit_text(text, reply_markup=admins_kb(admins))
+    await callback.answer()
+
+
+@router.callback_query(F.data == "adm:add", IsAdmin())
+async def cb_add_admin(callback: CallbackQuery, state: FSMContext):
+    await state.set_state(AdminStates.add_admin)
+    await callback.message.edit_text(
+        "Отправьте ID пользователя или перешлите его сообщение.\n"
+        "(ID можно узнать у @userinfobot)",
+        reply_markup=cancel_kb(),
+    )
+    await callback.answer()
+
+
+@router.message(AdminStates.add_admin, IsAdmin())
+async def process_add_admin(message: Message, state: FSMContext, db):
+    user_id = None
+    username = ""
+
+    if message.forward_origin:
+        origin = message.forward_origin
+        if hasattr(origin, "sender_user") and origin.sender_user:
+            user_id = origin.sender_user.id
+            username = origin.sender_user.username or ""
+    elif message.text:
+        try:
+            user_id = int(message.text.strip())
+        except ValueError:
+            await message.answer("Введите числовой ID или перешлите сообщение пользователя.")
+            return
+
+    if not user_id:
+        await message.answer("Не удалось определить ID. Попробуйте ещё раз.")
+        return
+
+    await db.add_admin(user_id, username)
+    await state.clear()
+    await message.answer(
+        f"✅ Админ добавлен: {username or user_id} (ID: {user_id})",
+        reply_markup=main_menu_kb(),
+    )
+
+
+@router.callback_query(F.data.startswith("adm:delete:"), IsAdmin())
+async def cb_delete_admin(callback: CallbackQuery, db):
+    uid = int(callback.data.split(":")[2])
+    if uid in config.ADMIN_IDS:
+        await callback.answer("Нельзя удалить админа из .env")
+        return
+    await db.remove_admin(uid)
+    admins = await db.get_admins()
+    await callback.answer("Админ удалён")
+    await callback.message.edit_text(
+        "👥 <b>Админы</b>",
+        reply_markup=admins_kb(admins),
+    )
+
+
+@router.callback_query(F.data.startswith("adm:"), IsAdmin())
+async def cb_admin_detail(callback: CallbackQuery, db):
+    if callback.data.startswith("adm:delete:") or callback.data == "adm:add":
+        return
+    uid = int(callback.data.split(":")[1])
+    admins = await db.get_admins()
+    admin = next((a for a in admins if a["user_id"] == uid), None)
+    if not admin:
+        await callback.answer("Админ не найден")
+        return
+    name = admin["username"] or str(admin["user_id"])
+    await callback.message.edit_text(
+        f"👤 <b>{name}</b>\nID: {admin['user_id']}",
+        reply_markup=admin_detail_kb(uid),
+    )
+    await callback.answer()
+
+
+# ─── Statistics ───
+
+@router.callback_query(F.data == "menu:stats", IsAdmin())
+async def cb_stats(callback: CallbackQuery, db):
+    from src.config import config as cfg
+    chat_id = callback.message.chat.id
+
+    msg_count = await db.get_message_count(chat_id)
+    events = await db.get_key_events(chat_id)
+    text_providers = await db.get_providers("text")
+    image_providers = await db.get_providers("image")
+    admins = await db.get_admins()
+
+    bot_name = await db.get_setting("bot_name") or "Дракончик Закури"
+    topic = await db.get_setting("topic") or "(не задана)"
+    ctx_size = await db.get_setting("global_context_size") or "50"
+
+    text = (
+        f"📊 <b>Статистика</b>\n\n"
+        f"<b>Бот:</b> {bot_name}\n"
+        f"<b>Тема:</b> {topic}\n"
+        f"<b>Контекст:</b> {ctx_size} сообщений\n\n"
+        f"<b>Этот чат:</b>\n"
+        f"  Сообщений в БД: {msg_count}\n"
+        f"  Ключевых событий: {len(events)}\n\n"
+        f"<b>AI Провайдеры:</b>\n"
+        f"  Текст: {len(text_providers)} ({sum(1 for p in text_providers if p['is_active'])} активных)\n"
+        f"  Изображения: {len(image_providers)} ({sum(1 for p in image_providers if p['is_active'])} активных)\n\n"
+        f"<b>Админы:</b> {len(admins) + len(cfg.ADMIN_IDS)}"
+    )
+    await callback.message.edit_text(text, reply_markup=main_menu_kb())
+    await callback.answer()
