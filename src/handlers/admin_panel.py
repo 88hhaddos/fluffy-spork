@@ -58,6 +58,7 @@ class AdminStates(StatesGroup):
     set_photo_custom = State()
     add_ban = State()
     add_relation = State()
+    say_as_bot = State()
 
     add_admin = State()
 
@@ -1550,6 +1551,56 @@ async def cb_rel_detail(callback: CallbackQuery, db):
         reply_markup=relation_detail_kb(uid, rel),
     )
     await callback.answer()
+
+
+# ─── Say as bot ───
+
+@router.callback_query(F.data == "menu:say", IsAdmin())
+async def cb_say_menu(callback: CallbackQuery, state: FSMContext, db):
+    await state.set_state(AdminStates.say_as_bot)
+    bot_name = await db.get_setting("bot_name") or "Дракончик Закури"
+    await callback.message.edit_text(
+        f"📨 <b>Написать от лица бота</b>\n\n"
+        f"Бот: {bot_name}\n\n"
+        f"Отправьте текст сообщения.\n"
+        f"Сообщение будет отправлено от имени бота в этот чат.\n\n"
+        f"Для отправки в группу — перешлите сообщение из группы сначала, "
+        f"затем текст.\nИли просто напишите текст — отправится сюда (в ЛС боту).",
+        reply_markup=cancel_kb(),
+    )
+    await callback.answer()
+
+
+@router.message(AdminStates.say_as_bot, IsAdmin())
+async def process_say_as_bot(message: Message, state: FSMContext, db, bot):
+    text = message.text or message.caption or ""
+
+    if not text:
+        await message.answer("Отправьте текст:")
+        return
+
+    await state.clear()
+
+    bot_name = await db.get_setting("bot_name") or "Закури"
+
+    sent = await message.answer(text[:4096])
+
+    await db.store_message(
+        chat_id=message.chat.id,
+        user_id=0,
+        username=bot_name,
+        first_name="",
+        message_text=text[:4096],
+        is_forwarded=False,
+        forwarded_from="",
+        is_bot=True,
+        message_id=sent.message_id,
+    )
+
+    await message.answer(
+        "✅ Сообщение отправлено от лица бота!",
+        reply_markup=main_menu_kb(),
+    )
 
 
 # ─── Statistics ───

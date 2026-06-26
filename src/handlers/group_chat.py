@@ -262,6 +262,42 @@ async def cmd_help(message: Message):
     await message.answer(help_text)
 
 
+@router.message(Command("say"), IsGroupChat())
+async def cmd_say_in_group(message: Message, db, bot):
+    from src.filters import IsAdmin
+    from src.config import config
+
+    if message.from_user.id not in config.ADMIN_IDS and not await db.is_admin(message.from_user.id):
+        return
+
+    text = (message.text or "").replace("/say", "", 1).strip()
+    if not text:
+        await message.reply("Напиши: /say [текст сообщения]")
+        return
+
+    bot_name = await db.get_setting("bot_name") or "Закури"
+
+    try:
+        await message.delete()
+    except Exception:
+        pass
+
+    sent = await message.answer_to_chat(text[:4096]) if hasattr(message, 'answer_to_chat') else await message.bot.send_message(message.chat.id, text[:4096])
+
+    from src.context_manager import ContextManager
+    await db.store_message(
+        chat_id=message.chat.id,
+        user_id=0,
+        username=bot_name,
+        first_name="",
+        message_text=text[:4096],
+        is_forwarded=False,
+        forwarded_from="",
+        is_bot=True,
+        message_id=sent.message_id,
+    )
+
+
 @router.message(IsGroupChat())
 async def handle_group_message(
     message: Message,
