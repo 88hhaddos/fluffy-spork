@@ -57,7 +57,7 @@ async def _do_generate(message: Message, prompt: str, ai_manager, bot, context_m
         await context_manager.store_bot_message(
             chat_id=message.chat.id,
             bot_username="Закури",
-            text=f"[Сгенерировал фото: {prompt}]",
+            text=f"🎨 Нарисовал: {prompt}",
             message_id=message.message_id,
         )
     except RuntimeError as e:
@@ -81,7 +81,7 @@ async def _do_edit(message: Message, prompt: str, ai_manager, bot, context_manag
         await context_manager.store_bot_message(
             chat_id=message.chat.id,
             bot_username="Закури",
-            text=f"[Отредактировал фото: {prompt}]",
+            text=f"🎨 Отредактировал фото",
             message_id=message.message_id,
         )
     except RuntimeError as e:

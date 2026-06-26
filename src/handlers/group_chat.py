@@ -144,7 +144,7 @@ def should_respond_in_group(message: Message, chat_settings: dict, triggers: lis
                 if random.randint(1, 100) <= 20:
                     return True
                 return False
-            if random.randint(1, 100) <= 90:
+            if random.randint(1, 100) <= 95:
                 return True
             return False
 
@@ -577,7 +577,7 @@ async def handle_photo_generation(
         await context_manager.store_bot_message(
             chat_id=message.chat.id,
             bot_username=bot_name,
-            text=f"[Сгенерировал фото: {short_prompt}, стиль: {style}]",
+            text=f"🎨 Нарисовал: {short_prompt}",
             message_id=message.message_id,
         )
 
@@ -644,7 +644,7 @@ async def handle_photo_edit(
         await context_manager.store_bot_message(
             chat_id=message.chat.id,
             bot_username="Закури",
-            text=f"[Отредактировал фото: {prompt}]",
+            text=f"🎨 Отредактировал фото",
             message_id=message.message_id,
         )
 
