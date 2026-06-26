@@ -249,6 +249,11 @@ async def cmd_help(message: Message):
         "  /fact — что Закури запомнил про тебя\n"
         "  /who — легенда про юзера (reply на сообщение)\n"
         "  /gallery — последние сгенерированные фото 📸\n\n"
+        "Админ-команды:\n"
+        "  /say [текст] — написать от лица бота\n"
+        "  /ban (reply) — забанить юзера\n"
+        "  /unban (reply) — разбанить юзера\n"
+        "  /warn (reply) — выдать предупреждение (3=бан)\n\n"
         "Фичи:\n"
         "  • «нарисуй что хочешь» — случайное фото 🎲\n"
         "  • «закури сделай опрос: вопрос|вариант1|вариант2» 🗳️\n"
@@ -264,7 +269,6 @@ async def cmd_help(message: Message):
 
 @router.message(Command("say"), IsGroupChat())
 async def cmd_say_in_group(message: Message, db, bot):
-    from src.filters import IsAdmin
     from src.config import config
 
     if message.from_user.id not in config.ADMIN_IDS and not await db.is_admin(message.from_user.id):
@@ -282,7 +286,7 @@ async def cmd_say_in_group(message: Message, db, bot):
     except Exception:
         pass
 
-    sent = await message.answer_to_chat(text[:4096]) if hasattr(message, 'answer_to_chat') else await message.bot.send_message(message.chat.id, text[:4096])
+    sent = await message.bot.send_message(message.chat.id, text[:4096])
 
     from src.context_manager import ContextManager
     await db.store_message(
@@ -296,6 +300,109 @@ async def cmd_say_in_group(message: Message, db, bot):
         is_bot=True,
         message_id=sent.message_id,
     )
+
+
+@router.message(Command("ban"), IsGroupChat())
+@router.message(Command("ban"), IsPrivateChat())
+async def cmd_ban(message: Message, db):
+    from src.config import config
+
+    if message.from_user.id not in config.ADMIN_IDS and not await db.is_admin(message.from_user.id):
+        return
+
+    target = None
+    if message.reply_to_message and message.reply_to_message.from_user:
+        target = message.reply_to_message.from_user
+    else:
+        args = (message.text or "").replace("/ban", "", 1).strip()
+        if args:
+            try:
+                target_id = int(args.split(":")[0].strip())
+                from aiogram.types import User
+                target = User(id=target_id, is_bot=False, first_name=args)
+            except Exception:
+                pass
+
+    if not target:
+        await message.reply("Reply на сообщение юзера или /ban <ID>")
+        return
+
+    reason = ""
+    args = (message.text or "").split(":", 1)
+    if len(args) > 1:
+        reason = args[1].strip()
+
+    username = target.username or target.first_name or str(target.id)
+    await db.ban_user(target.id, username, message.from_user.id, reason)
+
+    try:
+        await message.delete()
+    except Exception:
+        pass
+
+    await message.reply(f"🚫 {username} забанен. Причина: {reason or 'не указана'}")
+
+
+@router.message(Command("unban"), IsGroupChat())
+@router.message(Command("unban"), IsPrivateChat())
+async def cmd_unban(message: Message, db):
+    from src.config import config
+
+    if message.from_user.id not in config.ADMIN_IDS and not await db.is_admin(message.from_user.id):
+        return
+
+    target_id = None
+    if message.reply_to_message and message.reply_to_message.from_user:
+        target_id = message.reply_to_message.from_user.id
+    else:
+        args = (message.text or "").replace("/unban", "", 1).strip()
+        if args:
+            try:
+                target_id = int(args)
+            except ValueError:
+                pass
+
+    if not target_id:
+        await message.reply("Reply на сообщение юзера или /unban <ID>")
+        return
+
+    await db.unban_user(target_id)
+    await message.reply(f"🔓 Юзер {target_id} разбанен")
+
+
+@router.message(Command("warn"), IsGroupChat())
+@router.message(Command("warn"), IsPrivateChat())
+async def cmd_warn(message: Message, db):
+    from src.config import config
+
+    if message.from_user.id not in config.ADMIN_IDS and not await db.is_admin(message.from_user.id):
+        return
+
+    target = None
+    if message.reply_to_message and message.reply_to_message.from_user:
+        target = message.reply_to_message.from_user
+    else:
+        args = (message.text or "").replace("/warn", "", 1).strip()
+        if args:
+            try:
+                target_id = int(args.split(":")[0].strip())
+                from aiogram.types import User
+                target = User(id=target_id, is_bot=False, first_name=args)
+            except Exception:
+                pass
+
+    if not target:
+        await message.reply("Reply на сообщение юзера или /warn <ID>")
+        return
+
+    username = target.username or target.first_name or str(target.id)
+    warnings = await db.add_warning(target.id, username)
+
+    if warnings >= 3:
+        await db.ban_user(target.id, username, reason="3 предупреждения")
+        await message.reply(f"⚠️→🚫 {username}: 3/3 — автоматический бан!")
+    else:
+        await message.reply(f"⚠️ {username}: предупреждение {warnings}/3. При 3 — бан.")
 
 
 @router.message(IsGroupChat())
