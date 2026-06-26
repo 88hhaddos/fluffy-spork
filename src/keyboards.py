@@ -10,9 +10,10 @@ def main_menu_kb() -> InlineKeyboardMarkup:
     kb.button(text="🧠 Контекст и память", callback_data="menu:context")
     kb.button(text="👥 Админы", callback_data="menu:admins")
     kb.button(text="🚫 Бан-лист", callback_data="menu:bans")
+    kb.button(text="💚 Отношения юзеров", callback_data="menu:relations")
     kb.button(text="📊 Статистика", callback_data="menu:stats")
     kb.button(text="❌ Закрыть", callback_data="menu:close")
-    kb.adjust(1, 1, 1, 1, 1, 1, 1, 1)
+    kb.adjust(1, 1, 1, 1, 1, 1, 1, 1, 1)
     return kb.as_markup()
 
 
@@ -233,4 +234,38 @@ def ban_detail_kb(user_id: int) -> InlineKeyboardMarkup:
     kb.button(text="🗑 Очистить предупреждения", callback_data=f"ban:clear_warn:{user_id}")
     kb.button(text="🔙 К списку", callback_data="menu:bans")
     kb.adjust(1, 1, 1)
+    return kb.as_markup()
+
+
+def relations_kb(relations: list[dict]) -> InlineKeyboardMarkup:
+    kb = InlineKeyboardBuilder()
+    for r in relations[:20]:
+        name = r.get("username") or str(r["user_id"])
+        rel = r["relationship"]
+        if rel >= 50:
+            emoji = "💚💚"
+        elif rel >= 20:
+            emoji = "💚"
+        elif rel <= -50:
+            emoji = "🚫🚫"
+        elif rel <= -20:
+            emoji = "🚫"
+        else:
+            emoji = "😐"
+        kb.button(text=f"{emoji} {name}: {rel}/100", callback_data=f"rel:{r['user_id']}")
+    kb.button(text="➕ Добавить юзера", callback_data="rel:add")
+    kb.button(text="🔙 Назад", callback_data="menu:main")
+    kb.adjust(1, 1)
+    return kb.as_markup()
+
+
+def relation_detail_kb(user_id: int, current: int) -> InlineKeyboardMarkup:
+    kb = InlineKeyboardBuilder()
+    kb.button(text="💚💚 Любить (+50)", callback_data=f"rel:set:{user_id}:50")
+    kb.button(text="💚 Дружить (+20)", callback_data=f"rel:set:{user_id}:20")
+    kb.button(text="😐 Нейтрально (0)", callback_data=f"rel:set:{user_id}:0")
+    kb.button(text="🚫 Не любить (-20)", callback_data=f"rel:set:{user_id}:-20")
+    kb.button(text="🚫🚫 Ненавидеть (-50)", callback_data=f"rel:set:{user_id}:-50")
+    kb.button(text="🔙 К списку", callback_data="menu:relations")
+    kb.adjust(1, 1, 1, 1, 1, 1)
     return kb.as_markup()

@@ -85,8 +85,20 @@ CREATE TABLE IF NOT EXISTS user_relationships (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE IF NOT EXISTS photo_gallery (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    chat_id INTEGER NOT NULL,
+    user_id INTEGER NOT NULL,
+    username TEXT,
+    prompt TEXT NOT NULL,
+    style TEXT DEFAULT 'realistic',
+    file_id TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 CREATE INDEX IF NOT EXISTS idx_messages_chat_id ON messages(chat_id);
 CREATE INDEX IF NOT EXISTS idx_key_events_chat_id ON key_events(chat_id);
+CREATE INDEX IF NOT EXISTS idx_gallery_chat_id ON photo_gallery(chat_id);
 """
 
 
@@ -415,3 +427,28 @@ class Database:
         )
         rows = await cur.fetchall()
         return [dict(row) for row in rows]
+
+    # ─── Photo Gallery ───
+
+    async def add_gallery_photo(self, chat_id: int, user_id: int, username: str, prompt: str, style: str = "realistic", file_id: str = ""):
+        await self.conn.execute(
+            "INSERT INTO photo_gallery (chat_id, user_id, username, prompt, style, file_id) "
+            "VALUES (?, ?, ?, ?, ?, ?)",
+            (chat_id, user_id, username, prompt, style, file_id),
+        )
+        await self.conn.commit()
+
+    async def get_gallery_photos(self, chat_id: int, limit: int = 10) -> list[dict]:
+        cur = await self.conn.execute(
+            "SELECT * FROM photo_gallery WHERE chat_id = ? ORDER BY id DESC LIMIT ?",
+            (chat_id, limit),
+        )
+        rows = await cur.fetchall()
+        return [dict(row) for row in rows]
+
+    async def get_user_facts(self, user_id: int) -> list[str]:
+        from src.db_backend import IS_POSTGRES
+        existing = await self.get_setting(f"fact_{user_id}") or ""
+        if not existing:
+            return []
+        return [f.strip() for f in existing.split("||") if f.strip()]

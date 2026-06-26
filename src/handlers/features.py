@@ -435,3 +435,233 @@ async def handle_user_fact(message: Message, text: str, db):
 
     await message.reply(f"🧠 Закури запомнил про {username}: {fact}")
     return True
+
+
+# ─── /fact — what bot remembers about user ───
+
+@router.message(Command("fact"), IsGroupChat())
+@router.message(Command("fact"), IsPrivateChat())
+async def cmd_fact(message: Message, db):
+    target_id = message.from_user.id
+    target_name = message.from_user.first_name or message.from_user.username or "ты"
+
+    if message.reply_to_message and message.reply_to_message.from_user:
+        target_id = message.reply_to_message.from_user.id
+        target_name = message.reply_to_message.from_user.first_name or message.reply_to_message.from_user.username or "кто-то"
+
+    facts = await db.get_user_facts(target_id)
+    rel = await db.get_relationship(target_id)
+
+    if rel >= 50:
+        mood = "очень любит 💕"
+    elif rel >= 20:
+        mood = "дружелюбно относится 💚"
+    elif rel <= -50:
+        mood = "очень не любит 😡"
+    elif rel <= -20:
+        mood = "недолюбливает 😒"
+    else:
+        mood = "нейтрально 😐"
+
+    if facts:
+        facts_text = "\n".join(f"  • {f}" for f in facts)
+    else:
+        facts_text = "  (пока ничего не запомнил)"
+
+    await message.reply(
+        f"🧠 <b>Закури про {target_name}</b>\n\n"
+        f"Отношение: {mood} ({rel}/100)\n\n"
+        f"Запомнил:\n{facts_text}"
+    )
+
+
+# ─── /who — legends about user from chat memory ───
+
+@router.message(Command("who"), IsGroupChat())
+@router.message(Command("who"), IsPrivateChat())
+async def cmd_who(message: Message, db, ai_manager):
+    if message.reply_to_message and message.reply_to_message.from_user:
+        target = message.reply_to_message.from_user
+        target_name = target.first_name or target.username or "кто-то"
+        target_id = target.id
+    else:
+        args = (message.text or "").replace("/who", "", 1).strip()
+        if not args:
+            await message.reply("Напиши /who + имя юзера или reply на его сообщение")
+            return
+        target_name = args
+        target_id = 0
+
+    status_msg = await message.reply(f"🧠 Закури вспоминает про {target_name}...")
+
+    try:
+        chat_memory = await db.get_setting("chat_memory") or ""
+
+        if chat_memory and target_name.lower() in chat_memory.lower():
+            response = await ai_manager.chat_completion(
+                messages=[
+                    {
+                        "role": "system",
+                        "content": (
+                            "Ты дракон Закури. Расскажи про участника чата на основе памяти. "
+                            "Выдели самое яркое: мемы, легенды, фразы, характер. "
+                            "Кратко, 3-5 предложений. С юмором и характером. "
+                            "Если информации нет — скажи что не знаешь."
+                        ),
+                    },
+                    {
+                        "role": "user",
+                        "content": f"Расскажи про {target_name}\n\nПамять чата:\n{chat_memory[:8000]}",
+                    },
+                ],
+                temperature=0.7,
+                max_tokens=300,
+            )
+        else:
+            response = f"Хм, Закури не нашёл {target_name} в своей памяти. Может, ты новичок?"
+
+        await status_msg.edit_text(response[:4096])
+    except Exception as e:
+        logger.error(f"Who error: {e}")
+        try:
+            await status_msg.edit_text("Закури забыл... Попробуй ещё раз!")
+        except Exception:
+            pass
+
+
+# ─── /gallery — last generated photos ───
+
+@router.message(Command("gallery"), IsGroupChat())
+@router.message(Command("gallery"), IsPrivateChat())
+async def cmd_gallery(message: Message, db):
+    photos = await db.get_gallery_photos(message.chat.id, limit=10)
+
+    if not photos:
+        await message.reply("📸 Галерея пуста! Закури ещё ничего не нарисовал в этом чате.")
+        return
+
+    lines = []
+    for i, p in enumerate(photos, 1):
+        name = p.get("username") or "Кто-то"
+        prompt = p["prompt"][:50]
+        style = p.get("style", "realistic")
+        lines.append(f"{i}. 🎨 {prompt}... ({style}) — {name}")
+
+    await message.reply(
+        f"📸 <b>Последние фото</b>\n\n" + "\n".join(lines)
+    )
+
+
+# ─── Random photo — «закури нарисуй что хочешь» ───
+
+RANDOM_PHOTO_TRIGGERS = ["что хочешь", "на своё усмотрение", "что угодно", "что тебе нравится", "сюрприз"]
+
+
+def is_random_photo_request(text: str) -> bool:
+    text_lower = text.lower()
+    return any(t in text_lower for t in RANDOM_PHOTO_TRIGGERS) and any(kw in text_lower for kw in ["нарисуй", "сгенерируй", "фото", "изображение", "картин"])
+
+
+async def handle_random_photo(message: Message, ai_manager, bot, context_manager, db=None):
+    import asyncio
+    from aiogram.types import BufferedInputFile
+    from aiogram.enums import ChatAction
+
+    random_ideas = [
+        "cute plush dragon sleeping on a pile of gold coins",
+        "dragon reading a book in a cozy library, warm light",
+        "plush dragon drinking coffee in a modern cafe",
+        "dragon flying over a medieval castle at sunset",
+        "cute dragon playing football on a green field",
+        "dragon wearing sunglasses on a beach, summer vibes",
+        "tiny dragon hiding in a teacup, adorable",
+        "dragon cooking pancakes in a kitchen, messy but cute",
+    ]
+
+    prompt = random.choice(random_ideas)
+
+    status_msg = await message.reply(f"🎲 Закури придумал идею... и рисует!\n\n💬 {prompt[:60]}")
+    await bot.send_chat_action(chat_id=message.chat.id, action=ChatAction.UPLOAD_PHOTO)
+
+    try:
+        image_bytes = await ai_manager.generate_image(prompt)
+
+        try:
+            await status_msg.delete()
+        except Exception:
+            pass
+
+        photo = BufferedInputFile(image_bytes, filename="zakuri_random.png")
+        sent = await message.answer_photo(photo, caption=f"🎲 Закури сам придумал и нарисовал!")
+
+        if db:
+            await db.add_gallery_photo(
+                chat_id=message.chat.id,
+                user_id=message.from_user.id if message.from_user else 0,
+                username=(message.from_user.username or message.from_user.first_name) if message.from_user else "",
+                prompt=f"[random] {prompt[:60]}",
+                style="random",
+                file_id=sent.photo[-1].file_id if sent.photo else "",
+            )
+
+        bot_name = "Закури"
+        await context_manager.store_bot_message(
+            chat_id=message.chat.id,
+            bot_username=bot_name,
+            text=f"🎨 Нарисовал случайное фото",
+            message_id=sent.message_id,
+        )
+    except Exception as e:
+        logger.error(f"Random photo error: {e}")
+        try:
+            await status_msg.edit_text("🚫 Не получилось нарисовать 😔")
+        except Exception:
+            pass
+
+
+# ─── Polls — «закури сделай опрос» ───
+
+POLL_TRIGGERS = ["сделай опрос", "создай опрос", "опрос:", "голосование"]
+
+
+def detect_poll_request(text: str) -> Optional[tuple]:
+    text_lower = text.lower()
+    for trigger in POLL_TRIGGERS:
+        idx = text_lower.find(trigger)
+        if idx == -1:
+            continue
+        rest = text[idx + len(trigger):].strip().strip(":").strip()
+
+        if "|" in rest:
+            parts = [p.strip() for p in rest.split("|") if p.strip()]
+            if len(parts) >= 2:
+                question = parts[0]
+                options = parts[1:]
+                if len(options) > 10:
+                    options = options[:10]
+                return (question, options)
+
+        return (rest, ["Да 🔥", "Нет ❌", "Мне всё равно 🤷"])
+    return None
+
+
+async def handle_poll(message: Message, text: str, bot):
+    result = detect_poll_request(text)
+    if not result:
+        return False
+
+    question, options = result
+
+    try:
+        await bot.send_poll(
+            chat_id=message.chat.id,
+            question=question[:300],
+            options=options,
+            is_anonymous=False,
+        )
+        await message.reply(f"🗳️ Закури создал опрос!")
+    except Exception as e:
+        logger.error(f"Poll error: {e}")
+        await message.reply("Закури не смог создать опрос 😔 Нужно 2-10 вариантов через |")
+
+    return True

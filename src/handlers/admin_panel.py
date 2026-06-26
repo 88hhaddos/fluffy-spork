@@ -24,6 +24,8 @@ from src.keyboards import (
     PHOTO_STYLES as KB_PHOTO_STYLES,
     bans_kb,
     ban_detail_kb,
+    relations_kb,
+    relation_detail_kb,
     NVIDIA_PRESETS,
     OPENROUTER_PRESETS,
 )
@@ -55,6 +57,7 @@ class AdminStates(StatesGroup):
     set_anger = State()
     set_photo_custom = State()
     add_ban = State()
+    add_relation = State()
 
     add_admin = State()
 
@@ -1434,6 +1437,117 @@ async def cb_ban_detail(callback: CallbackQuery, db):
         f"Причина: {user.get('reason') or 'не указана'}\n"
         f"Забанен: {user.get('banned_at', 'неизвестно')}",
         reply_markup=ban_detail_kb(uid),
+    )
+    await callback.answer()
+
+
+# ─── Relationships ───
+
+@router.callback_query(F.data == "menu:relations", IsAdmin())
+async def cb_relations(callback: CallbackQuery, db):
+    relations = await db.get_all_relationships()
+    if not relations:
+        text = "💚 <b>Отношения юзеров</b>\n\nПусто. Добавьте юзера."
+    else:
+        lines = []
+        for r in relations:
+            name = r.get("username") or str(r["user_id"])
+            rel = r["relationship"]
+            if rel >= 50:
+                emoji = "💚💚"
+            elif rel >= 20:
+                emoji = "💚"
+            elif rel <= -50:
+                emoji = "🚫🚫"
+            elif rel <= -20:
+                emoji = "🚫"
+            else:
+                emoji = "😐"
+            lines.append(f"{emoji} {name}: {rel}/100")
+        text = "💚 <b>Отношения юзеров</b>\n\n" + "\n".join(lines)
+    await callback.message.edit_text(text, reply_markup=relations_kb(relations))
+    await callback.answer()
+
+
+@router.callback_query(F.data == "rel:add", IsAdmin())
+async def cb_rel_add(callback: CallbackQuery, state: FSMContext):
+    await state.set_state(AdminStates.add_relation)
+    await callback.message.edit_text(
+        "💚 <b>Добавить юзера</b>\n\n"
+        "Введите ID юзера или перешлите его сообщение.\n"
+        "Можно указать имя: <code>123456789: Дрейк</code>",
+        reply_markup=cancel_kb(),
+    )
+    await callback.answer()
+
+
+@router.message(AdminStates.add_relation, IsAdmin())
+async def process_add_relation(message: Message, state: FSMContext, db):
+    user_id = None
+    username = ""
+
+    if message.forward_origin:
+        origin = message.forward_origin
+        if hasattr(origin, "sender_user") and origin.sender_user:
+            user_id = origin.sender_user.id
+            username = origin.sender_user.username or ""
+    elif message.text:
+        parts = message.text.strip().split(":", 1)
+        try:
+            user_id = int(parts[0].strip())
+        except ValueError:
+            await message.answer("Введите числовой ID или перешлите сообщение:")
+            return
+        if len(parts) > 1:
+            username = parts[1].strip()
+
+    if not user_id:
+        await message.answer("Не удалось определить ID:")
+        return
+
+    await db.set_relationship(user_id, username, 0)
+    await state.clear()
+    await message.answer(
+        f"✅ Юзер добавлен!\n\nID: {user_id}\nИмя: {username or 'неизвестно'}\nОтношение: 0 (нейтрально)\n\n"
+        f"Выберите отношение в меню:",
+        reply_markup=relation_detail_kb(user_id, 0),
+    )
+
+
+@router.callback_query(F.data.startswith("rel:set:"), IsAdmin())
+async def cb_rel_set(callback: CallbackQuery, db):
+    parts = callback.data.split(":")
+    uid = int(parts[2])
+    val = int(parts[3])
+
+    relations = await db.get_all_relationships()
+    user = next((r for r in relations if r["user_id"] == uid), None)
+    username = user.get("username", "") if user else ""
+
+    await db.set_relationship(uid, username, val)
+    await callback.answer("Отношение изменено")
+    await callback.message.edit_text(
+        f"💚 <b>Отношение к {username or uid}</b>\n\n"
+        f"Установлено: {val}/100",
+        reply_markup=relation_detail_kb(uid, val),
+    )
+
+
+@router.callback_query(F.data.startswith("rel:"), IsAdmin())
+async def cb_rel_detail(callback: CallbackQuery, db):
+    if callback.data.startswith("rel:set:") or callback.data == "rel:add":
+        return
+    uid = int(callback.data.split(":")[1])
+    relations = await db.get_all_relationships()
+    user = next((r for r in relations if r["user_id"] == uid), None)
+    if not user:
+        await callback.answer("Не найден")
+        return
+    name = user.get("username") or str(uid)
+    rel = user["relationship"]
+    await callback.message.edit_text(
+        f"💚 <b>{name}</b>\n\nID: {uid}\nОтношение: {rel}/100",
+        reply_markup=relation_detail_kb(uid, rel),
     )
     await callback.answer()
 

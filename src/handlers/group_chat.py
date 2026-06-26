@@ -245,8 +245,13 @@ async def cmd_help(message: Message):
         "  /dice — кинуть кубик 🎲\n"
         "  /coin — подбросить монетку 🪙\n"
         "  /8ball — магический шар 🎱\n"
-        "  /time — текущее время 🕐\n\n"
+        "  /time — текущее время 🕐\n"
+        "  /fact — что Закури запомнил про тебя\n"
+        "  /who — легенда про юзера (reply на сообщение)\n"
+        "  /gallery — последние сгенерированные фото 📸\n\n"
         "Фичи:\n"
+        "  • «нарисуй что хочешь» — случайное фото 🎲\n"
+        "  • «закури сделай опрос: вопрос|вариант1|вариант2» 🗳️\n"
         "  • «закури переведи на английский [текст]» 🌐\n"
         "  • «закури напомни через час [текст]» ⏰\n"
         "  • «закури запомни что я люблю кофе» 🧠\n"
@@ -309,6 +314,10 @@ async def handle_group_message(
         return
 
     if addressed and is_photo_request(text):
+        from src.handlers.features import is_random_photo_request, handle_random_photo
+        if is_random_photo_request(text):
+            await handle_random_photo(message, ai_manager, bot, context_manager, db)
+            return
         await handle_photo_generation(message, text, ai_manager, bot, context_manager, db)
         return
 
@@ -318,7 +327,9 @@ async def handle_group_message(
             return
 
     if addressed:
-        from src.handlers.features import handle_translate, handle_reminder, handle_user_fact
+        from src.handlers.features import handle_translate, handle_reminder, handle_user_fact, handle_poll
+        if await handle_poll(message, text, bot):
+            return
         if await handle_translate(message, text, ai_manager, bot):
             return
         if await handle_reminder(message, text, bot):
@@ -371,6 +382,10 @@ async def handle_private_message(
     )
 
     if is_photo_request(text):
+        from src.handlers.features import is_random_photo_request, handle_random_photo
+        if is_random_photo_request(text):
+            await handle_random_photo(message, ai_manager, bot, context_manager, db)
+            return
         await handle_photo_generation(message, text, ai_manager, bot, context_manager, db)
         return
 
@@ -382,7 +397,9 @@ async def handle_private_message(
         await handle_photo_edit(message, text, ai_manager, bot, context_manager)
         return
 
-    from src.handlers.features import handle_translate, handle_reminder, handle_user_fact
+    from src.handlers.features import handle_translate, handle_reminder, handle_user_fact, handle_poll
+    if await handle_poll(message, text, bot):
+        return
     if await handle_translate(message, text, ai_manager, bot):
         return
     if await handle_reminder(message, text, bot):
@@ -613,8 +630,19 @@ async def handle_photo_generation(
             if count > 1:
                 caption += f" (вариант {i+1}/{count})"
             photo = BufferedInputFile(image_bytes, filename=f"zakuri_art_{i+1}.png")
-            await message.answer_photo(photo, caption=caption)
+            sent_photo = await message.answer_photo(photo, caption=caption)
             generated += 1
+
+            if db:
+                file_id = sent_photo.photo[-1].file_id if sent_photo.photo else ""
+                await db.add_gallery_photo(
+                    chat_id=message.chat.id,
+                    user_id=requester_id,
+                    username=requester,
+                    prompt=short_prompt,
+                    style=style,
+                    file_id=file_id,
+                )
 
         try:
             await status_msg.delete()
