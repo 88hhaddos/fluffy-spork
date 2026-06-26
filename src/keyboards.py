@@ -222,19 +222,32 @@ def bans_kb(banned_users: list[dict]) -> InlineKeyboardMarkup:
     for u in banned_users:
         name = u.get("username") or str(u["user_id"])
         warnings = u.get("warnings", 0)
-        kb.button(text=f"🚫 {name} (⚠️{warnings})", callback_data=f"ban:{u['user_id']}")
-    kb.button(text="➕ Забанить юзера", callback_data="ban:add")
+        is_banned = u.get("reason") is not None and u.get("reason") != ""
+        if is_banned and warnings == 0:
+            marker = "🚫"
+        elif warnings > 0 and not is_banned:
+            marker = "⚠️"
+        else:
+            marker = "🚫"
+        kb.button(text=f"{marker} {name} (⚠️{warnings})", callback_data=f"ban:{u['user_id']}")
+    kb.button(text="🚫 Забанить юзера", callback_data="ban:add")
+    kb.button(text="⚠️ Выдать предупреждение", callback_data="warn:add")
     kb.button(text="🔙 Назад", callback_data="menu:main")
-    kb.adjust(1, 1)
+    kb.adjust(1, 1, 1, 1)
     return kb.as_markup()
 
 
-def ban_detail_kb(user_id: int) -> InlineKeyboardMarkup:
+def ban_detail_kb(user_id: int, warnings: int = 0, is_banned: bool = False) -> InlineKeyboardMarkup:
     kb = InlineKeyboardBuilder()
-    kb.button(text="🔓 Разбанить", callback_data=f"ban:unban:{user_id}")
+    if not is_banned:
+        kb.button(text="🚫 Забанить", callback_data=f"ban:do:{user_id}")
+    else:
+        kb.button(text="🔓 Разбанить", callback_data=f"ban:unban:{user_id}")
+    kb.button(text="⚠️ +1 предупреждение", callback_data=f"ban:warn:{user_id}")
+    kb.button(text="⚠️ +2 предупреждения", callback_data=f"ban:warn2:{user_id}")
     kb.button(text="🗑 Очистить предупреждения", callback_data=f"ban:clear_warn:{user_id}")
     kb.button(text="🔙 К списку", callback_data="menu:bans")
-    kb.adjust(1, 1, 1)
+    kb.adjust(1, 1, 1, 1, 1, 1)
     return kb.as_markup()
 
 
