@@ -319,13 +319,15 @@ async def _generate_and_send_response(
         finally:
             typing_task.cancel()
 
-        await status_msg.delete()
-
         if not response or not response.strip():
             response = "Хм, Закури задумался. Спроси ещё раз."
 
         await bot.send_chat_action(chat_id=message.chat.id, action=ChatAction.TYPING)
-        await status_msg.edit_text(response[:4096])
+        try:
+            await status_msg.edit_text(response[:4096])
+        except Exception:
+            sent = await message.reply(response[:4096])
+            status_msg = sent
 
         bot_name = await db.get_setting("bot_name") or "Закури"
         await context_manager.store_bot_message(
