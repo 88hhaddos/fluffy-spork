@@ -728,9 +728,10 @@ async def _generate_and_send_response(
 
         status_msg = await message.reply(random.choice(THINKING_MESSAGES))
 
-        football_context = await _get_football_context(text, db)
+        msg_text = message.text or message.caption or ""
+        football_context = await _get_football_context(msg_text, db)
         if football_context:
-            logger.info(f"Football context loaded for: {text[:50]}")
+            logger.info(f"Football context loaded for: {msg_text[:50]}")
 
         system_prompt = await build_system_prompt(
             db, message.chat.id,
