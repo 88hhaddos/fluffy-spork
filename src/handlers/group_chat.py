@@ -639,12 +639,49 @@ async def _get_football_context(text: str, db) -> str:
         live = [m for m in wc_matches if m.get("status") in (3, 4, 5, 6, 7, 11, 19)]
 
         if finished:
-            recent = finished[-15:]
-            results_str = "\n".join(
-                f"  {(m.get('homeTeam') or {}).get('name', '?')} {m.get('homeResult', 0)}:{m.get('awayResult', 0)} {(m.get('awayTeam') or {}).get('name', '?')}"
-                for m in recent
-            )
-            parts.append(f"### Завершённые матчи ЧМ 2026:\n{results_str}")
+            recent = finished[-10:]
+            results_lines = []
+            for m in recent:
+                home_name = (m.get("homeTeam") or {}).get("name", "?")
+                away_name = (m.get("awayTeam") or {}).get("name", "?")
+                sc_h = m.get("homeResult", 0)
+                sc_a = m.get("awayResult", 0)
+                date = (m.get("date") or "")[:10]
+                results_lines.append(f"  {home_name} {sc_h}:{sc_a} {away_name} ({date})")
+            parts.append(f"### Завершённые матчи ЧМ 2026:\n" + "\n".join(results_lines))
+
+            last_3 = recent[-3:]
+            for m in last_3:
+                game_id = m.get("id")
+                if game_id:
+                    details = await api.get_match_details(game_id)
+                    if details:
+                        events = details.get("events", [])
+                        goals = []
+                        for ev in events:
+                            ev_type = (ev.get("type") or "").lower()
+                            if "goal" in ev_type or "гол" in ev_type:
+                                player = ev.get("player") or ev.get("text") or "?"
+                                minute = ev.get("minute", "?")
+                                team = ev.get("team") or ""
+                                goals.append(f"    Гол: {player} ({minute}')")
+                        if goals:
+                            home_name = (m.get("homeTeam") or {}).get("name", "?")
+                            away_name = (m.get("awayTeam") or {}).get("name", "?")
+                            parts.append(f"### Голы в матче {home_name} — {away_name}:\n" + "\n".join(goals))
+
+                        lineups = details.get("lineups", [])
+                        if lineups:
+                            for lineup in lineups[:2]:
+                                team_name = (lineup.get("team") or {}).get("name", "?")
+                                players = lineup.get("players", [])
+                                subs = [p for p in players if p.get("isSubstitute")]
+                                if subs:
+                                    sub_str = ", ".join(
+                                        f"{p.get('name', '?')} ({p.get('inMinute', '?')}'-)"
+                                        for p in subs[:5]
+                                    )
+                                    parts.append(f"### Замены {team_name}: {sub_str}")
 
         if live:
             live_str = "\n".join(
