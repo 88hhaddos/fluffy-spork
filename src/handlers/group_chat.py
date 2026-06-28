@@ -603,6 +603,87 @@ async def _extract_photo_idea_from_bot_message(bot_text: str, ai_manager) -> str
         return ""
 
 
+FOOTBALL_KEYWORDS = [
+    "матч", "чм", "чемпионат мира", "world cup", "сборная", "плей офф", "плей-офф",
+    "группа", "гол", "забил", "счёт", "счет", "побед", "ничья", "коэффициент",
+    "ставка", "прогноз", "аргентин", "мексик", "бразил", "франц", "испан",
+    "англ", "герман", "португал", "холанд", "месси", "мбапп", "роннал",
+    "турнир", "финал", "полуфинал", "четвертьфинал", "1/8", "1/4",
+    "бомбардир", "вратарь", "защитник", "нападающий", "тренер",
+    "кто забил", "кто побед", "кто игра", "соперник", "результат",
+    "таблица", "очки", "групповой", "этап", "стадия",
+    "кальджич", "калайджич", "кайседо", "кайсед", "дивала",
+    "футбол", "футбольн", "мяч", "пас", "удар", "пенальт",
+]
+
+
+def _is_football_question(text: str) -> bool:
+    text_lower = text.lower()
+    return any(kw in text_lower for kw in FOOTBALL_KEYWORDS)
+
+
+async def _get_football_context(text: str, db) -> str:
+    """Получает данные ЧМ из SStats API для контекста бота."""
+    if not _is_football_question(text):
+        return ""
+
+    try:
+        from src.football_api import FootballAPI
+        api = FootballAPI('sjzgn3bbco67pk8j')
+
+        parts = []
+
+        wc_matches = await api.get_matches_by_league(1, 2026)
+        finished = [m for m in wc_matches if m.get("status") in (8, 9, 10, 17, 18)]
+        upcoming = [m for m in wc_matches if m.get("status") in (1, 2)]
+        live = [m for m in wc_matches if m.get("status") in (3, 4, 5, 6, 7, 11, 19)]
+
+        if finished:
+            recent = finished[-15:]
+            results_str = "\n".join(
+                f"  {(m.get('homeTeam') or {}).get('name', '?')} {m.get('homeResult', 0)}:{m.get('awayResult', 0)} {(m.get('awayTeam') or {}).get('name', '?')}"
+                for m in recent
+            )
+            parts.append(f"### Завершённые матчи ЧМ 2026:\n{results_str}")
+
+        if live:
+            live_str = "\n".join(
+                f"  🔴 {(m.get('homeTeam') or {}).get('name', '?')} {m.get('homeResult', 0)}:{m.get('awayResult', 0)} {(m.get('awayTeam') or {}).get('name', '?')} (идёт сейчас)"
+                for m in live
+            )
+            parts.append(f"### Live матчи ЧМ:\n{live_str}")
+
+        if upcoming:
+            next_matches = upcoming[:10]
+            upcoming_str = "\n".join(
+                f"  {(m.get('homeTeam') or {}).get('name', '?')} — {(m.get('awayTeam') or {}).get('name', '?')} ({(m.get('date') or '')[:16]})"
+                for m in next_matches
+            )
+            parts.append(f"### Предстоящие матчи ЧМ:\n{upcoming_str}")
+
+        standings = await api.get_standings(1, 2026)
+        if standings:
+            top10 = standings[:10]
+            table_str = "\n".join(
+                f"  {i+1}. {t.get('teamName', '?')} — {t.get('points', 0)} очк, {t.get('wins', 0)}В {t.get('draws', 0)}Н {t.get('loss', 0)}П, голы {t.get('goalsScored', 0)}-{t.get('goalsMissed', 0)}"
+                for i, t in enumerate(top10)
+            )
+            parts.append(f"### Турнирная таблица ЧМ 2026:\n{table_str}")
+
+        bal = await db.get_balance(0)
+        if bal["bets_count"] > 0:
+            parts.append(f"### Мои ставки: баланс {bal['balance']:.0f} юаней, {bal['bets_count']} ставок, {bal['wins_count']} выиграно")
+
+        await api.close()
+
+        if parts:
+            return "\n\n".join(parts)
+        return ""
+    except Exception as e:
+        logger.error(f"Football context error: {e}")
+        return ""
+
+
 async def _generate_and_send_response(
     message: Message,
     db,
@@ -647,11 +728,18 @@ async def _generate_and_send_response(
 
         status_msg = await message.reply(random.choice(THINKING_MESSAGES))
 
+        football_context = await _get_football_context(text, db)
+        if football_context:
+            logger.info(f"Football context loaded for: {text[:50]}")
+
         system_prompt = await build_system_prompt(
             db, message.chat.id,
             user_id=user_id,
             username=username,
         )
+
+        if football_context:
+            system_prompt += f"\n\n## Данные ЧМ 2026 (реальные данные)\n{football_context}"
 
         username = ""
         if message.from_user:
