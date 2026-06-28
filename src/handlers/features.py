@@ -878,3 +878,32 @@ async def cmd_balance(message: Message, db):
         await message.reply(text)
     except Exception as e:
         logger.error(f"Balance error: {e}")
+
+
+@router.message(Command("results"), IsGroupChat())
+@router.message(Command("results"), IsPrivateChat())
+async def cmd_results(message: Message):
+    from src.football_api import FootballAPI
+    api = FootballAPI('sjzgn3bbco67pk8j')
+
+    try:
+        results = await api.get_recent_results(limit=15)
+        if not results:
+            await message.reply("Нет недавних результатов 🤷")
+            await api.close()
+            return
+
+        lines = ["📋 <b>Недавние результаты</b>\n"]
+        for m in results[:15]:
+            home = m.get("homeTeamName") or m.get("homeTeam", {}).get("name", "?")
+            away = m.get("awayTeamName") or m.get("awayTeam", {}).get("name", "?")
+            score_h = m.get("scoreHomeFT", "?")
+            score_a = m.get("scoreAwayFT", "?")
+            lines.append(f"⚽ {home} {score_h}:{score_a} {away}")
+
+        await message.reply("\n".join(lines))
+    except Exception as e:
+        logger.error(f"Results error: {e}")
+        await message.reply("Закури не смог получить результаты 😔")
+    finally:
+        await api.close()

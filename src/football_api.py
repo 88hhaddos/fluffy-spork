@@ -161,6 +161,20 @@ class FootballAPI:
             return data["data"]
         return []
 
+    async def get_past_matches(self, league_id: int, year: int, limit: int = 20) -> list[dict]:
+        """Завершённые матчи лиги за сезон."""
+        data = await self._get("/games/list", {"leagueid": league_id, "year": year, "ended": "true", "limit": limit, "order": -1, "TimeZone": 3}, f"past_{league_id}_{year}", CACHE_TTL["today"])
+        if data and "data" in data:
+            return data["data"]
+        return []
+
+    async def get_recent_results(self, limit: int = 10) -> list[dict]:
+        """Недавние завершённые матчи (все лиги)."""
+        data = await self._get("/games/list", {"ended": "true", "limit": limit, "order": -1, "TimeZone": 3}, "recent_results", CACHE_TTL["today"])
+        if data and "data" in data:
+            return data["data"]
+        return []
+
     async def get_match_for_prediction(self, game_id: int) -> dict:
         """Собирает все данные для прогноза в один dict."""
         details = await self.get_match_details(game_id)

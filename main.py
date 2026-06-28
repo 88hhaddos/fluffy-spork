@@ -140,13 +140,20 @@ async def main():
         f"Бот запущен: @{config.BOT_USERNAME} (ID: {config.BOT_ID}) — {bot_name}"
     )
 
-    betting_chat_id = int(os.getenv("BETTING_CHAT_ID", "0") or "0")
     betting_enabled = os.getenv("BETTING_ENABLED", "0") == "1"
+    betting_chat_id = int(os.getenv("BETTING_CHAT_ID", "0") or "0")
+
+    if not betting_enabled:
+        betting_enabled = (await db.get_setting("betting_enabled") or "0") == "1"
+    if not betting_chat_id:
+        betting_chat_id = int(await db.get_setting("betting_chat_id") or "0")
 
     if betting_enabled and betting_chat_id:
         from src.betting import auto_betting_loop
-        asyncio.create_task(auto_betting_loop(bot, db, football_api, betting_chat_id))
+        asyncio.create_task(auto_betting_loop(bot, db, football_api, betting_chat_id, ai_manager))
         logger.info(f"Авто-ставки включены для chat {betting_chat_id}")
+    elif betting_enabled:
+        logger.info("Авто-ставки включены но chat_id не задан — задайте через /admin → 🎰")
 
     try:
         await dp.start_polling(bot)

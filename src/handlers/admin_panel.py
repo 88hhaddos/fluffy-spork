@@ -1716,6 +1716,171 @@ async def cb_rel_detail(callback: CallbackQuery, db):
     await callback.answer()
 
 
+# ─── Betting ───
+
+@router.callback_query(F.data == "menu:betting", IsAdmin())
+async def cb_betting_menu(callback: CallbackQuery, db):
+    betting_enabled = await db.get_setting("betting_enabled") or "0"
+    betting_chat = await db.get_setting("betting_chat_id") or "0"
+    sleep_start = await db.get_setting("betting_sleep_start") or "23"
+    sleep_end = await db.get_setting("betting_sleep_end") or "9"
+
+    bal = await db.get_balance(callback.message.chat.id)
+    pending = await db.get_pending_bets(callback.message.chat.id)
+
+    enabled_text = "✅ Включены" if betting_enabled == "1" else "❌ Выключены"
+    chat_text = betting_chat if betting_chat != "0" else "(не задан)"
+
+    text = (
+        f"🎰 <b>Ставки и баланс</b>\n\n"
+        f"Статус: {enabled_text}\n"
+        f"Чат для ставок: {chat_text}\n"
+        f"Ночной сон: {sleep_start}:00 — {sleep_end}:00 МСК\n\n"
+        f"💰 Баланс: {bal['balance']:.0f} монет\n"
+        f"💳 Долг: {bal['credit']:.0f} монет\n"
+        f"📊 Всего ставок: {bal['bets_count']}\n"
+        f"✅ Выиграно: {bal['wins_count']}\n"
+        f"⏳ Ожидают результата: {len(pending)}\n"
+    )
+
+    kb = InlineKeyboardBuilder()
+    if betting_enabled == "1":
+        kb.button(text="❌ Выключить авто-ставки", callback_data="bet:toggle")
+    else:
+        kb.button(text="✅ Включить авто-ставки", callback_data="bet:toggle")
+    kb.button(text="📍 Задать чат для ставок", callback_data="bet:set_chat")
+    kb.button(text="🌙 Настроить ночной сон", callback_data="bet:set_sleep")
+    kb.button(text="🎰 Сделать ставку сейчас", callback_data="bet:now")
+    kb.button(text="✅ Проверить результаты", callback_data="bet:check")
+    kb.button(text="📊 Полная статистика", callback_data="bet:stats")
+    kb.button(text="💰 Сбросить баланс", callback_data="bet:reset")
+    kb.button(text="🔙 Назад", callback_data="menu:main")
+    kb.adjust(1, 1, 1, 1, 1, 1, 1, 1)
+
+    await callback.message.edit_text(text, reply_markup=kb.as_markup())
+    await callback.answer()
+
+
+@router.callback_query(F.data == "bet:toggle", IsAdmin())
+async def cb_bet_toggle(callback: CallbackQuery, db):
+    current = await db.get_setting("betting_enabled") or "0"
+    new_val = "1" if current != "1" else "0"
+    await db.set_setting("betting_enabled", new_val)
+    await callback.answer("Ставки включены!" if new_val == "1" else "Ставки выключены")
+    await cb_betting_menu(callback, db)
+
+
+@router.callback_query(F.data == "bet:set_chat", IsAdmin())
+async def cb_bet_set_chat(callback: CallbackQuery, state: FSMContext):
+    await state.set_state(AdminStates.say_as_bot)
+    await state.update_data(_betting_set_chat=True)
+    await callback.message.edit_text(
+        "📍 <b>Задать чат для ставок</b>\n\n"
+        "Перешлите любое сообщение из чата группы\n"
+        "где бот должен постить ставки.\n\n"
+        "Или введите ID чата числом (начинается с -100...)",
+        reply_markup=cancel_kb(),
+    )
+    await callback.answer()
+
+
+@router.callback_query(F.data == "bet:set_sleep", IsAdmin())
+async def cb_bet_set_sleep(callback: CallbackQuery, state: FSMContext):
+    await state.set_state(AdminStates.say_as_bot)
+    await state.update_data(_betting_set_sleep=True)
+    current_start = "23"
+    current_end = "9"
+    await callback.message.edit_text(
+        f"🌙 <b>Ночной сон</b>\n\n"
+        f"Текущий: {current_start}:00 — {current_end}:00 МСК\n\n"
+        f"Введите часы через пробел: <code>начало конец</code>\n"
+        f"Например: <code>23 9</code> (сон с 23 до 9)\n"
+        f"Или <code>0 0</code> — без сна (ставки 24/7)",
+        reply_markup=cancel_kb(),
+    )
+    await callback.answer()
+
+
+@router.callback_query(F.data == "bet:now", IsAdmin())
+async def cb_bet_now(callback: CallbackQuery, db, ai_manager):
+    from src.betting import BettingManager
+    from src.football_api import FootballAPI
+
+    api = FootballAPI('sjzgn3bbco67pk8j')
+    betting = BettingManager(db, api, ai_manager)
+    chat_id = callback.message.chat.id
+
+    await callback.answer("Генерирую ставку...")
+
+    try:
+        bet = await betting.generate_bet(chat_id)
+        if bet:
+            intro = await betting.generate_intro_message(bet)
+            msg = betting.format_bet_message(bet, intro)
+            await callback.message.answer(msg)
+        else:
+            await callback.message.answer("Нет матчей для ставки прямо сейчас 🤷")
+    except Exception as e:
+        logger.error(f"Bet now error: {e}")
+        await callback.message.answer(f"Ошибка: {str(e)[:200]}")
+    finally:
+        await api.close()
+
+
+@router.callback_query(F.data == "bet:check", IsAdmin())
+async def cb_bet_check(callback: CallbackQuery, db, ai_manager):
+    from src.betting import BettingManager
+    from src.football_api import FootballAPI
+
+    api = FootballAPI('sjzgn3bbco67pk8j')
+    betting = BettingManager(db, api, ai_manager)
+    chat_id = callback.message.chat.id
+
+    await callback.answer("Проверяю результаты...")
+
+    try:
+        results = await betting.check_and_settle(chat_id)
+        if not results:
+            await callback.message.answer("Нет завершённых ставок для проверки ⏳")
+        else:
+            for r in results:
+                msg = await betting.format_result_message_async(r)
+                await callback.message.answer(msg)
+    except Exception as e:
+        logger.error(f"Bet check error: {e}")
+    finally:
+        await api.close()
+
+
+@router.callback_query(F.data == "bet:stats", IsAdmin())
+async def cb_bet_stats(callback: CallbackQuery, db):
+    from src.betting import BettingManager
+    from src.football_api import FootballAPI
+
+    api = FootballAPI('sjzgn3bbco67pk8j')
+    betting = BettingManager(db, api)
+    try:
+        stats = await betting.get_stats(callback.message.chat.id)
+        await callback.message.answer(stats)
+    finally:
+        await api.close()
+
+
+@router.callback_query(F.data == "bet:reset", IsAdmin())
+async def cb_bet_reset(callback: CallbackQuery, db):
+    await db.conn.execute(
+        "UPDATE bot_balance SET balance = 50000, credit = 0, total_won = 0, "
+        "total_lost = 0, bets_count = 0, wins_count = 0 WHERE chat_id = ?",
+        (callback.message.chat.id,)
+    )
+    await db.conn.execute(
+        "DELETE FROM bot_bets WHERE chat_id = ?", (callback.message.chat.id,)
+    )
+    await db.conn.commit()
+    await callback.answer("Баланс сброшен!")
+    await cb_betting_menu(callback, db)
+
+
 # ─── Say as bot ───
 
 @router.callback_query(F.data == "menu:say", IsAdmin())
@@ -1741,6 +1906,49 @@ async def cb_say_menu(callback: CallbackQuery, state: FSMContext, db):
 @router.message(AdminStates.say_as_bot, IsAdmin())
 async def process_say_as_bot(message: Message, state: FSMContext, db, bot):
     data = await state.get_data()
+
+    if data.get("_betting_set_chat"):
+        await state.clear()
+        chat_id = None
+        if message.forward_from_chat:
+            chat_id = message.forward_from_chat.id
+        elif message.text:
+            try:
+                chat_id = int(message.text.strip())
+            except ValueError:
+                await message.answer("Введите числовой ID или перешлите сообщение из группы:", reply_markup=cancel_kb())
+                await state.set_state(AdminStates.say_as_bot)
+                await state.update_data(_betting_set_chat=True)
+                return
+
+        if chat_id:
+            await db.set_setting("betting_chat_id", str(chat_id))
+            await message.answer(f"✅ Чат для ставок установлен: {chat_id}", reply_markup=main_menu_kb())
+        else:
+            await message.answer("Не удалось определить чат.", reply_markup=main_menu_kb())
+        return
+
+    if data.get("_betting_set_sleep"):
+        await state.clear()
+        text = (message.text or "").strip()
+        parts = text.split()
+        if len(parts) == 2:
+            try:
+                start_h = int(parts[0])
+                end_h = int(parts[1])
+                if 0 <= start_h <= 23 and 0 <= end_h <= 23:
+                    await db.set_setting("betting_sleep_start", str(start_h))
+                    await db.set_setting("betting_sleep_end", str(end_h))
+                    await message.answer(
+                        f"✅ Ночной сон настроен!\n\nСон: {start_h}:00 — {end_h}:00 МСК",
+                        reply_markup=main_menu_kb(),
+                    )
+                    return
+            except ValueError:
+                pass
+        await message.answer("Введите два числа через пробел, например: 23 9", reply_markup=main_menu_kb())
+        return
+
     target_chat_id = data.get("target_chat_id", message.chat.id)
 
     if message.forward_origin or (message.text and message.text.strip().startswith("Переслано")):
