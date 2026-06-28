@@ -623,138 +623,17 @@ def _is_football_question(text: str) -> bool:
 
 
 async def _get_football_context(text: str, db) -> str:
-    """Получает ВСЕ данные ЧМ из SStats API для контекста бота."""
+    """Получает релевантные данные ЧМ из локального кэша."""
     if not _is_football_question(text):
         return ""
 
     try:
-        from src.football_api import FootballAPI
-        api = FootballAPI('sjzgn3bbco67pk8j')
-
-        parts = []
-
-        wc_matches = await api.get_matches_by_league(1, 2026)
-        finished = [m for m in wc_matches if m.get("status") in (8, 9, 10, 17, 18)]
-        upcoming = [m for m in wc_matches if m.get("status") in (1, 2)]
-        live = [m for m in wc_matches if m.get("status") in (3, 4, 5, 6, 7, 11, 19)]
-
-        # ── ВСЕ завершённые матчи ──
-        if finished:
-            all_results = []
-            all_goals = []
-            scorer_stats = {}
-
-            for m in finished:
-                home_name = (m.get("homeTeam") or {}).get("name", "?")
-                away_name = (m.get("awayTeam") or {}).get("name", "?")
-                sc_h = m.get("homeResult", 0)
-                sc_a = m.get("awayResult", 0)
-                date = (m.get("date") or "")[:10]
-                all_results.append(f"  {home_name} {sc_h}:{sc_a} {away_name} ({date})")
-
-                game_id = m.get("id")
-                if game_id:
-                    details = await api.get_match_details(game_id)
-                    if details:
-                        events = details.get("events", [])
-                        for ev in events:
-                            ev_type = (ev.get("type") or "").lower()
-                            if "goal" in ev_type or "гол" in ev_type:
-                                player = ev.get("player") or ev.get("text") or "?"
-                                minute = ev.get("minute", "?")
-                                all_goals.append(f"  {home_name}-{away_name}: {player} ({minute}')")
-
-                                clean_name = player.split("(")[0].strip()
-                                if clean_name and clean_name != "?":
-                                    scorer_stats[clean_name] = scorer_stats.get(clean_name, 0) + 1
-
-                        lineups = details.get("lineups", [])
-                        if lineups:
-                            for lineup in lineups[:2]:
-                                team_name = (lineup.get("team") or {}).get("name", "?")
-                                players = lineup.get("players", [])
-                                for p in players:
-                                    if p.get("assists", 0) and p.get("assists", 0) > 0:
-                                        pass
-
-            parts.append(f"### ВСЕ завершённые матчи ЧМ 2026 ({len(all_results)}):\n" + "\n".join(all_results))
-
-            if all_goals:
-                parts.append(f"### Все голы ЧМ 2026:\n" + "\n".join(all_goals[-50:]))
-
-            if scorer_stats:
-                top_scorers = sorted(scorer_stats.items(), key=lambda x: x[1], reverse=True)[:10]
-                scorers_str = "\n".join(f"  {name}: {goals} гол(ов)" for name, goals in top_scorers)
-                parts.append(f"### Топ бомбардиры ЧМ 2026:\n{scorers_str}")
-
-        # ── Live ──
-        if live:
-            live_str = "\n".join(
-                f"  🔴 {(m.get('homeTeam') or {}).get('name', '?')} {m.get('homeResult', 0)}:{m.get('awayResult', 0)} {(m.get('awayTeam') or {}).get('name', '?')} (идёт сейчас)"
-                for m in live
-            )
-            parts.append(f"### Live матчи ЧМ:\n{live_str}")
-
-        # ── Предстоящие ──
-        if upcoming:
-            upcoming_str = "\n".join(
-                f"  {(m.get('homeTeam') or {}).get('name', '?')} — {(m.get('awayTeam') or {}).get('name', '?')} ({(m.get('date') or '')[:16]})"
-                for m in upcoming[:15]
-            )
-            parts.append(f"### Предстоящие матчи ЧМ:\n{upcoming_str}")
-
-        # ── Таблица ──
-        standings = await api.get_standings(1, 2026)
-        if standings:
-            table_str = "\n".join(
-                f"  {i+1}. {t.get('teamName', '?')} — {t.get('points', 0)} очк, {t.get('wins', 0)}В {t.get('draws', 0)}Н {t.get('loss', 0)}П, голы {t.get('goalsScored', 0)}-{t.get('goalsMissed', 0)}"
-                for i, t in enumerate(standings[:15])
-            )
-            parts.append(f"### Турнирная таблица ЧМ 2026:\n{table_str}")
-
-        # ── Ставки бота ──
-        bal = await db.get_balance(0)
-        pending = await db.get_pending_bets(0)
-        recent_bets = await db.get_recent_bets(0, 10)
-        bets_lines = [
-            f"  Баланс: {bal['balance']:.0f} юаней",
-            f"  Долг: {bal['credit']:.0f} юаней" if bal['credit'] > 0 else "",
-            f"  Всего ставок: {bal['bets_count']}, Выиграно: {bal['wins_count']}",
-            f"  Прибыль: {bal['total_won'] - bal['total_lost']:+.0f} юаней",
-            f"  Ожидают результата: {len(pending)}",
-        ]
-        if recent_bets:
-            import json as _json
-            bets_lines.append("  Последние ставки:")
-            for b in recent_bets[:5]:
-                sels = _json.loads(b["selections"])
-                first = sels[0] if sels else {}
-                match_name = f"{first.get('home', '?')} — {first.get('away', '?')}"
-                if len(sels) > 1:
-                    match_name += f" +{len(sels)-1}"
-                status_emoji = "✅" if b["status"] == "won" else ("❌" if b["status"] == "lost" else "⏳")
-                bets_lines.append(f"    {status_emoji} {match_name}: {first.get('pick', '?')} @ {b['odds']} — {b['stake']:.0f} юаней → {b['status']}")
-
-        parts.append(f"### Мои ставки и баланс:\n" + "\n".join(b for b in bets_lines if b))
-
-        # ── Новости и факты ──
-        try:
-            from src.news import get_football_news, search_football_facts
-            posts = await get_football_news("footballearn")
-            if posts:
-                news_text = "\n".join(posts[:3])
-                parts.append(f"### Последние новости футбола:\n{news_text[:2000]}")
-        except Exception:
-            pass
-
-        await api.close()
-
-        if parts:
-            result = "\n\n".join(parts)
-            if len(result) > 12000:
-                result = result[:12000] + "\n\n[... данные обрезаны ...]"
-            return result
-        return ""
+        from src.wc_cache import load_wc_data, search_wc_data
+        data = load_wc_data()
+        if not data:
+            return ""
+        result = search_wc_data(text, data)
+        return result
     except Exception as e:
         logger.error(f"Football context error: {e}")
         return ""
