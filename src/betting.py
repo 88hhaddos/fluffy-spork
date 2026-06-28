@@ -459,16 +459,21 @@ class BettingManager:
 
 
 async def auto_betting_loop(bot, db, football_api: FootballAPI, chat_id: int, ai_manager=None):
-    """Background loop: авто-ставки каждые 30-120 минут.
+    """Background loop: ставки + факты + статистика.
     
-    Ночной сон 23:00-09:00 МСК — не постит ставки ночью.
-    Но проверяет результаты завершённых матчей всегда.
+    Интервалы:
+    - Ставки: 30-120 мин (днём, не ночью)
+    - Факты/статистика: 60-180 мин (днём, не ночью)
+    - Результаты: проверяются всегда (даже ночью)
+    
+    Бот ставит ТОЛЬКО на ЧМ (league ID 1).
     """
     betting = BettingManager(db, football_api, ai_manager)
+    last_bet_time = 0
+    last_fact_time = 0
 
     while True:
-        wait = random.randint(1800, 7200)
-        await asyncio.sleep(wait)
+        await asyncio.sleep(60)
 
         try:
             results = await betting.check_and_settle(chat_id)
@@ -477,15 +482,90 @@ async def auto_betting_loop(bot, db, football_api: FootballAPI, chat_id: int, ai
                 await bot.send_message(chat_id, msg)
                 await asyncio.sleep(2)
 
-            if betting._is_night():
-                logger.info("Auto-betting: night mode, skipping new bet")
-                continue
+            now = datetime.datetime.utcnow().timestamp()
+            is_night = betting._is_night()
 
-            bet = await betting.generate_bet(chat_id)
-            if bet:
-                intro = await betting.generate_intro_message(bet)
-                msg = betting.format_bet_message(bet, intro)
-                await bot.send_message(chat_id, msg)
+            if not is_night and now - last_bet_time > random.randint(1800, 7200):
+                bet = await betting.generate_bet(chat_id)
+                if bet:
+                    intro = await betting.generate_intro_message(bet)
+                    msg = betting.format_bet_message(bet, intro)
+                    await bot.send_message(chat_id, msg)
+                    last_bet_time = now
+
+            if not is_night and now - last_fact_time > random.randint(3600, 10800):
+                fact = await _generate_football_fact(db, football_api, ai_manager)
+                if fact:
+                    await bot.send_message(chat_id, fact)
+                    last_fact_time = now
 
         except Exception as e:
-            logger.error(f"Auto betting error: {e}")
+            logger.error(f"Auto loop error: {e}")
+
+
+async def _generate_football_fact(db, football_api: FootballAPI, ai_manager) -> Optional[str]:
+    """Генерирует факт или статистику по ЧМ через AI."""
+    try:
+        wc_matches = await football_api.get_matches_by_league(1, 2026)
+        finished = [m for m in wc_matches if m.get("status") in (8, 9, 10, 17, 18)]
+        upcoming = [m for m in wc_matches if m.get("status") in (1, 2)]
+
+        context_parts = []
+        if finished:
+            recent = finished[-10:]
+            for m in recent:
+                home = (m.get("homeTeam") or {}).get("name", "?")
+                away = (m.get("awayTeam") or {}).get("name", "?")
+                sc_h = m.get("homeResult", 0)
+                sc_a = m.get("awayResult", 0)
+                context_parts.append(f"{home} {sc_h}:{sc_a} {away}")
+
+        if upcoming:
+            next_matches = upcoming[:5]
+            for m in next_matches:
+                home = (m.get("homeTeam") or {}).get("name", "?")
+                away = (m.get("awayTeam") or {}).get("name", "?")
+                date = (m.get("date") or "")[:16]
+                context_parts.append(f"Предстоящий: {home} — {away} ({date})")
+
+        if not context_parts:
+            return None
+
+        standings = await football_api.get_standings(1, 2026)
+        if standings:
+            top5 = standings[:5]
+            table_str = ", ".join(
+                f"{t.get('teamName', '?')} ({t.get('points', 0)} очк, {t.get('goalsScored', 0)} голов)"
+                for t in top5
+            )
+            context_parts.append(f"Топ-5 таблицы: {table_str}")
+
+        context = "\n".join(context_parts)
+
+        response = await ai_manager.chat_completion(
+            messages=[
+                {
+                    "role": "system",
+                    "content": (
+                        "Ты дракон Закури — футбольный эксперт и лудоман. "
+                        "Поделись интересным фактом, статистикой или наблюдением по ЧМ 2026. "
+                        "Используй РЕАЛЬНЫЕ данные из контекста. "
+                        "1-3 предложения. С характером, с мнением. "
+                        "Можешь вспомнить исторический факт о ЧМ. "
+                        "Не используй эмодзи в начале. "
+                        "Не повторяй просто данные — добавь мнение Закури."
+                    ),
+                },
+                {"role": "user", "content": f"Данные ЧМ 2026:\n{context}"},
+            ],
+            temperature=0.8,
+            max_tokens=200,
+        )
+
+        if response and response.strip():
+            return f"🐉 {response.strip()}"
+
+        return None
+    except Exception as e:
+        logger.error(f"Fact generation error: {e}")
+        return None
