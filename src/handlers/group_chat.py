@@ -737,13 +737,13 @@ async def _get_football_context(text: str, db) -> str:
 
         parts.append(f"### Мои ставки и баланс:\n" + "\n".join(b for b in bets_lines if b))
 
-        # ── Новости ──
+        # ── Новости и факты ──
         try:
-            from src.news import get_football_news
+            from src.news import get_football_news, search_football_facts
             posts = await get_football_news("footballearn")
             if posts:
-                news_text = " ".join(posts[:2])[:500]
-                parts.append(f"### Последние новости ЧМ (из TG канала):\n{news_text}")
+                news_text = "\n".join(posts[:3])
+                parts.append(f"### Последние новости футбола:\n{news_text[:2000]}")
         except Exception:
             pass
 
