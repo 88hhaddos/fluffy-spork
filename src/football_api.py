@@ -189,10 +189,10 @@ class FootballAPI:
 
     def format_match_short(self, match: dict) -> str:
         """Краткий формат матча для списка."""
-        home = match.get("homeTeamName") or match.get("homeTeam", {}).get("name", "?")
-        away = match.get("awayTeamName") or match.get("awayTeam", {}).get("name", "?")
-        score_h = match.get("scoreHomeFT", "?")
-        score_a = match.get("scoreAwayFT", "?")
+        home = (match.get("homeTeam") or {}).get("name", "?")
+        away = (match.get("awayTeam") or {}).get("name", "?")
+        score_h = match.get("homeResult") or match.get("scoreHomeFT") or 0
+        score_a = match.get("awayResult") or match.get("scoreAwayFT") or 0
         status = match.get("status", 0)
         date = match.get("date", "")
 
@@ -200,10 +200,10 @@ class FootballAPI:
         wx = match.get("winnerX", 0)
         w2 = match.get("winner2", 0)
 
-        if status == 8:
+        if status in (8, 9, 10, 17, 18):
             score_str = f"{score_h}:{score_a}"
         elif status in (3, 4, 5, 6, 7, 11, 19):
-            score_str = f"{score_h}:{score_a} LIVE"
+            score_str = f"{score_h}:{score_a} 🔴"
         elif status == 2:
             score_str = date[11:16] if len(date) > 15 else "?"
         else:

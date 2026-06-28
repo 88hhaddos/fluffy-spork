@@ -58,17 +58,33 @@ class BettingManager:
         return hour >= 23 or hour < 9
 
     async def generate_bet(self, chat_id: int) -> Optional[dict]:
-        """Генерирует ставку: одиночную, экспресс, или неординарную."""
-        matches = await self.api.get_today_matches()
-        upcoming = await self.api.get_upcoming_matches(limit=20)
+        """Генерирует ставку: одиночную, экспресс, или неординарную.
+        Приоритет — матчи ЧМ. Если нет ЧМ — любые матчи."""
+        wc_matches = await self.api.get_matches_by_league(1, 2026)
+        
+        today = await self.api.get_today_matches()
+        upcoming = await self.api.get_upcoming_matches(limit=30)
 
-        available = []
-        for m in matches + upcoming:
+        wc_uid = "979a850f-d343-11f0-982f-3cecef730a49"
+        
+        wc_today = [m for m in today if (m.get("season") or {}).get("uid") == wc_uid or (m.get("league") or {}).get("id") == 1]
+        wc_upcoming = [m for m in upcoming if (m.get("season") or {}).get("uid") == wc_uid or (m.get("league") or {}).get("id") == 1]
+        wc_all = [m for m in wc_matches if m.get("status") in (1, 2)]
+
+        available = wc_today + wc_upcoming + wc_all
+
+        if not available:
+            available = today + upcoming
+
+        filtered = []
+        for m in available:
             w1 = m.get("winner1", 0)
             wx = m.get("winnerX", 0)
             w2 = m.get("winner2", 0)
             if w1 and wx and w2 and w1 > 1.0:
-                available.append(m)
+                filtered.append(m)
+
+        available = filtered
 
         if not available:
             return None

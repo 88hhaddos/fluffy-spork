@@ -671,23 +671,30 @@ async def handle_poll(message: Message, text: str, bot):
 
 @router.message(Command("matches"), IsGroupChat())
 @router.message(Command("matches"), IsPrivateChat())
-async def cmd_matches(message: Message):
-    from src.football_api import FootballAPI, set_api_key
-    from src.config import config
-    api_key = getattr(config, 'SSTATS_API_KEY', '') or 'sjzgn3bbco67pk8j'
-    api = FootballAPI(api_key)
+async def cmd_matches(message: Message, db):
+    from src.football_api import FootballAPI
+    api = FootballAPI('sjzgn3bbco67pk8j')
 
     args = (message.text or "").replace("/matches", "", 1).strip().lower()
     try:
         if "tomorrow" in args or "завтра" in args:
-            matches = await api.get_upcoming_matches(limit=15)
-            title = "📅 Матчи (ближайшие)"
+            all_matches = await api.get_upcoming_matches(limit=50)
+            wc_matches = [m for m in all_matches if (m.get("league") or {}).get("id") == 1 or (m.get("season") or {}).get("uid") == "979a850f-d343-11f0-982f-3cecef730a49"]
+            matches = wc_matches if wc_matches else all_matches[:15]
+            title = "📅 Матчи ЧМ (ближайшие)"
         elif "live" in args or "лайв" in args:
-            matches = await api.get_live_matches()
-            title = "🔴 LIVE матчи"
-        else:
+            all_matches = await api.get_live_matches()
+            wc_matches = [m for m in all_matches if (m.get("league") or {}).get("id") == 1 or (m.get("season") or {}).get("uid") == "979a850f-d343-11f0-982f-3cecef730a49"]
+            matches = wc_matches if wc_matches else all_matches[:15]
+            title = "🔴 LIVE матчи ЧМ"
+        elif "all" in args or "все" in args:
             matches = await api.get_today_matches()
-            title = "📅 Матчи сегодня"
+            title = "📅 Все матчи сегодня"
+        else:
+            all_matches = await api.get_today_matches()
+            wc_matches = [m for m in all_matches if (m.get("league") or {}).get("id") == 1 or (m.get("season") or {}).get("uid") == "979a850f-d343-11f0-982f-3cecef730a49"]
+            matches = wc_matches if wc_matches else all_matches[:15]
+            title = "📅 Матчи ЧМ сегодня"
 
         if not matches:
             await message.reply(f"{title}\n\nМатчей не найдено 🤷")
@@ -713,13 +720,15 @@ async def cmd_live(message: Message):
     api = FootballAPI('sjzgn3bbco67pk8j')
 
     try:
-        matches = await api.get_live_matches()
+        all_matches = await api.get_live_matches()
+        wc_matches = [m for m in all_matches if (m.get("league") or {}).get("id") == 1 or (m.get("season") or {}).get("uid") == "979a850f-d343-11f0-982f-3cecef730a49"]
+        matches = wc_matches if wc_matches else all_matches[:10]
         if not matches:
-            await message.reply("🔴 Сейчас нет live матчей")
+            await message.reply("🔴 Сейчас нет live матчей ЧМ")
             await api.close()
             return
 
-        lines = ["🔴 LIVE матчи:\n"]
+        lines = ["🔴 LIVE матчи ЧМ:\n"]
         for m in matches[:15]:
             lines.append(api.format_match_short(m))
 
@@ -803,22 +812,15 @@ async def cmd_table(message: Message):
     try:
         args = (message.text or "").replace("/table", "", 1).strip().lower()
 
-        league_id = 0
-        if "wc" in args or "чм" in args or "world" in args:
-            league = await api.find_league("World Cup")
-            if league:
-                league_id = league.get("id", 0)
-        elif "apl" in args or "epl" in args or "premier" in args:
+        league_id = 1  # World Cup by default
+        if "apl" in args or "epl" in args or "premier" in args:
             league = await api.find_league("Premier League")
             if league:
                 league_id = league.get("id", 0)
-
-        if not league_id:
-            leagues = await api.get_leagues()
-            for l in leagues[:5]:
-                if "world" in (l.get("name") or "").lower() or "чм" in (l.get("name") or "").lower():
-                    league_id = l.get("id", 0)
-                    break
+        elif args and "wc" not in args and "чм" not in args and "world" not in args:
+            league = await api.find_league(args)
+            if league:
+                league_id = league.get("id", 0)
 
         if not league_id:
             await message.reply("Укажи лигу: /table wc (ЧМ) или /table apl (АПЛ)")
@@ -887,18 +889,21 @@ async def cmd_results(message: Message):
     api = FootballAPI('sjzgn3bbco67pk8j')
 
     try:
-        results = await api.get_recent_results(limit=15)
+        all_results = await api.get_matches_by_league(1, 2026)
+        finished = [m for m in all_results if m.get("status") in (8, 9, 10, 17, 18)]
+        finished.sort(key=lambda x: x.get("date", ""), reverse=True)
+        results = finished[:15]
         if not results:
-            await message.reply("Нет недавних результатов 🤷")
+            await message.reply("Нет завершённых матчей ЧМ 🤷")
             await api.close()
             return
 
-        lines = ["📋 <b>Недавние результаты</b>\n"]
+        lines = ["📋 <b>Результаты ЧМ 2026</b>\n"]
         for m in results[:15]:
-            home = m.get("homeTeamName") or m.get("homeTeam", {}).get("name", "?")
-            away = m.get("awayTeamName") or m.get("awayTeam", {}).get("name", "?")
-            score_h = m.get("scoreHomeFT", "?")
-            score_a = m.get("scoreAwayFT", "?")
+            home = (m.get("homeTeam") or {}).get("name", "?")
+            away = (m.get("awayTeam") or {}).get("name", "?")
+            score_h = m.get("homeResult", 0)
+            score_a = m.get("awayResult", 0)
             lines.append(f"⚽ {home} {score_h}:{score_a} {away}")
 
         await message.reply("\n".join(lines))
