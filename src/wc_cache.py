@@ -40,7 +40,10 @@ async def fetch_all_wc_data(api: FootballAPI) -> dict:
 
         details = await api.get_match_details(game_id)
         if not details:
+            await asyncio.sleep(2)
             continue
+
+        await asyncio.sleep(2.5)  # Avoid rate limit (30 req/min)
 
         home_name = (m.get("homeTeam") or {}).get("name", "?")
         away_name = (m.get("awayTeam") or {}).get("name", "?")
@@ -48,7 +51,151 @@ async def fetch_all_wc_data(api: FootballAPI) -> dict:
         sc_a = m.get("awayResult", 0)
         date = (m.get("date") or "")[:19]
 
-        match_info = await _parse_match_details(m, details, all_events, all_scorers, all_assists, all_cards, all_players)
+        match_info = {
+            "id": game_id,
+            "home": home_name,
+            "away": away_name,
+            "score": f"{sc_h}:{sc_a}",
+            "date": date,
+            "status": m.get("status"),
+            "stage": m.get("stage") or details.get("stage") or "",
+            "round": m.get("round") or "",
+            "home_id": (m.get("homeTeam") or {}).get("id", 0),
+            "away_id": (m.get("awayTeam") or {}).get("id", 0),
+            "referee": details.get("referee", {}).get("name", "") if isinstance(details.get("referee"), dict) else "",
+            "stadium": details.get("stadium", {}).get("name", "") if isinstance(details.get("stadium"), dict) else "",
+            "attendance": details.get("attendance", 0),
+        }
+
+        events = details.get("events", [])
+        match_events = []
+
+        for ev in events:
+            ev_type_num = ev.get("type", 0)
+            ev_name = str(ev.get("name") or "").lower()
+            player_obj = ev.get("player")
+            if isinstance(player_obj, dict):
+                player_name = player_obj.get("name", "?")
+            else:
+                player_name = str(player_obj or "?")
+            assist_obj = ev.get("assistPlayer")
+            if isinstance(assist_obj, dict):
+                assist_name = assist_obj.get("name", "")
+            else:
+                assist_name = str(assist_obj or "")
+            minute = ev.get("elapsed", "?")
+            team_id = ev.get("teamId", 0)
+            team_name = home_name if team_id == match_info["home_id"] else away_name
+
+            if ev_type_num == 1:
+                ev_type = "goal"
+            elif ev_type_num == 2 and "red" in ev_name:
+                ev_type = "red card"
+            elif ev_type_num == 2:
+                ev_type = "yellow card"
+            elif ev_type_num == 3:
+                ev_type = "substitution"
+            else:
+                ev_type = ev_name
+
+            event_info = {
+                "match": f"{home_name}-{away_name}",
+                "type": ev_type,
+                "player": player_name,
+                "minute": minute,
+                "team": team_name,
+                "assist": assist_name,
+            }
+            match_events.append(event_info)
+            all_events.append(event_info)
+
+            clean_player = (player_name or "").split("(")[0].strip() if player_name else ""
+
+            if ev_type == "goal":
+                if clean_player and clean_player != "?":
+                    all_scorers[clean_player] = all_scorers.get(clean_player, 0) + 1
+                    if clean_player in all_players:
+                        all_players[clean_player]["goals"] += 1
+                if assist_name:
+                    clean_assist = (assist_name or "").split("(")[0].strip() if assist_name else ""
+                    if clean_assist and clean_assist != "?":
+                        all_assists[clean_assist] = all_assists.get(clean_assist, 0) + 1
+                        if clean_assist in all_players:
+                            all_players[clean_assist]["assists"] += 1
+
+            elif ev_type == "yellow card":
+                if clean_player and clean_player != "?" and clean_player in all_players:
+                    all_players[clean_player]["yellow"] += 1
+
+            elif ev_type == "red card":
+                if clean_player and clean_player != "?" and clean_player in all_players:
+                    all_players[clean_player]["red"] += 1
+
+        lineups_data = details.get("lineups", {})
+        lineup_players = details.get("lineupPlayers", [])
+        match_lineups = []
+        
+        home_formation = lineups_data.get("homeFormation", "") if isinstance(lineups_data, dict) else ""
+        away_formation = lineups_data.get("awayFormation", "") if isinstance(lineups_data, dict) else ""
+
+        for p in lineup_players:
+            p_name = p.get("playerName", "?")
+            p_team_id = p.get("teamId", 0)
+            p_pos = p.get("position", "")
+            p_start = p.get("startXI", False)
+            p_team = home_name if p_team_id == match_info["home_id"] else away_name
+
+            player_info = {
+                "name": p_name,
+                "position": p_pos,
+                "minutes": 0,
+                "sub": not p_start,
+                "in_minute": 0,
+                "out_minute": 0,
+                "rating": 0,
+                "goals": 0,
+                "assists": 0,
+                "yellow": 0,
+                "red": 0,
+                "team": p_team,
+            }
+
+            if p_name and p_name != "?":
+                if p_name not in all_players:
+                    all_players[p_name] = {
+                        "name": p_name,
+                        "team": p_team,
+                        "total_minutes": 0,
+                        "goals": 0,
+                        "assists": 0,
+                        "yellow": 0,
+                        "red": 0,
+                        "matches": 0,
+                        "rating_sum": 0,
+                        "rating_count": 0,
+                    }
+                all_players[p_name]["matches"] += 1
+
+            existing_lineup = next((l for l in match_lineups if l["team"] == p_team), None)
+            if not existing_lineup:
+                formation = home_formation if p_team == home_name else away_formation
+                existing_lineup = {"team": p_team, "formation": formation, "players": []}
+                match_lineups.append(existing_lineup)
+            existing_lineup["players"].append(player_info)
+
+        stats = details.get("stats", {})
+        match_stats = {}
+        if stats:
+            for key, val in stats.items():
+                if isinstance(val, dict):
+                    match_stats[key] = {
+                        "home": val.get("home", 0),
+                        "away": val.get("away", 0),
+                    }
+
+        match_info["events"] = match_events
+        match_info["lineups"] = match_lineups
+        match_info["stats"] = match_stats
         all_match_details.append(match_info)
 
     # ── Live матчи с деталями ──
@@ -59,10 +206,51 @@ async def fetch_all_wc_data(api: FootballAPI) -> dict:
             continue
         details = await api.get_match_details(game_id)
         if not details:
+            await asyncio.sleep(2)
             continue
-        match_info = await _parse_match_details(m, details, all_events, all_scorers, all_assists, all_cards, all_players)
-        match_info["is_live"] = True
-        live_details.append(match_info)
+        await asyncio.sleep(2.5)
+
+        home_name = (m.get("homeTeam") or {}).get("name", "?")
+        away_name = (m.get("awayTeam") or {}).get("name", "?")
+        sc_h = m.get("homeResult", 0)
+        sc_a = m.get("awayResult", 0)
+
+        live_match = {
+            "id": game_id,
+            "home": home_name,
+            "away": away_name,
+            "score": f"{sc_h}:{sc_a}",
+            "date": (m.get("date") or "")[:19],
+            "events": [],
+            "lineups": [],
+        }
+
+        for ev in details.get("events", []):
+            ev_type = str(ev.get("type") or "").lower()
+            player = str(ev.get("player") or ev.get("text") or "")
+            if isinstance(player, dict):
+                player = player.get("name", str(player))
+            live_match["events"].append({
+                "type": ev_type,
+                "player": player,
+                "minute": ev.get("minute", "?"),
+            })
+
+        for lineup in details.get("lineups", []):
+            team_name = (lineup.get("team") or {}).get("name", "?")
+            players_list = []
+            for p in lineup.get("players", []):
+                p_name = str(p.get("name", "?"))
+                if isinstance(p_name, dict):
+                    p_name = p_name.get("name", str(p_name))
+                players_list.append({
+                    "name": p_name,
+                    "sub": p.get("isSubstitute", False),
+                    "minutes": p.get("minutesPlayed", p.get("minutes", 0)) or 0,
+                })
+            live_match["lineups"].append({"team": team_name, "players": players_list})
+
+        live_details.append(live_match)
 
         match_info = {
             "id": game_id,
