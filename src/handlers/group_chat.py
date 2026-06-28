@@ -623,7 +623,7 @@ def _is_football_question(text: str) -> bool:
 
 
 async def _get_football_context(text: str, db) -> str:
-    """Получает данные ЧМ из SStats API для контекста бота."""
+    """Получает ВСЕ данные ЧМ из SStats API для контекста бота."""
     if not _is_football_question(text):
         return ""
 
@@ -638,51 +638,56 @@ async def _get_football_context(text: str, db) -> str:
         upcoming = [m for m in wc_matches if m.get("status") in (1, 2)]
         live = [m for m in wc_matches if m.get("status") in (3, 4, 5, 6, 7, 11, 19)]
 
+        # ── ВСЕ завершённые матчи ──
         if finished:
-            recent = finished[-10:]
-            results_lines = []
-            for m in recent:
+            all_results = []
+            all_goals = []
+            scorer_stats = {}
+
+            for m in finished:
                 home_name = (m.get("homeTeam") or {}).get("name", "?")
                 away_name = (m.get("awayTeam") or {}).get("name", "?")
                 sc_h = m.get("homeResult", 0)
                 sc_a = m.get("awayResult", 0)
                 date = (m.get("date") or "")[:10]
-                results_lines.append(f"  {home_name} {sc_h}:{sc_a} {away_name} ({date})")
-            parts.append(f"### Завершённые матчи ЧМ 2026:\n" + "\n".join(results_lines))
+                all_results.append(f"  {home_name} {sc_h}:{sc_a} {away_name} ({date})")
 
-            last_3 = recent[-3:]
-            for m in last_3:
                 game_id = m.get("id")
                 if game_id:
                     details = await api.get_match_details(game_id)
                     if details:
                         events = details.get("events", [])
-                        goals = []
                         for ev in events:
                             ev_type = (ev.get("type") or "").lower()
                             if "goal" in ev_type or "гол" in ev_type:
                                 player = ev.get("player") or ev.get("text") or "?"
                                 minute = ev.get("minute", "?")
-                                team = ev.get("team") or ""
-                                goals.append(f"    Гол: {player} ({minute}')")
-                        if goals:
-                            home_name = (m.get("homeTeam") or {}).get("name", "?")
-                            away_name = (m.get("awayTeam") or {}).get("name", "?")
-                            parts.append(f"### Голы в матче {home_name} — {away_name}:\n" + "\n".join(goals))
+                                all_goals.append(f"  {home_name}-{away_name}: {player} ({minute}')")
+
+                                clean_name = player.split("(")[0].strip()
+                                if clean_name and clean_name != "?":
+                                    scorer_stats[clean_name] = scorer_stats.get(clean_name, 0) + 1
 
                         lineups = details.get("lineups", [])
                         if lineups:
                             for lineup in lineups[:2]:
                                 team_name = (lineup.get("team") or {}).get("name", "?")
                                 players = lineup.get("players", [])
-                                subs = [p for p in players if p.get("isSubstitute")]
-                                if subs:
-                                    sub_str = ", ".join(
-                                        f"{p.get('name', '?')} ({p.get('inMinute', '?')}'-)"
-                                        for p in subs[:5]
-                                    )
-                                    parts.append(f"### Замены {team_name}: {sub_str}")
+                                for p in players:
+                                    if p.get("assists", 0) and p.get("assists", 0) > 0:
+                                        pass
 
+            parts.append(f"### ВСЕ завершённые матчи ЧМ 2026 ({len(all_results)}):\n" + "\n".join(all_results))
+
+            if all_goals:
+                parts.append(f"### Все голы ЧМ 2026:\n" + "\n".join(all_goals[-50:]))
+
+            if scorer_stats:
+                top_scorers = sorted(scorer_stats.items(), key=lambda x: x[1], reverse=True)[:10]
+                scorers_str = "\n".join(f"  {name}: {goals} гол(ов)" for name, goals in top_scorers)
+                parts.append(f"### Топ бомбардиры ЧМ 2026:\n{scorers_str}")
+
+        # ── Live ──
         if live:
             live_str = "\n".join(
                 f"  🔴 {(m.get('homeTeam') or {}).get('name', '?')} {m.get('homeResult', 0)}:{m.get('awayResult', 0)} {(m.get('awayTeam') or {}).get('name', '?')} (идёт сейчас)"
@@ -690,31 +695,65 @@ async def _get_football_context(text: str, db) -> str:
             )
             parts.append(f"### Live матчи ЧМ:\n{live_str}")
 
+        # ── Предстоящие ──
         if upcoming:
-            next_matches = upcoming[:10]
             upcoming_str = "\n".join(
                 f"  {(m.get('homeTeam') or {}).get('name', '?')} — {(m.get('awayTeam') or {}).get('name', '?')} ({(m.get('date') or '')[:16]})"
-                for m in next_matches
+                for m in upcoming[:15]
             )
             parts.append(f"### Предстоящие матчи ЧМ:\n{upcoming_str}")
 
+        # ── Таблица ──
         standings = await api.get_standings(1, 2026)
         if standings:
-            top10 = standings[:10]
             table_str = "\n".join(
                 f"  {i+1}. {t.get('teamName', '?')} — {t.get('points', 0)} очк, {t.get('wins', 0)}В {t.get('draws', 0)}Н {t.get('loss', 0)}П, голы {t.get('goalsScored', 0)}-{t.get('goalsMissed', 0)}"
-                for i, t in enumerate(top10)
+                for i, t in enumerate(standings[:15])
             )
             parts.append(f"### Турнирная таблица ЧМ 2026:\n{table_str}")
 
+        # ── Ставки бота ──
         bal = await db.get_balance(0)
-        if bal["bets_count"] > 0:
-            parts.append(f"### Мои ставки: баланс {bal['balance']:.0f} юаней, {bal['bets_count']} ставок, {bal['wins_count']} выиграно")
+        pending = await db.get_pending_bets(0)
+        recent_bets = await db.get_recent_bets(0, 10)
+        bets_lines = [
+            f"  Баланс: {bal['balance']:.0f} юаней",
+            f"  Долг: {bal['credit']:.0f} юаней" if bal['credit'] > 0 else "",
+            f"  Всего ставок: {bal['bets_count']}, Выиграно: {bal['wins_count']}",
+            f"  Прибыль: {bal['total_won'] - bal['total_lost']:+.0f} юаней",
+            f"  Ожидают результата: {len(pending)}",
+        ]
+        if recent_bets:
+            import json as _json
+            bets_lines.append("  Последние ставки:")
+            for b in recent_bets[:5]:
+                sels = _json.loads(b["selections"])
+                first = sels[0] if sels else {}
+                match_name = f"{first.get('home', '?')} — {first.get('away', '?')}"
+                if len(sels) > 1:
+                    match_name += f" +{len(sels)-1}"
+                status_emoji = "✅" if b["status"] == "won" else ("❌" if b["status"] == "lost" else "⏳")
+                bets_lines.append(f"    {status_emoji} {match_name}: {first.get('pick', '?')} @ {b['odds']} — {b['stake']:.0f} юаней → {b['status']}")
+
+        parts.append(f"### Мои ставки и баланс:\n" + "\n".join(b for b in bets_lines if b))
+
+        # ── Новости ──
+        try:
+            from src.news import get_football_news
+            posts = await get_football_news("footballearn")
+            if posts:
+                news_text = " ".join(posts[:2])[:500]
+                parts.append(f"### Последние новости ЧМ (из TG канала):\n{news_text}")
+        except Exception:
+            pass
 
         await api.close()
 
         if parts:
-            return "\n\n".join(parts)
+            result = "\n\n".join(parts)
+            if len(result) > 12000:
+                result = result[:12000] + "\n\n[... данные обрезаны ...]"
+            return result
         return ""
     except Exception as e:
         logger.error(f"Football context error: {e}")
