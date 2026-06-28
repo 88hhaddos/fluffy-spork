@@ -13,6 +13,7 @@ from src.database import Database
 from src.ai_providers import AIProviderManager
 from src.context_manager import ContextManager
 from src.personality import load_personality_from_file, load_chat_memory_from_file
+from src.football_api import FootballAPI, set_api_key as set_football_key
 from src.handlers.admin_panel import router as admin_router
 from src.handlers.photo_gen import router as photo_router
 from src.handlers.group_chat import router as group_router
@@ -105,6 +106,11 @@ async def main():
     await init_personality(db)
     await init_chat_memory(db)
 
+    sstats_key = os.getenv("SSTATS_API_KEY", "sjzgn3bbco67pk8j")
+    set_football_key(sstats_key)
+    football_api = FootballAPI(sstats_key)
+    logger.info(f"Football API: SStats.net (key: {sstats_key[:8]}...)")
+
     ai_manager = AIProviderManager(db)
     context_manager = ContextManager(db, ai_manager)
 
@@ -118,6 +124,7 @@ async def main():
     dp.workflow_data["db"] = db
     dp.workflow_data["ai_manager"] = ai_manager
     dp.workflow_data["context_manager"] = context_manager
+    dp.workflow_data["football_api"] = football_api
 
     dp.include_router(admin_router)
     dp.include_router(features_router)
@@ -133,10 +140,19 @@ async def main():
         f"Бот запущен: @{config.BOT_USERNAME} (ID: {config.BOT_ID}) — {bot_name}"
     )
 
+    betting_chat_id = int(os.getenv("BETTING_CHAT_ID", "0") or "0")
+    betting_enabled = os.getenv("BETTING_ENABLED", "0") == "1"
+
+    if betting_enabled and betting_chat_id:
+        from src.betting import auto_betting_loop
+        asyncio.create_task(auto_betting_loop(bot, db, football_api, betting_chat_id))
+        logger.info(f"Авто-ставки включены для chat {betting_chat_id}")
+
     try:
         await dp.start_polling(bot)
     finally:
         await ai_manager.close()
+        await football_api.close()
         await db.close()
         await bot.session.close()
 

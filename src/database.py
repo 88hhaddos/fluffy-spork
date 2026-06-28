@@ -96,6 +96,32 @@ CREATE TABLE IF NOT EXISTS photo_gallery (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE IF NOT EXISTS bot_bets (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    chat_id INTEGER NOT NULL,
+    bet_type TEXT NOT NULL DEFAULT 'single',
+    match_ids TEXT NOT NULL,
+    selections TEXT NOT NULL,
+    odds REAL NOT NULL,
+    stake REAL NOT NULL,
+    status TEXT NOT NULL DEFAULT 'pending',
+    potential_return REAL NOT NULL,
+    actual_return REAL DEFAULT 0,
+    is_credit INTEGER DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    settled_at TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS bot_balance (
+    chat_id INTEGER PRIMARY KEY,
+    balance REAL DEFAULT 50000,
+    credit REAL DEFAULT 0,
+    total_won REAL DEFAULT 0,
+    total_lost REAL DEFAULT 0,
+    bets_count INTEGER DEFAULT 0,
+    wins_count INTEGER DEFAULT 0
+);
+
 CREATE INDEX IF NOT EXISTS idx_messages_chat_id ON messages(chat_id);
 CREATE INDEX IF NOT EXISTS idx_key_events_chat_id ON key_events(chat_id);
 CREATE INDEX IF NOT EXISTS idx_gallery_chat_id ON photo_gallery(chat_id);
@@ -467,3 +493,94 @@ class Database:
         if not existing:
             return []
         return [f.strip() for f in existing.split("||") if f.strip()]
+
+    # ─── Bets ───
+
+    async def place_bet(self, chat_id: int, bet_type: str, match_ids: str, selections: str,
+                        odds: float, stake: float, is_credit: bool = False) -> int:
+        potential = stake * odds
+        cur = await self.conn.execute(
+            "INSERT INTO bot_bets (chat_id, bet_type, match_ids, selections, odds, stake, "
+            "potential_return, is_credit) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+            (chat_id, bet_type, match_ids, selections, odds, stake, potential, int(is_credit)),
+        )
+        await self.conn.commit()
+        return cur.lastrowid
+
+    async def get_pending_bets(self, chat_id: int = 0) -> list[dict]:
+        if chat_id:
+            cur = await self.conn.execute(
+                "SELECT * FROM bot_bets WHERE status = 'pending' AND chat_id = ? ORDER BY id DESC",
+                (chat_id,)
+            )
+        else:
+            cur = await self.conn.execute(
+                "SELECT * FROM bot_bets WHERE status = 'pending' ORDER BY id DESC"
+            )
+        rows = await cur.fetchall()
+        return [dict(row) for row in rows]
+
+    async def settle_bet(self, bet_id: int, status: str, actual_return: float = 0):
+        await self.conn.execute(
+            "UPDATE bot_bets SET status = ?, actual_return = ?, settled_at = CURRENT_TIMESTAMP WHERE id = ?",
+            (status, actual_return, bet_id),
+        )
+        await self.conn.commit()
+
+    async def get_recent_bets(self, chat_id: int, limit: int = 10) -> list[dict]:
+        cur = await self.conn.execute(
+            "SELECT * FROM bot_bets WHERE chat_id = ? ORDER BY id DESC LIMIT ?",
+            (chat_id, limit)
+        )
+        rows = await cur.fetchall()
+        return [dict(row) for row in rows]
+
+    async def get_balance(self, chat_id: int) -> dict:
+        cur = await self.conn.execute(
+            "SELECT * FROM bot_balance WHERE chat_id = ?", (chat_id,)
+        )
+        row = await cur.fetchone()
+        if row:
+            return dict(row)
+        await self.conn.execute(
+            "INSERT INTO bot_balance (chat_id, balance) VALUES (?, 50000)",
+            (chat_id,)
+        )
+        await self.conn.commit()
+        return {"chat_id": chat_id, "balance": 50000, "credit": 0, "total_won": 0, "total_lost": 0, "bets_count": 0, "wins_count": 0}
+
+    async def update_balance(self, chat_id: int, balance_delta: float, won: float = 0, lost: float = 0, bet_won: bool = False):
+        bal = await self.get_balance(chat_id)
+        new_balance = bal["balance"] + balance_delta
+        new_won = bal["total_won"] + won
+        new_lost = bal["total_lost"] + lost
+        new_bets = bal["bets_count"] + 1
+        new_wins = bal["wins_count"] + (1 if bet_won else 0)
+
+        await self.conn.execute(
+            "UPDATE bot_balance SET balance = ?, total_won = ?, total_lost = ?, "
+            "bets_count = ?, wins_count = ? WHERE chat_id = ?",
+            (new_balance, new_won, new_lost, new_bets, new_wins, chat_id)
+        )
+        await self.conn.commit()
+
+    async def take_credit(self, chat_id: int, amount: float):
+        bal = await self.get_balance(chat_id)
+        new_credit = bal["credit"] + amount
+        new_balance = bal["balance"] + amount
+        await self.conn.execute(
+            "UPDATE bot_balance SET balance = ?, credit = ? WHERE chat_id = ?",
+            (new_balance, new_credit, chat_id)
+        )
+        await self.conn.commit()
+
+    async def repay_credit(self, chat_id: int, amount: float):
+        bal = await self.get_balance(chat_id)
+        repay = min(amount, bal["credit"])
+        new_credit = bal["credit"] - repay
+        new_balance = bal["balance"] - repay
+        await self.conn.execute(
+            "UPDATE bot_balance SET balance = ?, credit = ? WHERE chat_id = ?",
+            (new_balance, new_credit, chat_id)
+        )
+        await self.conn.commit()

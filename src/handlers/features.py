@@ -665,3 +665,216 @@ async def handle_poll(message: Message, text: str, bot):
         await message.reply("Закури не смог создать опрос 😔 Нужно 2-10 вариантов через |")
 
     return True
+
+
+# ─── Football commands ───
+
+@router.message(Command("matches"), IsGroupChat())
+@router.message(Command("matches"), IsPrivateChat())
+async def cmd_matches(message: Message):
+    from src.football_api import FootballAPI, set_api_key
+    from src.config import config
+    api_key = getattr(config, 'SSTATS_API_KEY', '') or 'sjzgn3bbco67pk8j'
+    api = FootballAPI(api_key)
+
+    args = (message.text or "").replace("/matches", "", 1).strip().lower()
+    try:
+        if "tomorrow" in args or "завтра" in args:
+            matches = await api.get_upcoming_matches(limit=15)
+            title = "📅 Матчи (ближайшие)"
+        elif "live" in args or "лайв" in args:
+            matches = await api.get_live_matches()
+            title = "🔴 LIVE матчи"
+        else:
+            matches = await api.get_today_matches()
+            title = "📅 Матчи сегодня"
+
+        if not matches:
+            await message.reply(f"{title}\n\nМатчей не найдено 🤷")
+            await api.close()
+            return
+
+        lines = [f"{title}\n"]
+        for m in matches[:15]:
+            lines.append(api.format_match_short(m))
+
+        await message.reply("\n".join(lines))
+    except Exception as e:
+        logger.error(f"Matches error: {e}")
+        await message.reply("Закури не смог получить матчи 😔")
+    finally:
+        await api.close()
+
+
+@router.message(Command("live"), IsGroupChat())
+@router.message(Command("live"), IsPrivateChat())
+async def cmd_live(message: Message):
+    from src.football_api import FootballAPI
+    api = FootballAPI('sjzgn3bbco67pk8j')
+
+    try:
+        matches = await api.get_live_matches()
+        if not matches:
+            await message.reply("🔴 Сейчас нет live матчей")
+            await api.close()
+            return
+
+        lines = ["🔴 LIVE матчи:\n"]
+        for m in matches[:15]:
+            lines.append(api.format_match_short(m))
+
+        await message.reply("\n".join(lines))
+    except Exception as e:
+        logger.error(f"Live error: {e}")
+        await message.reply("Закури не смог получить live 😔")
+    finally:
+        await api.close()
+
+
+@router.message(Command("predict"), IsGroupChat())
+@router.message(Command("predict"), IsPrivateChat())
+async def cmd_predict(message: Message, ai_manager):
+    from src.football_api import FootballAPI
+    api = FootballAPI('sjzgn3bbco67pk8j')
+
+    try:
+        matches = await api.get_today_matches()
+        upcoming = await api.get_upcoming_matches(limit=5)
+        all_matches = matches + upcoming
+
+        if not all_matches:
+            await message.reply("Нет матчей для прогноза 🤷")
+            await api.close()
+            return
+
+        status_msg = await message.reply("🔮 Закури анализирует матчи...")
+
+        match_data = []
+        for m in all_matches[:5]:
+            home = m.get("homeTeamName") or m.get("homeTeam", {}).get("name", "?")
+            away = m.get("awayTeamName") or m.get("awayTeam", {}).get("name", "?")
+            w1 = m.get("winner1", 0)
+            wx = m.get("winnerX", 0)
+            w2 = m.get("winner2", 0)
+            game_id = m.get("id", 0)
+
+            prediction = await api.get_match_prediction(game_id)
+            glicko = ""
+            if prediction:
+                p1 = prediction.get("p1", 0) or 0
+                px = prediction.get("px", 0) or 0
+                p2 = prediction.get("p2", 0) or 0
+                glicko = f" | Glicko: П1={p1:.0%} X={px:.0%} П2={p2:.0%}"
+
+            match_data.append(f"⚽ {home} — {away} | Кеф: {w1}/{wx}/{w2}{glicko}")
+
+        context = "\n".join(match_data)
+        response = await ai_manager.chat_completion(
+            messages=[
+                {
+                    "role": "system",
+                    "content": (
+                        "Ты дракон Закури — футбольный эксперт и лудоман. "
+                        "Дай прогноз на эти матчи. Уверенно, кратко. "
+                        "Для каждого матча: кто победит и почему, + рекомендация по ставке. "
+                        "Ты фанат Аргентины. 3-5 предложений всего."
+                    ),
+                },
+                {"role": "user", "content": f"Матчи:\n{context}"},
+            ],
+            temperature=0.7,
+            max_tokens=400,
+        )
+
+        await status_msg.edit_text(f"🔮 <b>Прогноз Закури</b>\n\n{response}")
+    except Exception as e:
+        logger.error(f"Predict error: {e}")
+        await message.reply("Закури не смог дать прогноз 😔")
+    finally:
+        await api.close()
+
+
+@router.message(Command("table"), IsGroupChat())
+@router.message(Command("table"), IsPrivateChat())
+async def cmd_table(message: Message):
+    from src.football_api import FootballAPI
+    api = FootballAPI('sjzgn3bbco67pk8j')
+
+    try:
+        args = (message.text or "").replace("/table", "", 1).strip().lower()
+
+        league_id = 0
+        if "wc" in args or "чм" in args or "world" in args:
+            league = await api.find_league("World Cup")
+            if league:
+                league_id = league.get("id", 0)
+        elif "apl" in args or "epl" in args or "premier" in args:
+            league = await api.find_league("Premier League")
+            if league:
+                league_id = league.get("id", 0)
+
+        if not league_id:
+            leagues = await api.get_leagues()
+            for l in leagues[:5]:
+                if "world" in (l.get("name") or "").lower() or "чм" in (l.get("name") or "").lower():
+                    league_id = l.get("id", 0)
+                    break
+
+        if not league_id:
+            await message.reply("Укажи лигу: /table wc (ЧМ) или /table apl (АПЛ)")
+            await api.close()
+            return
+
+        standings = await api.get_standings(league_id, 2026)
+        if not standings:
+            await message.reply("Таблица не найдена 🤷")
+            await api.close()
+            return
+
+        lines = ["📊 <b>Турнирная таблица</b>\n"]
+        for i, t in enumerate(standings[:15], 1):
+            name = t.get("teamName", "?")
+            pts = t.get("points", 0)
+            w = t.get("wins", 0)
+            d = t.get("draws", 0)
+            l = t.get("loss", 0)
+            gs = t.get("goalsScored", 0)
+            gm = t.get("goalsMissed", 0)
+            lines.append(f"{i}. {name} — {pts} очк ({w}В {d}Н {l}П) {gs}:{gm}")
+
+        await message.reply("\n".join(lines))
+    except Exception as e:
+        logger.error(f"Table error: {e}")
+        await message.reply("Закури не смог получить таблицу 😔")
+    finally:
+        await api.close()
+
+
+@router.message(Command("bets"), IsGroupChat())
+@router.message(Command("bets"), IsPrivateChat())
+async def cmd_bets(message: Message, db):
+    from src.betting import BettingManager, FootballAPI
+    api = FootballAPI('sjzgn3bbco67pk8j')
+    betting = BettingManager(db, api)
+
+    try:
+        stats = await betting.get_stats(message.chat.id)
+        await message.reply(stats)
+    except Exception as e:
+        logger.error(f"Bets error: {e}")
+        await message.reply("Закури не помнит свои ставки... 😔")
+    finally:
+        await api.close()
+
+
+@router.message(Command("balance"), IsGroupChat())
+@router.message(Command("balance"), IsPrivateChat())
+async def cmd_balance(message: Message, db):
+    try:
+        bal = await db.get_balance(message.chat.id)
+        text = f"💰 <b>Баланс Закури</b>\n\nБаланс: {bal['balance']:.0f} монет"
+        if bal['credit'] > 0:
+            text += f"\n💳 Долг: {bal['credit']:.0f} монет"
+        await message.reply(text)
+    except Exception as e:
+        logger.error(f"Balance error: {e}")
