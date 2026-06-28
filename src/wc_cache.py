@@ -48,6 +48,22 @@ async def fetch_all_wc_data(api: FootballAPI) -> dict:
         sc_a = m.get("awayResult", 0)
         date = (m.get("date") or "")[:19]
 
+        match_info = await _parse_match_details(m, details, all_events, all_scorers, all_assists, all_cards, all_players)
+        all_match_details.append(match_info)
+
+    # ── Live матчи с деталями ──
+    live_details = []
+    for m in live:
+        game_id = m.get("id")
+        if not game_id:
+            continue
+        details = await api.get_match_details(game_id)
+        if not details:
+            continue
+        match_info = await _parse_match_details(m, details, all_events, all_scorers, all_assists, all_cards, all_players)
+        match_info["is_live"] = True
+        live_details.append(match_info)
+
         match_info = {
             "id": game_id,
             "home": home_name,
@@ -237,6 +253,7 @@ async def fetch_all_wc_data(api: FootballAPI) -> dict:
         "top_assists": sorted(all_assists.items(), key=lambda x: x[1], reverse=True)[:20],
         "cards": all_cards,
         "players": all_players,
+        "live_matches": live_details,
     }
 
     # ── Сохраняем в файлы ──
@@ -470,11 +487,29 @@ def search_wc_data(query: str, data: dict) -> str:
             lines = [f"  {m['home']} — {m['away']} ({m['date'][:16]})" for m in upcoming[:10]]
             parts.append(f"### Предстоящие матчи:\n" + "\n".join(lines))
 
-    # ── Live ──
+    # ── Live (с деталями) ──
     live = data.get("live_matches", [])
     if live:
-        lines = [f"  🔴 {m['home']} {m['score']} {m['away']} (сейчас)" for m in live]
-        parts.append(f"### Live:\n" + "\n".join(lines))
+        live_lines = []
+        for m in live:
+            live_lines.append(f"  🔴 {m['home']} {m['score']} {m['away']} (идёт сейчас)")
+            if m.get("events"):
+                for ev in m["events"]:
+                    if "goal" in ev["type"] or "гол" in ev["type"]:
+                        live_lines.append(f"    ⚽ Гол: {ev['player']} ({ev['minute']}')")
+                    elif "red" in ev["type"] or "красн" in ev["type"]:
+                        live_lines.append(f"    🟥 Красная: {ev['player']} ({ev['minute']}')")
+            if m.get("lineups"):
+                for lineup in m["lineups"][:2]:
+                    starters = [p["name"] for p in lineup["players"] if not p.get("sub")][:11]
+                    if starters:
+                        live_lines.append(f"    Состав {lineup['team']}: {', '.join(starters)}")
+        parts.append(f"### Live матчи:\n" + "\n".join(live_lines))
+
+    # Всегда показываем live если есть (даже без вопроса про live)
+    if live and not any("Live" in p for p in parts):
+        live_lines = [f"  🔴 {m['home']} {m['score']} {m['away']} (сейчас)" for m in live]
+        parts.append(f"### Live матчи:\n" + "\n".join(live_lines))
 
     # ── Ставки ──
     if any(kw in query_lower for kw in ["ставк", "баланс", "выиграл", "проиграл", "поставил", "юаней", "bet"]):

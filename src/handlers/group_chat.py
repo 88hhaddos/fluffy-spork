@@ -16,6 +16,10 @@ logger = logging.getLogger(__name__)
 
 router = Router(name="group_chat")
 
+# ── Football context lifecycle: load on question, unload after 20 messages ──
+_football_context_cache: dict[int, dict] = {}  # chat_id -> {"context": str, "counter": int}
+FOOTBALL_CONTEXT_TTL = 20  # unload after 20 bot messages
+
 THINKING_MESSAGES = [
     "💭 Закури думает...",
     "🤔 М-м-м, дай-ка подумаю...",
@@ -622,21 +626,48 @@ def _is_football_question(text: str) -> bool:
     return any(kw in text_lower for kw in FOOTBALL_KEYWORDS)
 
 
-async def _get_football_context(text: str, db) -> str:
-    """Получает релевантные данные ЧМ из локального кэша."""
+async def _get_football_context(text: str, db, chat_id: int = 0) -> str:
+    """Получает релевантные данные ЧМ из локального кэша.
+    Загружается при футбольном вопросе, выгружается спустя 20 сообщений бота.
+    """
     if not _is_football_question(text):
+        # Проверяем — может контекст уже загружен и ещё активен
+        if chat_id and chat_id in _football_context_cache:
+            return _football_context_cache[chat_id]["context"]
         return ""
 
+    # Футбольный вопрос — загружаем/обновляем контекст
     try:
         from src.wc_cache import load_wc_data, search_wc_data
         data = load_wc_data()
         if not data:
             return ""
-        result = search_wc_data(text, data)
-        return result
+
+        # Ищем релевантные данные по запросу
+        relevant = search_wc_data(text, data)
+
+        # Если нашли — загружаем в кэш
+        if relevant:
+            _football_context_cache[chat_id] = {"context": relevant, "counter": 0}
+            return relevant
+
+        # Если не нашли конкретное — отдаём общий контекст если загружен
+        if chat_id in _football_context_cache:
+            return _football_context_cache[chat_id]["context"]
+
+        return relevant
     except Exception as e:
         logger.error(f"Football context error: {e}")
         return ""
+
+
+def _tick_football_context(chat_id: int):
+    """Увеличивает счётчик и выгружает контекст после FOOTBALL_CONTEXT_TTL сообщений."""
+    if chat_id in _football_context_cache:
+        _football_context_cache[chat_id]["counter"] += 1
+        if _football_context_cache[chat_id]["counter"] >= FOOTBALL_CONTEXT_TTL:
+            del _football_context_cache[chat_id]
+            logger.info(f"Football context unloaded for chat {chat_id} (after {FOOTBALL_CONTEXT_TTL} messages)")
 
 
 async def _generate_and_send_response(
@@ -684,7 +715,7 @@ async def _generate_and_send_response(
         status_msg = await message.reply(random.choice(THINKING_MESSAGES))
 
         msg_text = message.text or message.caption or ""
-        football_context = await _get_football_context(msg_text, db)
+        football_context = await _get_football_context(msg_text, db, message.chat.id)
         if football_context:
             logger.info(f"Football context loaded for: {msg_text[:50]}")
 
@@ -744,6 +775,8 @@ async def _generate_and_send_response(
             text=response[:4096],
             message_id=status_msg.message_id,
         )
+
+        _tick_football_context(message.chat.id)
 
         await context_manager.maybe_summarize(message.chat.id)
 
