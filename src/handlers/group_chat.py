@@ -255,6 +255,7 @@ async def cmd_help(message: Message):
         "  /predict — прогноз Закури на матчи 🔮\n"
         "  /table wc — таблица ЧМ 📊\n"
         "  /results — недавние результаты 📋\n"
+        "  /news — футбольные новости 📰\n"
         "  /bets — ставки Закури 🎰\n"
         "  /balance — баланс Закури 💰\n\n"
         "Админ-команды:\n"

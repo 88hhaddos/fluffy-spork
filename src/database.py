@@ -151,6 +151,8 @@ class Database:
             "betting_chat_id": "0",
             "betting_sleep_start": "23",
             "betting_sleep_end": "9",
+            "news_channel": "footballearn",
+            "news_enabled": "0",
             "global_context_size": "50",
             "auto_respond_frequency": "10",
             "max_context_tokens": "8000",

@@ -185,7 +185,7 @@ async def cmd_dice(message: Message):
 @router.message(Command("coin"), IsPrivateChat())
 async def cmd_coin(message: Message):
     result = random.choice(["Орёл 🦅", "Решка 🪙"])
-    await message.reply(f"Закури подбросил монетку: {result}!")
+    await message.reply(f"Закури подбросил юанейку: {result}!")
 
 
 @router.message(Command("8ball"), IsGroupChat())
@@ -872,9 +872,9 @@ async def cmd_bets(message: Message, db):
 async def cmd_balance(message: Message, db):
     try:
         bal = await db.get_balance(message.chat.id)
-        text = f"💰 <b>Баланс Закури</b>\n\nБаланс: {bal['balance']:.0f} монет"
+        text = f"💰 <b>Баланс Закури</b>\n\nБаланс: {bal['balance']:.0f} юаней"
         if bal['credit'] > 0:
-            text += f"\n💳 Долг: {bal['credit']:.0f} монет"
+            text += f"\n💳 Долг: {bal['credit']:.0f} юаней"
         await message.reply(text)
     except Exception as e:
         logger.error(f"Balance error: {e}")
@@ -907,3 +907,31 @@ async def cmd_results(message: Message):
         await message.reply("Закури не смог получить результаты 😔")
     finally:
         await api.close()
+
+
+@router.message(Command("news"), IsGroupChat())
+@router.message(Command("news"), IsPrivateChat())
+async def cmd_news(message: Message, ai_manager, db):
+    from src.news import get_football_news, get_news_summary
+
+    status_msg = await message.reply("📰 Закури читает новости...")
+
+    channel = await db.get_setting("news_channel") or "footballearn"
+
+    try:
+        posts = await get_football_news(channel)
+        if not posts:
+            await status_msg.edit_text("Закури не нашёл свежие новости 😔")
+            return
+
+        summary = await get_news_summary(posts, ai_manager)
+        if summary:
+            await status_msg.edit_text(f"📰 <b>Футбольные новости от Закури</b>\n\n{summary}")
+        else:
+            await status_msg.edit_text("Закури не смог обработать новости 😔")
+    except Exception as e:
+        logger.error(f"News error: {e}")
+        try:
+            await status_msg.edit_text("Закури не смог получить новости 😔")
+        except Exception:
+            pass

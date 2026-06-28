@@ -223,7 +223,7 @@ class BettingManager:
                         "content": (
                             f"Моя ставка ({bet['bet_type']}):\n{selections_text}\n"
                             f"Коэффициент: {bet['total_odds']}\n"
-                            f"Ставлю: {bet['stake']} монет"
+                            f"Ставлю: {bet['stake']} юаней"
                         ),
                     },
                 ],
@@ -251,12 +251,12 @@ class BettingManager:
             lines.append(f"{i}️⃣ {s['home']} — {s['away']}: {s['pick']} ({s['odds']})")
 
         lines.append(f"\n💰 Общий коэффициент: {bet['total_odds']}")
-        lines.append(f"💸 Сумма: {bet['stake']} монет")
-        lines.append(f"🎯 Возможный выигрыш: {bet['potential']:.0f} монет")
-        lines.append(f"💳 Баланс после: {bet['balance_after']:.0f} монет")
+        lines.append(f"💸 Сумма: {bet['stake']} юаней")
+        lines.append(f"🎯 Возможный выигрыш: {bet['potential']:.0f} юаней")
+        lines.append(f"💳 Баланс после: {bet['balance_after']:.0f} юаней")
 
         if bet.get("is_credit"):
-            lines.append("💳 Ставка на кредитные монеты — Закури в долг! 🔥")
+            lines.append("💳 Ставка на кредитные юанейы — Закури в долг! 🔥")
 
         if bet["bet_type"] == "express" and bet["num_matches"] >= 5:
             lines.append("\n🐉 ЖЕСТКИЙ ЭКСПРЕСС! Кто не рискует — тот не пьёт шампанское! 🔥")
@@ -383,19 +383,19 @@ class BettingManager:
             lines = []
             for s in selections:
                 lines.append(f"✅ {s['home']} — {s['away']}: {s['pick']} — зашло!")
-            lines.append(f"\n💰 Выигрыш: +{profit:.0f} монет")
+            lines.append(f"\n💰 Выигрыш: +{profit:.0f} юаней")
             lines.append(f"💸 Коэффициент: {bet['odds']}")
-            lines.append(f"💰 Баланс: {bal['balance']:.0f} монет")
+            lines.append(f"💰 Баланс: {bal['balance']:.0f} юаней")
             lines.append("\n🐉 Закури опять прав! Кто сомневался — тот лох! 🔥")
         else:
             header = "❌ ЗАКУРИ ПРОИГРАЛ СТАВКУ!\n\n"
             lines = []
             for s in selections:
                 lines.append(f"❌ {s['home']} — {s['away']}: {s['pick']} — не зашло")
-            lines.append(f"\n💸 Потеря: -{bet['stake']:.0f} монет")
-            lines.append(f"💰 Баланс: {bal['balance']:.0f} монет")
+            lines.append(f"\n💸 Потеря: -{bet['stake']:.0f} юаней")
+            lines.append(f"💰 Баланс: {bal['balance']:.0f} юаней")
             if bal["credit"] > 0:
-                lines.append(f"💳 Долг: {bal['credit']:.0f} монет")
+                lines.append(f"💳 Долг: {bal['credit']:.0f} юаней")
             lines.append("\n🐉 Ну бывает... Закури не унывает! Следующая ставка будет верной! 💪")
 
         return header + "\n".join(lines)
@@ -412,12 +412,12 @@ class BettingManager:
 
         lines = [
             f"🎰 <b>Статистика Закури-лудомана</b>\n",
-            f"💰 Баланс: {bal['balance']:.0f} монет",
+            f"💰 Баланс: {bal['balance']:.0f} юаней",
         ]
         if bal["credit"] > 0:
-            lines.append(f"💳 Долг: {bal['credit']:.0f} монет")
+            lines.append(f"💳 Долг: {bal['credit']:.0f} юаней")
         lines.extend([
-            f"📈 Прибыль/убыток: {profit:+.0f} монет",
+            f"📈 Прибыль/убыток: {profit:+.0f} юаней",
             f"📊 Всего ставок: {total}",
             f"✅ Выиграно: {won}",
             f"❌ Проиграно: {total - won}",
