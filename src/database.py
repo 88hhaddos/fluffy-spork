@@ -347,20 +347,35 @@ class Database:
     # ─── User Bans ───
 
     async def ban_user(self, user_id: int, username: str = "", banned_by: int = 0, reason: str = ""):
+        existing = await self.conn.execute(
+            "SELECT warnings FROM user_bans WHERE user_id = ?", (user_id,)
+        )
+        row = await existing.fetchone()
+        warnings = row[0] if row else 0
+
         await self.conn.execute(
-            "INSERT OR REPLACE INTO user_bans (user_id, username, banned_by, reason, banned_at) "
-            "VALUES (?, ?, ?, ?, CURRENT_TIMESTAMP)",
-            (user_id, username, banned_by, reason),
+            "INSERT OR REPLACE INTO user_bans (user_id, username, banned_by, reason, warnings, banned_at) "
+            "VALUES (?, ?, ?, ?, ?, CURRENT_TIMESTAMP)",
+            (user_id, username, banned_by, reason, warnings),
         )
         await self.conn.commit()
 
     async def unban_user(self, user_id: int):
-        await self.conn.execute("DELETE FROM user_bans WHERE user_id = ?", (user_id,))
+        await self.conn.execute(
+            "UPDATE user_bans SET reason = NULL, banned_by = NULL, banned_at = NULL WHERE user_id = ?",
+            (user_id,),
+        )
         await self.conn.commit()
 
     async def is_banned(self, user_id: int) -> bool:
-        cur = await self.conn.execute("SELECT 1 FROM user_bans WHERE user_id = ?", (user_id,))
-        return await cur.fetchone() is not None
+        cur = await self.conn.execute(
+            "SELECT reason FROM user_bans WHERE user_id = ?", (user_id,)
+        )
+        row = await cur.fetchone()
+        if not row:
+            return False
+        reason = row[0] if row else ""
+        return reason is not None and reason != ""
 
     async def get_banned_users(self) -> list[dict]:
         cur = await self.conn.execute("SELECT * FROM user_bans ORDER BY banned_at DESC")
