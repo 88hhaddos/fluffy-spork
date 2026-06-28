@@ -640,6 +640,20 @@ async def _get_football_context(text: str, db, chat_id: int = 0) -> str:
     try:
         from src.wc_cache import load_wc_data, search_wc_data
         data = load_wc_data()
+
+        if not data:
+            # Кэш пуст — пробуем загрузить прямо сейчас
+            try:
+                from src.wc_cache import fetch_all_wc_data
+                from src.football_api import FootballAPI
+                api = FootballAPI('sjzgn3bbco67pk8j')
+                logger.info("WC cache empty, fetching on demand...")
+                await fetch_all_wc_data(api)
+                await api.close()
+                data = load_wc_data()
+            except Exception as e:
+                logger.error(f"WC on-demand fetch error: {e}")
+
         if not data:
             return ""
 
