@@ -629,6 +629,74 @@ async def handle_private_message(
     await _generate_and_send_response(message, db, ai_manager, context_manager, bot)
 
 
+def _filter_ai_thoughts(text: str) -> str:
+    """Удаляет внутренние мысли AI (chain-of-thought) из ответа."""
+    if not text:
+        return text
+
+    # Если текст содержит типичные признаки размышлений AI
+    leak_markers = [
+        "The user ", "Let me ", "I should ", "I need to ", "I think ",
+        "But wait", "However,", "So I should", "Let me respond",
+        "Hmm, but", "Actually,", "Looking at", "I'll ",
+        "The current topic", "The mood setting", "The user is asking",
+        "Let me check", "So the", "This is", "I must",
+        "I can still", "Let me try", "I'll be",
+    ]
+
+    # Если текст начинается с размышлений — отрезаем до первой "настоящей" реплики
+    lines = text.split("\n")
+    clean_lines = []
+    in_thoughts = True
+
+    for line in lines:
+        line_stripped = line.strip()
+
+        # Пустые строки пропускаем
+        if not line_stripped:
+            if not in_thoughts:
+                clean_lines.append(line)
+            continue
+
+        # Если всё ещё в зоне размышлений
+        if in_thoughts:
+            # Проверяем — это размышление или реальный ответ?
+            is_thought = any(line_stripped.startswith(m) or line_stripped.lower().startswith(m.lower()) for m in leak_markers)
+
+            if is_thought:
+                continue  # пропускаем строку размышлений
+            else:
+                # Это реальный ответ — выходим из зоны размышлений
+                in_thoughts = False
+                clean_lines.append(line)
+        else:
+            clean_lines.append(line)
+
+    result = "\n".join(clean_lines).strip()
+
+    # Если после фильтрации ничего не осталось — возвращаем оригинал
+    if not result or len(result) < 5:
+        return text.strip()
+
+    # Дополнительная проверка — если больше 50% текста на английском и это выглядит как размышления
+    if len(result) > 200:
+        english_chars = sum(1 for c in result if c.isalpha() and ord(c) < 128)
+        total_chars = sum(1 for c in result if c.isalpha())
+        if total_chars > 0 and english_chars / total_chars > 0.7:
+            # Скорее всего утёк английский chain-of-thought
+            # Ищем русский текст в конце
+            russian_start = -1
+            for i, line in enumerate(lines):
+                cyrillic = sum(1 for c in line if '\u0400' <= c <= '\u04ff')
+                if cyrillic > 3:
+                    russian_start = i
+                    break
+            if russian_start >= 0:
+                result = "\n".join(lines[russian_start:]).strip()
+
+    return result[:4096]
+
+
 async def _extract_photo_idea_from_bot_message(bot_text: str, ai_manager) -> str:
     """Извлекает идею для фото из сообщения бота где он предложил нарисовать."""
     try:
@@ -880,6 +948,9 @@ async def _generate_and_send_response(
 
         if not response or not response.strip():
             response = "Хм, Закури задумался. Спроси ещё раз."
+
+        # Фильтруем внутренние мысли AI (chain-of-thought leak)
+        response = _filter_ai_thoughts(response)
 
         await bot.send_chat_action(chat_id=message.chat.id, action=ChatAction.TYPING)
         try:
