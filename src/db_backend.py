@@ -197,11 +197,19 @@ class AsyncCursor:
 
 
 class AsyncConn:
-    """Async DB-agnostic connection wrapper."""
+    """Async DB-agnostic connection wrapper.
+
+    For PostgreSQL: uses a pool internally — each execute acquires a fresh connection.
+    For SQLite: uses the single connection (SQLite handles concurrent access via WAL).
+    """
 
     def __init__(self, raw, backend: str):
         self._raw = raw
         self.backend = backend
+        self._pool = None
+
+    def set_pool(self, pool):
+        self._pool = pool
 
     async def execute(self, sql: str, params: Optional[Sequence[Any]] = None) -> AsyncCursor:
         sql_t = translate_sql(sql)
@@ -209,10 +217,18 @@ class AsyncConn:
             sql_t = translate_schema(sql_t)
 
         if self.backend == "postgres":
-            if params:
-                rows = await self._raw.fetch(sql_t, *params)
+            # Use pool if available, otherwise raw connection
+            if self._pool:
+                async with self._pool.acquire() as conn:
+                    if params:
+                        rows = await conn.fetch(sql_t, *params)
+                    else:
+                        rows = await conn.fetch(sql_t)
             else:
-                rows = await self._raw.fetch(sql_t)
+                if params:
+                    rows = await self._raw.fetch(sql_t, *params)
+                else:
+                    rows = await self._raw.fetch(sql_t)
             cur = AsyncCursor(_PgResultProxy(rows), "postgres")
             return cur
         else:
@@ -222,10 +238,17 @@ class AsyncConn:
     async def executescript(self, ddl: str) -> None:
         ddl_t = translate_schema(ddl)
         if self.backend == "postgres":
-            for stmt in _split_sql(ddl_t):
-                stmt = stmt.strip()
-                if stmt:
-                    await self._raw.execute(stmt)
+            if self._pool:
+                async with self._pool.acquire() as conn:
+                    for stmt in _split_sql(ddl_t):
+                        stmt = stmt.strip()
+                        if stmt:
+                            await conn.execute(stmt)
+            else:
+                for stmt in _split_sql(ddl_t):
+                    stmt = stmt.strip()
+                    if stmt:
+                        await self._raw.execute(stmt)
         else:
             await self._raw.executescript(ddl_t)
 
@@ -235,7 +258,11 @@ class AsyncConn:
 
     async def close(self) -> None:
         if self.backend == "postgres":
-            await self._raw.close()
+            if self._pool:
+                await self._pool.close()
+                self._pool = None
+            else:
+                await self._raw.close()
         else:
             await self._raw.close()
 
@@ -345,6 +372,33 @@ def _split_sql(sql: str) -> list[str]:
     return statements
 
 
+_pg_pool = None
+
+
+async def _get_pg_conn():
+    """Acquire a connection from pool (PostgreSQL)."""
+    global _pg_pool
+    if _pg_pool is None or _pg_pool._closed:
+        url = os.getenv("DATABASE_URL", DATABASE_URL).strip()
+        if url.startswith("postgres://"):
+            url = "postgresql://" + url[len("postgres://"):]
+        _pg_pool = await _asyncpg.create_pool(
+            url,
+            min_size=2,
+            max_size=10,
+            command_timeout=30,
+        )
+        logger.info("PostgreSQL pool создан (2-10 connections)")
+    return await _pg_pool.acquire()
+
+
+async def _release_pg_conn(conn):
+    """Release connection back to pool."""
+    global _pg_pool
+    if _pg_pool and conn:
+        await _pg_pool.release(conn)
+
+
 # ── Public connect() ─────────────────────────────────────────────────────────
 
 async def connect() -> AsyncConn:
@@ -353,9 +407,21 @@ async def connect() -> AsyncConn:
         url = os.getenv("DATABASE_URL", DATABASE_URL).strip()
         if url.startswith("postgres://"):
             url = "postgresql://" + url[len("postgres://"):]
+
+        global _pg_pool
+        _pg_pool = await _asyncpg.create_pool(
+            url,
+            min_size=2,
+            max_size=10,
+            command_timeout=30,
+        )
+        logger.info("PostgreSQL pool создан (2-10 connections)")
+
+        # Create a dummy connection for compatibility (init queries)
         raw = await _asyncpg.connect(url)
-        logger.info("Подключение к PostgreSQL установлено")
-        return AsyncConn(raw, "postgres")
+        conn = AsyncConn(raw, "postgres")
+        conn.set_pool(_pg_pool)
+        return conn
 
     db_path = os.getenv("DB_PATH", DB_PATH)
     raw = await aiosqlite.connect(db_path)
