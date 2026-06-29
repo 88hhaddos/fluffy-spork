@@ -528,12 +528,12 @@ async def handle_group_message(
                 if bet:
                     intro = await betting.generate_intro_message(bet)
                     msg = betting.format_bet_message(bet, intro)
-                    await message.reply(msg)
+                    await message.answer(msg)
                 else:
-                    await message.reply("Закури не нашёл матчи для ставки прямо сейчас 🤷")
+                    await message.answer("Закури не нашёл матчи для ставки прямо сейчас 🤷")
             except Exception as e:
                 logger.error(f"Bet request error: {e}")
-                await message.reply(f"Закури не смог собрать ставку: {str(e)[:100]}")
+                await message.answer(f"Закури не смог собрать ставку: {str(e)[:100]}")
             finally:
                 await bet_api2.close()
             return
