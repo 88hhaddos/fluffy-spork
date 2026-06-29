@@ -861,10 +861,41 @@ async def cmd_bets(message: Message, db):
 
     try:
         stats = await betting.get_stats(message.chat.id)
+
+        # Добавляем юзерские ставки
+        user_bets = await db.get_user_bets(message.from_user.id, limit=10)
+        pending_user = await db.get_pending_user_bets(message.chat.id)
+        user_pending = [b for b in pending_user if b["user_id"] == message.from_user.id]
+
+        if user_bets or user_pending:
+            stats += f"\n\n👤 <b>Твои ставки через Закури:</b>"
+            if user_pending:
+                stats += f"\n⏳ Ожидают результата: {len(user_pending)}"
+                for b in user_pending[:5]:
+                    stats += f"\n  ⏳ {b['match_info']}: {b['bet_on']} — {b['amount']:.0f} юаней @ {b['odds']}"
+
+            if user_bets:
+                stats += "\n📋 Последние:"
+                for b in user_bets[:5]:
+                    if b["status"] == "pending":
+                        emoji = "⏳"
+                    elif b["status"] == "won":
+                        emoji = "✅"
+                    else:
+                        emoji = "❌"
+                    stats += f"\n  {emoji} {b['match_info']}: {b['bet_on']} — {b['amount']:.0f} @ {b['odds']} → {b['status']}"
+
+            user_stats = await db.get_user_bet_stats(message.from_user.id)
+            if user_stats["total"] > 0:
+                stats += f"\n\n📊 Твоя статистика:"
+                stats += f"\n  Всего: {user_stats['total']}, Выиграно: {user_stats['wins']}, Проиграно: {user_stats['losses']}"
+                profit = user_stats.get("profit", 0) or 0
+                stats += f"\n  Прибыль: {profit:+.0f} юаней"
+
         await message.reply(stats)
     except Exception as e:
         logger.error(f"Bets error: {e}")
-        await message.reply("Закури не помнит свои ставки... 😔")
+        await message.reply("Закури не помнит ставки... 😔")
     finally:
         await api.close()
 
