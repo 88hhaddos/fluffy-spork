@@ -332,6 +332,10 @@ class FootballAPI:
                 "league": (info.get("tournament") or {}).get("name", ""),
                 "homeResult": info.get("homeScore", 0) or 0,
                 "awayResult": info.get("awayScore", 0) or 0,
+                "homeScoreHT": info.get("homeScoreHT", 0) or 0,
+                "awayScoreHT": info.get("awayScoreHT", 0) or 0,
+                "liveSeconds": info.get("liveSeconds", 0) or 0,
+                "liveAddedTime": info.get("liveAddedTime", 0) or 0,
             }
 
             for o in odds_list:

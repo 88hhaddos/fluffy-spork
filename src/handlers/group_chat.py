@@ -884,7 +884,16 @@ async def _get_football_context(text: str, db, chat_id: int = 0) -> str:
                 away = m["awayTeam"]["name"]
                 score_h = m.get("homeResult", 0) or 0
                 score_a = m.get("awayResult", 0) or 0
-                live_lines.append(f"  🔴 LIVE: {home} {score_h}:{score_a} {away}")
+                live_secs = m.get("liveSeconds", 0) or 0
+                minute = live_secs // 60 if live_secs else 0
+                added = m.get("liveAddedTime", 0) or 0
+                ht_h = m.get("homeScoreHT", 0) or 0
+                ht_a = m.get("awayScoreHT", 0) or 0
+                minute_str = f" {minute}'" if minute else ""
+                if added:
+                    minute_str = f" {minute}+{added}'"
+                ht_str = f" (1-й тайм: {ht_h}:{ht_a})" if ht_h or ht_a else ""
+                live_lines.append(f"  🔴 LIVE: {home} {score_h}:{score_a} {away}{minute_str}{ht_str}")
         except Exception as e:
             logger.error(f"Live matches fetch error: {e}")
 
@@ -1013,7 +1022,16 @@ async def _generate_and_send_response(
                     away = m["awayTeam"]["name"]
                     score_h = m.get("homeResult", 0) or 0
                     score_a = m.get("awayResult", 0) or 0
-                    lines.append(f"  🔴 LIVE: {home} {score_h}:{score_a} {away}")
+                    live_secs = m.get("liveSeconds", 0) or 0
+                    minute = live_secs // 60 if live_secs else 0
+                    added = m.get("liveAddedTime", 0) or 0
+                    ht_h = m.get("homeScoreHT", 0) or 0
+                    ht_a = m.get("awayScoreHT", 0) or 0
+                    minute_str = f" {minute}'" if minute else ""
+                    if added:
+                        minute_str = f" {minute}+{added}'"
+                    ht_str = f" (1-й тайм: {ht_h}:{ht_a})" if ht_h or ht_a else ""
+                    lines.append(f"  🔴 LIVE: {home} {score_h}:{score_a} {away}{minute_str}{ht_str}")
 
                 wc_upcoming = [m for m in pari_matches if "WC 2026" in (m.get("league") or "").upper()]
                 for m in wc_upcoming[:15]:
