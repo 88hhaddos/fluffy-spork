@@ -760,9 +760,17 @@ async def _generate_and_send_response(
             "закури милый", "закури добрый", "классный", "закури классный",
         ]
 
+        THREAT_WORDS = [
+            "забаню", "забанить", "удалю", "удалить тебя", "бан", "кикну", "кикнуть",
+            "выганю", "выгоню", "просто удалили", "тебя удалю", "тебя забаню",
+            "быстро сказал", "быстро говори", "или я тебя", "или забаню", "или удалю",
+            "заткнись", "замолчи", "заткнулся", "заткни", "молчи",
+        ]
+
         if user_id:
             insult_detected = any(w in text_lower for w in INSULT_WORDS)
             compliment_detected = any(w in text_lower for w in COMPLIMENT_WORDS)
+            threat_detected = any(w in text_lower for w in THREAT_WORDS)
 
             if insult_detected:
                 new_rel = await db.adjust_relationship(user_id, username, -15)
@@ -770,6 +778,29 @@ async def _generate_and_send_response(
             elif compliment_detected:
                 new_rel = await db.adjust_relationship(user_id, username, +10)
                 logger.info(f"Relationship {username}: +10 → {new_rel}/100 (compliment)")
+
+            if threat_detected:
+                new_rel = await db.adjust_relationship(user_id, username, -25)
+                warnings = await db.add_warning(user_id, username)
+                logger.info(f"Relationship {username}: -25 → {new_rel}/100 (threat), warnings: {warnings}")
+                
+                if warnings >= 5:
+                    await db.ban_user(user_id, username, reason="5 предупреждений за угрозы боту")
+                    await message.reply(
+                        f"🚫 {username} получил 5 предупреждений за угрозы! Закури забанил тебя! 🔥"
+                    )
+                    return
+                elif warnings >= 3:
+                    await message.reply(
+                        f"⚠️ {username}, ещё {5 - warnings} предупреждений и ты в бане! "
+                        f"Не угрожай Закури — он дракон, а не игрушка! 🔥"
+                    )
+                else:
+                    await message.reply(
+                        f"⚠️ Закури не запугаешь угрозами! "
+                        f"Предупреждение {warnings}/5. Ещё немного и ты в бане, {username}! 🔥"
+                    )
+                return
 
         status_msg = await message.reply(random.choice(THINKING_MESSAGES))
 
