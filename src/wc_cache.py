@@ -226,29 +226,31 @@ async def fetch_all_wc_data(api: FootballAPI) -> dict:
         }
 
         for ev in details.get("events", []):
-            ev_type = str(ev.get("type") or "").lower()
-            player = str(ev.get("player") or ev.get("text") or "")
-            if isinstance(player, dict):
-                player = player.get("name", str(player))
-            live_match["events"].append({
-                "type": ev_type,
-                "player": player,
-                "minute": ev.get("minute", "?"),
-            })
+            ev_type_num = ev.get("type", 0)
+            ev_name = str(ev.get("name") or "").lower()
+            player_obj = ev.get("player")
+            player_name = player_obj.get("name", "?") if isinstance(player_obj, dict) else str(player_obj or "?")
+            minute = ev.get("elapsed", "?")
+            if ev_type_num == 1:
+                ev_type = "goal"
+            elif ev_type_num == 2 and "red" in ev_name:
+                ev_type = "red card"
+            elif ev_type_num == 2:
+                ev_type = "yellow card"
+            else:
+                ev_type = ev_name
+            live_match["events"].append({"type": ev_type, "player": player_name, "minute": minute})
 
-        for lineup in details.get("lineups", []):
-            team_name = (lineup.get("team") or {}).get("name", "?")
-            players_list = []
-            for p in lineup.get("players", []):
-                p_name = str(p.get("name", "?"))
-                if isinstance(p_name, dict):
-                    p_name = p_name.get("name", str(p_name))
-                players_list.append({
-                    "name": p_name,
-                    "sub": p.get("isSubstitute", False),
-                    "minutes": p.get("minutesPlayed", p.get("minutes", 0)) or 0,
-                })
-            live_match["lineups"].append({"team": team_name, "players": players_list})
+        lineup_players = details.get("lineupPlayers", [])
+        for p in lineup_players:
+            p_name = p.get("playerName", "?")
+            p_team_id = p.get("teamId", 0)
+            p_team = home_name if p_team_id == (m.get("homeTeam") or {}).get("id", 0) else away_name
+            existing = next((l for l in live_match["lineups"] if l["team"] == p_team), None)
+            if not existing:
+                existing = {"team": p_team, "players": []}
+                live_match["lineups"].append(existing)
+            existing["players"].append({"name": p_name, "sub": not p.get("startXI", False)})
 
         live_details.append(live_match)
 

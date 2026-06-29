@@ -502,6 +502,34 @@ async def handle_group_message(
 
     if addressed:
         from src.handlers.features import handle_translate, handle_reminder, handle_user_fact, handle_poll
+
+        BET_REQUEST_KEYWORDS = [
+            "дай ставку", "сделай ставку", "поставь", "собери экспресс",
+            "закури ставк", "закури экспресс", "на что ставишь",
+            "что поставить", "посоветуй ставку", "дай экспресс",
+            "закури поставь", "ставочку", "сделай экспресс",
+        ]
+        text_lower = text.lower()
+        if any(kw in text_lower for kw in BET_REQUEST_KEYWORDS):
+            from src.betting import BettingManager
+            from src.football_api import FootballAPI
+            bet_api = FootballAPI('sjzgn3bbco67pk8j')
+            betting = BettingManager(db, bet_api, ai_manager)
+            try:
+                bet = await betting.generate_bet(message.chat.id)
+                if bet:
+                    intro = await betting.generate_intro_message(bet)
+                    msg = betting.format_bet_message(bet, intro)
+                    await message.reply(msg)
+                else:
+                    await message.reply("Закури не нашёл матчи для ставки прямо сейчас 🤷")
+            except Exception as e:
+                logger.error(f"Bet request error: {e}")
+                await message.reply(f"Закури не смог собрать ставку: {str(e)[:100]}")
+            finally:
+                await bet_api.close()
+            return
+
         if await handle_poll(message, text, bot):
             return
         if await handle_translate(message, text, ai_manager, bot):
