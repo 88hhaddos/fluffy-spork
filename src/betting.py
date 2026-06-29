@@ -59,42 +59,50 @@ class BettingManager:
 
     async def generate_bet(self, chat_id: int) -> Optional[dict]:
         """Генерирует ставку: одиночную, экспресс, или неординарную.
-        Приоритет — матчи ЧМ. Если нет ЧМ — любые матчи."""
-        wc_matches = await self.api.get_matches_by_league(1, 2026)
+        Использует реальные коэффициенты из Pari.ru API."""
         
-        today = await self.api.get_today_matches()
-        upcoming = await self.api.get_upcoming_matches(limit=30)
-
-        wc_uid = "979a850f-d343-11f0-982f-3cecef730a49"
+        # Сначала пробуем Pari.ru (реальные коэффициенты)
+        pari_matches = await self.api.get_pari_upcoming_matches(limit=100)
         
-        wc_today = [m for m in today if (m.get("season") or {}).get("uid") == wc_uid or (m.get("league") or {}).get("id") == 1]
-        wc_upcoming = [m for m in upcoming if (m.get("season") or {}).get("uid") == wc_uid or (m.get("league") or {}).get("id") == 1]
-        wc_all = [m for m in wc_matches if m.get("status") in (1, 2)]
-
-        available = wc_today + wc_upcoming + wc_all
-
-        if not available:
-            available = today + upcoming
-
-        filtered = []
-        for m in available:
+        # Фильтруем матчи с коэффициентами
+        available = []
+        for m in pari_matches:
             w1 = m.get("winner1", 0)
             wx = m.get("winnerX", 0)
             w2 = m.get("winner2", 0)
             if w1 and wx and w2 and w1 > 1.0:
-                filtered.append(m)
-
-        available = filtered
-
-        # Fallback: если нет матчей с коэффициентами, генерируем свои
-        if not available:
-            for m in wc_today + wc_upcoming + wc_all:
-                home = (m.get("homeTeam") or {}).get("name", "?")
-                away = (m.get("awayTeam") or {}).get("name", "?")
-                m["winner1"] = round(random.uniform(1.5, 3.5), 2)
-                m["winnerX"] = round(random.uniform(2.8, 4.0), 2)
-                m["winner2"] = round(random.uniform(1.5, 3.5), 2)
                 available.append(m)
+
+        # Fallback на SStats если Pari.ru пуст
+        if not available:
+            wc_matches = await self.api.get_matches_by_league(1, 2026)
+            today = await self.api.get_today_matches()
+            upcoming = await self.api.get_upcoming_matches(limit=30)
+
+            wc_uid = "979a850f-d343-11f0-982f-3cecef730a49"
+            wc_all = [m for m in wc_matches if m.get("status") in (1, 2)]
+            
+            available = today + upcoming + wc_all
+
+            filtered = []
+            for m in available:
+                w1 = m.get("winner1", 0)
+                wx = m.get("winnerX", 0)
+                w2 = m.get("winner2", 0)
+                if w1 and wx and w2 and w1 > 1.0:
+                    filtered.append(m)
+            available = filtered
+
+            # Fallback: генерируем коэффициенты
+            if not available:
+                for m in (today + upcoming)[:10]:
+                    home = (m.get("homeTeam") or {}).get("name", "?")
+                    away = (m.get("awayTeam") or {}).get("name", "?")
+                    if home != "?":
+                        m["winner1"] = round(random.uniform(1.5, 3.5), 2)
+                        m["winnerX"] = round(random.uniform(2.8, 4.0), 2)
+                        m["winner2"] = round(random.uniform(1.5, 3.5), 2)
+                        available.append(m)
 
         if not available:
             return None

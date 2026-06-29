@@ -214,3 +214,125 @@ class FootballAPI:
             odds_str = f" | Кеф: {w1}/{wx}/{w2}"
 
         return f"⚽ {home} — {away} | {score_str}{odds_str}"
+
+    # ─── Pari.ru API (real odds) ───
+
+    PARI_ODDS_MAP = {
+        8250: "winner1",   # П1
+        8253: "winner2",   # П2
+        8256: "winnerX",   # Ничья
+        217: "over25",     # ТБ 2.5
+        292: "under25",    # ТМ 2.5
+        8259: "btts_yes",  # Обе забьют Да
+        8262: "btts_no",   # Обе забьют Нет
+    }
+
+    async def get_pari_upcoming_matches(self, limit: int = 50) -> list[dict]:
+        """Получает предстоящие матчи с реальными коэффициентами Pari.ru."""
+        data = await self._get("/Pari/matches", {
+            "upcoming": "true",
+            "includeOdds": "true",
+            "limit": min(limit, 200),
+            "timezone": 3,
+        }, "pari_upcoming", 300)  # 5 min cache
+
+        if not data or "data" not in data:
+            return []
+
+        result = []
+        for m in data["data"]:
+            info = m.get("matchInfo", {})
+            odds_list = m.get("currentOdds") or []
+
+            match = {
+                "id": info.get("eventId", 0),
+                "homeTeam": {"name": (info.get("homeTeam") or {}).get("name", "?"), "id": (info.get("homeTeam") or {}).get("id", 0)},
+                "awayTeam": {"name": (info.get("awayTeam") or {}).get("name", "?"), "id": (info.get("awayTeam") or {}).get("id", 0)},
+                "date": (info.get("startDate") or "")[:19],
+                "status": info.get("status", "NotStarted"),
+                "league": (info.get("tournament") or {}).get("name", ""),
+                "homeResult": info.get("homeScore", 0) or 0,
+                "awayResult": info.get("awayScore", 0) or 0,
+            }
+
+            for o in odds_list:
+                oid = o.get("id", 0)
+                if oid in self.PARI_ODDS_MAP and not o.get("isDeleted"):
+                    match[self.PARI_ODDS_MAP[oid]] = o.get("value", 0)
+
+            match["winner1"] = match.get("winner1", 0)
+            match["winnerX"] = match.get("winnerX", 0)
+            match["winner2"] = match.get("winner2", 0)
+
+            result.append(match)
+
+        return result
+
+    async def get_pari_live_matches(self) -> list[dict]:
+        """Получает live матчи с коэффициентами Pari.ru."""
+        data = await self._get("/Pari/matches", {
+            "live": "true",
+            "includeOdds": "true",
+            "limit": 50,
+            "timezone": 3,
+        }, "pari_live", 60)  # 1 min cache
+
+        if not data or "data" not in data:
+            return []
+
+        result = []
+        for m in data["data"]:
+            info = m.get("matchInfo", {})
+            odds_list = m.get("currentOdds") or []
+
+            match = {
+                "id": info.get("eventId", 0),
+                "homeTeam": {"name": (info.get("homeTeam") or {}).get("name", "?"), "id": (info.get("homeTeam") or {}).get("id", 0)},
+                "awayTeam": {"name": (info.get("awayTeam") or {}).get("name", "?"), "id": (info.get("awayTeam") or {}).get("id", 0)},
+                "date": (info.get("startDate") or "")[:19],
+                "status": "Live",
+                "league": (info.get("tournament") or {}).get("name", ""),
+                "homeResult": info.get("homeScore", 0) or 0,
+                "awayResult": info.get("awayScore", 0) or 0,
+            }
+
+            for o in odds_list:
+                oid = o.get("id", 0)
+                if oid in self.PARI_ODDS_MAP and not o.get("isDeleted"):
+                    match[self.PARI_ODDS_MAP[oid]] = o.get("value", 0)
+
+            match["winner1"] = match.get("winner1", 0)
+            match["winnerX"] = match.get("winnerX", 0)
+            match["winner2"] = match.get("winner2", 0)
+
+            result.append(match)
+
+        return result
+
+    async def get_pari_match_details(self, event_id: int) -> Optional[dict]:
+        """Детали матча Pari.ru с коэффициентами и событиями."""
+        data = await self._get(f"/Pari/match/{event_id}", ttl=60)
+        if not data or "data" not in data:
+            return None
+
+        d = data["data"]
+        info = d.get("matchInfo", {})
+        current_odds = d.get("currentOdds") or []
+        prematch_odds = d.get("prematchOdds") or []
+
+        result = {
+            "id": info.get("eventId", 0),
+            "homeTeam": {"name": (info.get("homeTeam") or {}).get("name", "?")},
+            "awayTeam": {"name": (info.get("awayTeam") or {}).get("name", "?")},
+            "homeResult": info.get("homeScore", 0) or 0,
+            "awayResult": info.get("awayScore", 0) or 0,
+            "status": info.get("status", "?"),
+            "odds": {},
+        }
+
+        for o in current_odds or prematch_odds:
+            oid = o.get("id", 0)
+            if oid in self.PARI_ODDS_MAP and not o.get("isDeleted"):
+                result["odds"][self.PARI_ODDS_MAP[oid]] = o.get("value", 0)
+
+        return result
