@@ -642,6 +642,15 @@ def _filter_ai_thoughts(text: str) -> str:
         "The current topic", "The mood setting", "The user is asking",
         "Let me check", "So the", "This is", "I must",
         "I can still", "Let me try", "I'll be",
+        "1. ", "2. ", "3. ", "4. ",
+        "Adikseii", "Dimateplo", "Drakelovc ", "OliverBax ",
+        "is asking me", "is pointing out", "is repeatedly",
+        "appeared - this is", "according to admin",
+        "The mood setting says", "But there are also",
+        "Let me think", "I think I need",
+        "Let me respond to", "For Oliver",
+        "I should address", "I can do that",
+        "These are both", "I think the most",
     ]
 
     # Если текст начинается с размышлений — отрезаем до первой "настоящей" реплики
@@ -662,6 +671,13 @@ def _filter_ai_thoughts(text: str) -> str:
         if in_thoughts:
             # Проверяем — это размышление или реальный ответ?
             is_thought = any(line_stripped.startswith(m) or line_stripped.lower().startswith(m.lower()) for m in leak_markers)
+
+            # Дополнительная проверка — строка на английском (много латиницы, мало кириллицы)
+            if not is_thought:
+                cyrillic = sum(1 for c in line_stripped if '\u0400' <= c <= '\u04ff')
+                latin = sum(1 for c in line_stripped if c.isalpha() and ord(c) < 128)
+                if latin > 10 and cyrillic < 3:
+                    is_thought = True
 
             if is_thought:
                 continue  # пропускаем строку размышлений
