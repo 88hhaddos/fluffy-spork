@@ -1,0 +1,456 @@
+{
+  "id": 1489385,
+  "home": "Ghana",
+  "away": "Panama",
+  "home_id": 1504,
+  "away_id": 11,
+  "score": "1:0",
+  "score_h": 1,
+  "score_a": 0,
+  "date": "2026-06-18T02:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "BMO Field",
+  "referee": "Glenn Nyberg, Sweden",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "yellow card",
+      "player": "C. Yirenkyi",
+      "minute": 16,
+      "team": "Ghana",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "L. Ati Zigi",
+      "minute": 46,
+      "team": "Ghana",
+      "assist": "B. Asare"
+    },
+    {
+      "type": "substitution",
+      "player": "C. Waterman",
+      "minute": 63,
+      "team": "Panama",
+      "assist": "J. Fajardo"
+    },
+    {
+      "type": "substitution",
+      "player": "E. Owusu",
+      "minute": 78,
+      "team": "Ghana",
+      "assist": "K. Sibo"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Ayew",
+      "minute": 87,
+      "team": "Ghana",
+      "assist": "P. Adu"
+    },
+    {
+      "type": "substitution",
+      "player": "E. Nuamah",
+      "minute": 58,
+      "team": "Ghana",
+      "assist": "I. Fatawu"
+    },
+    {
+      "type": "substitution",
+      "player": "K. Sulemana",
+      "minute": 58,
+      "team": "Ghana",
+      "assist": "B. Thomas-Asante"
+    },
+    {
+      "type": "substitution",
+      "player": "C. Martinez",
+      "minute": 63,
+      "team": "Panama",
+      "assist": "A. Londono"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Rodriguez",
+      "minute": 74,
+      "team": "Panama",
+      "assist": "I. Diaz"
+    },
+    {
+      "type": "substitution",
+      "player": "C. Blackman",
+      "minute": 90,
+      "team": "Panama",
+      "assist": "A. Godoy"
+    },
+    {
+      "type": "yellow card",
+      "player": "C. Blackman",
+      "minute": 72,
+      "team": "Panama",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "C. Harvey",
+      "minute": 90,
+      "team": "Panama",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "C. Yirenkyi",
+      "minute": 90,
+      "team": "Ghana",
+      "assist": "B. Thomas-Asante"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "C. Martinez",
+      "position": null,
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "B. Asare",
+      "position": null,
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "L. Ati Zigi",
+      "position": "G",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "M. Senaya",
+      "position": "D",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "J. Adjetey",
+      "position": "D",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "J. Opoku",
+      "position": "D",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "G. Mensah",
+      "position": "D",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "A. Semenyo",
+      "position": "M",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "E. Owusu",
+      "position": "M",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "C. Yirenkyi",
+      "position": "M",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "E. Nuamah",
+      "position": "M",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "K. Sulemana",
+      "position": "F",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "J. Ayew",
+      "position": "F",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "O. Mosquera",
+      "position": "G",
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "C. Blackman",
+      "position": "M",
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "J. Ramos",
+      "position": "D",
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "J. Cordoba",
+      "position": "D",
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "A. Andrade",
+      "position": "D",
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "M. Murillo",
+      "position": "M",
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "C. Harvey",
+      "position": "M",
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "J. Rodriguez",
+      "position": "F",
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "Y. Barcenas",
+      "position": "M",
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "C. Waterman",
+      "position": "F",
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "J. Anang",
+      "position": "G",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "A. Seidu",
+      "position": "D",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "A. Mumin",
+      "position": "D",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "A. Baba",
+      "position": "D",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "K. Peprah",
+      "position": "D",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "D. Luckassen",
+      "position": "D",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "K. Sibo",
+      "position": "M",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "I. Fatawu",
+      "position": "F",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "C. Bonsu Baah",
+      "position": "F",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "I. Williams",
+      "position": "F",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "A. Boakye",
+      "position": "M",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "B. Thomas-Asante",
+      "position": "F",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "P. Adu",
+      "position": "F",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "C. Samudio",
+      "position": "G",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "L. Mejia",
+      "position": "G",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "F. Escobar",
+      "position": "D",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "E. Farina",
+      "position": "D",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "E. Davis",
+      "position": "D",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "R. Miller",
+      "position": "D",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "J. Gutierrez",
+      "position": "D",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "A. Carrasquilla",
+      "position": "M",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "I. Diaz",
+      "position": "F",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "A. Quintero",
+      "position": "F",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "A. Godoy",
+      "position": "M",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "C. Yanis",
+      "position": "F",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "A. Londono",
+      "position": "F",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "T. Rodriguez",
+      "position": "F",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "J. Fajardo",
+      "position": "F",
+      "sub": true,
+      "team": "Panama"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 2,
+    "shotsOnGoalAway": 4,
+    "shotsOffGoalHome": 4,
+    "shotsOffGoalAway": 5,
+    "totalShotsHome": 8,
+    "totalShotsAway": 11,
+    "blockedShotsHome": 2,
+    "blockedShotsAway": 2,
+    "cornerKicksHome": 2,
+    "cornerKicksAway": 2,
+    "foulsHome": 9,
+    "foulsAway": 11,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 2,
+    "ballPossessionHome": 38,
+    "ballPossessionAway": 62,
+    "offsidesHome": 4,
+    "offsidesAway": 1,
+    "goalkeeperSavesHome": 4,
+    "goalkeeperSavesAway": 2,
+    "totalPassesHome": 351,
+    "totalPassesAway": 583,
+    "passesAccurateHome": 292,
+    "passesAccurateAway": 503,
+    "crossesHome": 16,
+    "crossesAway": 21,
+    "interceptionsHome": 8,
+    "interceptionsAway": 5,
+    "duelsWonHome": 55,
+    "duelsWonAway": 56,
+    "freeKicksHome": 11,
+    "freeKicksAway": 9,
+    "expectedGoalsHome": 1.309999942779541,
+    "expectedGoalsAway": 0.7300000190734863,
+    "bigChancesHome": 1,
+    "bigChancesAway": 2
+  }
+}

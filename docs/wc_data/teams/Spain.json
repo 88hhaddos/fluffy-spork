@@ -1,0 +1,174 @@
+{
+  "name": "Spain",
+  "matches": [
+    {
+      "opponent": "Cape Verde Islands",
+      "score": "0:0",
+      "date": "2026-06-15",
+      "stage": "",
+      "home": true,
+      "result": "draw"
+    },
+    {
+      "opponent": "Saudi Arabia",
+      "score": "4:0",
+      "date": "2026-06-21",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    },
+    {
+      "opponent": "Uruguay",
+      "score": "0:1",
+      "date": "2026-06-27",
+      "stage": "",
+      "home": false,
+      "result": "win"
+    }
+  ],
+  "wins": 2,
+  "draws": 1,
+  "losses": 0,
+  "scored": 5,
+  "conceded": 0,
+  "players": {
+    "U. Simon": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "M. Llorente": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1,
+      "assists": 1
+    },
+    "P. Cubarsi": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "A. Laporte": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "M. Cucurella": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "Pedri": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "Rodri": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "F. Ruiz": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "F. Torres": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2
+    },
+    "M. Oyarzabal": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0,
+      "goals": 2,
+      "assists": 1
+    },
+    "Gavi": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2
+    },
+    "D. Raya": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "J. Garcia": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Pubill": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "E. Garcia": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "P. Porro": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "A. Grimaldo": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Merino": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "A. Baena": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1,
+      "goals": 1
+    },
+    "M. Zubimendi": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "D. Olmo": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2,
+      "assists": 1
+    },
+    "N. Williams": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "Lamine Yamal": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1,
+      "goals": 1
+    },
+    "Y. Pino": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "V. Munoz": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "B. Iglesias": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    }
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "name": "Uzbekistan",
+  "matches": [
+    {
+      "opponent": "Colombia",
+      "score": "1:3",
+      "date": "2026-06-18",
+      "stage": "",
+      "home": true,
+      "result": "loss"
+    },
+    {
+      "opponent": "Portugal",
+      "score": "5:0",
+      "date": "2026-06-23",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    },
+    {
+      "opponent": "Congo DR",
+      "score": "3:1",
+      "date": "2026-06-28",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    }
+  ],
+  "wins": 0,
+  "draws": 0,
+  "losses": 3,
+  "scored": 2,
+  "conceded": 11,
+  "players": {
+    "U. Yusupov": {
+      "position": "G",
+      "matches": 3,
+      "subs": 2
+    },
+    "R. Ashurmatov": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "A. Khusanov": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 2
+    },
+    "A. Abdullaev": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "B. Karimov": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "A. Mozgovoy": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "O. Shukurov": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "S. Nasrullaev": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "A. Fayzullaev": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0,
+      "goals": 1
+    },
+    "O. Urunov": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2
+    },
+    "E. Shomurodov": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0,
+      "goals": 1
+    },
+    "A. Nematov": {
+      "position": "G",
+      "matches": 3,
+      "subs": 1
+    },
+    "B. Ergashev": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "K. Alizhonov": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "U. Eshmurodov": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Ulmasaliev": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "J. Urozov": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "J. Iskanderov": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "O. Khamrobekov": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2,
+      "yellow": 1
+    },
+    "R. Jiyanov": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "D. Khamdamov": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "A. Ganiev": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "S. Esanov": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Amonov": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "I. Sergeev": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "F. Sayfiev": {
+      "position": null,
+      "matches": 3,
+      "subs": 3
+    }
+  }
+}

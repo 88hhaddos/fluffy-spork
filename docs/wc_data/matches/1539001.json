@@ -1,0 +1,462 @@
+{
+  "id": 1539001,
+  "home": "Australia",
+  "away": "Türkiye",
+  "home_id": 20,
+  "away_id": 777,
+  "score": "2:0",
+  "score_h": 2,
+  "score_a": 0,
+  "date": "2026-06-14T07:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "BC Place",
+  "referee": "Jesús Valenzuela, Venezuela",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "substitution",
+      "player": "B. Yilmaz",
+      "minute": 46,
+      "team": "Türkiye",
+      "assist": "K. Yildiz"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Toure",
+      "minute": 74,
+      "team": "Australia",
+      "assist": "T. Yengi"
+    },
+    {
+      "type": "goal",
+      "player": null,
+      "minute": 75,
+      "team": "Australia",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "J. Italiano",
+      "minute": 74,
+      "team": "Australia",
+      "assist": "J. Geria"
+    },
+    {
+      "type": "substitution",
+      "player": "K. Akturkoglu",
+      "minute": 85,
+      "team": "Türkiye",
+      "assist": "D. Gul"
+    },
+    {
+      "type": "yellow card",
+      "player": "Y. Akgun",
+      "minute": 86,
+      "team": "Türkiye",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "I. Yuksek",
+      "minute": 81,
+      "team": "Türkiye",
+      "assist": "S. Ozcan"
+    },
+    {
+      "type": "substitution",
+      "player": "Z. Celik",
+      "minute": 81,
+      "team": "Türkiye",
+      "assist": "M. Muldur"
+    },
+    {
+      "type": "substitution",
+      "player": "N. Irankunda",
+      "minute": 61,
+      "team": "Australia",
+      "assist": "N. Velupillay"
+    },
+    {
+      "type": "substitution",
+      "player": "O. Kokcu",
+      "minute": 62,
+      "team": "Türkiye",
+      "assist": "Y. Akgun"
+    },
+    {
+      "type": "goal",
+      "player": "N. Irankunda",
+      "minute": 27,
+      "team": "Australia",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "J. Bos",
+      "minute": 84,
+      "team": "Australia",
+      "assist": "A. Behich"
+    },
+    {
+      "type": "substitution",
+      "player": "P. Okon-Engstler",
+      "minute": 84,
+      "team": "Australia",
+      "assist": "J. Irvine"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "P. Beach",
+      "position": "G",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "A. Circati",
+      "position": "D",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "H. Souttar",
+      "position": "D",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "C. Burgess",
+      "position": "D",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "J. Italiano",
+      "position": "D",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "A. O'Neill",
+      "position": "M",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "P. Okon-Engstler",
+      "position": "M",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "J. Bos",
+      "position": "D",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "N. Irankunda",
+      "position": "M",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "C. Metcalfe",
+      "position": "M",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "M. Toure",
+      "position": "F",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "U. Cakir",
+      "position": "G",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "Z. Celik",
+      "position": "D",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "M. Demiral",
+      "position": "D",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "A. Bardakci",
+      "position": "D",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "F. Kadioglu",
+      "position": "D",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "H. Calhanoglu",
+      "position": "M",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "I. Yuksek",
+      "position": "M",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "A. Guler",
+      "position": "M",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "O. Kokcu",
+      "position": "M",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "B. Yilmaz",
+      "position": "M",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "K. Akturkoglu",
+      "position": "F",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "M. Ryan",
+      "position": "G",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "P. Izzo",
+      "position": "G",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "M. Degenek",
+      "position": "D",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "J. Geria",
+      "position": "D",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "A. Behich",
+      "position": "D",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "L. Herrington",
+      "position": "D",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "K. Trewin",
+      "position": "D",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "C. Devlin",
+      "position": "M",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "J. Irvine",
+      "position": "M",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "M. Leckie",
+      "position": "F",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "A. Hrustic",
+      "position": "M",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "A. Mabil",
+      "position": "M",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "C. Volpato",
+      "position": "M",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "N. Velupillay",
+      "position": "F",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "T. Yengi",
+      "position": "F",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "M. Gunok",
+      "position": "G",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "A. Bayindir",
+      "position": "G",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "C. Soyuncu",
+      "position": "D",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "E. Elmali",
+      "position": "D",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "O. Kabak",
+      "position": "D",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "M. Muldur",
+      "position": "D",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "S. Akaydin",
+      "position": "D",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "K. Ayhan",
+      "position": "D",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "S. Ozcan",
+      "position": "M",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "I. Kahveci",
+      "position": "M",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "Y. Akgun",
+      "position": "F",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "O. Aydin",
+      "position": "F",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "C. Uzun",
+      "position": "M",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "D. Gul",
+      "position": "F",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "K. Yildiz",
+      "position": "F",
+      "sub": true,
+      "team": "Türkiye"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 4,
+    "shotsOnGoalAway": 8,
+    "shotsOffGoalHome": 4,
+    "shotsOffGoalAway": 10,
+    "totalShotsHome": 9,
+    "totalShotsAway": 30,
+    "blockedShotsHome": 1,
+    "blockedShotsAway": 12,
+    "cornerKicksHome": 5,
+    "cornerKicksAway": 8,
+    "foulsHome": 12,
+    "foulsAway": 4,
+    "yellowCardsHome": 0,
+    "yellowCardsAway": 1,
+    "ballPossessionHome": 28,
+    "ballPossessionAway": 72,
+    "offsidesHome": 1,
+    "offsidesAway": 3,
+    "goalkeeperSavesHome": 8,
+    "goalkeeperSavesAway": 2,
+    "totalPassesHome": 271,
+    "totalPassesAway": 704,
+    "passesAccurateHome": 201,
+    "passesAccurateAway": 635,
+    "crossesHome": 14,
+    "crossesAway": 26,
+    "interceptionsHome": 7,
+    "interceptionsAway": 4,
+    "duelsWonHome": 42,
+    "duelsWonAway": 46,
+    "freeKicksHome": 4,
+    "freeKicksAway": 12,
+    "expectedGoalsHome": 1.1799999475479126,
+    "expectedGoalsAway": 1.3600000143051147,
+    "bigChancesHome": 1,
+    "bigChancesAway": 2
+  }
+}

@@ -1,0 +1,448 @@
+{
+  "id": 1489380,
+  "home": "Spain",
+  "away": "Cape Verde Islands",
+  "home_id": 9,
+  "away_id": 1533,
+  "score": "0:0",
+  "score_h": 0,
+  "score_a": 0,
+  "date": "2026-06-15T19:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "Mercedes-Benz Stadium",
+  "referee": "Adham Mohammad, Jordan",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "yellow card",
+      "player": "S. Lopes Cabral",
+      "minute": 16,
+      "team": "Cape Verde Islands",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "Rodri",
+      "minute": 87,
+      "team": "Spain",
+      "assist": "N. Williams"
+    },
+    {
+      "type": "yellow card",
+      "player": "Pedri",
+      "minute": 90,
+      "team": "Spain",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "L. Duarte",
+      "minute": 61,
+      "team": "Cape Verde Islands",
+      "assist": "D. Duarte"
+    },
+    {
+      "type": "substitution",
+      "player": "D. Livramento",
+      "minute": 61,
+      "team": "Cape Verde Islands",
+      "assist": "N. Da Costa"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Cabral",
+      "minute": 61,
+      "team": "Cape Verde Islands",
+      "assist": "W. Semedo"
+    },
+    {
+      "type": "substitution",
+      "player": "F. Ruiz",
+      "minute": 71,
+      "team": "Spain",
+      "assist": "M. Merino"
+    },
+    {
+      "type": "substitution",
+      "player": "F. Ruiz",
+      "minute": 71,
+      "team": "Spain",
+      "assist": "M. Merino"
+    },
+    {
+      "type": "substitution",
+      "player": "S. Lopes Cabral",
+      "minute": 76,
+      "team": "Cape Verde Islands",
+      "assist": "Joao Paulo"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Monteiro",
+      "minute": 79,
+      "team": "Cape Verde Islands",
+      "assist": "T. Arcanjo"
+    },
+    {
+      "type": "substitution",
+      "player": "F. Torres",
+      "minute": 81,
+      "team": "Spain",
+      "assist": "D. Olmo"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "U. Simon",
+      "position": "G",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "M. Llorente",
+      "position": "D",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "P. Cubarsi",
+      "position": "D",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "A. Laporte",
+      "position": "D",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "M. Cucurella",
+      "position": "D",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "Pedri",
+      "position": "M",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "Rodri",
+      "position": "M",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "F. Ruiz",
+      "position": "M",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "F. Torres",
+      "position": "F",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "M. Oyarzabal",
+      "position": "F",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "Gavi",
+      "position": "F",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "Vozinha",
+      "position": "G",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "S. Moreira",
+      "position": "D",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "D. Borges",
+      "position": "D",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "R. Lopes",
+      "position": "D",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "S. Lopes Cabral",
+      "position": "D",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "K. Lenini",
+      "position": "M",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "L. Duarte",
+      "position": "M",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "R. Mendes",
+      "position": "M",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "J. Monteiro",
+      "position": "M",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "J. Cabral",
+      "position": "M",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "D. Livramento",
+      "position": "F",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "D. Raya",
+      "position": "G",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "J. Garcia",
+      "position": "G",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "M. Pubill",
+      "position": "D",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "E. Garcia",
+      "position": "D",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "P. Porro",
+      "position": "D",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "A. Grimaldo",
+      "position": "D",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "M. Merino",
+      "position": "M",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "A. Baena",
+      "position": "M",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "M. Zubimendi",
+      "position": "M",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "D. Olmo",
+      "position": "M",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "N. Williams",
+      "position": "F",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "Lamine Yamal",
+      "position": "F",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "Y. Pino",
+      "position": "M",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "V. Munoz",
+      "position": "F",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "B. Iglesias",
+      "position": "F",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "M. Rosa",
+      "position": "G",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "dos Santos CJ",
+      "position": "G",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "Stopira",
+      "position": "D",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "L. Costa",
+      "position": "D",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "W. Pina",
+      "position": "D",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "K. Pires",
+      "position": "D",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "Joao Paulo",
+      "position": "M",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "G. Rodrigues",
+      "position": "F",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "D. Duarte",
+      "position": "M",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "Y. Semedo",
+      "position": "M",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "W. Semedo",
+      "position": "F",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "T. Arcanjo",
+      "position": "M",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "H. Varela",
+      "position": "F",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "N. Da Costa",
+      "position": "F",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "Benchimol",
+      "position": "F",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 7,
+    "shotsOnGoalAway": 1,
+    "shotsOffGoalHome": 12,
+    "shotsOffGoalAway": 3,
+    "totalShotsHome": 27,
+    "totalShotsAway": 6,
+    "blockedShotsHome": 8,
+    "blockedShotsAway": 2,
+    "cornerKicksHome": 11,
+    "cornerKicksAway": 1,
+    "foulsHome": 10,
+    "foulsAway": 1,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 1,
+    "ballPossessionHome": 74,
+    "ballPossessionAway": 26,
+    "offsidesHome": 2,
+    "offsidesAway": 3,
+    "goalkeeperSavesHome": 1,
+    "goalkeeperSavesAway": 7,
+    "totalPassesHome": 800,
+    "totalPassesAway": 278,
+    "passesAccurateHome": 734,
+    "passesAccurateAway": 205,
+    "crossesHome": 36,
+    "crossesAway": 4,
+    "interceptionsHome": 6,
+    "interceptionsAway": 15,
+    "duelsWonHome": 38,
+    "duelsWonAway": 39,
+    "freeKicksHome": 1,
+    "freeKicksAway": 10,
+    "expectedGoalsHome": 2.0999999046325684,
+    "expectedGoalsAway": 0.20000000298023224,
+    "bigChancesHome": 2,
+    "bigChancesAway": 1
+  }
+}

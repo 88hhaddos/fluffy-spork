@@ -1,0 +1,474 @@
+{
+  "id": 1489401,
+  "home": "Norway",
+  "away": "Senegal",
+  "home_id": 1090,
+  "away_id": 13,
+  "score": "3:2",
+  "score_h": 3,
+  "score_a": 2,
+  "date": "2026-06-23T03:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Wilton Pereira Sampaio, Brazil",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "substitution",
+      "player": "J. Ryerson",
+      "minute": 13,
+      "team": "Norway",
+      "assist": "M. Pedersen"
+    },
+    {
+      "type": "substitution",
+      "player": "F. Aursnes",
+      "minute": 46,
+      "team": "Norway",
+      "assist": "P. Berg"
+    },
+    {
+      "type": "goal",
+      "player": "E. Haaland",
+      "minute": 58,
+      "team": "Norway",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "M. Pedersen",
+      "minute": 43,
+      "team": "Norway",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "I. Sarr",
+      "minute": 53,
+      "team": "Senegal",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "M. Diouf",
+      "minute": 54,
+      "team": "Senegal",
+      "assist": "I. Jakobs"
+    },
+    {
+      "type": "substitution",
+      "player": "P. Gueye",
+      "minute": 54,
+      "team": "Senegal",
+      "assist": "I. Mbaye"
+    },
+    {
+      "type": "goal",
+      "player": "I. Sarr",
+      "minute": 90,
+      "team": "Senegal",
+      "assist": "N. Jackson"
+    },
+    {
+      "type": "substitution",
+      "player": "E. Mendy",
+      "minute": 63,
+      "team": "Senegal",
+      "assist": "M. Diaw"
+    },
+    {
+      "type": "substitution",
+      "player": "L. Camara",
+      "minute": 63,
+      "team": "Senegal",
+      "assist": "P. Ciss"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Nusa",
+      "minute": 71,
+      "team": "Norway",
+      "assist": "A. Schjelderup"
+    },
+    {
+      "type": "substitution",
+      "player": "K. Koulibaly",
+      "minute": 72,
+      "team": "Senegal",
+      "assist": "P. M. Sarr"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Sorloth",
+      "minute": 84,
+      "team": "Norway",
+      "assist": "O. Bobb"
+    },
+    {
+      "type": "substitution",
+      "player": "T. Heggem",
+      "minute": 84,
+      "team": "Norway",
+      "assist": "L. Ostigard"
+    },
+    {
+      "type": "goal",
+      "player": "E. Haaland",
+      "minute": 48,
+      "team": "Norway",
+      "assist": ""
+    }
+  ],
+  "lineups": [
+    {
+      "name": "O. Nyland",
+      "position": "G",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "J. Ryerson",
+      "position": "D",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "K. Ajer",
+      "position": "D",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "T. Heggem",
+      "position": "D",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "D. Wolfe",
+      "position": "D",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "M. Odegaard",
+      "position": "M",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "S. Berge",
+      "position": "M",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "F. Aursnes",
+      "position": "M",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "A. Sorloth",
+      "position": "F",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "E. Haaland",
+      "position": "F",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "A. Nusa",
+      "position": "F",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "E. Mendy",
+      "position": "G",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "K. Diatta",
+      "position": "D",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "K. Koulibaly",
+      "position": "D",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "M. Niakhate",
+      "position": "D",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "M. Diouf",
+      "position": "D",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "I. Gueye",
+      "position": "M",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "P. Gueye",
+      "position": "M",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "I. Sarr",
+      "position": "M",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "L. Camara",
+      "position": "M",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "S. Mane",
+      "position": "M",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "N. Jackson",
+      "position": "F",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "S. Tangvik",
+      "position": "G",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "E. Selvik",
+      "position": "G",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "L. Ostigard",
+      "position": "D",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "F. Bjorkan",
+      "position": "D",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "S. Langas",
+      "position": "D",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "H. Falchener",
+      "position": "D",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "T. Aasgaard",
+      "position": "M",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "O. Bobb",
+      "position": "M",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "A. Schjelderup",
+      "position": "F",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "K. Thorstvedt",
+      "position": "M",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "M. Thorsby",
+      "position": "M",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "P. Berg",
+      "position": "M",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "M. Pedersen",
+      "position": "D",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "J. Larsen",
+      "position": "F",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "J. Hauge",
+      "position": "M",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "M. Diaw",
+      "position": "G",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "Y. Diouf",
+      "position": "G",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "M. Sarr",
+      "position": "D",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "I. Jakobs",
+      "position": "D",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "A. Seck",
+      "position": "D",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "A. Mendy",
+      "position": "D",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "P. Ciss",
+      "position": "M",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "B. Sapoko Ndiaye",
+      "position": "M",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "I. Ndiaye",
+      "position": "F",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "P. M. Sarr",
+      "position": "M",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "H. Diarra",
+      "position": "M",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "I. Mbaye",
+      "position": "F",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "A. Diao",
+      "position": "F",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "B. Dieng",
+      "position": "F",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "C. Ndiaye",
+      "position": "F",
+      "sub": true,
+      "team": "Senegal"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 7,
+    "shotsOnGoalAway": 4,
+    "shotsOffGoalHome": 3,
+    "shotsOffGoalAway": 7,
+    "totalShotsHome": 13,
+    "totalShotsAway": 16,
+    "blockedShotsHome": 3,
+    "blockedShotsAway": 5,
+    "cornerKicksHome": 5,
+    "cornerKicksAway": 4,
+    "foulsHome": 13,
+    "foulsAway": 5,
+    "ballPossessionHome": 42,
+    "ballPossessionAway": 58,
+    "offsidesHome": 0,
+    "offsidesAway": 4,
+    "goalkeeperSavesHome": 2,
+    "goalkeeperSavesAway": 3,
+    "totalPassesHome": 353,
+    "totalPassesAway": 489,
+    "passesAccurateHome": 282,
+    "passesAccurateAway": 430,
+    "crossesHome": 10,
+    "crossesAway": 23,
+    "interceptionsHome": 8,
+    "interceptionsAway": 10,
+    "duelsWonHome": 39,
+    "duelsWonAway": 57,
+    "freeKicksHome": 5,
+    "freeKicksAway": 13,
+    "expectedGoalsHome": 2.200000047683716,
+    "expectedGoalsAway": 1.7200000286102295,
+    "bigChancesHome": 5,
+    "bigChancesAway": 3
+  }
+}

@@ -1,0 +1,484 @@
+{
+  "id": 1489389,
+  "home": "Brazil",
+  "away": "Haiti",
+  "home_id": 6,
+  "away_id": 2386,
+  "score": "3:0",
+  "score_h": 3,
+  "score_a": 0,
+  "date": "2026-06-20T03:30:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Alejandro Hernandez, Spain",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "goal",
+      "player": null,
+      "minute": 36,
+      "team": "Brazil",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "Raphinha",
+      "minute": 40,
+      "team": "Brazil",
+      "assist": "Rayan"
+    },
+    {
+      "type": "yellow card",
+      "player": "C. Arcus",
+      "minute": 4,
+      "team": "Haiti",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "Matheus Cunha",
+      "minute": 23,
+      "team": "Brazil",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "F. Pierrot",
+      "minute": 45,
+      "team": "Haiti",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "C. Arcus",
+      "minute": 46,
+      "team": "Haiti",
+      "assist": "D. Simon"
+    },
+    {
+      "type": "substitution",
+      "player": "F. Pierrot",
+      "minute": 46,
+      "team": "Haiti",
+      "assist": "W. Isidor"
+    },
+    {
+      "type": "substitution",
+      "player": "Lucas Paquetá",
+      "minute": 64,
+      "team": "Brazil",
+      "assist": "Gabriel Martinelli"
+    },
+    {
+      "type": "substitution",
+      "player": "Matheus Cunha",
+      "minute": 64,
+      "team": "Brazil",
+      "assist": "Endrick"
+    },
+    {
+      "type": "substitution",
+      "player": "R. Providence",
+      "minute": 71,
+      "team": "Haiti",
+      "assist": "L. Joseph"
+    },
+    {
+      "type": "yellow card",
+      "player": "D. Jean Jacques",
+      "minute": 72,
+      "team": "Haiti",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "Vinícius Júnior",
+      "minute": 81,
+      "team": "Brazil",
+      "assist": "Danilo Santos"
+    },
+    {
+      "type": "substitution",
+      "player": "Bruno Guimarães",
+      "minute": 81,
+      "team": "Brazil",
+      "assist": "Éderson"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Bellegarde",
+      "minute": 81,
+      "team": "Haiti",
+      "assist": "D. Etienne"
+    },
+    {
+      "type": "yellow card",
+      "player": "Douglas Santos",
+      "minute": 65,
+      "team": "Brazil",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "Vinícius Júnior",
+      "minute": 45,
+      "team": "Brazil",
+      "assist": "Lucas Paquetá"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Casimir",
+      "minute": 62,
+      "team": "Haiti",
+      "assist": "L. Deedson"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "J. Duverne",
+      "position": "D",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "H. Delcroix",
+      "position": "D",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "M. Experience",
+      "position": "D",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "J. Casimir",
+      "position": "M",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "D. Jean Jacques",
+      "position": "M",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "J. Bellegarde",
+      "position": "M",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "R. Providence",
+      "position": "M",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "F. Pierrot",
+      "position": "F",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "Weverton",
+      "position": "G",
+      "sub": true,
+      "team": "Brazil"
+    },
+    {
+      "name": "Ederson",
+      "position": "G",
+      "sub": true,
+      "team": "Brazil"
+    },
+    {
+      "name": "Alex Sandro",
+      "position": "D",
+      "sub": true,
+      "team": "Brazil"
+    },
+    {
+      "name": "Bremer",
+      "position": "D",
+      "sub": true,
+      "team": "Brazil"
+    },
+    {
+      "name": "Léo Pereira",
+      "position": "D",
+      "sub": true,
+      "team": "Brazil"
+    },
+    {
+      "name": "Roger Ibañez",
+      "position": "D",
+      "sub": true,
+      "team": "Brazil"
+    },
+    {
+      "name": "Fabinho",
+      "position": "M",
+      "sub": true,
+      "team": "Brazil"
+    },
+    {
+      "name": "Luiz Henrique",
+      "position": "F",
+      "sub": true,
+      "team": "Brazil"
+    },
+    {
+      "name": "Éderson",
+      "position": "M",
+      "sub": true,
+      "team": "Brazil"
+    },
+    {
+      "name": "Danilo Santos",
+      "position": "M",
+      "sub": true,
+      "team": "Brazil"
+    },
+    {
+      "name": "Rayan",
+      "position": "F",
+      "sub": true,
+      "team": "Brazil"
+    },
+    {
+      "name": "Endrick",
+      "position": "F",
+      "sub": true,
+      "team": "Brazil"
+    },
+    {
+      "name": "Gabriel Martinelli",
+      "position": "F",
+      "sub": true,
+      "team": "Brazil"
+    },
+    {
+      "name": "Igor Thiago",
+      "position": "F",
+      "sub": true,
+      "team": "Brazil"
+    },
+    {
+      "name": "A. Pierre",
+      "position": "G",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "J. Duverger",
+      "position": "G",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "K. Thermoncy",
+      "position": "D",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "D. Lacroix",
+      "position": "D",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "G. Metusala",
+      "position": "D",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "W. Paugain",
+      "position": "D",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "D. Simon",
+      "position": "M",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "W. Pierre",
+      "position": "M",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "D. Etienne",
+      "position": "F",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "D. Nazon",
+      "position": "F",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "L. Deedson",
+      "position": "F",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "L. Joseph",
+      "position": "F",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "W. Isidor",
+      "position": "F",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "Y. Fortune",
+      "position": "F",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "C. Sainte",
+      "position": null,
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "Alisson",
+      "position": "G",
+      "sub": false,
+      "team": "Brazil"
+    },
+    {
+      "name": "Danilo",
+      "position": "D",
+      "sub": false,
+      "team": "Brazil"
+    },
+    {
+      "name": "Marquinhos",
+      "position": "D",
+      "sub": false,
+      "team": "Brazil"
+    },
+    {
+      "name": "Gabriel Magalhães",
+      "position": "D",
+      "sub": false,
+      "team": "Brazil"
+    },
+    {
+      "name": "Douglas Santos",
+      "position": "D",
+      "sub": false,
+      "team": "Brazil"
+    },
+    {
+      "name": "Bruno Guimarães",
+      "position": "M",
+      "sub": false,
+      "team": "Brazil"
+    },
+    {
+      "name": "Casemiro",
+      "position": "M",
+      "sub": false,
+      "team": "Brazil"
+    },
+    {
+      "name": "Raphinha",
+      "position": "F",
+      "sub": false,
+      "team": "Brazil"
+    },
+    {
+      "name": "Lucas Paquetá",
+      "position": "M",
+      "sub": false,
+      "team": "Brazil"
+    },
+    {
+      "name": "Vinícius Júnior",
+      "position": "F",
+      "sub": false,
+      "team": "Brazil"
+    },
+    {
+      "name": "Matheus Cunha",
+      "position": "F",
+      "sub": false,
+      "team": "Brazil"
+    },
+    {
+      "name": "J. Placide",
+      "position": "G",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "C. Arcus",
+      "position": "D",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "R. Ade",
+      "position": "D",
+      "sub": false,
+      "team": "Haiti"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 5,
+    "shotsOnGoalAway": 3,
+    "shotsOffGoalHome": 2,
+    "shotsOffGoalAway": 3,
+    "totalShotsHome": 8,
+    "totalShotsAway": 7,
+    "blockedShotsHome": 1,
+    "blockedShotsAway": 1,
+    "cornerKicksHome": 4,
+    "cornerKicksAway": 4,
+    "foulsHome": 13,
+    "foulsAway": 14,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 3,
+    "ballPossessionHome": 57,
+    "ballPossessionAway": 43,
+    "offsidesHome": 8,
+    "offsidesAway": 4,
+    "goalkeeperSavesHome": 3,
+    "goalkeeperSavesAway": 2,
+    "totalPassesHome": 525,
+    "totalPassesAway": 399,
+    "passesAccurateHome": 462,
+    "passesAccurateAway": 332,
+    "crossesHome": 9,
+    "crossesAway": 11,
+    "interceptionsHome": 10,
+    "interceptionsAway": 9,
+    "duelsWonHome": 52,
+    "duelsWonAway": 42,
+    "freeKicksHome": 14,
+    "freeKicksAway": 13,
+    "expectedGoalsHome": 1.75,
+    "expectedGoalsAway": 0.23000000417232513,
+    "bigChancesHome": 5,
+    "bigChancesAway": 0
+  }
+}

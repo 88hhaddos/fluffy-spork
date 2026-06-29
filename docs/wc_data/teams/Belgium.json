@@ -1,0 +1,170 @@
+{
+  "name": "Belgium",
+  "matches": [
+    {
+      "opponent": "Egypt",
+      "score": "1:1",
+      "date": "2026-06-15",
+      "stage": "",
+      "home": true,
+      "result": "draw"
+    },
+    {
+      "opponent": "Iran",
+      "score": "0:0",
+      "date": "2026-06-21",
+      "stage": "",
+      "home": true,
+      "result": "draw"
+    },
+    {
+      "opponent": "New Zealand",
+      "score": "1:5",
+      "date": "2026-06-27",
+      "stage": "",
+      "home": false,
+      "result": "win"
+    }
+  ],
+  "wins": 1,
+  "draws": 2,
+  "losses": 0,
+  "scored": 6,
+  "conceded": 2,
+  "players": {
+    "A. Witsel": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "B. Mechele": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "H. Vanaken": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "T. Meunier": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "K. De Bruyne": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "goals": 1
+    },
+    "T. Courtois": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "R. Lukaku": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2,
+      "yellow": 1,
+      "goals": 1
+    },
+    "A. Saelemaekers": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2,
+      "goals": 1
+    },
+    "J. Doku": {
+      "position": "M",
+      "matches": 2,
+      "subs": 0
+    },
+    "L. Trossard": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "goals": 1
+    },
+    "N. Raskin": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2,
+      "assists": 1
+    },
+    "T. Castagne": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1
+    },
+    "Y. Tielemans": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "D. Lukebakio": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "C. De Ketelaere": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1
+    },
+    "M. De Cuyper": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1
+    },
+    "K. De Winter": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "S. Lammens": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Onana": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "A. Theate": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "N. Ngoy": {
+      "position": "D",
+      "matches": 2,
+      "subs": 0,
+      "red": 1
+    },
+    "D. Moreira": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Fernandez-Pardo": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Penders": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "J. Seys": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    }
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "name": "France",
+  "matches": [
+    {
+      "opponent": "Senegal",
+      "score": "3:1",
+      "date": "2026-06-16",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    },
+    {
+      "opponent": "Iraq",
+      "score": "3:0",
+      "date": "2026-06-23",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    },
+    {
+      "opponent": "Norway",
+      "score": "1:4",
+      "date": "2026-06-26",
+      "stage": "",
+      "home": false,
+      "result": "win"
+    }
+  ],
+  "wins": 3,
+  "draws": 0,
+  "losses": 0,
+  "scored": 10,
+  "conceded": 2,
+  "players": {
+    "L. Hernandez": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "O. Dembele": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "goals": 3
+    },
+    "A. Rabiot": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1,
+      "assists": 1
+    },
+    "K. Mbappe": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0,
+      "goals": 4,
+      "assists": 1
+    },
+    "I. Konate": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "D. Upamecano": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "J. Kounde": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "A. Tchouameni": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1
+    },
+    "N. Kante": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "L. Digne": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "M. Olise": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "assists": 3
+    },
+    "M. Lacroix": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "M. Thuram": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "B. Samba": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "W. Saliba": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "M. Kone": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "M. Maignan": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "J. Mateta": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "T. Hernandez": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "R. Cherki": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "B. Barcola": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2,
+      "goals": 1,
+      "assists": 1
+    },
+    "M. Gusto": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Akliouche": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "W. Zaire-Emery": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "D. Doue": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1,
+      "goals": 1
+    },
+    "R. Risser": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    }
+  }
+}

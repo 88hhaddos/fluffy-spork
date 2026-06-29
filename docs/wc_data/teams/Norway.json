@@ -1,0 +1,175 @@
+{
+  "name": "Norway",
+  "matches": [
+    {
+      "opponent": "Iraq",
+      "score": "1:4",
+      "date": "2026-06-17",
+      "stage": "",
+      "home": false,
+      "result": "win"
+    },
+    {
+      "opponent": "Senegal",
+      "score": "3:2",
+      "date": "2026-06-23",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    },
+    {
+      "opponent": "France",
+      "score": "1:4",
+      "date": "2026-06-26",
+      "stage": "",
+      "home": true,
+      "result": "loss"
+    }
+  ],
+  "wins": 2,
+  "draws": 0,
+  "losses": 1,
+  "scored": 8,
+  "conceded": 7,
+  "players": {
+    "O. Nyland": {
+      "position": "G",
+      "matches": 3,
+      "subs": 1
+    },
+    "J. Ryerson": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "K. Ajer": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "T. Heggem": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "D. Wolfe": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "M. Odegaard": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1,
+      "assists": 1
+    },
+    "S. Berge": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "F. Aursnes": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "A. Sorloth": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1
+    },
+    "E. Haaland": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1,
+      "goals": 4
+    },
+    "A. Nusa": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "S. Tangvik": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "E. Selvik": {
+      "position": "G",
+      "matches": 3,
+      "subs": 2
+    },
+    "H. Falchener": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "L. Ostigard": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2,
+      "goals": 1
+    },
+    "F. Bjorkan": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "S. Langas": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Schjelderup": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2,
+      "assists": 1
+    },
+    "T. Aasgaard": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2,
+      "goals": 1
+    },
+    "M. Thorsby": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Pedersen": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3,
+      "goals": 1
+    },
+    "P. Berg": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2,
+      "yellow": 1
+    },
+    "O. Bobb": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "K. Thorstvedt": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "J. Larsen": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2,
+      "goals": 1,
+      "assists": 1
+    },
+    "J. Hauge": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    }
+  }
+}

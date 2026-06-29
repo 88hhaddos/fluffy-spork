@@ -1,0 +1,182 @@
+{
+  "name": "Egypt",
+  "matches": [
+    {
+      "opponent": "Belgium",
+      "score": "1:1",
+      "date": "2026-06-15",
+      "stage": "",
+      "home": false,
+      "result": "draw"
+    },
+    {
+      "opponent": "New Zealand",
+      "score": "1:3",
+      "date": "2026-06-22",
+      "stage": "",
+      "home": false,
+      "result": "win"
+    },
+    {
+      "opponent": "Iran",
+      "score": "1:1",
+      "date": "2026-06-27",
+      "stage": "",
+      "home": true,
+      "result": "draw"
+    }
+  ],
+  "wins": 1,
+  "draws": 2,
+  "losses": 0,
+  "scored": 5,
+  "conceded": 3,
+  "players": {
+    "M. Salah": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "assists": 1,
+      "goals": 1
+    },
+    "A. Fatouh": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "M. Hany": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "K. Hafez": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "N. Dunga": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "Trezeguet": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2,
+      "goals": 1
+    },
+    "M. El Shenawy": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "Y. Ibrahim": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1
+    },
+    "R. Rabia": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "H. Fathy": {
+      "position": "D",
+      "matches": 2,
+      "subs": 0
+    },
+    "E. M. Soliman": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Lasheen": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 2
+    },
+    "Zizo": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "E. Ashour": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "goals": 1
+    },
+    "H. Hassan": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Saber": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2,
+      "yellow": 1,
+      "goals": 1
+    },
+    "I. Adel": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "O. Marmoush": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1
+    },
+    "M. Attia": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1
+    },
+    "M. Abdelmonem": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "O. Shobeir": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "H. Abdelmaguid": {
+      "position": "D",
+      "matches": 2,
+      "subs": 2
+    },
+    "M. Ziko": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "assists": 1
+    },
+    "T. Alaa": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "H. Abdelkarim": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Alaa": {
+      "position": null,
+      "matches": 2,
+      "subs": 2
+    },
+    "Mohamed Alaa": {
+      "position": "G",
+      "matches": 1,
+      "subs": 1
+    }
+  }
+}

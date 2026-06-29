@@ -1,0 +1,168 @@
+{
+  "name": "Tunisia",
+  "matches": [
+    {
+      "opponent": "Sweden",
+      "score": "5:1",
+      "date": "2026-06-15",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    },
+    {
+      "opponent": "Japan",
+      "score": "0:4",
+      "date": "2026-06-21",
+      "stage": "",
+      "home": true,
+      "result": "loss"
+    },
+    {
+      "opponent": "Netherlands",
+      "score": "1:3",
+      "date": "2026-06-26",
+      "stage": "",
+      "home": true,
+      "result": "loss"
+    }
+  ],
+  "wins": 0,
+  "draws": 0,
+  "losses": 3,
+  "scored": 2,
+  "conceded": 12,
+  "players": {
+    "M. Belhadj": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Ben Hamida": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "O. Rekik": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "H. Mejbri": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "A. Slimane": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0
+    },
+    "I. Gharbi": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2
+    },
+    "E. Saad": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1
+    },
+    "H. Mastouri": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2,
+      "goals": 1
+    },
+    "M. Neffati": {
+      "position": "D",
+      "matches": 2,
+      "subs": 2
+    },
+    "A. Arous": {
+      "position": "D",
+      "matches": 2,
+      "subs": 2
+    },
+    "K. Ayari": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "R. Chikhaoui": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Chamakh": {
+      "position": "G",
+      "matches": 3,
+      "subs": 2
+    },
+    "R. Elloumi": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "D. Bronn": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "F. Chaouat": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "Y. Valery": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "E. Skhiri": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "R. Khedira": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1
+    },
+    "E. Achouri": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "S. Ben Hessen": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Dahmen": {
+      "position": "G",
+      "matches": 3,
+      "subs": 1
+    },
+    "M. Ben Ouanes": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Abdi": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "M. Talbi": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "S. Tounekti": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2
+    }
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "name": "Czechia",
+  "matches": [
+    {
+      "opponent": "South Korea",
+      "score": "2:1",
+      "date": "2026-06-12",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    },
+    {
+      "opponent": "South Africa",
+      "score": "1:1",
+      "date": "2026-06-18",
+      "stage": "",
+      "home": true,
+      "result": "draw"
+    },
+    {
+      "opponent": "Mexico",
+      "score": "0:3",
+      "date": "2026-06-25",
+      "stage": "",
+      "home": true,
+      "result": "loss"
+    }
+  ],
+  "wins": 0,
+  "draws": 1,
+  "losses": 2,
+  "scored": 2,
+  "conceded": 6,
+  "players": {
+    "M. Kovar": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "S. Chaloupek": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "R. Hranac": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "L. Krejci": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "goals": 1,
+      "yellow": 1
+    },
+    "V. Coufal": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "T. Soucek": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "A. Sojka": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "J. Zeleny": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "P. Sulc": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1
+    },
+    "L. Provod": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2
+    },
+    "P. Schick": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1
+    },
+    "J. Stanek": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "L. Hornicek": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "D. Jurasek": {
+      "position": "D",
+      "matches": 1,
+      "subs": 1
+    },
+    "D. Zima": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "T. Holes": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "M. Sadilek": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1,
+      "goals": 1
+    },
+    "D. Doudera": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "D. Visinsky": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "H. Sochurek": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "L. Cerv": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "V. Darida": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "A. Hlozek": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1
+    },
+    "J. Kuchta": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Chytil": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "T. Chory": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    }
+  }
+}

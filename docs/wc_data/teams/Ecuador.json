@@ -1,0 +1,173 @@
+{
+  "name": "Ecuador",
+  "matches": [
+    {
+      "opponent": "Ivory Coast",
+      "score": "1:0",
+      "date": "2026-06-15",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    },
+    {
+      "opponent": "Curaçao",
+      "score": "0:0",
+      "date": "2026-06-21",
+      "stage": "",
+      "home": true,
+      "result": "draw"
+    },
+    {
+      "opponent": "Germany",
+      "score": "2:1",
+      "date": "2026-06-25",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    }
+  ],
+  "wins": 1,
+  "draws": 1,
+  "losses": 1,
+  "scored": 2,
+  "conceded": 2,
+  "players": {
+    "H. Galindez": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "J. Ordonez": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "W. Pacho": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "P. Hincapie": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "A. Minda": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "A. Franco": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "M. Caicedo": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "P. Vite": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "G. Plata": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1,
+      "goals": 1
+    },
+    "E. Valencia": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0
+    },
+    "J. Yeboah": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "G. Valle": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Ramirez": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "Y. Medina": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "J. Porozo": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3,
+      "yellow": 1
+    },
+    "F. Torres": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "N. Angulo": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2,
+      "goals": 1
+    },
+    "K. Paez": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "P. Estupinan": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "J. Alcivar": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2,
+      "yellow": 1
+    },
+    "A. Preciado": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "D. Castillo": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "J. Caicedo": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Valencia": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "J. Arevalo": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "K. Rodriguez": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    }
+  }
+}

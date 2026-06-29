@@ -1,0 +1,176 @@
+{
+  "name": "Paraguay",
+  "matches": [
+    {
+      "opponent": "USA",
+      "score": "4:1",
+      "date": "2026-06-13",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    },
+    {
+      "opponent": "Türkiye",
+      "score": "0:1",
+      "date": "2026-06-20",
+      "stage": "",
+      "home": false,
+      "result": "win"
+    },
+    {
+      "opponent": "Australia",
+      "score": "0:0",
+      "date": "2026-06-26",
+      "stage": "",
+      "home": true,
+      "result": "draw"
+    }
+  ],
+  "wins": 1,
+  "draws": 1,
+  "losses": 1,
+  "scored": 2,
+  "conceded": 4,
+  "players": {
+    "J. Alonso": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1
+    },
+    "Fabian Balbuena": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "G. Gomez": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "M. Almiron": {
+      "position": "M",
+      "matches": 2,
+      "subs": 0,
+      "yellow": 1,
+      "red": 1
+    },
+    "Kaku": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Sanabria": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2
+    },
+    "O. Alderete": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "A. Cubas": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "G. Avalos": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2
+    },
+    "G. Velazquez": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "G. Olveira": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "I. Pitta": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2,
+      "assists": 1
+    },
+    "J. Canale": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "J. Enciso": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0
+    },
+    "B. Ojeda": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "O. Gill": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "A. Arce": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3,
+      "yellow": 1
+    },
+    "Mauricio": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3,
+      "goals": 1
+    },
+    "G. Caballero": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "D. Bobadilla": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "J. Caceres": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "R. Sosa": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "D. Gomez": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 2
+    },
+    "M. Galarza": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1,
+      "goals": 1,
+      "yellow": 1
+    },
+    "A. Maidana": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "R. Fernandez": {
+      "position": null,
+      "matches": 3,
+      "subs": 3
+    }
+  }
+}

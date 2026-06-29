@@ -1,0 +1,463 @@
+{
+  "id": 1489378,
+  "home": "Iran",
+  "away": "New Zealand",
+  "home_id": 22,
+  "away_id": 4673,
+  "score": "2:2",
+  "score_h": 2,
+  "score_a": 2,
+  "date": "2026-06-16T04:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "César Ramos Palazuelos, Mexico",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "substitution",
+      "player": "S. Moghanlou",
+      "minute": 53,
+      "team": "Iran",
+      "assist": "A. Alipour"
+    },
+    {
+      "type": "goal",
+      "player": "E. Just",
+      "minute": 7,
+      "team": "New Zealand",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "R. Rezaeian",
+      "minute": 32,
+      "team": "Iran",
+      "assist": "S. Moghanlou"
+    },
+    {
+      "type": "goal",
+      "player": "E. Just",
+      "minute": 54,
+      "team": "New Zealand",
+      "assist": "C. Wood"
+    },
+    {
+      "type": "goal",
+      "player": "M. Mohebi",
+      "minute": 64,
+      "team": "Iran",
+      "assist": "R. Rezaeian"
+    },
+    {
+      "type": "substitution",
+      "player": "S. Ghoddos",
+      "minute": 65,
+      "team": "Iran",
+      "assist": "E. Hajsafi"
+    },
+    {
+      "type": "substitution",
+      "player": "L. Cacace",
+      "minute": 68,
+      "team": "New Zealand",
+      "assist": "B. Old"
+    },
+    {
+      "type": "substitution",
+      "player": "C. McCowatt",
+      "minute": 68,
+      "team": "New Zealand",
+      "assist": "R. Thomas"
+    },
+    {
+      "type": "substitution",
+      "player": "T. Payne",
+      "minute": 78,
+      "team": "New Zealand",
+      "assist": "C. Elliot"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Taremi",
+      "minute": 80,
+      "team": "Iran",
+      "assist": "A. Hosseinzadeh"
+    },
+    {
+      "type": "yellow card",
+      "player": "E. Hajsafi",
+      "minute": 89,
+      "team": "Iran",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "A. Yousefi",
+      "minute": 46,
+      "team": "Iran",
+      "assist": "M. Ghaedi"
+    },
+    {
+      "type": "substitution",
+      "player": "S. Singh",
+      "minute": 90,
+      "team": "New Zealand",
+      "assist": "J. Randall"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Stamenic",
+      "minute": 90,
+      "team": "New Zealand",
+      "assist": "T. Bindon"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "D. Eiri",
+      "position": null,
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "A. Beiranvand",
+      "position": "G",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "R. Rezaeian",
+      "position": "D",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "S. Khalilzadeh",
+      "position": "D",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "M. Mohammadi",
+      "position": "D",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "M. Mohebi",
+      "position": "M",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "S. Ghoddos",
+      "position": "M",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "S. Ezatolahi",
+      "position": "M",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "A. Yousefi",
+      "position": "M",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "S. Moghanlou",
+      "position": "F",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "M. Taremi",
+      "position": "F",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "M. Crocombe",
+      "position": "G",
+      "sub": false,
+      "team": "New Zealand"
+    },
+    {
+      "name": "T. Payne",
+      "position": "D",
+      "sub": false,
+      "team": "New Zealand"
+    },
+    {
+      "name": "F. Surman",
+      "position": "D",
+      "sub": false,
+      "team": "New Zealand"
+    },
+    {
+      "name": "M. Boxall",
+      "position": "D",
+      "sub": false,
+      "team": "New Zealand"
+    },
+    {
+      "name": "L. Cacace",
+      "position": "D",
+      "sub": false,
+      "team": "New Zealand"
+    },
+    {
+      "name": "J. Bell",
+      "position": "M",
+      "sub": false,
+      "team": "New Zealand"
+    },
+    {
+      "name": "M. Stamenic",
+      "position": "M",
+      "sub": false,
+      "team": "New Zealand"
+    },
+    {
+      "name": "C. McCowatt",
+      "position": "M",
+      "sub": false,
+      "team": "New Zealand"
+    },
+    {
+      "name": "S. Singh",
+      "position": "M",
+      "sub": false,
+      "team": "New Zealand"
+    },
+    {
+      "name": "E. Just",
+      "position": "M",
+      "sub": false,
+      "team": "New Zealand"
+    },
+    {
+      "name": "C. Wood",
+      "position": "F",
+      "sub": false,
+      "team": "New Zealand"
+    },
+    {
+      "name": "P. Niazmand",
+      "position": "G",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "H. Hosseini",
+      "position": "G",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "S. Hardani",
+      "position": "D",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "H. Kanaani",
+      "position": "D",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "E. Hajsafi",
+      "position": "D",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "R. Cheshmi",
+      "position": "M",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "A. Razzaghinia",
+      "position": "M",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "M. Ghaedi",
+      "position": "F",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "M. Ghorbani",
+      "position": "M",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "M. Torabi",
+      "position": "M",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "A. Alipour",
+      "position": "F",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "A. Hosseinzadeh",
+      "position": "F",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "A. Jahanbakhsh",
+      "position": "F",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "D. Eckert",
+      "position": "F",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "A. Paulsen",
+      "position": "G",
+      "sub": true,
+      "team": "New Zealand"
+    },
+    {
+      "name": "M. Woud",
+      "position": "G",
+      "sub": true,
+      "team": "New Zealand"
+    },
+    {
+      "name": "T. Smith",
+      "position": "D",
+      "sub": true,
+      "team": "New Zealand"
+    },
+    {
+      "name": "F. De Vries",
+      "position": "D",
+      "sub": true,
+      "team": "New Zealand"
+    },
+    {
+      "name": "N. Pijnaker",
+      "position": "D",
+      "sub": true,
+      "team": "New Zealand"
+    },
+    {
+      "name": "C. Elliot",
+      "position": "D",
+      "sub": true,
+      "team": "New Zealand"
+    },
+    {
+      "name": "T. Bindon",
+      "position": "D",
+      "sub": true,
+      "team": "New Zealand"
+    },
+    {
+      "name": "J. Randall",
+      "position": "F",
+      "sub": true,
+      "team": "New Zealand"
+    },
+    {
+      "name": "B. Old",
+      "position": "F",
+      "sub": true,
+      "team": "New Zealand"
+    },
+    {
+      "name": "R. Thomas",
+      "position": "M",
+      "sub": true,
+      "team": "New Zealand"
+    },
+    {
+      "name": "L. Bayliss",
+      "position": "M",
+      "sub": true,
+      "team": "New Zealand"
+    },
+    {
+      "name": "A. Rufer",
+      "position": "M",
+      "sub": true,
+      "team": "New Zealand"
+    },
+    {
+      "name": "B. Waine",
+      "position": "F",
+      "sub": true,
+      "team": "New Zealand"
+    },
+    {
+      "name": "K. Barbarouses",
+      "position": "F",
+      "sub": true,
+      "team": "New Zealand"
+    },
+    {
+      "name": "A. Nemati",
+      "position": null,
+      "sub": false,
+      "team": "Iran"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 4,
+    "shotsOnGoalAway": 8,
+    "shotsOffGoalHome": 8,
+    "shotsOffGoalAway": 4,
+    "totalShotsHome": 17,
+    "totalShotsAway": 14,
+    "blockedShotsHome": 5,
+    "blockedShotsAway": 2,
+    "cornerKicksHome": 4,
+    "cornerKicksAway": 1,
+    "foulsHome": 10,
+    "foulsAway": 8,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 0,
+    "ballPossessionHome": 49,
+    "ballPossessionAway": 51,
+    "offsidesHome": 2,
+    "offsidesAway": 0,
+    "goalkeeperSavesHome": 6,
+    "goalkeeperSavesAway": 2,
+    "totalPassesHome": 409,
+    "totalPassesAway": 446,
+    "passesAccurateHome": 314,
+    "passesAccurateAway": 376,
+    "crossesHome": 19,
+    "crossesAway": 12,
+    "interceptionsHome": 11,
+    "interceptionsAway": 15,
+    "duelsWonHome": 54,
+    "duelsWonAway": 43,
+    "freeKicksHome": 8,
+    "freeKicksAway": 10,
+    "expectedGoalsHome": 1.5,
+    "expectedGoalsAway": 1.2400000095367432,
+    "bigChancesHome": 2,
+    "bigChancesAway": 2
+  }
+}

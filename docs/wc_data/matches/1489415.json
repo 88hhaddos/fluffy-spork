@@ -1,0 +1,485 @@
+{
+  "id": 1489415,
+  "home": "New Zealand",
+  "away": "Belgium",
+  "home_id": 4673,
+  "away_id": 1,
+  "score": "1:5",
+  "score_h": 1,
+  "score_a": 5,
+  "date": "2026-06-27T06:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "BC Place",
+  "referee": "A. Makhadmeh",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "substitution",
+      "player": "S. Singh",
+      "minute": 46,
+      "team": "New Zealand",
+      "assist": "J. Randall"
+    },
+    {
+      "type": "substitution",
+      "player": "R. Thomas",
+      "minute": 46,
+      "team": "New Zealand",
+      "assist": "B. Old"
+    },
+    {
+      "type": "yellow card",
+      "player": "M. Stamenic",
+      "minute": 46,
+      "team": "New Zealand",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "L. Trossard",
+      "minute": 50,
+      "team": "Belgium",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "E. Just",
+      "minute": 56,
+      "team": "New Zealand",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "J. Doku",
+      "minute": 56,
+      "team": "Belgium",
+      "assist": "M. Fernandez-Pardo"
+    },
+    {
+      "type": "goal",
+      "player": "K. De Bruyne",
+      "minute": 66,
+      "team": "Belgium",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "L. Trossard",
+      "minute": 72,
+      "team": "Belgium",
+      "assist": "A. Saelemaekers"
+    },
+    {
+      "type": "substitution",
+      "player": "K. De Bruyne",
+      "minute": 72,
+      "team": "Belgium",
+      "assist": "A. Onana"
+    },
+    {
+      "type": "substitution",
+      "player": "L. Cacace",
+      "minute": 79,
+      "team": "New Zealand",
+      "assist": "F. De Vries"
+    },
+    {
+      "type": "goal",
+      "player": "R. Lukaku",
+      "minute": 86,
+      "team": "Belgium",
+      "assist": "N. Raskin"
+    },
+    {
+      "type": "goal",
+      "player": "A. Saelemaekers",
+      "minute": 90,
+      "team": "Belgium",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "E. Just",
+      "minute": 84,
+      "team": "New Zealand",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "C. De Ketelaere",
+      "minute": 85,
+      "team": "Belgium",
+      "assist": "R. Lukaku"
+    },
+    {
+      "type": "substitution",
+      "player": "Y. Tielemans",
+      "minute": 85,
+      "team": "Belgium",
+      "assist": "N. Raskin"
+    },
+    {
+      "type": "goal",
+      "player": null,
+      "minute": 28,
+      "team": "Belgium",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "T. Payne",
+      "minute": 64,
+      "team": "New Zealand",
+      "assist": "M. Boxall"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Bell",
+      "minute": 64,
+      "team": "New Zealand",
+      "assist": "C. McCowatt"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "A. Rufer",
+      "position": "M",
+      "sub": true,
+      "team": "New Zealand"
+    },
+    {
+      "name": "C. McCowatt",
+      "position": "M",
+      "sub": true,
+      "team": "New Zealand"
+    },
+    {
+      "name": "J. Randall",
+      "position": "F",
+      "sub": true,
+      "team": "New Zealand"
+    },
+    {
+      "name": "L. Bayliss",
+      "position": "M",
+      "sub": true,
+      "team": "New Zealand"
+    },
+    {
+      "name": "B. Old",
+      "position": "F",
+      "sub": true,
+      "team": "New Zealand"
+    },
+    {
+      "name": "L. Rogerson",
+      "position": "F",
+      "sub": true,
+      "team": "New Zealand"
+    },
+    {
+      "name": "K. Barbarouses",
+      "position": "F",
+      "sub": true,
+      "team": "New Zealand"
+    },
+    {
+      "name": "B. Waine",
+      "position": "F",
+      "sub": true,
+      "team": "New Zealand"
+    },
+    {
+      "name": "S. Lammens",
+      "position": "G",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "M. Penders",
+      "position": "G",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "J. Seys",
+      "position": "D",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "K. De Winter",
+      "position": "D",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "T. Meunier",
+      "position": "D",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "A. Onana",
+      "position": "M",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "D. Moreira",
+      "position": "F",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "D. Lukebakio",
+      "position": "F",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "N. Raskin",
+      "position": "M",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "A. Witsel",
+      "position": "M",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "A. Saelemaekers",
+      "position": "F",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "M. Fernandez-Pardo",
+      "position": "F",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "R. Lukaku",
+      "position": "F",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "M. Crocombe",
+      "position": "G",
+      "sub": false,
+      "team": "New Zealand"
+    },
+    {
+      "name": "T. Payne",
+      "position": "D",
+      "sub": false,
+      "team": "New Zealand"
+    },
+    {
+      "name": "F. Surman",
+      "position": "D",
+      "sub": false,
+      "team": "New Zealand"
+    },
+    {
+      "name": "T. Bindon",
+      "position": "D",
+      "sub": false,
+      "team": "New Zealand"
+    },
+    {
+      "name": "L. Cacace",
+      "position": "D",
+      "sub": false,
+      "team": "New Zealand"
+    },
+    {
+      "name": "M. Stamenic",
+      "position": "M",
+      "sub": false,
+      "team": "New Zealand"
+    },
+    {
+      "name": "J. Bell",
+      "position": "M",
+      "sub": false,
+      "team": "New Zealand"
+    },
+    {
+      "name": "R. Thomas",
+      "position": "M",
+      "sub": false,
+      "team": "New Zealand"
+    },
+    {
+      "name": "S. Singh",
+      "position": "M",
+      "sub": false,
+      "team": "New Zealand"
+    },
+    {
+      "name": "E. Just",
+      "position": "M",
+      "sub": false,
+      "team": "New Zealand"
+    },
+    {
+      "name": "C. Wood",
+      "position": "F",
+      "sub": false,
+      "team": "New Zealand"
+    },
+    {
+      "name": "T. Courtois",
+      "position": "G",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "T. Castagne",
+      "position": "D",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "B. Mechele",
+      "position": "D",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "A. Theate",
+      "position": "D",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "M. De Cuyper",
+      "position": "D",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "H. Vanaken",
+      "position": "M",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "Y. Tielemans",
+      "position": "M",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "L. Trossard",
+      "position": "M",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "K. De Bruyne",
+      "position": "M",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "J. Doku",
+      "position": "M",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "C. De Ketelaere",
+      "position": "F",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "M. Woud",
+      "position": "G",
+      "sub": true,
+      "team": "New Zealand"
+    },
+    {
+      "name": "A. Paulsen",
+      "position": "G",
+      "sub": true,
+      "team": "New Zealand"
+    },
+    {
+      "name": "N. Pijnaker",
+      "position": "D",
+      "sub": true,
+      "team": "New Zealand"
+    },
+    {
+      "name": "M. Boxall",
+      "position": "D",
+      "sub": true,
+      "team": "New Zealand"
+    },
+    {
+      "name": "F. De Vries",
+      "position": "D",
+      "sub": true,
+      "team": "New Zealand"
+    },
+    {
+      "name": "T. Smith",
+      "position": "D",
+      "sub": true,
+      "team": "New Zealand"
+    },
+    {
+      "name": "C. Elliot",
+      "position": "D",
+      "sub": true,
+      "team": "New Zealand"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 2,
+    "shotsOnGoalAway": 10,
+    "shotsOffGoalHome": 3,
+    "shotsOffGoalAway": 13,
+    "totalShotsHome": 6,
+    "totalShotsAway": 35,
+    "blockedShotsHome": 1,
+    "blockedShotsAway": 12,
+    "cornerKicksHome": 5,
+    "cornerKicksAway": 8,
+    "foulsHome": 10,
+    "foulsAway": 7,
+    "yellowCardsHome": 2,
+    "yellowCardsAway": 0,
+    "ballPossessionHome": 45,
+    "ballPossessionAway": 55,
+    "offsidesHome": 1,
+    "offsidesAway": 1,
+    "goalkeeperSavesHome": 5,
+    "goalkeeperSavesAway": 1,
+    "totalPassesHome": 435,
+    "totalPassesAway": 526,
+    "passesAccurateHome": 369,
+    "passesAccurateAway": 462,
+    "crossesHome": 17,
+    "crossesAway": 16,
+    "interceptionsHome": 6,
+    "interceptionsAway": 10,
+    "duelsWonHome": 31,
+    "duelsWonAway": 38,
+    "freeKicksHome": 7,
+    "freeKicksAway": 10,
+    "expectedGoalsHome": 0.23999999463558197,
+    "expectedGoalsAway": 3.5999999046325684,
+    "bigChancesHome": 0,
+    "bigChancesAway": 4
+  }
+}

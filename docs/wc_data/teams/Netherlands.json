@@ -1,0 +1,180 @@
+{
+  "name": "Netherlands",
+  "matches": [
+    {
+      "opponent": "Japan",
+      "score": "2:2",
+      "date": "2026-06-14",
+      "stage": "",
+      "home": true,
+      "result": "draw"
+    },
+    {
+      "opponent": "Sweden",
+      "score": "5:1",
+      "date": "2026-06-20",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    },
+    {
+      "opponent": "Tunisia",
+      "score": "1:3",
+      "date": "2026-06-26",
+      "stage": "",
+      "home": false,
+      "result": "win"
+    }
+  ],
+  "wins": 2,
+  "draws": 1,
+  "losses": 0,
+  "scored": 10,
+  "conceded": 4,
+  "players": {
+    "B. Verbruggen": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "D. Dumfries": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "assists": 2
+    },
+    "J. P. van Hecke": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "goals": 1
+    },
+    "V. van Dijk": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "goals": 1
+    },
+    "M. van de Ven": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1
+    },
+    "R. Gravenberch": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "assists": 2
+    },
+    "F. de Jong": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "T. Reijnders": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "assists": 1
+    },
+    "C. Summerville": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2,
+      "yellow": 1,
+      "goals": 2,
+      "assists": 1
+    },
+    "D. Malen": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0
+    },
+    "C. Gakpo": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0,
+      "assists": 1,
+      "goals": 2
+    },
+    "M. Flekken": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "R. Roefs": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "J. Hato": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "L. Geertruida": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Wieffer": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "N. Ake": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "G. Til": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. De Roon": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "J. Kluivert": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "Q. Timber": {
+      "position": "M",
+      "matches": 2,
+      "subs": 2
+    },
+    "T. Koopmeiners": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "B. Brobbey": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1,
+      "goals": 3
+    },
+    "M. Depay": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3,
+      "yellow": 1,
+      "assists": 1
+    },
+    "W. Weghorst": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "N. Lang": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    }
+  }
+}

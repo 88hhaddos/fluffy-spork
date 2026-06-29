@@ -1,0 +1,172 @@
+{
+  "name": "Curaçao",
+  "matches": [
+    {
+      "opponent": "Germany",
+      "score": "7:1",
+      "date": "2026-06-14",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    },
+    {
+      "opponent": "Ecuador",
+      "score": "0:0",
+      "date": "2026-06-21",
+      "stage": "",
+      "home": false,
+      "result": "draw"
+    },
+    {
+      "opponent": "Ivory Coast",
+      "score": "0:2",
+      "date": "2026-06-25",
+      "stage": "",
+      "home": true,
+      "result": "loss"
+    }
+  ],
+  "wins": 0,
+  "draws": 1,
+  "losses": 2,
+  "scored": 1,
+  "conceded": 9,
+  "players": {
+    "E. Room": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "S. Floranus": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "R. Bazoer": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "A. Obispo": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "D. Fonville": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "L. Comenencia": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "goals": 1,
+      "yellow": 1
+    },
+    "L. Bacuna": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "S. Hansen": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2
+    },
+    "T. Chong": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "J. Bacuna": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 2
+    },
+    "J. Locadia": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0
+    },
+    "T. Doornbusch": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "T. Bodak": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "J. Gaari": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1
+    },
+    "J. Brenet": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "S. Sambo": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "R. van Eijma": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Martha": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "J. Antonisse": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "K. Gorre": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "K. Felida": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "T. Noslin": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "J. Margaritha": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "G. Roemeratoe": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "G. Kastaneer": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3,
+      "yellow": 2
+    },
+    "B. Kuwas": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    }
+  }
+}

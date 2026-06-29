@@ -1,0 +1,497 @@
+{
+  "id": 1489399,
+  "home": "Argentina",
+  "away": "Austria",
+  "home_id": 26,
+  "away_id": 775,
+  "score": "2:0",
+  "score_h": 2,
+  "score_a": 0,
+  "date": "2026-06-22T20:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Amin Mohamed Omar, Egypt",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "yellow card",
+      "player": "L. Paredes",
+      "minute": 90,
+      "team": "Argentina",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "L. Messi",
+      "minute": 9,
+      "team": "Argentina",
+      "assist": "L. Messi"
+    },
+    {
+      "type": "substitution",
+      "player": "F. Medina",
+      "minute": 82,
+      "team": "Argentina",
+      "assist": "N. Tagliafico"
+    },
+    {
+      "type": "substitution",
+      "player": "R. de Paul",
+      "minute": 82,
+      "team": "Argentina",
+      "assist": "L. Paredes"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Gregoritsch",
+      "minute": 85,
+      "team": "Austria",
+      "assist": "C. Chukwuemeka"
+    },
+    {
+      "type": "substitution",
+      "player": "R. Schmid",
+      "minute": 78,
+      "team": "Austria",
+      "assist": "P. Wimmer"
+    },
+    {
+      "type": "yellow card",
+      "player": "S. Posch",
+      "minute": 40,
+      "team": "Austria",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "C. Romero",
+      "minute": 57,
+      "team": "Argentina",
+      "assist": "N. Otamendi"
+    },
+    {
+      "type": "goal",
+      "player": "L. Messi",
+      "minute": 38,
+      "team": "Argentina",
+      "assist": "F. Medina"
+    },
+    {
+      "type": "substitution",
+      "player": "T. Almada",
+      "minute": 64,
+      "team": "Argentina",
+      "assist": "J. Alvarez"
+    },
+    {
+      "type": "substitution",
+      "player": "L. Martinez",
+      "minute": 65,
+      "team": "Argentina",
+      "assist": "N. Gonzalez"
+    },
+    {
+      "type": "penalty confirmed",
+      "player": "L. Martinez",
+      "minute": 7,
+      "team": "Argentina",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "L. Messi",
+      "minute": 90,
+      "team": "Argentina",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "D. Alaba",
+      "minute": 67,
+      "team": "Austria",
+      "assist": "M. Friedl"
+    },
+    {
+      "type": "substitution",
+      "player": "S. Posch",
+      "minute": 68,
+      "team": "Austria",
+      "assist": "A. Prass"
+    },
+    {
+      "type": "substitution",
+      "player": "P. Wanner",
+      "minute": 68,
+      "team": "Austria",
+      "assist": "M. Arnautovic"
+    },
+    {
+      "type": "yellow card",
+      "player": "F. Medina",
+      "minute": 76,
+      "team": "Argentina",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "K. Laimer",
+      "minute": 76,
+      "team": "Austria",
+      "assist": ""
+    }
+  ],
+  "lineups": [
+    {
+      "name": "E. Martinez",
+      "position": "G",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "N. Molina",
+      "position": "D",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "C. Romero",
+      "position": "D",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "L. Martinez",
+      "position": "D",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "F. Medina",
+      "position": "D",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "R. de Paul",
+      "position": "M",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "A. Mac Allister",
+      "position": "M",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "E. Fernandez",
+      "position": "M",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "T. Almada",
+      "position": "M",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "L. Messi",
+      "position": "F",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "L. Martinez",
+      "position": "F",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "A. Schlager",
+      "position": "G",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "S. Posch",
+      "position": "D",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "K. Danso",
+      "position": "D",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "D. Alaba",
+      "position": "D",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "K. Laimer",
+      "position": "D",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "N. Seiwald",
+      "position": "M",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "X. Schlager",
+      "position": "M",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "R. Schmid",
+      "position": "M",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "P. Wanner",
+      "position": "M",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "M. Sabitzer",
+      "position": "M",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "M. Gregoritsch",
+      "position": "F",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "J. Musso",
+      "position": "G",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "G. Rulli",
+      "position": "G",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "N. Tagliafico",
+      "position": "D",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "N. Otamendi",
+      "position": "D",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "M. Senesi",
+      "position": "D",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "G. Montiel",
+      "position": "D",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "V. Barco",
+      "position": "M",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "N. Paz",
+      "position": "F",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "L. Paredes",
+      "position": "M",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "G. Simeone",
+      "position": "F",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "G. Lo Celso",
+      "position": "M",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "E. Palacios",
+      "position": "M",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "N. Gonzalez",
+      "position": "F",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "J. Lopez",
+      "position": "F",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "J. Alvarez",
+      "position": "F",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "P. Pentz",
+      "position": "G",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "F. Wiegele",
+      "position": "G",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "D. Affengruber",
+      "position": "D",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "M. Friedl",
+      "position": "D",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "M. Svoboda",
+      "position": "D",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "P. Lienhart",
+      "position": "D",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "A. Prass",
+      "position": "D",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "D. Ljubicic",
+      "position": "M",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "P. Wimmer",
+      "position": "M",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "F. Grillitsch",
+      "position": "M",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "C. Chukwuemeka",
+      "position": "M",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "A. Schopf",
+      "position": "M",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "P. Mwene",
+      "position": "D",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "S. Kalajdzic",
+      "position": "F",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "M. Arnautovic",
+      "position": "F",
+      "sub": true,
+      "team": "Austria"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 5,
+    "shotsOnGoalAway": 1,
+    "shotsOffGoalHome": 4,
+    "shotsOffGoalAway": 5,
+    "totalShotsHome": 12,
+    "totalShotsAway": 6,
+    "blockedShotsHome": 3,
+    "blockedShotsAway": 0,
+    "cornerKicksHome": 1,
+    "cornerKicksAway": 3,
+    "foulsHome": 13,
+    "foulsAway": 13,
+    "yellowCardsHome": 2,
+    "yellowCardsAway": 2,
+    "ballPossessionHome": 54,
+    "ballPossessionAway": 46,
+    "offsidesHome": 2,
+    "offsidesAway": 0,
+    "goalkeeperSavesHome": 1,
+    "goalkeeperSavesAway": 2,
+    "totalPassesHome": 554,
+    "totalPassesAway": 468,
+    "passesAccurateHome": 494,
+    "passesAccurateAway": 401,
+    "crossesHome": 4,
+    "crossesAway": 17,
+    "interceptionsHome": 8,
+    "interceptionsAway": 9,
+    "duelsWonHome": 50,
+    "duelsWonAway": 46,
+    "freeKicksHome": 13,
+    "freeKicksAway": 13,
+    "expectedGoalsHome": 2.359999895095825,
+    "expectedGoalsAway": 0.5299999713897705,
+    "bigChancesHome": 3,
+    "bigChancesAway": 1
+  }
+}

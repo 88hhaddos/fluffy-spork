@@ -1,0 +1,463 @@
+{
+  "id": 1539010,
+  "home": "Czechia",
+  "away": "Mexico",
+  "home_id": 770,
+  "away_id": 16,
+  "score": "0:3",
+  "score_h": 0,
+  "score_a": 3,
+  "date": "2026-06-25T04:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "Estadio Banorte",
+  "referee": "Y. Perez",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "substitution",
+      "player": "D. Visinsky",
+      "minute": 56,
+      "team": "Czechia",
+      "assist": "L. Provod"
+    },
+    {
+      "type": "goal",
+      "player": "J. Quinones",
+      "minute": 61,
+      "team": "Mexico",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "G. Martinez",
+      "minute": 63,
+      "team": "Mexico",
+      "assist": "S. Gimenez"
+    },
+    {
+      "type": "substitution",
+      "player": "L. Romo",
+      "minute": 63,
+      "team": "Mexico",
+      "assist": "O. Vargas"
+    },
+    {
+      "type": "yellow card",
+      "player": "E. Alvarez",
+      "minute": 64,
+      "team": "Mexico",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "A. Hlozek",
+      "minute": 64,
+      "team": "Czechia",
+      "assist": "P. Schick"
+    },
+    {
+      "type": "substitution",
+      "player": "T. Holes",
+      "minute": 64,
+      "team": "Czechia",
+      "assist": "T. Soucek"
+    },
+    {
+      "type": "substitution",
+      "player": "G. Mora",
+      "minute": 72,
+      "team": "Mexico",
+      "assist": "A. Fidalgo"
+    },
+    {
+      "type": "goal",
+      "player": "M. Chavez Garcia",
+      "minute": 55,
+      "team": "Mexico",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "R. Rangel",
+      "minute": 78,
+      "team": "Mexico",
+      "assist": "G. Ochoa"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Chavez Garcia",
+      "minute": 78,
+      "team": "Mexico",
+      "assist": "J. Gallardo"
+    },
+    {
+      "type": "substitution",
+      "player": "L. Cerv",
+      "minute": 87,
+      "team": "Czechia",
+      "assist": "T. Chory"
+    },
+    {
+      "type": "substitution",
+      "player": "T. Soucek",
+      "minute": 87,
+      "team": "Czechia",
+      "assist": "A. Sojka"
+    },
+    {
+      "type": "goal",
+      "player": "A. Fidalgo",
+      "minute": 90,
+      "team": "Mexico",
+      "assist": "R. Alvarado"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "M. Kovar",
+      "position": "G",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "T. Holes",
+      "position": "D",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "R. Hranac",
+      "position": "D",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "L. Krejci",
+      "position": "D",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "V. Coufal",
+      "position": "M",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "M. Sadilek",
+      "position": "M",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "L. Cerv",
+      "position": "M",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "D. Doudera",
+      "position": "M",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "P. Sulc",
+      "position": "F",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "D. Visinsky",
+      "position": "F",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "A. Hlozek",
+      "position": "F",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "R. Rangel",
+      "position": "G",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "J. Sanchez",
+      "position": "D",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "I. Reyes",
+      "position": "D",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "C. Montes",
+      "position": "D",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "M. Chavez Garcia",
+      "position": "D",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "G. Mora",
+      "position": "M",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "E. Alvarez",
+      "position": "M",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "L. Romo",
+      "position": "M",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "R. Alvarado",
+      "position": "F",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "G. Martinez",
+      "position": "F",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "J. Quinones",
+      "position": "F",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "J. Stanek",
+      "position": "G",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "L. Hornicek",
+      "position": "G",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "S. Chaloupek",
+      "position": "D",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "D. Zima",
+      "position": "D",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "J. Zeleny",
+      "position": "D",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "A. Sojka",
+      "position": "M",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "H. Sochurek",
+      "position": "M",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "T. Soucek",
+      "position": "M",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "V. Darida",
+      "position": "M",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "P. Schick",
+      "position": "F",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "J. Kuchta",
+      "position": "F",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "L. Provod",
+      "position": "M",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "T. Chory",
+      "position": "F",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "M. Chytil",
+      "position": "F",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "C. Acevedo",
+      "position": "G",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "G. Ochoa",
+      "position": "G",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "J. Vasquez",
+      "position": "D",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "J. Gallardo",
+      "position": "D",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "E. Lira",
+      "position": "M",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "A. Fidalgo",
+      "position": "M",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "O. Pineda",
+      "position": "M",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "O. Vargas",
+      "position": "M",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "L. Chavez",
+      "position": "M",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "B. Gutierrez",
+      "position": "M",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "A. Vega",
+      "position": "F",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "C. S. Huerta Valera",
+      "position": "M",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "R. Jimenez",
+      "position": "F",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "S. Gimenez",
+      "position": "F",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "A. Gonzalez",
+      "position": "F",
+      "sub": true,
+      "team": "Mexico"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 1,
+    "shotsOnGoalAway": 5,
+    "shotsOffGoalHome": 8,
+    "shotsOffGoalAway": 4,
+    "totalShotsHome": 13,
+    "totalShotsAway": 11,
+    "blockedShotsHome": 4,
+    "blockedShotsAway": 2,
+    "cornerKicksHome": 5,
+    "cornerKicksAway": 1,
+    "foulsHome": 9,
+    "foulsAway": 13,
+    "yellowCardsHome": 0,
+    "yellowCardsAway": 1,
+    "ballPossessionHome": 52,
+    "ballPossessionAway": 48,
+    "offsidesHome": 1,
+    "offsidesAway": 0,
+    "goalkeeperSavesHome": 2,
+    "goalkeeperSavesAway": 1,
+    "totalPassesHome": 398,
+    "totalPassesAway": 388,
+    "passesAccurateHome": 332,
+    "passesAccurateAway": 331,
+    "crossesHome": 26,
+    "crossesAway": 12,
+    "interceptionsHome": 5,
+    "interceptionsAway": 7,
+    "duelsWonHome": 40,
+    "duelsWonAway": 34,
+    "freeKicksHome": 13,
+    "freeKicksAway": 9,
+    "expectedGoalsHome": 0.4699999988079071,
+    "expectedGoalsAway": 1.7899999618530273,
+    "bigChancesHome": 0,
+    "bigChancesAway": 5
+  }
+}

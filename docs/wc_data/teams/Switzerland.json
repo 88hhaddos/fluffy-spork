@@ -1,0 +1,174 @@
+{
+  "name": "Switzerland",
+  "matches": [
+    {
+      "opponent": "Qatar",
+      "score": "1:1",
+      "date": "2026-06-13",
+      "stage": "",
+      "home": false,
+      "result": "draw"
+    },
+    {
+      "opponent": "Bosnia & Herzegovina",
+      "score": "4:1",
+      "date": "2026-06-18",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    },
+    {
+      "opponent": "Canada",
+      "score": "2:1",
+      "date": "2026-06-24",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    }
+  ],
+  "wins": 2,
+  "draws": 1,
+  "losses": 0,
+  "scored": 7,
+  "conceded": 3,
+  "players": {
+    "G. Kobel": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "D. Zakaria": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2,
+      "yellow": 1
+    },
+    "M. Akanji": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "N. Elvedi": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "M. Aebischer": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "R. Freuler": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "G. Xhaka": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "goals": 1,
+      "yellow": 1
+    },
+    "R. Rodriguez": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "D. Ndoye": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1
+    },
+    "R. Vargas": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1,
+      "assists": 1,
+      "goals": 1
+    },
+    "B. Embolo": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0,
+      "goals": 2
+    },
+    "Y. Mvogo": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Keller": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "L. Jaquez": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "E. Comert": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Amenda": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "D. Sow": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "F. Rieder": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "J. Manzambi": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2,
+      "goals": 2
+    },
+    "S. Widmer": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "M. Muheim": {
+      "position": "D",
+      "matches": 1,
+      "subs": 1
+    },
+    "C. Fassnacht": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Jashari": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "C. Itten": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "Z. Amdouni": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "N. Okafor": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    }
+  }
+}

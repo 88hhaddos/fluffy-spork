@@ -1,0 +1,726 @@
+{
+  "B. Gutierrez": {
+    "yellow": 1,
+    "red": 0
+  },
+  "Y. Sithole": {
+    "yellow": 0,
+    "red": 1
+  },
+  "T. Zwane": {
+    "yellow": 0,
+    "red": 1
+  },
+  "T. Mokoena": {
+    "yellow": 2,
+    "red": 0
+  },
+  "C. Montes": {
+    "yellow": 0,
+    "red": 1
+  },
+  "N. Sibisi": {
+    "yellow": 1,
+    "red": 0
+  },
+  "Lee Gi-Hyuk": {
+    "yellow": 1,
+    "red": 0
+  },
+  "J. Lukic": {
+    "yellow": 1,
+    "red": 0
+  },
+  "L. De Fougerolles": {
+    "yellow": 1,
+    "red": 0
+  },
+  "E. Demirovic": {
+    "yellow": 1,
+    "red": 0
+  },
+  "N. Katic": {
+    "yellow": 1,
+    "red": 0
+  },
+  "A. Johnston": {
+    "yellow": 1,
+    "red": 0
+  },
+  "J. Caceres": {
+    "yellow": 1,
+    "red": 0
+  },
+  "T. Adams": {
+    "yellow": 1,
+    "red": 0
+  },
+  "D. Gomez": {
+    "yellow": 2,
+    "red": 0
+  },
+  "M. Almiron": {
+    "yellow": 1,
+    "red": 1
+  },
+  "A. Arce": {
+    "yellow": 1,
+    "red": 0
+  },
+  "J. Alonso": {
+    "yellow": 1,
+    "red": 0
+  },
+  "J. Gaber": {
+    "yellow": 1,
+    "red": 0
+  },
+  "M. Abunada": {
+    "yellow": 1,
+    "red": 0
+  },
+  "D. Zakaria": {
+    "yellow": 1,
+    "red": 0
+  },
+  "Casemiro": {
+    "yellow": 2,
+    "red": 0
+  },
+  "Roger Ibañez": {
+    "yellow": 1,
+    "red": 0
+  },
+  "J. Bellegarde": {
+    "yellow": 1,
+    "red": 0
+  },
+  "A. Hickey": {
+    "yellow": 1,
+    "red": 0
+  },
+  "F. Curtis": {
+    "yellow": 1,
+    "red": 0
+  },
+  "K. McLean": {
+    "yellow": 1,
+    "red": 0
+  },
+  "Y. Akgun": {
+    "yellow": 1,
+    "red": 0
+  },
+  "C. Summerville": {
+    "yellow": 1,
+    "red": 0
+  },
+  "M. Depay": {
+    "yellow": 1,
+    "red": 0
+  },
+  "M. van de Ven": {
+    "yellow": 1,
+    "red": 0
+  },
+  "F. Kessie": {
+    "yellow": 1,
+    "red": 0
+  },
+  "J. Porozo": {
+    "yellow": 1,
+    "red": 0
+  },
+  "S. Fofana": {
+    "yellow": 1,
+    "red": 0
+  },
+  "G. Doue": {
+    "yellow": 1,
+    "red": 0
+  },
+  "R. Khedira": {
+    "yellow": 1,
+    "red": 0
+  },
+  "S. Lopes Cabral": {
+    "yellow": 2,
+    "red": 0
+  },
+  "Pedri": {
+    "yellow": 1,
+    "red": 0
+  },
+  "M. Attia": {
+    "yellow": 1,
+    "red": 0
+  },
+  "T. Castagne": {
+    "yellow": 1,
+    "red": 0
+  },
+  "A. Fatouh": {
+    "yellow": 1,
+    "red": 0
+  },
+  "M. De Cuyper": {
+    "yellow": 1,
+    "red": 0
+  },
+  "A. Al Amri": {
+    "yellow": 1,
+    "red": 0
+  },
+  "E. Hajsafi": {
+    "yellow": 1,
+    "red": 0
+  },
+  "Z. Tahseen": {
+    "yellow": 1,
+    "red": 0
+  },
+  "M. Sabitzer": {
+    "yellow": 1,
+    "red": 0
+  },
+  "B. Silva": {
+    "yellow": 1,
+    "red": 0
+  },
+  "N. Semedo": {
+    "yellow": 1,
+    "red": 0
+  },
+  "T. Araujo": {
+    "yellow": 1,
+    "red": 0
+  },
+  "C. Mbemba": {
+    "yellow": 1,
+    "red": 0
+  },
+  "C. Yirenkyi": {
+    "yellow": 1,
+    "red": 0
+  },
+  "C. Blackman": {
+    "yellow": 1,
+    "red": 0
+  },
+  "C. Harvey": {
+    "yellow": 1,
+    "red": 0
+  },
+  "A. Khusanov": {
+    "yellow": 2,
+    "red": 0
+  },
+  "J. Mojica": {
+    "yellow": 1,
+    "red": 0
+  },
+  "L. Krejci": {
+    "yellow": 1,
+    "red": 0
+  },
+  "T. Mbatha": {
+    "yellow": 1,
+    "red": 0
+  },
+  "A. Dedic": {
+    "yellow": 1,
+    "red": 0
+  },
+  "T. Muharemovic": {
+    "yellow": 0,
+    "red": 1
+  },
+  "E. Dzeko": {
+    "yellow": 1,
+    "red": 0
+  },
+  "N. Elvedi": {
+    "yellow": 1,
+    "red": 0
+  },
+  "D. Cornelius": {
+    "yellow": 1,
+    "red": 0
+  },
+  "H. Al Amin": {
+    "yellow": 0,
+    "red": 1
+  },
+  "A. O. Madibo": {
+    "yellow": 0,
+    "red": 1
+  },
+  "A. Fathi": {
+    "yellow": 2,
+    "red": 0
+  },
+  "Paik Seung-Ho": {
+    "yellow": 1,
+    "red": 0
+  },
+  "Lee Kang-In": {
+    "yellow": 1,
+    "red": 0
+  },
+  "A. Circati": {
+    "yellow": 1,
+    "red": 0
+  },
+  "A. Robinson": {
+    "yellow": 1,
+    "red": 0
+  },
+  "F. Balogun": {
+    "yellow": 1,
+    "red": 0
+  },
+  "J. Italiano": {
+    "yellow": 2,
+    "red": 0
+  },
+  "H. Souttar": {
+    "yellow": 1,
+    "red": 0
+  },
+  "C. Richards": {
+    "yellow": 1,
+    "red": 0
+  },
+  "J. Bos": {
+    "yellow": 1,
+    "red": 0
+  },
+  "I. Diop": {
+    "yellow": 1,
+    "red": 0
+  },
+  "A. Robertson": {
+    "yellow": 1,
+    "red": 0
+  },
+  "C. Arcus": {
+    "yellow": 1,
+    "red": 0
+  },
+  "F. Pierrot": {
+    "yellow": 1,
+    "red": 0
+  },
+  "D. Jean Jacques": {
+    "yellow": 1,
+    "red": 0
+  },
+  "Douglas Santos": {
+    "yellow": 1,
+    "red": 0
+  },
+  "M. Galarza": {
+    "yellow": 1,
+    "red": 0
+  },
+  "E. Elmali": {
+    "yellow": 1,
+    "red": 0
+  },
+  "Y. Ayari": {
+    "yellow": 1,
+    "red": 0
+  },
+  "L. Bergvall": {
+    "yellow": 1,
+    "red": 0
+  },
+  "G. Gudmundsson": {
+    "yellow": 1,
+    "red": 0
+  },
+  "J. Alcivar": {
+    "yellow": 1,
+    "red": 0
+  },
+  "L. Bacuna": {
+    "yellow": 1,
+    "red": 0
+  },
+  "J. Bacuna": {
+    "yellow": 2,
+    "red": 0
+  },
+  "L. Comenencia": {
+    "yellow": 1,
+    "red": 0
+  },
+  "J. Gaari": {
+    "yellow": 1,
+    "red": 0
+  },
+  "G. Kastaneer": {
+    "yellow": 2,
+    "red": 0
+  },
+  "M. Kanno": {
+    "yellow": 1,
+    "red": 0
+  },
+  "S. Al Dawsari": {
+    "yellow": 1,
+    "red": 0
+  },
+  "R. Lukaku": {
+    "yellow": 1,
+    "red": 0
+  },
+  "S. Ezatolahi": {
+    "yellow": 2,
+    "red": 0
+  },
+  "N. Ngoy": {
+    "yellow": 0,
+    "red": 1
+  },
+  "D. Borges": {
+    "yellow": 1,
+    "red": 0
+  },
+  "R. Bentancur": {
+    "yellow": 1,
+    "red": 0
+  },
+  "M. Olivera": {
+    "yellow": 1,
+    "red": 0
+  },
+  "M. Lasheen": {
+    "yellow": 2,
+    "red": 0
+  },
+  "S. Singh": {
+    "yellow": 1,
+    "red": 0
+  },
+  "C. McCowatt": {
+    "yellow": 1,
+    "red": 0
+  },
+  "L. Paredes": {
+    "yellow": 1,
+    "red": 0
+  },
+  "S. Posch": {
+    "yellow": 1,
+    "red": 0
+  },
+  "F. Medina": {
+    "yellow": 1,
+    "red": 0
+  },
+  "K. Laimer": {
+    "yellow": 1,
+    "red": 0
+  },
+  "A. Al Ammari": {
+    "yellow": 2,
+    "red": 0
+  },
+  "R. Zerrouki": {
+    "yellow": 1,
+    "red": 0
+  },
+  "H. Abu Dahab": {
+    "yellow": 1,
+    "red": 0
+  },
+  "R. Veiga": {
+    "yellow": 1,
+    "red": 0
+  },
+  "O. Khamrobekov": {
+    "yellow": 1,
+    "red": 0
+  },
+  "D. Rice": {
+    "yellow": 1,
+    "red": 0
+  },
+  "I. Williams": {
+    "yellow": 1,
+    "red": 0
+  },
+  "Y. Barcenas": {
+    "yellow": 1,
+    "red": 0
+  },
+  "P. Sucic": {
+    "yellow": 1,
+    "red": 0
+  },
+  "J. Lucumi": {
+    "yellow": 1,
+    "red": 0
+  },
+  "J. Lerma": {
+    "yellow": 1,
+    "red": 0
+  },
+  "C. Pickel": {
+    "yellow": 1,
+    "red": 0
+  },
+  "E. Mahmic": {
+    "yellow": 1,
+    "red": 0
+  },
+  "G. Xhaka": {
+    "yellow": 1,
+    "red": 0
+  },
+  "C. Larin": {
+    "yellow": 1,
+    "red": 0
+  },
+  "L. Millar": {
+    "yellow": 1,
+    "red": 0
+  },
+  "D. Nazon": {
+    "yellow": 2,
+    "red": 0
+  },
+  "J. Casimir": {
+    "yellow": 1,
+    "red": 0
+  },
+  "Fabinho": {
+    "yellow": 1,
+    "red": 0
+  },
+  "R. Christie": {
+    "yellow": 1,
+    "red": 0
+  },
+  "Danilo": {
+    "yellow": 2,
+    "red": 0
+  },
+  "A. Modiba": {
+    "yellow": 1,
+    "red": 0
+  },
+  "Cho Gue-Sung": {
+    "yellow": 1,
+    "red": 0
+  },
+  "E. Alvarez": {
+    "yellow": 1,
+    "red": 0
+  },
+  "N. Pepe": {
+    "yellow": 1,
+    "red": 0
+  },
+  "G. Plata": {
+    "yellow": 1,
+    "red": 0
+  },
+  "P. Hincapie": {
+    "yellow": 1,
+    "red": 0
+  },
+  "A. Pavlovic": {
+    "yellow": 1,
+    "red": 0
+  },
+  "A. Franco": {
+    "yellow": 1,
+    "red": 0
+  },
+  "I. Hien": {
+    "yellow": 1,
+    "red": 0
+  },
+  "Shogo Taniguchi": {
+    "yellow": 1,
+    "red": 0
+  },
+  "V. Gyökeres": {
+    "yellow": 1,
+    "red": 0
+  },
+  "S. Berhalter": {
+    "yellow": 1,
+    "red": 0
+  },
+  "J. Irvine": {
+    "yellow": 1,
+    "red": 0
+  },
+  "R. Sulaka": {
+    "yellow": 0,
+    "red": 1
+  },
+  "P. Gueye": {
+    "yellow": 1,
+    "red": 0
+  },
+  "A. Seck": {
+    "yellow": 1,
+    "red": 0
+  },
+  "M. Doski": {
+    "yellow": 1,
+    "red": 0
+  },
+  "P. Berg": {
+    "yellow": 1,
+    "red": 0
+  },
+  "A. Tchouameni": {
+    "yellow": 1,
+    "red": 0
+  },
+  "A. Baena": {
+    "yellow": 1,
+    "red": 0
+  },
+  "J. Sanabria": {
+    "yellow": 1,
+    "red": 0
+  },
+  "G. Varela": {
+    "yellow": 1,
+    "red": 0
+  },
+  "N. de la Cruz": {
+    "yellow": 1,
+    "red": 0
+  },
+  "A. Canobbio": {
+    "yellow": 0,
+    "red": 1
+  },
+  "N. Al Dawsari": {
+    "yellow": 1,
+    "red": 0
+  },
+  "S. Abdulhamid": {
+    "yellow": 1,
+    "red": 0
+  },
+  "F. Al Buraikan": {
+    "yellow": 1,
+    "red": 0
+  },
+  "W. Pina": {
+    "yellow": 1,
+    "red": 0
+  },
+  "H. Kanaani": {
+    "yellow": 1,
+    "red": 0
+  },
+  "M. Saber": {
+    "yellow": 1,
+    "red": 0
+  },
+  "Y. Ibrahim": {
+    "yellow": 1,
+    "red": 0
+  },
+  "A. Nemati": {
+    "yellow": 1,
+    "red": 0
+  },
+  "S. Khalilzadeh": {
+    "yellow": 1,
+    "red": 0
+  },
+  "M. Stamenic": {
+    "yellow": 1,
+    "red": 0
+  },
+  "E. Just": {
+    "yellow": 1,
+    "red": 0
+  },
+  "I. Perisic": {
+    "yellow": 1,
+    "red": 0
+  },
+  "K. Peprah": {
+    "yellow": 1,
+    "red": 0
+  },
+  "J. Quansah": {
+    "yellow": 1,
+    "red": 0
+  },
+  "A. Andrade": {
+    "yellow": 1,
+    "red": 0
+  },
+  "J. Fajardo": {
+    "yellow": 1,
+    "red": 0
+  },
+  "G. Puerta": {
+    "yellow": 1,
+    "red": 0
+  },
+  "N. Sadiki": {
+    "yellow": 1,
+    "red": 0
+  },
+  "N. Mbuku": {
+    "yellow": 1,
+    "red": 0
+  },
+  "S. Moutoussamy": {
+    "yellow": 1,
+    "red": 0
+  },
+  "S. Nasrullaev": {
+    "yellow": 1,
+    "red": 0
+  },
+  "M. Abu Taha": {
+    "yellow": 1,
+    "red": 0
+  },
+  "Y. Al Arab": {
+    "yellow": 1,
+    "red": 0
+  },
+  "Shararh": {
+    "yellow": 1,
+    "red": 0
+  },
+  "M. Arnautovic": {
+    "yellow": 1,
+    "red": 0
+  },
+  "N. Sigur": {
+    "yellow": 1,
+    "red": 0
+  },
+  "N. Saliba": {
+    "yellow": 1,
+    "red": 0
+  },
+  "Kaishu Sano": {
+    "yellow": 1,
+    "red": 0
+  },
+  "Daichi Kamada": {
+    "yellow": 1,
+    "red": 0
+  },
+  "Junnosuke Suzuki": {
+    "yellow": 1,
+    "red": 0
+  }
+}

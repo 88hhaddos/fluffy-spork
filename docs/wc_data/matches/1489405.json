@@ -1,0 +1,504 @@
+{
+  "id": 1489405,
+  "home": "Morocco",
+  "away": "Haiti",
+  "home_id": 31,
+  "away_id": 2386,
+  "score": "4:2",
+  "score_h": 4,
+  "score_a": 2,
+  "date": "2026-06-25T01:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "Mercedes-Benz Stadium",
+  "referee": "Danny Makkelie, Netherlands",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "goal",
+      "player": "Bono",
+      "minute": 10,
+      "team": "Haiti",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "W. Isidor",
+      "minute": 43,
+      "team": "Haiti",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "R. Providence",
+      "minute": 67,
+      "team": "Haiti",
+      "assist": "D. Nazon"
+    },
+    {
+      "type": "substitution",
+      "player": "W. Isidor",
+      "minute": 67,
+      "team": "Haiti",
+      "assist": "L. Deedson"
+    },
+    {
+      "type": "goal",
+      "player": "A. Hakimi",
+      "minute": 39,
+      "team": "Morocco",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "B. Diaz",
+      "minute": 70,
+      "team": "Morocco",
+      "assist": "A. Ounahi"
+    },
+    {
+      "type": "substitution",
+      "player": "I. Saibari",
+      "minute": 70,
+      "team": "Morocco",
+      "assist": "S. Rahimi"
+    },
+    {
+      "type": "substitution",
+      "player": "A. El Kaabi",
+      "minute": 70,
+      "team": "Morocco",
+      "assist": "G. Yassine"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Duverne",
+      "minute": 80,
+      "team": "Haiti",
+      "assist": "C. Arcus"
+    },
+    {
+      "type": "goal",
+      "player": "I. Saibari",
+      "minute": 45,
+      "team": "Morocco",
+      "assist": "A. Hakimi"
+    },
+    {
+      "type": "yellow card",
+      "player": "D. Nazon",
+      "minute": 80,
+      "team": "Haiti",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "J. Casimir",
+      "minute": 90,
+      "team": "Haiti",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": null,
+      "minute": 78,
+      "team": "Morocco",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "J. Duverne",
+      "minute": 80,
+      "team": "Haiti",
+      "assist": "C. Arcus"
+    },
+    {
+      "type": "yellow card",
+      "player": "D. Nazon",
+      "minute": 79,
+      "team": "Haiti",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "A. Salah-Eddine",
+      "minute": 83,
+      "team": "Morocco",
+      "assist": "N. Mazraoui"
+    },
+    {
+      "type": "substitution",
+      "player": "N. El Aynaoui",
+      "minute": 83,
+      "team": "Morocco",
+      "assist": "S. El Mourabet"
+    },
+    {
+      "type": "substitution",
+      "player": "L. Joseph",
+      "minute": 83,
+      "team": "Haiti",
+      "assist": "F. Pierrot"
+    },
+    {
+      "type": "goal",
+      "player": "G. Yassine",
+      "minute": 89,
+      "team": "Morocco",
+      "assist": ""
+    }
+  ],
+  "lineups": [
+    {
+      "name": "C. Sainte",
+      "position": null,
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "Bono",
+      "position": "G",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "A. Hakimi",
+      "position": "D",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "R. Halhal",
+      "position": "D",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "C. Riad",
+      "position": "D",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "A. Salah-Eddine",
+      "position": "D",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "S. Amrabat",
+      "position": "M",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "N. El Aynaoui",
+      "position": "M",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "B. Diaz",
+      "position": "M",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "I. Saibari",
+      "position": "M",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "B. El Khannouss",
+      "position": "M",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "A. El Kaabi",
+      "position": "F",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "J. Placide",
+      "position": "G",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "J. Duverne",
+      "position": "D",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "R. Ade",
+      "position": "D",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "H. Delcroix",
+      "position": "D",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "M. Experience",
+      "position": "D",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "J. Casimir",
+      "position": "M",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "D. Jean Jacques",
+      "position": "M",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "J. Bellegarde",
+      "position": "M",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "R. Providence",
+      "position": "M",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "W. Isidor",
+      "position": "F",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "L. Joseph",
+      "position": "F",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "Munir",
+      "position": "G",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "A. Tagnaouti",
+      "position": "G",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "N. Mazraoui",
+      "position": "D",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "M. Saadane",
+      "position": "D",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "Z. El Ouahdi",
+      "position": "D",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "I. Diop",
+      "position": "D",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "Y. Belammari",
+      "position": "D",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "A. Bouaddi",
+      "position": "M",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "C. Talbi",
+      "position": "F",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "A. Ounahi",
+      "position": "M",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "S. El Mourabet",
+      "position": "M",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "G. Yassine",
+      "position": "F",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "A. Sbai",
+      "position": "F",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "S. Rahimi",
+      "position": "F",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "A. Amaimouni",
+      "position": "F",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "A. Pierre",
+      "position": "G",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "J. Duverger",
+      "position": "G",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "C. Arcus",
+      "position": "D",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "K. Thermoncy",
+      "position": "D",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "G. Metusala",
+      "position": "D",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "D. Lacroix",
+      "position": "D",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "W. Paugain",
+      "position": "D",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "W. Pierre",
+      "position": "M",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "D. Simon",
+      "position": "M",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "D. Etienne",
+      "position": "F",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "F. Pierrot",
+      "position": "F",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "L. Deedson",
+      "position": "F",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "Y. Fortune",
+      "position": "F",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "D. Nazon",
+      "position": "F",
+      "sub": true,
+      "team": "Haiti"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 11,
+    "shotsOnGoalAway": 2,
+    "shotsOffGoalHome": 6,
+    "shotsOffGoalAway": 4,
+    "totalShotsHome": 22,
+    "totalShotsAway": 9,
+    "blockedShotsHome": 5,
+    "blockedShotsAway": 3,
+    "cornerKicksHome": 9,
+    "cornerKicksAway": 1,
+    "foulsHome": 10,
+    "foulsAway": 18,
+    "yellowCardsHome": 0,
+    "yellowCardsAway": 3,
+    "ballPossessionHome": 69,
+    "ballPossessionAway": 31,
+    "offsidesHome": 5,
+    "offsidesAway": 0,
+    "goalkeeperSavesHome": 1,
+    "goalkeeperSavesAway": 8,
+    "totalPassesHome": 541,
+    "totalPassesAway": 247,
+    "passesAccurateHome": 477,
+    "passesAccurateAway": 198,
+    "crossesHome": 22,
+    "crossesAway": 3,
+    "interceptionsHome": 8,
+    "interceptionsAway": 16,
+    "duelsWonHome": 64,
+    "duelsWonAway": 54,
+    "freeKicksHome": 18,
+    "freeKicksAway": 10,
+    "expectedGoalsHome": 3.759999990463257,
+    "expectedGoalsAway": 0.6700000166893005,
+    "bigChancesHome": 4,
+    "bigChancesAway": 0
+  }
+}

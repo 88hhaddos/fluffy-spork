@@ -1,0 +1,465 @@
+{
+  "id": 1539009,
+  "home": "Bosnia & Herzegovina",
+  "away": "Qatar",
+  "home_id": 1113,
+  "away_id": 1569,
+  "score": "3:1",
+  "score_h": 3,
+  "score_a": 1,
+  "date": "2026-06-24T22:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "Lumen Field",
+  "referee": "Jesús Valenzuela, Venezuela",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "goal",
+      "player": "S. Al Brake",
+      "minute": 34,
+      "team": "Bosnia & Herzegovina",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "H. Al Haydos",
+      "minute": 42,
+      "team": "Qatar",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "I. Sunjic",
+      "minute": 46,
+      "team": "Bosnia & Herzegovina",
+      "assist": "B. Tahirovic"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Malic",
+      "minute": 46,
+      "team": "Bosnia & Herzegovina",
+      "assist": "A. Memic"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Gaber",
+      "minute": 46,
+      "team": "Qatar",
+      "assist": "A. Hatem"
+    },
+    {
+      "type": "substitution",
+      "player": "E. Dzeko",
+      "minute": 64,
+      "team": "Bosnia & Herzegovina",
+      "assist": "E. Mahmic"
+    },
+    {
+      "type": "substitution",
+      "player": "K. Boudiaf",
+      "minute": 72,
+      "team": "Qatar",
+      "assist": "A. Ali"
+    },
+    {
+      "type": "goal",
+      "player": "E. Mahmic",
+      "minute": 80,
+      "team": "Bosnia & Herzegovina",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "K. Alajbegovic",
+      "minute": 29,
+      "team": "Bosnia & Herzegovina",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "H. Al Haydos",
+      "minute": 56,
+      "team": "Qatar",
+      "assist": "A. Al Ganehi"
+    },
+    {
+      "type": "substitution",
+      "player": "N. Katic",
+      "minute": 63,
+      "team": "Bosnia & Herzegovina",
+      "assist": "D. Hadzikadunic"
+    },
+    {
+      "type": "yellow card",
+      "player": "A. Fathi",
+      "minute": 78,
+      "team": "Qatar",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "Edmilson Junior",
+      "minute": 79,
+      "team": "Qatar",
+      "assist": "A. Alaaeldin"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Fathi",
+      "minute": 79,
+      "team": "Qatar",
+      "assist": "M. Al Mannai"
+    },
+    {
+      "type": "yellow card",
+      "player": "E. Mahmic",
+      "minute": 82,
+      "team": "Bosnia & Herzegovina",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "K. Alajbegovic",
+      "minute": 82,
+      "team": "Bosnia & Herzegovina",
+      "assist": "D. Burnic"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "N. Vasilj",
+      "position": "G",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "A. Malic",
+      "position": "D",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "N. Katic",
+      "position": "D",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "S. Radeljic",
+      "position": "D",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "S. Kolasinac",
+      "position": "D",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "E. Bajraktarevic",
+      "position": "M",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "I. Sunjic",
+      "position": "M",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "I. Basic",
+      "position": "M",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "K. Alajbegovic",
+      "position": "M",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "E. Demirovic",
+      "position": "F",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "E. Dzeko",
+      "position": "F",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "M. Abunada",
+      "position": "G",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "Pedro Miguel",
+      "position": "D",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "B. Khoukhi",
+      "position": "D",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "I. Laye",
+      "position": "D",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "S. Al Brake",
+      "position": "D",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "J. Gaber",
+      "position": "M",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "A. Fathi",
+      "position": "M",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "K. Boudiaf",
+      "position": "M",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "H. Al Haydos",
+      "position": "F",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "A. Afif",
+      "position": "F",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "Edmilson Junior",
+      "position": "F",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "M. Zlomislic",
+      "position": "G",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "M. Jurkas",
+      "position": "G",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "N. Mujakic",
+      "position": "D",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "D. Hadzikadunic",
+      "position": "D",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "A. Dedic",
+      "position": "D",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "A. Hadziahmetovic",
+      "position": "M",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "A. Gigovic",
+      "position": "M",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "B. Tahirovic",
+      "position": "M",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "D. Burnic",
+      "position": "M",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "E. Mahmic",
+      "position": "M",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "A. Memic",
+      "position": "M",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "J. Lukic",
+      "position": "F",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "S. Bazdar",
+      "position": "F",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "H. Tabakovic",
+      "position": "F",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "M. Barsham",
+      "position": "G",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "S. Zakaria",
+      "position": "G",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "Lucas Mendes",
+      "position": "D",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "A. Al Hussain",
+      "position": "D",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "A. Al Oui",
+      "position": "D",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "A. Ali",
+      "position": "F",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "M. Al Mannai",
+      "position": "M",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "A. Hatem",
+      "position": "M",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "A. Al Ganehi",
+      "position": "F",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "T. Jamshid",
+      "position": "F",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "M. Muntari",
+      "position": "F",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "A. Alaaeldin",
+      "position": "F",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "Y. Abdurisag",
+      "position": "F",
+      "sub": true,
+      "team": "Qatar"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 5,
+    "shotsOnGoalAway": 3,
+    "shotsOffGoalHome": 4,
+    "shotsOffGoalAway": 6,
+    "totalShotsHome": 14,
+    "totalShotsAway": 9,
+    "blockedShotsHome": 5,
+    "blockedShotsAway": 0,
+    "cornerKicksHome": 5,
+    "cornerKicksAway": 5,
+    "foulsHome": 9,
+    "foulsAway": 14,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 1,
+    "ballPossessionHome": 54,
+    "ballPossessionAway": 46,
+    "offsidesHome": 1,
+    "offsidesAway": 3,
+    "goalkeeperSavesHome": 2,
+    "goalkeeperSavesAway": 3,
+    "totalPassesHome": 515,
+    "totalPassesAway": 434,
+    "passesAccurateHome": 452,
+    "passesAccurateAway": 371,
+    "crossesHome": 22,
+    "crossesAway": 17,
+    "interceptionsHome": 4,
+    "interceptionsAway": 4,
+    "duelsWonHome": 42,
+    "duelsWonAway": 28,
+    "freeKicksHome": 14,
+    "freeKicksAway": 9,
+    "expectedGoalsHome": 0.6800000071525574,
+    "expectedGoalsAway": 0.7699999809265137,
+    "bigChancesHome": 1,
+    "bigChancesAway": 3
+  }
+}

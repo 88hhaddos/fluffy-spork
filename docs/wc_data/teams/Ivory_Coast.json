@@ -1,0 +1,174 @@
+{
+  "name": "Ivory Coast",
+  "matches": [
+    {
+      "opponent": "Ecuador",
+      "score": "1:0",
+      "date": "2026-06-15",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    },
+    {
+      "opponent": "Germany",
+      "score": "2:1",
+      "date": "2026-06-20",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    },
+    {
+      "opponent": "Curaçao",
+      "score": "0:2",
+      "date": "2026-06-25",
+      "stage": "",
+      "home": false,
+      "result": "win"
+    }
+  ],
+  "wins": 2,
+  "draws": 0,
+  "losses": 1,
+  "scored": 4,
+  "conceded": 2,
+  "players": {
+    "Y. Fofana": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "G. Doue": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1
+    },
+    "W. Singo": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1,
+      "assists": 1
+    },
+    "E. Agbadou": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "G. Konan": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "Y. Diomande": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "S. Fofana": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2,
+      "yellow": 1
+    },
+    "F. Kessie": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1,
+      "goals": 1
+    },
+    "B. Toure": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "N. Pepe": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1,
+      "goals": 1,
+      "yellow": 1
+    },
+    "E. Wahi": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2
+    },
+    "M. Kone": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Lafont": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "C. Operi": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "O. Diomande": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "O. Kossounou": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "E. Ndicka": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "I. Sangare": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "P. Guiagon": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Diallo": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1,
+      "goals": 1
+    },
+    "S. Adingra": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "C. Inao Oulai": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "J. Seri": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "E. Guessand": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Bonny": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1
+    },
+    "O. Diakite": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    }
+  }
+}

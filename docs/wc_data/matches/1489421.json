@@ -1,0 +1,490 @@
+{
+  "id": 1489421,
+  "home": "Jordan",
+  "away": "Argentina",
+  "home_id": 1548,
+  "away_id": 26,
+  "score": "1:3",
+  "score_h": 1,
+  "score_a": 3,
+  "date": "2026-06-28T05:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Istvan Kovacs, Romania",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "yellow card",
+      "player": "M. Abu Taha",
+      "minute": 17,
+      "team": "Jordan",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "A. Azaizeh",
+      "minute": 46,
+      "team": "Jordan",
+      "assist": "M. Tamari"
+    },
+    {
+      "type": "substitution",
+      "player": "G. Lo Celso",
+      "minute": 60,
+      "team": "Argentina",
+      "assist": "T. Almada"
+    },
+    {
+      "type": "substitution",
+      "player": "L. Martinez",
+      "minute": 60,
+      "team": "Argentina",
+      "assist": "L. Messi"
+    },
+    {
+      "type": "substitution",
+      "player": "N. Paz",
+      "minute": 61,
+      "team": "Argentina",
+      "assist": "A. Mac Allister"
+    },
+    {
+      "type": "yellow card",
+      "player": "Y. Al Arab",
+      "minute": 64,
+      "team": "Jordan",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "N. Al Rashdan",
+      "minute": 76,
+      "team": "Jordan",
+      "assist": "A. Jamous"
+    },
+    {
+      "type": "goal",
+      "player": "L. Messi",
+      "minute": 80,
+      "team": "Argentina",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "J. Alvarez",
+      "minute": 82,
+      "team": "Argentina",
+      "assist": "J. Lopez"
+    },
+    {
+      "type": "substitution",
+      "player": "O. Al Fakhouri",
+      "minute": 46,
+      "team": "Jordan",
+      "assist": "M. Al Mardi"
+    },
+    {
+      "type": "substitution",
+      "player": "G. Simeone",
+      "minute": 71,
+      "team": "Argentina",
+      "assist": "V. Barco"
+    },
+    {
+      "type": "goal",
+      "player": "G. Lo Celso",
+      "minute": 19,
+      "team": "Argentina",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "L. Martinez",
+      "minute": 31,
+      "team": "Argentina",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "Shararh",
+      "minute": 90,
+      "team": "Jordan",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": null,
+      "minute": 55,
+      "team": "Jordan",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "A. Olwan",
+      "minute": 90,
+      "team": "Jordan",
+      "assist": "Shararh"
+    },
+    {
+      "type": "substitution",
+      "player": "H. Abu Dahab",
+      "minute": 90,
+      "team": "Jordan",
+      "assist": "S. Obaid"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "Y. Abulaila",
+      "position": "G",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "A. Nasib",
+      "position": "D",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "Y. Al Arab",
+      "position": "D",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "Husam Ali Mohammad Abudahab",
+      "position": "D",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "E. Haddad",
+      "position": "M",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "N. Al Rashdan",
+      "position": "M",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "N. Al Rawabdeh",
+      "position": "M",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "M. Abu Taha",
+      "position": "M",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "A. Azaizeh",
+      "position": "F",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "A. Olwan",
+      "position": "F",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "Odeh Fakhoury",
+      "position": "F",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "E. Martinez",
+      "position": "G",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "G. Simeone",
+      "position": "M",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "N. Otamendi",
+      "position": "D",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "M. Senesi",
+      "position": "D",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "N. Tagliafico",
+      "position": "D",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "N. Paz",
+      "position": "M",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "L. Paredes",
+      "position": "M",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "E. Palacios",
+      "position": "D",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "G. Lo Celso",
+      "position": "M",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "J. Alvarez",
+      "position": "F",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "L. Martinez",
+      "position": "F",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "A. Al Fakhouri",
+      "position": "G",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "N. Bani Attiah",
+      "position": "G",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "A. Badawi",
+      "position": "D",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "M. Abualnadi",
+      "position": "D",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "M. Abu Ghoush",
+      "position": "D",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "Mohammad Ali Hasheesh",
+      "position": "D",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "Saad Al Rousan",
+      "position": "D",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "S. Obaid",
+      "position": "D",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "A. Jamous",
+      "position": "M",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "Ibrahim Sadeh",
+      "position": "M",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "Shararh",
+      "position": "F",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "Mohammad Al Daoud",
+      "position": "M",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "R. Ayed",
+      "position": "M",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "M. Al Mardi",
+      "position": "F",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "M. Tamari",
+      "position": "F",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "G. Rulli",
+      "position": "G",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "J. Musso",
+      "position": "G",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "F. Medina",
+      "position": "D",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "L. Martinez",
+      "position": "D",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "N. Molina",
+      "position": "D",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "C. Romero",
+      "position": "D",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "G. Montiel",
+      "position": "D",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "A. Mac Allister",
+      "position": "M",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "E. Fernandez",
+      "position": "M",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "N. Gonzalez",
+      "position": "F",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "R. de Paul",
+      "position": "M",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "T. Almada",
+      "position": "M",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "V. Barco",
+      "position": "M",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "J. Lopez",
+      "position": "F",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "L. Messi",
+      "position": "F",
+      "sub": true,
+      "team": "Argentina"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 1,
+    "shotsOnGoalAway": 4,
+    "shotsOffGoalHome": 2,
+    "shotsOffGoalAway": 7,
+    "totalShotsHome": 5,
+    "totalShotsAway": 12,
+    "blockedShotsHome": 2,
+    "blockedShotsAway": 1,
+    "cornerKicksHome": 2,
+    "cornerKicksAway": 6,
+    "foulsHome": 13,
+    "foulsAway": 7,
+    "yellowCardsHome": 3,
+    "yellowCardsAway": 0,
+    "ballPossessionHome": 27,
+    "ballPossessionAway": 73,
+    "offsidesHome": 1,
+    "offsidesAway": 3,
+    "goalkeeperSavesHome": 1,
+    "goalkeeperSavesAway": 0,
+    "totalPassesHome": 285,
+    "totalPassesAway": 799,
+    "passesAccurateHome": 228,
+    "passesAccurateAway": 735,
+    "crossesHome": 7,
+    "crossesAway": 5,
+    "interceptionsHome": 19,
+    "interceptionsAway": 12,
+    "duelsWonHome": 34,
+    "duelsWonAway": 32,
+    "freeKicksHome": 7,
+    "freeKicksAway": 13,
+    "expectedGoalsHome": 0.7400000095367432,
+    "expectedGoalsAway": 2.140000104904175,
+    "bigChancesHome": 1,
+    "bigChancesAway": 3
+  }
+}

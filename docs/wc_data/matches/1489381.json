@@ -1,0 +1,467 @@
+{
+  "id": 1489381,
+  "home": "Argentina",
+  "away": "Algeria",
+  "home_id": 26,
+  "away_id": 1532,
+  "score": "3:0",
+  "score_h": 3,
+  "score_a": 0,
+  "date": "2026-06-17T04:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Szymon Marciniak, Poland",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "substitution",
+      "player": "G. Montiel",
+      "minute": 46,
+      "team": "Argentina",
+      "assist": "N. Molina"
+    },
+    {
+      "type": "goal",
+      "player": "L. Messi",
+      "minute": 60,
+      "team": "Argentina",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "H. Boudaoui",
+      "minute": 64,
+      "team": "Algeria",
+      "assist": "H. Aouar"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Gouiri",
+      "minute": 64,
+      "team": "Algeria",
+      "assist": "M. Amoura"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Hadj Moussa",
+      "minute": 64,
+      "team": "Algeria",
+      "assist": "R. Mahrez"
+    },
+    {
+      "type": "substitution",
+      "player": "L. Martinez",
+      "minute": 55,
+      "team": "Argentina",
+      "assist": "J. Alvarez"
+    },
+    {
+      "type": "substitution",
+      "player": "T. Almada",
+      "minute": 55,
+      "team": "Argentina",
+      "assist": "N. Gonzalez"
+    },
+    {
+      "type": "goal",
+      "player": "L. Messi",
+      "minute": 76,
+      "team": "Argentina",
+      "assist": "N. Gonzalez"
+    },
+    {
+      "type": "substitution",
+      "player": "L. Messi",
+      "minute": 80,
+      "team": "Argentina",
+      "assist": "N. Paz"
+    },
+    {
+      "type": "substitution",
+      "player": "C. Romero",
+      "minute": 80,
+      "team": "Argentina",
+      "assist": "N. Otamendi"
+    },
+    {
+      "type": "goal",
+      "player": "L. Messi",
+      "minute": 17,
+      "team": "Argentina",
+      "assist": "R. de Paul"
+    },
+    {
+      "type": "goal cancelled",
+      "player": "F. Chaibi",
+      "minute": 9,
+      "team": "Algeria",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "N. Bentaleb",
+      "minute": 81,
+      "team": "Algeria",
+      "assist": "A. Boulbina"
+    },
+    {
+      "type": "substitution",
+      "player": "I. Maza",
+      "minute": 82,
+      "team": "Algeria",
+      "assist": "A. Boulbina"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "E. Martinez",
+      "position": "G",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "G. Montiel",
+      "position": "D",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "C. Romero",
+      "position": "D",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "L. Martinez",
+      "position": "D",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "F. Medina",
+      "position": "D",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "R. de Paul",
+      "position": "M",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "E. Fernandez",
+      "position": "M",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "A. Mac Allister",
+      "position": "M",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "L. Messi",
+      "position": "F",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "L. Martinez",
+      "position": "F",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "T. Almada",
+      "position": "M",
+      "sub": false,
+      "team": "Argentina"
+    },
+    {
+      "name": "L. Zidane",
+      "position": "G",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "R. Belghali",
+      "position": "D",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "A. Mandi",
+      "position": "D",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "R. Bensebaini",
+      "position": "D",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "R. Ait-Nouri",
+      "position": "D",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "H. Boudaoui",
+      "position": "M",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "N. Bentaleb",
+      "position": "M",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "I. Maza",
+      "position": "M",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "A. Hadj Moussa",
+      "position": "F",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "A. Gouiri",
+      "position": "F",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "F. Chaibi",
+      "position": "F",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "N. Tagliafico",
+      "position": "D",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "G. Rulli",
+      "position": "G",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "N. Otamendi",
+      "position": "D",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "L. Paredes",
+      "position": "M",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "N. Paz",
+      "position": "F",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "J. Musso",
+      "position": "G",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "G. Lo Celso",
+      "position": "M",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "E. Palacios",
+      "position": "M",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "M. Senesi",
+      "position": "D",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "N. Molina",
+      "position": "D",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "N. Gonzalez",
+      "position": "F",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "J. Alvarez",
+      "position": "F",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "J. Lopez",
+      "position": "F",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "V. Barco",
+      "position": "M",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "G. Simeone",
+      "position": "F",
+      "sub": true,
+      "team": "Argentina"
+    },
+    {
+      "name": "F. Ghedjemis",
+      "position": "F",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "A. Abada",
+      "position": "D",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "Y. Titraoui",
+      "position": "M",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "M. Mastil",
+      "position": "G",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "M. Amoura",
+      "position": "F",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "N. Benbouali",
+      "position": "F",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "Z. Belaid",
+      "position": "D",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "J. Hadjam",
+      "position": "D",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "M. Tougai",
+      "position": "D",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "O. Benbot",
+      "position": "G",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "R. Zerrouki",
+      "position": "M",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "S. Chergui",
+      "position": "D",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "H. Aouar",
+      "position": "M",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "R. Mahrez",
+      "position": "F",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "A. Boulbina",
+      "position": "F",
+      "sub": true,
+      "team": "Algeria"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 6,
+    "shotsOnGoalAway": 0,
+    "shotsOffGoalHome": 4,
+    "shotsOffGoalAway": 4,
+    "totalShotsHome": 10,
+    "totalShotsAway": 7,
+    "blockedShotsHome": 0,
+    "blockedShotsAway": 3,
+    "cornerKicksHome": 2,
+    "cornerKicksAway": 2,
+    "foulsHome": 13,
+    "foulsAway": 8,
+    "ballPossessionHome": 48,
+    "ballPossessionAway": 52,
+    "offsidesHome": 3,
+    "offsidesAway": 1,
+    "goalkeeperSavesHome": 0,
+    "goalkeeperSavesAway": 3,
+    "totalPassesHome": 561,
+    "totalPassesAway": 609,
+    "passesAccurateHome": 504,
+    "passesAccurateAway": 563,
+    "crossesHome": 6,
+    "crossesAway": 9,
+    "interceptionsHome": 10,
+    "interceptionsAway": 8,
+    "duelsWonHome": 39,
+    "duelsWonAway": 43,
+    "freeKicksHome": 8,
+    "freeKicksAway": 13,
+    "expectedGoalsHome": 1.4700000286102295,
+    "expectedGoalsAway": 0.30000001192092896,
+    "bigChancesHome": 1,
+    "bigChancesAway": 0
+  }
+}

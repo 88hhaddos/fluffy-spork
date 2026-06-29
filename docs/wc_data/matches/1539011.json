@@ -1,0 +1,470 @@
+{
+  "id": 1539011,
+  "home": "Japan",
+  "away": "Sweden",
+  "home_id": 12,
+  "away_id": 5,
+  "score": "1:1",
+  "score_h": 1,
+  "score_a": 1,
+  "date": "2026-06-26T02:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Iván Barton, El Salvador",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "yellow card",
+      "player": "I. Hien",
+      "minute": 32,
+      "team": "Sweden",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "Ko Itakura",
+      "minute": 39,
+      "team": "Japan",
+      "assist": "Shogo Taniguchi"
+    },
+    {
+      "type": "substitution",
+      "player": "Ayase Ueda",
+      "minute": 66,
+      "team": "Japan",
+      "assist": "Koki Ogawa"
+    },
+    {
+      "type": "substitution",
+      "player": "Ritsu Doan",
+      "minute": 67,
+      "team": "Japan",
+      "assist": "Junya Ito"
+    },
+    {
+      "type": "yellow card",
+      "player": "Shogo Taniguchi",
+      "minute": 77,
+      "team": "Japan",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "V. Gyökeres",
+      "minute": 85,
+      "team": "Sweden",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "V. Lindelof",
+      "minute": 87,
+      "team": "Sweden",
+      "assist": "C. Starfelt"
+    },
+    {
+      "type": "substitution",
+      "player": "G. Gudmundsson",
+      "minute": 88,
+      "team": "Sweden",
+      "assist": "B. Nygren"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Bernhardsson",
+      "minute": 75,
+      "team": "Sweden",
+      "assist": "D. Svensson"
+    },
+    {
+      "type": "goal",
+      "player": "Daizen Maeda",
+      "minute": 56,
+      "team": "Japan",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "A. Elanga",
+      "minute": 62,
+      "team": "Sweden",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "E. Stroud",
+      "minute": 75,
+      "team": "Sweden",
+      "assist": "K. Sema"
+    },
+    {
+      "type": "substitution",
+      "player": "Keito Nakamura",
+      "minute": 75,
+      "team": "Japan",
+      "assist": "Yuto Nagatomo"
+    },
+    {
+      "type": "substitution",
+      "player": "Ayumu Seko",
+      "minute": 75,
+      "team": "Japan",
+      "assist": "Tsuyoshi Watanabe"
+    },
+    {
+      "type": "substitution",
+      "player": "I. Hien",
+      "minute": 37,
+      "team": "Sweden",
+      "assist": "L. Bergvall"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "Zion Suzuki",
+      "position": "G",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Ayumu Seko",
+      "position": "D",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Ko Itakura",
+      "position": "D",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Hiroki Itō",
+      "position": "D",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Yukinari Sugawara",
+      "position": "M",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Daichi Kamada",
+      "position": "M",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Ao Tanaka",
+      "position": "M",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Keito Nakamura",
+      "position": "M",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Ritsu Doan",
+      "position": "F",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Ayase Ueda",
+      "position": "F",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Daizen Maeda",
+      "position": "F",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "J. Widell Zetterstrom",
+      "position": "G",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "G. Lagerbielke",
+      "position": "D",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "I. Hien",
+      "position": "D",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "V. Lindelof",
+      "position": "M",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "A. Bernhardsson",
+      "position": "M",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "E. Stroud",
+      "position": "M",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "Y. Ayari",
+      "position": "M",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "G. Gudmundsson",
+      "position": "D",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "A. Elanga",
+      "position": "F",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "V. Gyökeres",
+      "position": "F",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "A. Isak",
+      "position": "F",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "Shogo Taniguchi",
+      "position": "D",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Yuto Nagatomo",
+      "position": "D",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Junya Ito",
+      "position": "F",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Takehiro Tomiyasu",
+      "position": "D",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Koki Ogawa",
+      "position": "F",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Keisuke Osako",
+      "position": "G",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Kaishu Sano",
+      "position": "M",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Tsuyoshi Watanabe",
+      "position": "D",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Yuito Suzuki",
+      "position": "M",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Tomoki Hayakawa",
+      "position": "G",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Junnosuke Suzuki",
+      "position": "D",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Keisuke Goto",
+      "position": "F",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Kento Shiogai",
+      "position": "F",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Shuto Machino",
+      "position": "F",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "B. Zeneli",
+      "position": "M",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "L. Bergvall",
+      "position": "M",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "D. Svensson",
+      "position": "D",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "H. Johansson",
+      "position": "M",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "T. Ali",
+      "position": "M",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "B. Nygren",
+      "position": "F",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "V. Johansson",
+      "position": "G",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "H. Ekdal",
+      "position": "D",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "M. Svanberg",
+      "position": "M",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "G. Nilsson",
+      "position": "F",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "E. Smith",
+      "position": "D",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "C. Starfelt",
+      "position": "D",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "K. Sema",
+      "position": "M",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "J. Karlstrom",
+      "position": "M",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "K. Nordfeldt",
+      "position": "G",
+      "sub": true,
+      "team": "Sweden"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 3,
+    "shotsOnGoalAway": 5,
+    "shotsOffGoalHome": 3,
+    "shotsOffGoalAway": 3,
+    "totalShotsHome": 8,
+    "totalShotsAway": 11,
+    "blockedShotsHome": 2,
+    "blockedShotsAway": 3,
+    "cornerKicksHome": 2,
+    "cornerKicksAway": 8,
+    "foulsHome": 20,
+    "foulsAway": 11,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 2,
+    "ballPossessionHome": 52,
+    "ballPossessionAway": 48,
+    "offsidesHome": 3,
+    "offsidesAway": 2,
+    "goalkeeperSavesHome": 4,
+    "goalkeeperSavesAway": 2,
+    "totalPassesHome": 445,
+    "totalPassesAway": 395,
+    "passesAccurateHome": 378,
+    "passesAccurateAway": 312,
+    "crossesHome": 13,
+    "crossesAway": 16,
+    "interceptionsHome": 4,
+    "interceptionsAway": 5,
+    "duelsWonHome": 46,
+    "duelsWonAway": 41,
+    "freeKicksHome": 11,
+    "freeKicksAway": 20,
+    "expectedGoalsHome": 1.2100000381469727,
+    "expectedGoalsAway": 0.6399999856948853,
+    "bigChancesHome": 2,
+    "bigChancesAway": 1
+  }
+}

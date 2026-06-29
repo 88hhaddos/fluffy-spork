@@ -1,0 +1,173 @@
+{
+  "name": "Haiti",
+  "matches": [
+    {
+      "opponent": "Scotland",
+      "score": "0:1",
+      "date": "2026-06-14",
+      "stage": "",
+      "home": true,
+      "result": "loss"
+    },
+    {
+      "opponent": "Brazil",
+      "score": "3:0",
+      "date": "2026-06-20",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    },
+    {
+      "opponent": "Morocco",
+      "score": "4:2",
+      "date": "2026-06-25",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    }
+  ],
+  "wins": 0,
+  "draws": 0,
+  "losses": 3,
+  "scored": 2,
+  "conceded": 8,
+  "players": {
+    "C. Sainte": {
+      "position": null,
+      "matches": 3,
+      "subs": 3
+    },
+    "J. Placide": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "C. Arcus": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1
+    },
+    "R. Ade": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "H. Delcroix": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "M. Experience": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "L. Deedson": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "D. Jean Jacques": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "J. Bellegarde": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "R. Providence": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "F. Pierrot": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1
+    },
+    "W. Isidor": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1,
+      "goals": 1
+    },
+    "A. Pierre": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "J. Duverger": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "K. Thermoncy": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "D. Lacroix": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "G. Metusala": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "J. Duverne": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "W. Paugain": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "D. Simon": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "W. Pierre": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "J. Casimir": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1
+    },
+    "D. Etienne": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "D. Nazon": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3,
+      "yellow": 2
+    },
+    "L. Joseph": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2
+    },
+    "Y. Fortune": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    }
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "name": "Panama",
+  "matches": [
+    {
+      "opponent": "Ghana",
+      "score": "1:0",
+      "date": "2026-06-18",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    },
+    {
+      "opponent": "Croatia",
+      "score": "0:1",
+      "date": "2026-06-24",
+      "stage": "",
+      "home": true,
+      "result": "loss"
+    },
+    {
+      "opponent": "England",
+      "score": "0:2",
+      "date": "2026-06-28",
+      "stage": "",
+      "home": true,
+      "result": "loss"
+    }
+  ],
+  "wins": 0,
+  "draws": 0,
+  "losses": 3,
+  "scored": 0,
+  "conceded": 4,
+  "players": {
+    "C. Martinez": {
+      "position": null,
+      "matches": 3,
+      "subs": 0
+    },
+    "O. Mosquera": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "C. Blackman": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1
+    },
+    "J. Ramos": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "J. Cordoba": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "A. Andrade": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "M. Murillo": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "C. Harvey": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "J. Rodriguez": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0
+    },
+    "Y. Barcenas": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "C. Waterman": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2
+    },
+    "C. Samudio": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "L. Mejia": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "F. Escobar": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "E. Farina": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "E. Davis": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "R. Miller": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "J. Gutierrez": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "A. Carrasquilla": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "I. Diaz": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Quintero": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Godoy": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "C. Yanis": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Londono": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "T. Rodriguez": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2
+    },
+    "J. Fajardo": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2,
+      "yellow": 1
+    }
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "name": "Iraq",
+  "matches": [
+    {
+      "opponent": "Norway",
+      "score": "1:4",
+      "date": "2026-06-17",
+      "stage": "",
+      "home": true,
+      "result": "loss"
+    },
+    {
+      "opponent": "France",
+      "score": "3:0",
+      "date": "2026-06-23",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    },
+    {
+      "opponent": "Senegal",
+      "score": "5:0",
+      "date": "2026-06-26",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    }
+  ],
+  "wins": 0,
+  "draws": 0,
+  "losses": 3,
+  "scored": 1,
+  "conceded": 12,
+  "players": {
+    "A. Al Reeshawee": {
+      "position": null,
+      "matches": 1,
+      "subs": 1
+    },
+    "J. Hassan": {
+      "position": "G",
+      "matches": 3,
+      "subs": 2
+    },
+    "H. Ali": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "Z. Tahseen": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1
+    },
+    "A. Hashem": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "M. Doski": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "I. Bayesh": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "A. Al Ammari": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "assists": 1,
+      "yellow": 2
+    },
+    "Z. Ismaeel": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "A. Jasim": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "A. Hussein": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1,
+      "goals": 1
+    },
+    "A. Al Hamadi": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1
+    },
+    "A. Basil": {
+      "position": "G",
+      "matches": 3,
+      "subs": 1
+    },
+    "F. Talib": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "R. Sulaka": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2,
+      "red": 1
+    },
+    "F. Putros": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "M. Saadoon": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Younis": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "Y. Amyn": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Farji": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Qasem": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1
+    },
+    "Z. Iqbal": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "K. Yakob": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Sher": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Yousif": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Ali": {
+      "position": null,
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Maknzi": {
+      "position": "D",
+      "matches": 2,
+      "subs": 2
+    }
+  }
+}

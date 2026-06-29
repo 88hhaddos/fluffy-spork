@@ -1,0 +1,470 @@
+{
+  "id": 1489422,
+  "home": "Panama",
+  "away": "England",
+  "home_id": 11,
+  "away_id": 10,
+  "score": "0:2",
+  "score_h": 0,
+  "score_a": 2,
+  "date": "2026-06-28T00:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Abdulrahman Al-Jassim, Qatar",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "yellow card",
+      "player": "J. Quansah",
+      "minute": 60,
+      "team": "England",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "J. Quansah",
+      "minute": 63,
+      "team": "England",
+      "assist": "D. Spence"
+    },
+    {
+      "type": "substitution",
+      "player": "Y. Barcenas",
+      "minute": 71,
+      "team": "Panama",
+      "assist": "I. Diaz"
+    },
+    {
+      "type": "substitution",
+      "player": "Y. Barcenas",
+      "minute": 71,
+      "team": "Panama",
+      "assist": "I. Diaz"
+    },
+    {
+      "type": "yellow card",
+      "player": "A. Andrade",
+      "minute": 84,
+      "team": "Panama",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "T. Rodriguez",
+      "minute": 46,
+      "team": "Panama",
+      "assist": "J. Fajardo"
+    },
+    {
+      "type": "yellow card",
+      "player": "J. Fajardo",
+      "minute": 53,
+      "team": "Panama",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "J. Quansah",
+      "minute": 63,
+      "team": "England",
+      "assist": "D. Spence"
+    },
+    {
+      "type": "goal",
+      "player": "J. Bellingham",
+      "minute": 62,
+      "team": "England",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "H. Kane",
+      "minute": 67,
+      "team": "England",
+      "assist": "J. Bellingham"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Bellingham",
+      "minute": 71,
+      "team": "England",
+      "assist": "E. Eze"
+    },
+    {
+      "type": "substitution",
+      "player": "E. Anderson",
+      "minute": 84,
+      "team": "England",
+      "assist": "J. Henderson"
+    },
+    {
+      "type": "substitution",
+      "player": "H. Kane",
+      "minute": 84,
+      "team": "England",
+      "assist": "O. Watkins"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Gutierrez",
+      "minute": 88,
+      "team": "Panama",
+      "assist": "E. Davis"
+    },
+    {
+      "type": "substitution",
+      "player": "C. Harvey",
+      "minute": 88,
+      "team": "Panama",
+      "assist": "A. Quintero"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "C. Martinez",
+      "position": null,
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "O. Mosquera",
+      "position": "G",
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "M. Murillo",
+      "position": "D",
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "F. Escobar",
+      "position": "D",
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "J. Cordoba",
+      "position": "D",
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "A. Andrade",
+      "position": "D",
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "J. Gutierrez",
+      "position": "D",
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "Y. Barcenas",
+      "position": "M",
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "C. Harvey",
+      "position": "M",
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "J. Rodriguez",
+      "position": "M",
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "T. Rodriguez",
+      "position": "F",
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "J. Pickford",
+      "position": "G",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "J. Quansah",
+      "position": "D",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "E. Konsa",
+      "position": "D",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "M. Guehi",
+      "position": "D",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "N. O'Reilly",
+      "position": "D",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "E. Anderson",
+      "position": "M",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "J. Bellingham",
+      "position": "M",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "B. Saka",
+      "position": "M",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "M. Rogers",
+      "position": "M",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "M. Rashford",
+      "position": "M",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "H. Kane",
+      "position": "F",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "C. Samudio",
+      "position": "G",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "L. Mejia",
+      "position": "G",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "E. Davis",
+      "position": "D",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "J. Ramos",
+      "position": "D",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "R. Miller",
+      "position": "D",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "C. Blackman",
+      "position": "D",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "E. Farina",
+      "position": "D",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "A. Godoy",
+      "position": "M",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "C. Yanis",
+      "position": "F",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "A. Carrasquilla",
+      "position": "M",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "A. Quintero",
+      "position": "F",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "I. Diaz",
+      "position": "F",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "A. Londono",
+      "position": "F",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "J. Fajardo",
+      "position": "F",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "C. Waterman",
+      "position": "F",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "D. Henderson",
+      "position": "G",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "J. Trafford",
+      "position": "G",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "J. Stones",
+      "position": "D",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "D. Burn",
+      "position": "D",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "D. Spence",
+      "position": "D",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "T. Chalobah",
+      "position": "D",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "K. Mainoo",
+      "position": "M",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "E. Eze",
+      "position": "M",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "J. Henderson",
+      "position": "M",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "D. Rice",
+      "position": "M",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "N. Madueke",
+      "position": "F",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "O. Watkins",
+      "position": "F",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "I. Toney",
+      "position": "F",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "A. Gordon",
+      "position": "F",
+      "sub": true,
+      "team": "England"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 2,
+    "shotsOnGoalAway": 6,
+    "shotsOffGoalHome": 7,
+    "shotsOffGoalAway": 8,
+    "totalShotsHome": 12,
+    "totalShotsAway": 17,
+    "blockedShotsHome": 3,
+    "blockedShotsAway": 3,
+    "cornerKicksHome": 3,
+    "cornerKicksAway": 7,
+    "foulsHome": 16,
+    "foulsAway": 13,
+    "yellowCardsHome": 2,
+    "yellowCardsAway": 1,
+    "ballPossessionHome": 33,
+    "ballPossessionAway": 67,
+    "offsidesHome": 4,
+    "offsidesAway": 4,
+    "goalkeeperSavesHome": 4,
+    "goalkeeperSavesAway": 2,
+    "totalPassesHome": 267,
+    "totalPassesAway": 557,
+    "passesAccurateHome": 201,
+    "passesAccurateAway": 493,
+    "crossesHome": 9,
+    "crossesAway": 25,
+    "interceptionsHome": 6,
+    "interceptionsAway": 5,
+    "duelsWonHome": 43,
+    "duelsWonAway": 61,
+    "freeKicksHome": 13,
+    "freeKicksAway": 16,
+    "expectedGoalsHome": 0.5699999928474426,
+    "expectedGoalsAway": 1.4900000095367432,
+    "bigChancesHome": 0,
+    "bigChancesAway": 4
+  }
+}

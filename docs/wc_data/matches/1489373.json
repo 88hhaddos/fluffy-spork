@@ -1,0 +1,483 @@
+{
+  "id": 1489373,
+  "home": "Qatar",
+  "away": "Switzerland",
+  "home_id": 1569,
+  "away_id": 15,
+  "score": "1:1",
+  "score_h": 1,
+  "score_a": 1,
+  "date": "2026-06-13T22:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Said Martinez, Honduras",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "yellow card",
+      "player": "J. Gaber",
+      "minute": 23,
+      "team": "Qatar",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "A. Al Oui",
+      "minute": 60,
+      "team": "Qatar",
+      "assist": "A. Fathi"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Gaber",
+      "minute": 60,
+      "team": "Qatar",
+      "assist": "K. Boudiaf"
+    },
+    {
+      "type": "yellow card",
+      "player": "M. Abunada",
+      "minute": 16,
+      "team": "Qatar",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "M. Aebischer",
+      "minute": 65,
+      "team": "Switzerland",
+      "assist": "F. Rieder"
+    },
+    {
+      "type": "substitution",
+      "player": "D. Ndoye",
+      "minute": 65,
+      "team": "Switzerland",
+      "assist": "J. Manzambi"
+    },
+    {
+      "type": "substitution",
+      "player": "Y. Abdurisag",
+      "minute": 60,
+      "team": "Qatar",
+      "assist": "A. Alaaeldin"
+    },
+    {
+      "type": "substitution",
+      "player": "A. O. Madibo",
+      "minute": 79,
+      "team": "Qatar",
+      "assist": "M. Al Mannai"
+    },
+    {
+      "type": "substitution",
+      "player": "R. Vargas",
+      "minute": 79,
+      "team": "Switzerland",
+      "assist": "Z. Amdouni"
+    },
+    {
+      "type": "goal",
+      "player": "B. Embolo",
+      "minute": 17,
+      "team": "Switzerland",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "D. Zakaria",
+      "minute": 42,
+      "team": "Switzerland",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "R. Freuler",
+      "minute": 89,
+      "team": "Switzerland",
+      "assist": "A. Jashari"
+    },
+    {
+      "type": "substitution",
+      "player": "R. Rodriguez",
+      "minute": 89,
+      "team": "Switzerland",
+      "assist": "M. Muheim"
+    },
+    {
+      "type": "penalty confirmed",
+      "player": "R. Freuler",
+      "minute": 16,
+      "team": "Switzerland",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "Edmilson Junior",
+      "minute": 88,
+      "team": "Qatar",
+      "assist": "H. Al Haydos"
+    },
+    {
+      "type": "goal",
+      "player": "M. Muheim",
+      "minute": 90,
+      "team": "Qatar",
+      "assist": ""
+    }
+  ],
+  "lineups": [
+    {
+      "name": "A. Al Hussain",
+      "position": null,
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "M. Abunada",
+      "position": "G",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "A. Al Oui",
+      "position": "D",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "Pedro Miguel",
+      "position": "D",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "B. Khoukhi",
+      "position": "D",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "H. Al Amin",
+      "position": "D",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "J. Gaber",
+      "position": "M",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "A. O. Madibo",
+      "position": "M",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "I. Laye",
+      "position": "M",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "Edmilson Junior",
+      "position": "F",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "Y. Abdurisag",
+      "position": "F",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "A. Afif",
+      "position": "F",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "G. Kobel",
+      "position": "G",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "D. Zakaria",
+      "position": "D",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "M. Akanji",
+      "position": "D",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "N. Elvedi",
+      "position": "D",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "M. Aebischer",
+      "position": "M",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "R. Freuler",
+      "position": "M",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "G. Xhaka",
+      "position": "M",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "R. Rodriguez",
+      "position": "D",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "D. Ndoye",
+      "position": "F",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "R. Vargas",
+      "position": "F",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "B. Embolo",
+      "position": "F",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "M. Barsham",
+      "position": "G",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "S. Zakaria",
+      "position": "G",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "Lucas Mendes",
+      "position": "D",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "S. Al Brake",
+      "position": "D",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "A. Hatem",
+      "position": "M",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "A. Al Ganehi",
+      "position": "F",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "A. Fathi",
+      "position": "M",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "K. Boudiaf",
+      "position": "M",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "M. Al Mannai",
+      "position": "M",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "A. Ali",
+      "position": "F",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "M. Muntari",
+      "position": "F",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "T. Jamshid",
+      "position": "F",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "H. Al Haydos",
+      "position": "F",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "A. Alaaeldin",
+      "position": "F",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "Y. Mvogo",
+      "position": "G",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "M. Keller",
+      "position": "G",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "L. Jaquez",
+      "position": "D",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "E. Comert",
+      "position": "D",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "A. Amenda",
+      "position": "D",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "D. Sow",
+      "position": "M",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "F. Rieder",
+      "position": "M",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "J. Manzambi",
+      "position": "M",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "S. Widmer",
+      "position": "D",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "M. Muheim",
+      "position": "D",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "C. Fassnacht",
+      "position": "M",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "A. Jashari",
+      "position": "M",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "C. Itten",
+      "position": "F",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "Z. Amdouni",
+      "position": "F",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "N. Okafor",
+      "position": "F",
+      "sub": true,
+      "team": "Switzerland"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 3,
+    "shotsOnGoalAway": 7,
+    "shotsOffGoalHome": 3,
+    "shotsOffGoalAway": 10,
+    "totalShotsHome": 6,
+    "totalShotsAway": 26,
+    "blockedShotsHome": 0,
+    "blockedShotsAway": 9,
+    "cornerKicksHome": 3,
+    "cornerKicksAway": 10,
+    "foulsHome": 12,
+    "foulsAway": 11,
+    "yellowCardsHome": 2,
+    "yellowCardsAway": 1,
+    "ballPossessionHome": 32,
+    "ballPossessionAway": 68,
+    "offsidesHome": 0,
+    "offsidesAway": 1,
+    "goalkeeperSavesHome": 5,
+    "goalkeeperSavesAway": 3,
+    "totalPassesHome": 278,
+    "totalPassesAway": 576,
+    "passesAccurateHome": 200,
+    "passesAccurateAway": 527,
+    "crossesHome": 9,
+    "crossesAway": 35,
+    "interceptionsHome": 11,
+    "interceptionsAway": 7,
+    "duelsWonHome": 36,
+    "duelsWonAway": 37,
+    "freeKicksHome": 11,
+    "freeKicksAway": 12,
+    "expectedGoalsHome": 0.6000000238418579,
+    "expectedGoalsAway": 3.200000047683716,
+    "bigChancesHome": 1,
+    "bigChancesAway": 6
+  }
+}

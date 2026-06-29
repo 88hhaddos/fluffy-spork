@@ -31,6 +31,17 @@ BET_TYPES = {
     "обе забьют": ("btts_yes", "Обе забьют"),
     "обе забьют да": ("btts_yes", "Обе забьют — Да"),
     "обе забьют нет": ("btts_no", "Обе забьют — Нет"),
+    "1x": ("dc_1X", "Двойной шанс 1X"),
+    "12": ("dc_12", "Двойной шанс 12"),
+    "x2": ("dc_X2", "Двойной шанс X2"),
+    "угловые тб": ("corners_over85", "Угловые ТБ 8.5"),
+    "угловые тм": ("corners_under95", "Угловые ТМ 9.5"),
+    "жёлтые тб": ("yellow_over25", "Жёлтые карточки ТБ 2.5"),
+    "желтые тб": ("yellow_over25", "Жёлтые карточки ТБ 2.5"),
+    "жёлтые тм": ("yellow_under25", "Жёлтые карточки ТМ 2.5"),
+    "желтые тм": ("yellow_under25", "Жёлтые карточки ТМ 2.5"),
+    "фолы тб": ("fouls_over245", "Фолы ТБ 24.5"),
+    "фолы тм": ("fouls_under245", "Фолы ТМ 24.5"),
 }
 
 # Известные игроки для игрок-ставок
@@ -209,12 +220,16 @@ def parse_bet_request(text: str) -> Optional[dict]:
 
 
 async def find_match_for_team(team_name: str, football_api) -> Optional[dict]:
-    """Находит предстоящий матч для команды."""
-    matches = await football_api.get_pari_upcoming_matches(limit=100)
+    """Находит предстоящий ЧМ матч для команды."""
+    matches = await football_api.get_pari_upcoming_matches(limit=200)
 
     team_lower = team_name.lower().strip()
 
     for m in matches:
+        league = (m.get("league") or "").upper()
+        if "WC 2026" not in league:
+            continue
+
         home = (m.get("homeTeam") or {}).get("name", "").lower()
         away = (m.get("awayTeam") or {}).get("name", "").lower()
 
@@ -239,6 +254,15 @@ async def find_match_for_team(team_name: str, football_api) -> Optional[dict]:
                 "under25": m.get("under25", 0),
                 "btts_yes": m.get("btts_yes", 0),
                 "btts_no": m.get("btts_no", 0),
+                "dc_1X": m.get("dc_1X", 0),
+                "dc_12": m.get("dc_12", 0),
+                "dc_X2": m.get("dc_X2", 0),
+                "corners_over85": m.get("corners_over85", 0),
+                "corners_under95": m.get("corners_under95", 0),
+                "yellow_over25": m.get("yellow_over25", 0),
+                "yellow_under25": m.get("yellow_under25", 0),
+                "fouls_over245": m.get("fouls_over245", 0),
+                "fouls_under245": m.get("fouls_under245", 0),
                 "team_side": "home" if is_home else "away",
             }
 
@@ -385,6 +409,15 @@ async def handle_user_bet_request(message, text: str, db, football_api, bot) -> 
             "under25": match.get("under25", 0),
             "btts_yes": match.get("btts_yes", 0),
             "btts_no": match.get("btts_no", 0),
+            "dc_1X": match.get("dc_1X", 0),
+            "dc_12": match.get("dc_12", 0),
+            "dc_X2": match.get("dc_X2", 0),
+            "corners_over85": match.get("corners_over85", 0),
+            "corners_under95": match.get("corners_under95", 0),
+            "yellow_over25": match.get("yellow_over25", 0),
+            "yellow_under25": match.get("yellow_under25", 0),
+            "fouls_over245": match.get("fouls_over245", 0),
+            "fouls_under245": match.get("fouls_under245", 0),
             "player_goal": 0,  # генерируем
         }
 
@@ -490,6 +523,16 @@ async def check_and_settle_user_bets(db, football_api, bot, chat_id: int):
             elif "обе забьют — да" in bet_on and score_h > 0 and score_a > 0:
                 won = True
             elif "обе забьют — нет" in bet_on and (score_h == 0 or score_a == 0):
+                won = True
+            elif "двойной шанс 1x" in bet_on and (score_h > score_a or score_h == score_a):
+                won = True
+            elif "двойной шанс 12" in bet_on and score_h != score_a:
+                won = True
+            elif "двойной шанс x2" in bet_on and (score_a > score_h or score_h == score_a):
+                won = True
+            elif "ф1 -1.5" in bet_on and (score_h - score_a) > 1.5:
+                won = True
+            elif "ф2 +1.5" in bet_on and (score_a - score_h) > -1.5:
                 won = True
 
             username = bet.get("username", "Кто-то")

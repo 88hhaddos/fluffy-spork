@@ -1,0 +1,535 @@
+{
+  "id": 1489387,
+  "home": "Canada",
+  "away": "Qatar",
+  "home_id": 5529,
+  "away_id": 1569,
+  "score": "6:0",
+  "score_h": 6,
+  "score_a": 0,
+  "date": "2026-06-19T01:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "BC Place",
+  "referee": "Cristian Garay, Chile",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "yellow card",
+      "player": "D. Cornelius",
+      "minute": 9,
+      "team": "Canada",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "C. Larin",
+      "minute": 16,
+      "team": "Canada",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "Y. Abdurisag",
+      "minute": 40,
+      "team": "Qatar",
+      "assist": "S. Al Brake"
+    },
+    {
+      "type": "substitution",
+      "player": "Edmilson Junior",
+      "minute": 46,
+      "team": "Qatar",
+      "assist": "A. Fathi"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Gaber",
+      "minute": 46,
+      "team": "Qatar",
+      "assist": "M. Al Mannai"
+    },
+    {
+      "type": "substitution",
+      "player": "D. Cornelius",
+      "minute": 46,
+      "team": "Canada",
+      "assist": "M. Bombito"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Afif",
+      "minute": 59,
+      "team": "Qatar",
+      "assist": "A. Al Hussain"
+    },
+    {
+      "type": "goal",
+      "player": "N. Saliba",
+      "minute": 64,
+      "team": "Canada",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "M. Al Mannai",
+      "minute": 75,
+      "team": "Canada",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "J. David",
+      "minute": 29,
+      "team": "Canada",
+      "assist": ""
+    },
+    {
+      "type": "red card",
+      "player": "H. Al Amin",
+      "minute": 33,
+      "team": "Qatar",
+      "assist": ""
+    },
+    {
+      "type": "red card",
+      "player": "A. O. Madibo",
+      "minute": 53,
+      "team": "Qatar",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "A. Fathi",
+      "minute": 62,
+      "team": "Qatar",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "I. Kone",
+      "minute": 57,
+      "team": "Canada",
+      "assist": "N. Saliba"
+    },
+    {
+      "type": "substitution",
+      "player": "L. De Fougerolles",
+      "minute": 71,
+      "team": "Canada",
+      "assist": "J. Shaffelburg"
+    },
+    {
+      "type": "substitution",
+      "player": "T. Buchanan",
+      "minute": 83,
+      "team": "Canada",
+      "assist": "N. Sigur"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Fathi",
+      "minute": 87,
+      "team": "Qatar",
+      "assist": "Lucas Mendes"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Ahmed",
+      "minute": 71,
+      "team": "Canada",
+      "assist": "T. Oluwaseyi"
+    },
+    {
+      "type": "penalty cancelled",
+      "player": "T. Buchanan",
+      "minute": 33,
+      "team": "Canada",
+      "assist": ""
+    },
+    {
+      "type": "card upgrade",
+      "player": "H. Al Amin",
+      "minute": 33,
+      "team": "Qatar",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": null,
+      "minute": 33,
+      "team": "Canada",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "J. David",
+      "minute": 45,
+      "team": "Canada",
+      "assist": ""
+    },
+    {
+      "type": "card upgrade",
+      "player": "A. O. Madibo",
+      "minute": 53,
+      "team": "Qatar",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "J. David",
+      "minute": 90,
+      "team": "Canada",
+      "assist": "N. Saliba"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "M. Crepeau",
+      "position": "G",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "A. Johnston",
+      "position": "D",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "L. De Fougerolles",
+      "position": "D",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "D. Cornelius",
+      "position": "D",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "R. Laryea",
+      "position": "D",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "T. Buchanan",
+      "position": "M",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "S. Eustaquio",
+      "position": "M",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "I. Kone",
+      "position": "M",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "A. Ahmed",
+      "position": "M",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "J. David",
+      "position": "F",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "C. Larin",
+      "position": "F",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "M. Abunada",
+      "position": "G",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "A. Al Oui",
+      "position": "D",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "Pedro Miguel",
+      "position": "D",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "B. Khoukhi",
+      "position": "D",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "H. Al Amin",
+      "position": "D",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "J. Gaber",
+      "position": "M",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "A. O. Madibo",
+      "position": "M",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "I. Laye",
+      "position": "M",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "Edmilson Junior",
+      "position": "F",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "Y. Abdurisag",
+      "position": "F",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "A. Afif",
+      "position": "F",
+      "sub": false,
+      "team": "Qatar"
+    },
+    {
+      "name": "D. St.Clair",
+      "position": "G",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "O. Goodman",
+      "position": "G",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "J. Waterman",
+      "position": "D",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "A. Davies",
+      "position": "D",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "M. Bombito",
+      "position": "D",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "N. Sigur",
+      "position": "M",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "M. Choiniere",
+      "position": "M",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "L. Millar",
+      "position": "F",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "J. Shaffelburg",
+      "position": "F",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "J. Osorio",
+      "position": "M",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "N. Saliba",
+      "position": "M",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "T. Oluwaseyi",
+      "position": "F",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "P. David",
+      "position": "F",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "J. Nelson",
+      "position": "F",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "S. Zakaria",
+      "position": "G",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "M. Barsham",
+      "position": "G",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "Lucas Mendes",
+      "position": "D",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "S. Al Brake",
+      "position": "D",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "A. Hatem",
+      "position": "M",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "K. Boudiaf",
+      "position": "M",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "A. Al Ganehi",
+      "position": "F",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "A. Fathi",
+      "position": "M",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "A. Ali",
+      "position": "F",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "M. Al Mannai",
+      "position": "M",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "A. Alaaeldin",
+      "position": "F",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "M. Muntari",
+      "position": "F",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "H. Al Haydos",
+      "position": "F",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "T. Jamshid",
+      "position": "F",
+      "sub": true,
+      "team": "Qatar"
+    },
+    {
+      "name": "A. Al Hussain",
+      "position": "D",
+      "sub": true,
+      "team": "Qatar"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 10,
+    "shotsOnGoalAway": 0,
+    "shotsOffGoalHome": 8,
+    "shotsOffGoalAway": 1,
+    "totalShotsHome": 32,
+    "totalShotsAway": 2,
+    "blockedShotsHome": 14,
+    "blockedShotsAway": 1,
+    "cornerKicksHome": 19,
+    "cornerKicksAway": 1,
+    "foulsHome": 9,
+    "foulsAway": 10,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 1,
+    "redCardsHome": 0,
+    "redCardsAway": 2,
+    "ballPossessionHome": 79,
+    "ballPossessionAway": 21,
+    "offsidesHome": 1,
+    "offsidesAway": 1,
+    "goalkeeperSavesHome": 0,
+    "goalkeeperSavesAway": 4,
+    "totalPassesHome": 567,
+    "totalPassesAway": 162,
+    "passesAccurateHome": 515,
+    "passesAccurateAway": 104,
+    "crossesHome": 55,
+    "crossesAway": 3,
+    "interceptionsHome": 6,
+    "interceptionsAway": 10,
+    "duelsWonHome": 33,
+    "duelsWonAway": 34,
+    "freeKicksHome": 10,
+    "freeKicksAway": 9,
+    "expectedGoalsHome": 4.599999904632568,
+    "expectedGoalsAway": 0.2199999988079071,
+    "bigChancesHome": 6,
+    "bigChancesAway": 0
+  }
+}

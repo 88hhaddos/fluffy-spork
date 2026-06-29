@@ -1,0 +1,465 @@
+{
+  "id": 1489408,
+  "home": "Switzerland",
+  "away": "Canada",
+  "home_id": 15,
+  "away_id": 5529,
+  "score": "2:1",
+  "score_h": 2,
+  "score_a": 1,
+  "date": "2026-06-24T22:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "BC Place",
+  "referee": "Ramon Abatti Abel, Brazil",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "goal",
+      "player": "B. Embolo",
+      "minute": 57,
+      "team": "Switzerland",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "G. Xhaka",
+      "minute": 32,
+      "team": "Switzerland",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "C. Larin",
+      "minute": 32,
+      "team": "Canada",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "L. Jaquez",
+      "minute": 74,
+      "team": "Switzerland",
+      "assist": "S. Widmer"
+    },
+    {
+      "type": "substitution",
+      "player": "D. Sow",
+      "minute": 74,
+      "team": "Switzerland",
+      "assist": "M. Aebischer"
+    },
+    {
+      "type": "substitution",
+      "player": "T. Buchanan",
+      "minute": 74,
+      "team": "Canada",
+      "assist": "P. David"
+    },
+    {
+      "type": "goal",
+      "player": null,
+      "minute": 76,
+      "team": "Canada",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "L. Millar",
+      "minute": 87,
+      "team": "Canada",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "R. Vargas",
+      "minute": 46,
+      "team": "Switzerland",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "A. Ahmed",
+      "minute": 58,
+      "team": "Canada",
+      "assist": "L. Millar"
+    },
+    {
+      "type": "substitution",
+      "player": "C. Larin",
+      "minute": 58,
+      "team": "Canada",
+      "assist": "T. Oluwaseyi"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Choiniere",
+      "minute": 58,
+      "team": "Canada",
+      "assist": "S. Eustaquio"
+    },
+    {
+      "type": "substitution",
+      "player": "B. Embolo",
+      "minute": 85,
+      "team": "Switzerland",
+      "assist": "C. Itten"
+    },
+    {
+      "type": "substitution",
+      "player": "R. Vargas",
+      "minute": 80,
+      "team": "Switzerland",
+      "assist": "D. Ndoye"
+    },
+    {
+      "type": "substitution",
+      "player": "R. Laryea",
+      "minute": 83,
+      "team": "Canada",
+      "assist": "J. Shaffelburg"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Manzambi",
+      "minute": 85,
+      "team": "Switzerland",
+      "assist": "C. Fassnacht"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "G. Kobel",
+      "position": "G",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "L. Jaquez",
+      "position": "D",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "N. Elvedi",
+      "position": "D",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "M. Akanji",
+      "position": "D",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "R. Rodriguez",
+      "position": "D",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "R. Freuler",
+      "position": "M",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "G. Xhaka",
+      "position": "M",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "J. Manzambi",
+      "position": "M",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "D. Sow",
+      "position": "M",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "R. Vargas",
+      "position": "M",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "B. Embolo",
+      "position": "F",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "M. Crepeau",
+      "position": "G",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "A. Johnston",
+      "position": "D",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "L. De Fougerolles",
+      "position": "D",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "D. Cornelius",
+      "position": "D",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "R. Laryea",
+      "position": "D",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "T. Buchanan",
+      "position": "M",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "M. Choiniere",
+      "position": "M",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "N. Saliba",
+      "position": "M",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "A. Ahmed",
+      "position": "M",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "J. David",
+      "position": "F",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "C. Larin",
+      "position": "F",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "M. Keller",
+      "position": "G",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "Y. Mvogo",
+      "position": "G",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "E. Comert",
+      "position": "D",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "A. Amenda",
+      "position": "D",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "S. Widmer",
+      "position": "D",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "D. Zakaria",
+      "position": "M",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "D. Ndoye",
+      "position": "F",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "M. Aebischer",
+      "position": "M",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "C. Fassnacht",
+      "position": "M",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "A. Jashari",
+      "position": "M",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "F. Rieder",
+      "position": "M",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "N. Okafor",
+      "position": "F",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "Z. Amdouni",
+      "position": "F",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "C. Itten",
+      "position": "F",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "D. St.Clair",
+      "position": "G",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "O. Goodman",
+      "position": "G",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "J. Waterman",
+      "position": "D",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "N. Sigur",
+      "position": "M",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "M. Bombito",
+      "position": "D",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "A. Davies",
+      "position": "D",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "S. Eustaquio",
+      "position": "M",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "L. Millar",
+      "position": "F",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "J. Osorio",
+      "position": "M",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "J. Shaffelburg",
+      "position": "F",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "T. Oluwaseyi",
+      "position": "F",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "P. David",
+      "position": "F",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "J. Nelson",
+      "position": "F",
+      "sub": true,
+      "team": "Canada"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 4,
+    "shotsOnGoalAway": 7,
+    "shotsOffGoalHome": 1,
+    "shotsOffGoalAway": 3,
+    "totalShotsHome": 6,
+    "totalShotsAway": 13,
+    "blockedShotsHome": 1,
+    "blockedShotsAway": 3,
+    "cornerKicksHome": 2,
+    "cornerKicksAway": 7,
+    "foulsHome": 19,
+    "foulsAway": 13,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 2,
+    "ballPossessionHome": 55,
+    "ballPossessionAway": 45,
+    "offsidesHome": 1,
+    "offsidesAway": 3,
+    "goalkeeperSavesHome": 6,
+    "goalkeeperSavesAway": 2,
+    "totalPassesHome": 443,
+    "totalPassesAway": 339,
+    "passesAccurateHome": 369,
+    "passesAccurateAway": 271,
+    "crossesHome": 6,
+    "crossesAway": 26,
+    "interceptionsHome": 4,
+    "interceptionsAway": 13,
+    "duelsWonHome": 51,
+    "duelsWonAway": 49,
+    "freeKicksHome": 13,
+    "freeKicksAway": 19,
+    "expectedGoalsHome": 1.1100000143051147,
+    "expectedGoalsAway": 1.659999966621399,
+    "bigChancesHome": 3,
+    "bigChancesAway": 3
+  }
+}

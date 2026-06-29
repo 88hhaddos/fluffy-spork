@@ -1,0 +1,499 @@
+{
+  "id": 1489369,
+  "home": "Mexico",
+  "away": "South Africa",
+  "home_id": 16,
+  "away_id": 1531,
+  "score": "2:0",
+  "score_h": 2,
+  "score_a": 0,
+  "date": "2026-06-11T22:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "Estadio Banorte",
+  "referee": "Wilton Pereira Sampaio, Brazil",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "goal",
+      "player": "J. Quinones",
+      "minute": 9,
+      "team": "Mexico",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "B. Gutierrez",
+      "minute": 23,
+      "team": "Mexico",
+      "assist": ""
+    },
+    {
+      "type": "red card",
+      "player": "Y. Sithole",
+      "minute": 49,
+      "team": "South Africa",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "A. Modiba",
+      "minute": 77,
+      "team": "South Africa",
+      "assist": "O. Appollis"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Quinones",
+      "minute": 79,
+      "team": "Mexico",
+      "assist": "A. Vega"
+    },
+    {
+      "type": "red card",
+      "player": "T. Zwane",
+      "minute": 84,
+      "team": "South Africa",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "T. Mokoena",
+      "minute": 17,
+      "team": "South Africa",
+      "assist": ""
+    },
+    {
+      "type": "red card",
+      "player": "C. Montes",
+      "minute": 90,
+      "team": "Mexico",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "L. Foster",
+      "minute": 56,
+      "team": "South Africa",
+      "assist": "T. Mbatha"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Adams",
+      "minute": 61,
+      "team": "South Africa",
+      "assist": "T. Zwane"
+    },
+    {
+      "type": "goal",
+      "player": "R. Jimenez",
+      "minute": 67,
+      "team": "Mexico",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "B. Gutierrez",
+      "minute": 66,
+      "team": "Mexico",
+      "assist": "L. Chavez"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Fidalgo",
+      "minute": 66,
+      "team": "Mexico",
+      "assist": "G. Mora"
+    },
+    {
+      "type": "yellow card",
+      "player": "N. Sibisi",
+      "minute": 74,
+      "team": "South Africa",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "E. Lira",
+      "minute": 76,
+      "team": "Mexico",
+      "assist": "E. Alvarez"
+    },
+    {
+      "type": "substitution",
+      "player": "R. Jimenez",
+      "minute": 76,
+      "team": "Mexico",
+      "assist": "A. Gonzalez"
+    },
+    {
+      "type": "substitution",
+      "player": "I. Rayners",
+      "minute": 76,
+      "team": "South Africa",
+      "assist": "E. Makgopa"
+    },
+    {
+      "type": "card upgrade",
+      "player": "T. Zwane",
+      "minute": 82,
+      "team": "South Africa",
+      "assist": ""
+    }
+  ],
+  "lineups": [
+    {
+      "name": "R. Rangel",
+      "position": "G",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "I. Reyes",
+      "position": "D",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "C. Montes",
+      "position": "D",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "J. Vasquez",
+      "position": "D",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "J. Gallardo",
+      "position": "D",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "E. Lira",
+      "position": "M",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "R. Alvarado",
+      "position": "M",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "B. Gutierrez",
+      "position": "M",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "A. Fidalgo",
+      "position": "M",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "J. Quinones",
+      "position": "M",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "R. Jimenez",
+      "position": "F",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "R. Williams",
+      "position": "G",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "K. Mudau",
+      "position": "D",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "I. Okon",
+      "position": "D",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "N. Sibisi",
+      "position": "D",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "M. Mbokazi",
+      "position": "D",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "A. Modiba",
+      "position": "D",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "T. Mokoena",
+      "position": "M",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "Y. Sithole",
+      "position": "M",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "J. Adams",
+      "position": "M",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "L. Foster",
+      "position": "F",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "I. Rayners",
+      "position": "F",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "C. Acevedo",
+      "position": "G",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "G. Ochoa",
+      "position": "G",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "J. Sanchez",
+      "position": "D",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "L. Romo",
+      "position": "M",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "M. Chavez Garcia",
+      "position": "D",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "A. Vega",
+      "position": "F",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "C. S. Huerta Valera",
+      "position": "M",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "E. Alvarez",
+      "position": "M",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "G. Mora",
+      "position": "M",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "L. Chavez",
+      "position": "M",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "O. Vargas",
+      "position": "M",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "O. Pineda",
+      "position": "M",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "A. Gonzalez",
+      "position": "F",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "G. Martinez",
+      "position": "F",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "S. Gimenez",
+      "position": "F",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "R. Goss",
+      "position": "G",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "S. Chaine",
+      "position": "G",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "B. Cross",
+      "position": "D",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "K. Ndamane",
+      "position": "D",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "O. Makhanya",
+      "position": "D",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "S. Kabini",
+      "position": "D",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "T. Matuludi",
+      "position": "D",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "O. Appollis",
+      "position": "F",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "T. Moremi",
+      "position": "F",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "R. Mofokeng",
+      "position": "F",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "K. Sebelebele",
+      "position": "M",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "T. Mbatha",
+      "position": "M",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "T. Zwane",
+      "position": "M",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "T. Maseko",
+      "position": "F",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "E. Makgopa",
+      "position": "F",
+      "sub": true,
+      "team": "South Africa"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 4,
+    "shotsOnGoalAway": 2,
+    "shotsOffGoalHome": 7,
+    "shotsOffGoalAway": 1,
+    "totalShotsHome": 16,
+    "totalShotsAway": 3,
+    "blockedShotsHome": 5,
+    "blockedShotsAway": 0,
+    "cornerKicksHome": 3,
+    "cornerKicksAway": 1,
+    "foulsHome": 12,
+    "foulsAway": 11,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 2,
+    "redCardsHome": 1,
+    "redCardsAway": 2,
+    "ballPossessionHome": 61,
+    "ballPossessionAway": 39,
+    "offsidesHome": 1,
+    "offsidesAway": 1,
+    "goalkeeperSavesHome": 2,
+    "goalkeeperSavesAway": 2,
+    "totalPassesHome": 520,
+    "totalPassesAway": 334,
+    "passesAccurateHome": 467,
+    "passesAccurateAway": 272,
+    "crossesHome": 12,
+    "crossesAway": 8,
+    "interceptionsHome": 8,
+    "interceptionsAway": 7,
+    "duelsWonHome": 47,
+    "duelsWonAway": 33,
+    "freeKicksHome": 11,
+    "freeKicksAway": 12,
+    "expectedGoalsHome": 1.4600000381469727,
+    "expectedGoalsAway": 0.07000000029802322,
+    "bigChancesHome": 2,
+    "bigChancesAway": 0
+  }
+}

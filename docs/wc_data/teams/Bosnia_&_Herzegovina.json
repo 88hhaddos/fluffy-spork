@@ -1,0 +1,177 @@
+{
+  "name": "Bosnia & Herzegovina",
+  "matches": [
+    {
+      "opponent": "Canada",
+      "score": "1:1",
+      "date": "2026-06-12",
+      "stage": "",
+      "home": false,
+      "result": "draw"
+    },
+    {
+      "opponent": "Switzerland",
+      "score": "4:1",
+      "date": "2026-06-18",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    },
+    {
+      "opponent": "Qatar",
+      "score": "3:1",
+      "date": "2026-06-24",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    }
+  ],
+  "wins": 1,
+  "draws": 1,
+  "losses": 1,
+  "scored": 5,
+  "conceded": 6,
+  "players": {
+    "N. Vasilj": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "A. Dedic": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1
+    },
+    "N. Katic": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "T. Muharemovic": {
+      "position": "D",
+      "matches": 2,
+      "subs": 0,
+      "red": 1
+    },
+    "S. Kolasinac": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "assists": 1
+    },
+    "E. Bajraktarevic": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "I. Basic": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "B. Tahirovic": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "A. Memic": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "E. Demirovic": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "J. Lukic": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2,
+      "yellow": 1,
+      "goals": 1
+    },
+    "M. Jurkas": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Zlomislic": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Malic": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "S. Radeljic": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "D. Hadzikadunic": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "N. Mujakic": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Hadziahmetovic": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "I. Sunjic": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "A. Gigovic": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "D. Burnic": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "K. Alajbegovic": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1,
+      "goals": 1
+    },
+    "E. Mahmic": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3,
+      "goals": 2,
+      "yellow": 1
+    },
+    "S. Bazdar": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "E. Dzeko": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1
+    },
+    "H. Tabakovic": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    }
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "name": "Austria",
+  "matches": [
+    {
+      "opponent": "Jordan",
+      "score": "3:1",
+      "date": "2026-06-17",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    },
+    {
+      "opponent": "Argentina",
+      "score": "2:0",
+      "date": "2026-06-22",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    },
+    {
+      "opponent": "Algeria",
+      "score": "3:3",
+      "date": "2026-06-28",
+      "stage": "",
+      "home": false,
+      "result": "draw"
+    }
+  ],
+  "wins": 1,
+  "draws": 1,
+  "losses": 1,
+  "scored": 6,
+  "conceded": 6,
+  "players": {
+    "A. Schlager": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "S. Posch": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "P. Lienhart": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "D. Alaba": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "assists": 1
+    },
+    "P. Mwene": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "X. Schlager": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "assists": 1
+    },
+    "N. Seiwald": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "K. Laimer": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1,
+      "assists": 1
+    },
+    "R. Schmid": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "goals": 1
+    },
+    "M. Sabitzer": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1,
+      "goals": 1
+    },
+    "S. Kalajdzic": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2,
+      "goals": 1
+    },
+    "F. Wiegele": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "P. Pentz": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "D. Affengruber": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "K. Danso": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "M. Friedl": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Svoboda": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "F. Grillitsch": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "C. Chukwuemeka": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "D. Ljubicic": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Prass": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "P. Wanner": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "A. Schopf": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "P. Wimmer": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Arnautovic": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2,
+      "goals": 2,
+      "yellow": 1
+    },
+    "M. Gregoritsch": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2
+    }
+  }
+}

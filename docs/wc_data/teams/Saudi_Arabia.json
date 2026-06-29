@@ -1,0 +1,173 @@
+{
+  "name": "Saudi Arabia",
+  "matches": [
+    {
+      "opponent": "Uruguay",
+      "score": "1:1",
+      "date": "2026-06-16",
+      "stage": "",
+      "home": true,
+      "result": "draw"
+    },
+    {
+      "opponent": "Spain",
+      "score": "4:0",
+      "date": "2026-06-21",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    },
+    {
+      "opponent": "Cape Verde Islands",
+      "score": "0:0",
+      "date": "2026-06-27",
+      "stage": "",
+      "home": false,
+      "result": "draw"
+    }
+  ],
+  "wins": 0,
+  "draws": 2,
+  "losses": 1,
+  "scored": 1,
+  "conceded": 5,
+  "players": {
+    "A. Hejji": {
+      "position": null,
+      "matches": 3,
+      "subs": 3
+    },
+    "S. Mandash": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2
+    },
+    "A. Al Khaibari": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "F. Al Buraikan": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "H. Kadesh": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "N. Al Dawsari": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1
+    },
+    "S. Al Dawsari": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "M. Kanno": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1
+    },
+    "H. Tambakti": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "A. Majrashi": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Al Hamdan": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Al Owais": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "A. Al Kassar": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Al Amri": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "goals": 1,
+      "yellow": 1
+    },
+    "A. Lajami": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "S. Al Shehri": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "S. Abdulhamid": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "K. Al Ghannam": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "N. Boushal": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "A. Yahya": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "N. Al Aqidi": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Al Harbi": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "Z. Al Johani": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Al Juwayr": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1
+    },
+    "M. Abu Al Shamat": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "J. Thakri": {
+      "position": null,
+      "matches": 3,
+      "subs": 3
+    }
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "name": "England",
+  "matches": [
+    {
+      "opponent": "Croatia",
+      "score": "4:2",
+      "date": "2026-06-17",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    },
+    {
+      "opponent": "Ghana",
+      "score": "0:0",
+      "date": "2026-06-23",
+      "stage": "",
+      "home": true,
+      "result": "draw"
+    },
+    {
+      "opponent": "Panama",
+      "score": "0:2",
+      "date": "2026-06-28",
+      "stage": "",
+      "home": false,
+      "result": "win"
+    }
+  ],
+  "wins": 2,
+  "draws": 1,
+  "losses": 0,
+  "scored": 6,
+  "conceded": 2,
+  "players": {
+    "H. Kane": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0,
+      "goals": 3
+    },
+    "J. Henderson": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "J. Stones": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "M. Rashford": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2,
+      "goals": 1
+    },
+    "B. Saka": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2,
+      "assists": 1
+    },
+    "J. Pickford": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "D. Rice": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1,
+      "assists": 1,
+      "yellow": 1
+    },
+    "D. Burn": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "D. Henderson": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Rogers": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "D. Spence": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "E. Konsa": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "O. Watkins": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "R. James": {
+      "position": "D",
+      "matches": 2,
+      "subs": 0
+    },
+    "E. Eze": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "I. Toney": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Guehi": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "J. Bellingham": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "goals": 2,
+      "assists": 1
+    },
+    "N. Madueke": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "A. Gordon": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "E. Anderson": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "assists": 1
+    },
+    "J. Quansah": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2,
+      "yellow": 1
+    },
+    "J. Trafford": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "K. Mainoo": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "N. O'Reilly": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "T. Chalobah": {
+      "position": "D",
+      "matches": 2,
+      "subs": 2
+    }
+  }
+}

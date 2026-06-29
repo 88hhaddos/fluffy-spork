@@ -1,0 +1,176 @@
+{
+  "name": "Senegal",
+  "matches": [
+    {
+      "opponent": "France",
+      "score": "3:1",
+      "date": "2026-06-16",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    },
+    {
+      "opponent": "Norway",
+      "score": "3:2",
+      "date": "2026-06-23",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    },
+    {
+      "opponent": "Iraq",
+      "score": "5:0",
+      "date": "2026-06-26",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    }
+  ],
+  "wins": 1,
+  "draws": 0,
+  "losses": 2,
+  "scored": 8,
+  "conceded": 6,
+  "players": {
+    "K. Diatta": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "S. Mane": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "K. Koulibaly": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "I. Sarr": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "goals": 3
+    },
+    "E. Mendy": {
+      "position": "G",
+      "matches": 2,
+      "subs": 0
+    },
+    "I. Gueye": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "A. Seck": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2,
+      "goals": 1,
+      "yellow": 1
+    },
+    "C. Ndiaye": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "I. Ndiaye": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3,
+      "assists": 1,
+      "goals": 1
+    },
+    "Y. Diouf": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "P. Gueye": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1,
+      "goals": 2
+    },
+    "M. Niakhate": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "P. Ciss": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Diaw": {
+      "position": "G",
+      "matches": 3,
+      "subs": 2
+    },
+    "I. Jakobs": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "P. M. Sarr": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Sarr": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "N. Jackson": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1,
+      "assists": 1
+    },
+    "B. Dieng": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Mendy": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "H. Diarra": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "L. Camara": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "assists": 2
+    },
+    "A. Diao": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Diouf": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "I. Mbaye": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2,
+      "goals": 1
+    },
+    "B. Sapoko Ndiaye": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    }
+  }
+}

@@ -1,0 +1,469 @@
+{
+  "id": 1539017,
+  "home": "France",
+  "away": "Iraq",
+  "home_id": 2,
+  "away_id": 1567,
+  "score": "3:0",
+  "score_h": 3,
+  "score_a": 0,
+  "date": "2026-06-23T00:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Drew Fischer, Canada",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "substitution",
+      "player": "M. Olise",
+      "minute": 68,
+      "team": "France",
+      "assist": "R. Cherki"
+    },
+    {
+      "type": "substitution",
+      "player": "O. Dembele",
+      "minute": 68,
+      "team": "France",
+      "assist": "D. Doue"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Al Ammari",
+      "minute": 68,
+      "team": "Iraq",
+      "assist": "A. Sher"
+    },
+    {
+      "type": "substitution",
+      "player": "I. Bayesh",
+      "minute": 69,
+      "team": "Iraq",
+      "assist": "M. Farji"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Kounde",
+      "minute": 83,
+      "team": "France",
+      "assist": "M. Gusto"
+    },
+    {
+      "type": "substitution",
+      "player": "B. Barcola",
+      "minute": 83,
+      "team": "France",
+      "assist": "M. Akliouche"
+    },
+    {
+      "type": "substitution",
+      "player": "K. Mbappe",
+      "minute": 90,
+      "team": "France",
+      "assist": "M. Thuram"
+    },
+    {
+      "type": "goal",
+      "player": "K. Mbappe",
+      "minute": 14,
+      "team": "France",
+      "assist": "M. Olise"
+    },
+    {
+      "type": "yellow card",
+      "player": "A. Al Ammari",
+      "minute": 6,
+      "team": "Iraq",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "A. Hussein",
+      "minute": 26,
+      "team": "Iraq",
+      "assist": "A. Al Hamadi"
+    },
+    {
+      "type": "substitution",
+      "player": "Z. Tahseen",
+      "minute": 60,
+      "team": "Iraq",
+      "assist": "R. Sulaka"
+    },
+    {
+      "type": "substitution",
+      "player": "Z. Ismaeel",
+      "minute": 60,
+      "team": "Iraq",
+      "assist": "Y. Amyn"
+    },
+    {
+      "type": "goal",
+      "player": "K. Mbappe",
+      "minute": 54,
+      "team": "France",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "O. Dembele",
+      "minute": 66,
+      "team": "France",
+      "assist": "M. Olise"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "M. Maignan",
+      "position": "G",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "J. Kounde",
+      "position": "D",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "D. Upamecano",
+      "position": "D",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "W. Saliba",
+      "position": "D",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "L. Digne",
+      "position": "D",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "M. Kone",
+      "position": "M",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "A. Rabiot",
+      "position": "M",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "M. Olise",
+      "position": "M",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "O. Dembele",
+      "position": "M",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "B. Barcola",
+      "position": "M",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "K. Mbappe",
+      "position": "F",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "A. Basil",
+      "position": "G",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "H. Ali",
+      "position": "D",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "Z. Tahseen",
+      "position": "D",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "A. Hashem",
+      "position": "D",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "M. Doski",
+      "position": "D",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "A. Al Ammari",
+      "position": "M",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "Z. Ismaeel",
+      "position": "M",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "I. Bayesh",
+      "position": "M",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "Z. Iqbal",
+      "position": "M",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "A. Qasem",
+      "position": "M",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "A. Hussein",
+      "position": "F",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "B. Samba",
+      "position": "G",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "R. Risser",
+      "position": "G",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "M. Gusto",
+      "position": "D",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "I. Konate",
+      "position": "D",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "L. Hernandez",
+      "position": "D",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "T. Hernandez",
+      "position": "D",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "M. Lacroix",
+      "position": "D",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "A. Tchouameni",
+      "position": "M",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "N. Kante",
+      "position": "M",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "W. Zaire-Emery",
+      "position": "M",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "M. Akliouche",
+      "position": "M",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "R. Cherki",
+      "position": "M",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "J. Mateta",
+      "position": "F",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "M. Thuram",
+      "position": "F",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "D. Doue",
+      "position": "F",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "F. Talib",
+      "position": "G",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "J. Hassan",
+      "position": "G",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "M. Younis",
+      "position": "D",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "F. Putros",
+      "position": "D",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "M. Saadoon",
+      "position": "D",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "R. Sulaka",
+      "position": "D",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "A. Jasim",
+      "position": "F",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "A. Sher",
+      "position": "M",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "K. Yakob",
+      "position": "M",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "M. Farji",
+      "position": "M",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "Y. Amyn",
+      "position": "F",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "A. Yousif",
+      "position": "F",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "A. Al Hamadi",
+      "position": "F",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "A. Maknzi",
+      "position": "D",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "M. Ali",
+      "position": null,
+      "sub": true,
+      "team": "Iraq"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 5,
+    "shotsOnGoalAway": 0,
+    "shotsOffGoalHome": 10,
+    "shotsOffGoalAway": 3,
+    "totalShotsHome": 19,
+    "totalShotsAway": 4,
+    "blockedShotsHome": 4,
+    "blockedShotsAway": 1,
+    "cornerKicksHome": 4,
+    "cornerKicksAway": 2,
+    "foulsHome": 8,
+    "foulsAway": 4,
+    "yellowCardsHome": 0,
+    "yellowCardsAway": 1,
+    "ballPossessionHome": 56,
+    "ballPossessionAway": 44,
+    "offsidesHome": 1,
+    "offsidesAway": 0,
+    "goalkeeperSavesHome": 0,
+    "goalkeeperSavesAway": 2,
+    "totalPassesHome": 603,
+    "totalPassesAway": 481,
+    "passesAccurateHome": 540,
+    "passesAccurateAway": 413,
+    "crossesHome": 14,
+    "crossesAway": 9,
+    "interceptionsHome": 5,
+    "interceptionsAway": 10,
+    "duelsWonHome": 40,
+    "duelsWonAway": 38,
+    "freeKicksHome": 4,
+    "freeKicksAway": 8,
+    "expectedGoalsHome": 2.6700000762939453,
+    "expectedGoalsAway": 0.6299999952316284,
+    "bigChancesHome": 5,
+    "bigChancesAway": 1
+  }
+}

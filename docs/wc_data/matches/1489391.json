@@ -1,0 +1,512 @@
+{
+  "id": 1489391,
+  "home": "USA",
+  "away": "Australia",
+  "home_id": 2384,
+  "away_id": 20,
+  "score": "2:0",
+  "score_h": 2,
+  "score_a": 0,
+  "date": "2026-06-19T22:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "Lumen Field",
+  "referee": "Felix Zwayer, Germany",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "substitution",
+      "player": "M. Toure",
+      "minute": 46,
+      "team": "Australia",
+      "assist": "N. Irankunda"
+    },
+    {
+      "type": "substitution",
+      "player": "C. Burgess",
+      "minute": 46,
+      "team": "Australia",
+      "assist": "J. Geria"
+    },
+    {
+      "type": "substitution",
+      "player": "N. Velupillay",
+      "minute": 46,
+      "team": "Australia",
+      "assist": "C. Metcalfe"
+    },
+    {
+      "type": "substitution",
+      "player": "R. Pepi",
+      "minute": 74,
+      "team": "USA",
+      "assist": "S. Berhalter"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Robinson",
+      "minute": 80,
+      "team": "USA",
+      "assist": "A. Trusty"
+    },
+    {
+      "type": "substitution",
+      "player": "F. Balogun",
+      "minute": 90,
+      "team": "USA",
+      "assist": "H. Wright"
+    },
+    {
+      "type": "yellow card",
+      "player": "A. Circati",
+      "minute": 32,
+      "team": "Australia",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "A. Freeman",
+      "minute": 43,
+      "team": "USA",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "A. Robinson",
+      "minute": 56,
+      "team": "USA",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "M. Leckie",
+      "minute": 61,
+      "team": "Australia",
+      "assist": "C. Volpato"
+    },
+    {
+      "type": "substitution",
+      "player": "P. Okon-Engstler",
+      "minute": 78,
+      "team": "Australia",
+      "assist": "J. Irvine"
+    },
+    {
+      "type": "substitution",
+      "player": "S. Dest",
+      "minute": 80,
+      "team": "USA",
+      "assist": "J. Scally"
+    },
+    {
+      "type": "yellow card",
+      "player": "F. Balogun",
+      "minute": 89,
+      "team": "USA",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "J. Italiano",
+      "minute": 89,
+      "team": "Australia",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "H. Souttar",
+      "minute": 89,
+      "team": "Australia",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "J. Italiano",
+      "minute": 88,
+      "team": "Australia",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "C. Richards",
+      "minute": 90,
+      "team": "USA",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "W. McKennie",
+      "minute": 90,
+      "team": "USA",
+      "assist": "G. Reyna"
+    },
+    {
+      "type": "goal",
+      "player": "C. Burgess",
+      "minute": 11,
+      "team": "USA",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "J. Bos",
+      "minute": 16,
+      "team": "Australia",
+      "assist": ""
+    },
+    {
+      "type": "goal confirmed",
+      "player": "A. Freeman",
+      "minute": 45,
+      "team": "USA",
+      "assist": ""
+    }
+  ],
+  "lineups": [
+    {
+      "name": "M. Freese",
+      "position": "G",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "A. Freeman",
+      "position": "D",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "C. Richards",
+      "position": "D",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "T. Ream",
+      "position": "D",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "A. Robinson",
+      "position": "M",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "M. Tillman",
+      "position": "M",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "T. Adams",
+      "position": "M",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "S. Dest",
+      "position": "M",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "W. McKennie",
+      "position": "M",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "R. Pepi",
+      "position": "F",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "F. Balogun",
+      "position": "F",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "P. Beach",
+      "position": "G",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "J. Italiano",
+      "position": "D",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "A. Circati",
+      "position": "D",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "H. Souttar",
+      "position": "D",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "C. Burgess",
+      "position": "D",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "J. Bos",
+      "position": "D",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "M. Leckie",
+      "position": "M",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "A. O'Neill",
+      "position": "M",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "P. Okon-Engstler",
+      "position": "M",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "N. Velupillay",
+      "position": "M",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "M. Toure",
+      "position": "F",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "M. Turner",
+      "position": "G",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "C. Brady",
+      "position": "G",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "A. Trusty",
+      "position": "D",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "M. Robinson",
+      "position": "D",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "M. McKenzie",
+      "position": "D",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "J. Scally",
+      "position": "D",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "M. Arfsten",
+      "position": "M",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "G. Reyna",
+      "position": "M",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "S. Berhalter",
+      "position": "M",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "C. Roldan",
+      "position": "M",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "B. Aaronson",
+      "position": "M",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "T. Weah",
+      "position": "F",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "A. Zendejas",
+      "position": "F",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "H. Wright",
+      "position": "F",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "M. Ryan",
+      "position": "G",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "P. Izzo",
+      "position": "G",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "M. Degenek",
+      "position": "D",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "J. Geria",
+      "position": "D",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "A. Behich",
+      "position": "D",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "L. Herrington",
+      "position": "D",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "K. Trewin",
+      "position": "D",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "C. Metcalfe",
+      "position": "M",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "C. Devlin",
+      "position": "M",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "J. Irvine",
+      "position": "M",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "A. Hrustic",
+      "position": "M",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "A. Mabil",
+      "position": "M",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "C. Volpato",
+      "position": "M",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "N. Irankunda",
+      "position": "F",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "T. Yengi",
+      "position": "F",
+      "sub": true,
+      "team": "Australia"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 2,
+    "shotsOnGoalAway": 2,
+    "shotsOffGoalHome": 2,
+    "shotsOffGoalAway": 3,
+    "totalShotsHome": 10,
+    "totalShotsAway": 5,
+    "blockedShotsHome": 6,
+    "blockedShotsAway": 0,
+    "cornerKicksHome": 7,
+    "cornerKicksAway": 4,
+    "foulsHome": 12,
+    "foulsAway": 16,
+    "yellowCardsHome": 3,
+    "yellowCardsAway": 4,
+    "ballPossessionHome": 62,
+    "ballPossessionAway": 38,
+    "offsidesHome": 1,
+    "offsidesAway": 0,
+    "goalkeeperSavesHome": 2,
+    "goalkeeperSavesAway": 1,
+    "totalPassesHome": 523,
+    "totalPassesAway": 310,
+    "passesAccurateHome": 444,
+    "passesAccurateAway": 219,
+    "crossesHome": 14,
+    "crossesAway": 19,
+    "interceptionsHome": 20,
+    "interceptionsAway": 6,
+    "duelsWonHome": 59,
+    "duelsWonAway": 64,
+    "freeKicksHome": 16,
+    "freeKicksAway": 12,
+    "expectedGoalsHome": 1.0800000429153442,
+    "expectedGoalsAway": 0.3499999940395355,
+    "bigChancesHome": 2,
+    "bigChancesAway": 0
+  }
+}

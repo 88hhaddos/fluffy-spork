@@ -1,0 +1,477 @@
+{
+  "id": 1489400,
+  "home": "Jordan",
+  "away": "Algeria",
+  "home_id": 1548,
+  "away_id": 1532,
+  "score": "1:2",
+  "score_h": 1,
+  "score_a": 2,
+  "date": "2026-06-23T06:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Slavko Vinčić, Slovenia",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "goal",
+      "player": "N. Al Rashdan",
+      "minute": 36,
+      "team": "Jordan",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "A. Olwan",
+      "minute": 90,
+      "team": "Jordan",
+      "assist": "Shararh"
+    },
+    {
+      "type": "substitution",
+      "player": "R. Mahrez",
+      "minute": 76,
+      "team": "Algeria",
+      "assist": "A. Hadj Moussa"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Al Mardi",
+      "minute": 76,
+      "team": "Jordan",
+      "assist": "O. Al Fakhouri"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Abu Taha",
+      "minute": 85,
+      "team": "Jordan",
+      "assist": "M. Abu Hasheesh"
+    },
+    {
+      "type": "substitution",
+      "player": "R. Ait-Nouri",
+      "minute": 86,
+      "team": "Algeria",
+      "assist": "J. Hadjam"
+    },
+    {
+      "type": "goal confirmed",
+      "player": "A. Gouiri",
+      "minute": 84,
+      "team": "Algeria",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "A. Gouiri",
+      "minute": 82,
+      "team": "Algeria",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "A. Olwan",
+      "minute": 90,
+      "team": "Jordan",
+      "assist": "Shararh"
+    },
+    {
+      "type": "yellow card",
+      "player": "R. Zerrouki",
+      "minute": 44,
+      "team": "Algeria",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "R. Zerrouki",
+      "minute": 46,
+      "team": "Algeria",
+      "assist": "N. Bentaleb"
+    },
+    {
+      "type": "substitution",
+      "player": "H. Boudaoui",
+      "minute": 46,
+      "team": "Algeria",
+      "assist": "N. Benbouali"
+    },
+    {
+      "type": "yellow card",
+      "player": "H. Abu Dahab",
+      "minute": 64,
+      "team": "Jordan",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "N. Benbouali",
+      "minute": 69,
+      "team": "Algeria",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "R. Ait-Nouri",
+      "minute": 85,
+      "team": "Algeria",
+      "assist": "J. Hadjam"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Tamari",
+      "minute": 84,
+      "team": "Jordan",
+      "assist": "A. Azaizeh"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "S. Al Rosan",
+      "position": null,
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "M. Abu Hasheesh",
+      "position": null,
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "I. Saadeh",
+      "position": null,
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "H. Abu Dahab",
+      "position": null,
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "O. Al Fakhouri",
+      "position": null,
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "M. Al Daoud",
+      "position": null,
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "N. Bentaleb",
+      "position": "M",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "R. Mahrez",
+      "position": "M",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "H. Aouar",
+      "position": "M",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "L. Zidane",
+      "position": "G",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "A. Mandi",
+      "position": "D",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "R. Bensebaini",
+      "position": "D",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "H. Boudaoui",
+      "position": "M",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "O. Benbot",
+      "position": "G",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "Z. Belaid",
+      "position": "D",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "M. Tougai",
+      "position": "D",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "S. Chergui",
+      "position": "D",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "R. Ait-Nouri",
+      "position": "D",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "A. Gouiri",
+      "position": "F",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "R. Zerrouki",
+      "position": "M",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "J. Hadjam",
+      "position": "D",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "F. Chaibi",
+      "position": "M",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "N. Benbouali",
+      "position": "F",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "R. Belghali",
+      "position": "D",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "M. Mastil",
+      "position": "G",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "A. Hadj Moussa",
+      "position": "F",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "Y. Titraoui",
+      "position": "M",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "A. Boulbina",
+      "position": "F",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "F. Ghedjemis",
+      "position": "F",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "A. Abada",
+      "position": "D",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "I. Maza",
+      "position": "M",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "M. Tamari",
+      "position": "F",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "Y. Al Arab",
+      "position": "D",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "E. Haddad",
+      "position": "M",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "S. Obaid",
+      "position": "D",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "Shararh",
+      "position": "F",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "M. Abualnadi",
+      "position": "D",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "R. Ayed",
+      "position": "M",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "M. Al Mardi",
+      "position": "F",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "Y. Abulaila",
+      "position": "G",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "N. Al Rawabdeh",
+      "position": "M",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "A. Al Fakhouri",
+      "position": "G",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "N. Bani Attiah",
+      "position": "G",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "A. Olwan",
+      "position": "F",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "A. Jamous",
+      "position": "M",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "N. Al Rashdan",
+      "position": "M",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "M. Abu Taha",
+      "position": "M",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "A. Nasib",
+      "position": "D",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "A. Azaizeh",
+      "position": "F",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "M. Abu Ghoush",
+      "position": "D",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "A. Badawi",
+      "position": "D",
+      "sub": true,
+      "team": "Jordan"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 4,
+    "shotsOnGoalAway": 8,
+    "shotsOffGoalHome": 4,
+    "shotsOffGoalAway": 4,
+    "totalShotsHome": 8,
+    "totalShotsAway": 17,
+    "blockedShotsHome": 0,
+    "blockedShotsAway": 5,
+    "cornerKicksHome": 1,
+    "cornerKicksAway": 10,
+    "foulsHome": 11,
+    "foulsAway": 6,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 1,
+    "ballPossessionHome": 28,
+    "ballPossessionAway": 72,
+    "offsidesHome": 1,
+    "offsidesAway": 0,
+    "goalkeeperSavesHome": 6,
+    "goalkeeperSavesAway": 3,
+    "totalPassesHome": 251,
+    "totalPassesAway": 641,
+    "passesAccurateHome": 181,
+    "passesAccurateAway": 561,
+    "crossesHome": 5,
+    "crossesAway": 21,
+    "interceptionsHome": 3,
+    "interceptionsAway": 11,
+    "duelsWonHome": 60,
+    "duelsWonAway": 65,
+    "freeKicksHome": 6,
+    "freeKicksAway": 11,
+    "expectedGoalsHome": 0.6299999952316284,
+    "expectedGoalsAway": 1.8899999856948853,
+    "bigChancesHome": 1,
+    "bigChancesAway": 3
+  }
+}

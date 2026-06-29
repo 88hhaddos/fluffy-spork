@@ -1,0 +1,187 @@
+{
+  "name": "Canada",
+  "matches": [
+    {
+      "opponent": "Bosnia & Herzegovina",
+      "score": "1:1",
+      "date": "2026-06-12",
+      "stage": "",
+      "home": true,
+      "result": "draw"
+    },
+    {
+      "opponent": "Qatar",
+      "score": "6:0",
+      "date": "2026-06-19",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    },
+    {
+      "opponent": "Switzerland",
+      "score": "2:1",
+      "date": "2026-06-24",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    },
+    {
+      "opponent": "South Africa",
+      "score": "0:1",
+      "date": "2026-06-28",
+      "stage": "",
+      "home": false,
+      "result": "win"
+    }
+  ],
+  "wins": 2,
+  "draws": 1,
+  "losses": 1,
+  "scored": 9,
+  "conceded": 3,
+  "players": {
+    "M. Crepeau": {
+      "position": "G",
+      "matches": 4,
+      "subs": 0
+    },
+    "A. Johnston": {
+      "position": "D",
+      "matches": 4,
+      "subs": 0,
+      "yellow": 1
+    },
+    "L. De Fougerolles": {
+      "position": "D",
+      "matches": 4,
+      "subs": 1,
+      "yellow": 1
+    },
+    "D. Cornelius": {
+      "position": "D",
+      "matches": 4,
+      "subs": 0,
+      "yellow": 1
+    },
+    "R. Laryea": {
+      "position": "D",
+      "matches": 4,
+      "subs": 0
+    },
+    "T. Buchanan": {
+      "position": "M",
+      "matches": 4,
+      "subs": 0
+    },
+    "I. Kone": {
+      "position": "M",
+      "matches": 2,
+      "subs": 0
+    },
+    "S. Eustaquio": {
+      "position": "M",
+      "matches": 4,
+      "subs": 1,
+      "goals": 1
+    },
+    "L. Millar": {
+      "position": "M",
+      "matches": 4,
+      "subs": 2,
+      "yellow": 1
+    },
+    "J. David": {
+      "position": "F",
+      "matches": 4,
+      "subs": 0,
+      "goals": 3
+    },
+    "T. Oluwaseyi": {
+      "position": "F",
+      "matches": 4,
+      "subs": 2
+    },
+    "D. St.Clair": {
+      "position": "G",
+      "matches": 4,
+      "subs": 4
+    },
+    "O. Goodman": {
+      "position": "G",
+      "matches": 4,
+      "subs": 4
+    },
+    "N. Sigur": {
+      "position": "M",
+      "matches": 4,
+      "subs": 4,
+      "yellow": 1
+    },
+    "A. Jones": {
+      "position": "D",
+      "matches": 2,
+      "subs": 2
+    },
+    "J. Waterman": {
+      "position": "D",
+      "matches": 4,
+      "subs": 4
+    },
+    "M. Bombito": {
+      "position": "D",
+      "matches": 4,
+      "subs": 3
+    },
+    "A. Davies": {
+      "position": "D",
+      "matches": 4,
+      "subs": 4
+    },
+    "A. Ahmed": {
+      "position": "M",
+      "matches": 4,
+      "subs": 2
+    },
+    "N. Saliba": {
+      "position": "M",
+      "matches": 4,
+      "subs": 2,
+      "goals": 1,
+      "assists": 1,
+      "yellow": 1
+    },
+    "M. Choiniere": {
+      "position": "M",
+      "matches": 4,
+      "subs": 3
+    },
+    "J. Osorio": {
+      "position": "M",
+      "matches": 4,
+      "subs": 4
+    },
+    "J. Shaffelburg": {
+      "position": "F",
+      "matches": 4,
+      "subs": 4
+    },
+    "P. David": {
+      "position": "F",
+      "matches": 4,
+      "subs": 4,
+      "assists": 1
+    },
+    "J. Nelson": {
+      "position": "F",
+      "matches": 4,
+      "subs": 4
+    },
+    "C. Larin": {
+      "position": "F",
+      "matches": 4,
+      "subs": 2,
+      "goals": 2,
+      "yellow": 1
+    }
+  }
+}

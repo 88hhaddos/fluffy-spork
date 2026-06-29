@@ -1,0 +1,423 @@
+{
+  "id": 1489411,
+  "home": "Paraguay",
+  "away": "Australia",
+  "home_id": 2380,
+  "away_id": 20,
+  "score": "0:0",
+  "score_h": 0,
+  "score_a": 0,
+  "date": "2026-06-26T05:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "C. Turpin",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "yellow card",
+      "player": "J. Irvine",
+      "minute": 46,
+      "team": "Australia",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "C. Volpato",
+      "minute": 58,
+      "team": "Australia",
+      "assist": "A. Hrustic"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Maidana",
+      "minute": 46,
+      "team": "Paraguay",
+      "assist": "Mauricio"
+    },
+    {
+      "type": "substitution",
+      "player": "D. Gomez",
+      "minute": 90,
+      "team": "Paraguay",
+      "assist": "D. Bobadilla"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Galarza",
+      "minute": 90,
+      "team": "Paraguay",
+      "assist": "J. Alonso"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Enciso",
+      "minute": 67,
+      "team": "Paraguay",
+      "assist": "A. Arce"
+    },
+    {
+      "type": "yellow card",
+      "player": "D. Gomez",
+      "minute": 77,
+      "team": "Paraguay",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "O. Alderete",
+      "minute": 84,
+      "team": "Paraguay",
+      "assist": "J. Canale"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Irvine",
+      "minute": 84,
+      "team": "Australia",
+      "assist": "P. Okon-Engstler"
+    },
+    {
+      "type": "substitution",
+      "player": "N. Irankunda",
+      "minute": 84,
+      "team": "Australia",
+      "assist": "T. Yengi"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "R. Fernandez",
+      "position": null,
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "O. Gill",
+      "position": "G",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "J. Caceres",
+      "position": "D",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "G. Velazquez",
+      "position": "D",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "G. Gomez",
+      "position": "D",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "O. Alderete",
+      "position": "D",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "A. Maidana",
+      "position": "D",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "D. Gomez",
+      "position": "M",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "A. Cubas",
+      "position": "M",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "M. Galarza",
+      "position": "M",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "J. Enciso",
+      "position": "F",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "G. Avalos",
+      "position": "F",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "P. Beach",
+      "position": "G",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "A. Circati",
+      "position": "D",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "H. Souttar",
+      "position": "D",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "L. Herrington",
+      "position": "D",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "A. Behich",
+      "position": "M",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "A. O'Neill",
+      "position": "M",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "J. Irvine",
+      "position": "M",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "J. Bos",
+      "position": "M",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "C. Metcalfe",
+      "position": "F",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "N. Irankunda",
+      "position": "F",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "C. Volpato",
+      "position": "F",
+      "sub": false,
+      "team": "Australia"
+    },
+    {
+      "name": "G. Olveira",
+      "position": "G",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "J. Alonso",
+      "position": "D",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "A. Sanabria",
+      "position": "F",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "I. Pitta",
+      "position": "F",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "R. Sosa",
+      "position": "F",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "D. Bobadilla",
+      "position": "M",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "A. Arce",
+      "position": "F",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "Kaku",
+      "position": "M",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "Fabian Balbuena",
+      "position": "D",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "Mauricio",
+      "position": "M",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "G. Caballero",
+      "position": "F",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "J. Canale",
+      "position": "D",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "B. Ojeda",
+      "position": "M",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "P. Okon-Engstler",
+      "position": "M",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "N. Velupillay",
+      "position": "F",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "T. Yengi",
+      "position": "F",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "M. Toure",
+      "position": "F",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "K. Trewin",
+      "position": "D",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "C. Devlin",
+      "position": "M",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "A. Hrustic",
+      "position": "M",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "C. Burgess",
+      "position": "D",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "A. Mabil",
+      "position": "M",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "J. Geria",
+      "position": "D",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "M. Degenek",
+      "position": "D",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "P. Izzo",
+      "position": "G",
+      "sub": true,
+      "team": "Australia"
+    },
+    {
+      "name": "M. Ryan",
+      "position": "G",
+      "sub": true,
+      "team": "Australia"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 2,
+    "shotsOnGoalAway": 5,
+    "shotsOffGoalHome": 4,
+    "shotsOffGoalAway": 4,
+    "totalShotsHome": 7,
+    "totalShotsAway": 12,
+    "blockedShotsHome": 1,
+    "blockedShotsAway": 3,
+    "cornerKicksHome": 1,
+    "cornerKicksAway": 3,
+    "foulsHome": 9,
+    "foulsAway": 6,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 1,
+    "ballPossessionHome": 44,
+    "ballPossessionAway": 56,
+    "offsidesHome": 0,
+    "offsidesAway": 0,
+    "goalkeeperSavesHome": 5,
+    "goalkeeperSavesAway": 2,
+    "totalPassesHome": 427,
+    "totalPassesAway": 536,
+    "passesAccurateHome": 330,
+    "passesAccurateAway": 438,
+    "crossesHome": 7,
+    "crossesAway": 13,
+    "interceptionsHome": 8,
+    "interceptionsAway": 7,
+    "duelsWonHome": 55,
+    "duelsWonAway": 64,
+    "freeKicksHome": 6,
+    "freeKicksAway": 9,
+    "expectedGoalsHome": 0.25,
+    "expectedGoalsAway": 0.5699999928474426,
+    "bigChancesHome": 0,
+    "bigChancesAway": 0
+  }
+}

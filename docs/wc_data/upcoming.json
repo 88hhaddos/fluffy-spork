@@ -1,0 +1,100 @@
+[
+  {
+    "home": "Germany",
+    "away": "Paraguay",
+    "date": "2026-06-29T23:30:00",
+    "id": 1565176,
+    "stage": ""
+  },
+  {
+    "home": "Netherlands",
+    "away": "Morocco",
+    "date": "2026-06-30T04:00:00",
+    "id": 1562345,
+    "stage": ""
+  },
+  {
+    "home": "Ivory Coast",
+    "away": "Norway",
+    "date": "2026-06-30T20:00:00",
+    "id": 1564789,
+    "stage": ""
+  },
+  {
+    "home": "France",
+    "away": "Sweden",
+    "date": "2026-07-01T00:00:00",
+    "id": 1565177,
+    "stage": ""
+  },
+  {
+    "home": "Mexico",
+    "away": "Ecuador",
+    "date": "2026-07-01T04:00:00",
+    "id": 1567306,
+    "stage": ""
+  },
+  {
+    "home": "England",
+    "away": "Congo DR",
+    "date": "2026-07-01T19:00:00",
+    "id": 1567307,
+    "stage": ""
+  },
+  {
+    "home": "Belgium",
+    "away": "Senegal",
+    "date": "2026-07-01T23:00:00",
+    "id": 1567308,
+    "stage": ""
+  },
+  {
+    "home": "USA",
+    "away": "Bosnia & Herzegovina",
+    "date": "2026-07-02T03:00:00",
+    "id": 1562586,
+    "stage": ""
+  },
+  {
+    "home": "Spain",
+    "away": "Austria",
+    "date": "2026-07-02T22:00:00",
+    "id": 1567311,
+    "stage": ""
+  },
+  {
+    "home": "Portugal",
+    "away": "Croatia",
+    "date": "2026-07-03T02:00:00",
+    "id": 1567309,
+    "stage": ""
+  },
+  {
+    "home": "Switzerland",
+    "away": "Algeria",
+    "date": "2026-07-03T06:00:00",
+    "id": 1567312,
+    "stage": ""
+  },
+  {
+    "home": "Australia",
+    "away": "Egypt",
+    "date": "2026-07-03T21:00:00",
+    "id": 1565178,
+    "stage": ""
+  },
+  {
+    "home": "Argentina",
+    "away": "Cape Verde Islands",
+    "date": "2026-07-04T01:00:00",
+    "id": 1565179,
+    "stage": ""
+  },
+  {
+    "home": "Colombia",
+    "away": "Ghana",
+    "date": "2026-07-04T04:30:00",
+    "id": 1567310,
+    "stage": ""
+  }
+]

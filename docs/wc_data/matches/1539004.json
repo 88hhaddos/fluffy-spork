@@ -1,0 +1,444 @@
+{
+  "id": 1539004,
+  "home": "Czechia",
+  "away": "South Africa",
+  "home_id": 770,
+  "away_id": 1531,
+  "score": "1:1",
+  "score_h": 1,
+  "score_a": 1,
+  "date": "2026-06-18T19:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "Mercedes-Benz Stadium",
+  "referee": "Tori Penso, USA",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "substitution",
+      "player": "V. Darida",
+      "minute": 55,
+      "team": "Czechia",
+      "assist": "P. Sulc"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Sojka",
+      "minute": 55,
+      "team": "Czechia",
+      "assist": "J. Zeleny"
+    },
+    {
+      "type": "substitution",
+      "player": "I. Rayners",
+      "minute": 66,
+      "team": "South Africa",
+      "assist": "E. Makgopa"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Hlozek",
+      "minute": 67,
+      "team": "Czechia",
+      "assist": "L. Provod"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Sadilek",
+      "minute": 67,
+      "team": "Czechia",
+      "assist": "T. Soucek"
+    },
+    {
+      "type": "yellow card",
+      "player": "L. Krejci",
+      "minute": 75,
+      "team": "Czechia",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "T. Mokoena",
+      "minute": 83,
+      "team": "South Africa",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "T. Maseko",
+      "minute": 84,
+      "team": "South Africa",
+      "assist": "K. Sebelebele"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Adams",
+      "minute": 46,
+      "team": "South Africa",
+      "assist": "R. Mofokeng"
+    },
+    {
+      "type": "goal",
+      "player": "M. Sadilek",
+      "minute": 6,
+      "team": "Czechia",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "T. Mokoena",
+      "minute": 33,
+      "team": "South Africa",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "T. Mbatha",
+      "minute": 40,
+      "team": "South Africa",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "L. Cerv",
+      "minute": 78,
+      "team": "Czechia",
+      "assist": "D. Zima"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "M. Kovar",
+      "position": "G",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "T. Holes",
+      "position": "D",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "R. Hranac",
+      "position": "D",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "L. Krejci",
+      "position": "D",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "V. Coufal",
+      "position": "M",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "M. Sadilek",
+      "position": "M",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "L. Cerv",
+      "position": "M",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "A. Sojka",
+      "position": "M",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "A. Hlozek",
+      "position": "F",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "V. Darida",
+      "position": "M",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "P. Schick",
+      "position": "F",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "R. Williams",
+      "position": "G",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "K. Mudau",
+      "position": "D",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "I. Okon",
+      "position": "D",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "M. Mbokazi",
+      "position": "D",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "A. Modiba",
+      "position": "D",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "T. Mbatha",
+      "position": "M",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "T. Mokoena",
+      "position": "M",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "O. Appollis",
+      "position": "F",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "J. Adams",
+      "position": "M",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "T. Maseko",
+      "position": "F",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "I. Rayners",
+      "position": "F",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "J. Stanek",
+      "position": "G",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "L. Hornicek",
+      "position": "G",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "D. Zima",
+      "position": "D",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "S. Chaloupek",
+      "position": "D",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "J. Zeleny",
+      "position": "D",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "D. Doudera",
+      "position": "M",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "T. Soucek",
+      "position": "M",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "H. Sochurek",
+      "position": "M",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "D. Visinsky",
+      "position": "M",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "L. Provod",
+      "position": "M",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "J. Kuchta",
+      "position": "F",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "M. Chytil",
+      "position": "F",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "P. Sulc",
+      "position": "M",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "T. Chory",
+      "position": "F",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "S. Chaine",
+      "position": "G",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "R. Goss",
+      "position": "G",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "T. Matuludi",
+      "position": "D",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "K. Ndamane",
+      "position": "D",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "S. Kabini",
+      "position": "D",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "N. Sibisi",
+      "position": "D",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "O. Makhanya",
+      "position": "D",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "B. Cross",
+      "position": "D",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "T. Moremi",
+      "position": "F",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "R. Mofokeng",
+      "position": "F",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "K. Sebelebele",
+      "position": "M",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "L. Foster",
+      "position": "F",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "E. Makgopa",
+      "position": "F",
+      "sub": true,
+      "team": "South Africa"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 3,
+    "shotsOnGoalAway": 4,
+    "shotsOffGoalHome": 8,
+    "shotsOffGoalAway": 5,
+    "totalShotsHome": 14,
+    "totalShotsAway": 17,
+    "blockedShotsHome": 3,
+    "blockedShotsAway": 8,
+    "cornerKicksHome": 5,
+    "cornerKicksAway": 5,
+    "foulsHome": 12,
+    "foulsAway": 10,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 2,
+    "ballPossessionHome": 38,
+    "ballPossessionAway": 62,
+    "offsidesHome": 2,
+    "offsidesAway": 3,
+    "goalkeeperSavesHome": 3,
+    "goalkeeperSavesAway": 2,
+    "totalPassesHome": 341,
+    "totalPassesAway": 563,
+    "passesAccurateHome": 272,
+    "passesAccurateAway": 508,
+    "crossesHome": 16,
+    "crossesAway": 17,
+    "interceptionsHome": 9,
+    "interceptionsAway": 9,
+    "duelsWonHome": 45,
+    "duelsWonAway": 47,
+    "freeKicksHome": 10,
+    "freeKicksAway": 12,
+    "expectedGoalsHome": 1.0199999809265137,
+    "expectedGoalsAway": 1.3799999952316284,
+    "bigChancesHome": 3,
+    "bigChancesAway": 1
+  }
+}

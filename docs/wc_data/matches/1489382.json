@@ -1,0 +1,490 @@
+{
+  "id": 1489382,
+  "home": "Austria",
+  "away": "Jordan",
+  "home_id": 775,
+  "away_id": 1548,
+  "score": "3:1",
+  "score_h": 3,
+  "score_a": 1,
+  "date": "2026-06-17T07:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Dahane Beida, Mauritania",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "substitution",
+      "player": "M. Tamari",
+      "minute": 88,
+      "team": "Jordan",
+      "assist": "M. Al Daoud"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Abualnadi",
+      "minute": 72,
+      "team": "Jordan",
+      "assist": "S. Obaid"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Nasib",
+      "minute": 81,
+      "team": "Jordan",
+      "assist": "S. Al Rosan"
+    },
+    {
+      "type": "substitution",
+      "player": "P. Mwene",
+      "minute": 59,
+      "team": "Austria",
+      "assist": "P. Wanner"
+    },
+    {
+      "type": "substitution",
+      "player": "X. Schlager",
+      "minute": 59,
+      "team": "Austria",
+      "assist": "C. Chukwuemeka"
+    },
+    {
+      "type": "substitution",
+      "player": "D. Alaba",
+      "minute": 59,
+      "team": "Austria",
+      "assist": "K. Danso"
+    },
+    {
+      "type": "substitution",
+      "player": "O. Al Fakhouri",
+      "minute": 89,
+      "team": "Jordan",
+      "assist": "A. Azaizeh"
+    },
+    {
+      "type": "goal cancelled",
+      "player": "M. Arnautovic",
+      "minute": 70,
+      "team": "Austria",
+      "assist": ""
+    },
+    {
+      "type": "penalty confirmed",
+      "player": "M. Arnautovic",
+      "minute": 90,
+      "team": "Austria",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "M. Arnautovic",
+      "minute": 90,
+      "team": "Austria",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "S. Kalajdzic",
+      "minute": 46,
+      "team": "Austria",
+      "assist": "M. Arnautovic"
+    },
+    {
+      "type": "goal",
+      "player": "A. Olwan",
+      "minute": 50,
+      "team": "Jordan",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "Y. Al Arab",
+      "minute": 76,
+      "team": "Austria",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "M. Sabitzer",
+      "minute": 77,
+      "team": "Austria",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "R. Schmid",
+      "minute": 83,
+      "team": "Austria",
+      "assist": "P. Wimmer"
+    },
+    {
+      "type": "substitution",
+      "player": "E. Haddad",
+      "minute": 81,
+      "team": "Jordan",
+      "assist": "M. Al Mardi"
+    },
+    {
+      "type": "goal",
+      "player": "R. Schmid",
+      "minute": 21,
+      "team": "Austria",
+      "assist": "X. Schlager"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "O. Al Fakhouri",
+      "position": null,
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "M. Al Daoud",
+      "position": null,
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "A. Badawi",
+      "position": "D",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "A. Schlager",
+      "position": "G",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "S. Posch",
+      "position": "D",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "P. Lienhart",
+      "position": "D",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "D. Alaba",
+      "position": "D",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "P. Mwene",
+      "position": "D",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "X. Schlager",
+      "position": "M",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "N. Seiwald",
+      "position": "M",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "K. Laimer",
+      "position": "M",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "R. Schmid",
+      "position": "M",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "M. Sabitzer",
+      "position": "M",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "S. Kalajdzic",
+      "position": "F",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "Y. Abulaila",
+      "position": "G",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "E. Haddad",
+      "position": "M",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "A. Nasib",
+      "position": "D",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "Y. Al Arab",
+      "position": "D",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "M. Abualnadi",
+      "position": "D",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "M. Abu Taha",
+      "position": "M",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "M. Tamari",
+      "position": "F",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "N. Al Rashdan",
+      "position": "M",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "N. Al Rawabdeh",
+      "position": "M",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "A. Olwan",
+      "position": "F",
+      "sub": false,
+      "team": "Jordan"
+    },
+    {
+      "name": "F. Wiegele",
+      "position": "G",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "P. Pentz",
+      "position": "G",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "D. Affengruber",
+      "position": "D",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "K. Danso",
+      "position": "D",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "M. Friedl",
+      "position": "D",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "M. Svoboda",
+      "position": "D",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "F. Grillitsch",
+      "position": "M",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "C. Chukwuemeka",
+      "position": "M",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "D. Ljubicic",
+      "position": "M",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "A. Prass",
+      "position": "D",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "P. Wanner",
+      "position": "M",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "A. Schopf",
+      "position": "M",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "P. Wimmer",
+      "position": "M",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "M. Arnautovic",
+      "position": "F",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "M. Gregoritsch",
+      "position": "F",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "A. Al Fakhouri",
+      "position": "G",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "S. Obaid",
+      "position": "D",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "M. Abu Ghoush",
+      "position": "D",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "A. Jamous",
+      "position": "M",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "R. Ayed",
+      "position": "M",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "Shararh",
+      "position": "F",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "M. Al Mardi",
+      "position": "F",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "A. Azaizeh",
+      "position": "F",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "N. Bani Attiah",
+      "position": "G",
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "S. Al Rosan",
+      "position": null,
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "M. Abu Hasheesh",
+      "position": null,
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "I. Saadeh",
+      "position": null,
+      "sub": true,
+      "team": "Jordan"
+    },
+    {
+      "name": "H. Abu Dahab",
+      "position": null,
+      "sub": true,
+      "team": "Jordan"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 4,
+    "shotsOnGoalAway": 4,
+    "shotsOffGoalHome": 6,
+    "shotsOffGoalAway": 5,
+    "totalShotsHome": 11,
+    "totalShotsAway": 11,
+    "blockedShotsHome": 1,
+    "blockedShotsAway": 2,
+    "cornerKicksHome": 4,
+    "cornerKicksAway": 3,
+    "foulsHome": 12,
+    "foulsAway": 7,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 0,
+    "ballPossessionHome": 63,
+    "ballPossessionAway": 37,
+    "offsidesHome": 3,
+    "offsidesAway": 1,
+    "goalkeeperSavesHome": 3,
+    "goalkeeperSavesAway": 1,
+    "totalPassesHome": 580,
+    "totalPassesAway": 332,
+    "passesAccurateHome": 487,
+    "passesAccurateAway": 241,
+    "crossesHome": 17,
+    "crossesAway": 15,
+    "interceptionsHome": 15,
+    "interceptionsAway": 12,
+    "duelsWonHome": 44,
+    "duelsWonAway": 48,
+    "freeKicksHome": 7,
+    "freeKicksAway": 12,
+    "expectedGoalsHome": 1.690000057220459,
+    "expectedGoalsAway": 1.149999976158142,
+    "bigChancesHome": 4,
+    "bigChancesAway": 0
+  }
+}

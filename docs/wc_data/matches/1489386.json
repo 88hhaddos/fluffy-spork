@@ -1,0 +1,483 @@
+{
+  "id": 1489386,
+  "home": "Uzbekistan",
+  "away": "Colombia",
+  "home_id": 1568,
+  "away_id": 8,
+  "score": "1:3",
+  "score_h": 1,
+  "score_a": 3,
+  "date": "2026-06-18T05:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "Estadio Banorte",
+  "referee": "Anthony Taylor, England",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "yellow card",
+      "player": "A. Khusanov",
+      "minute": 34,
+      "team": "Uzbekistan",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "D. Munoz",
+      "minute": 40,
+      "team": "Colombia",
+      "assist": "L. Diaz"
+    },
+    {
+      "type": "substitution",
+      "player": "O. Urunov",
+      "minute": 46,
+      "team": "Uzbekistan",
+      "assist": "D. Khamdamov"
+    },
+    {
+      "type": "substitution",
+      "player": "S. Nasrullaev",
+      "minute": 46,
+      "team": "Uzbekistan",
+      "assist": "F. Sayfiev"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Rodriguez",
+      "minute": 72,
+      "team": "Colombia",
+      "assist": "J. Campaz"
+    },
+    {
+      "type": "substitution",
+      "player": "G. Puerta",
+      "minute": 80,
+      "team": "Colombia",
+      "assist": "R. Rios"
+    },
+    {
+      "type": "substitution",
+      "player": "L. Diaz",
+      "minute": 90,
+      "team": "Colombia",
+      "assist": "A. Gomez"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Arias",
+      "minute": 90,
+      "team": "Colombia",
+      "assist": "K. Castano"
+    },
+    {
+      "type": "substitution",
+      "player": "E. Shomurodov",
+      "minute": 90,
+      "team": "Uzbekistan",
+      "assist": "I. Sergeev"
+    },
+    {
+      "type": "yellow card",
+      "player": "J. Mojica",
+      "minute": 7,
+      "team": "Colombia",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "A. Fayzullaev",
+      "minute": 60,
+      "team": "Uzbekistan",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "L. Diaz",
+      "minute": 65,
+      "team": "Colombia",
+      "assist": "G. Puerta"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Fayzullaev",
+      "minute": 77,
+      "team": "Uzbekistan",
+      "assist": "A. Amonov"
+    },
+    {
+      "type": "substitution",
+      "player": "R. Ashurmatov",
+      "minute": 77,
+      "team": "Uzbekistan",
+      "assist": "J. Urozov"
+    },
+    {
+      "type": "substitution",
+      "player": "L. Suarez",
+      "minute": 80,
+      "team": "Colombia",
+      "assist": "C. Hernandez"
+    },
+    {
+      "type": "goal",
+      "player": "J. Campaz",
+      "minute": 90,
+      "team": "Colombia",
+      "assist": "C. Hernandez"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "U. Yusupov",
+      "position": "G",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "R. Ashurmatov",
+      "position": "D",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "A. Khusanov",
+      "position": "D",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "A. Abdullaev",
+      "position": "D",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "B. Karimov",
+      "position": "M",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "A. Mozgovoy",
+      "position": "M",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "O. Shukurov",
+      "position": "M",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "S. Nasrullaev",
+      "position": "M",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "A. Fayzullaev",
+      "position": "F",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "O. Urunov",
+      "position": "F",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "E. Shomurodov",
+      "position": "F",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "C. Vargas",
+      "position": "G",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "D. Munoz",
+      "position": "D",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "D. Sanchez",
+      "position": "D",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Lucumi",
+      "position": "D",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Mojica",
+      "position": "D",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Lerma",
+      "position": "M",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "G. Puerta",
+      "position": "M",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Arias",
+      "position": "M",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Rodriguez",
+      "position": "F",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "L. Diaz",
+      "position": "F",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "L. Suarez",
+      "position": "F",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "A. Nematov",
+      "position": "G",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "B. Ergashev",
+      "position": "G",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "K. Alizhonov",
+      "position": "D",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "U. Eshmurodov",
+      "position": "D",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "A. Ulmasaliev",
+      "position": "D",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "J. Urozov",
+      "position": "D",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "J. Iskanderov",
+      "position": "M",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "O. Khamrobekov",
+      "position": "M",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "R. Jiyanov",
+      "position": "M",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "D. Khamdamov",
+      "position": "M",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "A. Ganiev",
+      "position": "M",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "S. Esanov",
+      "position": "M",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "A. Amonov",
+      "position": "F",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "I. Sergeev",
+      "position": "F",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "A. Montero",
+      "position": "G",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "D. Ospina",
+      "position": "G",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "D. Machado",
+      "position": "D",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "S. Arias",
+      "position": "D",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "W. Ditta",
+      "position": "D",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "Y. Mina",
+      "position": "D",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "K. Castano",
+      "position": "M",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "R. Rios",
+      "position": "M",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Carrascal",
+      "position": "M",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Portilla",
+      "position": "M",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Quintero",
+      "position": "M",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Campaz",
+      "position": "M",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "A. Gomez",
+      "position": "F",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Cordoba",
+      "position": "F",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "C. Hernandez",
+      "position": "F",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "F. Sayfiev",
+      "position": null,
+      "sub": true,
+      "team": "Uzbekistan"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 2,
+    "shotsOnGoalAway": 4,
+    "shotsOffGoalHome": 4,
+    "shotsOffGoalAway": 7,
+    "totalShotsHome": 8,
+    "totalShotsAway": 15,
+    "blockedShotsHome": 2,
+    "blockedShotsAway": 4,
+    "cornerKicksHome": 3,
+    "cornerKicksAway": 4,
+    "foulsHome": 14,
+    "foulsAway": 11,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 1,
+    "ballPossessionHome": 39,
+    "ballPossessionAway": 61,
+    "offsidesHome": 0,
+    "offsidesAway": 3,
+    "goalkeeperSavesHome": 1,
+    "goalkeeperSavesAway": 1,
+    "totalPassesHome": 319,
+    "totalPassesAway": 519,
+    "passesAccurateHome": 243,
+    "passesAccurateAway": 444,
+    "crossesHome": 13,
+    "crossesAway": 16,
+    "interceptionsHome": 7,
+    "interceptionsAway": 6,
+    "duelsWonHome": 34,
+    "duelsWonAway": 36,
+    "freeKicksHome": 11,
+    "freeKicksAway": 14,
+    "expectedGoalsHome": 1.159999966621399,
+    "expectedGoalsAway": 1.6100000143051147,
+    "bigChancesHome": 1,
+    "bigChancesAway": 4
+  }
+}

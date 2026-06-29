@@ -1,0 +1,492 @@
+{
+  "id": 1489414,
+  "home": "Egypt",
+  "away": "Iran",
+  "home_id": 32,
+  "away_id": 22,
+  "score": "1:1",
+  "score_h": 1,
+  "score_a": 1,
+  "date": "2026-06-27T06:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "Lumen Field",
+  "referee": "S. Marciniak",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "yellow card",
+      "player": "H. Kanaani",
+      "minute": 19,
+      "team": "Iran",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "M. Saber",
+      "minute": 20,
+      "team": "Egypt",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "Y. Ibrahim",
+      "minute": 42,
+      "team": "Egypt",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "A. Nemati",
+      "minute": 46,
+      "team": "Iran",
+      "assist": "S. Hardani"
+    },
+    {
+      "type": "substitution",
+      "player": "E. Ashour",
+      "minute": 46,
+      "team": "Egypt",
+      "assist": "O. Marmoush"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Saber",
+      "minute": 46,
+      "team": "Egypt",
+      "assist": "M. Attia"
+    },
+    {
+      "type": "substitution",
+      "player": "S. Ghoddos",
+      "minute": 67,
+      "team": "Iran",
+      "assist": "S. Moghanlou"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Ziko",
+      "minute": 76,
+      "team": "Egypt",
+      "assist": "H. Abdelkarim"
+    },
+    {
+      "type": "goal",
+      "player": "M. Taremi",
+      "minute": 11,
+      "team": "Iran",
+      "assist": "M. Taremi"
+    },
+    {
+      "type": "goal",
+      "player": "R. Rezaeian",
+      "minute": 14,
+      "team": "Iran",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "M. Saber",
+      "minute": 5,
+      "team": "Egypt",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "M. Abdelmonem",
+      "minute": 14,
+      "team": "Egypt",
+      "assist": "Y. Ibrahim"
+    },
+    {
+      "type": "yellow card",
+      "player": "A. Nemati",
+      "minute": 43,
+      "team": "Iran",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "M. Salah",
+      "minute": 57,
+      "team": "Egypt",
+      "assist": "Zizo"
+    },
+    {
+      "type": "yellow card",
+      "player": "S. Ezatolahi",
+      "minute": 79,
+      "team": "Iran",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "M. Lasheen",
+      "minute": 90,
+      "team": "Egypt",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "M. Mohebi",
+      "minute": 90,
+      "team": "Iran",
+      "assist": "A. Jahanbakhsh"
+    },
+    {
+      "type": "goal disallowed - offside",
+      "player": "S. Khalilzadeh",
+      "minute": 90,
+      "team": "Iran",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "S. Khalilzadeh",
+      "minute": 90,
+      "team": "Iran",
+      "assist": ""
+    }
+  ],
+  "lineups": [
+    {
+      "name": "O. Shobeir",
+      "position": "G",
+      "sub": false,
+      "team": "Egypt"
+    },
+    {
+      "name": "M. Hany",
+      "position": "D",
+      "sub": false,
+      "team": "Egypt"
+    },
+    {
+      "name": "M. Abdelmonem",
+      "position": "D",
+      "sub": false,
+      "team": "Egypt"
+    },
+    {
+      "name": "R. Rabia",
+      "position": "D",
+      "sub": false,
+      "team": "Egypt"
+    },
+    {
+      "name": "A. Fatouh",
+      "position": "D",
+      "sub": false,
+      "team": "Egypt"
+    },
+    {
+      "name": "M. Saber",
+      "position": "M",
+      "sub": false,
+      "team": "Egypt"
+    },
+    {
+      "name": "M. Lasheen",
+      "position": "M",
+      "sub": false,
+      "team": "Egypt"
+    },
+    {
+      "name": "M. Ziko",
+      "position": "F",
+      "sub": false,
+      "team": "Egypt"
+    },
+    {
+      "name": "M. Salah",
+      "position": "M",
+      "sub": false,
+      "team": "Egypt"
+    },
+    {
+      "name": "E. Ashour",
+      "position": "M",
+      "sub": false,
+      "team": "Egypt"
+    },
+    {
+      "name": "Trezeguet",
+      "position": "M",
+      "sub": false,
+      "team": "Egypt"
+    },
+    {
+      "name": "A. Beiranvand",
+      "position": "G",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "R. Rezaeian",
+      "position": "D",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "H. Kanaani",
+      "position": "D",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "S. Khalilzadeh",
+      "position": "D",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "Ali Nemati",
+      "position": "D",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "M. Mohammadi",
+      "position": "D",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "S. Ghoddos",
+      "position": "M",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "M. Ghorbani",
+      "position": "M",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "S. Ezatolahi",
+      "position": "M",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "M. Taremi",
+      "position": "F",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "M. Mohebi",
+      "position": "M",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "M. El Shenawy",
+      "position": "G",
+      "sub": true,
+      "team": "Egypt"
+    },
+    {
+      "name": "E. M. Soliman",
+      "position": "G",
+      "sub": true,
+      "team": "Egypt"
+    },
+    {
+      "name": "Mohamed Alaa",
+      "position": "G",
+      "sub": true,
+      "team": "Egypt"
+    },
+    {
+      "name": "Y. Ibrahim",
+      "position": "D",
+      "sub": true,
+      "team": "Egypt"
+    },
+    {
+      "name": "K. Hafez",
+      "position": "D",
+      "sub": true,
+      "team": "Egypt"
+    },
+    {
+      "name": "T. Alaa",
+      "position": "D",
+      "sub": true,
+      "team": "Egypt"
+    },
+    {
+      "name": "N. Dunga",
+      "position": "M",
+      "sub": true,
+      "team": "Egypt"
+    },
+    {
+      "name": "M. Attia",
+      "position": "M",
+      "sub": true,
+      "team": "Egypt"
+    },
+    {
+      "name": "H. Hassan",
+      "position": "F",
+      "sub": true,
+      "team": "Egypt"
+    },
+    {
+      "name": "I. Adel",
+      "position": "F",
+      "sub": true,
+      "team": "Egypt"
+    },
+    {
+      "name": "Zizo",
+      "position": "F",
+      "sub": true,
+      "team": "Egypt"
+    },
+    {
+      "name": "H. Abdelkarim",
+      "position": "F",
+      "sub": true,
+      "team": "Egypt"
+    },
+    {
+      "name": "O. Marmoush",
+      "position": "F",
+      "sub": true,
+      "team": "Egypt"
+    },
+    {
+      "name": "P. Niazmand",
+      "position": "G",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "H. Hosseini",
+      "position": "G",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "E. Hajsafi",
+      "position": "D",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "Danial Eiri",
+      "position": "D",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "R. Cheshmi",
+      "position": "M",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "S. Hardani",
+      "position": "D",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "A. Yousefi",
+      "position": "D",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "A. Razzaghinia",
+      "position": "M",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "M. Ghaedi",
+      "position": "F",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "A. Jahanbakhsh",
+      "position": "F",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "M. Torabi",
+      "position": "M",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "A. Alipour",
+      "position": "F",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "A. Hosseinzadeh",
+      "position": "F",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "S. Moghanlou",
+      "position": "F",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "D. Eckert",
+      "position": "F",
+      "sub": true,
+      "team": "Iran"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 3,
+    "shotsOnGoalAway": 4,
+    "shotsOffGoalHome": 6,
+    "shotsOffGoalAway": 6,
+    "totalShotsHome": 15,
+    "totalShotsAway": 12,
+    "blockedShotsHome": 6,
+    "blockedShotsAway": 2,
+    "cornerKicksHome": 8,
+    "cornerKicksAway": 2,
+    "foulsHome": 11,
+    "foulsAway": 16,
+    "yellowCardsHome": 3,
+    "yellowCardsAway": 4,
+    "ballPossessionHome": 61,
+    "ballPossessionAway": 39,
+    "offsidesHome": 0,
+    "offsidesAway": 3,
+    "goalkeeperSavesHome": 3,
+    "goalkeeperSavesAway": 2,
+    "totalPassesHome": 587,
+    "totalPassesAway": 367,
+    "passesAccurateHome": 512,
+    "passesAccurateAway": 281,
+    "crossesHome": 15,
+    "crossesAway": 10,
+    "interceptionsHome": 7,
+    "interceptionsAway": 8,
+    "duelsWonHome": 63,
+    "duelsWonAway": 71,
+    "freeKicksHome": 16,
+    "freeKicksAway": 11,
+    "expectedGoalsHome": 0.8100000023841858,
+    "expectedGoalsAway": 1.8300000429153442,
+    "bigChancesHome": 0,
+    "bigChancesAway": 5
+  }
+}

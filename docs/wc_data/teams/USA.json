@@ -1,0 +1,177 @@
+{
+  "name": "USA",
+  "matches": [
+    {
+      "opponent": "Paraguay",
+      "score": "4:1",
+      "date": "2026-06-13",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    },
+    {
+      "opponent": "Australia",
+      "score": "2:0",
+      "date": "2026-06-19",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    },
+    {
+      "opponent": "Türkiye",
+      "score": "3:2",
+      "date": "2026-06-26",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    }
+  ],
+  "wins": 2,
+  "draws": 0,
+  "losses": 1,
+  "scored": 8,
+  "conceded": 4,
+  "players": {
+    "C. Pulisic": {
+      "position": "M",
+      "matches": 2,
+      "subs": 1
+    },
+    "W. McKennie": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "H. Wright": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "T. Weah": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2
+    },
+    "T. Adams": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1
+    },
+    "T. Ream": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "A. Robinson": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1
+    },
+    "A. Zendejas": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "S. Dest": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "M. Freese": {
+      "position": "G",
+      "matches": 3,
+      "subs": 1
+    },
+    "M. McKenzie": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "A. Trusty": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "B. Aaronson": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "J. Scally": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "M. Robinson": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "M. Turner": {
+      "position": "G",
+      "matches": 3,
+      "subs": 2
+    },
+    "C. Roldan": {
+      "position": "M",
+      "matches": 2,
+      "subs": 2
+    },
+    "R. Pepi": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1
+    },
+    "C. Richards": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1
+    },
+    "F. Balogun": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1,
+      "goals": 2,
+      "yellow": 1
+    },
+    "G. Reyna": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2,
+      "goals": 1
+    },
+    "M. Tillman": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1,
+      "assists": 1
+    },
+    "S. Berhalter": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2,
+      "yellow": 1,
+      "goals": 1
+    },
+    "C. Brady": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Freeman": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1,
+      "assists": 1,
+      "goals": 1
+    },
+    "M. Arfsten": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    }
+  }
+}

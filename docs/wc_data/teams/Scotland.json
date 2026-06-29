@@ -1,0 +1,172 @@
+{
+  "name": "Scotland",
+  "matches": [
+    {
+      "opponent": "Haiti",
+      "score": "0:1",
+      "date": "2026-06-14",
+      "stage": "",
+      "home": false,
+      "result": "win"
+    },
+    {
+      "opponent": "Morocco",
+      "score": "0:1",
+      "date": "2026-06-20",
+      "stage": "",
+      "home": true,
+      "result": "loss"
+    },
+    {
+      "opponent": "Brazil",
+      "score": "0:3",
+      "date": "2026-06-25",
+      "stage": "",
+      "home": true,
+      "result": "loss"
+    }
+  ],
+  "wins": 1,
+  "draws": 0,
+  "losses": 2,
+  "scored": 1,
+  "conceded": 4,
+  "players": {
+    "A. Gunn": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "A. Hickey": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2,
+      "yellow": 1
+    },
+    "J. Hendry": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "G. Hanley": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "A. Robertson": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "B. Gannon-Doak": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "S. McTominay": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "L. Ferguson": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "J. McGinn": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "goals": 1
+    },
+    "L. Shankland": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1
+    },
+    "C. Adams": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1
+    },
+    "L. Kelly": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "C. Gordon": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "K. Tierney": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "J. Souttar": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "D. Hyam": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "N. Patterson": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "A. Ralston": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "S. McKenna": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "T. Fletcher": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "R. Christie": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2,
+      "yellow": 1
+    },
+    "K. McLean": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2,
+      "yellow": 1
+    },
+    "F. Curtis": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3,
+      "yellow": 1
+    },
+    "L. Dykes": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "R. Stewart": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "G. Hirst": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    }
+  }
+}

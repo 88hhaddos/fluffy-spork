@@ -1,0 +1,485 @@
+{
+  "id": 1489410,
+  "home": "Ecuador",
+  "away": "Germany",
+  "home_id": 2382,
+  "away_id": 25,
+  "score": "2:1",
+  "score_h": 2,
+  "score_a": 1,
+  "date": "2026-06-25T23:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Tori Penso, USA",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "goal",
+      "player": "L. Sane",
+      "minute": 2,
+      "team": "Germany",
+      "assist": "F. Wirtz"
+    },
+    {
+      "type": "goal",
+      "player": "N. Angulo",
+      "minute": 9,
+      "team": "Ecuador",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "K. Havertz",
+      "minute": 60,
+      "team": "Germany",
+      "assist": "D. Undav"
+    },
+    {
+      "type": "substitution",
+      "player": "E. Valencia",
+      "minute": 64,
+      "team": "Ecuador",
+      "assist": "K. Rodriguez"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Franco",
+      "minute": 64,
+      "team": "Ecuador",
+      "assist": "A. Preciado"
+    },
+    {
+      "type": "substitution",
+      "player": "F. Nmecha",
+      "minute": 64,
+      "team": "Germany",
+      "assist": "M. Beier"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Yeboah",
+      "minute": 85,
+      "team": "Ecuador",
+      "assist": "F. Torres"
+    },
+    {
+      "type": "substitution",
+      "player": "N. Angulo",
+      "minute": 85,
+      "team": "Ecuador",
+      "assist": "J. Caicedo"
+    },
+    {
+      "type": "yellow card",
+      "player": "G. Plata",
+      "minute": 89,
+      "team": "Ecuador",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "P. Hincapie",
+      "minute": 43,
+      "team": "Ecuador",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "A. Pavlovic",
+      "minute": 44,
+      "team": "Germany",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "A. Pavlovic",
+      "minute": 46,
+      "team": "Germany",
+      "assist": "A. Stiller"
+    },
+    {
+      "type": "goal",
+      "player": null,
+      "minute": 47,
+      "team": "Germany",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "F. Wirtz",
+      "minute": 73,
+      "team": "Germany",
+      "assist": "P. Gross"
+    },
+    {
+      "type": "goal",
+      "player": "G. Plata",
+      "minute": 77,
+      "team": "Ecuador",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "A. Franco",
+      "minute": 50,
+      "team": "Ecuador",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "J. Kimmich",
+      "minute": 60,
+      "team": "Germany",
+      "assist": "M. Thiaw"
+    },
+    {
+      "type": "substitution",
+      "player": "P. Hincapie",
+      "minute": 71,
+      "team": "Ecuador",
+      "assist": "P. Estupinan"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "H. Galindez",
+      "position": "G",
+      "sub": false,
+      "team": "Ecuador"
+    },
+    {
+      "name": "A. Franco",
+      "position": "D",
+      "sub": false,
+      "team": "Ecuador"
+    },
+    {
+      "name": "J. Ordonez",
+      "position": "D",
+      "sub": false,
+      "team": "Ecuador"
+    },
+    {
+      "name": "W. Pacho",
+      "position": "D",
+      "sub": false,
+      "team": "Ecuador"
+    },
+    {
+      "name": "P. Hincapie",
+      "position": "D",
+      "sub": false,
+      "team": "Ecuador"
+    },
+    {
+      "name": "J. Yeboah",
+      "position": "M",
+      "sub": false,
+      "team": "Ecuador"
+    },
+    {
+      "name": "M. Caicedo",
+      "position": "M",
+      "sub": false,
+      "team": "Ecuador"
+    },
+    {
+      "name": "P. Vite",
+      "position": "M",
+      "sub": false,
+      "team": "Ecuador"
+    },
+    {
+      "name": "N. Angulo",
+      "position": "M",
+      "sub": false,
+      "team": "Ecuador"
+    },
+    {
+      "name": "G. Plata",
+      "position": "F",
+      "sub": false,
+      "team": "Ecuador"
+    },
+    {
+      "name": "E. Valencia",
+      "position": "F",
+      "sub": false,
+      "team": "Ecuador"
+    },
+    {
+      "name": "M. Neuer",
+      "position": "G",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "J. Kimmich",
+      "position": "D",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "J. Tah",
+      "position": "D",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "A. Rudiger",
+      "position": "D",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "D. Raum",
+      "position": "M",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "F. Nmecha",
+      "position": "M",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "A. Pavlovic",
+      "position": "M",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "L. Sane",
+      "position": "M",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "J. Musiala",
+      "position": "F",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "F. Wirtz",
+      "position": "F",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "K. Havertz",
+      "position": "F",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "F. Torres",
+      "position": "D",
+      "sub": true,
+      "team": "Ecuador"
+    },
+    {
+      "name": "P. Estupinan",
+      "position": "D",
+      "sub": true,
+      "team": "Ecuador"
+    },
+    {
+      "name": "J. Caicedo",
+      "position": "F",
+      "sub": true,
+      "team": "Ecuador"
+    },
+    {
+      "name": "M. Ramirez",
+      "position": "G",
+      "sub": true,
+      "team": "Ecuador"
+    },
+    {
+      "name": "A. Preciado",
+      "position": "D",
+      "sub": true,
+      "team": "Ecuador"
+    },
+    {
+      "name": "J. Alcivar",
+      "position": "M",
+      "sub": true,
+      "team": "Ecuador"
+    },
+    {
+      "name": "G. Valle",
+      "position": "G",
+      "sub": true,
+      "team": "Ecuador"
+    },
+    {
+      "name": "J. Porozo",
+      "position": "D",
+      "sub": true,
+      "team": "Ecuador"
+    },
+    {
+      "name": "D. Castillo",
+      "position": "M",
+      "sub": true,
+      "team": "Ecuador"
+    },
+    {
+      "name": "Y. Medina",
+      "position": "D",
+      "sub": true,
+      "team": "Ecuador"
+    },
+    {
+      "name": "A. Minda",
+      "position": "F",
+      "sub": true,
+      "team": "Ecuador"
+    },
+    {
+      "name": "J. Arevalo",
+      "position": "F",
+      "sub": true,
+      "team": "Ecuador"
+    },
+    {
+      "name": "A. Valencia",
+      "position": "F",
+      "sub": true,
+      "team": "Ecuador"
+    },
+    {
+      "name": "K. Rodriguez",
+      "position": "F",
+      "sub": true,
+      "team": "Ecuador"
+    },
+    {
+      "name": "K. Paez",
+      "position": "M",
+      "sub": true,
+      "team": "Ecuador"
+    },
+    {
+      "name": "A. Ouedraogo",
+      "position": "M",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "M. Thiaw",
+      "position": "D",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "J. Leweling",
+      "position": "F",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "N. Woltemade",
+      "position": "F",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "M. Beier",
+      "position": "F",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "A. Stiller",
+      "position": "M",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "W. Anton",
+      "position": "D",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "D. Undav",
+      "position": "F",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "A. Nubel",
+      "position": "G",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "N. Amiri",
+      "position": "M",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "L. Goretzka",
+      "position": "M",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "P. Gross",
+      "position": "M",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "O. Baumann",
+      "position": "G",
+      "sub": true,
+      "team": "Germany"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 3,
+    "shotsOnGoalAway": 3,
+    "shotsOffGoalHome": 2,
+    "shotsOffGoalAway": 3,
+    "totalShotsHome": 7,
+    "totalShotsAway": 11,
+    "blockedShotsHome": 2,
+    "blockedShotsAway": 5,
+    "cornerKicksHome": 3,
+    "cornerKicksAway": 2,
+    "foulsHome": 15,
+    "foulsAway": 10,
+    "yellowCardsHome": 3,
+    "yellowCardsAway": 1,
+    "ballPossessionHome": 39,
+    "ballPossessionAway": 61,
+    "offsidesHome": 0,
+    "offsidesAway": 0,
+    "goalkeeperSavesHome": 2,
+    "goalkeeperSavesAway": 1,
+    "totalPassesHome": 378,
+    "totalPassesAway": 592,
+    "passesAccurateHome": 312,
+    "passesAccurateAway": 517,
+    "crossesHome": 13,
+    "crossesAway": 16,
+    "interceptionsHome": 12,
+    "interceptionsAway": 4,
+    "duelsWonHome": 54,
+    "duelsWonAway": 52,
+    "freeKicksHome": 10,
+    "freeKicksAway": 15,
+    "expectedGoalsHome": 1.2699999809265137,
+    "expectedGoalsAway": 0.6499999761581421,
+    "bigChancesHome": 2,
+    "bigChancesAway": 2
+  }
+}

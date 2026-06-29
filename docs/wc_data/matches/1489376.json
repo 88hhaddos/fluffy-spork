@@ -1,0 +1,490 @@
+{
+  "id": 1489376,
+  "home": "Netherlands",
+  "away": "Japan",
+  "home_id": 1118,
+  "away_id": 12,
+  "score": "2:2",
+  "score_h": 2,
+  "score_a": 2,
+  "date": "2026-06-14T23:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Ismail Elfath, USA",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "goal",
+      "player": "V. van Dijk",
+      "minute": 51,
+      "team": "Netherlands",
+      "assist": "R. Gravenberch"
+    },
+    {
+      "type": "substitution",
+      "player": "R. Gravenberch",
+      "minute": 81,
+      "team": "Netherlands",
+      "assist": "N. Ake"
+    },
+    {
+      "type": "goal",
+      "player": "Keito Nakamura",
+      "minute": 57,
+      "team": "Japan",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "C. Summerville",
+      "minute": 61,
+      "team": "Netherlands",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "C. Summerville",
+      "minute": 64,
+      "team": "Netherlands",
+      "assist": "R. Gravenberch"
+    },
+    {
+      "type": "substitution",
+      "player": "Daizen Maeda",
+      "minute": 66,
+      "team": "Japan",
+      "assist": "Junya Ito"
+    },
+    {
+      "type": "substitution",
+      "player": "Tsuyoshi Watanabe",
+      "minute": 75,
+      "team": "Japan",
+      "assist": "Takehiro Tomiyasu"
+    },
+    {
+      "type": "substitution",
+      "player": "T. Reijnders",
+      "minute": 70,
+      "team": "Netherlands",
+      "assist": "Q. Timber"
+    },
+    {
+      "type": "substitution",
+      "player": "C. Summerville",
+      "minute": 70,
+      "team": "Netherlands",
+      "assist": "T. Koopmeiners"
+    },
+    {
+      "type": "substitution",
+      "player": "D. Malen",
+      "minute": 70,
+      "team": "Netherlands",
+      "assist": "M. Depay"
+    },
+    {
+      "type": "substitution",
+      "player": "Takefusa Kubo",
+      "minute": 75,
+      "team": "Japan",
+      "assist": "Koki Ogawa"
+    },
+    {
+      "type": "substitution",
+      "player": "Tsuyoshi Watanabe",
+      "minute": 75,
+      "team": "Japan",
+      "assist": "Takehiro Tomiyasu"
+    },
+    {
+      "type": "yellow card",
+      "player": "M. Depay",
+      "minute": 83,
+      "team": "Netherlands",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "Ayase Ueda",
+      "minute": 84,
+      "team": "Japan",
+      "assist": "Kento Shiogai"
+    },
+    {
+      "type": "substitution",
+      "player": "C. Gakpo",
+      "minute": 85,
+      "team": "Netherlands",
+      "assist": "B. Brobbey"
+    },
+    {
+      "type": "yellow card",
+      "player": "M. van de Ven",
+      "minute": 90,
+      "team": "Netherlands",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "Daichi Kamada",
+      "minute": 89,
+      "team": "Japan",
+      "assist": "Koki Ogawa"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "B. Verbruggen",
+      "position": "G",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "D. Dumfries",
+      "position": "D",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "J. P. van Hecke",
+      "position": "D",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "V. van Dijk",
+      "position": "D",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "M. van de Ven",
+      "position": "D",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "R. Gravenberch",
+      "position": "M",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "F. de Jong",
+      "position": "M",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "T. Reijnders",
+      "position": "M",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "C. Summerville",
+      "position": "F",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "D. Malen",
+      "position": "F",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "C. Gakpo",
+      "position": "F",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "Zion Suzuki",
+      "position": "G",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Tsuyoshi Watanabe",
+      "position": "D",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Shogo Taniguchi",
+      "position": "D",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Hiroki Itō",
+      "position": "D",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Ritsu Doan",
+      "position": "M",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Kaishu Sano",
+      "position": "M",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Daichi Kamada",
+      "position": "M",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Keito Nakamura",
+      "position": "M",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Takefusa Kubo",
+      "position": "F",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Daizen Maeda",
+      "position": "F",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Ayase Ueda",
+      "position": "F",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "M. Flekken",
+      "position": "G",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "R. Roefs",
+      "position": "G",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "J. Hato",
+      "position": "D",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "L. Geertruida",
+      "position": "D",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "M. Wieffer",
+      "position": "M",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "N. Ake",
+      "position": "D",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "G. Til",
+      "position": "M",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "M. De Roon",
+      "position": "M",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "J. Kluivert",
+      "position": "F",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "Q. Timber",
+      "position": "M",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "T. Koopmeiners",
+      "position": "M",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "B. Brobbey",
+      "position": "F",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "M. Depay",
+      "position": "F",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "W. Weghorst",
+      "position": "F",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "N. Lang",
+      "position": "F",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "Keisuke Osako",
+      "position": "G",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Tomoki Hayakawa",
+      "position": "G",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Ayumu Seko",
+      "position": "D",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Ko Itakura",
+      "position": "D",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Junnosuke Suzuki",
+      "position": "D",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Yukinari Sugawara",
+      "position": "D",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Takehiro Tomiyasu",
+      "position": "D",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Yuto Nagatomo",
+      "position": "D",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Ao Tanaka",
+      "position": "M",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Yuito Suzuki",
+      "position": "M",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Junya Ito",
+      "position": "F",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Keisuke Goto",
+      "position": "F",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Koki Ogawa",
+      "position": "F",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Kento Shiogai",
+      "position": "F",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Shuto Machino",
+      "position": "F",
+      "sub": true,
+      "team": "Japan"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 6,
+    "shotsOnGoalAway": 3,
+    "shotsOffGoalHome": 3,
+    "shotsOffGoalAway": 6,
+    "totalShotsHome": 10,
+    "totalShotsAway": 10,
+    "blockedShotsHome": 1,
+    "blockedShotsAway": 1,
+    "cornerKicksHome": 5,
+    "cornerKicksAway": 4,
+    "foulsHome": 7,
+    "foulsAway": 7,
+    "yellowCardsHome": 3,
+    "yellowCardsAway": 0,
+    "ballPossessionHome": 60,
+    "ballPossessionAway": 40,
+    "offsidesHome": 1,
+    "offsidesAway": 0,
+    "goalkeeperSavesHome": 1,
+    "goalkeeperSavesAway": 4,
+    "totalPassesHome": 524,
+    "totalPassesAway": 341,
+    "passesAccurateHome": 463,
+    "passesAccurateAway": 286,
+    "crossesHome": 21,
+    "crossesAway": 23,
+    "interceptionsHome": 7,
+    "interceptionsAway": 4,
+    "duelsWonHome": 44,
+    "duelsWonAway": 29,
+    "freeKicksHome": 7,
+    "freeKicksAway": 7,
+    "expectedGoalsHome": 0.7799999713897705,
+    "expectedGoalsAway": 0.5899999737739563,
+    "bigChancesHome": 0,
+    "bigChancesAway": 0
+  }
+}

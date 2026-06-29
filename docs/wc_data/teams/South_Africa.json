@@ -1,0 +1,182 @@
+{
+  "name": "South Africa",
+  "matches": [
+    {
+      "opponent": "Mexico",
+      "score": "2:0",
+      "date": "2026-06-11",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    },
+    {
+      "opponent": "Czechia",
+      "score": "1:1",
+      "date": "2026-06-18",
+      "stage": "",
+      "home": false,
+      "result": "draw"
+    },
+    {
+      "opponent": "South Korea",
+      "score": "1:0",
+      "date": "2026-06-25",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    },
+    {
+      "opponent": "Canada",
+      "score": "0:1",
+      "date": "2026-06-28",
+      "stage": "",
+      "home": true,
+      "result": "loss"
+    }
+  ],
+  "wins": 1,
+  "draws": 1,
+  "losses": 2,
+  "scored": 2,
+  "conceded": 4,
+  "players": {
+    "R. Williams": {
+      "position": "G",
+      "matches": 4,
+      "subs": 0
+    },
+    "K. Mudau": {
+      "position": "D",
+      "matches": 4,
+      "subs": 0
+    },
+    "I. Okon": {
+      "position": "D",
+      "matches": 4,
+      "subs": 0
+    },
+    "N. Sibisi": {
+      "position": "D",
+      "matches": 4,
+      "subs": 3,
+      "yellow": 1
+    },
+    "M. Mbokazi": {
+      "position": "D",
+      "matches": 4,
+      "subs": 0
+    },
+    "A. Modiba": {
+      "position": "D",
+      "matches": 4,
+      "subs": 0,
+      "yellow": 1
+    },
+    "T. Mokoena": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 2,
+      "goals": 1
+    },
+    "Y. Sithole": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "red": 1
+    },
+    "J. Adams": {
+      "position": "M",
+      "matches": 4,
+      "subs": 2
+    },
+    "L. Foster": {
+      "position": "F",
+      "matches": 4,
+      "subs": 3
+    },
+    "I. Rayners": {
+      "position": "F",
+      "matches": 4,
+      "subs": 2
+    },
+    "R. Goss": {
+      "position": "G",
+      "matches": 4,
+      "subs": 4
+    },
+    "S. Chaine": {
+      "position": "G",
+      "matches": 4,
+      "subs": 4
+    },
+    "B. Cross": {
+      "position": "D",
+      "matches": 4,
+      "subs": 4
+    },
+    "K. Ndamane": {
+      "position": "D",
+      "matches": 4,
+      "subs": 4
+    },
+    "O. Makhanya": {
+      "position": "D",
+      "matches": 4,
+      "subs": 4
+    },
+    "S. Kabini": {
+      "position": "D",
+      "matches": 4,
+      "subs": 4
+    },
+    "T. Matuludi": {
+      "position": "D",
+      "matches": 4,
+      "subs": 4
+    },
+    "O. Appollis": {
+      "position": "F",
+      "matches": 4,
+      "subs": 1
+    },
+    "T. Moremi": {
+      "position": "F",
+      "matches": 4,
+      "subs": 4
+    },
+    "R. Mofokeng": {
+      "position": "F",
+      "matches": 4,
+      "subs": 2
+    },
+    "K. Sebelebele": {
+      "position": "M",
+      "matches": 4,
+      "subs": 4
+    },
+    "T. Mbatha": {
+      "position": "M",
+      "matches": 4,
+      "subs": 2,
+      "yellow": 1
+    },
+    "T. Zwane": {
+      "position": "M",
+      "matches": 1,
+      "subs": 1,
+      "red": 1
+    },
+    "T. Maseko": {
+      "position": "F",
+      "matches": 4,
+      "subs": 1,
+      "goals": 1
+    },
+    "E. Makgopa": {
+      "position": "F",
+      "matches": 4,
+      "subs": 2
+    }
+  }
+}

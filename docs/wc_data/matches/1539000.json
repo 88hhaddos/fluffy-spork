@@ -1,0 +1,490 @@
+{
+  "id": 1539000,
+  "home": "Canada",
+  "away": "Bosnia & Herzegovina",
+  "home_id": 5529,
+  "away_id": 1113,
+  "score": "1:1",
+  "score_h": 1,
+  "score_a": 1,
+  "date": "2026-06-12T22:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "BMO Field",
+  "referee": "Facundo Raul Tello Figueroa, Argentina",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "yellow card",
+      "player": "J. Lukic",
+      "minute": 45,
+      "team": "Bosnia & Herzegovina",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "L. De Fougerolles",
+      "minute": 53,
+      "team": "Canada",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "C. Larin",
+      "minute": 78,
+      "team": "Canada",
+      "assist": "P. David"
+    },
+    {
+      "type": "substitution",
+      "player": "S. Kolasinac",
+      "minute": 84,
+      "team": "Bosnia & Herzegovina",
+      "assist": "D. Burnic"
+    },
+    {
+      "type": "substitution",
+      "player": "L. Millar",
+      "minute": 61,
+      "team": "Canada",
+      "assist": "J. Shaffelburg"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Lukic",
+      "minute": 62,
+      "team": "Bosnia & Herzegovina",
+      "assist": "S. Bazdar"
+    },
+    {
+      "type": "substitution",
+      "player": "I. Basic",
+      "minute": 62,
+      "team": "Bosnia & Herzegovina",
+      "assist": "A. Gigovic"
+    },
+    {
+      "type": "yellow card",
+      "player": "E. Demirovic",
+      "minute": 45,
+      "team": "Bosnia & Herzegovina",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "J. David",
+      "minute": 61,
+      "team": "Canada",
+      "assist": "P. David"
+    },
+    {
+      "type": "substitution",
+      "player": "T. Buchanan",
+      "minute": 61,
+      "team": "Canada",
+      "assist": "A. Ahmed"
+    },
+    {
+      "type": "substitution",
+      "player": "E. Bajraktarevic",
+      "minute": 74,
+      "team": "Bosnia & Herzegovina",
+      "assist": "I. Sunjic"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Memic",
+      "minute": 74,
+      "team": "Bosnia & Herzegovina",
+      "assist": "K. Alajbegovic"
+    },
+    {
+      "type": "substitution",
+      "player": "T. Oluwaseyi",
+      "minute": 76,
+      "team": "Canada",
+      "assist": "C. Larin"
+    },
+    {
+      "type": "yellow card",
+      "player": "N. Katic",
+      "minute": 90,
+      "team": "Bosnia & Herzegovina",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "S. Eustaquio",
+      "minute": 90,
+      "team": "Canada",
+      "assist": "J. Osorio"
+    },
+    {
+      "type": "yellow card",
+      "player": "A. Johnston",
+      "minute": 11,
+      "team": "Canada",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "J. Lukic",
+      "minute": 21,
+      "team": "Bosnia & Herzegovina",
+      "assist": "S. Kolasinac"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "M. Crepeau",
+      "position": "G",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "A. Johnston",
+      "position": "D",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "L. De Fougerolles",
+      "position": "D",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "D. Cornelius",
+      "position": "D",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "R. Laryea",
+      "position": "D",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "T. Buchanan",
+      "position": "M",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "I. Kone",
+      "position": "M",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "S. Eustaquio",
+      "position": "M",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "L. Millar",
+      "position": "M",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "J. David",
+      "position": "F",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "T. Oluwaseyi",
+      "position": "F",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "N. Vasilj",
+      "position": "G",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "A. Dedic",
+      "position": "D",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "N. Katic",
+      "position": "D",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "T. Muharemovic",
+      "position": "D",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "S. Kolasinac",
+      "position": "D",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "E. Bajraktarevic",
+      "position": "M",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "I. Basic",
+      "position": "M",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "B. Tahirovic",
+      "position": "M",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "A. Memic",
+      "position": "M",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "E. Demirovic",
+      "position": "F",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "J. Lukic",
+      "position": "F",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "D. St.Clair",
+      "position": "G",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "O. Goodman",
+      "position": "G",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "N. Sigur",
+      "position": "M",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "A. Jones",
+      "position": "D",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "J. Waterman",
+      "position": "D",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "M. Bombito",
+      "position": "D",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "A. Davies",
+      "position": "D",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "A. Ahmed",
+      "position": "M",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "N. Saliba",
+      "position": "M",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "M. Choiniere",
+      "position": "M",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "J. Osorio",
+      "position": "M",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "J. Shaffelburg",
+      "position": "F",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "P. David",
+      "position": "F",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "J. Nelson",
+      "position": "F",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "C. Larin",
+      "position": "F",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "M. Jurkas",
+      "position": "G",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "M. Zlomislic",
+      "position": "G",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "A. Malic",
+      "position": "D",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "S. Radeljic",
+      "position": "D",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "D. Hadzikadunic",
+      "position": "D",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "N. Mujakic",
+      "position": "D",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "A. Hadziahmetovic",
+      "position": "M",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "I. Sunjic",
+      "position": "M",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "A. Gigovic",
+      "position": "M",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "D. Burnic",
+      "position": "M",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "K. Alajbegovic",
+      "position": "F",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "E. Mahmic",
+      "position": "M",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "S. Bazdar",
+      "position": "F",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "E. Dzeko",
+      "position": "F",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "H. Tabakovic",
+      "position": "F",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 4,
+    "shotsOnGoalAway": 3,
+    "shotsOffGoalHome": 5,
+    "shotsOffGoalAway": 4,
+    "totalShotsHome": 13,
+    "totalShotsAway": 8,
+    "blockedShotsHome": 4,
+    "blockedShotsAway": 1,
+    "cornerKicksHome": 9,
+    "cornerKicksAway": 4,
+    "foulsHome": 10,
+    "foulsAway": 20,
+    "yellowCardsHome": 2,
+    "yellowCardsAway": 3,
+    "ballPossessionHome": 61,
+    "ballPossessionAway": 39,
+    "offsidesHome": 1,
+    "offsidesAway": 0,
+    "goalkeeperSavesHome": 2,
+    "goalkeeperSavesAway": 1,
+    "totalPassesHome": 421,
+    "totalPassesAway": 271,
+    "passesAccurateHome": 310,
+    "passesAccurateAway": 172,
+    "crossesHome": 24,
+    "crossesAway": 10,
+    "interceptionsHome": 4,
+    "interceptionsAway": 11,
+    "duelsWonHome": 70,
+    "duelsWonAway": 79,
+    "freeKicksHome": 20,
+    "freeKicksAway": 10,
+    "expectedGoalsHome": 1.2300000190734863,
+    "expectedGoalsAway": 0.9599999785423279,
+    "bigChancesHome": 2,
+    "bigChancesAway": 2
+  }
+}

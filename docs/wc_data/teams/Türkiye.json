@@ -1,0 +1,171 @@
+{
+  "name": "Türkiye",
+  "matches": [
+    {
+      "opponent": "Australia",
+      "score": "2:0",
+      "date": "2026-06-14",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    },
+    {
+      "opponent": "Paraguay",
+      "score": "0:1",
+      "date": "2026-06-20",
+      "stage": "",
+      "home": true,
+      "result": "loss"
+    },
+    {
+      "opponent": "USA",
+      "score": "3:2",
+      "date": "2026-06-26",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    }
+  ],
+  "wins": 1,
+  "draws": 0,
+  "losses": 2,
+  "scored": 3,
+  "conceded": 5,
+  "players": {
+    "U. Cakir": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "Z. Celik": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "M. Demiral": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "A. Bardakci": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "F. Kadioglu": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "H. Calhanoglu": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "I. Yuksek": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "A. Guler": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "goals": 1
+    },
+    "O. Kokcu": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1,
+      "goals": 1
+    },
+    "B. Yilmaz": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "K. Akturkoglu": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1
+    },
+    "M. Gunok": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Bayindir": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "C. Soyuncu": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "E. Elmali": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2,
+      "yellow": 1
+    },
+    "O. Kabak": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "M. Muldur": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "S. Akaydin": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "K. Ayhan": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3,
+      "goals": 1
+    },
+    "S. Ozcan": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "I. Kahveci": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "Y. Akgun": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2,
+      "yellow": 1
+    },
+    "O. Aydin": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2
+    },
+    "C. Uzun": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "D. Gul": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "K. Yildiz": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1
+    }
+  }
+}

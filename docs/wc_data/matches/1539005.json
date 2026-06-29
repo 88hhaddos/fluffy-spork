@@ -1,0 +1,500 @@
+{
+  "id": 1539005,
+  "home": "Switzerland",
+  "away": "Bosnia & Herzegovina",
+  "home_id": 15,
+  "away_id": 1113,
+  "score": "4:1",
+  "score_h": 4,
+  "score_a": 1,
+  "date": "2026-06-18T22:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Joao Pedro Pinheiro, Portugal",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "yellow card",
+      "player": "A. Dedic",
+      "minute": 59,
+      "team": "Bosnia & Herzegovina",
+      "assist": ""
+    },
+    {
+      "type": "red card",
+      "player": "T. Muharemovic",
+      "minute": 80,
+      "team": "Bosnia & Herzegovina",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": null,
+      "minute": 84,
+      "team": "Switzerland",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "E. Demirovic",
+      "minute": 86,
+      "team": "Bosnia & Herzegovina",
+      "assist": "J. Lukic"
+    },
+    {
+      "type": "goal",
+      "player": "J. Manzambi",
+      "minute": 74,
+      "team": "Switzerland",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "E. Dzeko",
+      "minute": 61,
+      "team": "Bosnia & Herzegovina",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "D. Ndoye",
+      "minute": 71,
+      "team": "Switzerland",
+      "assist": "J. Manzambi"
+    },
+    {
+      "type": "substitution",
+      "player": "B. Tahirovic",
+      "minute": 63,
+      "team": "Bosnia & Herzegovina",
+      "assist": "I. Basic"
+    },
+    {
+      "type": "substitution",
+      "player": "E. Dzeko",
+      "minute": 64,
+      "team": "Bosnia & Herzegovina",
+      "assist": "E. Bajraktarevic"
+    },
+    {
+      "type": "yellow card",
+      "player": "N. Elvedi",
+      "minute": 65,
+      "team": "Switzerland",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "F. Rieder",
+      "minute": 71,
+      "team": "Switzerland",
+      "assist": "R. Vargas"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Aebischer",
+      "minute": 71,
+      "team": "Switzerland",
+      "assist": "D. Sow"
+    },
+    {
+      "type": "substitution",
+      "player": "I. Sunjic",
+      "minute": 86,
+      "team": "Bosnia & Herzegovina",
+      "assist": "A. Hadziahmetovic"
+    },
+    {
+      "type": "substitution",
+      "player": "S. Widmer",
+      "minute": 86,
+      "team": "Switzerland",
+      "assist": "L. Jaquez"
+    },
+    {
+      "type": "substitution",
+      "player": "B. Embolo",
+      "minute": 89,
+      "team": "Switzerland",
+      "assist": "C. Itten"
+    },
+    {
+      "type": "goal",
+      "player": "J. Manzambi",
+      "minute": 90,
+      "team": "Switzerland",
+      "assist": "R. Vargas"
+    },
+    {
+      "type": "substitution",
+      "player": "K. Alajbegovic",
+      "minute": 90,
+      "team": "Bosnia & Herzegovina",
+      "assist": "E. Mahmic"
+    },
+    {
+      "type": "goal",
+      "player": "E. Mahmic",
+      "minute": 90,
+      "team": "Bosnia & Herzegovina",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "G. Xhaka",
+      "minute": 90,
+      "team": "Switzerland",
+      "assist": ""
+    }
+  ],
+  "lineups": [
+    {
+      "name": "G. Kobel",
+      "position": "G",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "S. Widmer",
+      "position": "D",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "N. Elvedi",
+      "position": "D",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "M. Akanji",
+      "position": "D",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "R. Rodriguez",
+      "position": "D",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "M. Aebischer",
+      "position": "M",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "G. Xhaka",
+      "position": "M",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "R. Freuler",
+      "position": "M",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "F. Rieder",
+      "position": "M",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "B. Embolo",
+      "position": "F",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "D. Ndoye",
+      "position": "F",
+      "sub": false,
+      "team": "Switzerland"
+    },
+    {
+      "name": "N. Vasilj",
+      "position": "G",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "A. Dedic",
+      "position": "D",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "T. Muharemovic",
+      "position": "D",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "N. Katic",
+      "position": "D",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "S. Kolasinac",
+      "position": "D",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "A. Memic",
+      "position": "M",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "B. Tahirovic",
+      "position": "M",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "I. Sunjic",
+      "position": "M",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "K. Alajbegovic",
+      "position": "M",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "E. Demirovic",
+      "position": "F",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "E. Dzeko",
+      "position": "F",
+      "sub": false,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "Y. Mvogo",
+      "position": "G",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "M. Keller",
+      "position": "G",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "E. Comert",
+      "position": "D",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "A. Amenda",
+      "position": "D",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "L. Jaquez",
+      "position": "D",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "D. Zakaria",
+      "position": "M",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "J. Manzambi",
+      "position": "M",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "A. Jashari",
+      "position": "M",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "D. Sow",
+      "position": "M",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "C. Fassnacht",
+      "position": "M",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "R. Vargas",
+      "position": "M",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "N. Okafor",
+      "position": "F",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "Z. Amdouni",
+      "position": "F",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "C. Itten",
+      "position": "F",
+      "sub": true,
+      "team": "Switzerland"
+    },
+    {
+      "name": "M. Zlomislic",
+      "position": "G",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "M. Jurkas",
+      "position": "G",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "A. Malic",
+      "position": "D",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "D. Hadzikadunic",
+      "position": "D",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "N. Mujakic",
+      "position": "D",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "S. Radeljic",
+      "position": "D",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "A. Hadziahmetovic",
+      "position": "M",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "A. Gigovic",
+      "position": "M",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "D. Burnic",
+      "position": "M",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "E. Mahmic",
+      "position": "M",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "I. Basic",
+      "position": "M",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "E. Bajraktarevic",
+      "position": "F",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "H. Tabakovic",
+      "position": "F",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "J. Lukic",
+      "position": "F",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    },
+    {
+      "name": "S. Bazdar",
+      "position": "F",
+      "sub": true,
+      "team": "Bosnia & Herzegovina"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 7,
+    "shotsOnGoalAway": 3,
+    "shotsOffGoalHome": 3,
+    "shotsOffGoalAway": 1,
+    "totalShotsHome": 13,
+    "totalShotsAway": 5,
+    "blockedShotsHome": 3,
+    "blockedShotsAway": 1,
+    "cornerKicksHome": 7,
+    "cornerKicksAway": 3,
+    "foulsHome": 7,
+    "foulsAway": 18,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 2,
+    "redCardsHome": 0,
+    "redCardsAway": 1,
+    "ballPossessionHome": 62,
+    "ballPossessionAway": 38,
+    "offsidesHome": 3,
+    "offsidesAway": 1,
+    "goalkeeperSavesHome": 2,
+    "goalkeeperSavesAway": 3,
+    "totalPassesHome": 586,
+    "totalPassesAway": 354,
+    "passesAccurateHome": 516,
+    "passesAccurateAway": 287,
+    "crossesHome": 23,
+    "crossesAway": 12,
+    "interceptionsHome": 5,
+    "interceptionsAway": 11,
+    "duelsWonHome": 52,
+    "duelsWonAway": 38,
+    "freeKicksHome": 18,
+    "freeKicksAway": 7,
+    "expectedGoalsHome": 2.059999942779541,
+    "expectedGoalsAway": 0.23000000417232513,
+    "bigChancesHome": 4,
+    "bigChancesAway": 0
+  }
+}

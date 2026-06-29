@@ -1,0 +1,172 @@
+{
+  "name": "Morocco",
+  "matches": [
+    {
+      "opponent": "Brazil",
+      "score": "1:1",
+      "date": "2026-06-14",
+      "stage": "",
+      "home": false,
+      "result": "draw"
+    },
+    {
+      "opponent": "Scotland",
+      "score": "0:1",
+      "date": "2026-06-20",
+      "stage": "",
+      "home": false,
+      "result": "win"
+    },
+    {
+      "opponent": "Haiti",
+      "score": "4:2",
+      "date": "2026-06-25",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    }
+  ],
+  "wins": 2,
+  "draws": 1,
+  "losses": 0,
+  "scored": 6,
+  "conceded": 3,
+  "players": {
+    "A. Hakimi": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "goals": 1,
+      "assists": 1
+    },
+    "S. Amrabat": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "N. Mazraoui": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "B. Diaz": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "assists": 1
+    },
+    "Bono": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "Munir": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Tagnaouti": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. El Kaabi": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2
+    },
+    "I. Diop": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1
+    },
+    "S. Rahimi": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Saadane": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Ounahi": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "Y. Belammari": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "I. Saibari": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0,
+      "goals": 3
+    },
+    "A. Salah-Eddine": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "A. Sbai": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "N. El Aynaoui": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "C. Riad": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "Z. El Ouahdi": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "R. Halhal": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "C. Talbi": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "B. El Khannouss": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "G. Yassine": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3,
+      "goals": 1
+    },
+    "S. El Mourabet": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Bouaddi": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "A. Amaimouni": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    }
+  }
+}

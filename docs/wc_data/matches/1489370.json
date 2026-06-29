@@ -1,0 +1,511 @@
+{
+  "id": 1489370,
+  "home": "USA",
+  "away": "Paraguay",
+  "home_id": 2384,
+  "away_id": 2380,
+  "score": "4:1",
+  "score_h": 4,
+  "score_a": 1,
+  "date": "2026-06-13T04:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Danny Makkelie, Netherlands",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "goal",
+      "player": "D. Bobadilla",
+      "minute": 7,
+      "team": "USA",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "J. Caceres",
+      "minute": 10,
+      "team": "Paraguay",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "T. Adams",
+      "minute": 59,
+      "team": "USA",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "A. Sanabria",
+      "minute": 62,
+      "team": "Paraguay",
+      "assist": "A. Arce"
+    },
+    {
+      "type": "goal",
+      "player": "Mauricio",
+      "minute": 73,
+      "team": "Paraguay",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "D. Gomez",
+      "minute": 80,
+      "team": "Paraguay",
+      "assist": "Kaku"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Almiron",
+      "minute": 79,
+      "team": "Paraguay",
+      "assist": "R. Sosa"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Caceres",
+      "minute": 79,
+      "team": "Paraguay",
+      "assist": "G. Velazquez"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Tillman",
+      "minute": 82,
+      "team": "USA",
+      "assist": "G. Reyna"
+    },
+    {
+      "type": "goal",
+      "player": "F. Balogun",
+      "minute": 31,
+      "team": "USA",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "S. Dest",
+      "minute": 72,
+      "team": "USA",
+      "assist": "T. Weah"
+    },
+    {
+      "type": "substitution",
+      "player": "F. Balogun",
+      "minute": 72,
+      "team": "USA",
+      "assist": "R. Pepi"
+    },
+    {
+      "type": "yellow card",
+      "player": "D. Gomez",
+      "minute": 79,
+      "team": "Paraguay",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "M. Almiron",
+      "minute": 53,
+      "team": "Paraguay",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "A. Arce",
+      "minute": 88,
+      "team": "Paraguay",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "F. Balogun",
+      "minute": 45,
+      "team": "USA",
+      "assist": "M. Tillman"
+    },
+    {
+      "type": "substitution",
+      "player": "C. Pulisic",
+      "minute": 46,
+      "team": "USA",
+      "assist": "S. Berhalter"
+    },
+    {
+      "type": "substitution",
+      "player": "D. Bobadilla",
+      "minute": 46,
+      "team": "Paraguay",
+      "assist": "Mauricio"
+    },
+    {
+      "type": "yellow card",
+      "player": "J. Alonso",
+      "minute": 90,
+      "team": "Paraguay",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "G. Reyna",
+      "minute": 90,
+      "team": "USA",
+      "assist": "A. Freeman"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "J. Alonso",
+      "position": "D",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "Fabian Balbuena",
+      "position": "D",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "G. Gomez",
+      "position": "D",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "M. Almiron",
+      "position": "M",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "Kaku",
+      "position": "M",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "A. Sanabria",
+      "position": "F",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "O. Alderete",
+      "position": "D",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "A. Cubas",
+      "position": "M",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "G. Avalos",
+      "position": "F",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "G. Velazquez",
+      "position": "D",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "G. Olveira",
+      "position": "G",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "I. Pitta",
+      "position": "F",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "J. Canale",
+      "position": "D",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "J. Enciso",
+      "position": "F",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "B. Ojeda",
+      "position": "M",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "O. Gill",
+      "position": "G",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "A. Arce",
+      "position": "F",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "Mauricio",
+      "position": "M",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "G. Caballero",
+      "position": "F",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "D. Bobadilla",
+      "position": "M",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "J. Caceres",
+      "position": "D",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "R. Sosa",
+      "position": "F",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "D. Gomez",
+      "position": "M",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "M. Galarza",
+      "position": "M",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "A. Maidana",
+      "position": "D",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "C. Pulisic",
+      "position": "M",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "W. McKennie",
+      "position": "M",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "H. Wright",
+      "position": "F",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "T. Weah",
+      "position": "F",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "T. Adams",
+      "position": "M",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "T. Ream",
+      "position": "D",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "A. Robinson",
+      "position": "D",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "A. Zendejas",
+      "position": "F",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "S. Dest",
+      "position": "M",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "M. Freese",
+      "position": "G",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "M. McKenzie",
+      "position": "D",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "A. Trusty",
+      "position": "D",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "B. Aaronson",
+      "position": "M",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "J. Scally",
+      "position": "D",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "M. Robinson",
+      "position": "D",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "M. Turner",
+      "position": "G",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "C. Roldan",
+      "position": "M",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "R. Pepi",
+      "position": "F",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "C. Richards",
+      "position": "D",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "F. Balogun",
+      "position": "F",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "G. Reyna",
+      "position": "M",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "M. Tillman",
+      "position": "M",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "S. Berhalter",
+      "position": "M",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "C. Brady",
+      "position": "G",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "A. Freeman",
+      "position": "D",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "M. Arfsten",
+      "position": "M",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "R. Fernandez",
+      "position": null,
+      "sub": true,
+      "team": "Paraguay"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 6,
+    "shotsOnGoalAway": 1,
+    "shotsOffGoalHome": 6,
+    "shotsOffGoalAway": 3,
+    "totalShotsHome": 16,
+    "totalShotsAway": 9,
+    "blockedShotsHome": 4,
+    "blockedShotsAway": 5,
+    "cornerKicksHome": 3,
+    "cornerKicksAway": 1,
+    "foulsHome": 13,
+    "foulsAway": 17,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 5,
+    "ballPossessionHome": 65,
+    "ballPossessionAway": 35,
+    "offsidesHome": 2,
+    "offsidesAway": 1,
+    "goalkeeperSavesHome": 1,
+    "goalkeeperSavesAway": 3,
+    "totalPassesHome": 598,
+    "totalPassesAway": 319,
+    "passesAccurateHome": 509,
+    "passesAccurateAway": 232,
+    "crossesHome": 19,
+    "crossesAway": 5,
+    "interceptionsHome": 9,
+    "interceptionsAway": 10,
+    "duelsWonHome": 60,
+    "duelsWonAway": 54,
+    "freeKicksHome": 17,
+    "freeKicksAway": 13,
+    "expectedGoalsHome": 1.4199999570846558,
+    "expectedGoalsAway": 0.5400000214576721,
+    "bigChancesHome": 4,
+    "bigChancesAway": 1
+  }
+}

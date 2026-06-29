@@ -218,13 +218,51 @@ class FootballAPI:
     # ─── Pari.ru API (real odds) ───
 
     PARI_ODDS_MAP = {
+        # 1X2
         8250: "winner1",   # П1
         8253: "winner2",   # П2
         8256: "winnerX",   # Ничья
+        # Двойной шанс
+        8433: "dc_1X",     # 1X
+        8430: "dc_12",     # 12
+        8436: "dc_X2",     # X2
+        # Тотулы голов
         217: "over25",     # ТБ 2.5
         292: "under25",    # ТМ 2.5
+        218: "over30",     # ТБ 3.0
+        219: "over35",     # ТБ 3.5
+        215: "over15",     # ТБ 1.5
+        # Обе забьют
         8259: "btts_yes",  # Обе забьют Да
         8262: "btts_no",   # Обе забьют Нет
+        # Азиатская фора
+        146: "ah_home_minus15",  # Ф1 -1.5
+        147: "ah_home_minus10",  # Ф1 -1.0
+        71:  "ah_away_plus15",   # Ф2 +1.5
+        70:  "ah_away_plus10",   # Ф2 +1.0
+        # Угловые
+        735: "corners_over75",   # Угловые ТБ 7.5
+        888: "corners_under75",  # Угловые ТМ 7.5
+        737: "corners_over85",   # Угловые ТБ 8.5
+        890: "corners_under85",  # Угловые ТМ 8.5
+        739: "corners_over95",   # Угловые ТБ 9.5
+        892: "corners_under95",  # Угловые ТМ 9.5
+        8268: "corners_1",       # Угловые П1
+        8265: "corners_2",       # Угловые П2
+        8271: "corners_X",       # Угловые ничья
+        # Желтые карточки
+        1141: "yellow_over25",   # ЖК ТБ 2.5
+        1216: "yellow_under25",  # ЖК ТМ 2.5
+        1143: "yellow_over35",   # ЖК ТБ 3.5
+        1218: "yellow_under35",  # ЖК ТМ 3.5
+        8277: "yellow_1",        # ЖК П1
+        8280: "yellow_2",        # ЖК П2
+        8274: "yellow_X",        # ЖК ничья
+        # Фолы
+        1605: "fouls_over245",   # Фолы ТБ 24.5
+        1758: "fouls_under245",  # Фолы ТМ 24.5
+        1606: "fouls_over255",   # Фолы ТБ 25.5
+        1759: "fouls_under255",  # Фолы ТМ 25.5
     }
 
     async def get_pari_upcoming_matches(self, limit: int = 50) -> list[dict]:

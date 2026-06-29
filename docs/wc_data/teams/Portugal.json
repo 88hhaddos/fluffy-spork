@@ -1,0 +1,174 @@
+{
+  "name": "Portugal",
+  "matches": [
+    {
+      "opponent": "Congo DR",
+      "score": "1:1",
+      "date": "2026-06-17",
+      "stage": "",
+      "home": true,
+      "result": "draw"
+    },
+    {
+      "opponent": "Uzbekistan",
+      "score": "5:0",
+      "date": "2026-06-23",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    },
+    {
+      "opponent": "Colombia",
+      "score": "0:0",
+      "date": "2026-06-28",
+      "stage": "",
+      "home": false,
+      "result": "draw"
+    }
+  ],
+  "wins": 1,
+  "draws": 2,
+  "losses": 0,
+  "scored": 6,
+  "conceded": 1,
+  "players": {
+    "D. Costa": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "J. Cancelo": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "assists": 1
+    },
+    "T. Araujo": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2,
+      "yellow": 1
+    },
+    "R. Veiga": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "N. Mendes": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "J. Neves": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1,
+      "goals": 1
+    },
+    "Vitinha": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "B. Silva": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2,
+      "yellow": 1
+    },
+    "B. Fernandes": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "P. Neto": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "C. Ronaldo": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0,
+      "goals": 2
+    },
+    "J. Sa": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "R. Silva": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "N. Semedo": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3,
+      "yellow": 1
+    },
+    "R. Dias": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "D. Dalot": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "G. Inacio": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Nunes": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "Samu Costa": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "R. Neves": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "Trincao": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "G. Guedes": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "G. Ramos": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "Joao Felix": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1
+    },
+    "R. Leao": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3,
+      "goals": 1
+    },
+    "F. Conceicao": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    }
+  }
+}

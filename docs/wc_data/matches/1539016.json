@@ -1,0 +1,483 @@
+{
+  "id": 1539016,
+  "home": "Iraq",
+  "away": "Norway",
+  "home_id": 1567,
+  "away_id": 1090,
+  "score": "1:4",
+  "score_h": 1,
+  "score_a": 4,
+  "date": "2026-06-17T01:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "Gillette Stadium",
+  "referee": "Pierre Ghislain Atcho, Gabon",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "goal",
+      "player": "E. Haaland",
+      "minute": 29,
+      "team": "Norway",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "A. Nusa",
+      "minute": 73,
+      "team": "Norway",
+      "assist": "A. Schjelderup"
+    },
+    {
+      "type": "substitution",
+      "player": "F. Aursnes",
+      "minute": 73,
+      "team": "Norway",
+      "assist": "K. Thorstvedt"
+    },
+    {
+      "type": "substitution",
+      "player": "D. Wolfe",
+      "minute": 73,
+      "team": "Norway",
+      "assist": "L. Ostigard"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Sorloth",
+      "minute": 73,
+      "team": "Norway",
+      "assist": "O. Bobb"
+    },
+    {
+      "type": "yellow card",
+      "player": "Z. Tahseen",
+      "minute": 86,
+      "team": "Iraq",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "L. Ostigard",
+      "minute": 76,
+      "team": "Norway",
+      "assist": "M. Odegaard"
+    },
+    {
+      "type": "substitution",
+      "player": "H. Ali",
+      "minute": 73,
+      "team": "Iraq",
+      "assist": "M. Saadoon"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Jasim",
+      "minute": 73,
+      "team": "Iraq",
+      "assist": "A. Qasem"
+    },
+    {
+      "type": "substitution",
+      "player": "I. Bayesh",
+      "minute": 78,
+      "team": "Iraq",
+      "assist": "M. Ali"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Odegaard",
+      "minute": 81,
+      "team": "Norway",
+      "assist": "P. Berg"
+    },
+    {
+      "type": "goal",
+      "player": "E. Haaland",
+      "minute": 43,
+      "team": "Norway",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "A. Hussein",
+      "minute": 90,
+      "team": "Norway",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "A. Hussein",
+      "minute": 39,
+      "team": "Iraq",
+      "assist": "A. Al Ammari"
+    },
+    {
+      "type": "substitution",
+      "player": "Z. Ismaeel",
+      "minute": 59,
+      "team": "Iraq",
+      "assist": "Z. Iqbal"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Al Hamadi",
+      "minute": 59,
+      "team": "Iraq",
+      "assist": "M. Farji"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "A. Al Reeshawee",
+      "position": null,
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "J. Hassan",
+      "position": "G",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "H. Ali",
+      "position": "D",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "Z. Tahseen",
+      "position": "D",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "A. Hashem",
+      "position": "D",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "M. Doski",
+      "position": "D",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "I. Bayesh",
+      "position": "M",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "A. Al Ammari",
+      "position": "M",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "Z. Ismaeel",
+      "position": "M",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "A. Jasim",
+      "position": "M",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "A. Hussein",
+      "position": "F",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "A. Al Hamadi",
+      "position": "F",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "O. Nyland",
+      "position": "G",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "J. Ryerson",
+      "position": "D",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "K. Ajer",
+      "position": "D",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "T. Heggem",
+      "position": "D",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "D. Wolfe",
+      "position": "D",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "M. Odegaard",
+      "position": "M",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "S. Berge",
+      "position": "M",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "F. Aursnes",
+      "position": "M",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "A. Sorloth",
+      "position": "F",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "E. Haaland",
+      "position": "F",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "A. Nusa",
+      "position": "M",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "A. Basil",
+      "position": "G",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "F. Talib",
+      "position": "G",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "R. Sulaka",
+      "position": "D",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "F. Putros",
+      "position": "D",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "M. Saadoon",
+      "position": "D",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "M. Younis",
+      "position": "D",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "Y. Amyn",
+      "position": "F",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "M. Farji",
+      "position": "M",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "A. Qasem",
+      "position": "F",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "Z. Iqbal",
+      "position": "M",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "K. Yakob",
+      "position": "M",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "A. Sher",
+      "position": "M",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "A. Yousif",
+      "position": "F",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "S. Tangvik",
+      "position": "G",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "E. Selvik",
+      "position": "G",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "H. Falchener",
+      "position": "D",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "L. Ostigard",
+      "position": "D",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "F. Bjorkan",
+      "position": "D",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "S. Langas",
+      "position": "D",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "A. Schjelderup",
+      "position": "F",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "T. Aasgaard",
+      "position": "M",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "M. Thorsby",
+      "position": "M",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "M. Pedersen",
+      "position": "D",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "P. Berg",
+      "position": "M",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "O. Bobb",
+      "position": "M",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "K. Thorstvedt",
+      "position": "M",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "J. Larsen",
+      "position": "F",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "J. Hauge",
+      "position": "M",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "M. Ali",
+      "position": null,
+      "sub": true,
+      "team": "Iraq"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 1,
+    "shotsOnGoalAway": 5,
+    "shotsOffGoalHome": 8,
+    "shotsOffGoalAway": 4,
+    "totalShotsHome": 11,
+    "totalShotsAway": 12,
+    "blockedShotsHome": 2,
+    "blockedShotsAway": 3,
+    "cornerKicksHome": 2,
+    "cornerKicksAway": 5,
+    "foulsHome": 12,
+    "foulsAway": 13,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 0,
+    "ballPossessionHome": 39,
+    "ballPossessionAway": 61,
+    "offsidesHome": 1,
+    "offsidesAway": 0,
+    "goalkeeperSavesHome": 2,
+    "goalkeeperSavesAway": 0,
+    "totalPassesHome": 334,
+    "totalPassesAway": 537,
+    "passesAccurateHome": 271,
+    "passesAccurateAway": 477,
+    "crossesHome": 13,
+    "crossesAway": 17,
+    "interceptionsHome": 5,
+    "interceptionsAway": 2,
+    "duelsWonHome": 52,
+    "duelsWonAway": 48,
+    "freeKicksHome": 13,
+    "freeKicksAway": 12,
+    "expectedGoalsHome": 0.800000011920929,
+    "expectedGoalsAway": 2.5199999809265137,
+    "bigChancesHome": 1,
+    "bigChancesAway": 5
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "name": "Croatia",
+  "matches": [
+    {
+      "opponent": "England",
+      "score": "4:2",
+      "date": "2026-06-17",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    },
+    {
+      "opponent": "Panama",
+      "score": "0:1",
+      "date": "2026-06-24",
+      "stage": "",
+      "home": false,
+      "result": "win"
+    },
+    {
+      "opponent": "Ghana",
+      "score": "2:1",
+      "date": "2026-06-28",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    }
+  ],
+  "wins": 2,
+  "draws": 0,
+  "losses": 1,
+  "scored": 5,
+  "conceded": 5,
+  "players": {
+    "I. Perisic": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "assists": 1,
+      "yellow": 1
+    },
+    "D. Kotarski": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Kramaric": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "L. Modric": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "assists": 1
+    },
+    "N. Vlasic": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2,
+      "goals": 1
+    },
+    "M. Pongracic": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "D. Livakovic": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "N. Moro": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "D. Caleta-Car": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Kovacic": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "M. Pasalic": {
+      "position": "M",
+      "matches": 6,
+      "subs": 4
+    },
+    "L. Sucic": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "I. Pandur": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "K. Jakic": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "J. Sutalo": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "M. Erlic": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Budimir": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2,
+      "goals": 1
+    },
+    "P. Musa": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1,
+      "goals": 1
+    },
+    "J. Stanisic": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "assists": 1
+    },
+    "J. Gvardiol": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "I. Matanovic": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "T. Fruk": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Baturina": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0,
+      "goals": 1
+    },
+    "P. Sucic": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1,
+      "goals": 1
+    },
+    "L. Vuskovic": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    }
+  }
+}

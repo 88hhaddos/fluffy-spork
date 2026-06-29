@@ -1,0 +1,455 @@
+{
+  "id": 1489394,
+  "home": "Tunisia",
+  "away": "Japan",
+  "home_id": 28,
+  "away_id": 12,
+  "score": "0:4",
+  "score_h": 0,
+  "score_a": 4,
+  "date": "2026-06-21T07:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "Estadio BBVA",
+  "referee": "Istvan Kovacs, Romania",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "substitution",
+      "player": "S. Tounekti",
+      "minute": 65,
+      "team": "Tunisia",
+      "assist": "F. Chaouat"
+    },
+    {
+      "type": "substitution",
+      "player": "Ritsu Doan",
+      "minute": 74,
+      "team": "Japan",
+      "assist": "Yukinari Sugawara"
+    },
+    {
+      "type": "goal",
+      "player": "Daichi Kamada",
+      "minute": 4,
+      "team": "Japan",
+      "assist": "Keito Nakamura"
+    },
+    {
+      "type": "substitution",
+      "player": "Ayase Ueda",
+      "minute": 84,
+      "team": "Japan",
+      "assist": "Keisuke Goto"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Abdi",
+      "minute": 90,
+      "team": "Tunisia",
+      "assist": "E. Achouri"
+    },
+    {
+      "type": "substitution",
+      "player": "E. Skhiri",
+      "minute": 90,
+      "team": "Tunisia",
+      "assist": "R. Khedira"
+    },
+    {
+      "type": "goal",
+      "player": "Ayase Ueda",
+      "minute": 31,
+      "team": "Japan",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "E. Saad",
+      "minute": 46,
+      "team": "Tunisia",
+      "assist": "I. Gharbi"
+    },
+    {
+      "type": "substitution",
+      "player": "D. Bronn",
+      "minute": 46,
+      "team": "Tunisia",
+      "assist": "M. Ben Hamida"
+    },
+    {
+      "type": "substitution",
+      "player": "Keito Nakamura",
+      "minute": 79,
+      "team": "Japan",
+      "assist": "Yuito Suzuki"
+    },
+    {
+      "type": "substitution",
+      "player": "Takehiro Tomiyasu",
+      "minute": 79,
+      "team": "Japan",
+      "assist": "Ayumu Seko"
+    },
+    {
+      "type": "goal",
+      "player": "Ayase Ueda",
+      "minute": 83,
+      "team": "Japan",
+      "assist": "Kaishu Sano"
+    },
+    {
+      "type": "goal",
+      "player": null,
+      "minute": 69,
+      "team": "Japan",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "Daichi Kamada",
+      "minute": 73,
+      "team": "Japan",
+      "assist": "Junnosuke Suzuki"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "Yuto Nagatomo",
+      "position": "D",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Junya Ito",
+      "position": "F",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Takehiro Tomiyasu",
+      "position": "D",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Ritsu Doan",
+      "position": "M",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Daichi Kamada",
+      "position": "F",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Tsuyoshi Watanabe",
+      "position": "D",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Yukinari Sugawara",
+      "position": "D",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Hiroki Itō",
+      "position": "D",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Shogo Taniguchi",
+      "position": "D",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Ao Tanaka",
+      "position": "M",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Keisuke Osako",
+      "position": "G",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Ayumu Seko",
+      "position": "D",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Daizen Maeda",
+      "position": "F",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Koki Ogawa",
+      "position": "F",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Keito Nakamura",
+      "position": "M",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Kaishu Sano",
+      "position": "M",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Ko Itakura",
+      "position": "D",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Ayase Ueda",
+      "position": "F",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Yuito Suzuki",
+      "position": "M",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Zion Suzuki",
+      "position": "G",
+      "sub": false,
+      "team": "Japan"
+    },
+    {
+      "name": "Tomoki Hayakawa",
+      "position": "G",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Junnosuke Suzuki",
+      "position": "D",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Keisuke Goto",
+      "position": "F",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "Kento Shiogai",
+      "position": "F",
+      "sub": true,
+      "team": "Japan"
+    },
+    {
+      "name": "D. Bronn",
+      "position": "D",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "F. Chaouat",
+      "position": "F",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "Y. Valery",
+      "position": "M",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "E. Skhiri",
+      "position": "M",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "R. Khedira",
+      "position": "M",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "E. Achouri",
+      "position": "M",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "S. Ben Hessen",
+      "position": "G",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "A. Dahmen",
+      "position": "G",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "M. Ben Ouanes",
+      "position": "M",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "A. Abdi",
+      "position": "M",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "M. Talbi",
+      "position": "D",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "S. Tounekti",
+      "position": "F",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "M. Belhadj",
+      "position": "M",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "M. Ben Hamida",
+      "position": "D",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "O. Rekik",
+      "position": "D",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "H. Mejbri",
+      "position": "F",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "A. Slimane",
+      "position": "M",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "I. Gharbi",
+      "position": "F",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "E. Saad",
+      "position": "F",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "H. Mastouri",
+      "position": "F",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "M. Neffati",
+      "position": "D",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "A. Arous",
+      "position": "D",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "K. Ayari",
+      "position": "F",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "R. Chikhaoui",
+      "position": "D",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "A. Chamakh",
+      "position": "G",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "R. Elloumi",
+      "position": "F",
+      "sub": true,
+      "team": "Tunisia"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 0,
+    "shotsOnGoalAway": 5,
+    "shotsOffGoalHome": 1,
+    "shotsOffGoalAway": 3,
+    "totalShotsHome": 2,
+    "totalShotsAway": 11,
+    "blockedShotsHome": 1,
+    "blockedShotsAway": 3,
+    "cornerKicksHome": 3,
+    "cornerKicksAway": 5,
+    "foulsHome": 8,
+    "foulsAway": 15,
+    "ballPossessionHome": 38,
+    "ballPossessionAway": 62,
+    "offsidesHome": 1,
+    "offsidesAway": 1,
+    "goalkeeperSavesHome": 1,
+    "goalkeeperSavesAway": 0,
+    "totalPassesHome": 354,
+    "totalPassesAway": 583,
+    "passesAccurateHome": 284,
+    "passesAccurateAway": 521,
+    "crossesHome": 10,
+    "crossesAway": 11,
+    "interceptionsHome": 14,
+    "interceptionsAway": 7,
+    "duelsWonHome": 38,
+    "duelsWonAway": 43,
+    "freeKicksHome": 15,
+    "freeKicksAway": 8,
+    "expectedGoalsHome": 0.05000000074505806,
+    "expectedGoalsAway": 2.130000114440918,
+    "bigChancesHome": 0,
+    "bigChancesAway": 4
+  }
+}

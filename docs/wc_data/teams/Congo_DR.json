@@ -1,0 +1,175 @@
+{
+  "name": "Congo DR",
+  "matches": [
+    {
+      "opponent": "Portugal",
+      "score": "1:1",
+      "date": "2026-06-17",
+      "stage": "",
+      "home": false,
+      "result": "draw"
+    },
+    {
+      "opponent": "Colombia",
+      "score": "1:0",
+      "date": "2026-06-24",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    },
+    {
+      "opponent": "Uzbekistan",
+      "score": "3:1",
+      "date": "2026-06-28",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    }
+  ],
+  "wins": 1,
+  "draws": 1,
+  "losses": 1,
+  "scored": 4,
+  "conceded": 3,
+  "players": {
+    "L. Mpasi-Nzau": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "A. Wan-Bissaka": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "C. Mbemba": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "A. Tuanzebe": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "S. Kapuadi": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "A. Masuaku": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "assists": 1
+    },
+    "S. Moutoussamy": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "N. Mukau": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "E. Kayembe": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "C. Bakambu": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0
+    },
+    "Y. Wissa": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0,
+      "goals": 3
+    },
+    "T. Fayulu": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Epolo": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "D. Batubinsika": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "J. Kayembe": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "G. Kalulu": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "N. Mbuku": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2,
+      "yellow": 1
+    },
+    "T. Bongonda": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "N. Sadiki": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2,
+      "yellow": 1
+    },
+    "A. Tshibola": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "C. Pickel": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3,
+      "yellow": 1
+    },
+    "B. Cipenga": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2
+    },
+    "G. Kakuta": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Elia": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3,
+      "assists": 1
+    },
+    "F. Mayele": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3,
+      "goals": 1
+    },
+    "S. Banza": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    }
+  }
+}

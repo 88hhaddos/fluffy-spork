@@ -1,0 +1,476 @@
+{
+  "id": 1539003,
+  "home": "Portugal",
+  "away": "Congo DR",
+  "home_id": 27,
+  "away_id": 1508,
+  "score": "1:1",
+  "score_h": 1,
+  "score_a": 1,
+  "date": "2026-06-17T20:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Abdulrahman Al-Jassim, Qatar",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "substitution",
+      "player": "E. Kayembe",
+      "minute": 74,
+      "team": "Congo DR",
+      "assist": "C. Pickel"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Masuaku",
+      "minute": 74,
+      "team": "Congo DR",
+      "assist": "J. Kayembe"
+    },
+    {
+      "type": "goal",
+      "player": "J. Neves",
+      "minute": 6,
+      "team": "Portugal",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "B. Silva",
+      "minute": 46,
+      "team": "Portugal",
+      "assist": "F. Conceicao"
+    },
+    {
+      "type": "substitution",
+      "player": "Vitinha",
+      "minute": 83,
+      "team": "Portugal",
+      "assist": "G. Ramos"
+    },
+    {
+      "type": "substitution",
+      "player": "C. Bakambu",
+      "minute": 85,
+      "team": "Congo DR",
+      "assist": "S. Banza"
+    },
+    {
+      "type": "substitution",
+      "player": "N. Mendes",
+      "minute": 72,
+      "team": "Portugal",
+      "assist": "N. Semedo"
+    },
+    {
+      "type": "substitution",
+      "player": "C. Bakambu",
+      "minute": 85,
+      "team": "Congo DR",
+      "assist": "S. Banza"
+    },
+    {
+      "type": "substitution",
+      "player": "P. Neto",
+      "minute": 71,
+      "team": "Portugal",
+      "assist": "R. Leao"
+    },
+    {
+      "type": "yellow card",
+      "player": "B. Silva",
+      "minute": 13,
+      "team": "Portugal",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "N. Semedo",
+      "minute": 88,
+      "team": "Portugal",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "T. Araujo",
+      "minute": 90,
+      "team": "Portugal",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "Y. Wissa",
+      "minute": 45,
+      "team": "Congo DR",
+      "assist": "A. Masuaku"
+    },
+    {
+      "type": "yellow card",
+      "player": "C. Mbemba",
+      "minute": 32,
+      "team": "Congo DR",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "N. Mukau",
+      "minute": 57,
+      "team": "Congo DR",
+      "assist": "N. Sadiki"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "D. Costa",
+      "position": "G",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "J. Cancelo",
+      "position": "D",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "T. Araujo",
+      "position": "D",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "R. Veiga",
+      "position": "D",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "N. Mendes",
+      "position": "D",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "J. Neves",
+      "position": "M",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "Vitinha",
+      "position": "M",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "B. Silva",
+      "position": "M",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "B. Fernandes",
+      "position": "M",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "P. Neto",
+      "position": "M",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "C. Ronaldo",
+      "position": "F",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "L. Mpasi-Nzau",
+      "position": "G",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "A. Wan-Bissaka",
+      "position": "D",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "C. Mbemba",
+      "position": "D",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "A. Tuanzebe",
+      "position": "D",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "S. Kapuadi",
+      "position": "D",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "A. Masuaku",
+      "position": "D",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "S. Moutoussamy",
+      "position": "M",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "N. Mukau",
+      "position": "M",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "E. Kayembe",
+      "position": "M",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "C. Bakambu",
+      "position": "F",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "Y. Wissa",
+      "position": "F",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "J. Sa",
+      "position": "G",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "R. Silva",
+      "position": "G",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "N. Semedo",
+      "position": "D",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "R. Dias",
+      "position": "D",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "D. Dalot",
+      "position": "D",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "G. Inacio",
+      "position": "D",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "M. Nunes",
+      "position": "M",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "Samu Costa",
+      "position": "M",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "R. Neves",
+      "position": "M",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "Trincao",
+      "position": "F",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "G. Guedes",
+      "position": "F",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "G. Ramos",
+      "position": "F",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "Joao Felix",
+      "position": "F",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "R. Leao",
+      "position": "F",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "F. Conceicao",
+      "position": "F",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "T. Fayulu",
+      "position": "G",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "M. Epolo",
+      "position": "G",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "D. Batubinsika",
+      "position": "D",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "J. Kayembe",
+      "position": "D",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "G. Kalulu",
+      "position": "D",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "N. Mbuku",
+      "position": "F",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "T. Bongonda",
+      "position": "M",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "N. Sadiki",
+      "position": "M",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "A. Tshibola",
+      "position": "M",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "C. Pickel",
+      "position": "M",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "B. Cipenga",
+      "position": "F",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "G. Kakuta",
+      "position": "M",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "M. Elia",
+      "position": "F",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "F. Mayele",
+      "position": "F",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "S. Banza",
+      "position": "F",
+      "sub": true,
+      "team": "Congo DR"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 1,
+    "shotsOnGoalAway": 2,
+    "shotsOffGoalHome": 4,
+    "shotsOffGoalAway": 3,
+    "totalShotsHome": 7,
+    "totalShotsAway": 8,
+    "blockedShotsHome": 2,
+    "blockedShotsAway": 3,
+    "cornerKicksHome": 5,
+    "cornerKicksAway": 4,
+    "foulsHome": 9,
+    "foulsAway": 10,
+    "yellowCardsHome": 3,
+    "yellowCardsAway": 1,
+    "ballPossessionHome": 75,
+    "ballPossessionAway": 25,
+    "offsidesHome": 3,
+    "offsidesAway": 2,
+    "goalkeeperSavesHome": 1,
+    "goalkeeperSavesAway": 0,
+    "totalPassesHome": 783,
+    "totalPassesAway": 249,
+    "passesAccurateHome": 724,
+    "passesAccurateAway": 195,
+    "crossesHome": 23,
+    "crossesAway": 10,
+    "interceptionsHome": 3,
+    "interceptionsAway": 5,
+    "duelsWonHome": 34,
+    "duelsWonAway": 42,
+    "freeKicksHome": 10,
+    "freeKicksAway": 9,
+    "expectedGoalsHome": 0.6499999761581421,
+    "expectedGoalsAway": 0.8700000047683716,
+    "bigChancesHome": 0,
+    "bigChancesAway": 1
+  }
+}

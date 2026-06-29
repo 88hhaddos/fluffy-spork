@@ -1,0 +1,455 @@
+{
+  "id": 1489412,
+  "home": "Tunisia",
+  "away": "Netherlands",
+  "home_id": 28,
+  "away_id": 1118,
+  "score": "1:3",
+  "score_h": 1,
+  "score_a": 3,
+  "date": "2026-06-26T02:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Katia García, Mexico",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "goal",
+      "player": "E. Skhiri",
+      "minute": 3,
+      "team": "Netherlands",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "B. Brobbey",
+      "minute": 7,
+      "team": "Netherlands",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "J. P. van Hecke",
+      "minute": 62,
+      "team": "Netherlands",
+      "assist": "T. Reijnders"
+    },
+    {
+      "type": "substitution",
+      "player": "R. Khedira",
+      "minute": 67,
+      "team": "Tunisia",
+      "assist": "M. Belhadj"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Slimane",
+      "minute": 68,
+      "team": "Tunisia",
+      "assist": "E. Achouri"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Ben Hamida",
+      "minute": 68,
+      "team": "Tunisia",
+      "assist": "M. Ben Ouanes"
+    },
+    {
+      "type": "substitution",
+      "player": "I. Gharbi",
+      "minute": 75,
+      "team": "Tunisia",
+      "assist": "F. Chaouat"
+    },
+    {
+      "type": "substitution",
+      "player": "B. Brobbey",
+      "minute": 77,
+      "team": "Netherlands",
+      "assist": "M. Depay"
+    },
+    {
+      "type": "substitution",
+      "player": "C. Gakpo",
+      "minute": 84,
+      "team": "Netherlands",
+      "assist": "N. Lang"
+    },
+    {
+      "type": "substitution",
+      "player": "H. Mastouri",
+      "minute": 90,
+      "team": "Tunisia",
+      "assist": "S. Tounekti"
+    },
+    {
+      "type": "substitution",
+      "player": "D. Malen",
+      "minute": 72,
+      "team": "Netherlands",
+      "assist": "C. Summerville"
+    },
+    {
+      "type": "substitution",
+      "player": "F. de Jong",
+      "minute": 72,
+      "team": "Netherlands",
+      "assist": "T. Koopmeiners"
+    },
+    {
+      "type": "substitution",
+      "player": "T. Reijnders",
+      "minute": 72,
+      "team": "Netherlands",
+      "assist": "J. Kluivert"
+    },
+    {
+      "type": "goal",
+      "player": "H. Mastouri",
+      "minute": 54,
+      "team": "Tunisia",
+      "assist": ""
+    }
+  ],
+  "lineups": [
+    {
+      "name": "A. Dahmen",
+      "position": "G",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "Y. Valery",
+      "position": "D",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "M. Talbi",
+      "position": "D",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "A. Abdi",
+      "position": "D",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "M. Ben Hamida",
+      "position": "D",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "E. Skhiri",
+      "position": "D",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "R. Khedira",
+      "position": "M",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "A. Slimane",
+      "position": "M",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "H. Mejbri",
+      "position": "M",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "I. Gharbi",
+      "position": "M",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "H. Mastouri",
+      "position": "F",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "B. Verbruggen",
+      "position": "G",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "D. Dumfries",
+      "position": "D",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "J. P. van Hecke",
+      "position": "D",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "V. van Dijk",
+      "position": "D",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "N. Ake",
+      "position": "D",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "R. Gravenberch",
+      "position": "M",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "F. de Jong",
+      "position": "M",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "T. Reijnders",
+      "position": "M",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "D. Malen",
+      "position": "F",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "B. Brobbey",
+      "position": "F",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "C. Gakpo",
+      "position": "F",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "S. Ben Hessen",
+      "position": "G",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "D. Bronn",
+      "position": "D",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "M. Ben Ouanes",
+      "position": "M",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "F. Chaouat",
+      "position": "F",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "O. Rekik",
+      "position": "D",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "E. Achouri",
+      "position": "M",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "S. Tounekti",
+      "position": "F",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "M. Belhadj",
+      "position": "M",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "A. Chamakh",
+      "position": "G",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "E. Saad",
+      "position": "F",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "R. Chikhaoui",
+      "position": "D",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "K. Ayari",
+      "position": "F",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "R. Elloumi",
+      "position": "F",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "J. Hato",
+      "position": "D",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "R. Roefs",
+      "position": "G",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "M. van de Ven",
+      "position": "D",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "Q. Timber",
+      "position": "M",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "M. Wieffer",
+      "position": "M",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "C. Summerville",
+      "position": "F",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "N. Lang",
+      "position": "F",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "L. Geertruida",
+      "position": "D",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "J. Kluivert",
+      "position": "F",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "G. Til",
+      "position": "M",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "T. Koopmeiners",
+      "position": "M",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "W. Weghorst",
+      "position": "F",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "M. Flekken",
+      "position": "G",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "M. Depay",
+      "position": "F",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "M. De Roon",
+      "position": "M",
+      "sub": true,
+      "team": "Netherlands"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 4,
+    "shotsOnGoalAway": 7,
+    "shotsOffGoalHome": 5,
+    "shotsOffGoalAway": 8,
+    "totalShotsHome": 10,
+    "totalShotsAway": 20,
+    "blockedShotsHome": 1,
+    "blockedShotsAway": 5,
+    "cornerKicksHome": 4,
+    "cornerKicksAway": 6,
+    "foulsHome": 11,
+    "foulsAway": 10,
+    "ballPossessionHome": 29,
+    "ballPossessionAway": 71,
+    "offsidesHome": 2,
+    "offsidesAway": 1,
+    "goalkeeperSavesHome": 4,
+    "goalkeeperSavesAway": 3,
+    "totalPassesHome": 258,
+    "totalPassesAway": 647,
+    "passesAccurateHome": 199,
+    "passesAccurateAway": 602,
+    "crossesHome": 13,
+    "crossesAway": 27,
+    "interceptionsHome": 8,
+    "interceptionsAway": 10,
+    "duelsWonHome": 36,
+    "duelsWonAway": 37,
+    "freeKicksHome": 10,
+    "freeKicksAway": 11,
+    "expectedGoalsHome": 0.6200000047683716,
+    "expectedGoalsAway": 1.850000023841858,
+    "bigChancesHome": 2,
+    "bigChancesAway": 2
+  }
+}

@@ -438,13 +438,42 @@ async def fetch_all_wc_data(api: FootballAPI) -> dict:
     standings.sort(key=lambda x: x["points"], reverse=True)
 
     # ── Сохраняем ──
+    # Все завершённые матчи с базовой инфой (даже без деталей)
+    all_finished_basic = []
+    for m in finished:
+        home_name = (m.get("homeTeam") or {}).get("name", "?")
+        away_name = (m.get("awayTeam") or {}).get("name", "?")
+        sc_h = m.get("homeResult", 0) or 0
+        sc_a = m.get("awayResult", 0) or 0
+        date = (m.get("date") or "")[:19]
+        game_id = m.get("id", 0)
+        
+        # Если уже есть в all_match_details — не дублируем
+        existing = next((d for d in all_match_details if d["id"] == game_id), None)
+        if existing:
+            all_finished_basic.append(existing)
+        else:
+            all_finished_basic.append({
+                "id": game_id,
+                "home": home_name,
+                "away": away_name,
+                "score": f"{sc_h}:{sc_a}",
+                "date": date,
+                "status": m.get("status"),
+                "stage": m.get("stage") or "",
+                "round": m.get("round") or "",
+                "events": [],
+                "lineups": [],
+                "stats": {},
+            })
+
     data = {
         "updated": datetime.now().isoformat(),
         "total_matches": len(matches),
         "finished": len(finished),
         "upcoming": len(upcoming),
         "live": len(live),
-        "matches": all_match_details,
+        "matches": all_finished_basic,
         "upcoming_matches": [
             {
                 "home": (m.get("homeTeam") or {}).get("name", "?"),
@@ -570,15 +599,124 @@ async def fetch_all_wc_data(api: FootballAPI) -> dict:
 
 
 def load_wc_data() -> Optional[dict]:
-    """Загружает кэшированные данные ЧМ."""
+    """Загружает данные ЧМ из локальных файлов (прошедшие матчи статичны)."""
+    index_file = os.path.join(WC_DATA_DIR, "index.json")
+    if not os.path.exists(index_file):
+        return _load_legacy_wc_data()
+
+    try:
+        with open(index_file, "r", encoding="utf-8") as f:
+            index = json.load(f)
+
+        all_matches = []
+        all_file = os.path.join(WC_DATA_DIR, "all_matches.json")
+        if os.path.exists(all_file):
+            with open(all_file, "r", encoding="utf-8") as f:
+                all_matches = json.load(f)
+
+        upcoming = []
+        up_file = os.path.join(WC_DATA_DIR, "upcoming.json")
+        if os.path.exists(up_file):
+            with open(up_file, "r", encoding="utf-8") as f:
+                upcoming = json.load(f)
+
+        scorers = []
+        sc_file = os.path.join(WC_DATA_DIR, "scorers.json")
+        if os.path.exists(sc_file):
+            with open(sc_file, "r", encoding="utf-8") as f:
+                raw_scorers = json.load(f)
+            scorers = [(item[0], item[1]) for item in raw_scorers if isinstance(item, (list, tuple)) and len(item) == 2]
+
+        assists = []
+        as_file = os.path.join(WC_DATA_DIR, "assists.json")
+        if os.path.exists(as_file):
+            with open(as_file, "r", encoding="utf-8") as f:
+                raw_assists = json.load(f)
+            assists = [(item[0], item[1]) for item in raw_assists if isinstance(item, (list, tuple)) and len(item) == 2]
+
+        standings = []
+        st_file = os.path.join(WC_DATA_DIR, "standings.json")
+        if os.path.exists(st_file):
+            with open(st_file, "r", encoding="utf-8") as f:
+                raw = json.load(f)
+            if isinstance(raw, dict):
+                for key, val in raw.items():
+                    if isinstance(val, dict):
+                        team_name = val.get("teamName") or val.get("team") or ""
+                        if not team_name:
+                            team_name = key
+                        standings.append({
+                            "team": team_name,
+                            "team_id": val.get("teamId", 0),
+                            "points": val.get("points", 0),
+                            "wins": val.get("wins", 0),
+                            "draws": val.get("draws", 0),
+                            "loss": val.get("loss", 0),
+                            "scored": val.get("goalsScored", 0),
+                            "missed": val.get("goalsMissed", 0),
+                            "rank": val.get("rank", 0),
+                        })
+            elif isinstance(raw, list):
+                for t in raw:
+                    if isinstance(t, dict):
+                        standings.append({
+                            "team": t.get("teamName", t.get("team", "?")),
+                            "team_id": t.get("teamId", 0),
+                            "points": t.get("points", 0),
+                            "wins": t.get("wins", 0),
+                            "draws": t.get("draws", 0),
+                            "loss": t.get("loss", 0),
+                            "scored": t.get("goalsScored", 0),
+                            "missed": t.get("goalsMissed", 0),
+                            "rank": t.get("rank", 0),
+                        })
+            standings.sort(key=lambda x: x["points"], reverse=True)
+
+        players = {}
+        pl_file = os.path.join(WC_DATA_DIR, "players.json")
+        if os.path.exists(pl_file):
+            with open(pl_file, "r", encoding="utf-8") as f:
+                players = json.load(f)
+
+        return {
+            "updated": index.get("updated", ""),
+            "total_matches": index.get("total_matches", 0),
+            "finished": index.get("finished", 0),
+            "upcoming": index.get("upcoming", 0),
+            "live": 0,
+            "matches": all_matches,
+            "upcoming_matches": upcoming,
+            "live_matches": [],
+            "standings": standings,
+            "top_scorers": scorers,
+            "top_assists": assists,
+            "players": players,
+            "teams": index.get("teams", []),
+        }
+    except Exception as e:
+        logger.error(f"WC data load error: {e}")
+        return _load_legacy_wc_data()
+
+
+def _load_legacy_wc_data() -> Optional[dict]:
+    """Fallback на старый кэш."""
     main_file = os.path.join(WC_DATA_DIR, "wc_2026_full.json")
     try:
         with open(main_file, "r", encoding="utf-8") as f:
             return json.load(f)
-    except FileNotFoundError:
+    except Exception:
         return None
-    except Exception as e:
-        logger.error(f"WC data load error: {e}")
+
+
+def _load_team_file(team_name: str) -> Optional[dict]:
+    """Загружает файл команды по имени."""
+    teams_dir = os.path.join(WC_DATA_DIR, "teams")
+    safe_name = team_name.replace("/", "_").replace(" ", "_")
+    team_file = os.path.join(teams_dir, f"{safe_name}.json")
+    try:
+        with open(team_file, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
         return None
 
 
@@ -638,6 +776,14 @@ def search_wc_data(query: str, data: dict) -> str:
         "тунис": "Tunisia", "туниса": "Tunisia",
         "австр": "Austria", "австрии": "Austria",
         "австрали": "Australia", "австралии": "Australia",
+        "кабо": "Cape Verde Islands", "кабо-верде": "Cape Verde Islands",
+        "cape verde": "Cape Verde Islands", "cabo verde": "Cape Verde Islands",
+        "саудов": "Saudi Arabia", "саудовской": "Saudi Arabia",
+        "юар": "South Africa", "южная африка": "South Africa",
+        "африка": "South Africa",
+        "ивуар": "Ivory Coast", "кот-д'ивуар": "Ivory Coast",
+        "ливан": "Lebanon", "ливана": "Lebanon",
+        "урал": "Uruguay",
     }
     for alias, team_name in TEAM_ALIASES.items():
         if alias in query_lower and team_name in all_teams and team_name not in mentioned_teams:
@@ -645,90 +791,34 @@ def search_wc_data(query: str, data: dict) -> str:
 
     if mentioned_teams:
         for team in mentioned_teams[:2]:
-            # ALL matches of this team (finished)
-            team_matches = [m for m in data.get("matches", []) if team in (m.get("home", ""), m.get("away", ""))]
-            # Upcoming
-            team_upcoming = [m for m in data.get("upcoming_matches", []) if team in (m.get("home", ""), m.get("away", ""))]
-            # Live
-            team_live = [m for m in data.get("live_matches", []) if team in (m.get("home", ""), m.get("away", ""))]
-
-            if team_matches or team_upcoming or team_live:
+            team_data = _load_team_file(team)
+            if team_data:
                 lines = []
+                for m in team_data["matches"]:
+                    lines.append(f"  {m['date']}: vs {m['opponent']} {m['score']} — {m['result']} ({m.get('stage', '')})")
 
-                # Finished matches with FULL details
-                for m in team_matches:
-                    is_home = m["home"] == team
-                    lines.append(f"  {m['home']} {m['score']} {m['away']} ({m['date'][:10]})")
-                    # All events
-                    for ev in m.get("events", []):
-                        if ev.get("type") == "goal":
-                            lines.append(f"    ⚽ Гол: {ev['player']} ({ev['minute']}', {ev.get('team', '?')})")
-                        elif ev.get("type") == "red card":
-                            lines.append(f"    🟥 Красная: {ev['player']} ({ev['minute']}')")
-                        elif ev.get("type") == "yellow card":
-                            lines.append(f"    🟨 Жёлтая: {ev['player']} ({ev['minute']}')")
-                    # Lineups
-                    for lineup in m.get("lineups", []):
-                        if lineup.get("team") == team:
-                            starters = [p["name"] for p in lineup.get("players", []) if not p.get("sub")]
-                            subs = [p["name"] for p in lineup.get("players", []) if p.get("sub")]
-                            if starters:
-                                lines.append(f"    Основа: {', '.join(starters[:11])}")
-                            if subs:
-                                lines.append(f"    Замены: {', '.join(subs[:5])}")
-                    # Stats
-                    stats = m.get("stats", {})
-                    if stats:
-                        stat_lines = []
-                        for key, val in list(stats.items())[:8]:
-                            if isinstance(val, dict):
-                                stat_lines.append(f"{key}: {val.get('home', 0)}-{val.get('away', 0)}")
-                        if stat_lines:
-                            lines.append(f"    Стат: {', '.join(stat_lines)}")
-
-                # Upcoming
-                for m in team_upcoming:
-                    lines.append(f"  Предстоит: {m['home']} — {m['away']} ({m.get('date', '')[:16]})")
-
-                # Live
-                for m in team_live:
-                    lines.append(f"  🔴 {m['home']} {m['score']} {m['away']} (сейчас)")
-                    for ev in m.get("events", []):
-                        if ev.get("type") == "goal":
-                            lines.append(f"    ⚽ Гол: {ev['player']} ({ev['minute']}')")
-
-                # Team record
-                if team_matches:
-                    wins = sum(1 for m in team_matches if (m["home"] == team and m["score"].split(":")[0] > m["score"].split(":")[1]) or (m["away"] == team and m["score"].split(":")[1] > m["score"].split(":")[0]))
-                    draws = sum(1 for m in team_matches if m["score"].split(":")[0] == m["score"].split(":")[1])
-                    losses = len(team_matches) - wins - draws
-                    scored = sum(int(m["score"].split(":")[0]) if m["home"] == team else int(m["score"].split(":")[1]) for m in team_matches)
-                    conceded = sum(int(m["score"].split(":")[1]) if m["home"] == team else int(m["score"].split(":")[0]) for m in team_matches)
-                    lines.append(f"  ИТОГО: {len(team_matches)} матчей, {wins}В {draws}Н {losses}П, голы {scored}-{conceded}")
+                lines.append(f"  ИТОГО: {len(team_data['matches'])} матчей, {team_data['wins']}В {team_data['draws']}Н {team_data['losses']}П, голы {team_data['scored']}-{team_data['conceded']}")
 
                 parts.append(f"### ВСЕ матчи {team} на ЧМ 2026:\n" + "\n".join(lines))
 
-                # ALL players of this team
-                team_players = {}
-                for m in team_matches:
-                    for lineup in m.get("lineups", []):
-                        if lineup.get("team") == team:
-                            for p in lineup.get("players", []):
-                                name = p["name"]
-                                if name not in team_players:
-                                    team_players[name] = {"matches": 0, "goals": 0, "subs": 0}
-                                team_players[name]["matches"] += 1
-                                team_players[name]["goals"] += p.get("goals", 0) or 0
-                                if p.get("sub"):
-                                    team_players[name]["subs"] += 1
-
-                if team_players:
-                    sorted_players = sorted(team_players.items(), key=lambda x: x[1]["matches"], reverse=True)
+                players = team_data.get("players", {})
+                if players:
+                    sorted_players = sorted(players.items(), key=lambda x: x[1]["matches"], reverse=True)
                     player_lines = []
-                    for name, stats in sorted_players[:15]:
-                        sub_text = f" ({stats['subs']} замен)" if stats["subs"] > 0 else ""
-                        player_lines.append(f"  {name}: {stats['matches']} матчей, {stats['goals']} гол{sub_text}")
+                    for name, ps in sorted_players[:15]:
+                        goals = ps.get("goals", 0)
+                        assists = ps.get("assists", 0)
+                        subs = ps.get("subs", 0)
+                        sub_text = f" ({subs} замен)" if subs > 0 else ""
+                        extra = f", {goals} гол" if goals else ""
+                        extra += f", {assists} ассист" if assists else ""
+                        player_lines.append(f"  {name} ({ps['position']}): {ps['matches']} матчей{extra}{sub_text}")
                     parts.append(f"### Игроки {team}:\n" + "\n".join(player_lines))
+
+            team_upcoming = [m for m in data.get("upcoming_matches", []) if team in (m.get("home", ""), m.get("away", ""))]
+            if team_upcoming:
+                up_lines = [f"  Предстоит: {m['home']} — {m['away']} ({m.get('date', '')[:16]})" for m in team_upcoming]
+                parts.append(f"### Предстоящие матчи {team}:\n" + "\n".join(up_lines))
 
     # ── Поиск по игрокам ──
     all_players = data.get("players", {})

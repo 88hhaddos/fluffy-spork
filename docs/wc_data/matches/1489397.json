@@ -1,0 +1,490 @@
+{
+  "id": 1489397,
+  "home": "Spain",
+  "away": "Saudi Arabia",
+  "home_id": 9,
+  "away_id": 23,
+  "score": "4:0",
+  "score_h": 4,
+  "score_a": 0,
+  "date": "2026-06-21T19:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "Mercedes-Benz Stadium",
+  "referee": "Raphael Claus, Brazil",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "substitution",
+      "player": "M. Oyarzabal",
+      "minute": 46,
+      "team": "Spain",
+      "assist": "F. Torres"
+    },
+    {
+      "type": "goal",
+      "player": "M. Oyarzabal",
+      "minute": 21,
+      "team": "Spain",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "A. Al Khaibari",
+      "minute": 46,
+      "team": "Saudi Arabia",
+      "assist": "M. Kanno"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Al Juwayr",
+      "minute": 46,
+      "team": "Saudi Arabia",
+      "assist": "A. Al Hamdan"
+    },
+    {
+      "type": "yellow card",
+      "player": "M. Kanno",
+      "minute": 60,
+      "team": "Saudi Arabia",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "A. Al Amri",
+      "minute": 60,
+      "team": "Saudi Arabia",
+      "assist": "A. Hejji"
+    },
+    {
+      "type": "substitution",
+      "player": "D. Olmo",
+      "minute": 61,
+      "team": "Spain",
+      "assist": "M. Merino"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Baena",
+      "minute": 61,
+      "team": "Spain",
+      "assist": "N. Williams"
+    },
+    {
+      "type": "goal",
+      "player": "M. Oyarzabal",
+      "minute": 24,
+      "team": "Spain",
+      "assist": "D. Olmo"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Al Amri",
+      "minute": 60,
+      "team": "Saudi Arabia",
+      "assist": "A. Hejji"
+    },
+    {
+      "type": "goal",
+      "player": "Lamine Yamal",
+      "minute": 10,
+      "team": "Spain",
+      "assist": "M. Oyarzabal"
+    },
+    {
+      "type": "yellow card",
+      "player": "S. Al Dawsari",
+      "minute": 30,
+      "team": "Saudi Arabia",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "H. Tambakti",
+      "minute": 49,
+      "team": "Spain",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "Lamine Yamal",
+      "minute": 46,
+      "team": "Spain",
+      "assist": "Y. Pino"
+    },
+    {
+      "type": "substitution",
+      "player": "Pedri",
+      "minute": 70,
+      "team": "Spain",
+      "assist": "F. Ruiz"
+    },
+    {
+      "type": "substitution",
+      "player": "N. Al Dawsari",
+      "minute": 90,
+      "team": "Saudi Arabia",
+      "assist": "K. Al Ghannam"
+    },
+    {
+      "type": "goal cancelled",
+      "player": "F. Torres",
+      "minute": 90,
+      "team": "Spain",
+      "assist": ""
+    }
+  ],
+  "lineups": [
+    {
+      "name": "Rodri",
+      "position": "M",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "F. Ruiz",
+      "position": "M",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "A. Grimaldo",
+      "position": "D",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "E. Garcia",
+      "position": "D",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "A. Laporte",
+      "position": "D",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "M. Llorente",
+      "position": "M",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "F. Torres",
+      "position": "F",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "D. Olmo",
+      "position": "M",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "D. Raya",
+      "position": "G",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "U. Simon",
+      "position": "G",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "M. Merino",
+      "position": "M",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "M. Zubimendi",
+      "position": "M",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "M. Oyarzabal",
+      "position": "F",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "B. Iglesias",
+      "position": "F",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "M. Cucurella",
+      "position": "D",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "P. Porro",
+      "position": "D",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "Pedri",
+      "position": "M",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "A. Baena",
+      "position": "F",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "J. Garcia",
+      "position": "G",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "N. Williams",
+      "position": "F",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "Y. Pino",
+      "position": "M",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "M. Pubill",
+      "position": "D",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "Gavi",
+      "position": "M",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "V. Munoz",
+      "position": "F",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "Lamine Yamal",
+      "position": "F",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "P. Cubarsi",
+      "position": "D",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "S. Mandash",
+      "position": "F",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "A. Al Khaibari",
+      "position": "M",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "F. Al Buraikan",
+      "position": "F",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "H. Kadesh",
+      "position": "D",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "N. Al Dawsari",
+      "position": "M",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "S. Al Dawsari",
+      "position": "M",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "M. Kanno",
+      "position": "M",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "H. Tambakti",
+      "position": "D",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "A. Majrashi",
+      "position": "D",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "A. Al Hamdan",
+      "position": "F",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "M. Al Owais",
+      "position": "G",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "A. Al Kassar",
+      "position": "G",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "A. Al Amri",
+      "position": "D",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "A. Lajami",
+      "position": "D",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "S. Al Shehri",
+      "position": "F",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "S. Abdulhamid",
+      "position": "D",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "K. Al Ghannam",
+      "position": "F",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "N. Boushal",
+      "position": "D",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "A. Yahya",
+      "position": "M",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "N. Al Aqidi",
+      "position": "G",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "M. Al Harbi",
+      "position": "D",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "Z. Al Johani",
+      "position": "M",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "M. Al Juwayr",
+      "position": "M",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "M. Abu Al Shamat",
+      "position": "M",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "J. Thakri",
+      "position": null,
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "A. Hejji",
+      "position": null,
+      "sub": true,
+      "team": "Saudi Arabia"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 8,
+    "shotsOnGoalAway": 1,
+    "shotsOffGoalHome": 12,
+    "shotsOffGoalAway": 1,
+    "totalShotsHome": 22,
+    "totalShotsAway": 3,
+    "blockedShotsHome": 2,
+    "blockedShotsAway": 1,
+    "cornerKicksHome": 6,
+    "cornerKicksAway": 1,
+    "foulsHome": 10,
+    "foulsAway": 2,
+    "yellowCardsHome": 0,
+    "yellowCardsAway": 2,
+    "ballPossessionHome": 67,
+    "ballPossessionAway": 33,
+    "offsidesHome": 2,
+    "offsidesAway": 3,
+    "goalkeeperSavesHome": 1,
+    "goalkeeperSavesAway": 5,
+    "totalPassesHome": 726,
+    "totalPassesAway": 364,
+    "passesAccurateHome": 668,
+    "passesAccurateAway": 294,
+    "crossesHome": 25,
+    "crossesAway": 5,
+    "interceptionsHome": 13,
+    "interceptionsAway": 13,
+    "duelsWonHome": 29,
+    "duelsWonAway": 37,
+    "freeKicksHome": 2,
+    "freeKicksAway": 10,
+    "expectedGoalsHome": 2.299999952316284,
+    "expectedGoalsAway": 0.14000000059604645,
+    "bigChancesHome": 5,
+    "bigChancesAway": 0
+  }
+}

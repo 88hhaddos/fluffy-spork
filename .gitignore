@@ -8,4 +8,5 @@ venv/
 *.egg-info/
 dist/
 build/
-docs/wc_data/
+docs/wc_data/wc_2026_full.json
+docs/wc_data/wc_2026_summary.json

@@ -1,0 +1,186 @@
+{
+  "name": "Brazil",
+  "matches": [
+    {
+      "opponent": "Morocco",
+      "score": "1:1",
+      "date": "2026-06-14",
+      "stage": "",
+      "home": true,
+      "result": "draw"
+    },
+    {
+      "opponent": "Haiti",
+      "score": "3:0",
+      "date": "2026-06-20",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    },
+    {
+      "opponent": "Scotland",
+      "score": "0:3",
+      "date": "2026-06-25",
+      "stage": "",
+      "home": false,
+      "result": "win"
+    },
+    {
+      "opponent": "Japan",
+      "score": "2:1",
+      "date": "2026-06-29",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    }
+  ],
+  "wins": 3,
+  "draws": 1,
+  "losses": 0,
+  "scored": 9,
+  "conceded": 2,
+  "players": {
+    "Marquinhos": {
+      "position": "D",
+      "matches": 4,
+      "subs": 0
+    },
+    "Alisson": {
+      "position": "G",
+      "matches": 4,
+      "subs": 0
+    },
+    "Fabinho": {
+      "position": "M",
+      "matches": 4,
+      "subs": 4,
+      "yellow": 1
+    },
+    "Ederson": {
+      "position": "G",
+      "matches": 4,
+      "subs": 4
+    },
+    "Danilo": {
+      "position": "D",
+      "matches": 4,
+      "subs": 1,
+      "yellow": 2
+    },
+    "Casemiro": {
+      "position": "M",
+      "matches": 4,
+      "subs": 0,
+      "yellow": 2,
+      "goals": 1
+    },
+    "Vinícius Júnior": {
+      "position": "M",
+      "matches": 4,
+      "subs": 0,
+      "goals": 3
+    },
+    "Alex Sandro": {
+      "position": "D",
+      "matches": 4,
+      "subs": 4
+    },
+    "Matheus Cunha": {
+      "position": "F",
+      "matches": 4,
+      "subs": 1,
+      "goals": 2
+    },
+    "Raphinha": {
+      "position": "M",
+      "matches": 2,
+      "subs": 0
+    },
+    "Lucas Paquetá": {
+      "position": "M",
+      "matches": 4,
+      "subs": 0,
+      "assists": 1
+    },
+    "Weverton": {
+      "position": "G",
+      "matches": 4,
+      "subs": 4
+    },
+    "Éderson": {
+      "position": "M",
+      "matches": 4,
+      "subs": 4
+    },
+    "Léo Pereira": {
+      "position": "D",
+      "matches": 4,
+      "subs": 4
+    },
+    "Bruno Guimarães": {
+      "position": "M",
+      "matches": 4,
+      "subs": 0,
+      "assists": 4
+    },
+    "Gabriel Magalhães": {
+      "position": "D",
+      "matches": 4,
+      "subs": 0,
+      "assists": 1
+    },
+    "Douglas Santos": {
+      "position": "D",
+      "matches": 4,
+      "subs": 0,
+      "yellow": 1
+    },
+    "Roger Ibañez": {
+      "position": "D",
+      "matches": 4,
+      "subs": 3,
+      "yellow": 1
+    },
+    "Bremer": {
+      "position": "D",
+      "matches": 4,
+      "subs": 4
+    },
+    "Gabriel Martinelli": {
+      "position": "F",
+      "matches": 4,
+      "subs": 4,
+      "goals": 1
+    },
+    "Igor Thiago": {
+      "position": "F",
+      "matches": 4,
+      "subs": 3
+    },
+    "Luiz Henrique": {
+      "position": "F",
+      "matches": 4,
+      "subs": 4
+    },
+    "Danilo Santos": {
+      "position": "M",
+      "matches": 4,
+      "subs": 4
+    },
+    "Endrick": {
+      "position": "F",
+      "matches": 4,
+      "subs": 4
+    },
+    "Rayan": {
+      "position": "F",
+      "matches": 4,
+      "subs": 2
+    },
+    "Neymar": {
+      "position": "F",
+      "matches": 2,
+      "subs": 2
+    }
+  }
+}

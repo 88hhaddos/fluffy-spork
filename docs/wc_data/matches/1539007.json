@@ -1,0 +1,498 @@
+{
+  "id": 1539007,
+  "home": "Netherlands",
+  "away": "Sweden",
+  "home_id": 1118,
+  "away_id": 5,
+  "score": "5:1",
+  "score_h": 5,
+  "score_a": 1,
+  "date": "2026-06-20T20:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Michael Oliver, England",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "goal",
+      "player": "B. Brobbey",
+      "minute": 5,
+      "team": "Netherlands",
+      "assist": "C. Gakpo"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Bernhardsson",
+      "minute": 55,
+      "team": "Sweden",
+      "assist": "A. Elanga"
+    },
+    {
+      "type": "goal",
+      "player": "A. Elanga",
+      "minute": 59,
+      "team": "Sweden",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "F. de Jong",
+      "minute": 59,
+      "team": "Netherlands",
+      "assist": "T. Koopmeiners"
+    },
+    {
+      "type": "substitution",
+      "player": "T. Reijnders",
+      "minute": 59,
+      "team": "Netherlands",
+      "assist": "G. Til"
+    },
+    {
+      "type": "substitution",
+      "player": "B. Brobbey",
+      "minute": 72,
+      "team": "Netherlands",
+      "assist": "M. Depay"
+    },
+    {
+      "type": "yellow card",
+      "player": "Y. Ayari",
+      "minute": 75,
+      "team": "Sweden",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "L. Bergvall",
+      "minute": 80,
+      "team": "Sweden",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "C. Summerville",
+      "minute": 89,
+      "team": "Netherlands",
+      "assist": "M. Depay"
+    },
+    {
+      "type": "substitution",
+      "player": "G. Gudmundsson",
+      "minute": 90,
+      "team": "Sweden",
+      "assist": "E. Stroud"
+    },
+    {
+      "type": "goal",
+      "player": "C. Gakpo",
+      "minute": 47,
+      "team": "Netherlands",
+      "assist": "D. Dumfries"
+    },
+    {
+      "type": "goal",
+      "player": "B. Brobbey",
+      "minute": 17,
+      "team": "Netherlands",
+      "assist": "D. Dumfries"
+    },
+    {
+      "type": "substitution",
+      "player": "D. Malen",
+      "minute": 46,
+      "team": "Netherlands",
+      "assist": "C. Summerville"
+    },
+    {
+      "type": "yellow card",
+      "player": "G. Gudmundsson",
+      "minute": 53,
+      "team": "Sweden",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "C. Gakpo",
+      "minute": 54,
+      "team": "Netherlands",
+      "assist": "C. Summerville"
+    },
+    {
+      "type": "substitution",
+      "player": "B. Nygren",
+      "minute": 56,
+      "team": "Sweden",
+      "assist": "L. Bergvall"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Bernhardsson",
+      "minute": 56,
+      "team": "Sweden",
+      "assist": "A. Elanga"
+    },
+    {
+      "type": "substitution",
+      "player": "Y. Ayari",
+      "minute": 79,
+      "team": "Sweden",
+      "assist": "T. Ali"
+    },
+    {
+      "type": "substitution",
+      "player": "C. Gakpo",
+      "minute": 90,
+      "team": "Netherlands",
+      "assist": "N. Lang"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "B. Verbruggen",
+      "position": "G",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "D. Dumfries",
+      "position": "D",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "V. van Dijk",
+      "position": "D",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "J. P. van Hecke",
+      "position": "D",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "M. van de Ven",
+      "position": "D",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "R. Gravenberch",
+      "position": "M",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "F. de Jong",
+      "position": "M",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "T. Reijnders",
+      "position": "M",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "D. Malen",
+      "position": "F",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "B. Brobbey",
+      "position": "F",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "C. Gakpo",
+      "position": "F",
+      "sub": false,
+      "team": "Netherlands"
+    },
+    {
+      "name": "K. Nordfeldt",
+      "position": "G",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "G. Lagerbielke",
+      "position": "D",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "I. Hien",
+      "position": "D",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "V. Lindelof",
+      "position": "D",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "J. Karlstrom",
+      "position": "M",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "A. Bernhardsson",
+      "position": "M",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "B. Nygren",
+      "position": "M",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "Y. Ayari",
+      "position": "M",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "G. Gudmundsson",
+      "position": "M",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "V. Gyökeres",
+      "position": "F",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "A. Isak",
+      "position": "F",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "M. Flekken",
+      "position": "G",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "R. Roefs",
+      "position": "G",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "J. Hato",
+      "position": "D",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "N. Ake",
+      "position": "D",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "L. Geertruida",
+      "position": "D",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "M. Wieffer",
+      "position": "M",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "G. Til",
+      "position": "M",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "J. Kluivert",
+      "position": "F",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "M. De Roon",
+      "position": "M",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "T. Koopmeiners",
+      "position": "M",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "C. Summerville",
+      "position": "F",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "M. Depay",
+      "position": "F",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "N. Lang",
+      "position": "F",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "W. Weghorst",
+      "position": "F",
+      "sub": true,
+      "team": "Netherlands"
+    },
+    {
+      "name": "J. Widell Zetterstrom",
+      "position": "G",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "V. Johansson",
+      "position": "G",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "C. Starfelt",
+      "position": "D",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "H. Ekdal",
+      "position": "D",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "E. Smith",
+      "position": "D",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "B. Zeneli",
+      "position": "M",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "D. Svensson",
+      "position": "D",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "E. Stroud",
+      "position": "M",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "H. Johansson",
+      "position": "M",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "K. Sema",
+      "position": "M",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "L. Bergvall",
+      "position": "M",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "M. Svanberg",
+      "position": "M",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "T. Ali",
+      "position": "M",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "A. Elanga",
+      "position": "F",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "G. Nilsson",
+      "position": "F",
+      "sub": true,
+      "team": "Sweden"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 7,
+    "shotsOnGoalAway": 8,
+    "shotsOffGoalHome": 2,
+    "shotsOffGoalAway": 5,
+    "totalShotsHome": 10,
+    "totalShotsAway": 16,
+    "blockedShotsHome": 1,
+    "blockedShotsAway": 3,
+    "cornerKicksHome": 2,
+    "cornerKicksAway": 5,
+    "foulsHome": 9,
+    "foulsAway": 12,
+    "yellowCardsHome": 0,
+    "yellowCardsAway": 3,
+    "ballPossessionHome": 51,
+    "ballPossessionAway": 49,
+    "offsidesHome": 3,
+    "offsidesAway": 3,
+    "goalkeeperSavesHome": 7,
+    "goalkeeperSavesAway": 2,
+    "totalPassesHome": 449,
+    "totalPassesAway": 425,
+    "passesAccurateHome": 398,
+    "passesAccurateAway": 361,
+    "crossesHome": 16,
+    "crossesAway": 21,
+    "interceptionsHome": 8,
+    "interceptionsAway": 5,
+    "duelsWonHome": 43,
+    "duelsWonAway": 47,
+    "freeKicksHome": 12,
+    "freeKicksAway": 9,
+    "expectedGoalsHome": 2.609999895095825,
+    "expectedGoalsAway": 1.0099999904632568,
+    "bigChancesHome": 3,
+    "bigChancesAway": 2
+  }
+}

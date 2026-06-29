@@ -1,0 +1,477 @@
+{
+  "id": 1489377,
+  "home": "Belgium",
+  "away": "Egypt",
+  "home_id": 1,
+  "away_id": 32,
+  "score": "1:1",
+  "score_h": 1,
+  "score_a": 1,
+  "date": "2026-06-15T22:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "Lumen Field",
+  "referee": "Ramon Abatti Abel, Brazil",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "yellow card",
+      "player": "M. Attia",
+      "minute": 13,
+      "team": "Egypt",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "T. Castagne",
+      "minute": 14,
+      "team": "Belgium",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "A. Fatouh",
+      "minute": 34,
+      "team": "Egypt",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "T. Castagne",
+      "minute": 56,
+      "team": "Belgium",
+      "assist": "M. De Cuyper"
+    },
+    {
+      "type": "substitution",
+      "player": "E. Ashour",
+      "minute": 71,
+      "team": "Egypt",
+      "assist": "R. Rabia"
+    },
+    {
+      "type": "yellow card",
+      "player": "M. De Cuyper",
+      "minute": 75,
+      "team": "Belgium",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "M. Ziko",
+      "minute": 76,
+      "team": "Egypt",
+      "assist": "Zizo"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Salah",
+      "minute": 76,
+      "team": "Egypt",
+      "assist": "H. Abdelkarim"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Doku",
+      "minute": 86,
+      "team": "Belgium",
+      "assist": "M. Fernandez-Pardo"
+    },
+    {
+      "type": "substitution",
+      "player": "K. De Bruyne",
+      "minute": 86,
+      "team": "Belgium",
+      "assist": "H. Vanaken"
+    },
+    {
+      "type": "substitution",
+      "player": "C. De Ketelaere",
+      "minute": 66,
+      "team": "Belgium",
+      "assist": "R. Lukaku"
+    },
+    {
+      "type": "goal",
+      "player": "M. Hany",
+      "minute": 66,
+      "team": "Belgium",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "A. Onana",
+      "minute": 56,
+      "team": "Belgium",
+      "assist": "N. Raskin"
+    },
+    {
+      "type": "goal",
+      "player": "E. Ashour",
+      "minute": 20,
+      "team": "Egypt",
+      "assist": "M. Salah"
+    },
+    {
+      "type": "substitution",
+      "player": "H. Fathy",
+      "minute": 88,
+      "team": "Egypt",
+      "assist": "I. Adel"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Fatouh",
+      "minute": 88,
+      "team": "Egypt",
+      "assist": "K. Hafez"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "A. Witsel",
+      "position": "M",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "B. Mechele",
+      "position": "D",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "H. Vanaken",
+      "position": "M",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "T. Meunier",
+      "position": "D",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "K. De Bruyne",
+      "position": "M",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "T. Courtois",
+      "position": "G",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "R. Lukaku",
+      "position": "F",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "A. Saelemaekers",
+      "position": "F",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "J. Doku",
+      "position": "M",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "L. Trossard",
+      "position": "M",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "N. Raskin",
+      "position": "M",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "T. Castagne",
+      "position": "D",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "Y. Tielemans",
+      "position": "M",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "D. Lukebakio",
+      "position": "F",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "C. De Ketelaere",
+      "position": "F",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "M. De Cuyper",
+      "position": "D",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "K. De Winter",
+      "position": "D",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "S. Lammens",
+      "position": "G",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "A. Onana",
+      "position": "M",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "A. Theate",
+      "position": "D",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "N. Ngoy",
+      "position": "D",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "D. Moreira",
+      "position": "F",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "M. Fernandez-Pardo",
+      "position": "F",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "M. Penders",
+      "position": "G",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "J. Seys",
+      "position": "D",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "M. Salah",
+      "position": "M",
+      "sub": false,
+      "team": "Egypt"
+    },
+    {
+      "name": "A. Fatouh",
+      "position": "D",
+      "sub": false,
+      "team": "Egypt"
+    },
+    {
+      "name": "M. Hany",
+      "position": "D",
+      "sub": false,
+      "team": "Egypt"
+    },
+    {
+      "name": "K. Hafez",
+      "position": "D",
+      "sub": true,
+      "team": "Egypt"
+    },
+    {
+      "name": "N. Dunga",
+      "position": "M",
+      "sub": true,
+      "team": "Egypt"
+    },
+    {
+      "name": "Trezeguet",
+      "position": "F",
+      "sub": true,
+      "team": "Egypt"
+    },
+    {
+      "name": "M. El Shenawy",
+      "position": "G",
+      "sub": true,
+      "team": "Egypt"
+    },
+    {
+      "name": "Y. Ibrahim",
+      "position": "D",
+      "sub": false,
+      "team": "Egypt"
+    },
+    {
+      "name": "R. Rabia",
+      "position": "D",
+      "sub": true,
+      "team": "Egypt"
+    },
+    {
+      "name": "H. Fathy",
+      "position": "D",
+      "sub": false,
+      "team": "Egypt"
+    },
+    {
+      "name": "E. M. Soliman",
+      "position": "G",
+      "sub": true,
+      "team": "Egypt"
+    },
+    {
+      "name": "M. Lasheen",
+      "position": "M",
+      "sub": false,
+      "team": "Egypt"
+    },
+    {
+      "name": "Zizo",
+      "position": "F",
+      "sub": true,
+      "team": "Egypt"
+    },
+    {
+      "name": "E. Ashour",
+      "position": "M",
+      "sub": false,
+      "team": "Egypt"
+    },
+    {
+      "name": "H. Hassan",
+      "position": "F",
+      "sub": true,
+      "team": "Egypt"
+    },
+    {
+      "name": "M. Saber",
+      "position": "M",
+      "sub": true,
+      "team": "Egypt"
+    },
+    {
+      "name": "I. Adel",
+      "position": "F",
+      "sub": true,
+      "team": "Egypt"
+    },
+    {
+      "name": "O. Marmoush",
+      "position": "F",
+      "sub": false,
+      "team": "Egypt"
+    },
+    {
+      "name": "M. Attia",
+      "position": "M",
+      "sub": false,
+      "team": "Egypt"
+    },
+    {
+      "name": "M. Abdelmonem",
+      "position": "D",
+      "sub": true,
+      "team": "Egypt"
+    },
+    {
+      "name": "O. Shobeir",
+      "position": "G",
+      "sub": false,
+      "team": "Egypt"
+    },
+    {
+      "name": "H. Abdelmaguid",
+      "position": "D",
+      "sub": true,
+      "team": "Egypt"
+    },
+    {
+      "name": "M. Ziko",
+      "position": "M",
+      "sub": false,
+      "team": "Egypt"
+    },
+    {
+      "name": "T. Alaa",
+      "position": "D",
+      "sub": true,
+      "team": "Egypt"
+    },
+    {
+      "name": "H. Abdelkarim",
+      "position": "F",
+      "sub": true,
+      "team": "Egypt"
+    },
+    {
+      "name": "M. Alaa",
+      "position": null,
+      "sub": true,
+      "team": "Egypt"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 3,
+    "shotsOnGoalAway": 3,
+    "shotsOffGoalHome": 7,
+    "shotsOffGoalAway": 3,
+    "totalShotsHome": 15,
+    "totalShotsAway": 14,
+    "blockedShotsHome": 5,
+    "blockedShotsAway": 8,
+    "cornerKicksHome": 2,
+    "cornerKicksAway": 7,
+    "foulsHome": 15,
+    "foulsAway": 15,
+    "yellowCardsHome": 2,
+    "yellowCardsAway": 2,
+    "ballPossessionHome": 54,
+    "ballPossessionAway": 46,
+    "offsidesHome": 0,
+    "offsidesAway": 1,
+    "goalkeeperSavesHome": 2,
+    "goalkeeperSavesAway": 3,
+    "totalPassesHome": 455,
+    "totalPassesAway": 398,
+    "passesAccurateHome": 391,
+    "passesAccurateAway": 323,
+    "crossesHome": 16,
+    "crossesAway": 13,
+    "interceptionsHome": 10,
+    "interceptionsAway": 16,
+    "duelsWonHome": 52,
+    "duelsWonAway": 57,
+    "freeKicksHome": 15,
+    "freeKicksAway": 15,
+    "expectedGoalsHome": 1.350000023841858,
+    "expectedGoalsAway": 1.0800000429153442,
+    "bigChancesHome": 2,
+    "bigChancesAway": 2
+  }
+}

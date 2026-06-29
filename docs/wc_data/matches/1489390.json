@@ -1,0 +1,455 @@
+{
+  "id": 1489390,
+  "home": "Scotland",
+  "away": "Morocco",
+  "home_id": 1108,
+  "away_id": 31,
+  "score": "0:1",
+  "score_h": 0,
+  "score_a": 1,
+  "date": "2026-06-20T01:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "Gillette Stadium",
+  "referee": "Ilgiz Tantashev, Uzbekistan",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "substitution",
+      "player": "K. Tierney",
+      "minute": 60,
+      "team": "Scotland",
+      "assist": "B. Gannon-Doak"
+    },
+    {
+      "type": "substitution",
+      "player": "I. Saibari",
+      "minute": 84,
+      "team": "Morocco",
+      "assist": "S. Rahimi"
+    },
+    {
+      "type": "substitution",
+      "player": "B. El Khannouss",
+      "minute": 84,
+      "team": "Morocco",
+      "assist": "C. Talbi"
+    },
+    {
+      "type": "substitution",
+      "player": "B. Diaz",
+      "minute": 84,
+      "team": "Morocco",
+      "assist": "A. Amaimouni"
+    },
+    {
+      "type": "substitution",
+      "player": "N. Patterson",
+      "minute": 89,
+      "team": "Scotland",
+      "assist": "A. Ralston"
+    },
+    {
+      "type": "substitution",
+      "player": "J. McGinn",
+      "minute": 89,
+      "team": "Scotland",
+      "assist": "R. Stewart"
+    },
+    {
+      "type": "goal",
+      "player": "I. Saibari",
+      "minute": 2,
+      "team": "Morocco",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "I. Diop",
+      "minute": 23,
+      "team": "Morocco",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "A. Robertson",
+      "minute": 65,
+      "team": "Scotland",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "C. Adams",
+      "minute": 71,
+      "team": "Scotland",
+      "assist": "L. Dykes"
+    },
+    {
+      "type": "substitution",
+      "player": "R. Christie",
+      "minute": 71,
+      "team": "Scotland",
+      "assist": "K. McLean"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Ounahi",
+      "minute": 90,
+      "team": "Morocco",
+      "assist": "S. El Mourabet"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "A. Gunn",
+      "position": "G",
+      "sub": false,
+      "team": "Scotland"
+    },
+    {
+      "name": "G. Hanley",
+      "position": "D",
+      "sub": false,
+      "team": "Scotland"
+    },
+    {
+      "name": "J. Hendry",
+      "position": "D",
+      "sub": false,
+      "team": "Scotland"
+    },
+    {
+      "name": "K. Tierney",
+      "position": "M",
+      "sub": false,
+      "team": "Scotland"
+    },
+    {
+      "name": "N. Patterson",
+      "position": "D",
+      "sub": false,
+      "team": "Scotland"
+    },
+    {
+      "name": "S. McTominay",
+      "position": "F",
+      "sub": false,
+      "team": "Scotland"
+    },
+    {
+      "name": "L. Ferguson",
+      "position": "M",
+      "sub": false,
+      "team": "Scotland"
+    },
+    {
+      "name": "A. Robertson",
+      "position": "D",
+      "sub": false,
+      "team": "Scotland"
+    },
+    {
+      "name": "J. McGinn",
+      "position": "M",
+      "sub": false,
+      "team": "Scotland"
+    },
+    {
+      "name": "R. Christie",
+      "position": "M",
+      "sub": false,
+      "team": "Scotland"
+    },
+    {
+      "name": "C. Adams",
+      "position": "F",
+      "sub": false,
+      "team": "Scotland"
+    },
+    {
+      "name": "Bono",
+      "position": "G",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "A. Hakimi",
+      "position": "D",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "I. Diop",
+      "position": "D",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "C. Riad",
+      "position": "D",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "N. Mazraoui",
+      "position": "D",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "N. El Aynaoui",
+      "position": "M",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "A. Bouaddi",
+      "position": "M",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "B. Diaz",
+      "position": "M",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "A. Ounahi",
+      "position": "M",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "B. El Khannouss",
+      "position": "M",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "I. Saibari",
+      "position": "F",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "L. Kelly",
+      "position": "G",
+      "sub": true,
+      "team": "Scotland"
+    },
+    {
+      "name": "C. Gordon",
+      "position": "G",
+      "sub": true,
+      "team": "Scotland"
+    },
+    {
+      "name": "A. Hickey",
+      "position": "D",
+      "sub": true,
+      "team": "Scotland"
+    },
+    {
+      "name": "J. Souttar",
+      "position": "D",
+      "sub": true,
+      "team": "Scotland"
+    },
+    {
+      "name": "D. Hyam",
+      "position": "D",
+      "sub": true,
+      "team": "Scotland"
+    },
+    {
+      "name": "A. Ralston",
+      "position": "D",
+      "sub": true,
+      "team": "Scotland"
+    },
+    {
+      "name": "S. McKenna",
+      "position": "D",
+      "sub": true,
+      "team": "Scotland"
+    },
+    {
+      "name": "T. Fletcher",
+      "position": "M",
+      "sub": true,
+      "team": "Scotland"
+    },
+    {
+      "name": "K. McLean",
+      "position": "M",
+      "sub": true,
+      "team": "Scotland"
+    },
+    {
+      "name": "B. Gannon-Doak",
+      "position": "F",
+      "sub": true,
+      "team": "Scotland"
+    },
+    {
+      "name": "F. Curtis",
+      "position": "F",
+      "sub": true,
+      "team": "Scotland"
+    },
+    {
+      "name": "L. Dykes",
+      "position": "F",
+      "sub": true,
+      "team": "Scotland"
+    },
+    {
+      "name": "R. Stewart",
+      "position": "F",
+      "sub": true,
+      "team": "Scotland"
+    },
+    {
+      "name": "G. Hirst",
+      "position": "F",
+      "sub": true,
+      "team": "Scotland"
+    },
+    {
+      "name": "L. Shankland",
+      "position": "F",
+      "sub": true,
+      "team": "Scotland"
+    },
+    {
+      "name": "A. Tagnaouti",
+      "position": "G",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "Munir",
+      "position": "G",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "A. Salah-Eddine",
+      "position": "D",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "M. Saadane",
+      "position": "D",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "R. Halhal",
+      "position": "D",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "Y. Belammari",
+      "position": "D",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "Z. El Ouahdi",
+      "position": "D",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "A. Sbai",
+      "position": "F",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "C. Talbi",
+      "position": "F",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "G. Yassine",
+      "position": "F",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "S. El Mourabet",
+      "position": "M",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "S. Amrabat",
+      "position": "M",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "A. El Kaabi",
+      "position": "F",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "A. Amaimouni",
+      "position": "F",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "S. Rahimi",
+      "position": "F",
+      "sub": true,
+      "team": "Morocco"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 0,
+    "shotsOnGoalAway": 2,
+    "shotsOffGoalHome": 3,
+    "shotsOffGoalAway": 6,
+    "totalShotsHome": 6,
+    "totalShotsAway": 12,
+    "blockedShotsHome": 3,
+    "blockedShotsAway": 4,
+    "cornerKicksHome": 2,
+    "cornerKicksAway": 5,
+    "foulsHome": 11,
+    "foulsAway": 8,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 1,
+    "ballPossessionHome": 41,
+    "ballPossessionAway": 59,
+    "offsidesHome": 1,
+    "offsidesAway": 0,
+    "goalkeeperSavesHome": 1,
+    "goalkeeperSavesAway": 0,
+    "totalPassesHome": 456,
+    "totalPassesAway": 670,
+    "passesAccurateHome": 388,
+    "passesAccurateAway": 600,
+    "crossesHome": 13,
+    "crossesAway": 10,
+    "interceptionsHome": 9,
+    "interceptionsAway": 5,
+    "duelsWonHome": 37,
+    "duelsWonAway": 33,
+    "freeKicksHome": 8,
+    "freeKicksAway": 11,
+    "expectedGoalsHome": 0.5099999904632568,
+    "expectedGoalsAway": 0.9900000095367432,
+    "bigChancesHome": 1,
+    "bigChancesAway": 3
+  }
+}

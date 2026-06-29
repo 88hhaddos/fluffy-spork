@@ -1,0 +1,436 @@
+{
+  "id": 1489407,
+  "home": "South Africa",
+  "away": "South Korea",
+  "home_id": 1531,
+  "away_id": 17,
+  "score": "1:0",
+  "score_h": 1,
+  "score_a": 0,
+  "date": "2026-06-25T04:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "Estadio BBVA",
+  "referee": "F. Tello",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "substitution",
+      "player": "Hwang Hee-Chan",
+      "minute": 46,
+      "team": "South Korea",
+      "assist": "Son Heung-Min"
+    },
+    {
+      "type": "substitution",
+      "player": "Paik Seung-Ho",
+      "minute": 46,
+      "team": "South Korea",
+      "assist": "Kim Jin-Gyu"
+    },
+    {
+      "type": "substitution",
+      "player": "Lee Tae-Seok",
+      "minute": 46,
+      "team": "South Korea",
+      "assist": "J. Castrop"
+    },
+    {
+      "type": "substitution",
+      "player": "O. Appollis",
+      "minute": 62,
+      "team": "South Africa",
+      "assist": "T. Moremi"
+    },
+    {
+      "type": "goal",
+      "player": "T. Maseko",
+      "minute": 63,
+      "team": "South Africa",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "R. Mofokeng",
+      "minute": 80,
+      "team": "South Africa",
+      "assist": "J. Adams"
+    },
+    {
+      "type": "substitution",
+      "player": "Kim Min-Jae",
+      "minute": 65,
+      "team": "South Korea",
+      "assist": "Park Jin-Seob"
+    },
+    {
+      "type": "yellow card",
+      "player": "A. Modiba",
+      "minute": 73,
+      "team": "South Africa",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "Oh Hyeon-Gyu",
+      "minute": 74,
+      "team": "South Korea",
+      "assist": "Cho Gue-Sung"
+    },
+    {
+      "type": "substitution",
+      "player": "T. Maseko",
+      "minute": 75,
+      "team": "South Africa",
+      "assist": "I. Rayners"
+    },
+    {
+      "type": "yellow card",
+      "player": "Cho Gue-Sung",
+      "minute": 79,
+      "team": "South Korea",
+      "assist": ""
+    }
+  ],
+  "lineups": [
+    {
+      "name": "Cho Wi-Je",
+      "position": null,
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "R. Williams",
+      "position": "G",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "K. Mudau",
+      "position": "D",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "I. Okon",
+      "position": "D",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "M. Mbokazi",
+      "position": "D",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "A. Modiba",
+      "position": "D",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "T. Mbatha",
+      "position": "M",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "Y. Sithole",
+      "position": "M",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "T. Maseko",
+      "position": "M",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "R. Mofokeng",
+      "position": "M",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "O. Appollis",
+      "position": "M",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "E. Makgopa",
+      "position": "F",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "Kim Seung-Gyu",
+      "position": "G",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Lee Han-Beom",
+      "position": "D",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Kim Min-Jae",
+      "position": "D",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Lee Gi-Hyuk",
+      "position": "D",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Seol Young-Woo",
+      "position": "M",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Paik Seung-Ho",
+      "position": "M",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Hwang In-Beom",
+      "position": "M",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Lee Tae-Seok",
+      "position": "M",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Lee Kang-In",
+      "position": "F",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Hwang Hee-Chan",
+      "position": "F",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Oh Hyeon-Gyu",
+      "position": "F",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "R. Goss",
+      "position": "G",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "S. Chaine",
+      "position": "G",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "B. Cross",
+      "position": "D",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "K. Ndamane",
+      "position": "D",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "N. Sibisi",
+      "position": "D",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "O. Makhanya",
+      "position": "D",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "S. Kabini",
+      "position": "D",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "T. Matuludi",
+      "position": "D",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "J. Adams",
+      "position": "M",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "K. Sebelebele",
+      "position": "M",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "T. Moremi",
+      "position": "F",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "I. Rayners",
+      "position": "F",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "L. Foster",
+      "position": "F",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "Jo Hyeon-Woo",
+      "position": "G",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Song Bum-Keun",
+      "position": "G",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Kim Moon-Hwan",
+      "position": "D",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Kim Tae-Hyeon",
+      "position": "D",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Lee Dong-Gyeong",
+      "position": "M",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Lee Jae-Sung",
+      "position": "M",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "J. Castrop",
+      "position": "M",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Eom Ji-Sung",
+      "position": "F",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Kim Jin-Gyu",
+      "position": "M",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Park Jin-Seob",
+      "position": "M",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Bae Jun-Ho",
+      "position": "M",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Cho Gue-Sung",
+      "position": "F",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Yang Hyun-Jun",
+      "position": "F",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Son Heung-Min",
+      "position": "F",
+      "sub": true,
+      "team": "South Korea"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 4,
+    "shotsOnGoalAway": 3,
+    "shotsOffGoalHome": 5,
+    "shotsOffGoalAway": 4,
+    "totalShotsHome": 13,
+    "totalShotsAway": 8,
+    "blockedShotsHome": 4,
+    "blockedShotsAway": 1,
+    "cornerKicksHome": 4,
+    "cornerKicksAway": 6,
+    "foulsHome": 7,
+    "foulsAway": 9,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 1,
+    "ballPossessionHome": 32,
+    "ballPossessionAway": 68,
+    "offsidesHome": 3,
+    "offsidesAway": 0,
+    "goalkeeperSavesHome": 2,
+    "goalkeeperSavesAway": 3,
+    "totalPassesHome": 339,
+    "totalPassesAway": 720,
+    "passesAccurateHome": 277,
+    "passesAccurateAway": 643,
+    "crossesHome": 8,
+    "crossesAway": 34,
+    "interceptionsHome": 15,
+    "interceptionsAway": 4,
+    "duelsWonHome": 42,
+    "duelsWonAway": 45,
+    "freeKicksHome": 9,
+    "freeKicksAway": 7,
+    "expectedGoalsHome": 1.100000023841858,
+    "expectedGoalsAway": 1,
+    "bigChancesHome": 1,
+    "bigChancesAway": 1
+  }
+}

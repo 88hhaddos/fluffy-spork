@@ -1,0 +1,457 @@
+{
+  "id": 1489413,
+  "home": "Cape Verde Islands",
+  "away": "Saudi Arabia",
+  "home_id": 1533,
+  "away_id": 23,
+  "score": "0:0",
+  "score_h": 0,
+  "score_a": 0,
+  "date": "2026-06-27T03:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "F. Letexier",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "substitution",
+      "player": "A. Al Khaibari",
+      "minute": 46,
+      "team": "Saudi Arabia",
+      "assist": "M. Al Juwayr"
+    },
+    {
+      "type": "substitution",
+      "player": "W. Semedo",
+      "minute": 61,
+      "team": "Cape Verde Islands",
+      "assist": "H. Varela"
+    },
+    {
+      "type": "substitution",
+      "player": "R. Mendes",
+      "minute": 71,
+      "team": "Cape Verde Islands",
+      "assist": "G. Rodrigues"
+    },
+    {
+      "type": "substitution",
+      "player": "S. Al Dawsari",
+      "minute": 66,
+      "team": "Saudi Arabia",
+      "assist": "M. Abu Al Shamat"
+    },
+    {
+      "type": "substitution",
+      "player": "S. Mandash",
+      "minute": 66,
+      "team": "Saudi Arabia",
+      "assist": "A. Al Hamdan"
+    },
+    {
+      "type": "yellow card",
+      "player": "N. Al Dawsari",
+      "minute": 67,
+      "team": "Saudi Arabia",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "J. Monteiro",
+      "minute": 71,
+      "team": "Cape Verde Islands",
+      "assist": "L. Duarte"
+    },
+    {
+      "type": "substitution",
+      "player": "N. Boushal",
+      "minute": 82,
+      "team": "Saudi Arabia",
+      "assist": "M. Al Harbi"
+    },
+    {
+      "type": "yellow card",
+      "player": "S. Abdulhamid",
+      "minute": 4,
+      "team": "Saudi Arabia",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "D. Livramento",
+      "minute": 61,
+      "team": "Cape Verde Islands",
+      "assist": "N. Da Costa"
+    },
+    {
+      "type": "yellow card",
+      "player": "F. Al Buraikan",
+      "minute": 90,
+      "team": "Saudi Arabia",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "W. Pina",
+      "minute": 90,
+      "team": "Cape Verde Islands",
+      "assist": "S. Moreira"
+    },
+    {
+      "type": "yellow card",
+      "player": "W. Pina",
+      "minute": 8,
+      "team": "Cape Verde Islands",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "H. Tambakti",
+      "minute": 33,
+      "team": "Saudi Arabia",
+      "assist": "A. Lajami"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "J. Thakri",
+      "position": null,
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "A. Hejji",
+      "position": null,
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "Vozinha",
+      "position": "G",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "W. Pina",
+      "position": "D",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "D. Borges",
+      "position": "D",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "R. Lopes",
+      "position": "D",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "Joao Paulo",
+      "position": "D",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "K. Lenini",
+      "position": "M",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "D. Duarte",
+      "position": "M",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "R. Mendes",
+      "position": "M",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "J. Monteiro",
+      "position": "M",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "W. Semedo",
+      "position": "M",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "D. Livramento",
+      "position": "F",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "M. Al Owais",
+      "position": "G",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "N. Boushal",
+      "position": "D",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "A. Al Amri",
+      "position": "D",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "H. Tambakti",
+      "position": "D",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "N. Al Dawsari",
+      "position": "M",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "S. Abdulhamid",
+      "position": "D",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "A. Al Khaibari",
+      "position": "M",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "M. Kanno",
+      "position": "F",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "S. Al Dawsari",
+      "position": "M",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "F. Al Buraikan",
+      "position": "F",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "S. Mandash",
+      "position": "M",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "M. Rosa",
+      "position": "G",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "dos Santos CJ",
+      "position": "G",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "Stopira",
+      "position": "D",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "L. Costa",
+      "position": "D",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "S. Moreira",
+      "position": "D",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "K. Pires",
+      "position": "D",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "G. Rodrigues",
+      "position": "F",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "L. Duarte",
+      "position": "M",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "Y. Semedo",
+      "position": "M",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "H. Varela",
+      "position": "F",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "J. Cabral",
+      "position": "F",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "N. Da Costa",
+      "position": "F",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "Benchimol",
+      "position": "F",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "N. Al Aqidi",
+      "position": "G",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "A. Al Kassar",
+      "position": "G",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "A. Majrashi",
+      "position": "D",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "M. Al Harbi",
+      "position": "D",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "H. Kadesh",
+      "position": "D",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "A. Lajami",
+      "position": "D",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "A. Yahya",
+      "position": "M",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "Z. Al Johani",
+      "position": "M",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "M. Abu Al Shamat",
+      "position": "M",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "M. Al Juwayr",
+      "position": "M",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "K. Al Ghannam",
+      "position": "F",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "A. Al Hamdan",
+      "position": "F",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "S. Al Shehri",
+      "position": "F",
+      "sub": true,
+      "team": "Saudi Arabia"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 2,
+    "shotsOnGoalAway": 3,
+    "shotsOffGoalHome": 8,
+    "shotsOffGoalAway": 1,
+    "totalShotsHome": 15,
+    "totalShotsAway": 7,
+    "blockedShotsHome": 5,
+    "blockedShotsAway": 3,
+    "cornerKicksHome": 4,
+    "cornerKicksAway": 2,
+    "foulsHome": 10,
+    "foulsAway": 16,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 3,
+    "ballPossessionHome": 51,
+    "ballPossessionAway": 49,
+    "offsidesHome": 2,
+    "offsidesAway": 0,
+    "goalkeeperSavesHome": 3,
+    "goalkeeperSavesAway": 2,
+    "totalPassesHome": 451,
+    "totalPassesAway": 442,
+    "passesAccurateHome": 385,
+    "passesAccurateAway": 356,
+    "crossesHome": 18,
+    "crossesAway": 11,
+    "interceptionsHome": 13,
+    "interceptionsAway": 11,
+    "duelsWonHome": 58,
+    "duelsWonAway": 56,
+    "freeKicksHome": 16,
+    "freeKicksAway": 10,
+    "expectedGoalsHome": 1.4600000381469727,
+    "expectedGoalsAway": 0.4000000059604645,
+    "bigChancesHome": 1,
+    "bigChancesAway": 1
+  }
+}

@@ -1,0 +1,497 @@
+{
+  "id": 1489404,
+  "home": "Portugal",
+  "away": "Uzbekistan",
+  "home_id": 27,
+  "away_id": 1568,
+  "score": "5:0",
+  "score_h": 5,
+  "score_a": 0,
+  "date": "2026-06-23T20:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Jalal Jayed, Morocco",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "yellow card",
+      "player": "R. Veiga",
+      "minute": 68,
+      "team": "Portugal",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": null,
+      "minute": 17,
+      "team": "Portugal",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "J. Cancelo",
+      "minute": 46,
+      "team": "Portugal",
+      "assist": "N. Semedo"
+    },
+    {
+      "type": "substitution",
+      "player": "P. Neto",
+      "minute": 46,
+      "team": "Portugal",
+      "assist": "F. Conceicao"
+    },
+    {
+      "type": "substitution",
+      "player": "S. Nasrullaev",
+      "minute": 46,
+      "team": "Uzbekistan",
+      "assist": "K. Alizhonov"
+    },
+    {
+      "type": "substitution",
+      "player": "O. Khamrobekov",
+      "minute": 46,
+      "team": "Uzbekistan",
+      "assist": "A. Mozgovoy"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Neves",
+      "minute": 76,
+      "team": "Portugal",
+      "assist": "B. Silva"
+    },
+    {
+      "type": "substitution",
+      "player": "Vitinha",
+      "minute": 83,
+      "team": "Portugal",
+      "assist": "R. Leao"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Fayzullaev",
+      "minute": 73,
+      "team": "Uzbekistan",
+      "assist": "I. Sergeev"
+    },
+    {
+      "type": "goal",
+      "player": "R. Leao",
+      "minute": 87,
+      "team": "Portugal",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "B. Karimov",
+      "minute": 90,
+      "team": "Uzbekistan",
+      "assist": "R. Jiyanov"
+    },
+    {
+      "type": "goal",
+      "player": "C. Ronaldo",
+      "minute": 6,
+      "team": "Portugal",
+      "assist": "J. Cancelo"
+    },
+    {
+      "type": "yellow card",
+      "player": "O. Khamrobekov",
+      "minute": 14,
+      "team": "Uzbekistan",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "C. Ronaldo",
+      "minute": 39,
+      "team": "Portugal",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "A. Khusanov",
+      "minute": 60,
+      "team": "Portugal",
+      "assist": ""
+    },
+    {
+      "type": "goal cancelled",
+      "player": "A. Ganiev",
+      "minute": 30,
+      "team": "Uzbekistan",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "B. Karimov",
+      "minute": 90,
+      "team": "Uzbekistan",
+      "assist": "R. Jiyanov"
+    },
+    {
+      "type": "substitution",
+      "player": "Joao Felix",
+      "minute": 63,
+      "team": "Portugal",
+      "assist": "Trincao"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "F. Sayfiev",
+      "position": null,
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "D. Costa",
+      "position": "G",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "J. Cancelo",
+      "position": "D",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "R. Dias",
+      "position": "D",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "R. Veiga",
+      "position": "D",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "N. Mendes",
+      "position": "D",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "J. Neves",
+      "position": "M",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "Vitinha",
+      "position": "M",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "P. Neto",
+      "position": "M",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "B. Fernandes",
+      "position": "M",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "Joao Felix",
+      "position": "M",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "C. Ronaldo",
+      "position": "F",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "A. Nematov",
+      "position": "G",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "A. Khusanov",
+      "position": "D",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "A. Abdullaev",
+      "position": "D",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "R. Ashurmatov",
+      "position": "D",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "B. Karimov",
+      "position": "M",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "O. Khamrobekov",
+      "position": "M",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "O. Shukurov",
+      "position": "M",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "S. Nasrullaev",
+      "position": "M",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "A. Fayzullaev",
+      "position": "F",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "A. Ganiev",
+      "position": "F",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "E. Shomurodov",
+      "position": "F",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "J. Sa",
+      "position": "G",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "R. Silva",
+      "position": "G",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "N. Semedo",
+      "position": "D",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "T. Araujo",
+      "position": "D",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "D. Dalot",
+      "position": "D",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "G. Inacio",
+      "position": "D",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "M. Nunes",
+      "position": "M",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "Samu Costa",
+      "position": "M",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "B. Silva",
+      "position": "M",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "R. Neves",
+      "position": "M",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "G. Guedes",
+      "position": "F",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "Trincao",
+      "position": "F",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "G. Ramos",
+      "position": "F",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "R. Leao",
+      "position": "F",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "F. Conceicao",
+      "position": "F",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "B. Ergashev",
+      "position": "G",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "U. Yusupov",
+      "position": "G",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "A. Ulmasaliev",
+      "position": "D",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "K. Alizhonov",
+      "position": "D",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "J. Urozov",
+      "position": "D",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "U. Eshmurodov",
+      "position": "D",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "A. Mozgovoy",
+      "position": "M",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "A. Amonov",
+      "position": "F",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "J. Iskanderov",
+      "position": "M",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "D. Khamdamov",
+      "position": "M",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "O. Urunov",
+      "position": "M",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "R. Jiyanov",
+      "position": "M",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "S. Esanov",
+      "position": "M",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "I. Sergeev",
+      "position": "F",
+      "sub": true,
+      "team": "Uzbekistan"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 9,
+    "shotsOnGoalAway": 2,
+    "shotsOffGoalHome": 5,
+    "shotsOffGoalAway": 2,
+    "totalShotsHome": 17,
+    "totalShotsAway": 7,
+    "blockedShotsHome": 3,
+    "blockedShotsAway": 3,
+    "cornerKicksHome": 3,
+    "cornerKicksAway": 2,
+    "foulsHome": 14,
+    "foulsAway": 15,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 1,
+    "ballPossessionHome": 66,
+    "ballPossessionAway": 34,
+    "offsidesHome": 2,
+    "offsidesAway": 2,
+    "goalkeeperSavesHome": 2,
+    "goalkeeperSavesAway": 4,
+    "totalPassesHome": 624,
+    "totalPassesAway": 327,
+    "passesAccurateHome": 561,
+    "passesAccurateAway": 262,
+    "crossesHome": 22,
+    "crossesAway": 8,
+    "interceptionsHome": 6,
+    "interceptionsAway": 14,
+    "duelsWonHome": 54,
+    "duelsWonAway": 45,
+    "freeKicksHome": 15,
+    "freeKicksAway": 14,
+    "expectedGoalsHome": 2.609999895095825,
+    "expectedGoalsAway": 0.23999999463558197,
+    "bigChancesHome": 7,
+    "bigChancesAway": 0
+  }
+}

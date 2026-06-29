@@ -1,0 +1,514 @@
+{
+  "id": 1539074,
+  "home": "Senegal",
+  "away": "Iraq",
+  "home_id": 13,
+  "away_id": 1567,
+  "score": "5:0",
+  "score_h": 5,
+  "score_a": 0,
+  "date": "2026-06-26T22:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "BMO Field",
+  "referee": "Anthony Taylor, England",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "goal",
+      "player": "A. Seck",
+      "minute": 4,
+      "team": "Senegal",
+      "assist": "L. Camara"
+    },
+    {
+      "type": "red card",
+      "player": "R. Sulaka",
+      "minute": 13,
+      "team": "Iraq",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "A. Qasem",
+      "minute": 16,
+      "team": "Iraq",
+      "assist": "M. Younis"
+    },
+    {
+      "type": "yellow card",
+      "player": "P. Gueye",
+      "minute": 81,
+      "team": "Senegal",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "I. Ndiaye",
+      "minute": 82,
+      "team": "Senegal",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "A. Al Hamadi",
+      "minute": 58,
+      "team": "Iraq",
+      "assist": "A. Yousif"
+    },
+    {
+      "type": "substitution",
+      "player": "L. Camara",
+      "minute": 57,
+      "team": "Senegal",
+      "assist": "N. Jackson"
+    },
+    {
+      "type": "goal",
+      "player": "P. Gueye",
+      "minute": 59,
+      "team": "Senegal",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "A. Basil",
+      "minute": 46,
+      "team": "Iraq",
+      "assist": "J. Hassan"
+    },
+    {
+      "type": "substitution",
+      "player": "H. Diarra",
+      "minute": 57,
+      "team": "Senegal",
+      "assist": "P. Gueye"
+    },
+    {
+      "type": "substitution",
+      "player": "I. Mbaye",
+      "minute": 57,
+      "team": "Senegal",
+      "assist": "I. Ndiaye"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Seck",
+      "minute": 58,
+      "team": "Senegal",
+      "assist": "P. Ciss"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Jasim",
+      "minute": 58,
+      "team": "Iraq",
+      "assist": "A. Maknzi"
+    },
+    {
+      "type": "substitution",
+      "player": "Z. Iqbal",
+      "minute": 67,
+      "team": "Iraq",
+      "assist": "K. Yakob"
+    },
+    {
+      "type": "substitution",
+      "player": "I. Sarr",
+      "minute": 81,
+      "team": "Senegal",
+      "assist": "A. Diao"
+    },
+    {
+      "type": "card upgrade",
+      "player": "R. Sulaka",
+      "minute": 13,
+      "team": "Iraq",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "A. Seck",
+      "minute": 17,
+      "team": "Senegal",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "A. Al Ammari",
+      "minute": 76,
+      "team": "Iraq",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "I. Sarr",
+      "minute": 56,
+      "team": "Senegal",
+      "assist": "L. Camara"
+    },
+    {
+      "type": "goal",
+      "player": "P. Gueye",
+      "minute": 71,
+      "team": "Senegal",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "M. Doski",
+      "minute": 90,
+      "team": "Iraq",
+      "assist": ""
+    }
+  ],
+  "lineups": [
+    {
+      "name": "M. Ali",
+      "position": null,
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "M. Diaw",
+      "position": "G",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "K. Diatta",
+      "position": "D",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "A. Seck",
+      "position": "D",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "M. Niakhate",
+      "position": "D",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "I. Jakobs",
+      "position": "D",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "I. Gueye",
+      "position": "M",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "H. Diarra",
+      "position": "M",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "I. Mbaye",
+      "position": "F",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "L. Camara",
+      "position": "M",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "S. Mane",
+      "position": "F",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "I. Sarr",
+      "position": "F",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "A. Basil",
+      "position": "G",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "F. Putros",
+      "position": "D",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "A. Hashem",
+      "position": "D",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "R. Sulaka",
+      "position": "D",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "M. Doski",
+      "position": "D",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "A. Al Ammari",
+      "position": "M",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "A. Jasim",
+      "position": "M",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "I. Bayesh",
+      "position": "M",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "Z. Iqbal",
+      "position": "M",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "A. Qasem",
+      "position": "M",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "A. Al Hamadi",
+      "position": "F",
+      "sub": false,
+      "team": "Iraq"
+    },
+    {
+      "name": "Y. Diouf",
+      "position": "G",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "M. Sarr",
+      "position": "D",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "K. Koulibaly",
+      "position": "D",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "A. Mendy",
+      "position": "D",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "M. Diouf",
+      "position": "D",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "P. Ciss",
+      "position": "M",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "P. M. Sarr",
+      "position": "M",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "B. Sapoko Ndiaye",
+      "position": "M",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "P. Gueye",
+      "position": "M",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "I. Ndiaye",
+      "position": "F",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "A. Diao",
+      "position": "F",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "B. Dieng",
+      "position": "F",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "N. Jackson",
+      "position": "F",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "C. Ndiaye",
+      "position": "F",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "F. Talib",
+      "position": "G",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "J. Hassan",
+      "position": "G",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "M. Younis",
+      "position": "D",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "H. Ali",
+      "position": "D",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "Z. Tahseen",
+      "position": "D",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "A. Maknzi",
+      "position": "D",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "M. Saadoon",
+      "position": "D",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "Y. Amyn",
+      "position": "F",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "K. Yakob",
+      "position": "M",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "A. Sher",
+      "position": "M",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "Z. Ismaeel",
+      "position": "M",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "M. Farji",
+      "position": "M",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "A. Yousif",
+      "position": "F",
+      "sub": true,
+      "team": "Iraq"
+    },
+    {
+      "name": "A. Hussein",
+      "position": "F",
+      "sub": true,
+      "team": "Iraq"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 12,
+    "shotsOnGoalAway": 1,
+    "shotsOffGoalHome": 11,
+    "shotsOffGoalAway": 1,
+    "totalShotsHome": 28,
+    "totalShotsAway": 6,
+    "blockedShotsHome": 5,
+    "blockedShotsAway": 4,
+    "cornerKicksHome": 12,
+    "cornerKicksAway": 3,
+    "foulsHome": 10,
+    "foulsAway": 11,
+    "yellowCardsHome": 2,
+    "yellowCardsAway": 2,
+    "redCardsHome": 0,
+    "redCardsAway": 1,
+    "ballPossessionHome": 69,
+    "ballPossessionAway": 31,
+    "offsidesHome": 1,
+    "offsidesAway": 0,
+    "goalkeeperSavesHome": 1,
+    "goalkeeperSavesAway": 7,
+    "totalPassesHome": 590,
+    "totalPassesAway": 265,
+    "passesAccurateHome": 518,
+    "passesAccurateAway": 184,
+    "crossesHome": 25,
+    "crossesAway": 6,
+    "interceptionsHome": 2,
+    "interceptionsAway": 7,
+    "duelsWonHome": 49,
+    "duelsWonAway": 49,
+    "freeKicksHome": 11,
+    "freeKicksAway": 10,
+    "expectedGoalsHome": 3.0999999046325684,
+    "expectedGoalsAway": 0.18000000715255737,
+    "bigChancesHome": 5,
+    "bigChancesAway": 0
+  }
+}

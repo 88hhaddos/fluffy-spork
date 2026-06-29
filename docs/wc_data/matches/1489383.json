@@ -1,0 +1,453 @@
+{
+  "id": 1489383,
+  "home": "France",
+  "away": "Senegal",
+  "home_id": 2,
+  "away_id": 13,
+  "score": "3:1",
+  "score_h": 3,
+  "score_a": 1,
+  "date": "2026-06-16T22:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Alireza Faghani, Australia",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "goal",
+      "player": "K. Mbappe",
+      "minute": 66,
+      "team": "France",
+      "assist": "M. Olise"
+    },
+    {
+      "type": "substitution",
+      "player": "N. Jackson",
+      "minute": 83,
+      "team": "Senegal",
+      "assist": "B. Dieng"
+    },
+    {
+      "type": "substitution",
+      "player": "I. Gueye",
+      "minute": 83,
+      "team": "Senegal",
+      "assist": "C. Ndiaye"
+    },
+    {
+      "type": "substitution",
+      "player": "I. Gueye",
+      "minute": 88,
+      "team": "Senegal",
+      "assist": "P. Ciss"
+    },
+    {
+      "type": "substitution",
+      "player": "D. Doue",
+      "minute": 87,
+      "team": "France",
+      "assist": "R. Cherki"
+    },
+    {
+      "type": "penalty cancelled",
+      "player": "K. Mbappe",
+      "minute": 60,
+      "team": "France",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "I. Mbaye",
+      "minute": 90,
+      "team": "Senegal",
+      "assist": "I. Ndiaye"
+    },
+    {
+      "type": "goal",
+      "player": "K. Mbappe",
+      "minute": 90,
+      "team": "France",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "I. Sarr",
+      "minute": 75,
+      "team": "Senegal",
+      "assist": "I. Mbaye"
+    },
+    {
+      "type": "substitution",
+      "player": "L. Camara",
+      "minute": 76,
+      "team": "Senegal",
+      "assist": "H. Diarra"
+    },
+    {
+      "type": "substitution",
+      "player": "O. Dembele",
+      "minute": 80,
+      "team": "France",
+      "assist": "L. Hernandez"
+    },
+    {
+      "type": "goal",
+      "player": "B. Barcola",
+      "minute": 82,
+      "team": "France",
+      "assist": "A. Rabiot"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "L. Hernandez",
+      "position": "D",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "O. Dembele",
+      "position": "M",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "A. Rabiot",
+      "position": "M",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "K. Mbappe",
+      "position": "F",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "I. Konate",
+      "position": "D",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "D. Upamecano",
+      "position": "D",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "J. Kounde",
+      "position": "D",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "A. Tchouameni",
+      "position": "M",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "N. Kante",
+      "position": "M",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "L. Digne",
+      "position": "D",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "M. Olise",
+      "position": "M",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "M. Lacroix",
+      "position": "D",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "M. Thuram",
+      "position": "F",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "B. Samba",
+      "position": "G",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "W. Saliba",
+      "position": "D",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "M. Kone",
+      "position": "M",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "M. Maignan",
+      "position": "G",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "J. Mateta",
+      "position": "F",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "T. Hernandez",
+      "position": "D",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "R. Cherki",
+      "position": "M",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "B. Barcola",
+      "position": "F",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "M. Gusto",
+      "position": "D",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "M. Akliouche",
+      "position": "M",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "W. Zaire-Emery",
+      "position": "M",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "D. Doue",
+      "position": "M",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "R. Risser",
+      "position": "G",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "K. Diatta",
+      "position": "D",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "S. Mane",
+      "position": "M",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "K. Koulibaly",
+      "position": "D",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "I. Sarr",
+      "position": "M",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "E. Mendy",
+      "position": "G",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "I. Gueye",
+      "position": "M",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "A. Seck",
+      "position": "D",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "C. Ndiaye",
+      "position": "F",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "I. Ndiaye",
+      "position": "F",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "Y. Diouf",
+      "position": "G",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "P. Gueye",
+      "position": "M",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "M. Niakhate",
+      "position": "D",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "P. Ciss",
+      "position": "M",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "M. Diaw",
+      "position": "G",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "I. Jakobs",
+      "position": "D",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "P. M. Sarr",
+      "position": "M",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "M. Sarr",
+      "position": "D",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "N. Jackson",
+      "position": "F",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "B. Dieng",
+      "position": "F",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "A. Mendy",
+      "position": "D",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "H. Diarra",
+      "position": "M",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "L. Camara",
+      "position": "M",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "A. Diao",
+      "position": "F",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "M. Diouf",
+      "position": "D",
+      "sub": false,
+      "team": "Senegal"
+    },
+    {
+      "name": "I. Mbaye",
+      "position": "F",
+      "sub": true,
+      "team": "Senegal"
+    },
+    {
+      "name": "B. Sapoko Ndiaye",
+      "position": "M",
+      "sub": true,
+      "team": "Senegal"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 8,
+    "shotsOnGoalAway": 2,
+    "shotsOffGoalHome": 1,
+    "shotsOffGoalAway": 3,
+    "totalShotsHome": 11,
+    "totalShotsAway": 6,
+    "blockedShotsHome": 2,
+    "blockedShotsAway": 1,
+    "cornerKicksHome": 6,
+    "cornerKicksAway": 4,
+    "foulsHome": 5,
+    "foulsAway": 9,
+    "ballPossessionHome": 53,
+    "ballPossessionAway": 47,
+    "offsidesHome": 1,
+    "offsidesAway": 3,
+    "goalkeeperSavesHome": 2,
+    "goalkeeperSavesAway": 5,
+    "totalPassesHome": 575,
+    "totalPassesAway": 502,
+    "passesAccurateHome": 505,
+    "passesAccurateAway": 430,
+    "crossesHome": 9,
+    "crossesAway": 9,
+    "interceptionsHome": 7,
+    "interceptionsAway": 8,
+    "duelsWonHome": 43,
+    "duelsWonAway": 35,
+    "freeKicksHome": 9,
+    "freeKicksAway": 5,
+    "expectedGoalsHome": 1.7899999618530273,
+    "expectedGoalsAway": 0.5299999713897705,
+    "bigChancesHome": 4,
+    "bigChancesAway": 2
+  }
+}

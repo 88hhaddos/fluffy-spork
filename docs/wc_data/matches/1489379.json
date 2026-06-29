@@ -1,0 +1,450 @@
+{
+  "id": 1489379,
+  "home": "Saudi Arabia",
+  "away": "Uruguay",
+  "home_id": 23,
+  "away_id": 7,
+  "score": "1:1",
+  "score_h": 1,
+  "score_a": 1,
+  "date": "2026-06-16T01:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Maurizio Mariani, Italy",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "substitution",
+      "player": "M. Vina",
+      "minute": 46,
+      "team": "Uruguay",
+      "assist": "J. Sanabria"
+    },
+    {
+      "type": "substitution",
+      "player": "D. Nunez",
+      "minute": 46,
+      "team": "Uruguay",
+      "assist": "A. Canobbio"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Ugarte",
+      "minute": 72,
+      "team": "Uruguay",
+      "assist": "N. de la Cruz"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Araujo",
+      "minute": 81,
+      "team": "Uruguay",
+      "assist": "B. Rodriguez"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Abu Al Shamat",
+      "minute": 81,
+      "team": "Saudi Arabia",
+      "assist": "N. Boushal"
+    },
+    {
+      "type": "substitution",
+      "player": "F. Vinas",
+      "minute": 90,
+      "team": "Uruguay",
+      "assist": "R. Aguirre"
+    },
+    {
+      "type": "substitution",
+      "player": "F. Al Buraikan",
+      "minute": 90,
+      "team": "Saudi Arabia",
+      "assist": "A. Hejji"
+    },
+    {
+      "type": "goal",
+      "player": null,
+      "minute": 80,
+      "team": "Uruguay",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "A. Al Amri",
+      "minute": 41,
+      "team": "Saudi Arabia",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "A. Al Amri",
+      "minute": 44,
+      "team": "Saudi Arabia",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "M. Al Harbi",
+      "minute": 90,
+      "team": "Saudi Arabia",
+      "assist": "A. Al Hamdan"
+    },
+    {
+      "type": "substitution",
+      "player": "S. Abdulhamid",
+      "minute": 90,
+      "team": "Saudi Arabia",
+      "assist": "A. Lajami"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Al Juwayr",
+      "minute": 63,
+      "team": "Saudi Arabia",
+      "assist": "N. Al Dawsari"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "A. Hejji",
+      "position": null,
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "J. Gimenez",
+      "position": "D",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "F. Muslera",
+      "position": "G",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "F. Valverde",
+      "position": "M",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "R. Bentancur",
+      "position": "M",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "G. Varela",
+      "position": "D",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "N. de la Cruz",
+      "position": "M",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "R. Aguirre",
+      "position": "F",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "M. Olivera",
+      "position": "D",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "S. Rochet",
+      "position": "G",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "J. Piquerez",
+      "position": "D",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "M. Ugarte",
+      "position": "M",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "F. Vinas",
+      "position": "M",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "S. Caceres",
+      "position": "D",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "M. Vina",
+      "position": "D",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "A. Canobbio",
+      "position": "F",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "B. Rodriguez",
+      "position": "F",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "M. Araujo",
+      "position": "M",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "S. Mele",
+      "position": "G",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "F. Pellistri",
+      "position": "M",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "R. Zalazar",
+      "position": "M",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "S. Bueno",
+      "position": "D",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "E. Martinez",
+      "position": "M",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "J. Sanabria",
+      "position": "M",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "S. Mandash",
+      "position": "F",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "A. Al Khaibari",
+      "position": "M",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "F. Al Buraikan",
+      "position": "F",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "H. Kadesh",
+      "position": "D",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "N. Al Dawsari",
+      "position": "M",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "S. Al Dawsari",
+      "position": "M",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "M. Kanno",
+      "position": "M",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "H. Tambakti",
+      "position": "D",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "A. Majrashi",
+      "position": "D",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "A. Al Hamdan",
+      "position": "F",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "M. Al Owais",
+      "position": "G",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "A. Al Kassar",
+      "position": "G",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "A. Al Amri",
+      "position": "D",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "A. Lajami",
+      "position": "D",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "S. Al Shehri",
+      "position": "F",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "S. Abdulhamid",
+      "position": "D",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "K. Al Ghannam",
+      "position": "F",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "N. Boushal",
+      "position": "D",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "A. Yahya",
+      "position": "M",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "N. Al Aqidi",
+      "position": "G",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "M. Al Harbi",
+      "position": "D",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "Z. Al Johani",
+      "position": "M",
+      "sub": true,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "M. Al Juwayr",
+      "position": "F",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "M. Abu Al Shamat",
+      "position": "M",
+      "sub": false,
+      "team": "Saudi Arabia"
+    },
+    {
+      "name": "D. Nunez",
+      "position": "F",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "J. Thakri",
+      "position": null,
+      "sub": true,
+      "team": "Saudi Arabia"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 3,
+    "shotsOnGoalAway": 10,
+    "shotsOffGoalHome": 3,
+    "shotsOffGoalAway": 10,
+    "totalShotsHome": 7,
+    "totalShotsAway": 27,
+    "blockedShotsHome": 1,
+    "blockedShotsAway": 7,
+    "cornerKicksHome": 4,
+    "cornerKicksAway": 14,
+    "foulsHome": 11,
+    "foulsAway": 6,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 0,
+    "ballPossessionHome": 33,
+    "ballPossessionAway": 67,
+    "offsidesHome": 0,
+    "offsidesAway": 6,
+    "goalkeeperSavesHome": 9,
+    "goalkeeperSavesAway": 2,
+    "totalPassesHome": 322,
+    "totalPassesAway": 612,
+    "passesAccurateHome": 236,
+    "passesAccurateAway": 540,
+    "crossesHome": 6,
+    "crossesAway": 47,
+    "interceptionsHome": 9,
+    "interceptionsAway": 10,
+    "duelsWonHome": 41,
+    "duelsWonAway": 42,
+    "freeKicksHome": 6,
+    "freeKicksAway": 11,
+    "expectedGoalsHome": 0.6600000262260437,
+    "expectedGoalsAway": 1.7200000286102295,
+    "bigChancesHome": 1,
+    "bigChancesAway": 2
+  }
+}

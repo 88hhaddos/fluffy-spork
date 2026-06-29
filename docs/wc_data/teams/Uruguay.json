@@ -1,0 +1,175 @@
+{
+  "name": "Uruguay",
+  "matches": [
+    {
+      "opponent": "Saudi Arabia",
+      "score": "1:1",
+      "date": "2026-06-16",
+      "stage": "",
+      "home": false,
+      "result": "draw"
+    },
+    {
+      "opponent": "Cape Verde Islands",
+      "score": "2:2",
+      "date": "2026-06-22",
+      "stage": "",
+      "home": true,
+      "result": "draw"
+    },
+    {
+      "opponent": "Spain",
+      "score": "0:1",
+      "date": "2026-06-27",
+      "stage": "",
+      "home": true,
+      "result": "loss"
+    }
+  ],
+  "wins": 0,
+  "draws": 2,
+  "losses": 1,
+  "scored": 3,
+  "conceded": 4,
+  "players": {
+    "J. Gimenez": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "F. Muslera": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "F. Valverde": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "R. Bentancur": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "G. Varela": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "N. de la Cruz": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3,
+      "yellow": 1
+    },
+    "R. Aguirre": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Olivera": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "S. Rochet": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "J. Piquerez": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Ugarte": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "F. Vinas": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "S. Caceres": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "M. Vina": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "A. Canobbio": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1,
+      "goals": 1,
+      "red": 1
+    },
+    "B. Rodriguez": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Araujo": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "goals": 1,
+      "assists": 1
+    },
+    "S. Mele": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "F. Pellistri": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "R. Zalazar": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "S. Bueno": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "E. Martinez": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "J. Sanabria": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1
+    },
+    "D. Nunez": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1
+    },
+    "R. Araujo": {
+      "position": "D",
+      "matches": 1,
+      "subs": 1
+    },
+    "G. de Arrascaeta": {
+      "position": "M",
+      "matches": 1,
+      "subs": 1
+    }
+  }
+}

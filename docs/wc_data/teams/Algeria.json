@@ -1,0 +1,172 @@
+{
+  "name": "Algeria",
+  "matches": [
+    {
+      "opponent": "Argentina",
+      "score": "3:0",
+      "date": "2026-06-17",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    },
+    {
+      "opponent": "Jordan",
+      "score": "1:2",
+      "date": "2026-06-23",
+      "stage": "",
+      "home": false,
+      "result": "win"
+    },
+    {
+      "opponent": "Austria",
+      "score": "3:3",
+      "date": "2026-06-28",
+      "stage": "",
+      "home": true,
+      "result": "draw"
+    }
+  ],
+  "wins": 1,
+  "draws": 1,
+  "losses": 1,
+  "scored": 5,
+  "conceded": 7,
+  "players": {
+    "L. Zidane": {
+      "position": "G",
+      "matches": 3,
+      "subs": 1
+    },
+    "R. Belghali": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "goals": 1
+    },
+    "A. Mandi": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "R. Bensebaini": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "R. Ait-Nouri": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "H. Boudaoui": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "N. Bentaleb": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "I. Maza": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "A. Hadj Moussa": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2
+    },
+    "A. Gouiri": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0,
+      "goals": 1
+    },
+    "F. Chaibi": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0
+    },
+    "F. Ghedjemis": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Abada": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "Y. Titraoui": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Mastil": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Amoura": {
+      "position": "F",
+      "matches": 1,
+      "subs": 1
+    },
+    "N. Benbouali": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3,
+      "goals": 1
+    },
+    "Z. Belaid": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "J. Hadjam": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "M. Tougai": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "O. Benbot": {
+      "position": "G",
+      "matches": 3,
+      "subs": 2
+    },
+    "R. Zerrouki": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2,
+      "yellow": 1
+    },
+    "S. Chergui": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "H. Aouar": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2,
+      "assists": 1
+    },
+    "R. Mahrez": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1,
+      "goals": 2
+    },
+    "A. Boulbina": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    }
+  }
+}

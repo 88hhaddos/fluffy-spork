@@ -1,0 +1,186 @@
+{
+  "name": "Japan",
+  "matches": [
+    {
+      "opponent": "Netherlands",
+      "score": "2:2",
+      "date": "2026-06-14",
+      "stage": "",
+      "home": false,
+      "result": "draw"
+    },
+    {
+      "opponent": "Tunisia",
+      "score": "0:4",
+      "date": "2026-06-21",
+      "stage": "",
+      "home": false,
+      "result": "win"
+    },
+    {
+      "opponent": "Sweden",
+      "score": "1:1",
+      "date": "2026-06-26",
+      "stage": "",
+      "home": true,
+      "result": "draw"
+    },
+    {
+      "opponent": "Brazil",
+      "score": "2:1",
+      "date": "2026-06-29",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    }
+  ],
+  "wins": 1,
+  "draws": 2,
+  "losses": 1,
+  "scored": 8,
+  "conceded": 5,
+  "players": {
+    "Zion Suzuki": {
+      "position": "G",
+      "matches": 4,
+      "subs": 0
+    },
+    "Tsuyoshi Watanabe": {
+      "position": "D",
+      "matches": 4,
+      "subs": 3
+    },
+    "Shogo Taniguchi": {
+      "position": "D",
+      "matches": 4,
+      "subs": 2,
+      "yellow": 1
+    },
+    "Hiroki Itō": {
+      "position": "D",
+      "matches": 4,
+      "subs": 0
+    },
+    "Ritsu Doan": {
+      "position": "M",
+      "matches": 4,
+      "subs": 0
+    },
+    "Kaishu Sano": {
+      "position": "M",
+      "matches": 4,
+      "subs": 1,
+      "assists": 1,
+      "yellow": 1,
+      "goals": 1
+    },
+    "Daichi Kamada": {
+      "position": "M",
+      "matches": 4,
+      "subs": 0,
+      "goals": 2,
+      "yellow": 1
+    },
+    "Keito Nakamura": {
+      "position": "M",
+      "matches": 4,
+      "subs": 0,
+      "goals": 1,
+      "assists": 1
+    },
+    "Takefusa Kubo": {
+      "position": "F",
+      "matches": 2,
+      "subs": 1
+    },
+    "Daizen Maeda": {
+      "position": "F",
+      "matches": 4,
+      "subs": 1,
+      "goals": 1
+    },
+    "Ayase Ueda": {
+      "position": "F",
+      "matches": 4,
+      "subs": 0,
+      "goals": 2
+    },
+    "Keisuke Osako": {
+      "position": "G",
+      "matches": 4,
+      "subs": 4
+    },
+    "Tomoki Hayakawa": {
+      "position": "G",
+      "matches": 4,
+      "subs": 4
+    },
+    "Ayumu Seko": {
+      "position": "D",
+      "matches": 4,
+      "subs": 3
+    },
+    "Ko Itakura": {
+      "position": "D",
+      "matches": 4,
+      "subs": 2
+    },
+    "Junnosuke Suzuki": {
+      "position": "D",
+      "matches": 4,
+      "subs": 4,
+      "yellow": 1
+    },
+    "Yukinari Sugawara": {
+      "position": "D",
+      "matches": 4,
+      "subs": 3
+    },
+    "Takehiro Tomiyasu": {
+      "position": "D",
+      "matches": 4,
+      "subs": 2
+    },
+    "Yuto Nagatomo": {
+      "position": "D",
+      "matches": 4,
+      "subs": 4
+    },
+    "Ao Tanaka": {
+      "position": "M",
+      "matches": 4,
+      "subs": 2
+    },
+    "Yuito Suzuki": {
+      "position": "M",
+      "matches": 4,
+      "subs": 4
+    },
+    "Junya Ito": {
+      "position": "F",
+      "matches": 4,
+      "subs": 2
+    },
+    "Keisuke Goto": {
+      "position": "F",
+      "matches": 4,
+      "subs": 4
+    },
+    "Koki Ogawa": {
+      "position": "F",
+      "matches": 4,
+      "subs": 4,
+      "assists": 1
+    },
+    "Kento Shiogai": {
+      "position": "F",
+      "matches": 4,
+      "subs": 4
+    },
+    "Shuto Machino": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    }
+  }
+}

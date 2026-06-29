@@ -1,0 +1,476 @@
+{
+  "id": 1489420,
+  "home": "Croatia",
+  "away": "Ghana",
+  "home_id": 3,
+  "away_id": 1504,
+  "score": "2:1",
+  "score_h": 2,
+  "score_a": 1,
+  "date": "2026-06-28T00:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Drew Fischer, Canada",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "goal",
+      "player": "P. Sucic",
+      "minute": 31,
+      "team": "Croatia",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "I. Perisic",
+      "minute": 68,
+      "team": "Croatia",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "D. Luckassen",
+      "minute": 73,
+      "team": "Ghana",
+      "assist": "E. Nuamah"
+    },
+    {
+      "type": "goal",
+      "player": "N. Vlasic",
+      "minute": 83,
+      "team": "Croatia",
+      "assist": "L. Modric"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Adjetey",
+      "minute": 46,
+      "team": "Ghana",
+      "assist": "K. Peprah"
+    },
+    {
+      "type": "substitution",
+      "player": "E. Owusu",
+      "minute": 46,
+      "team": "Ghana",
+      "assist": "I. Fatawu"
+    },
+    {
+      "type": "yellow card",
+      "player": "K. Peprah",
+      "minute": 90,
+      "team": "Ghana",
+      "assist": ""
+    },
+    {
+      "type": "goal confirmed",
+      "player": "D. Luckassen",
+      "minute": 76,
+      "team": "Ghana",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "K. Sulemana",
+      "minute": 71,
+      "team": "Ghana",
+      "assist": "E. Nuamah"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Kovacic",
+      "minute": 78,
+      "team": "Croatia",
+      "assist": "M. Pasalic"
+    },
+    {
+      "type": "substitution",
+      "player": "K. Sibo",
+      "minute": 85,
+      "team": "Ghana",
+      "assist": "C. Yirenkyi"
+    },
+    {
+      "type": "substitution",
+      "player": "N. Vlasic",
+      "minute": 88,
+      "team": "Croatia",
+      "assist": "J. Gvardiol"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Baturina",
+      "minute": 88,
+      "team": "Croatia",
+      "assist": "M. Pasalic"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Budimir",
+      "minute": 66,
+      "team": "Croatia",
+      "assist": "I. Matanovic"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Ayew",
+      "minute": 71,
+      "team": "Ghana",
+      "assist": "B. Thomas-Asante"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "B. Asare",
+      "position": null,
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "D. Livakovic",
+      "position": "G",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "J. Stanisic",
+      "position": "D",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "J. Sutalo",
+      "position": "D",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "M. Pongracic",
+      "position": "D",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "I. Perisic",
+      "position": "D",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "L. Modric",
+      "position": "M",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "M. Kovacic",
+      "position": "M",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "N. Vlasic",
+      "position": "M",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "P. Sucic",
+      "position": "M",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "M. Baturina",
+      "position": "M",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "A. Budimir",
+      "position": "F",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "M. Senaya",
+      "position": "D",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "J. Adjetey",
+      "position": "D",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "D. Luckassen",
+      "position": "D",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "G. Mensah",
+      "position": "D",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "T. Partey",
+      "position": "M",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "E. Owusu",
+      "position": "M",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "K. Sibo",
+      "position": "M",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "K. Sulemana",
+      "position": "M",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "J. Ayew",
+      "position": "F",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "A. Semenyo",
+      "position": "M",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "D. Kotarski",
+      "position": "G",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "I. Pandur",
+      "position": "G",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "D. Caleta-Car",
+      "position": "D",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "J. Gvardiol",
+      "position": "D",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "L. Vuskovic",
+      "position": "D",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "M. Erlic",
+      "position": "D",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "K. Jakic",
+      "position": "M",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "L. Sucic",
+      "position": "M",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "M. Pasalic",
+      "position": "F",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "M. Pasalic",
+      "position": "M",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "N. Moro",
+      "position": "M",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "T. Fruk",
+      "position": "M",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "A. Kramaric",
+      "position": "F",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "I. Matanovic",
+      "position": "F",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "P. Musa",
+      "position": "F",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "L. Ati Zigi",
+      "position": "G",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "J. Anang",
+      "position": "G",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "A. Seidu",
+      "position": "D",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "A. Mumin",
+      "position": "D",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "A. Baba",
+      "position": "D",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "J. Opoku",
+      "position": "D",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "K. Peprah",
+      "position": "D",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "C. Yirenkyi",
+      "position": "M",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "I. Fatawu",
+      "position": "F",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "C. Bonsu Baah",
+      "position": "F",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "I. Williams",
+      "position": "F",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "A. Boakye",
+      "position": "M",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "B. Thomas-Asante",
+      "position": "F",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "E. Nuamah",
+      "position": "F",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "P. Adu",
+      "position": "F",
+      "sub": true,
+      "team": "Ghana"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 4,
+    "shotsOnGoalAway": 1,
+    "shotsOffGoalHome": 2,
+    "shotsOffGoalAway": 3,
+    "totalShotsHome": 8,
+    "totalShotsAway": 6,
+    "blockedShotsHome": 2,
+    "blockedShotsAway": 2,
+    "cornerKicksHome": 3,
+    "cornerKicksAway": 2,
+    "foulsHome": 9,
+    "foulsAway": 13,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 1,
+    "ballPossessionHome": 53,
+    "ballPossessionAway": 47,
+    "offsidesHome": 1,
+    "offsidesAway": 2,
+    "goalkeeperSavesHome": 0,
+    "goalkeeperSavesAway": 2,
+    "totalPassesHome": 523,
+    "totalPassesAway": 455,
+    "passesAccurateHome": 478,
+    "passesAccurateAway": 402,
+    "crossesHome": 15,
+    "crossesAway": 12,
+    "interceptionsHome": 4,
+    "interceptionsAway": 9,
+    "duelsWonHome": 42,
+    "duelsWonAway": 38,
+    "freeKicksHome": 13,
+    "freeKicksAway": 9,
+    "expectedGoalsHome": 0.46000000834465027,
+    "expectedGoalsAway": 0.7300000190734863,
+    "bigChancesHome": 0,
+    "bigChancesAway": 2
+  }
+}

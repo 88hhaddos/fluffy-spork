@@ -1,0 +1,478 @@
+{
+  "id": 1489417,
+  "home": "Uruguay",
+  "away": "Spain",
+  "home_id": 7,
+  "away_id": 9,
+  "score": "0:1",
+  "score_h": 0,
+  "score_a": 1,
+  "date": "2026-06-27T03:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "Estadio Akron",
+  "referee": "I. Elfath",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "substitution",
+      "player": "M. Ugarte",
+      "minute": 45,
+      "team": "Uruguay",
+      "assist": "N. de la Cruz"
+    },
+    {
+      "type": "substitution",
+      "player": "F. Muslera",
+      "minute": 46,
+      "team": "Uruguay",
+      "assist": "S. Rochet"
+    },
+    {
+      "type": "yellow card",
+      "player": "A. Baena",
+      "minute": 46,
+      "team": "Spain",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "J. Sanabria",
+      "minute": 54,
+      "team": "Uruguay",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "F. Valverde",
+      "minute": 57,
+      "team": "Uruguay",
+      "assist": "F. Vinas"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Baena",
+      "minute": 66,
+      "team": "Spain",
+      "assist": "Y. Pino"
+    },
+    {
+      "type": "yellow card",
+      "player": "G. Varela",
+      "minute": 58,
+      "team": "Uruguay",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "Pedri",
+      "minute": 60,
+      "team": "Spain",
+      "assist": "F. Ruiz"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Merino",
+      "minute": 60,
+      "team": "Spain",
+      "assist": "D. Olmo"
+    },
+    {
+      "type": "yellow card",
+      "player": "N. de la Cruz",
+      "minute": 90,
+      "team": "Uruguay",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "A. Baena",
+      "minute": 42,
+      "team": "Spain",
+      "assist": "M. Llorente"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Sanabria",
+      "minute": 70,
+      "team": "Uruguay",
+      "assist": "B. Rodriguez"
+    },
+    {
+      "type": "substitution",
+      "player": "Lamine Yamal",
+      "minute": 76,
+      "team": "Spain",
+      "assist": "N. Williams"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Oyarzabal",
+      "minute": 76,
+      "team": "Spain",
+      "assist": "F. Torres"
+    },
+    {
+      "type": "red card",
+      "player": "A. Canobbio",
+      "minute": 90,
+      "team": "Uruguay",
+      "assist": ""
+    }
+  ],
+  "lineups": [
+    {
+      "name": "F. Muslera",
+      "position": "G",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "G. Varela",
+      "position": "D",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "S. Caceres",
+      "position": "D",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "M. Olivera",
+      "position": "D",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "J. Sanabria",
+      "position": "D",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "R. Bentancur",
+      "position": "M",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "M. Ugarte",
+      "position": "M",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "A. Canobbio",
+      "position": "M",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "F. Valverde",
+      "position": "M",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "M. Araujo",
+      "position": "M",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "D. Nunez",
+      "position": "F",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "U. Simon",
+      "position": "G",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "M. Llorente",
+      "position": "D",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "P. Cubarsi",
+      "position": "D",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "A. Laporte",
+      "position": "D",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "M. Cucurella",
+      "position": "D",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "Pedri",
+      "position": "M",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "Rodri",
+      "position": "M",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "M. Merino",
+      "position": "M",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "Lamine Yamal",
+      "position": "M",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "M. Oyarzabal",
+      "position": "F",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "A. Baena",
+      "position": "M",
+      "sub": false,
+      "team": "Spain"
+    },
+    {
+      "name": "S. Mele",
+      "position": "G",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "S. Rochet",
+      "position": "G",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "M. Vina",
+      "position": "D",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "S. Bueno",
+      "position": "D",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "J. Gimenez",
+      "position": "D",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "R. Araujo",
+      "position": "D",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "J. Piquerez",
+      "position": "D",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "N. de la Cruz",
+      "position": "M",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "B. Rodriguez",
+      "position": "F",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "E. Martinez",
+      "position": "M",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "G. de Arrascaeta",
+      "position": "M",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "F. Pellistri",
+      "position": "M",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "F. Vinas",
+      "position": "F",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "R. Aguirre",
+      "position": "F",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "R. Zalazar",
+      "position": "M",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "J. Garcia",
+      "position": "G",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "D. Raya",
+      "position": "G",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "M. Pubill",
+      "position": "D",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "E. Garcia",
+      "position": "D",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "P. Porro",
+      "position": "D",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "Gavi",
+      "position": "M",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "M. Zubimendi",
+      "position": "M",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "N. Williams",
+      "position": "F",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "F. Ruiz",
+      "position": "M",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "A. Grimaldo",
+      "position": "D",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "D. Olmo",
+      "position": "M",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "B. Iglesias",
+      "position": "F",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "F. Torres",
+      "position": "F",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "Y. Pino",
+      "position": "M",
+      "sub": true,
+      "team": "Spain"
+    },
+    {
+      "name": "V. Munoz",
+      "position": "F",
+      "sub": true,
+      "team": "Spain"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 1,
+    "shotsOnGoalAway": 1,
+    "shotsOffGoalHome": 3,
+    "shotsOffGoalAway": 4,
+    "totalShotsHome": 5,
+    "totalShotsAway": 6,
+    "blockedShotsHome": 1,
+    "blockedShotsAway": 1,
+    "cornerKicksHome": 1,
+    "cornerKicksAway": 6,
+    "foulsHome": 14,
+    "foulsAway": 14,
+    "yellowCardsHome": 3,
+    "yellowCardsAway": 1,
+    "redCardsHome": 1,
+    "redCardsAway": 0,
+    "ballPossessionHome": 33,
+    "ballPossessionAway": 67,
+    "offsidesHome": 5,
+    "offsidesAway": 2,
+    "goalkeeperSavesHome": 0,
+    "goalkeeperSavesAway": 2,
+    "totalPassesHome": 301,
+    "totalPassesAway": 623,
+    "passesAccurateHome": 228,
+    "passesAccurateAway": 553,
+    "crossesHome": 16,
+    "crossesAway": 12,
+    "interceptionsHome": 14,
+    "interceptionsAway": 9,
+    "duelsWonHome": 50,
+    "duelsWonAway": 56,
+    "freeKicksHome": 14,
+    "freeKicksAway": 14,
+    "expectedGoalsHome": 0.20000000298023224,
+    "expectedGoalsAway": 0.8600000143051147,
+    "bigChancesHome": 1,
+    "bigChancesAway": 1
+  }
+}

@@ -1,0 +1,462 @@
+{
+  "id": 1538999,
+  "home": "South Korea",
+  "away": "Czechia",
+  "home_id": 17,
+  "away_id": 770,
+  "score": "2:1",
+  "score_h": 2,
+  "score_a": 1,
+  "date": "2026-06-12T05:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "Estadio Akron",
+  "referee": "Amin Mohamed Omar, Egypt",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "substitution",
+      "player": "Lee Jae-Sung",
+      "minute": 62,
+      "team": "South Korea",
+      "assist": "Hwang Hee-Chan"
+    },
+    {
+      "type": "goal",
+      "player": "Hwang In-Beom",
+      "minute": 67,
+      "team": "South Korea",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "Oh Hyeon-Gyu",
+      "minute": 80,
+      "team": "South Korea",
+      "assist": "Hwang In-Beom"
+    },
+    {
+      "type": "substitution",
+      "player": "Hwang In-Beom",
+      "minute": 84,
+      "team": "South Korea",
+      "assist": "Kim Jin-Gyu"
+    },
+    {
+      "type": "substitution",
+      "player": "Paik Seung-Ho",
+      "minute": 84,
+      "team": "South Korea",
+      "assist": "Park Jin-Seob"
+    },
+    {
+      "type": "goal",
+      "player": "L. Krejci",
+      "minute": 59,
+      "team": "Czechia",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "P. Sulc",
+      "minute": 64,
+      "team": "Czechia",
+      "assist": "A. Hlozek"
+    },
+    {
+      "type": "substitution",
+      "player": "P. Schick",
+      "minute": 64,
+      "team": "Czechia",
+      "assist": "T. Chory"
+    },
+    {
+      "type": "substitution",
+      "player": "L. Provod",
+      "minute": 64,
+      "team": "Czechia",
+      "assist": "M. Sadilek"
+    },
+    {
+      "type": "yellow card",
+      "player": "Lee Gi-Hyuk",
+      "minute": 90,
+      "team": "South Korea",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "Lee Tae-Seok",
+      "minute": 69,
+      "team": "South Korea",
+      "assist": "Eom Ji-Sung"
+    },
+    {
+      "type": "substitution",
+      "player": "Son Heung-Min",
+      "minute": 69,
+      "team": "South Korea",
+      "assist": "Oh Hyeon-Gyu"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Sojka",
+      "minute": 84,
+      "team": "Czechia",
+      "assist": "M. Chytil"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "Kim Seung-Gyu",
+      "position": "G",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Lee Han-Beom",
+      "position": "D",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Kim Min-Jae",
+      "position": "D",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Lee Gi-Hyuk",
+      "position": "D",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Seol Young-Woo",
+      "position": "M",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Hwang In-Beom",
+      "position": "M",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Paik Seung-Ho",
+      "position": "M",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Lee Tae-Seok",
+      "position": "M",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Lee Kang-In",
+      "position": "F",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Lee Jae-Sung",
+      "position": "F",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Son Heung-Min",
+      "position": "F",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "M. Kovar",
+      "position": "G",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "S. Chaloupek",
+      "position": "D",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "R. Hranac",
+      "position": "D",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "L. Krejci",
+      "position": "D",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "V. Coufal",
+      "position": "M",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "T. Soucek",
+      "position": "M",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "A. Sojka",
+      "position": "M",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "J. Zeleny",
+      "position": "M",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "P. Sulc",
+      "position": "F",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "L. Provod",
+      "position": "F",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "P. Schick",
+      "position": "F",
+      "sub": false,
+      "team": "Czechia"
+    },
+    {
+      "name": "Jo Hyeon-Woo",
+      "position": "G",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Song Bum-Keun",
+      "position": "G",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Kim Moon-Hwan",
+      "position": "D",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Kim Tae-Hyeon",
+      "position": "D",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Lee Dong-Gyeong",
+      "position": "M",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "J. Castrop",
+      "position": "M",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Eom Ji-Sung",
+      "position": "F",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Kim Jin-Gyu",
+      "position": "M",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Park Jin-Seob",
+      "position": "M",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Bae Jun-Ho",
+      "position": "M",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Cho Gue-Sung",
+      "position": "F",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Hwang Hee-Chan",
+      "position": "F",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Oh Hyeon-Gyu",
+      "position": "F",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Yang Hyun-Jun",
+      "position": "F",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "J. Stanek",
+      "position": "G",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "L. Hornicek",
+      "position": "G",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "D. Jurasek",
+      "position": "D",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "D. Zima",
+      "position": "D",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "T. Holes",
+      "position": "D",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "M. Sadilek",
+      "position": "M",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "D. Doudera",
+      "position": "M",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "D. Visinsky",
+      "position": "M",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "H. Sochurek",
+      "position": "M",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "L. Cerv",
+      "position": "M",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "V. Darida",
+      "position": "M",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "A. Hlozek",
+      "position": "F",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "J. Kuchta",
+      "position": "F",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "M. Chytil",
+      "position": "F",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "T. Chory",
+      "position": "F",
+      "sub": true,
+      "team": "Czechia"
+    },
+    {
+      "name": "Cho Wi-Je",
+      "position": null,
+      "sub": true,
+      "team": "South Korea"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 6,
+    "shotsOnGoalAway": 4,
+    "shotsOffGoalHome": 5,
+    "shotsOffGoalAway": 3,
+    "totalShotsHome": 15,
+    "totalShotsAway": 7,
+    "blockedShotsHome": 4,
+    "blockedShotsAway": 1,
+    "cornerKicksHome": 4,
+    "cornerKicksAway": 5,
+    "foulsHome": 9,
+    "foulsAway": 16,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 0,
+    "ballPossessionHome": 62,
+    "ballPossessionAway": 38,
+    "offsidesHome": 2,
+    "offsidesAway": 2,
+    "goalkeeperSavesHome": 3,
+    "goalkeeperSavesAway": 4,
+    "totalPassesHome": 541,
+    "totalPassesAway": 327,
+    "passesAccurateHome": 469,
+    "passesAccurateAway": 230,
+    "crossesHome": 12,
+    "crossesAway": 15,
+    "interceptionsHome": 9,
+    "interceptionsAway": 6,
+    "duelsWonHome": 56,
+    "duelsWonAway": 36,
+    "freeKicksHome": 16,
+    "freeKicksAway": 9,
+    "expectedGoalsHome": 2.299999952316284,
+    "expectedGoalsAway": 0.8299999833106995,
+    "bigChancesHome": 4,
+    "bigChancesAway": 1
+  }
+}

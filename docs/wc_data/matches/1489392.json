@@ -1,0 +1,476 @@
+{
+  "id": 1489392,
+  "home": "Ecuador",
+  "away": "Curaçao",
+  "home_id": 2382,
+  "away_id": 5530,
+  "score": "0:0",
+  "score_h": 0,
+  "score_a": 0,
+  "date": "2026-06-21T03:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Ma Ning, China",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "yellow card",
+      "player": "J. Alcivar",
+      "minute": 38,
+      "team": "Ecuador",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "L. Bacuna",
+      "minute": 39,
+      "team": "Curaçao",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "J. Alcivar",
+      "minute": 46,
+      "team": "Ecuador",
+      "assist": "K. Rodriguez"
+    },
+    {
+      "type": "yellow card",
+      "player": "J. Bacuna",
+      "minute": 53,
+      "team": "Curaçao",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "L. Comenencia",
+      "minute": 56,
+      "team": "Curaçao",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "J. Gaari",
+      "minute": 75,
+      "team": "Curaçao",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "J. Bacuna",
+      "minute": 75,
+      "team": "Curaçao",
+      "assist": "K. Gorre"
+    },
+    {
+      "type": "substitution",
+      "player": "T. Chong",
+      "minute": 76,
+      "team": "Curaçao",
+      "assist": "J. Margaritha"
+    },
+    {
+      "type": "substitution",
+      "player": "P. Estupinan",
+      "minute": 70,
+      "team": "Ecuador",
+      "assist": "N. Angulo"
+    },
+    {
+      "type": "substitution",
+      "player": "D. Fonville",
+      "minute": 76,
+      "team": "Curaçao",
+      "assist": "R. van Eijma"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Franco",
+      "minute": 83,
+      "team": "Ecuador",
+      "assist": "A. Preciado"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Locadia",
+      "minute": 83,
+      "team": "Curaçao",
+      "assist": "G. Kastaneer"
+    },
+    {
+      "type": "substitution",
+      "player": "L. Comenencia",
+      "minute": 84,
+      "team": "Curaçao",
+      "assist": "G. Roemeratoe"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Yeboah",
+      "minute": 89,
+      "team": "Ecuador",
+      "assist": "J. Caicedo"
+    },
+    {
+      "type": "yellow card",
+      "player": "G. Kastaneer",
+      "minute": 90,
+      "team": "Curaçao",
+      "assist": ""
+    }
+  ],
+  "lineups": [
+    {
+      "name": "H. Galindez",
+      "position": "G",
+      "sub": false,
+      "team": "Ecuador"
+    },
+    {
+      "name": "A. Franco",
+      "position": "D",
+      "sub": false,
+      "team": "Ecuador"
+    },
+    {
+      "name": "W. Pacho",
+      "position": "D",
+      "sub": false,
+      "team": "Ecuador"
+    },
+    {
+      "name": "P. Hincapie",
+      "position": "D",
+      "sub": false,
+      "team": "Ecuador"
+    },
+    {
+      "name": "J. Alcivar",
+      "position": "M",
+      "sub": false,
+      "team": "Ecuador"
+    },
+    {
+      "name": "J. Yeboah",
+      "position": "M",
+      "sub": false,
+      "team": "Ecuador"
+    },
+    {
+      "name": "P. Vite",
+      "position": "M",
+      "sub": false,
+      "team": "Ecuador"
+    },
+    {
+      "name": "M. Caicedo",
+      "position": "M",
+      "sub": false,
+      "team": "Ecuador"
+    },
+    {
+      "name": "P. Estupinan",
+      "position": "M",
+      "sub": false,
+      "team": "Ecuador"
+    },
+    {
+      "name": "G. Plata",
+      "position": "F",
+      "sub": false,
+      "team": "Ecuador"
+    },
+    {
+      "name": "E. Valencia",
+      "position": "F",
+      "sub": false,
+      "team": "Ecuador"
+    },
+    {
+      "name": "E. Room",
+      "position": "G",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "J. Brenet",
+      "position": "D",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "J. Gaari",
+      "position": "D",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "A. Obispo",
+      "position": "D",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "S. Floranus",
+      "position": "D",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "D. Fonville",
+      "position": "D",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "T. Chong",
+      "position": "M",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "L. Comenencia",
+      "position": "M",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "L. Bacuna",
+      "position": "M",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "J. Bacuna",
+      "position": "M",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "J. Locadia",
+      "position": "F",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "M. Ramirez",
+      "position": "G",
+      "sub": true,
+      "team": "Ecuador"
+    },
+    {
+      "name": "G. Valle",
+      "position": "G",
+      "sub": true,
+      "team": "Ecuador"
+    },
+    {
+      "name": "Y. Medina",
+      "position": "D",
+      "sub": true,
+      "team": "Ecuador"
+    },
+    {
+      "name": "J. Ordonez",
+      "position": "D",
+      "sub": true,
+      "team": "Ecuador"
+    },
+    {
+      "name": "J. Porozo",
+      "position": "D",
+      "sub": true,
+      "team": "Ecuador"
+    },
+    {
+      "name": "F. Torres",
+      "position": "D",
+      "sub": true,
+      "team": "Ecuador"
+    },
+    {
+      "name": "A. Preciado",
+      "position": "D",
+      "sub": true,
+      "team": "Ecuador"
+    },
+    {
+      "name": "N. Angulo",
+      "position": "F",
+      "sub": true,
+      "team": "Ecuador"
+    },
+    {
+      "name": "K. Paez",
+      "position": "M",
+      "sub": true,
+      "team": "Ecuador"
+    },
+    {
+      "name": "D. Castillo",
+      "position": "M",
+      "sub": true,
+      "team": "Ecuador"
+    },
+    {
+      "name": "K. Rodriguez",
+      "position": "F",
+      "sub": true,
+      "team": "Ecuador"
+    },
+    {
+      "name": "J. Caicedo",
+      "position": "F",
+      "sub": true,
+      "team": "Ecuador"
+    },
+    {
+      "name": "J. Arevalo",
+      "position": "F",
+      "sub": true,
+      "team": "Ecuador"
+    },
+    {
+      "name": "A. Valencia",
+      "position": "F",
+      "sub": true,
+      "team": "Ecuador"
+    },
+    {
+      "name": "A. Minda",
+      "position": "F",
+      "sub": true,
+      "team": "Ecuador"
+    },
+    {
+      "name": "T. Bodak",
+      "position": "G",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "T. Doornbusch",
+      "position": "G",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "S. Sambo",
+      "position": "D",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "R. van Eijma",
+      "position": "D",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "R. Bazoer",
+      "position": "D",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "A. Martha",
+      "position": "M",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "J. Margaritha",
+      "position": "F",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "K. Gorre",
+      "position": "F",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "T. Noslin",
+      "position": "M",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "J. Antonisse",
+      "position": "F",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "K. Felida",
+      "position": "M",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "G. Roemeratoe",
+      "position": "M",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "G. Kastaneer",
+      "position": "F",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "B. Kuwas",
+      "position": "F",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "S. Hansen",
+      "position": "F",
+      "sub": true,
+      "team": "Curaçao"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 15,
+    "shotsOnGoalAway": 3,
+    "shotsOffGoalHome": 10,
+    "shotsOffGoalAway": 4,
+    "totalShotsHome": 27,
+    "totalShotsAway": 10,
+    "blockedShotsHome": 2,
+    "blockedShotsAway": 3,
+    "cornerKicksHome": 9,
+    "cornerKicksAway": 0,
+    "foulsHome": 7,
+    "foulsAway": 10,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 5,
+    "ballPossessionHome": 75,
+    "ballPossessionAway": 25,
+    "offsidesHome": 1,
+    "offsidesAway": 2,
+    "goalkeeperSavesHome": 3,
+    "goalkeeperSavesAway": 15,
+    "totalPassesHome": 644,
+    "totalPassesAway": 227,
+    "passesAccurateHome": 581,
+    "passesAccurateAway": 159,
+    "crossesHome": 33,
+    "crossesAway": 1,
+    "interceptionsHome": 7,
+    "interceptionsAway": 8,
+    "duelsWonHome": 51,
+    "duelsWonAway": 52,
+    "freeKicksHome": 10,
+    "freeKicksAway": 7,
+    "expectedGoalsHome": 2.8399999141693115,
+    "expectedGoalsAway": 0.5,
+    "bigChancesHome": 6,
+    "bigChancesAway": 0
+  }
+}

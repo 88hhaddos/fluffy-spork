@@ -616,6 +616,49 @@ async def handle_private_message(
             await handle_photo_edit(message, text, ai_manager, bot, context_manager)
             return
 
+    from src.user_bets import handle_user_bet_request
+    from src.football_api import FootballAPI
+    bet_api = FootballAPI('sjzgn3bbco67pk8j')
+    user_bet_handled = await handle_user_bet_request(message, text, db, bet_api, bot)
+    await bet_api.close()
+    if user_bet_handled:
+        return
+
+    BET_REQUEST_KEYWORDS = [
+        "дай ставку", "сделай ставку", "собери экспресс",
+        "закури ставк", "закури экспресс", "на что ставишь",
+        "что поставить", "посоветуй ставку", "дай экспресс",
+        "ставочку", "сделай экспресс",
+        "дай ставки", "ставки на сегодня", "ставки на завтра",
+        "ставки на матч", "дай прогноз на ставк", "поставь ставку",
+        "закури ставку", "закури ставки", "дай ставки на",
+        "сделай ставки", "поставь ставки", "закури дай ставк",
+        "закури дай экспресс", "дай вариант ставк",
+        "на что ставишь", "на что сегодня ставишь", "на что ставишь сегодня",
+        "куда ставишь", "куда сегодня ставишь", "на что ставим",
+        "закури на что ставишь", "закури куда ставишь",
+        "сделай ставочку", "закури сделай ставку",
+    ]
+    text_lower = text.lower()
+    if any(kw in text_lower for kw in BET_REQUEST_KEYWORDS):
+        from src.betting import BettingManager
+        bet_api2 = FootballAPI('sjzgn3bbco67pk8j')
+        betting = BettingManager(db, bet_api2, ai_manager)
+        try:
+            bet = await betting.generate_bet(message.chat.id)
+            if bet:
+                intro = await betting.generate_intro_message(bet)
+                msg = betting.format_bet_message(bet, intro)
+                await message.answer(msg)
+            else:
+                await message.answer("Закури не нашёл матчи для ставки прямо сейчас 🤷")
+        except Exception as e:
+            logger.error(f"Bet request error: {e}")
+            await message.answer(f"Закури не смог собрать ставку: {str(e)[:100]}")
+        finally:
+            await bet_api2.close()
+        return
+
     from src.handlers.features import handle_translate, handle_reminder, handle_user_fact, handle_poll
     if await handle_poll(message, text, bot):
         return
@@ -634,55 +677,68 @@ def _filter_ai_thoughts(text: str) -> str:
     if not text:
         return text
 
-    # Если текст содержит типичные признаки размышлений AI
-    leak_markers = [
-        "The user ", "Let me ", "I should ", "I need to ", "I think ",
-        "But wait", "However,", "So I should", "Let me respond",
-        "Hmm, but", "Actually,", "Looking at", "I'll ",
-        "The current topic", "The mood setting", "The user is asking",
-        "Let me check", "So the", "This is", "I must",
-        "I can still", "Let me try", "I'll be",
-        "1. ", "2. ", "3. ", "4. ",
-        "Adikseii", "Dimateplo", "Drakelovc ", "OliverBax ",
+    LEAK_PHRASES = [
+        "the user", "let me", "i should", "i need to", "i think",
+        "but wait", "however,", "so i should", "let me respond",
+        "hmm, but", "actually,", "looking at", "i'll ",
+        "the current topic", "the mood setting", "the user is asking",
+        "let me check", "so the", "this is", "i must",
+        "i can still", "let me try", "i'll be",
         "is asking me", "is pointing out", "is repeatedly",
         "appeared - this is", "according to admin",
-        "The mood setting says", "But there are also",
-        "Let me think", "I think I need",
-        "Let me respond to", "For Oliver",
-        "I should address", "I can do that",
-        "These are both", "I think the most",
+        "the mood setting says", "but there are also",
+        "let me think", "i think i need",
+        "let me respond to", "i should address", "i can do that",
+        "these are both", "i think the most",
+        "i need to be", "mood setting", "relationship",
+        "system prompt", "chain of thought", "re-reading",
+        "i'm overcomplicating", "let me think about",
+        "break down", "breaks down", "let me break",
+        "this might be", "could be a reference",
+        "might refer to", "might be short for",
+        "i believe", "it seems", "it appears",
+        "my mood", "my personality", "my instructions",
+        "priority", "отношение к", "отношение:",
+        "настроение", "mood setting", "anger",
+        "i was confused", "was confused about",
+        "clarified", "this is phoenileo",
+        "this is oliverbax", "this is drakelovc",
+        "manzambi", "phoenileo", "oliverbax", "drakelovc",
+        "miasanmiabayernmunchen",
     ]
 
-    # Если текст начинается с размышлений — отрезаем до первой "настоящей" реплики
+    LEAK_LINE_PATTERNS = [
+        "- \"", "- '", "let me break down",
+        "wait, let me", "actually, i",
+        "so phoenileo", "so oliver", "so drake",
+        "now for", "also, drakelovc",
+        "but actually", "re-reading",
+    ]
+
     lines = text.split("\n")
     clean_lines = []
     in_thoughts = True
 
     for line in lines:
         line_stripped = line.strip()
-
-        # Пустые строки пропускаем
         if not line_stripped:
             if not in_thoughts:
                 clean_lines.append(line)
             continue
 
-        # Если всё ещё в зоне размышлений
         if in_thoughts:
-            # Проверяем — это размышление или реальный ответ?
-            is_thought = any(line_stripped.startswith(m) or line_stripped.lower().startswith(m.lower()) for m in leak_markers)
-
-            # Дополнительная проверка — строка на английском (много латиницы, мало кириллицы)
+            line_lower = line_stripped.lower()
+            is_thought = any(p in line_lower for p in LEAK_PHRASES)
+            if not is_thought:
+                is_thought = any(line_stripped.startswith(p) or line_lower.startswith(p) for p in LEAK_LINE_PATTERNS)
             if not is_thought:
                 cyrillic = sum(1 for c in line_stripped if '\u0400' <= c <= '\u04ff')
                 latin = sum(1 for c in line_stripped if c.isalpha() and ord(c) < 128)
-                if latin > 10 and cyrillic < 3:
+                if latin > 15 and cyrillic < 5:
                     is_thought = True
-
             if is_thought:
-                continue  # пропускаем строку размышлений
+                continue
             else:
-                # Это реальный ответ — выходим из зоны размышлений
                 in_thoughts = False
                 clean_lines.append(line)
         else:
@@ -690,25 +746,58 @@ def _filter_ai_thoughts(text: str) -> str:
 
     result = "\n".join(clean_lines).strip()
 
-    # Если после фильтрации ничего не осталось — возвращаем оригинал
     if not result or len(result) < 5:
-        return text.strip()
+        return "Хм, Закури задумался. Спроси ещё раз."
 
-    # Дополнительная проверка — если больше 50% текста на английском и это выглядит как размышления
+    if len(text) > 200 and len(result) < len(text) * 0.15:
+        return "Хм, Закури задумался. Спроси ещё раз."
+
+    if len(result) < 30:
+        cyrillic = sum(1 for c in result if '\u0400' <= c <= '\u04ff')
+        latin = sum(1 for c in result if c.isalpha() and ord(c) < 128)
+        if latin > 2 and cyrillic < latin:
+            return "Хм, Закури задумался. Спроси ещё раз."
+
+    result_lower = result.lower()
+    leak_count = sum(1 for p in LEAK_PHRASES if p in result_lower)
+    if leak_count >= 3:
+        lines_all = text.split("\n")
+        russian_start = -1
+        for i, line in enumerate(lines_all):
+            cyrillic = sum(1 for c in line if '\u0400' <= c <= '\u04ff')
+            latin = sum(1 for c in line if c.isalpha() and ord(c) < 128)
+            if cyrillic > 5 and latin < 10:
+                rest = "\n".join(lines_all[i:])
+                rest_lower = rest.lower()
+                rest_leaks = sum(1 for p in LEAK_PHRASES if p in rest_lower)
+                if rest_leaks <= 1:
+                    russian_start = i
+                    break
+        if russian_start >= 0:
+            result = "\n".join(lines_all[russian_start:]).strip()
+        else:
+            return text.strip()
+
     if len(result) > 200:
         english_chars = sum(1 for c in result if c.isalpha() and ord(c) < 128)
         total_chars = sum(1 for c in result if c.isalpha())
-        if total_chars > 0 and english_chars / total_chars > 0.7:
-            # Скорее всего утёк английский chain-of-thought
-            # Ищем русский текст в конце
+        if total_chars > 0 and english_chars / total_chars > 0.6:
+            lines_all = text.split("\n")
             russian_start = -1
-            for i, line in enumerate(lines):
+            for i, line in enumerate(lines_all):
                 cyrillic = sum(1 for c in line if '\u0400' <= c <= '\u04ff')
                 if cyrillic > 3:
-                    russian_start = i
-                    break
+                    rest = "\n".join(lines_all[i:])
+                    rest_lower = rest.lower()
+                    rest_leaks = sum(1 for p in LEAK_PHRASES if p in rest_lower)
+                    if rest_leaks <= 1:
+                        russian_start = i
+                        break
             if russian_start >= 0:
-                result = "\n".join(lines[russian_start:]).strip()
+                result = "\n".join(lines_all[russian_start:]).strip()
+
+    if not result or len(result) < 5:
+        return text.strip()
 
     return result[:4096]
 
@@ -771,7 +860,6 @@ async def _get_football_context(text: str, db, chat_id: int = 0) -> str:
         data = load_wc_data()
 
         if not data:
-            # Кэш пуст — пробуем загрузить прямо сейчас
             try:
                 from src.wc_cache import fetch_all_wc_data
                 from src.football_api import FootballAPI
@@ -783,18 +871,38 @@ async def _get_football_context(text: str, db, chat_id: int = 0) -> str:
             except Exception as e:
                 logger.error(f"WC on-demand fetch error: {e}")
 
-        if not data:
+        # Всегда подтягиваем live матчи из API (кэш 1 мин)
+        live_lines = []
+        try:
+            from src.football_api import FootballAPI
+            live_api = FootballAPI('sjzgn3bbco67pk8j')
+            live_matches = await live_api.get_pari_live_matches()
+            await live_api.close()
+            wc_live = [m for m in live_matches if "WC 2026" in (m.get("league") or "").upper()]
+            for m in wc_live:
+                home = m["homeTeam"]["name"]
+                away = m["awayTeam"]["name"]
+                score_h = m.get("homeResult", 0) or 0
+                score_a = m.get("awayResult", 0) or 0
+                live_lines.append(f"  🔴 LIVE: {home} {score_h}:{score_a} {away}")
+        except Exception as e:
+            logger.error(f"Live matches fetch error: {e}")
+
+        if not data and not live_lines:
             return ""
 
-        # Ищем релевантные данные по запросу
-        relevant = search_wc_data(text, data)
+        relevant = ""
+        if data:
+            relevant = search_wc_data(text, data) or ""
 
-        # Если нашли — загружаем в кэш
+        if live_lines:
+            live_block = "### Live матчи ЧМ 2026 (ПРЯМО СЕЙЧАС — реальный счёт):\n" + "\n".join(live_lines)
+            relevant = (relevant + "\n\n" + live_block).strip() if relevant else live_block
+
         if relevant:
             _football_context_cache[chat_id] = {"context": relevant, "counter": 0}
             return relevant
 
-        # Если не нашли конкретное — отдаём общий контекст если загружен
         if chat_id in _football_context_cache:
             return _football_context_cache[chat_id]["context"]
 
@@ -859,21 +967,11 @@ async def _generate_and_send_response(
         ]
 
         if user_id:
-            insult_detected = any(w in text_lower for w in INSULT_WORDS)
-            compliment_detected = any(w in text_lower for w in COMPLIMENT_WORDS)
             threat_detected = any(w in text_lower for w in THREAT_WORDS)
 
-            if insult_detected:
-                new_rel = await db.adjust_relationship(user_id, username, -15)
-                logger.info(f"Relationship {username}: -15 → {new_rel}/100 (insult)")
-            elif compliment_detected:
-                new_rel = await db.adjust_relationship(user_id, username, +10)
-                logger.info(f"Relationship {username}: +10 → {new_rel}/100 (compliment)")
-
             if threat_detected:
-                new_rel = await db.adjust_relationship(user_id, username, -25)
                 warnings = await db.add_warning(user_id, username)
-                logger.info(f"Relationship {username}: -25 → {new_rel}/100 (threat), warnings: {warnings}")
+                logger.info(f"Threat from {username}, warnings: {warnings}")
                 
                 if warnings >= 5:
                     await db.ban_user(user_id, username, reason="5 предупреждений за угрозы боту")
@@ -900,26 +998,37 @@ async def _generate_and_send_response(
         if football_context:
             logger.info(f"Football context loaded for: {msg_text[:50]}")
         elif _is_football_question(msg_text):
-            # Контекст пуст — загружаем хотя бы предстоящие матчи из Pari.ru
+            # Контекст пуст — загружаем live + предстоящие матчи из Pari.ru
             try:
                 from src.football_api import FootballAPI
                 pari_api = FootballAPI('sjzgn3bbco67pk8j')
                 pari_matches = await pari_api.get_pari_upcoming_matches(limit=20)
+                live_matches = await pari_api.get_pari_live_matches()
                 await pari_api.close()
 
-                if pari_matches:
-                    lines = []
-                    for m in pari_matches[:15]:
-                        home = (m.get("homeTeam") or {}).get("name", "?")
-                        away = (m.get("awayTeam") or {}).get("name", "?")
-                        w1 = m.get("winner1", 0)
-                        wx = m.get("winnerX", 0)
-                        w2 = m.get("winner2", 0)
-                        date = (m.get("date") or "")[:16]
-                        odds_str = f" | Кеф: {w1}/{wx}/{w2}" if w1 else ""
-                        lines.append(f"  {home} — {away} ({date}){odds_str}")
-                    football_context = f"### Предстоящие матчи (Pari.ru):\n" + "\n".join(lines)
-                    logger.info(f"Loaded {len(lines)} Pari.ru matches as context")
+                lines = []
+                wc_live = [m for m in live_matches if "WC 2026" in (m.get("league") or "").upper()]
+                for m in wc_live:
+                    home = m["homeTeam"]["name"]
+                    away = m["awayTeam"]["name"]
+                    score_h = m.get("homeResult", 0) or 0
+                    score_a = m.get("awayResult", 0) or 0
+                    lines.append(f"  🔴 LIVE: {home} {score_h}:{score_a} {away}")
+
+                wc_upcoming = [m for m in pari_matches if "WC 2026" in (m.get("league") or "").upper()]
+                for m in wc_upcoming[:15]:
+                    home = (m.get("homeTeam") or {}).get("name", "?")
+                    away = (m.get("awayTeam") or {}).get("name", "?")
+                    w1 = m.get("winner1", 0)
+                    wx = m.get("winnerX", 0)
+                    w2 = m.get("winner2", 0)
+                    date = (m.get("date") or "")[:16]
+                    odds_str = f" | Кеф: {w1}/{wx}/{w2}" if w1 else ""
+                    lines.append(f"  {home} — {away} ({date}){odds_str}")
+
+                if lines:
+                    football_context = f"### Матчи ЧМ 2026 (Pari.ru, реальные данные):\n" + "\n".join(lines)
+                    logger.info(f"Loaded {len(lines)} Pari.ru matches (live+upcoming) as context")
             except Exception as e:
                 logger.error(f"Pari.ru fallback context error: {e}")
 

@@ -1,0 +1,478 @@
+{
+  "id": 1489398,
+  "home": "Uruguay",
+  "away": "Cape Verde Islands",
+  "home_id": 7,
+  "away_id": 1533,
+  "score": "2:2",
+  "score_h": 2,
+  "score_a": 2,
+  "date": "2026-06-22T01:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Espen Eskas, Norway",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "substitution",
+      "player": "K. Lenini",
+      "minute": 71,
+      "team": "Cape Verde Islands",
+      "assist": "L. Duarte"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Monteiro",
+      "minute": 80,
+      "team": "Cape Verde Islands",
+      "assist": "Y. Semedo"
+    },
+    {
+      "type": "yellow card",
+      "player": "D. Borges",
+      "minute": 90,
+      "team": "Cape Verde Islands",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "R. Bentancur",
+      "minute": 20,
+      "team": "Uruguay",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "K. Lenini",
+      "minute": 21,
+      "team": "Cape Verde Islands",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "T. Arcanjo",
+      "minute": 46,
+      "team": "Cape Verde Islands",
+      "assist": "D. Duarte"
+    },
+    {
+      "type": "yellow card",
+      "player": "S. Lopes Cabral",
+      "minute": 5,
+      "team": "Cape Verde Islands",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "M. Olivera",
+      "minute": 58,
+      "team": "Uruguay",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "Benchimol",
+      "minute": 58,
+      "team": "Cape Verde Islands",
+      "assist": "N. Da Costa"
+    },
+    {
+      "type": "substitution",
+      "player": "G. Rodrigues",
+      "minute": 58,
+      "team": "Cape Verde Islands",
+      "assist": "H. Varela"
+    },
+    {
+      "type": "goal",
+      "player": "H. Varela",
+      "minute": 61,
+      "team": "Cape Verde Islands",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "M. Araujo",
+      "minute": 44,
+      "team": "Uruguay",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "M. Araujo",
+      "minute": 81,
+      "team": "Uruguay",
+      "assist": "B. Rodriguez"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Ugarte",
+      "minute": 70,
+      "team": "Uruguay",
+      "assist": "N. de la Cruz"
+    },
+    {
+      "type": "substitution",
+      "player": "F. Vinas",
+      "minute": 70,
+      "team": "Uruguay",
+      "assist": "D. Nunez"
+    },
+    {
+      "type": "goal",
+      "player": "A. Canobbio",
+      "minute": 45,
+      "team": "Uruguay",
+      "assist": "M. Araujo"
+    },
+    {
+      "type": "goal cancelled",
+      "player": "M. Araujo",
+      "minute": 69,
+      "team": "Uruguay",
+      "assist": ""
+    }
+  ],
+  "lineups": [
+    {
+      "name": "F. Muslera",
+      "position": "G",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "G. Varela",
+      "position": "D",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "S. Caceres",
+      "position": "D",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "M. Olivera",
+      "position": "D",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "J. Sanabria",
+      "position": "D",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "M. Ugarte",
+      "position": "M",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "R. Bentancur",
+      "position": "M",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "A. Canobbio",
+      "position": "M",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "F. Valverde",
+      "position": "M",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "M. Araujo",
+      "position": "M",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "F. Vinas",
+      "position": "F",
+      "sub": false,
+      "team": "Uruguay"
+    },
+    {
+      "name": "Vozinha",
+      "position": "G",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "S. Moreira",
+      "position": "D",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "R. Lopes",
+      "position": "D",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "D. Borges",
+      "position": "D",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "S. Lopes Cabral",
+      "position": "D",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "K. Lenini",
+      "position": "M",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "T. Arcanjo",
+      "position": "M",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "R. Mendes",
+      "position": "M",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "J. Monteiro",
+      "position": "M",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "G. Rodrigues",
+      "position": "M",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "Benchimol",
+      "position": "F",
+      "sub": false,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "S. Mele",
+      "position": "G",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "S. Rochet",
+      "position": "G",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "J. Gimenez",
+      "position": "D",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "M. Vina",
+      "position": "D",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "S. Bueno",
+      "position": "D",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "J. Piquerez",
+      "position": "D",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "N. de la Cruz",
+      "position": "M",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "F. Pellistri",
+      "position": "M",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "B. Rodriguez",
+      "position": "F",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "E. Martinez",
+      "position": "M",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "D. Nunez",
+      "position": "F",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "R. Zalazar",
+      "position": "M",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "R. Aguirre",
+      "position": "F",
+      "sub": true,
+      "team": "Uruguay"
+    },
+    {
+      "name": "M. Rosa",
+      "position": "G",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "dos Santos CJ",
+      "position": "G",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "Stopira",
+      "position": "D",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "L. Costa",
+      "position": "D",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "W. Pina",
+      "position": "D",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "K. Pires",
+      "position": "D",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "Joao Paulo",
+      "position": "M",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "L. Duarte",
+      "position": "M",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "W. Semedo",
+      "position": "F",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "Y. Semedo",
+      "position": "M",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "H. Varela",
+      "position": "F",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "D. Duarte",
+      "position": "M",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "J. Cabral",
+      "position": "F",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "N. Da Costa",
+      "position": "F",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    },
+    {
+      "name": "D. Livramento",
+      "position": "F",
+      "sub": true,
+      "team": "Cape Verde Islands"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 2,
+    "shotsOnGoalAway": 4,
+    "shotsOffGoalHome": 8,
+    "shotsOffGoalAway": 4,
+    "totalShotsHome": 17,
+    "totalShotsAway": 12,
+    "blockedShotsHome": 7,
+    "blockedShotsAway": 4,
+    "cornerKicksHome": 11,
+    "cornerKicksAway": 4,
+    "foulsHome": 11,
+    "foulsAway": 4,
+    "yellowCardsHome": 2,
+    "yellowCardsAway": 2,
+    "ballPossessionHome": 65,
+    "ballPossessionAway": 35,
+    "offsidesHome": 3,
+    "offsidesAway": 0,
+    "goalkeeperSavesHome": 2,
+    "goalkeeperSavesAway": 0,
+    "totalPassesHome": 511,
+    "totalPassesAway": 278,
+    "passesAccurateHome": 420,
+    "passesAccurateAway": 205,
+    "crossesHome": 29,
+    "crossesAway": 7,
+    "interceptionsHome": 7,
+    "interceptionsAway": 13,
+    "duelsWonHome": 47,
+    "duelsWonAway": 55,
+    "freeKicksHome": 4,
+    "freeKicksAway": 11,
+    "expectedGoalsHome": 2.319999933242798,
+    "expectedGoalsAway": 0.8799999952316284,
+    "bigChancesHome": 2,
+    "bigChancesAway": 1
+  }
+}

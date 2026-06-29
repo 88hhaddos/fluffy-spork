@@ -1,0 +1,459 @@
+{
+  "id": 1489395,
+  "home": "Belgium",
+  "away": "Iran",
+  "home_id": 1,
+  "away_id": 22,
+  "score": "0:0",
+  "score_h": 0,
+  "score_a": 0,
+  "date": "2026-06-21T22:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Dario Herrera, Argentina",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "yellow card",
+      "player": "R. Lukaku",
+      "minute": 3,
+      "team": "Belgium",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "S. Ezatolahi",
+      "minute": 33,
+      "team": "Iran",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "T. Meunier",
+      "minute": 58,
+      "team": "Belgium",
+      "assist": "T. Castagne"
+    },
+    {
+      "type": "substitution",
+      "player": "N. Raskin",
+      "minute": 58,
+      "team": "Belgium",
+      "assist": "H. Vanaken"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Saelemaekers",
+      "minute": 58,
+      "team": "Belgium",
+      "assist": "D. Lukebakio"
+    },
+    {
+      "type": "substitution",
+      "player": "R. Lukaku",
+      "minute": 73,
+      "team": "Belgium",
+      "assist": "A. Theate"
+    },
+    {
+      "type": "substitution",
+      "player": "S. Ezatolahi",
+      "minute": 85,
+      "team": "Iran",
+      "assist": "A. Hosseinzadeh"
+    },
+    {
+      "type": "substitution",
+      "player": "K. De Bruyne",
+      "minute": 87,
+      "team": "Belgium",
+      "assist": "M. Fernandez-Pardo"
+    },
+    {
+      "type": "red card",
+      "player": "N. Ngoy",
+      "minute": 66,
+      "team": "Belgium",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "S. Ghoddos",
+      "minute": 79,
+      "team": "Iran",
+      "assist": "S. Moghanlou"
+    },
+    {
+      "type": "substitution",
+      "player": "S. Hardani",
+      "minute": 46,
+      "team": "Iran",
+      "assist": "A. Jahanbakhsh"
+    },
+    {
+      "type": "substitution",
+      "player": "E. Hajsafi",
+      "minute": 66,
+      "team": "Iran",
+      "assist": "M. Mohammadi"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Mohebi",
+      "minute": 66,
+      "team": "Iran",
+      "assist": "M. Torabi"
+    },
+    {
+      "type": "goal cancelled",
+      "player": "M. Taremi",
+      "minute": 27,
+      "team": "Iran",
+      "assist": ""
+    }
+  ],
+  "lineups": [
+    {
+      "name": "A. Witsel",
+      "position": "M",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "B. Mechele",
+      "position": "D",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "H. Vanaken",
+      "position": "M",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "T. Meunier",
+      "position": "D",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "K. De Bruyne",
+      "position": "M",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "T. Courtois",
+      "position": "G",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "R. Lukaku",
+      "position": "F",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "A. Saelemaekers",
+      "position": "M",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "L. Trossard",
+      "position": "M",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "N. Raskin",
+      "position": "M",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "T. Castagne",
+      "position": "D",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "Y. Tielemans",
+      "position": "M",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "D. Lukebakio",
+      "position": "F",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "C. De Ketelaere",
+      "position": "F",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "M. De Cuyper",
+      "position": "D",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "K. De Winter",
+      "position": "D",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "S. Lammens",
+      "position": "G",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "A. Onana",
+      "position": "M",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "A. Theate",
+      "position": "D",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "N. Ngoy",
+      "position": "D",
+      "sub": false,
+      "team": "Belgium"
+    },
+    {
+      "name": "D. Moreira",
+      "position": "F",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "M. Fernandez-Pardo",
+      "position": "F",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "M. Penders",
+      "position": "G",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "J. Seys",
+      "position": "D",
+      "sub": true,
+      "team": "Belgium"
+    },
+    {
+      "name": "P. Niazmand",
+      "position": "G",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "A. Beiranvand",
+      "position": "G",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "R. Cheshmi",
+      "position": "M",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "E. Hajsafi",
+      "position": "D",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "H. Kanaani",
+      "position": "D",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "M. Mohammadi",
+      "position": "D",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "R. Rezaeian",
+      "position": "M",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "M. Torabi",
+      "position": "M",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "S. Ghoddos",
+      "position": "M",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "A. Jahanbakhsh",
+      "position": "F",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "S. Ezatolahi",
+      "position": "M",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "S. Khalilzadeh",
+      "position": "D",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "A. Alipour",
+      "position": "F",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "H. Hosseini",
+      "position": "G",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "M. Ghaedi",
+      "position": "F",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "A. Hosseinzadeh",
+      "position": "F",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "D. Eckert",
+      "position": "F",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "M. Taremi",
+      "position": "F",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "S. Moghanlou",
+      "position": "F",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "M. Mohebi",
+      "position": "M",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "S. Hardani",
+      "position": "D",
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "M. Ghorbani",
+      "position": "M",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "A. Yousefi",
+      "position": "D",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "A. Razzaghinia",
+      "position": "M",
+      "sub": true,
+      "team": "Iran"
+    },
+    {
+      "name": "A. Nemati",
+      "position": null,
+      "sub": false,
+      "team": "Iran"
+    },
+    {
+      "name": "D. Eiri",
+      "position": null,
+      "sub": true,
+      "team": "Iran"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 7,
+    "shotsOnGoalAway": 3,
+    "shotsOffGoalHome": 10,
+    "shotsOffGoalAway": 3,
+    "totalShotsHome": 23,
+    "totalShotsAway": 7,
+    "blockedShotsHome": 6,
+    "blockedShotsAway": 1,
+    "cornerKicksHome": 4,
+    "cornerKicksAway": 2,
+    "foulsHome": 7,
+    "foulsAway": 9,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 1,
+    "redCardsHome": 1,
+    "redCardsAway": 0,
+    "ballPossessionHome": 70,
+    "ballPossessionAway": 30,
+    "offsidesHome": 3,
+    "offsidesAway": 4,
+    "goalkeeperSavesHome": 3,
+    "goalkeeperSavesAway": 7,
+    "totalPassesHome": 621,
+    "totalPassesAway": 270,
+    "passesAccurateHome": 533,
+    "passesAccurateAway": 198,
+    "crossesHome": 32,
+    "crossesAway": 8,
+    "interceptionsHome": 3,
+    "interceptionsAway": 12,
+    "duelsWonHome": 50,
+    "duelsWonAway": 45,
+    "freeKicksHome": 9,
+    "freeKicksAway": 7,
+    "expectedGoalsHome": 1.7899999618530273,
+    "expectedGoalsAway": 0.6200000047683716,
+    "bigChancesHome": 1,
+    "bigChancesAway": 1
+  }
+}

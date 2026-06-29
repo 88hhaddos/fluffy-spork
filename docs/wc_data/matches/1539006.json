@@ -1,0 +1,478 @@
+{
+  "id": 1539006,
+  "home": "Türkiye",
+  "away": "Paraguay",
+  "home_id": 777,
+  "away_id": 2380,
+  "score": "0:1",
+  "score_h": 0,
+  "score_a": 1,
+  "date": "2026-06-20T06:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Iván Barton, El Salvador",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "red card",
+      "player": "M. Almiron",
+      "minute": 45,
+      "team": "Paraguay",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "J. Enciso",
+      "minute": 90,
+      "team": "Paraguay",
+      "assist": "G. Avalos"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Galarza",
+      "minute": 90,
+      "team": "Paraguay",
+      "assist": "J. Canale"
+    },
+    {
+      "type": "substitution",
+      "player": "I. Pitta",
+      "minute": 46,
+      "team": "Paraguay",
+      "assist": "D. Bobadilla"
+    },
+    {
+      "type": "substitution",
+      "player": "K. Akturkoglu",
+      "minute": 46,
+      "team": "Türkiye",
+      "assist": "B. Yilmaz"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Caceres",
+      "minute": 81,
+      "team": "Paraguay",
+      "assist": "A. Maidana"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Bardakci",
+      "minute": 86,
+      "team": "Türkiye",
+      "assist": "O. Kokcu"
+    },
+    {
+      "type": "goal",
+      "player": "M. Galarza",
+      "minute": 2,
+      "team": "Paraguay",
+      "assist": "I. Pitta"
+    },
+    {
+      "type": "yellow card",
+      "player": "M. Galarza",
+      "minute": 4,
+      "team": "Paraguay",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "I. Yuksek",
+      "minute": 60,
+      "team": "Türkiye",
+      "assist": "C. Uzun"
+    },
+    {
+      "type": "substitution",
+      "player": "Y. Akgun",
+      "minute": 60,
+      "team": "Türkiye",
+      "assist": "D. Gul"
+    },
+    {
+      "type": "substitution",
+      "player": "D. Gomez",
+      "minute": 67,
+      "team": "Paraguay",
+      "assist": "G. Velazquez"
+    },
+    {
+      "type": "substitution",
+      "player": "F. Kadioglu",
+      "minute": 70,
+      "team": "Türkiye",
+      "assist": "E. Elmali"
+    },
+    {
+      "type": "yellow card",
+      "player": "E. Elmali",
+      "minute": 71,
+      "team": "Türkiye",
+      "assist": ""
+    },
+    {
+      "type": "card reviewed",
+      "player": "M. Almiron",
+      "minute": 45,
+      "team": "Paraguay",
+      "assist": ""
+    }
+  ],
+  "lineups": [
+    {
+      "name": "U. Cakir",
+      "position": "G",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "M. Muldur",
+      "position": "D",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "M. Demiral",
+      "position": "D",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "A. Bardakci",
+      "position": "D",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "F. Kadioglu",
+      "position": "D",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "I. Yuksek",
+      "position": "M",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "H. Calhanoglu",
+      "position": "M",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "Y. Akgun",
+      "position": "M",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "A. Guler",
+      "position": "M",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "K. Yildiz",
+      "position": "M",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "K. Akturkoglu",
+      "position": "F",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "O. Gill",
+      "position": "G",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "J. Caceres",
+      "position": "D",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "G. Gomez",
+      "position": "D",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "O. Alderete",
+      "position": "D",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "J. Alonso",
+      "position": "D",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "D. Gomez",
+      "position": "M",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "A. Cubas",
+      "position": "M",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "M. Galarza",
+      "position": "M",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "M. Almiron",
+      "position": "M",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "I. Pitta",
+      "position": "F",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "J. Enciso",
+      "position": "F",
+      "sub": false,
+      "team": "Paraguay"
+    },
+    {
+      "name": "A. Bayindir",
+      "position": "G",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "M. Gunok",
+      "position": "G",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "E. Elmali",
+      "position": "D",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "K. Ayhan",
+      "position": "D",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "O. Kabak",
+      "position": "D",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "S. Akaydin",
+      "position": "D",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "Z. Celik",
+      "position": "D",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "C. Soyuncu",
+      "position": "D",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "B. Yilmaz",
+      "position": "F",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "C. Uzun",
+      "position": "M",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "O. Kokcu",
+      "position": "M",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "O. Aydin",
+      "position": "F",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "S. Ozcan",
+      "position": "M",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "I. Kahveci",
+      "position": "M",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "D. Gul",
+      "position": "F",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "G. Olveira",
+      "position": "G",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "G. Velazquez",
+      "position": "D",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "Fabian Balbuena",
+      "position": "D",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "J. Canale",
+      "position": "D",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "A. Maidana",
+      "position": "D",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "Mauricio",
+      "position": "M",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "D. Bobadilla",
+      "position": "M",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "B. Ojeda",
+      "position": "M",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "G. Caballero",
+      "position": "F",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "Kaku",
+      "position": "M",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "R. Sosa",
+      "position": "F",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "A. Sanabria",
+      "position": "F",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "A. Arce",
+      "position": "F",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "G. Avalos",
+      "position": "F",
+      "sub": true,
+      "team": "Paraguay"
+    },
+    {
+      "name": "R. Fernandez",
+      "position": null,
+      "sub": true,
+      "team": "Paraguay"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 5,
+    "shotsOnGoalAway": 2,
+    "shotsOffGoalHome": 15,
+    "shotsOffGoalAway": 3,
+    "totalShotsHome": 32,
+    "totalShotsAway": 7,
+    "blockedShotsHome": 12,
+    "blockedShotsAway": 2,
+    "cornerKicksHome": 12,
+    "cornerKicksAway": 0,
+    "foulsHome": 14,
+    "foulsAway": 15,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 1,
+    "redCardsHome": 0,
+    "redCardsAway": 1,
+    "ballPossessionHome": 79,
+    "ballPossessionAway": 21,
+    "offsidesHome": 2,
+    "offsidesAway": 3,
+    "goalkeeperSavesHome": 1,
+    "goalkeeperSavesAway": 5,
+    "totalPassesHome": 629,
+    "totalPassesAway": 178,
+    "passesAccurateHome": 559,
+    "passesAccurateAway": 96,
+    "crossesHome": 42,
+    "crossesAway": 6,
+    "interceptionsHome": 6,
+    "interceptionsAway": 9,
+    "duelsWonHome": 58,
+    "duelsWonAway": 69,
+    "freeKicksHome": 15,
+    "freeKicksAway": 14,
+    "expectedGoalsHome": 2.1700000762939453,
+    "expectedGoalsAway": 0.3199999928474426,
+    "bigChancesHome": 5,
+    "bigChancesAway": 0
+  }
+}

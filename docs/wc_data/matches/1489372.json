@@ -1,0 +1,462 @@
+{
+  "id": 1489372,
+  "home": "Haiti",
+  "away": "Scotland",
+  "home_id": 2386,
+  "away_id": 1108,
+  "score": "0:1",
+  "score_h": 0,
+  "score_a": 1,
+  "date": "2026-06-14T04:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "Gillette Stadium",
+  "referee": "Mustapha Ghorbal, Algeria",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "goal",
+      "player": "J. McGinn",
+      "minute": 28,
+      "team": "Scotland",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "J. Bellegarde",
+      "minute": 39,
+      "team": "Haiti",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "L. Deedson",
+      "minute": 61,
+      "team": "Haiti",
+      "assist": "J. Casimir"
+    },
+    {
+      "type": "substitution",
+      "player": "R. Providence",
+      "minute": 85,
+      "team": "Haiti",
+      "assist": "Y. Fortune"
+    },
+    {
+      "type": "yellow card",
+      "player": "A. Hickey",
+      "minute": 46,
+      "team": "Scotland",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "C. Adams",
+      "minute": 75,
+      "team": "Scotland",
+      "assist": "L. Dykes"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Hickey",
+      "minute": 75,
+      "team": "Scotland",
+      "assist": "N. Patterson"
+    },
+    {
+      "type": "substitution",
+      "player": "B. Gannon-Doak",
+      "minute": 75,
+      "team": "Scotland",
+      "assist": "R. Christie"
+    },
+    {
+      "type": "substitution",
+      "player": "W. Isidor",
+      "minute": 76,
+      "team": "Haiti",
+      "assist": "L. Joseph"
+    },
+    {
+      "type": "substitution",
+      "player": "J. McGinn",
+      "minute": 83,
+      "team": "Scotland",
+      "assist": "F. Curtis"
+    },
+    {
+      "type": "substitution",
+      "player": "L. Shankland",
+      "minute": 83,
+      "team": "Scotland",
+      "assist": "K. McLean"
+    },
+    {
+      "type": "yellow card",
+      "player": "F. Curtis",
+      "minute": 90,
+      "team": "Scotland",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "K. McLean",
+      "minute": 90,
+      "team": "Scotland",
+      "assist": ""
+    }
+  ],
+  "lineups": [
+    {
+      "name": "C. Sainte",
+      "position": null,
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "J. Placide",
+      "position": "G",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "C. Arcus",
+      "position": "D",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "R. Ade",
+      "position": "D",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "H. Delcroix",
+      "position": "D",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "M. Experience",
+      "position": "D",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "L. Deedson",
+      "position": "M",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "D. Jean Jacques",
+      "position": "M",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "J. Bellegarde",
+      "position": "M",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "R. Providence",
+      "position": "M",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "F. Pierrot",
+      "position": "F",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "W. Isidor",
+      "position": "F",
+      "sub": false,
+      "team": "Haiti"
+    },
+    {
+      "name": "A. Gunn",
+      "position": "G",
+      "sub": false,
+      "team": "Scotland"
+    },
+    {
+      "name": "A. Hickey",
+      "position": "D",
+      "sub": false,
+      "team": "Scotland"
+    },
+    {
+      "name": "J. Hendry",
+      "position": "D",
+      "sub": false,
+      "team": "Scotland"
+    },
+    {
+      "name": "G. Hanley",
+      "position": "D",
+      "sub": false,
+      "team": "Scotland"
+    },
+    {
+      "name": "A. Robertson",
+      "position": "D",
+      "sub": false,
+      "team": "Scotland"
+    },
+    {
+      "name": "B. Gannon-Doak",
+      "position": "M",
+      "sub": false,
+      "team": "Scotland"
+    },
+    {
+      "name": "S. McTominay",
+      "position": "M",
+      "sub": false,
+      "team": "Scotland"
+    },
+    {
+      "name": "L. Ferguson",
+      "position": "M",
+      "sub": false,
+      "team": "Scotland"
+    },
+    {
+      "name": "J. McGinn",
+      "position": "M",
+      "sub": false,
+      "team": "Scotland"
+    },
+    {
+      "name": "L. Shankland",
+      "position": "F",
+      "sub": false,
+      "team": "Scotland"
+    },
+    {
+      "name": "C. Adams",
+      "position": "F",
+      "sub": false,
+      "team": "Scotland"
+    },
+    {
+      "name": "A. Pierre",
+      "position": "G",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "J. Duverger",
+      "position": "G",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "K. Thermoncy",
+      "position": "D",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "D. Lacroix",
+      "position": "D",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "G. Metusala",
+      "position": "D",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "J. Duverne",
+      "position": "D",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "W. Paugain",
+      "position": "D",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "D. Simon",
+      "position": "M",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "W. Pierre",
+      "position": "M",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "J. Casimir",
+      "position": "F",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "D. Etienne",
+      "position": "F",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "D. Nazon",
+      "position": "F",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "L. Joseph",
+      "position": "F",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "Y. Fortune",
+      "position": "F",
+      "sub": true,
+      "team": "Haiti"
+    },
+    {
+      "name": "L. Kelly",
+      "position": "G",
+      "sub": true,
+      "team": "Scotland"
+    },
+    {
+      "name": "C. Gordon",
+      "position": "G",
+      "sub": true,
+      "team": "Scotland"
+    },
+    {
+      "name": "K. Tierney",
+      "position": "D",
+      "sub": true,
+      "team": "Scotland"
+    },
+    {
+      "name": "J. Souttar",
+      "position": "D",
+      "sub": true,
+      "team": "Scotland"
+    },
+    {
+      "name": "D. Hyam",
+      "position": "D",
+      "sub": true,
+      "team": "Scotland"
+    },
+    {
+      "name": "N. Patterson",
+      "position": "D",
+      "sub": true,
+      "team": "Scotland"
+    },
+    {
+      "name": "A. Ralston",
+      "position": "D",
+      "sub": true,
+      "team": "Scotland"
+    },
+    {
+      "name": "S. McKenna",
+      "position": "D",
+      "sub": true,
+      "team": "Scotland"
+    },
+    {
+      "name": "T. Fletcher",
+      "position": "M",
+      "sub": true,
+      "team": "Scotland"
+    },
+    {
+      "name": "R. Christie",
+      "position": "M",
+      "sub": true,
+      "team": "Scotland"
+    },
+    {
+      "name": "K. McLean",
+      "position": "M",
+      "sub": true,
+      "team": "Scotland"
+    },
+    {
+      "name": "F. Curtis",
+      "position": "F",
+      "sub": true,
+      "team": "Scotland"
+    },
+    {
+      "name": "L. Dykes",
+      "position": "F",
+      "sub": true,
+      "team": "Scotland"
+    },
+    {
+      "name": "R. Stewart",
+      "position": "F",
+      "sub": true,
+      "team": "Scotland"
+    },
+    {
+      "name": "G. Hirst",
+      "position": "F",
+      "sub": true,
+      "team": "Scotland"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 2,
+    "shotsOnGoalAway": 2,
+    "shotsOffGoalHome": 9,
+    "shotsOffGoalAway": 5,
+    "totalShotsHome": 15,
+    "totalShotsAway": 9,
+    "blockedShotsHome": 4,
+    "blockedShotsAway": 2,
+    "cornerKicksHome": 4,
+    "cornerKicksAway": 3,
+    "foulsHome": 23,
+    "foulsAway": 21,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 3,
+    "ballPossessionHome": 54,
+    "ballPossessionAway": 46,
+    "offsidesHome": 3,
+    "offsidesAway": 1,
+    "goalkeeperSavesHome": 1,
+    "goalkeeperSavesAway": 2,
+    "totalPassesHome": 431,
+    "totalPassesAway": 374,
+    "passesAccurateHome": 367,
+    "passesAccurateAway": 307,
+    "crossesHome": 23,
+    "crossesAway": 14,
+    "interceptionsHome": 6,
+    "interceptionsAway": 6,
+    "duelsWonHome": 51,
+    "duelsWonAway": 59,
+    "freeKicksHome": 21,
+    "freeKicksAway": 23,
+    "expectedGoalsHome": 1.0499999523162842,
+    "expectedGoalsAway": 1.0499999523162842,
+    "bigChancesHome": 1,
+    "bigChancesAway": 2
+  }
+}

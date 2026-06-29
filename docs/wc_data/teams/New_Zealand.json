@@ -1,0 +1,173 @@
+{
+  "name": "New Zealand",
+  "matches": [
+    {
+      "opponent": "Iran",
+      "score": "2:2",
+      "date": "2026-06-16",
+      "stage": "",
+      "home": false,
+      "result": "draw"
+    },
+    {
+      "opponent": "Egypt",
+      "score": "1:3",
+      "date": "2026-06-22",
+      "stage": "",
+      "home": true,
+      "result": "loss"
+    },
+    {
+      "opponent": "Belgium",
+      "score": "1:5",
+      "date": "2026-06-27",
+      "stage": "",
+      "home": true,
+      "result": "loss"
+    }
+  ],
+  "wins": 0,
+  "draws": 1,
+  "losses": 2,
+  "scored": 4,
+  "conceded": 10,
+  "players": {
+    "M. Crocombe": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "T. Payne": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "F. Surman": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "goals": 1
+    },
+    "M. Boxall": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "L. Cacace": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "J. Bell": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "M. Stamenic": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "C. McCowatt": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1
+    },
+    "S. Singh": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "E. Just": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "goals": 3,
+      "yellow": 1
+    },
+    "C. Wood": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0,
+      "assists": 1
+    },
+    "A. Paulsen": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Woud": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "T. Smith": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "F. De Vries": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "N. Pijnaker": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "C. Elliot": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "T. Bindon": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "J. Randall": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "B. Old": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "R. Thomas": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "L. Bayliss": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Rufer": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "B. Waine": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "K. Barbarouses": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "L. Rogerson": {
+      "position": "F",
+      "matches": 2,
+      "subs": 2
+    }
+  }
+}

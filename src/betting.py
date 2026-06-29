@@ -59,45 +59,35 @@ class BettingManager:
 
     async def generate_bet(self, chat_id: int) -> Optional[dict]:
         """Генерирует ставку: одиночную, экспресс, или неординарную.
-        Использует реальные коэффициенты из Pari.ru API."""
+        Использует реальные коэффициенты из Pari.ru API.
+        Ставит ТОЛЬКО на ЧМ 2026 матчи."""
         
-        # Сначала пробуем Pari.ru (реальные коэффициенты)
-        pari_matches = await self.api.get_pari_upcoming_matches(limit=100)
+        pari_matches = await self.api.get_pari_upcoming_matches(limit=200)
         
-        # Фильтруем матчи с коэффициентами
         available = []
         for m in pari_matches:
+            league = (m.get("league") or "").upper()
+            if "WC 2026" not in league:
+                continue
             w1 = m.get("winner1", 0)
             wx = m.get("winnerX", 0)
             w2 = m.get("winner2", 0)
             if w1 and wx and w2 and w1 > 1.0:
                 available.append(m)
 
-        # Fallback на SStats если Pari.ru пуст
         if not available:
             wc_matches = await self.api.get_matches_by_league(1, 2026)
-            today = await self.api.get_today_matches()
-            upcoming = await self.api.get_upcoming_matches(limit=30)
-
-            wc_uid = "979a850f-d343-11f0-982f-3cecef730a49"
             wc_all = [m for m in wc_matches if m.get("status") in (1, 2)]
-            
-            available = today + upcoming + wc_all
-
-            filtered = []
-            for m in available:
+            for m in wc_all:
                 w1 = m.get("winner1", 0)
                 wx = m.get("winnerX", 0)
                 w2 = m.get("winner2", 0)
                 if w1 and wx and w2 and w1 > 1.0:
-                    filtered.append(m)
-            available = filtered
+                    available.append(m)
 
-            # Fallback: генерируем коэффициенты
             if not available:
-                for m in (today + upcoming)[:10]:
+                for m in wc_all[:10]:
                     home = (m.get("homeTeam") or {}).get("name", "?")
-                    away = (m.get("awayTeam") or {}).get("name", "?")
                     if home != "?":
                         m["winner1"] = round(random.uniform(1.5, 3.5), 2)
                         m["winnerX"] = round(random.uniform(2.8, 4.0), 2)
@@ -150,20 +140,44 @@ class BettingManager:
                 odds = round(random.uniform(2.5, 6.0), 2)
             else:
                 pick_type = random.randint(1, 100)
-                if pick_type <= 25:
+                if pick_type <= 15:
                     pick, odds = "П1", w1
-                elif pick_type <= 45:
+                elif pick_type <= 28:
                     pick, odds = "П2", w2
-                elif pick_type <= 60:
-                    pick, odds = "ТБ 2.5", round(max(w1 * 1.4, 1.7), 2)
-                elif pick_type <= 75:
-                    pick, odds = "Обе забьют — Да", round(max(w1 * 1.15, 1.5), 2)
-                elif pick_type <= 85:
+                elif pick_type <= 35:
                     pick, odds = "Ничья", wx
-                elif pick_type <= 92:
-                    pick, odds = "ТМ 2.5", round(max(min(w1, w2) * 0.9, 1.6), 2)
+                elif pick_type <= 42:
+                    dc_1x = m.get("dc_1X", 0)
+                    pick, odds = ("Двойной шанс 1X", dc_1x) if dc_1x else ("П1", w1)
+                elif pick_type <= 48:
+                    dc_x2 = m.get("dc_X2", 0)
+                    pick, odds = ("Двойной шанс X2", dc_x2) if dc_x2 else ("П2", w2)
+                elif pick_type <= 54:
+                    pick, odds = "ТБ 2.5", m.get("over25", 0) or round(max(w1 * 1.4, 1.7), 2)
+                elif pick_type <= 59:
+                    pick, odds = "ТМ 2.5", m.get("under25", 0) or round(max(min(w1, w2) * 0.9, 1.6), 2)
+                elif pick_type <= 64:
+                    pick, odds = "Обе забьют — Да", m.get("btts_yes", 0) or round(max(w1 * 1.15, 1.5), 2)
+                elif pick_type <= 69:
+                    pick, odds = "Обе забьют — Нет", m.get("btts_no", 0) or round(max(min(w1, w2) * 1.1, 1.8), 2)
+                elif pick_type <= 75:
+                    co = m.get("corners_over85", 0) or m.get("corners_over75", 0)
+                    pick, odds = ("Угловые ТБ 8.5", co) if co else ("ТБ 2.5", m.get("over25", 0) or w1)
+                elif pick_type <= 80:
+                    cu = m.get("corners_under95", 0) or m.get("corners_under85", 0)
+                    pick, odds = ("Угловые ТМ 9.5", cu) if cu else ("ТМ 2.5", m.get("under25", 0) or w2)
+                elif pick_type <= 85:
+                    yo = m.get("yellow_over25", 0) or m.get("yellow_over35", 0)
+                    pick, odds = ("Жёлтые карточки ТБ 2.5", yo) if yo else ("Обе забьют — Да", m.get("btts_yes", 0) or w1)
+                elif pick_type <= 90:
+                    fo = m.get("fouls_over245", 0) or m.get("fouls_over255", 0)
+                    pick, odds = ("Фолы ТБ 24.5", fo) if fo else ("ТБ 2.5", m.get("over25", 0) or w1)
+                elif pick_type <= 95:
+                    ah = m.get("ah_home_minus15", 0)
+                    pick, odds = ("Ф1 -1.5", ah) if ah else ("П1", w1)
                 else:
-                    pick, odds = "Обе забьют — Нет", round(max(min(w1, w2) * 1.1, 1.8), 2)
+                    ah2 = m.get("ah_away_plus15", 0)
+                    pick, odds = ("Ф2 +1.5", ah2) if ah2 else ("П2", w2)
 
             total_odds *= odds
             selections.append({
@@ -249,7 +263,8 @@ class BettingManager:
                             "Напиши 1-2 предложения ОСМЫСЛЕННОГО комментария к своей ставке. "
                             "Почему именно эта ставка. С уверенностью. С характером. "
                             "Без эмодзи в начале. Не повторяй сами матчи. "
-                            "Кратко, живо, как в чате."
+                            "Кратко, живо, как в чате. "
+                            "ОТВЕЧАЙ ТОЛЬКО НА РУССКОМ. Никакого английского."
                         ),
                     },
                     {
@@ -264,7 +279,14 @@ class BettingManager:
                 temperature=0.8,
                 max_tokens=100,
             )
-            return response.strip() if response else random.choice(EXCITED_COMMENTS)
+            if not response or not response.strip():
+                return random.choice(EXCITED_COMMENTS)
+            response = response.strip()
+            cyrillic = sum(1 for c in response if '\u0400' <= c <= '\u04ff')
+            latin = sum(1 for c in response if c.isalpha() and ord(c) < 128)
+            if latin > 15 and cyrillic < 5:
+                return random.choice(EXCITED_COMMENTS)
+            return response
         except Exception:
             return random.choice(EXCITED_COMMENTS)
 
@@ -363,6 +385,56 @@ class BettingManager:
         elif pick == "Обе забьют — Да" and score_h > 0 and score_a > 0:
             return True
         elif pick == "Обе забьют — Нет" and (score_h == 0 or score_a == 0):
+            return True
+        elif pick == "Двойной шанс 1X" and (score_h > score_a or score_h == score_a):
+            return True
+        elif pick == "Двойной шанс 12" and (score_h > score_a or score_a > score_h):
+            return True
+        elif pick == "Двойной шанс X2" and (score_a > score_h or score_h == score_a):
+            return True
+        elif pick == "Ф1 -1.5" and (score_h - score_a) > 1.5:
+            return True
+        elif pick == "Ф2 +1.5" and (score_a - score_h) > -1.5:
+            return True
+
+        stats = match.get("statistics") or {}
+        corners_h = stats.get("cornerKicksHome") or 0
+        corners_a = stats.get("cornerKicksAway") or 0
+        corners_total = corners_h + corners_a
+        fouls_h = stats.get("foulsHome") or 0
+        fouls_a = stats.get("foulsAway") or 0
+        fouls_total = fouls_h + fouls_a
+        yellow_h = stats.get("yellowCardsHome") or 0
+        yellow_a = stats.get("yellowCardsAway") or 0
+        yellow_total = yellow_h + yellow_a
+
+        if pick == "Угловые ТБ 7.5" and corners_total > 7.5:
+            return True
+        elif pick == "Угловые ТМ 7.5" and corners_total < 7.5:
+            return True
+        elif pick == "Угловые ТБ 8.5" and corners_total > 8.5:
+            return True
+        elif pick == "Угловые ТМ 8.5" and corners_total < 8.5:
+            return True
+        elif pick == "Угловые ТБ 9.5" and corners_total > 9.5:
+            return True
+        elif pick == "Угловые ТМ 9.5" and corners_total < 9.5:
+            return True
+        elif pick == "Жёлтые карточки ТБ 2.5" and yellow_total > 2.5:
+            return True
+        elif pick == "Жёлтые карточки ТМ 2.5" and yellow_total < 2.5:
+            return True
+        elif pick == "Жёлтые карточки ТБ 3.5" and yellow_total > 3.5:
+            return True
+        elif pick == "Жёлтые карточки ТМ 3.5" and yellow_total < 3.5:
+            return True
+        elif pick == "Фолы ТБ 24.5" and fouls_total > 24.5:
+            return True
+        elif pick == "Фолы ТМ 24.5" and fouls_total < 24.5:
+            return True
+        elif pick == "Фолы ТБ 25.5" and fouls_total > 25.5:
+            return True
+        elif pick == "Фолы ТМ 25.5" and fouls_total < 25.5:
             return True
 
         events = match.get("events", [])

@@ -1,0 +1,463 @@
+{
+  "id": 1489371,
+  "home": "Brazil",
+  "away": "Morocco",
+  "home_id": 6,
+  "away_id": 31,
+  "score": "1:1",
+  "score_h": 1,
+  "score_a": 1,
+  "date": "2026-06-14T01:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Slavko Vinčić, Slovenia",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "substitution",
+      "player": "Bruno Guimarães",
+      "minute": 80,
+      "team": "Brazil",
+      "assist": "Danilo Santos"
+    },
+    {
+      "type": "substitution",
+      "player": "B. El Khannouss",
+      "minute": 80,
+      "team": "Morocco",
+      "assist": "A. Amaimouni"
+    },
+    {
+      "type": "substitution",
+      "player": "N. Mazraoui",
+      "minute": 80,
+      "team": "Morocco",
+      "assist": "A. Salah-Eddine"
+    },
+    {
+      "type": "substitution",
+      "player": "Lucas Paquetá",
+      "minute": 61,
+      "team": "Brazil",
+      "assist": "Matheus Cunha"
+    },
+    {
+      "type": "substitution",
+      "player": "B. Diaz",
+      "minute": 65,
+      "team": "Morocco",
+      "assist": "C. Talbi"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Ounahi",
+      "minute": 65,
+      "team": "Morocco",
+      "assist": "S. El Mourabet"
+    },
+    {
+      "type": "substitution",
+      "player": "I. Saibari",
+      "minute": 89,
+      "team": "Morocco",
+      "assist": "S. Rahimi"
+    },
+    {
+      "type": "goal",
+      "player": "I. Saibari",
+      "minute": 21,
+      "team": "Morocco",
+      "assist": "B. Diaz"
+    },
+    {
+      "type": "goal",
+      "player": "Vinícius Júnior",
+      "minute": 32,
+      "team": "Brazil",
+      "assist": "Bruno Guimarães"
+    },
+    {
+      "type": "yellow card",
+      "player": "Casemiro",
+      "minute": 37,
+      "team": "Brazil",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "Roger Ibañez",
+      "minute": 43,
+      "team": "Brazil",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "Lucas Paquetá",
+      "minute": 62,
+      "team": "Brazil",
+      "assist": "Matheus Cunha"
+    },
+    {
+      "type": "substitution",
+      "player": "Roger Ibañez",
+      "minute": 46,
+      "team": "Brazil",
+      "assist": "Danilo"
+    },
+    {
+      "type": "substitution",
+      "player": "Casemiro",
+      "minute": 46,
+      "team": "Brazil",
+      "assist": "Fabinho"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "Marquinhos",
+      "position": "D",
+      "sub": false,
+      "team": "Brazil"
+    },
+    {
+      "name": "Alisson",
+      "position": "G",
+      "sub": false,
+      "team": "Brazil"
+    },
+    {
+      "name": "Fabinho",
+      "position": "M",
+      "sub": true,
+      "team": "Brazil"
+    },
+    {
+      "name": "Ederson",
+      "position": "G",
+      "sub": true,
+      "team": "Brazil"
+    },
+    {
+      "name": "Danilo",
+      "position": "D",
+      "sub": true,
+      "team": "Brazil"
+    },
+    {
+      "name": "Casemiro",
+      "position": "M",
+      "sub": false,
+      "team": "Brazil"
+    },
+    {
+      "name": "Vinícius Júnior",
+      "position": "M",
+      "sub": false,
+      "team": "Brazil"
+    },
+    {
+      "name": "Alex Sandro",
+      "position": "D",
+      "sub": true,
+      "team": "Brazil"
+    },
+    {
+      "name": "Matheus Cunha",
+      "position": "F",
+      "sub": true,
+      "team": "Brazil"
+    },
+    {
+      "name": "Raphinha",
+      "position": "M",
+      "sub": false,
+      "team": "Brazil"
+    },
+    {
+      "name": "Lucas Paquetá",
+      "position": "M",
+      "sub": false,
+      "team": "Brazil"
+    },
+    {
+      "name": "Weverton",
+      "position": "G",
+      "sub": true,
+      "team": "Brazil"
+    },
+    {
+      "name": "Éderson",
+      "position": "M",
+      "sub": true,
+      "team": "Brazil"
+    },
+    {
+      "name": "Léo Pereira",
+      "position": "D",
+      "sub": true,
+      "team": "Brazil"
+    },
+    {
+      "name": "Bruno Guimarães",
+      "position": "M",
+      "sub": false,
+      "team": "Brazil"
+    },
+    {
+      "name": "Gabriel Magalhães",
+      "position": "D",
+      "sub": false,
+      "team": "Brazil"
+    },
+    {
+      "name": "Douglas Santos",
+      "position": "D",
+      "sub": false,
+      "team": "Brazil"
+    },
+    {
+      "name": "Roger Ibañez",
+      "position": "D",
+      "sub": false,
+      "team": "Brazil"
+    },
+    {
+      "name": "Bremer",
+      "position": "D",
+      "sub": true,
+      "team": "Brazil"
+    },
+    {
+      "name": "Gabriel Martinelli",
+      "position": "F",
+      "sub": true,
+      "team": "Brazil"
+    },
+    {
+      "name": "Igor Thiago",
+      "position": "F",
+      "sub": false,
+      "team": "Brazil"
+    },
+    {
+      "name": "Luiz Henrique",
+      "position": "F",
+      "sub": true,
+      "team": "Brazil"
+    },
+    {
+      "name": "Danilo Santos",
+      "position": "M",
+      "sub": true,
+      "team": "Brazil"
+    },
+    {
+      "name": "Endrick",
+      "position": "F",
+      "sub": true,
+      "team": "Brazil"
+    },
+    {
+      "name": "Rayan",
+      "position": "F",
+      "sub": true,
+      "team": "Brazil"
+    },
+    {
+      "name": "A. Hakimi",
+      "position": "D",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "S. Amrabat",
+      "position": "M",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "N. Mazraoui",
+      "position": "D",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "B. Diaz",
+      "position": "M",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "Bono",
+      "position": "G",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "Munir",
+      "position": "G",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "A. Tagnaouti",
+      "position": "G",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "A. El Kaabi",
+      "position": "F",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "I. Diop",
+      "position": "D",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "S. Rahimi",
+      "position": "F",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "M. Saadane",
+      "position": "D",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "A. Ounahi",
+      "position": "M",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "Y. Belammari",
+      "position": "D",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "I. Saibari",
+      "position": "F",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "A. Salah-Eddine",
+      "position": "D",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "A. Sbai",
+      "position": "F",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "N. El Aynaoui",
+      "position": "M",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "C. Riad",
+      "position": "D",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "Z. El Ouahdi",
+      "position": "D",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "R. Halhal",
+      "position": "D",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "C. Talbi",
+      "position": "F",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "B. El Khannouss",
+      "position": "M",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "G. Yassine",
+      "position": "F",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "S. El Mourabet",
+      "position": "M",
+      "sub": true,
+      "team": "Morocco"
+    },
+    {
+      "name": "A. Bouaddi",
+      "position": "M",
+      "sub": false,
+      "team": "Morocco"
+    },
+    {
+      "name": "A. Amaimouni",
+      "position": "F",
+      "sub": true,
+      "team": "Morocco"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 5,
+    "shotsOnGoalAway": 3,
+    "shotsOffGoalHome": 4,
+    "shotsOffGoalAway": 5,
+    "totalShotsHome": 12,
+    "totalShotsAway": 14,
+    "blockedShotsHome": 3,
+    "blockedShotsAway": 6,
+    "cornerKicksHome": 6,
+    "cornerKicksAway": 2,
+    "foulsHome": 16,
+    "foulsAway": 14,
+    "yellowCardsHome": 2,
+    "yellowCardsAway": 0,
+    "ballPossessionHome": 51,
+    "ballPossessionAway": 49,
+    "offsidesHome": 0,
+    "offsidesAway": 1,
+    "goalkeeperSavesHome": 2,
+    "goalkeeperSavesAway": 4,
+    "totalPassesHome": 514,
+    "totalPassesAway": 486,
+    "passesAccurateHome": 449,
+    "passesAccurateAway": 419,
+    "crossesHome": 16,
+    "crossesAway": 15,
+    "interceptionsHome": 5,
+    "interceptionsAway": 5,
+    "duelsWonHome": 52,
+    "duelsWonAway": 62,
+    "freeKicksHome": 14,
+    "freeKicksAway": 16,
+    "expectedGoalsHome": 1.2599999904632568,
+    "expectedGoalsAway": 1.3700000047683716,
+    "bigChancesHome": 1,
+    "bigChancesAway": 2
+  }
+}

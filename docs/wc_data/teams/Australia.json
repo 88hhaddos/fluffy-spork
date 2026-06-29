@@ -1,0 +1,172 @@
+{
+  "name": "Australia",
+  "matches": [
+    {
+      "opponent": "Türkiye",
+      "score": "2:0",
+      "date": "2026-06-14",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    },
+    {
+      "opponent": "USA",
+      "score": "2:0",
+      "date": "2026-06-19",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    },
+    {
+      "opponent": "Paraguay",
+      "score": "0:0",
+      "date": "2026-06-26",
+      "stage": "",
+      "home": false,
+      "result": "draw"
+    }
+  ],
+  "wins": 1,
+  "draws": 1,
+  "losses": 1,
+  "scored": 2,
+  "conceded": 2,
+  "players": {
+    "P. Beach": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "A. Circati": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "H. Souttar": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "C. Burgess": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "J. Italiano": {
+      "position": "D",
+      "matches": 2,
+      "subs": 0,
+      "yellow": 2
+    },
+    "A. O'Neill": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "P. Okon-Engstler": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "J. Bos": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "N. Irankunda": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1,
+      "goals": 1
+    },
+    "C. Metcalfe": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "M. Toure": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1
+    },
+    "M. Ryan": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "P. Izzo": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Degenek": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "J. Geria": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Behich": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "L. Herrington": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "K. Trewin": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "C. Devlin": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "J. Irvine": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2,
+      "yellow": 1
+    },
+    "M. Leckie": {
+      "position": "F",
+      "matches": 2,
+      "subs": 1
+    },
+    "A. Hrustic": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Mabil": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "C. Volpato": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "N. Velupillay": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2
+    },
+    "T. Yengi": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    }
+  }
+}

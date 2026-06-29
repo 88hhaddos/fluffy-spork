@@ -1,0 +1,455 @@
+{
+  "id": 1489403,
+  "home": "Panama",
+  "away": "Croatia",
+  "home_id": 11,
+  "away_id": 3,
+  "score": "0:1",
+  "score_h": 0,
+  "score_a": 1,
+  "date": "2026-06-24T02:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "BMO Field",
+  "referee": "Pierre Ghislain Atcho, Gabon",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "substitution",
+      "player": "M. Kovacic",
+      "minute": 72,
+      "team": "Croatia",
+      "assist": "P. Sucic"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Ramos",
+      "minute": 77,
+      "team": "Panama",
+      "assist": "C. Waterman"
+    },
+    {
+      "type": "substitution",
+      "player": "L. Modric",
+      "minute": 81,
+      "team": "Croatia",
+      "assist": "M. Pasalic"
+    },
+    {
+      "type": "substitution",
+      "player": "P. Musa",
+      "minute": 46,
+      "team": "Croatia",
+      "assist": "A. Budimir"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Gvardiol",
+      "minute": 46,
+      "team": "Croatia",
+      "assist": "A. Kramaric"
+    },
+    {
+      "type": "goal",
+      "player": "A. Budimir",
+      "minute": 54,
+      "team": "Croatia",
+      "assist": "J. Stanisic"
+    },
+    {
+      "type": "yellow card",
+      "player": "Y. Barcenas",
+      "minute": 61,
+      "team": "Panama",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "J. Fajardo",
+      "minute": 83,
+      "team": "Panama",
+      "assist": "A. Londono"
+    },
+    {
+      "type": "substitution",
+      "player": "Y. Barcenas",
+      "minute": 90,
+      "team": "Panama",
+      "assist": "T. Rodriguez"
+    },
+    {
+      "type": "substitution",
+      "player": "C. Blackman",
+      "minute": 90,
+      "team": "Panama",
+      "assist": "E. Davis"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Kovacic",
+      "minute": 72,
+      "team": "Croatia",
+      "assist": "P. Sucic"
+    },
+    {
+      "type": "yellow card",
+      "player": "P. Sucic",
+      "minute": 90,
+      "team": "Croatia",
+      "assist": ""
+    }
+  ],
+  "lineups": [
+    {
+      "name": "C. Martinez",
+      "position": null,
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "I. Perisic",
+      "position": "M",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "D. Kotarski",
+      "position": "G",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "A. Kramaric",
+      "position": "F",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "L. Modric",
+      "position": "M",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "N. Vlasic",
+      "position": "M",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "M. Pongracic",
+      "position": "D",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "D. Livakovic",
+      "position": "G",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "N. Moro",
+      "position": "M",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "D. Caleta-Car",
+      "position": "D",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "M. Kovacic",
+      "position": "M",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "M. Pasalic",
+      "position": "M",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "L. Sucic",
+      "position": "M",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "I. Pandur",
+      "position": "G",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "K. Jakic",
+      "position": "M",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "J. Sutalo",
+      "position": "D",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "M. Erlic",
+      "position": "D",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "A. Budimir",
+      "position": "F",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "P. Musa",
+      "position": "F",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "J. Stanisic",
+      "position": "D",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "J. Gvardiol",
+      "position": "D",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "I. Matanovic",
+      "position": "F",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "M. Pasalic",
+      "position": "M",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "T. Fruk",
+      "position": "M",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "M. Baturina",
+      "position": "M",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "P. Sucic",
+      "position": "M",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "L. Vuskovic",
+      "position": "D",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "L. Mejia",
+      "position": "G",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "O. Mosquera",
+      "position": "G",
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "E. Davis",
+      "position": "D",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "F. Escobar",
+      "position": "D",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "M. Murillo",
+      "position": "D",
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "C. Blackman",
+      "position": "D",
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "A. Godoy",
+      "position": "M",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "A. Quintero",
+      "position": "F",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "J. Rodriguez",
+      "position": "M",
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "J. Fajardo",
+      "position": "F",
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "A. Andrade",
+      "position": "D",
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "Y. Barcenas",
+      "position": "M",
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "C. Waterman",
+      "position": "F",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "J. Ramos",
+      "position": "D",
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "J. Cordoba",
+      "position": "D",
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "J. Gutierrez",
+      "position": "D",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "A. Carrasquilla",
+      "position": "M",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "C. Samudio",
+      "position": "G",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "C. Yanis",
+      "position": "F",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "T. Rodriguez",
+      "position": "F",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "C. Harvey",
+      "position": "M",
+      "sub": false,
+      "team": "Panama"
+    },
+    {
+      "name": "R. Miller",
+      "position": "D",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "I. Diaz",
+      "position": "F",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "A. Londono",
+      "position": "F",
+      "sub": true,
+      "team": "Panama"
+    },
+    {
+      "name": "E. Farina",
+      "position": "D",
+      "sub": true,
+      "team": "Panama"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 1,
+    "shotsOnGoalAway": 2,
+    "shotsOffGoalHome": 5,
+    "shotsOffGoalAway": 3,
+    "totalShotsHome": 8,
+    "totalShotsAway": 6,
+    "blockedShotsHome": 2,
+    "blockedShotsAway": 1,
+    "cornerKicksHome": 7,
+    "cornerKicksAway": 2,
+    "foulsHome": 19,
+    "foulsAway": 12,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 1,
+    "ballPossessionHome": 42,
+    "ballPossessionAway": 58,
+    "offsidesHome": 1,
+    "offsidesAway": 2,
+    "goalkeeperSavesHome": 1,
+    "goalkeeperSavesAway": 1,
+    "totalPassesHome": 352,
+    "totalPassesAway": 512,
+    "passesAccurateHome": 277,
+    "passesAccurateAway": 432,
+    "crossesHome": 31,
+    "crossesAway": 18,
+    "interceptionsHome": 5,
+    "interceptionsAway": 5,
+    "duelsWonHome": 58,
+    "duelsWonAway": 63,
+    "freeKicksHome": 12,
+    "freeKicksAway": 19,
+    "expectedGoalsHome": 0.550000011920929,
+    "expectedGoalsAway": 1.649999976158142,
+    "bigChancesHome": 1,
+    "bigChancesAway": 3
+  }
+}

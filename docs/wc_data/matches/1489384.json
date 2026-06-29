@@ -1,0 +1,475 @@
+{
+  "id": 1489384,
+  "home": "England",
+  "away": "Croatia",
+  "home_id": 10,
+  "away_id": 3,
+  "score": "4:2",
+  "score_h": 4,
+  "score_a": 2,
+  "date": "2026-06-17T23:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Clement Turpin, France",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "goal",
+      "player": "H. Kane",
+      "minute": 12,
+      "team": "England",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "H. Kane",
+      "minute": 42,
+      "team": "England",
+      "assist": "D. Rice"
+    },
+    {
+      "type": "substitution",
+      "player": "L. Vuskovic",
+      "minute": 66,
+      "team": "Croatia",
+      "assist": "M. Pasalic"
+    },
+    {
+      "type": "substitution",
+      "player": "P. Musa",
+      "minute": 66,
+      "team": "Croatia",
+      "assist": "I. Matanovic"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Gordon",
+      "minute": 72,
+      "team": "England",
+      "assist": "M. Rogers"
+    },
+    {
+      "type": "substitution",
+      "player": "N. Madueke",
+      "minute": 72,
+      "team": "England",
+      "assist": "B. Saka"
+    },
+    {
+      "type": "substitution",
+      "player": "D. Rice",
+      "minute": 72,
+      "team": "England",
+      "assist": "M. Rogers"
+    },
+    {
+      "type": "goal",
+      "player": "M. Rashford",
+      "minute": 85,
+      "team": "England",
+      "assist": "B. Saka"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Stones",
+      "minute": 87,
+      "team": "England",
+      "assist": "M. Guehi"
+    },
+    {
+      "type": "goal",
+      "player": "M. Baturina",
+      "minute": 36,
+      "team": "Croatia",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "J. Bellingham",
+      "minute": 47,
+      "team": "England",
+      "assist": "E. Anderson"
+    },
+    {
+      "type": "substitution",
+      "player": "L. Modric",
+      "minute": 58,
+      "team": "Croatia",
+      "assist": "M. Kovacic"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Baturina",
+      "minute": 78,
+      "team": "Croatia",
+      "assist": "N. Vlasic"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Bellingham",
+      "minute": 80,
+      "team": "England",
+      "assist": "D. Spence"
+    },
+    {
+      "type": "goal",
+      "player": "P. Musa",
+      "minute": 45,
+      "team": "Croatia",
+      "assist": "I. Perisic"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Baturina",
+      "minute": 78,
+      "team": "Croatia",
+      "assist": "N. Vlasic"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "I. Perisic",
+      "position": "M",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "D. Kotarski",
+      "position": "G",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "A. Kramaric",
+      "position": "F",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "L. Modric",
+      "position": "M",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "N. Vlasic",
+      "position": "M",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "M. Pongracic",
+      "position": "D",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "D. Livakovic",
+      "position": "G",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "N. Moro",
+      "position": "M",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "D. Caleta-Car",
+      "position": "D",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "M. Kovacic",
+      "position": "M",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "M. Pasalic",
+      "position": "M",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "L. Sucic",
+      "position": "M",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "I. Pandur",
+      "position": "G",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "K. Jakic",
+      "position": "M",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "J. Sutalo",
+      "position": "D",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "M. Erlic",
+      "position": "D",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "A. Budimir",
+      "position": "F",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "P. Musa",
+      "position": "F",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "J. Stanisic",
+      "position": "M",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "J. Gvardiol",
+      "position": "D",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "I. Matanovic",
+      "position": "F",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "M. Pasalic",
+      "position": "F",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "T. Fruk",
+      "position": "M",
+      "sub": true,
+      "team": "Croatia"
+    },
+    {
+      "name": "M. Baturina",
+      "position": "F",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "P. Sucic",
+      "position": "F",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "L. Vuskovic",
+      "position": "D",
+      "sub": false,
+      "team": "Croatia"
+    },
+    {
+      "name": "H. Kane",
+      "position": "F",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "J. Henderson",
+      "position": "M",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "J. Stones",
+      "position": "D",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "M. Rashford",
+      "position": "F",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "B. Saka",
+      "position": "F",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "J. Pickford",
+      "position": "G",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "D. Rice",
+      "position": "M",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "D. Burn",
+      "position": "D",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "D. Henderson",
+      "position": "G",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "M. Rogers",
+      "position": "M",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "D. Spence",
+      "position": "D",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "E. Konsa",
+      "position": "D",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "O. Watkins",
+      "position": "F",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "R. James",
+      "position": "D",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "E. Eze",
+      "position": "M",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "I. Toney",
+      "position": "F",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "M. Guehi",
+      "position": "D",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "J. Bellingham",
+      "position": "M",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "N. Madueke",
+      "position": "M",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "A. Gordon",
+      "position": "M",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "E. Anderson",
+      "position": "M",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "J. Quansah",
+      "position": "D",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "J. Trafford",
+      "position": "G",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "K. Mainoo",
+      "position": "M",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "N. O'Reilly",
+      "position": "D",
+      "sub": false,
+      "team": "England"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 11,
+    "shotsOnGoalAway": 5,
+    "shotsOffGoalHome": 6,
+    "shotsOffGoalAway": 3,
+    "totalShotsHome": 22,
+    "totalShotsAway": 10,
+    "blockedShotsHome": 5,
+    "blockedShotsAway": 2,
+    "cornerKicksHome": 8,
+    "cornerKicksAway": 2,
+    "foulsHome": 10,
+    "foulsAway": 12,
+    "ballPossessionHome": 52,
+    "ballPossessionAway": 48,
+    "offsidesHome": 0,
+    "offsidesAway": 1,
+    "goalkeeperSavesHome": 3,
+    "goalkeeperSavesAway": 7,
+    "totalPassesHome": 474,
+    "totalPassesAway": 443,
+    "passesAccurateHome": 406,
+    "passesAccurateAway": 381,
+    "crossesHome": 13,
+    "crossesAway": 13,
+    "interceptionsHome": 7,
+    "interceptionsAway": 8,
+    "duelsWonHome": 38,
+    "duelsWonAway": 41,
+    "freeKicksHome": 12,
+    "freeKicksAway": 10,
+    "expectedGoalsHome": 3.200000047683716,
+    "expectedGoalsAway": 0.699999988079071,
+    "bigChancesHome": 7,
+    "bigChancesAway": 2
+  }
+}

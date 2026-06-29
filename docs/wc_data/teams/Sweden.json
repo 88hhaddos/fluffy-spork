@@ -1,0 +1,179 @@
+{
+  "name": "Sweden",
+  "matches": [
+    {
+      "opponent": "Tunisia",
+      "score": "5:1",
+      "date": "2026-06-15",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    },
+    {
+      "opponent": "Netherlands",
+      "score": "5:1",
+      "date": "2026-06-20",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    },
+    {
+      "opponent": "Japan",
+      "score": "1:1",
+      "date": "2026-06-26",
+      "stage": "",
+      "home": false,
+      "result": "draw"
+    }
+  ],
+  "wins": 1,
+  "draws": 1,
+  "losses": 1,
+  "scored": 7,
+  "conceded": 7,
+  "players": {
+    "V. Lindelof": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "K. Nordfeldt": {
+      "position": "G",
+      "matches": 3,
+      "subs": 1
+    },
+    "K. Sema": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Isak": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0,
+      "goals": 1,
+      "assists": 1
+    },
+    "E. Smith": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "G. Nilsson": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "V. Gyökeres": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0,
+      "assists": 1,
+      "goals": 1,
+      "yellow": 1
+    },
+    "M. Svanberg": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3,
+      "goals": 1
+    },
+    "A. Bernhardsson": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "H. Ekdal": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "G. Gudmundsson": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "C. Starfelt": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "B. Nygren": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "J. Widell Zetterstrom": {
+      "position": "G",
+      "matches": 3,
+      "subs": 2
+    },
+    "J. Karlstrom": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "G. Lagerbielke": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "I. Hien": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "A. Elanga": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2,
+      "goals": 2
+    },
+    "V. Johansson": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "T. Ali": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "H. Johansson": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "D. Svensson": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "E. Stroud": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "Y. Ayari": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "goals": 2,
+      "yellow": 1
+    },
+    "L. Bergvall": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3,
+      "assists": 1,
+      "yellow": 1
+    },
+    "B. Zeneli": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    }
+  }
+}

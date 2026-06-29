@@ -1,0 +1,456 @@
+{
+  "id": 1489388,
+  "home": "Mexico",
+  "away": "South Korea",
+  "home_id": 16,
+  "away_id": 17,
+  "score": "1:0",
+  "score_h": 1,
+  "score_a": 0,
+  "date": "2026-06-19T04:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "Estadio Akron",
+  "referee": "Gustavo Tejera, Uruguay",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "goal",
+      "player": "L. Romo",
+      "minute": 50,
+      "team": "Mexico",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "Lee Jae-Sung",
+      "minute": 57,
+      "team": "South Korea",
+      "assist": "Hwang Hee-Chan"
+    },
+    {
+      "type": "substitution",
+      "player": "Son Heung-Min",
+      "minute": 57,
+      "team": "South Korea",
+      "assist": "Oh Hyeon-Gyu"
+    },
+    {
+      "type": "yellow card",
+      "player": "Paik Seung-Ho",
+      "minute": 58,
+      "team": "South Korea",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "B. Gutierrez",
+      "minute": 71,
+      "team": "Mexico",
+      "assist": "O. Pineda"
+    },
+    {
+      "type": "substitution",
+      "player": "L. Romo",
+      "minute": 71,
+      "team": "Mexico",
+      "assist": "O. Vargas"
+    },
+    {
+      "type": "substitution",
+      "player": "Seol Young-Woo",
+      "minute": 71,
+      "team": "South Korea",
+      "assist": "Yang Hyun-Jun"
+    },
+    {
+      "type": "substitution",
+      "player": "Kim Moon-Hwan",
+      "minute": 71,
+      "team": "South Korea",
+      "assist": "Eom Ji-Sung"
+    },
+    {
+      "type": "substitution",
+      "player": "Paik Seung-Ho",
+      "minute": 77,
+      "team": "South Korea",
+      "assist": "Cho Gue-Sung"
+    },
+    {
+      "type": "substitution",
+      "player": "R. Jimenez",
+      "minute": 80,
+      "team": "Mexico",
+      "assist": "S. Gimenez"
+    },
+    {
+      "type": "substitution",
+      "player": "R. Alvarado",
+      "minute": 80,
+      "team": "Mexico",
+      "assist": "I. Reyes"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Quinones",
+      "minute": 84,
+      "team": "Mexico",
+      "assist": "C. S. Huerta Valera"
+    },
+    {
+      "type": "yellow card",
+      "player": "Lee Kang-In",
+      "minute": 4,
+      "team": "South Korea",
+      "assist": ""
+    }
+  ],
+  "lineups": [
+    {
+      "name": "A. Fidalgo",
+      "position": "M",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "G. Ochoa",
+      "position": "G",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "E. Alvarez",
+      "position": "D",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "J. Sanchez",
+      "position": "D",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "R. Alvarado",
+      "position": "F",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "J. Gallardo",
+      "position": "D",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "R. Jimenez",
+      "position": "F",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "A. Vega",
+      "position": "F",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "J. Quinones",
+      "position": "F",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "J. Vasquez",
+      "position": "D",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "O. Pineda",
+      "position": "M",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "L. Chavez",
+      "position": "M",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "C. Acevedo",
+      "position": "G",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "L. Romo",
+      "position": "M",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "G. Martinez",
+      "position": "F",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "C. S. Huerta Valera",
+      "position": "M",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "S. Gimenez",
+      "position": "F",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "I. Reyes",
+      "position": "D",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "B. Gutierrez",
+      "position": "M",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "E. Lira",
+      "position": "M",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "R. Rangel",
+      "position": "G",
+      "sub": false,
+      "team": "Mexico"
+    },
+    {
+      "name": "A. Gonzalez",
+      "position": "F",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "O. Vargas",
+      "position": "M",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "M. Chavez Garcia",
+      "position": "D",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "G. Mora",
+      "position": "M",
+      "sub": true,
+      "team": "Mexico"
+    },
+    {
+      "name": "Son Heung-Min",
+      "position": "F",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Lee Kang-In",
+      "position": "F",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Jo Hyeon-Woo",
+      "position": "G",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Kim Seung-Gyu",
+      "position": "G",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Kim Min-Jae",
+      "position": "D",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Hwang In-Beom",
+      "position": "M",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Lee Jae-Sung",
+      "position": "F",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Paik Seung-Ho",
+      "position": "M",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Kim Moon-Hwan",
+      "position": "M",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Hwang Hee-Chan",
+      "position": "F",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Kim Jin-Gyu",
+      "position": "M",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Cho Gue-Sung",
+      "position": "F",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Song Bum-Keun",
+      "position": "G",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Kim Tae-Hyeon",
+      "position": "D",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Lee Dong-Gyeong",
+      "position": "M",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Oh Hyeon-Gyu",
+      "position": "F",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Park Jin-Seob",
+      "position": "M",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Seol Young-Woo",
+      "position": "M",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Eom Ji-Sung",
+      "position": "F",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Lee Han-Beom",
+      "position": "D",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Lee Tae-Seok",
+      "position": "D",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "J. Castrop",
+      "position": "M",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Lee Gi-Hyuk",
+      "position": "D",
+      "sub": false,
+      "team": "South Korea"
+    },
+    {
+      "name": "Yang Hyun-Jun",
+      "position": "F",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Bae Jun-Ho",
+      "position": "M",
+      "sub": true,
+      "team": "South Korea"
+    },
+    {
+      "name": "Cho Wi-Je",
+      "position": null,
+      "sub": true,
+      "team": "South Korea"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 4,
+    "shotsOnGoalAway": 2,
+    "shotsOffGoalHome": 3,
+    "shotsOffGoalAway": 4,
+    "totalShotsHome": 8,
+    "totalShotsAway": 9,
+    "blockedShotsHome": 1,
+    "blockedShotsAway": 3,
+    "cornerKicksHome": 0,
+    "cornerKicksAway": 2,
+    "foulsHome": 9,
+    "foulsAway": 7,
+    "yellowCardsHome": 0,
+    "yellowCardsAway": 2,
+    "ballPossessionHome": 42,
+    "ballPossessionAway": 58,
+    "offsidesHome": 3,
+    "offsidesAway": 6,
+    "goalkeeperSavesHome": 2,
+    "goalkeeperSavesAway": 3,
+    "totalPassesHome": 427,
+    "totalPassesAway": 578,
+    "passesAccurateHome": 349,
+    "passesAccurateAway": 488,
+    "crossesHome": 6,
+    "crossesAway": 9,
+    "interceptionsHome": 6,
+    "interceptionsAway": 5,
+    "duelsWonHome": 42,
+    "duelsWonAway": 47,
+    "freeKicksHome": 7,
+    "freeKicksAway": 9,
+    "expectedGoalsHome": 0.5299999713897705,
+    "expectedGoalsAway": 0.9100000262260437,
+    "bigChancesHome": 2,
+    "bigChancesAway": 3
+  }
+}

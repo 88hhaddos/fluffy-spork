@@ -1,0 +1,179 @@
+{
+  "name": "Germany",
+  "matches": [
+    {
+      "opponent": "Curaçao",
+      "score": "7:1",
+      "date": "2026-06-14",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    },
+    {
+      "opponent": "Ivory Coast",
+      "score": "2:1",
+      "date": "2026-06-20",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    },
+    {
+      "opponent": "Ecuador",
+      "score": "2:1",
+      "date": "2026-06-25",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    }
+  ],
+  "wins": 2,
+  "draws": 0,
+  "losses": 1,
+  "scored": 10,
+  "conceded": 4,
+  "players": {
+    "M. Neuer": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "J. Kimmich": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "assists": 2
+    },
+    "J. Tah": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "N. Schlotterbeck": {
+      "position": "D",
+      "matches": 2,
+      "subs": 0,
+      "goals": 1
+    },
+    "N. Brown": {
+      "position": "D",
+      "matches": 2,
+      "subs": 0,
+      "assists": 1,
+      "goals": 1
+    },
+    "A. Pavlovic": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "F. Nmecha": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "goals": 1,
+      "assists": 1
+    },
+    "L. Sane": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "goals": 1
+    },
+    "J. Musiala": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "goals": 1
+    },
+    "F. Wirtz": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "assists": 1
+    },
+    "K. Havertz": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0,
+      "goals": 2
+    },
+    "A. Nubel": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "O. Baumann": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "D. Raum": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "W. Anton": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Rudiger": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "M. Thiaw": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "J. Leweling": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "L. Goretzka": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Ouedraogo": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "N. Amiri": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3,
+      "assists": 1
+    },
+    "A. Stiller": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "P. Gross": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "N. Woltemade": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Beier": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "D. Undav": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3,
+      "goals": 3
+    }
+  }
+}

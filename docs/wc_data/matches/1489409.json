@@ -1,0 +1,476 @@
+{
+  "id": 1489409,
+  "home": "Curaçao",
+  "away": "Ivory Coast",
+  "home_id": 5530,
+  "away_id": 1501,
+  "score": "0:2",
+  "score_h": 0,
+  "score_a": 2,
+  "date": "2026-06-25T23:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Glenn Nyberg, Sweden",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "goal",
+      "player": null,
+      "minute": 7,
+      "team": "Ivory Coast",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "N. Pepe",
+      "minute": 64,
+      "team": "Ivory Coast",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "G. Kastaneer",
+      "minute": 83,
+      "team": "Curaçao",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "J. Brenet",
+      "minute": 90,
+      "team": "Curaçao",
+      "assist": "S. Sambo"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Locadia",
+      "minute": 90,
+      "team": "Curaçao",
+      "assist": "B. Kuwas"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Diallo",
+      "minute": 46,
+      "team": "Ivory Coast",
+      "assist": "C. Inao Oulai"
+    },
+    {
+      "type": "yellow card",
+      "player": "N. Pepe",
+      "minute": 35,
+      "team": "Ivory Coast",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "N. Pepe",
+      "minute": 67,
+      "team": "Ivory Coast",
+      "assist": "E. Wahi"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Bonny",
+      "minute": 67,
+      "team": "Ivory Coast",
+      "assist": "O. Diakite"
+    },
+    {
+      "type": "substitution",
+      "player": "Y. Diomande",
+      "minute": 67,
+      "team": "Ivory Coast",
+      "assist": "B. Toure"
+    },
+    {
+      "type": "yellow card",
+      "player": "J. Bacuna",
+      "minute": 75,
+      "team": "Curaçao",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "J. Gaari",
+      "minute": 77,
+      "team": "Curaçao",
+      "assist": "G. Kastaneer"
+    },
+    {
+      "type": "substitution",
+      "player": "D. Fonville",
+      "minute": 77,
+      "team": "Curaçao",
+      "assist": "T. Noslin"
+    },
+    {
+      "type": "substitution",
+      "player": "F. Kessie",
+      "minute": 77,
+      "team": "Ivory Coast",
+      "assist": "J. Seri"
+    },
+    {
+      "type": "substitution",
+      "player": "L. Comenencia",
+      "minute": 61,
+      "team": "Curaçao",
+      "assist": "J. Antonisse"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "E. Room",
+      "position": "G",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "J. Brenet",
+      "position": "D",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "J. Gaari",
+      "position": "D",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "A. Obispo",
+      "position": "D",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "S. Floranus",
+      "position": "D",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "D. Fonville",
+      "position": "D",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "T. Chong",
+      "position": "M",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "L. Bacuna",
+      "position": "M",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "L. Comenencia",
+      "position": "M",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "J. Locadia",
+      "position": "F",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "J. Bacuna",
+      "position": "M",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "Y. Fofana",
+      "position": "G",
+      "sub": false,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "G. Doue",
+      "position": "D",
+      "sub": false,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "O. Kossounou",
+      "position": "D",
+      "sub": false,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "O. Diomande",
+      "position": "D",
+      "sub": false,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "C. Operi",
+      "position": "D",
+      "sub": false,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "A. Diallo",
+      "position": "M",
+      "sub": false,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "I. Sangare",
+      "position": "M",
+      "sub": false,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "F. Kessie",
+      "position": "M",
+      "sub": false,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "Y. Diomande",
+      "position": "M",
+      "sub": false,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "N. Pepe",
+      "position": "M",
+      "sub": false,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "A. Bonny",
+      "position": "F",
+      "sub": false,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "R. Bazoer",
+      "position": "D",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "B. Kuwas",
+      "position": "F",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "G. Kastaneer",
+      "position": "F",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "K. Gorre",
+      "position": "F",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "R. van Eijma",
+      "position": "D",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "G. Roemeratoe",
+      "position": "M",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "T. Doornbusch",
+      "position": "G",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "S. Sambo",
+      "position": "D",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "J. Antonisse",
+      "position": "F",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "K. Felida",
+      "position": "M",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "S. Hansen",
+      "position": "F",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "A. Martha",
+      "position": "M",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "J. Margaritha",
+      "position": "F",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "T. Bodak",
+      "position": "G",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "T. Noslin",
+      "position": "M",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "C. Inao Oulai",
+      "position": "M",
+      "sub": true,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "B. Toure",
+      "position": "F",
+      "sub": true,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "O. Diakite",
+      "position": "F",
+      "sub": true,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "M. Kone",
+      "position": "G",
+      "sub": true,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "S. Adingra",
+      "position": "F",
+      "sub": true,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "E. Wahi",
+      "position": "F",
+      "sub": true,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "E. Agbadou",
+      "position": "D",
+      "sub": true,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "P. Guiagon",
+      "position": "M",
+      "sub": true,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "E. Guessand",
+      "position": "F",
+      "sub": true,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "E. Ndicka",
+      "position": "D",
+      "sub": true,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "G. Konan",
+      "position": "D",
+      "sub": true,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "A. Lafont",
+      "position": "G",
+      "sub": true,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "J. Seri",
+      "position": "M",
+      "sub": true,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "S. Fofana",
+      "position": "M",
+      "sub": true,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "W. Singo",
+      "position": "D",
+      "sub": true,
+      "team": "Ivory Coast"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 2,
+    "shotsOnGoalAway": 3,
+    "shotsOffGoalHome": 7,
+    "shotsOffGoalAway": 3,
+    "totalShotsHome": 11,
+    "totalShotsAway": 7,
+    "blockedShotsHome": 2,
+    "blockedShotsAway": 1,
+    "cornerKicksHome": 4,
+    "cornerKicksAway": 6,
+    "foulsHome": 11,
+    "foulsAway": 6,
+    "yellowCardsHome": 2,
+    "yellowCardsAway": 1,
+    "ballPossessionHome": 37,
+    "ballPossessionAway": 63,
+    "offsidesHome": 2,
+    "offsidesAway": 1,
+    "goalkeeperSavesHome": 1,
+    "goalkeeperSavesAway": 2,
+    "totalPassesHome": 355,
+    "totalPassesAway": 624,
+    "passesAccurateHome": 295,
+    "passesAccurateAway": 558,
+    "crossesHome": 15,
+    "crossesAway": 16,
+    "interceptionsHome": 15,
+    "interceptionsAway": 12,
+    "duelsWonHome": 45,
+    "duelsWonAway": 42,
+    "freeKicksHome": 6,
+    "freeKicksAway": 11,
+    "expectedGoalsHome": 0.5,
+    "expectedGoalsAway": 1.309999942779541,
+    "bigChancesHome": 0,
+    "bigChancesAway": 3
+  }
+}

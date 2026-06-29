@@ -1,0 +1,202 @@
+{
+  "name": "Jordan",
+  "matches": [
+    {
+      "opponent": "Austria",
+      "score": "3:1",
+      "date": "2026-06-17",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    },
+    {
+      "opponent": "Algeria",
+      "score": "1:2",
+      "date": "2026-06-23",
+      "stage": "",
+      "home": true,
+      "result": "loss"
+    },
+    {
+      "opponent": "Argentina",
+      "score": "1:3",
+      "date": "2026-06-28",
+      "stage": "",
+      "home": true,
+      "result": "loss"
+    }
+  ],
+  "wins": 0,
+  "draws": 0,
+  "losses": 3,
+  "scored": 3,
+  "conceded": 8,
+  "players": {
+    "O. Al Fakhouri": {
+      "position": null,
+      "matches": 2,
+      "subs": 1
+    },
+    "M. Al Daoud": {
+      "position": null,
+      "matches": 2,
+      "subs": 2
+    },
+    "A. Badawi": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "Y. Abulaila": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "E. Haddad": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "A. Nasib": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "Y. Al Arab": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "M. Abualnadi": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "M. Abu Taha": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "M. Tamari": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1
+    },
+    "N. Al Rashdan": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "goals": 1
+    },
+    "N. Al Rawabdeh": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "A. Olwan": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0,
+      "goals": 1
+    },
+    "A. Al Fakhouri": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "S. Obaid": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Abu Ghoush": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Jamous": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "R. Ayed": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "Shararh": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3,
+      "yellow": 1
+    },
+    "M. Al Mardi": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2
+    },
+    "A. Azaizeh": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2
+    },
+    "N. Bani Attiah": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "S. Al Rosan": {
+      "position": null,
+      "matches": 2,
+      "subs": 2
+    },
+    "M. Abu Hasheesh": {
+      "position": null,
+      "matches": 2,
+      "subs": 2
+    },
+    "I. Saadeh": {
+      "position": null,
+      "matches": 2,
+      "subs": 2
+    },
+    "H. Abu Dahab": {
+      "position": null,
+      "matches": 2,
+      "subs": 1,
+      "yellow": 1
+    },
+    "Husam Ali Mohammad Abudahab": {
+      "position": "D",
+      "matches": 1,
+      "subs": 0
+    },
+    "Odeh Fakhoury": {
+      "position": "F",
+      "matches": 1,
+      "subs": 0
+    },
+    "Mohammad Ali Hasheesh": {
+      "position": "D",
+      "matches": 1,
+      "subs": 1
+    },
+    "Saad Al Rousan": {
+      "position": "D",
+      "matches": 1,
+      "subs": 1
+    },
+    "Ibrahim Sadeh": {
+      "position": "M",
+      "matches": 1,
+      "subs": 1
+    },
+    "Mohammad Al Daoud": {
+      "position": "M",
+      "matches": 1,
+      "subs": 1
+    }
+  }
+}

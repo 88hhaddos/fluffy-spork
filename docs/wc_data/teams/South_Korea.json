@@ -1,0 +1,173 @@
+{
+  "name": "South Korea",
+  "matches": [
+    {
+      "opponent": "Czechia",
+      "score": "2:1",
+      "date": "2026-06-12",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    },
+    {
+      "opponent": "Mexico",
+      "score": "1:0",
+      "date": "2026-06-19",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    },
+    {
+      "opponent": "South Africa",
+      "score": "1:0",
+      "date": "2026-06-25",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    }
+  ],
+  "wins": 1,
+  "draws": 0,
+  "losses": 2,
+  "scored": 2,
+  "conceded": 3,
+  "players": {
+    "Kim Seung-Gyu": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "Lee Han-Beom": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "Kim Min-Jae": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "Lee Gi-Hyuk": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "Seol Young-Woo": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "Hwang In-Beom": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "goals": 1,
+      "assists": 1
+    },
+    "Paik Seung-Ho": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "Lee Tae-Seok": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "Lee Kang-In": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "Lee Jae-Sung": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1
+    },
+    "Son Heung-Min": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1
+    },
+    "Jo Hyeon-Woo": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "Song Bum-Keun": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "Kim Moon-Hwan": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "Kim Tae-Hyeon": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "Lee Dong-Gyeong": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "J. Castrop": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "Eom Ji-Sung": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "Kim Jin-Gyu": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "Park Jin-Seob": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "Bae Jun-Ho": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "Cho Gue-Sung": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3,
+      "yellow": 1
+    },
+    "Hwang Hee-Chan": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2
+    },
+    "Oh Hyeon-Gyu": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2,
+      "goals": 1
+    },
+    "Yang Hyun-Jun": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "Cho Wi-Je": {
+      "position": null,
+      "matches": 3,
+      "subs": 3
+    }
+  }
+}

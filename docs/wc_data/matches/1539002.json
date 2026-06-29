@@ -1,0 +1,497 @@
+{
+  "id": 1539002,
+  "home": "Sweden",
+  "away": "Tunisia",
+  "home_id": 5,
+  "away_id": 28,
+  "score": "5:1",
+  "score_h": 5,
+  "score_a": 1,
+  "date": "2026-06-15T05:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "Estadio BBVA",
+  "referee": "Yael Falcon Perez, Argentina",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "goal",
+      "player": "Y. Ayari",
+      "minute": 7,
+      "team": "Sweden",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "A. Isak",
+      "minute": 30,
+      "team": "Sweden",
+      "assist": "V. Gyökeres"
+    },
+    {
+      "type": "goal",
+      "player": null,
+      "minute": 43,
+      "team": "Tunisia",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "V. Gyökeres",
+      "minute": 59,
+      "team": "Sweden",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "G. Gudmundsson",
+      "minute": 65,
+      "team": "Sweden",
+      "assist": "E. Stroud"
+    },
+    {
+      "type": "substitution",
+      "player": "B. Nygren",
+      "minute": 65,
+      "team": "Sweden",
+      "assist": "L. Bergvall"
+    },
+    {
+      "type": "substitution",
+      "player": "E. Saad",
+      "minute": 72,
+      "team": "Tunisia",
+      "assist": "S. Tounekti"
+    },
+    {
+      "type": "substitution",
+      "player": "Y. Valery",
+      "minute": 72,
+      "team": "Tunisia",
+      "assist": "M. Belhadj"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Karlstrom",
+      "minute": 84,
+      "team": "Sweden",
+      "assist": "M. Svanberg"
+    },
+    {
+      "type": "yellow card",
+      "player": "R. Khedira",
+      "minute": 54,
+      "team": "Tunisia",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "M. Svanberg",
+      "minute": 84,
+      "team": "Sweden",
+      "assist": "A. Isak"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Bernhardsson",
+      "minute": 90,
+      "team": "Sweden",
+      "assist": "D. Svensson"
+    },
+    {
+      "type": "substitution",
+      "player": "Y. Valery",
+      "minute": 72,
+      "team": "Tunisia",
+      "assist": "M. Belhadj"
+    },
+    {
+      "type": "substitution",
+      "player": "R. Khedira",
+      "minute": 83,
+      "team": "Tunisia",
+      "assist": "I. Gharbi"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Slimane",
+      "minute": 84,
+      "team": "Tunisia",
+      "assist": "F. Chaouat"
+    },
+    {
+      "type": "goal confirmed",
+      "player": "M. Svanberg",
+      "minute": 86,
+      "team": "Sweden",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "A. Isak",
+      "minute": 90,
+      "team": "Sweden",
+      "assist": "A. Elanga"
+    },
+    {
+      "type": "goal",
+      "player": "Y. Ayari",
+      "minute": 90,
+      "team": "Sweden",
+      "assist": "L. Bergvall"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "M. Belhadj",
+      "position": "M",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "M. Ben Hamida",
+      "position": "D",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "O. Rekik",
+      "position": "D",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "H. Mejbri",
+      "position": "M",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "A. Slimane",
+      "position": "F",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "I. Gharbi",
+      "position": "F",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "E. Saad",
+      "position": "F",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "H. Mastouri",
+      "position": "F",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "M. Neffati",
+      "position": "D",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "A. Arous",
+      "position": "D",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "K. Ayari",
+      "position": "F",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "R. Chikhaoui",
+      "position": "D",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "A. Chamakh",
+      "position": "G",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "R. Elloumi",
+      "position": "F",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "V. Lindelof",
+      "position": "D",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "K. Nordfeldt",
+      "position": "G",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "K. Sema",
+      "position": "M",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "A. Isak",
+      "position": "F",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "E. Smith",
+      "position": "D",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "G. Nilsson",
+      "position": "F",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "V. Gyökeres",
+      "position": "F",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "M. Svanberg",
+      "position": "M",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "A. Bernhardsson",
+      "position": "M",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "H. Ekdal",
+      "position": "D",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "G. Gudmundsson",
+      "position": "M",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "C. Starfelt",
+      "position": "D",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "B. Nygren",
+      "position": "M",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "J. Widell Zetterstrom",
+      "position": "G",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "J. Karlstrom",
+      "position": "M",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "G. Lagerbielke",
+      "position": "D",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "I. Hien",
+      "position": "D",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "A. Elanga",
+      "position": "F",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "V. Johansson",
+      "position": "G",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "T. Ali",
+      "position": "M",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "H. Johansson",
+      "position": "M",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "D. Svensson",
+      "position": "D",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "E. Stroud",
+      "position": "M",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "Y. Ayari",
+      "position": "M",
+      "sub": false,
+      "team": "Sweden"
+    },
+    {
+      "name": "L. Bergvall",
+      "position": "M",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "B. Zeneli",
+      "position": "M",
+      "sub": true,
+      "team": "Sweden"
+    },
+    {
+      "name": "D. Bronn",
+      "position": "D",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "F. Chaouat",
+      "position": "F",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "Y. Valery",
+      "position": "D",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "E. Skhiri",
+      "position": "M",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "R. Khedira",
+      "position": "M",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "E. Achouri",
+      "position": "M",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "S. Ben Hessen",
+      "position": "G",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "A. Dahmen",
+      "position": "G",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "M. Ben Ouanes",
+      "position": "M",
+      "sub": true,
+      "team": "Tunisia"
+    },
+    {
+      "name": "A. Abdi",
+      "position": "D",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "M. Talbi",
+      "position": "D",
+      "sub": false,
+      "team": "Tunisia"
+    },
+    {
+      "name": "S. Tounekti",
+      "position": "F",
+      "sub": true,
+      "team": "Tunisia"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 7,
+    "shotsOnGoalAway": 2,
+    "shotsOffGoalHome": 3,
+    "shotsOffGoalAway": 3,
+    "totalShotsHome": 13,
+    "totalShotsAway": 6,
+    "blockedShotsHome": 3,
+    "blockedShotsAway": 1,
+    "cornerKicksHome": 4,
+    "cornerKicksAway": 2,
+    "foulsHome": 10,
+    "foulsAway": 8,
+    "yellowCardsHome": 0,
+    "yellowCardsAway": 1,
+    "ballPossessionHome": 49,
+    "ballPossessionAway": 51,
+    "offsidesHome": 3,
+    "offsidesAway": 6,
+    "goalkeeperSavesHome": 1,
+    "goalkeeperSavesAway": 1,
+    "totalPassesHome": 356,
+    "totalPassesAway": 371,
+    "passesAccurateHome": 278,
+    "passesAccurateAway": 292,
+    "crossesHome": 12,
+    "crossesAway": 13,
+    "interceptionsHome": 6,
+    "interceptionsAway": 6,
+    "duelsWonHome": 41,
+    "duelsWonAway": 51,
+    "freeKicksHome": 8,
+    "freeKicksAway": 10,
+    "expectedGoalsHome": 1.3300000429153442,
+    "expectedGoalsAway": 0.2800000011920929,
+    "bigChancesHome": 4,
+    "bigChancesAway": 0
+  }
+}

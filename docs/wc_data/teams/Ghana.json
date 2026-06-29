@@ -1,0 +1,173 @@
+{
+  "name": "Ghana",
+  "matches": [
+    {
+      "opponent": "Panama",
+      "score": "1:0",
+      "date": "2026-06-18",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    },
+    {
+      "opponent": "England",
+      "score": "0:0",
+      "date": "2026-06-23",
+      "stage": "",
+      "home": false,
+      "result": "draw"
+    },
+    {
+      "opponent": "Croatia",
+      "score": "2:1",
+      "date": "2026-06-28",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    }
+  ],
+  "wins": 1,
+  "draws": 1,
+  "losses": 1,
+  "scored": 2,
+  "conceded": 2,
+  "players": {
+    "B. Asare": {
+      "position": null,
+      "matches": 3,
+      "subs": 1
+    },
+    "L. Ati Zigi": {
+      "position": "G",
+      "matches": 3,
+      "subs": 2
+    },
+    "M. Senaya": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "J. Adjetey": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "J. Opoku": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "G. Mensah": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "A. Semenyo": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "E. Owusu": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "C. Yirenkyi": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1,
+      "goals": 1
+    },
+    "E. Nuamah": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2,
+      "assists": 1
+    },
+    "K. Sulemana": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1
+    },
+    "J. Ayew": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0
+    },
+    "J. Anang": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Seidu": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Mumin": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Baba": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "K. Peprah": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3,
+      "yellow": 1
+    },
+    "D. Luckassen": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2,
+      "goals": 1
+    },
+    "K. Sibo": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "I. Fatawu": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "C. Bonsu Baah": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "I. Williams": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2,
+      "yellow": 1
+    },
+    "A. Boakye": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "B. Thomas-Asante": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3,
+      "assists": 1
+    },
+    "P. Adu": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "T. Partey": {
+      "position": "M",
+      "matches": 2,
+      "subs": 0
+    }
+  }
+}

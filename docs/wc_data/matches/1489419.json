@@ -1,0 +1,448 @@
+{
+  "id": 1489419,
+  "home": "Colombia",
+  "away": "Portugal",
+  "home_id": 8,
+  "away_id": 27,
+  "score": "0:0",
+  "score_h": 0,
+  "score_a": 0,
+  "date": "2026-06-28T02:30:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Alireza Faghani, Australia",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "substitution",
+      "player": "N. Mendes",
+      "minute": 90,
+      "team": "Portugal",
+      "assist": "M. Nunes"
+    },
+    {
+      "type": "substitution",
+      "player": "R. Neves",
+      "minute": 46,
+      "team": "Portugal",
+      "assist": "J. Neves"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Cancelo",
+      "minute": 46,
+      "team": "Portugal",
+      "assist": "D. Dalot"
+    },
+    {
+      "type": "substitution",
+      "player": "Vitinha",
+      "minute": 70,
+      "team": "Portugal",
+      "assist": "Samu Costa"
+    },
+    {
+      "type": "substitution",
+      "player": "Joao Felix",
+      "minute": 70,
+      "team": "Portugal",
+      "assist": "R. Leao"
+    },
+    {
+      "type": "yellow card",
+      "player": "G. Puerta",
+      "minute": 86,
+      "team": "Colombia",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "S. Arias",
+      "minute": 87,
+      "team": "Colombia",
+      "assist": "D. Munoz"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Cordoba",
+      "minute": 60,
+      "team": "Colombia",
+      "assist": "L. Suarez"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Lerma",
+      "minute": 60,
+      "team": "Colombia",
+      "assist": "R. Rios"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Arias",
+      "minute": 76,
+      "team": "Colombia",
+      "assist": "K. Castano"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Rodriguez",
+      "minute": 76,
+      "team": "Colombia",
+      "assist": "J. Quintero"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "C. Vargas",
+      "position": "G",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "S. Arias",
+      "position": "D",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "D. Sanchez",
+      "position": "D",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Lucumi",
+      "position": "D",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "D. Machado",
+      "position": "D",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "G. Puerta",
+      "position": "M",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Lerma",
+      "position": "M",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Arias",
+      "position": "M",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Rodriguez",
+      "position": "F",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Cordoba",
+      "position": "F",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "L. Diaz",
+      "position": "F",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "D. Costa",
+      "position": "G",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "J. Cancelo",
+      "position": "D",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "R. Dias",
+      "position": "D",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "R. Veiga",
+      "position": "D",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "N. Mendes",
+      "position": "D",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "R. Neves",
+      "position": "M",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "Vitinha",
+      "position": "M",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "P. Neto",
+      "position": "M",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "B. Fernandes",
+      "position": "M",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "Joao Felix",
+      "position": "M",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "C. Ronaldo",
+      "position": "F",
+      "sub": false,
+      "team": "Portugal"
+    },
+    {
+      "name": "D. Ospina",
+      "position": "G",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "A. Montero",
+      "position": "G",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Mojica",
+      "position": "D",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "W. Ditta",
+      "position": "D",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "Y. Mina",
+      "position": "D",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "A. Gomez",
+      "position": "F",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "D. Munoz",
+      "position": "D",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Campaz",
+      "position": "M",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Carrascal",
+      "position": "M",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Quintero",
+      "position": "M",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Portilla",
+      "position": "M",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "K. Castano",
+      "position": "M",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "R. Rios",
+      "position": "M",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "C. Hernandez",
+      "position": "F",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "L. Suarez",
+      "position": "F",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Sa",
+      "position": "G",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "R. Silva",
+      "position": "G",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "D. Dalot",
+      "position": "D",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "G. Inacio",
+      "position": "D",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "M. Nunes",
+      "position": "M",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "N. Semedo",
+      "position": "D",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "T. Araujo",
+      "position": "D",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "B. Silva",
+      "position": "M",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "Trincao",
+      "position": "F",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "G. Guedes",
+      "position": "F",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "J. Neves",
+      "position": "M",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "Samu Costa",
+      "position": "M",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "F. Conceicao",
+      "position": "F",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "G. Ramos",
+      "position": "F",
+      "sub": true,
+      "team": "Portugal"
+    },
+    {
+      "name": "R. Leao",
+      "position": "F",
+      "sub": true,
+      "team": "Portugal"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 6,
+    "shotsOnGoalAway": 2,
+    "shotsOffGoalHome": 11,
+    "shotsOffGoalAway": 7,
+    "totalShotsHome": 24,
+    "totalShotsAway": 13,
+    "blockedShotsHome": 7,
+    "blockedShotsAway": 4,
+    "cornerKicksHome": 5,
+    "cornerKicksAway": 2,
+    "foulsHome": 12,
+    "foulsAway": 6,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 0,
+    "ballPossessionHome": 55,
+    "ballPossessionAway": 45,
+    "offsidesHome": 3,
+    "offsidesAway": 2,
+    "goalkeeperSavesHome": 2,
+    "goalkeeperSavesAway": 6,
+    "totalPassesHome": 545,
+    "totalPassesAway": 446,
+    "passesAccurateHome": 485,
+    "passesAccurateAway": 406,
+    "crossesHome": 11,
+    "crossesAway": 13,
+    "interceptionsHome": 6,
+    "interceptionsAway": 13,
+    "duelsWonHome": 29,
+    "duelsWonAway": 37,
+    "freeKicksHome": 6,
+    "freeKicksAway": 12,
+    "expectedGoalsHome": 1.6299999952316284,
+    "expectedGoalsAway": 0.6899999976158142,
+    "bigChancesHome": 2,
+    "bigChancesAway": 2
+  }
+}

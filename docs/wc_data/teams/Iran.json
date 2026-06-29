@@ -1,0 +1,187 @@
+{
+  "name": "Iran",
+  "matches": [
+    {
+      "opponent": "New Zealand",
+      "score": "2:2",
+      "date": "2026-06-16",
+      "stage": "",
+      "home": true,
+      "result": "draw"
+    },
+    {
+      "opponent": "Belgium",
+      "score": "0:0",
+      "date": "2026-06-21",
+      "stage": "",
+      "home": false,
+      "result": "draw"
+    },
+    {
+      "opponent": "Egypt",
+      "score": "1:1",
+      "date": "2026-06-27",
+      "stage": "",
+      "home": false,
+      "result": "draw"
+    }
+  ],
+  "wins": 0,
+  "draws": 3,
+  "losses": 0,
+  "scored": 3,
+  "conceded": 3,
+  "players": {
+    "D. Eiri": {
+      "position": null,
+      "matches": 2,
+      "subs": 2
+    },
+    "A. Beiranvand": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "R. Rezaeian": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "goals": 2,
+      "assists": 1
+    },
+    "S. Khalilzadeh": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "M. Mohammadi": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "M. Mohebi": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "goals": 1
+    },
+    "S. Ghoddos": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "S. Ezatolahi": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 2
+    },
+    "A. Yousefi": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "S. Moghanlou": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2,
+      "assists": 1
+    },
+    "M. Taremi": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0,
+      "goals": 1,
+      "assists": 1
+    },
+    "P. Niazmand": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "H. Hosseini": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "S. Hardani": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "H. Kanaani": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1
+    },
+    "E. Hajsafi": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2,
+      "yellow": 1
+    },
+    "R. Cheshmi": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Razzaghinia": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Ghaedi": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Ghorbani": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "M. Torabi": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Alipour": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Hosseinzadeh": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Jahanbakhsh": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "D. Eckert": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Nemati": {
+      "position": null,
+      "matches": 2,
+      "subs": 0,
+      "yellow": 1
+    },
+    "Ali Nemati": {
+      "position": "D",
+      "matches": 1,
+      "subs": 0
+    },
+    "Danial Eiri": {
+      "position": "D",
+      "matches": 1,
+      "subs": 1
+    }
+  }
+}

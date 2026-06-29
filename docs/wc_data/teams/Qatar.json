@@ -1,0 +1,172 @@
+{
+  "name": "Qatar",
+  "matches": [
+    {
+      "opponent": "Switzerland",
+      "score": "1:1",
+      "date": "2026-06-13",
+      "stage": "",
+      "home": true,
+      "result": "draw"
+    },
+    {
+      "opponent": "Canada",
+      "score": "6:0",
+      "date": "2026-06-19",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    },
+    {
+      "opponent": "Bosnia & Herzegovina",
+      "score": "3:1",
+      "date": "2026-06-24",
+      "stage": "",
+      "home": false,
+      "result": "loss"
+    }
+  ],
+  "wins": 0,
+  "draws": 1,
+  "losses": 2,
+  "scored": 2,
+  "conceded": 10,
+  "players": {
+    "A. Al Hussain": {
+      "position": null,
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Abunada": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "A. Al Oui": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "Pedro Miguel": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "B. Khoukhi": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "H. Al Amin": {
+      "position": "D",
+      "matches": 2,
+      "subs": 0,
+      "red": 1
+    },
+    "J. Gaber": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "A. O. Madibo": {
+      "position": "M",
+      "matches": 2,
+      "subs": 0,
+      "red": 1
+    },
+    "I. Laye": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "Edmilson Junior": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0
+    },
+    "Y. Abdurisag": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1
+    },
+    "A. Afif": {
+      "position": "F",
+      "matches": 3,
+      "subs": 0
+    },
+    "M. Barsham": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "S. Zakaria": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "Lucas Mendes": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "S. Al Brake": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2
+    },
+    "A. Hatem": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Al Ganehi": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Fathi": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2,
+      "yellow": 2
+    },
+    "K. Boudiaf": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "M. Al Mannai": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Ali": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "M. Muntari": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "T. Jamshid": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "H. Al Haydos": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2,
+      "goals": 1
+    },
+    "A. Alaaeldin": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    }
+  }
+}

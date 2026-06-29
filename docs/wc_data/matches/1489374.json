@@ -1,0 +1,481 @@
+{
+  "id": 1489374,
+  "home": "Germany",
+  "away": "Curaçao",
+  "home_id": 25,
+  "away_id": 5530,
+  "score": "7:1",
+  "score_h": 7,
+  "score_a": 1,
+  "date": "2026-06-14T20:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Jalal Jayed, Morocco",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "goal",
+      "player": "F. Nmecha",
+      "minute": 6,
+      "team": "Germany",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "D. Undav",
+      "minute": 78,
+      "team": "Germany",
+      "assist": "J. Kimmich"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Musiala",
+      "minute": 64,
+      "team": "Germany",
+      "assist": "D. Undav"
+    },
+    {
+      "type": "goal",
+      "player": "N. Schlotterbeck",
+      "minute": 38,
+      "team": "Germany",
+      "assist": "N. Brown"
+    },
+    {
+      "type": "goal",
+      "player": "L. Comenencia",
+      "minute": 21,
+      "team": "Curaçao",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "S. Hansen",
+      "minute": 46,
+      "team": "Curaçao",
+      "assist": "J. Antonisse"
+    },
+    {
+      "type": "goal",
+      "player": "J. Musiala",
+      "minute": 47,
+      "team": "Germany",
+      "assist": "J. Kimmich"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Locadia",
+      "minute": 65,
+      "team": "Curaçao",
+      "assist": "J. Margaritha"
+    },
+    {
+      "type": "substitution",
+      "player": "T. Chong",
+      "minute": 83,
+      "team": "Curaçao",
+      "assist": "G. Kastaneer"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Kimmich",
+      "minute": 83,
+      "team": "Germany",
+      "assist": "W. Anton"
+    },
+    {
+      "type": "goal",
+      "player": "N. Brown",
+      "minute": 68,
+      "team": "Germany",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "N. Brown",
+      "minute": 73,
+      "team": "Germany",
+      "assist": "D. Raum"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Pavlovic",
+      "minute": 73,
+      "team": "Germany",
+      "assist": "L. Goretzka"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Tah",
+      "minute": 73,
+      "team": "Germany",
+      "assist": "A. Rudiger"
+    },
+    {
+      "type": "goal",
+      "player": "K. Havertz",
+      "minute": 88,
+      "team": "Germany",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "K. Havertz",
+      "minute": 45,
+      "team": "Germany",
+      "assist": ""
+    }
+  ],
+  "lineups": [
+    {
+      "name": "M. Neuer",
+      "position": "G",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "J. Kimmich",
+      "position": "D",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "J. Tah",
+      "position": "D",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "N. Schlotterbeck",
+      "position": "D",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "N. Brown",
+      "position": "D",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "A. Pavlovic",
+      "position": "M",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "F. Nmecha",
+      "position": "M",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "L. Sane",
+      "position": "M",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "J. Musiala",
+      "position": "M",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "F. Wirtz",
+      "position": "M",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "K. Havertz",
+      "position": "F",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "E. Room",
+      "position": "G",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "S. Floranus",
+      "position": "D",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "R. Bazoer",
+      "position": "D",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "A. Obispo",
+      "position": "D",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "D. Fonville",
+      "position": "D",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "L. Comenencia",
+      "position": "M",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "L. Bacuna",
+      "position": "M",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "S. Hansen",
+      "position": "F",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "T. Chong",
+      "position": "M",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "J. Bacuna",
+      "position": "M",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "J. Locadia",
+      "position": "F",
+      "sub": false,
+      "team": "Curaçao"
+    },
+    {
+      "name": "A. Nubel",
+      "position": "G",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "O. Baumann",
+      "position": "G",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "D. Raum",
+      "position": "D",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "W. Anton",
+      "position": "D",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "A. Rudiger",
+      "position": "D",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "M. Thiaw",
+      "position": "D",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "J. Leweling",
+      "position": "F",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "L. Goretzka",
+      "position": "M",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "A. Ouedraogo",
+      "position": "M",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "N. Amiri",
+      "position": "M",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "A. Stiller",
+      "position": "M",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "P. Gross",
+      "position": "M",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "N. Woltemade",
+      "position": "F",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "M. Beier",
+      "position": "F",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "D. Undav",
+      "position": "F",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "T. Doornbusch",
+      "position": "G",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "T. Bodak",
+      "position": "G",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "J. Gaari",
+      "position": "D",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "J. Brenet",
+      "position": "D",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "S. Sambo",
+      "position": "D",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "R. van Eijma",
+      "position": "D",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "A. Martha",
+      "position": "M",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "J. Antonisse",
+      "position": "F",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "K. Gorre",
+      "position": "F",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "K. Felida",
+      "position": "M",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "T. Noslin",
+      "position": "M",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "J. Margaritha",
+      "position": "F",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "G. Roemeratoe",
+      "position": "M",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "G. Kastaneer",
+      "position": "F",
+      "sub": true,
+      "team": "Curaçao"
+    },
+    {
+      "name": "B. Kuwas",
+      "position": "F",
+      "sub": true,
+      "team": "Curaçao"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 12,
+    "shotsOnGoalAway": 2,
+    "shotsOffGoalHome": 6,
+    "shotsOffGoalAway": 6,
+    "totalShotsHome": 26,
+    "totalShotsAway": 8,
+    "blockedShotsHome": 8,
+    "blockedShotsAway": 0,
+    "cornerKicksHome": 8,
+    "cornerKicksAway": 1,
+    "foulsHome": 18,
+    "foulsAway": 11,
+    "ballPossessionHome": 65,
+    "ballPossessionAway": 35,
+    "offsidesHome": 0,
+    "offsidesAway": 1,
+    "goalkeeperSavesHome": 1,
+    "goalkeeperSavesAway": 4,
+    "totalPassesHome": 637,
+    "totalPassesAway": 343,
+    "passesAccurateHome": 554,
+    "passesAccurateAway": 282,
+    "crossesHome": 12,
+    "crossesAway": 7,
+    "interceptionsHome": 12,
+    "interceptionsAway": 16,
+    "duelsWonHome": 46,
+    "duelsWonAway": 50,
+    "freeKicksHome": 11,
+    "freeKicksAway": 18,
+    "expectedGoalsHome": 4.21999979019165,
+    "expectedGoalsAway": 0.4099999964237213,
+    "bigChancesHome": 6,
+    "bigChancesAway": 0
+  }
+}

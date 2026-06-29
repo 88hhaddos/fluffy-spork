@@ -1,0 +1,436 @@
+{
+  "id": 1561329,
+  "home": "South Africa",
+  "away": "Canada",
+  "home_id": 1531,
+  "away_id": 5529,
+  "score": "0:1",
+  "score_h": 0,
+  "score_a": 1,
+  "date": "2026-06-28T22:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Joao Pedro Pinheiro, Portugal",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "substitution",
+      "player": "R. Mofokeng",
+      "minute": 46,
+      "team": "South Africa",
+      "assist": "T. Mbatha"
+    },
+    {
+      "type": "yellow card",
+      "player": "N. Sigur",
+      "minute": 67,
+      "team": "Canada",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "T. Buchanan",
+      "minute": 75,
+      "team": "Canada",
+      "assist": "A. Davies"
+    },
+    {
+      "type": "substitution",
+      "player": "E. Makgopa",
+      "minute": 86,
+      "team": "South Africa",
+      "assist": "I. Rayners"
+    },
+    {
+      "type": "yellow card",
+      "player": "N. Saliba",
+      "minute": 54,
+      "team": "Canada",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "T. Oluwaseyi",
+      "minute": 70,
+      "team": "Canada",
+      "assist": "P. David"
+    },
+    {
+      "type": "substitution",
+      "player": "L. Millar",
+      "minute": 70,
+      "team": "Canada",
+      "assist": "J. Shaffelburg"
+    },
+    {
+      "type": "substitution",
+      "player": "N. Saliba",
+      "minute": 59,
+      "team": "Canada",
+      "assist": "N. Sigur"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Bombito",
+      "minute": 59,
+      "team": "Canada",
+      "assist": "L. De Fougerolles"
+    },
+    {
+      "type": "substitution",
+      "player": "T. Maseko",
+      "minute": 86,
+      "team": "South Africa",
+      "assist": "T. Moremi"
+    },
+    {
+      "type": "goal",
+      "player": "S. Eustaquio",
+      "minute": 90,
+      "team": "Canada",
+      "assist": ""
+    }
+  ],
+  "lineups": [
+    {
+      "name": "R. Williams",
+      "position": "G",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "K. Mudau",
+      "position": "D",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "I. Okon",
+      "position": "D",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "M. Mbokazi",
+      "position": "D",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "A. Modiba",
+      "position": "D",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "T. Mokoena",
+      "position": "M",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "Y. Sithole",
+      "position": "M",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "T. Maseko",
+      "position": "M",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "R. Mofokeng",
+      "position": "M",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "O. Appollis",
+      "position": "M",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "E. Makgopa",
+      "position": "F",
+      "sub": false,
+      "team": "South Africa"
+    },
+    {
+      "name": "M. Crepeau",
+      "position": "G",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "A. Johnston",
+      "position": "D",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "M. Bombito",
+      "position": "D",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "D. Cornelius",
+      "position": "D",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "R. Laryea",
+      "position": "D",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "T. Buchanan",
+      "position": "M",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "N. Saliba",
+      "position": "M",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "S. Eustaquio",
+      "position": "M",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "L. Millar",
+      "position": "M",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "J. David",
+      "position": "F",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "T. Oluwaseyi",
+      "position": "F",
+      "sub": false,
+      "team": "Canada"
+    },
+    {
+      "name": "S. Chaine",
+      "position": "G",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "R. Goss",
+      "position": "G",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "T. Matuludi",
+      "position": "D",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "K. Ndamane",
+      "position": "D",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "S. Kabini",
+      "position": "D",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "N. Sibisi",
+      "position": "D",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "O. Makhanya",
+      "position": "D",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "B. Cross",
+      "position": "D",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "T. Mbatha",
+      "position": "M",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "J. Adams",
+      "position": "M",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "T. Moremi",
+      "position": "F",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "K. Sebelebele",
+      "position": "M",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "L. Foster",
+      "position": "F",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "I. Rayners",
+      "position": "F",
+      "sub": true,
+      "team": "South Africa"
+    },
+    {
+      "name": "D. St.Clair",
+      "position": "G",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "O. Goodman",
+      "position": "G",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "A. Jones",
+      "position": "D",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "L. De Fougerolles",
+      "position": "D",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "J. Waterman",
+      "position": "D",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "A. Davies",
+      "position": "D",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "N. Sigur",
+      "position": "M",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "M. Choiniere",
+      "position": "M",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "J. Shaffelburg",
+      "position": "F",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "A. Ahmed",
+      "position": "M",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "J. Osorio",
+      "position": "M",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "C. Larin",
+      "position": "F",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "P. David",
+      "position": "F",
+      "sub": true,
+      "team": "Canada"
+    },
+    {
+      "name": "J. Nelson",
+      "position": "F",
+      "sub": true,
+      "team": "Canada"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 1,
+    "shotsOnGoalAway": 7,
+    "shotsOffGoalHome": 4,
+    "shotsOffGoalAway": 5,
+    "totalShotsHome": 6,
+    "totalShotsAway": 12,
+    "blockedShotsHome": 1,
+    "blockedShotsAway": 0,
+    "cornerKicksHome": 1,
+    "cornerKicksAway": 4,
+    "foulsHome": 9,
+    "foulsAway": 16,
+    "yellowCardsHome": 0,
+    "yellowCardsAway": 2,
+    "ballPossessionHome": 58,
+    "ballPossessionAway": 42,
+    "offsidesHome": 1,
+    "offsidesAway": 0,
+    "goalkeeperSavesHome": 5,
+    "goalkeeperSavesAway": 1,
+    "totalPassesHome": 537,
+    "totalPassesAway": 377,
+    "passesAccurateHome": 456,
+    "passesAccurateAway": 297,
+    "crossesHome": 7,
+    "crossesAway": 13,
+    "interceptionsHome": 15,
+    "interceptionsAway": 8,
+    "duelsWonHome": 61,
+    "duelsWonAway": 56,
+    "freeKicksHome": 16,
+    "freeKicksAway": 10,
+    "expectedGoalsHome": 0.12999999523162842,
+    "expectedGoalsAway": 1.3200000524520874,
+    "bigChancesHome": 0,
+    "bigChancesAway": 4
+  }
+}

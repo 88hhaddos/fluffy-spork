@@ -1,0 +1,175 @@
+{
+  "name": "Mexico",
+  "matches": [
+    {
+      "opponent": "South Africa",
+      "score": "2:0",
+      "date": "2026-06-11",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    },
+    {
+      "opponent": "South Korea",
+      "score": "1:0",
+      "date": "2026-06-19",
+      "stage": "",
+      "home": true,
+      "result": "win"
+    },
+    {
+      "opponent": "Czechia",
+      "score": "0:3",
+      "date": "2026-06-25",
+      "stage": "",
+      "home": false,
+      "result": "win"
+    }
+  ],
+  "wins": 3,
+  "draws": 0,
+  "losses": 0,
+  "scored": 6,
+  "conceded": 0,
+  "players": {
+    "R. Rangel": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "I. Reyes": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "C. Montes": {
+      "position": "D",
+      "matches": 2,
+      "subs": 0,
+      "red": 1
+    },
+    "J. Vasquez": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "J. Gallardo": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "E. Lira": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1
+    },
+    "R. Alvarado": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "assists": 1
+    },
+    "B. Gutierrez": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1
+    },
+    "A. Fidalgo": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2,
+      "goals": 1
+    },
+    "J. Quinones": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "goals": 2
+    },
+    "R. Jimenez": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1,
+      "goals": 1
+    },
+    "C. Acevedo": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "G. Ochoa": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "J. Sanchez": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "L. Romo": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1,
+      "goals": 1
+    },
+    "M. Chavez Garcia": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2,
+      "goals": 1
+    },
+    "A. Vega": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "C. S. Huerta Valera": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "E. Alvarez": {
+      "position": "M",
+      "matches": 3,
+      "subs": 1,
+      "yellow": 1
+    },
+    "G. Mora": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "L. Chavez": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "O. Vargas": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "O. Pineda": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "A. Gonzalez": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "G. Martinez": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2
+    },
+    "S. Gimenez": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    }
+  }
+}

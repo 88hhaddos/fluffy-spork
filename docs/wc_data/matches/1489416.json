@@ -1,0 +1,497 @@
+{
+  "id": 1489416,
+  "home": "Norway",
+  "away": "France",
+  "home_id": 1090,
+  "away_id": 2,
+  "score": "1:4",
+  "score_h": 1,
+  "score_a": 4,
+  "date": "2026-06-26T22:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "Gillette Stadium",
+  "referee": "Michael Oliver, England",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "goal",
+      "player": "O. Dembele",
+      "minute": 7,
+      "team": "France",
+      "assist": "K. Mbappe"
+    },
+    {
+      "type": "goal",
+      "player": "T. Aasgaard",
+      "minute": 21,
+      "team": "Norway",
+      "assist": "A. Schjelderup"
+    },
+    {
+      "type": "yellow card",
+      "player": "P. Berg",
+      "minute": 10,
+      "team": "Norway",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": null,
+      "minute": 20,
+      "team": "France",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "J. Larsen",
+      "minute": 50,
+      "team": "Norway",
+      "assist": "J. Larsen"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Olise",
+      "minute": 65,
+      "team": "France",
+      "assist": "R. Cherki"
+    },
+    {
+      "type": "substitution",
+      "player": "O. Dembele",
+      "minute": 65,
+      "team": "France",
+      "assist": "B. Barcola"
+    },
+    {
+      "type": "yellow card",
+      "player": "A. Tchouameni",
+      "minute": 74,
+      "team": "France",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "K. Thorstvedt",
+      "minute": 46,
+      "team": "Norway",
+      "assist": "M. Thorsby"
+    },
+    {
+      "type": "substitution",
+      "player": "F. Bjorkan",
+      "minute": 46,
+      "team": "Norway",
+      "assist": "M. Pedersen"
+    },
+    {
+      "type": "substitution",
+      "player": "H. Falchener",
+      "minute": 66,
+      "team": "Norway",
+      "assist": "S. Langas"
+    },
+    {
+      "type": "substitution",
+      "player": "D. Upamecano",
+      "minute": 76,
+      "team": "France",
+      "assist": "I. Konate"
+    },
+    {
+      "type": "goal",
+      "player": "D. Doue",
+      "minute": 90,
+      "team": "France",
+      "assist": "B. Barcola"
+    },
+    {
+      "type": "goal",
+      "player": "O. Dembele",
+      "minute": 32,
+      "team": "France",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "A. Schjelderup",
+      "minute": 83,
+      "team": "Norway",
+      "assist": "J. Hauge"
+    },
+    {
+      "type": "substitution",
+      "player": "O. Bobb",
+      "minute": 83,
+      "team": "Norway",
+      "assist": "A. Nusa"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Kounde",
+      "minute": 87,
+      "team": "France",
+      "assist": "M. Gusto"
+    },
+    {
+      "type": "substitution",
+      "player": "K. Mbappe",
+      "minute": 87,
+      "team": "France",
+      "assist": "J. Mateta"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "E. Selvik",
+      "position": "G",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "F. Aursnes",
+      "position": "D",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "H. Falchener",
+      "position": "D",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "L. Ostigard",
+      "position": "D",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "F. Bjorkan",
+      "position": "D",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "K. Thorstvedt",
+      "position": "M",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "P. Berg",
+      "position": "M",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "O. Bobb",
+      "position": "F",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "T. Aasgaard",
+      "position": "M",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "A. Schjelderup",
+      "position": "F",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "J. Larsen",
+      "position": "F",
+      "sub": false,
+      "team": "Norway"
+    },
+    {
+      "name": "M. Maignan",
+      "position": "G",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "J. Kounde",
+      "position": "D",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "D. Upamecano",
+      "position": "D",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "M. Lacroix",
+      "position": "D",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "T. Hernandez",
+      "position": "D",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "A. Tchouameni",
+      "position": "M",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "M. Kone",
+      "position": "M",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "O. Dembele",
+      "position": "M",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "M. Olise",
+      "position": "M",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "D. Doue",
+      "position": "M",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "K. Mbappe",
+      "position": "F",
+      "sub": false,
+      "team": "France"
+    },
+    {
+      "name": "O. Nyland",
+      "position": "G",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "S. Tangvik",
+      "position": "G",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "K. Ajer",
+      "position": "D",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "D. Wolfe",
+      "position": "D",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "T. Heggem",
+      "position": "D",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "S. Langas",
+      "position": "D",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "M. Pedersen",
+      "position": "D",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "M. Thorsby",
+      "position": "M",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "S. Berge",
+      "position": "M",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "M. Odegaard",
+      "position": "M",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "J. Ryerson",
+      "position": "D",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "J. Hauge",
+      "position": "M",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "A. Sorloth",
+      "position": "F",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "E. Haaland",
+      "position": "F",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "A. Nusa",
+      "position": "M",
+      "sub": true,
+      "team": "Norway"
+    },
+    {
+      "name": "B. Samba",
+      "position": "G",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "R. Risser",
+      "position": "G",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "M. Gusto",
+      "position": "D",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "L. Digne",
+      "position": "D",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "I. Konate",
+      "position": "D",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "W. Saliba",
+      "position": "D",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "L. Hernandez",
+      "position": "D",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "N. Kante",
+      "position": "M",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "A. Rabiot",
+      "position": "M",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "W. Zaire-Emery",
+      "position": "M",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "R. Cherki",
+      "position": "M",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "M. Akliouche",
+      "position": "M",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "M. Thuram",
+      "position": "F",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "B. Barcola",
+      "position": "F",
+      "sub": true,
+      "team": "France"
+    },
+    {
+      "name": "J. Mateta",
+      "position": "F",
+      "sub": true,
+      "team": "France"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 4,
+    "shotsOnGoalAway": 9,
+    "shotsOffGoalHome": 3,
+    "shotsOffGoalAway": 6,
+    "totalShotsHome": 10,
+    "totalShotsAway": 18,
+    "blockedShotsHome": 3,
+    "blockedShotsAway": 3,
+    "cornerKicksHome": 4,
+    "cornerKicksAway": 5,
+    "foulsHome": 9,
+    "foulsAway": 11,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 1,
+    "ballPossessionHome": 43,
+    "ballPossessionAway": 57,
+    "offsidesHome": 1,
+    "offsidesAway": 2,
+    "goalkeeperSavesHome": 5,
+    "goalkeeperSavesAway": 3,
+    "totalPassesHome": 420,
+    "totalPassesAway": 557,
+    "passesAccurateHome": 344,
+    "passesAccurateAway": 480,
+    "crossesHome": 9,
+    "crossesAway": 10,
+    "interceptionsHome": 13,
+    "interceptionsAway": 11,
+    "duelsWonHome": 42,
+    "duelsWonAway": 45,
+    "freeKicksHome": 11,
+    "freeKicksAway": 9,
+    "expectedGoalsHome": 1.690000057220459,
+    "expectedGoalsAway": 1.309999942779541,
+    "bigChancesHome": 4,
+    "bigChancesAway": 3
+  }
+}

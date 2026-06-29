@@ -1,0 +1,477 @@
+{
+  "id": 1489418,
+  "home": "Algeria",
+  "away": "Austria",
+  "home_id": 1532,
+  "away_id": 775,
+  "score": "3:3",
+  "score_h": 3,
+  "score_a": 3,
+  "date": "2026-06-28T05:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "Ilgiz Tantashev, Uzbekistan",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "substitution",
+      "player": "M. Arnautovic",
+      "minute": 46,
+      "team": "Austria",
+      "assist": "M. Gregoritsch"
+    },
+    {
+      "type": "substitution",
+      "player": "X. Schlager",
+      "minute": 46,
+      "team": "Austria",
+      "assist": "F. Grillitsch"
+    },
+    {
+      "type": "substitution",
+      "player": "R. Schmid",
+      "minute": 46,
+      "team": "Austria",
+      "assist": "P. Wanner"
+    },
+    {
+      "type": "goal",
+      "player": "R. Mahrez",
+      "minute": 60,
+      "team": "Algeria",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "D. Alaba",
+      "minute": 62,
+      "team": "Austria",
+      "assist": "K. Danso"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Gouiri",
+      "minute": 71,
+      "team": "Algeria",
+      "assist": "Z. Belaid"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Hadjam",
+      "minute": 71,
+      "team": "Algeria",
+      "assist": "R. Ait-Nouri"
+    },
+    {
+      "type": "substitution",
+      "player": "R. Belghali",
+      "minute": 71,
+      "team": "Algeria",
+      "assist": "S. Chergui"
+    },
+    {
+      "type": "goal",
+      "player": "R. Mahrez",
+      "minute": 90,
+      "team": "Algeria",
+      "assist": "H. Aouar"
+    },
+    {
+      "type": "substitution",
+      "player": "P. Mwene",
+      "minute": 90,
+      "team": "Austria",
+      "assist": "S. Kalajdzic"
+    },
+    {
+      "type": "substitution",
+      "player": "H. Aouar",
+      "minute": 90,
+      "team": "Algeria",
+      "assist": "F. Ghedjemis"
+    },
+    {
+      "type": "goal",
+      "player": "S. Kalajdzic",
+      "minute": 90,
+      "team": "Austria",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "R. Belghali",
+      "minute": 45,
+      "team": "Algeria",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "M. Sabitzer",
+      "minute": 55,
+      "team": "Austria",
+      "assist": "K. Laimer"
+    },
+    {
+      "type": "yellow card",
+      "player": "M. Arnautovic",
+      "minute": 11,
+      "team": "Austria",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "M. Arnautovic",
+      "minute": 28,
+      "team": "Austria",
+      "assist": "D. Alaba"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "O. Benbot",
+      "position": "G",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "R. Belghali",
+      "position": "D",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "A. Mandi",
+      "position": "D",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "R. Bensebaini",
+      "position": "D",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "J. Hadjam",
+      "position": "D",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "H. Aouar",
+      "position": "M",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "N. Bentaleb",
+      "position": "M",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "I. Maza",
+      "position": "M",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "R. Mahrez",
+      "position": "M",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "A. Gouiri",
+      "position": "F",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "F. Chaibi",
+      "position": "M",
+      "sub": false,
+      "team": "Algeria"
+    },
+    {
+      "name": "A. Schlager",
+      "position": "G",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "S. Posch",
+      "position": "D",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "P. Lienhart",
+      "position": "D",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "D. Alaba",
+      "position": "D",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "P. Mwene",
+      "position": "D",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "N. Seiwald",
+      "position": "M",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "X. Schlager",
+      "position": "M",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "R. Schmid",
+      "position": "M",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "K. Laimer",
+      "position": "M",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "M. Sabitzer",
+      "position": "M",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "M. Arnautovic",
+      "position": "F",
+      "sub": false,
+      "team": "Austria"
+    },
+    {
+      "name": "M. Mastil",
+      "position": "G",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "L. Zidane",
+      "position": "G",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "A. Abada",
+      "position": "D",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "M. Tougai",
+      "position": "D",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "Z. Belaid",
+      "position": "D",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "R. Ait-Nouri",
+      "position": "D",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "S. Chergui",
+      "position": "D",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "R. Zerrouki",
+      "position": "M",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "H. Boudaoui",
+      "position": "M",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "Y. Titraoui",
+      "position": "M",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "A. Hadj Moussa",
+      "position": "F",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "A. Boulbina",
+      "position": "F",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "N. Benbouali",
+      "position": "F",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "F. Ghedjemis",
+      "position": "F",
+      "sub": true,
+      "team": "Algeria"
+    },
+    {
+      "name": "F. Wiegele",
+      "position": "G",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "P. Pentz",
+      "position": "G",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "D. Affengruber",
+      "position": "D",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "K. Danso",
+      "position": "D",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "M. Friedl",
+      "position": "D",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "M. Svoboda",
+      "position": "D",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "F. Grillitsch",
+      "position": "M",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "C. Chukwuemeka",
+      "position": "M",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "D. Ljubicic",
+      "position": "M",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "A. Prass",
+      "position": "D",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "P. Wanner",
+      "position": "M",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "A. Schopf",
+      "position": "M",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "P. Wimmer",
+      "position": "M",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "M. Gregoritsch",
+      "position": "F",
+      "sub": true,
+      "team": "Austria"
+    },
+    {
+      "name": "S. Kalajdzic",
+      "position": "F",
+      "sub": true,
+      "team": "Austria"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 5,
+    "shotsOnGoalAway": 3,
+    "shotsOffGoalHome": 5,
+    "shotsOffGoalAway": 6,
+    "totalShotsHome": 12,
+    "totalShotsAway": 10,
+    "blockedShotsHome": 2,
+    "blockedShotsAway": 1,
+    "cornerKicksHome": 0,
+    "cornerKicksAway": 3,
+    "foulsHome": 3,
+    "foulsAway": 7,
+    "yellowCardsHome": 0,
+    "yellowCardsAway": 1,
+    "ballPossessionHome": 65,
+    "ballPossessionAway": 35,
+    "offsidesHome": 1,
+    "offsidesAway": 3,
+    "goalkeeperSavesHome": 0,
+    "goalkeeperSavesAway": 2,
+    "totalPassesHome": 755,
+    "totalPassesAway": 397,
+    "passesAccurateHome": 706,
+    "passesAccurateAway": 346,
+    "crossesHome": 5,
+    "crossesAway": 13,
+    "interceptionsHome": 4,
+    "interceptionsAway": 10,
+    "duelsWonHome": 34,
+    "duelsWonAway": 23,
+    "freeKicksHome": 7,
+    "freeKicksAway": 3,
+    "expectedGoalsHome": 1.6200000047683716,
+    "expectedGoalsAway": 1.440000057220459,
+    "bigChancesHome": 3,
+    "bigChancesAway": 2
+  }
+}

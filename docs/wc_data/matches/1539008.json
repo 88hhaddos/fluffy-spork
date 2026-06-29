@@ -1,0 +1,455 @@
+{
+  "id": 1539008,
+  "home": "Colombia",
+  "away": "Congo DR",
+  "home_id": 8,
+  "away_id": 1508,
+  "score": "1:0",
+  "score_h": 1,
+  "score_a": 0,
+  "date": "2026-06-24T05:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "Estadio Akron",
+  "referee": "Maurizio Mariani, Italy",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "substitution",
+      "player": "J. Arias",
+      "minute": 77,
+      "team": "Colombia",
+      "assist": "R. Rios"
+    },
+    {
+      "type": "substitution",
+      "player": "S. Moutoussamy",
+      "minute": 82,
+      "team": "Congo DR",
+      "assist": "N. Mbuku"
+    },
+    {
+      "type": "goal",
+      "player": "D. Munoz",
+      "minute": 76,
+      "team": "Colombia",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "N. Mukau",
+      "minute": 46,
+      "team": "Congo DR",
+      "assist": "N. Sadiki"
+    },
+    {
+      "type": "yellow card",
+      "player": "J. Lucumi",
+      "minute": 56,
+      "team": "Colombia",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "C. Bakambu",
+      "minute": 57,
+      "team": "Congo DR",
+      "assist": "S. Banza"
+    },
+    {
+      "type": "substitution",
+      "player": "L. Suarez",
+      "minute": 58,
+      "team": "Colombia",
+      "assist": "J. Cordoba"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Rodriguez",
+      "minute": 58,
+      "team": "Colombia",
+      "assist": "J. Quintero"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Masuaku",
+      "minute": 72,
+      "team": "Congo DR",
+      "assist": "J. Kayembe"
+    },
+    {
+      "type": "substitution",
+      "player": "E. Kayembe",
+      "minute": 72,
+      "team": "Congo DR",
+      "assist": "C. Pickel"
+    },
+    {
+      "type": "yellow card",
+      "player": "J. Lerma",
+      "minute": 90,
+      "team": "Colombia",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "C. Pickel",
+      "minute": 90,
+      "team": "Congo DR",
+      "assist": ""
+    }
+  ],
+  "lineups": [
+    {
+      "name": "T. Bongonda",
+      "position": "M",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "C. Vargas",
+      "position": "G",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "D. Munoz",
+      "position": "D",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "D. Sanchez",
+      "position": "D",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Lucumi",
+      "position": "D",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Mojica",
+      "position": "D",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Lerma",
+      "position": "M",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "G. Puerta",
+      "position": "M",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Arias",
+      "position": "M",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Rodriguez",
+      "position": "F",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "L. Diaz",
+      "position": "F",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "L. Suarez",
+      "position": "F",
+      "sub": false,
+      "team": "Colombia"
+    },
+    {
+      "name": "L. Mpasi-Nzau",
+      "position": "G",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "A. Wan-Bissaka",
+      "position": "D",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "C. Mbemba",
+      "position": "D",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "A. Tuanzebe",
+      "position": "D",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "S. Kapuadi",
+      "position": "D",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "A. Masuaku",
+      "position": "D",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "N. Mukau",
+      "position": "M",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "S. Moutoussamy",
+      "position": "M",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "E. Kayembe",
+      "position": "M",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "C. Bakambu",
+      "position": "F",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "Y. Wissa",
+      "position": "F",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "A. Montero",
+      "position": "G",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "D. Ospina",
+      "position": "G",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "Y. Mina",
+      "position": "D",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "W. Ditta",
+      "position": "D",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "D. Machado",
+      "position": "D",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "S. Arias",
+      "position": "D",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Campaz",
+      "position": "M",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "R. Rios",
+      "position": "M",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Carrascal",
+      "position": "M",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "A. Gomez",
+      "position": "F",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Portilla",
+      "position": "M",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Quintero",
+      "position": "M",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "K. Castano",
+      "position": "M",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "C. Hernandez",
+      "position": "F",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "J. Cordoba",
+      "position": "F",
+      "sub": true,
+      "team": "Colombia"
+    },
+    {
+      "name": "M. Epolo",
+      "position": "G",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "T. Fayulu",
+      "position": "G",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "G. Kalulu",
+      "position": "D",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "J. Kayembe",
+      "position": "D",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "D. Batubinsika",
+      "position": "D",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "A. Tshibola",
+      "position": "M",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "G. Kakuta",
+      "position": "M",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "C. Pickel",
+      "position": "M",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "B. Cipenga",
+      "position": "F",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "N. Sadiki",
+      "position": "M",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "N. Mbuku",
+      "position": "F",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "S. Banza",
+      "position": "F",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "M. Elia",
+      "position": "F",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "F. Mayele",
+      "position": "F",
+      "sub": true,
+      "team": "Congo DR"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 9,
+    "shotsOnGoalAway": 1,
+    "shotsOffGoalHome": 5,
+    "shotsOffGoalAway": 4,
+    "totalShotsHome": 20,
+    "totalShotsAway": 7,
+    "blockedShotsHome": 6,
+    "blockedShotsAway": 2,
+    "cornerKicksHome": 5,
+    "cornerKicksAway": 4,
+    "foulsHome": 12,
+    "foulsAway": 16,
+    "yellowCardsHome": 2,
+    "yellowCardsAway": 1,
+    "ballPossessionHome": 64,
+    "ballPossessionAway": 36,
+    "offsidesHome": 7,
+    "offsidesAway": 0,
+    "goalkeeperSavesHome": 1,
+    "goalkeeperSavesAway": 8,
+    "totalPassesHome": 541,
+    "totalPassesAway": 299,
+    "passesAccurateHome": 473,
+    "passesAccurateAway": 226,
+    "crossesHome": 12,
+    "crossesAway": 14,
+    "interceptionsHome": 10,
+    "interceptionsAway": 7,
+    "duelsWonHome": 47,
+    "duelsWonAway": 35,
+    "freeKicksHome": 16,
+    "freeKicksAway": 12,
+    "expectedGoalsHome": 0.9800000190734863,
+    "expectedGoalsAway": 0.3700000047683716,
+    "bigChancesHome": 2,
+    "bigChancesAway": 0
+  }
+}

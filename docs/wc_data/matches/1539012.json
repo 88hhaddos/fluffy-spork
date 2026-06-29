@@ -1,0 +1,477 @@
+{
+  "id": 1539012,
+  "home": "Türkiye",
+  "away": "USA",
+  "home_id": 777,
+  "away_id": 2384,
+  "score": "3:2",
+  "score_h": 3,
+  "score_a": 2,
+  "date": "2026-06-26T05:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "",
+  "referee": "M. Ghorbal",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "goal",
+      "player": "A. Guler",
+      "minute": 10,
+      "team": "Türkiye",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "T. Weah",
+      "minute": 58,
+      "team": "USA",
+      "assist": "C. Pulisic"
+    },
+    {
+      "type": "substitution",
+      "player": "G. Reyna",
+      "minute": 76,
+      "team": "USA",
+      "assist": "S. Dest"
+    },
+    {
+      "type": "substitution",
+      "player": "B. Aaronson",
+      "minute": 77,
+      "team": "USA",
+      "assist": "A. Zendejas"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Scally",
+      "minute": 77,
+      "team": "USA",
+      "assist": "A. Freeman"
+    },
+    {
+      "type": "substitution",
+      "player": "O. Aydin",
+      "minute": 90,
+      "team": "Türkiye",
+      "assist": "M. Muldur"
+    },
+    {
+      "type": "substitution",
+      "player": "B. Yilmaz",
+      "minute": 90,
+      "team": "Türkiye",
+      "assist": "I. Kahveci"
+    },
+    {
+      "type": "goal",
+      "player": null,
+      "minute": 3,
+      "team": "USA",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "S. Berhalter",
+      "minute": 19,
+      "team": "USA",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "O. Kokcu",
+      "minute": 31,
+      "team": "Türkiye",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "S. Berhalter",
+      "minute": 49,
+      "team": "USA",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "Z. Celik",
+      "minute": 84,
+      "team": "Türkiye",
+      "assist": "C. Soyuncu"
+    },
+    {
+      "type": "substitution",
+      "player": "K. Yildiz",
+      "minute": 84,
+      "team": "Türkiye",
+      "assist": "C. Uzun"
+    },
+    {
+      "type": "substitution",
+      "player": "W. McKennie",
+      "minute": 86,
+      "team": "USA",
+      "assist": "M. Tillman"
+    },
+    {
+      "type": "substitution",
+      "player": "O. Kokcu",
+      "minute": 88,
+      "team": "Türkiye",
+      "assist": "K. Ayhan"
+    },
+    {
+      "type": "goal",
+      "player": "K. Ayhan",
+      "minute": 90,
+      "team": "Türkiye",
+      "assist": ""
+    }
+  ],
+  "lineups": [
+    {
+      "name": "U. Cakir",
+      "position": "G",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "Z. Celik",
+      "position": "D",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "O. Kabak",
+      "position": "D",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "A. Bardakci",
+      "position": "D",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "E. Elmali",
+      "position": "M",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "O. Kokcu",
+      "position": "M",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "S. Ozcan",
+      "position": "M",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "O. Aydin",
+      "position": "M",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "A. Guler",
+      "position": "F",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "K. Yildiz",
+      "position": "F",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "B. Yilmaz",
+      "position": "F",
+      "sub": false,
+      "team": "Türkiye"
+    },
+    {
+      "name": "M. Turner",
+      "position": "G",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "J. Scally",
+      "position": "D",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "M. McKenzie",
+      "position": "D",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "M. Robinson",
+      "position": "D",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "A. Trusty",
+      "position": "D",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "W. McKennie",
+      "position": "M",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "S. Berhalter",
+      "position": "M",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "G. Reyna",
+      "position": "M",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "T. Weah",
+      "position": "F",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "R. Pepi",
+      "position": "F",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "B. Aaronson",
+      "position": "F",
+      "sub": false,
+      "team": "USA"
+    },
+    {
+      "name": "I. Kahveci",
+      "position": "M",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "K. Ayhan",
+      "position": "D",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "H. Calhanoglu",
+      "position": "M",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "M. Gunok",
+      "position": "G",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "C. Soyuncu",
+      "position": "D",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "M. Demiral",
+      "position": "D",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "A. Bayindir",
+      "position": "G",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "F. Kadioglu",
+      "position": "D",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "M. Muldur",
+      "position": "D",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "Y. Akgun",
+      "position": "F",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "I. Yuksek",
+      "position": "M",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "S. Akaydin",
+      "position": "D",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "K. Akturkoglu",
+      "position": "F",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "C. Uzun",
+      "position": "M",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "D. Gul",
+      "position": "F",
+      "sub": true,
+      "team": "Türkiye"
+    },
+    {
+      "name": "A. Freeman",
+      "position": "D",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "M. Arfsten",
+      "position": "M",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "C. Brady",
+      "position": "G",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "F. Balogun",
+      "position": "F",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "M. Tillman",
+      "position": "M",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "M. Freese",
+      "position": "G",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "A. Zendejas",
+      "position": "F",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "C. Richards",
+      "position": "D",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "S. Dest",
+      "position": "D",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "H. Wright",
+      "position": "F",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "C. Pulisic",
+      "position": "M",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "A. Robinson",
+      "position": "D",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "T. Adams",
+      "position": "M",
+      "sub": true,
+      "team": "USA"
+    },
+    {
+      "name": "T. Ream",
+      "position": "D",
+      "sub": true,
+      "team": "USA"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 3,
+    "shotsOnGoalAway": 7,
+    "shotsOffGoalHome": 4,
+    "shotsOffGoalAway": 6,
+    "totalShotsHome": 9,
+    "totalShotsAway": 18,
+    "blockedShotsHome": 2,
+    "blockedShotsAway": 5,
+    "cornerKicksHome": 2,
+    "cornerKicksAway": 9,
+    "foulsHome": 13,
+    "foulsAway": 13,
+    "yellowCardsHome": 0,
+    "yellowCardsAway": 1,
+    "ballPossessionHome": 48,
+    "ballPossessionAway": 52,
+    "offsidesHome": 2,
+    "offsidesAway": 5,
+    "goalkeeperSavesHome": 5,
+    "goalkeeperSavesAway": 1,
+    "totalPassesHome": 435,
+    "totalPassesAway": 469,
+    "passesAccurateHome": 333,
+    "passesAccurateAway": 397,
+    "crossesHome": 12,
+    "crossesAway": 19,
+    "interceptionsHome": 9,
+    "interceptionsAway": 9,
+    "duelsWonHome": 64,
+    "duelsWonAway": 46,
+    "freeKicksHome": 13,
+    "freeKicksAway": 13,
+    "expectedGoalsHome": 3.2100000381469727,
+    "expectedGoalsAway": 2.009999990463257,
+    "bigChancesHome": 5,
+    "bigChancesAway": 4
+  }
+}

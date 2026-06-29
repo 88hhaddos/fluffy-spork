@@ -1,0 +1,448 @@
+{
+  "id": 1489402,
+  "home": "England",
+  "away": "Ghana",
+  "home_id": 10,
+  "away_id": 1504,
+  "score": "0:0",
+  "score_h": 0,
+  "score_a": 0,
+  "date": "2026-06-23T23:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "Gillette Stadium",
+  "referee": "Said Martinez, Honduras",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "substitution",
+      "player": "A. Gordon",
+      "minute": 65,
+      "team": "England",
+      "assist": "B. Saka"
+    },
+    {
+      "type": "substitution",
+      "player": "D. Spence",
+      "minute": 66,
+      "team": "England",
+      "assist": "N. O'Reilly"
+    },
+    {
+      "type": "substitution",
+      "player": "I. Williams",
+      "minute": 66,
+      "team": "Ghana",
+      "assist": "I. Fatawu"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Ayew",
+      "minute": 67,
+      "team": "Ghana",
+      "assist": "P. Adu"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Bellingham",
+      "minute": 73,
+      "team": "England",
+      "assist": "M. Rogers"
+    },
+    {
+      "type": "substitution",
+      "player": "E. Anderson",
+      "minute": 74,
+      "team": "England",
+      "assist": "E. Eze"
+    },
+    {
+      "type": "substitution",
+      "player": "N. Madueke",
+      "minute": 83,
+      "team": "England",
+      "assist": "M. Rashford"
+    },
+    {
+      "type": "substitution",
+      "player": "M. Senaya",
+      "minute": 87,
+      "team": "Ghana",
+      "assist": "K. Peprah"
+    },
+    {
+      "type": "substitution",
+      "player": null,
+      "minute": 90,
+      "team": "Ghana",
+      "assist": "A. Baba"
+    },
+    {
+      "type": "yellow card",
+      "player": "D. Rice",
+      "minute": 41,
+      "team": "England",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "I. Williams",
+      "minute": 60,
+      "team": "Ghana",
+      "assist": ""
+    }
+  ],
+  "lineups": [
+    {
+      "name": "B. Asare",
+      "position": null,
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "J. Pickford",
+      "position": "G",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "R. James",
+      "position": "D",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "E. Konsa",
+      "position": "D",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "M. Guehi",
+      "position": "D",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "D. Spence",
+      "position": "D",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "E. Anderson",
+      "position": "M",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "D. Rice",
+      "position": "M",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "N. Madueke",
+      "position": "M",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "J. Bellingham",
+      "position": "M",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "A. Gordon",
+      "position": "M",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "H. Kane",
+      "position": "F",
+      "sub": false,
+      "team": "England"
+    },
+    {
+      "name": "M. Senaya",
+      "position": "D",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "J. Adjetey",
+      "position": "D",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "J. Opoku",
+      "position": "D",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "G. Mensah",
+      "position": "D",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "C. Yirenkyi",
+      "position": "M",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "T. Partey",
+      "position": "M",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "K. Sibo",
+      "position": "M",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "I. Williams",
+      "position": "M",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "J. Ayew",
+      "position": "F",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "A. Semenyo",
+      "position": "M",
+      "sub": false,
+      "team": "Ghana"
+    },
+    {
+      "name": "J. Trafford",
+      "position": "G",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "D. Henderson",
+      "position": "G",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "N. O'Reilly",
+      "position": "D",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "J. Stones",
+      "position": "D",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "J. Quansah",
+      "position": "D",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "D. Burn",
+      "position": "D",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "T. Chalobah",
+      "position": "D",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "J. Henderson",
+      "position": "M",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "E. Eze",
+      "position": "M",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "K. Mainoo",
+      "position": "M",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "M. Rogers",
+      "position": "M",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "I. Toney",
+      "position": "F",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "B. Saka",
+      "position": "F",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "O. Watkins",
+      "position": "F",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "M. Rashford",
+      "position": "F",
+      "sub": true,
+      "team": "England"
+    },
+    {
+      "name": "L. Ati Zigi",
+      "position": "G",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "J. Anang",
+      "position": "G",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "K. Peprah",
+      "position": "D",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "D. Luckassen",
+      "position": "D",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "A. Seidu",
+      "position": "D",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "A. Mumin",
+      "position": "D",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "A. Baba",
+      "position": "D",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "C. Bonsu Baah",
+      "position": "F",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "E. Owusu",
+      "position": "M",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "I. Fatawu",
+      "position": "F",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "B. Thomas-Asante",
+      "position": "F",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "A. Boakye",
+      "position": "M",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "P. Adu",
+      "position": "F",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "K. Sulemana",
+      "position": "F",
+      "sub": true,
+      "team": "Ghana"
+    },
+    {
+      "name": "E. Nuamah",
+      "position": "F",
+      "sub": true,
+      "team": "Ghana"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 3,
+    "shotsOnGoalAway": 1,
+    "shotsOffGoalHome": 10,
+    "shotsOffGoalAway": 0,
+    "totalShotsHome": 19,
+    "totalShotsAway": 2,
+    "blockedShotsHome": 6,
+    "blockedShotsAway": 1,
+    "cornerKicksHome": 9,
+    "cornerKicksAway": 2,
+    "foulsHome": 14,
+    "foulsAway": 24,
+    "yellowCardsHome": 1,
+    "yellowCardsAway": 1,
+    "ballPossessionHome": 79,
+    "ballPossessionAway": 21,
+    "offsidesHome": 2,
+    "offsidesAway": 2,
+    "goalkeeperSavesHome": 0,
+    "goalkeeperSavesAway": 3,
+    "totalPassesHome": 633,
+    "totalPassesAway": 172,
+    "passesAccurateHome": 586,
+    "passesAccurateAway": 127,
+    "crossesHome": 30,
+    "crossesAway": 5,
+    "interceptionsHome": 1,
+    "interceptionsAway": 8,
+    "duelsWonHome": 59,
+    "duelsWonAway": 46,
+    "freeKicksHome": 24,
+    "freeKicksAway": 14,
+    "expectedGoalsHome": 1.3600000143051147,
+    "expectedGoalsAway": 0.17000000178813934,
+    "bigChancesHome": 2,
+    "bigChancesAway": 1
+  }
+}

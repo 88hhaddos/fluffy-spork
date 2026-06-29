@@ -1,0 +1,460 @@
+{
+  "id": 1489393,
+  "home": "Germany",
+  "away": "Ivory Coast",
+  "home_id": 25,
+  "away_id": 1501,
+  "score": "2:1",
+  "score_h": 2,
+  "score_a": 1,
+  "date": "2026-06-20T23:00:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "BMO Field",
+  "referee": "Juan Gabriel Benitez, Paraguay",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "goal",
+      "player": "D. Undav",
+      "minute": 68,
+      "team": "Germany",
+      "assist": "N. Amiri"
+    },
+    {
+      "type": "substitution",
+      "player": "L. Sane",
+      "minute": 60,
+      "team": "Germany",
+      "assist": "J. Leweling"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Bonny",
+      "minute": 75,
+      "team": "Ivory Coast",
+      "assist": "E. Guessand"
+    },
+    {
+      "type": "substitution",
+      "player": "I. Sangare",
+      "minute": 75,
+      "team": "Ivory Coast",
+      "assist": "S. Fofana"
+    },
+    {
+      "type": "substitution",
+      "player": "W. Singo",
+      "minute": 82,
+      "team": "Ivory Coast",
+      "assist": "G. Doue"
+    },
+    {
+      "type": "substitution",
+      "player": "Y. Diomande",
+      "minute": 85,
+      "team": "Ivory Coast",
+      "assist": "N. Pepe"
+    },
+    {
+      "type": "substitution",
+      "player": "N. Schlotterbeck",
+      "minute": 46,
+      "team": "Germany",
+      "assist": "A. Rudiger"
+    },
+    {
+      "type": "substitution",
+      "player": "J. Musiala",
+      "minute": 60,
+      "team": "Germany",
+      "assist": "D. Undav"
+    },
+    {
+      "type": "substitution",
+      "player": "L. Sane",
+      "minute": 60,
+      "team": "Germany",
+      "assist": "J. Leweling"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Diallo",
+      "minute": 75,
+      "team": "Ivory Coast",
+      "assist": "S. Adingra"
+    },
+    {
+      "type": "substitution",
+      "player": "K. Havertz",
+      "minute": 85,
+      "team": "Germany",
+      "assist": "L. Goretzka"
+    },
+    {
+      "type": "goal",
+      "player": "F. Kessie",
+      "minute": 30,
+      "team": "Ivory Coast",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "D. Undav",
+      "minute": 90,
+      "team": "Germany",
+      "assist": "F. Nmecha"
+    }
+  ],
+  "lineups": [
+    {
+      "name": "M. Neuer",
+      "position": "G",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "J. Kimmich",
+      "position": "D",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "J. Tah",
+      "position": "D",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "N. Schlotterbeck",
+      "position": "D",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "N. Brown",
+      "position": "D",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "F. Nmecha",
+      "position": "M",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "A. Pavlovic",
+      "position": "M",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "L. Sane",
+      "position": "M",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "J. Musiala",
+      "position": "M",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "F. Wirtz",
+      "position": "M",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "K. Havertz",
+      "position": "F",
+      "sub": false,
+      "team": "Germany"
+    },
+    {
+      "name": "Y. Fofana",
+      "position": "G",
+      "sub": false,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "W. Singo",
+      "position": "D",
+      "sub": false,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "O. Kossounou",
+      "position": "D",
+      "sub": false,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "E. Agbadou",
+      "position": "D",
+      "sub": false,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "G. Konan",
+      "position": "D",
+      "sub": false,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "A. Diallo",
+      "position": "M",
+      "sub": false,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "F. Kessie",
+      "position": "M",
+      "sub": false,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "I. Sangare",
+      "position": "M",
+      "sub": false,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "Y. Diomande",
+      "position": "M",
+      "sub": false,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "A. Bonny",
+      "position": "F",
+      "sub": false,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "C. Inao Oulai",
+      "position": "M",
+      "sub": false,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "A. Nubel",
+      "position": "G",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "O. Baumann",
+      "position": "G",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "M. Thiaw",
+      "position": "D",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "W. Anton",
+      "position": "D",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "A. Rudiger",
+      "position": "D",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "D. Raum",
+      "position": "D",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "A. Ouedraogo",
+      "position": "M",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "J. Leweling",
+      "position": "F",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "N. Amiri",
+      "position": "M",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "P. Gross",
+      "position": "M",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "L. Goretzka",
+      "position": "M",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "A. Stiller",
+      "position": "M",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "M. Beier",
+      "position": "F",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "N. Woltemade",
+      "position": "F",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "D. Undav",
+      "position": "F",
+      "sub": true,
+      "team": "Germany"
+    },
+    {
+      "name": "A. Lafont",
+      "position": "G",
+      "sub": true,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "M. Kone",
+      "position": "G",
+      "sub": true,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "C. Operi",
+      "position": "D",
+      "sub": true,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "O. Diomande",
+      "position": "D",
+      "sub": true,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "G. Doue",
+      "position": "D",
+      "sub": true,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "E. Ndicka",
+      "position": "D",
+      "sub": true,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "B. Toure",
+      "position": "F",
+      "sub": true,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "J. Seri",
+      "position": "M",
+      "sub": true,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "P. Guiagon",
+      "position": "M",
+      "sub": true,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "S. Fofana",
+      "position": "M",
+      "sub": true,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "S. Adingra",
+      "position": "F",
+      "sub": true,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "O. Diakite",
+      "position": "F",
+      "sub": true,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "E. Wahi",
+      "position": "F",
+      "sub": true,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "N. Pepe",
+      "position": "F",
+      "sub": true,
+      "team": "Ivory Coast"
+    },
+    {
+      "name": "E. Guessand",
+      "position": "F",
+      "sub": true,
+      "team": "Ivory Coast"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 7,
+    "shotsOnGoalAway": 2,
+    "shotsOffGoalHome": 5,
+    "shotsOffGoalAway": 2,
+    "totalShotsHome": 16,
+    "totalShotsAway": 9,
+    "blockedShotsHome": 4,
+    "blockedShotsAway": 5,
+    "cornerKicksHome": 8,
+    "cornerKicksAway": 3,
+    "foulsHome": 5,
+    "foulsAway": 7,
+    "ballPossessionHome": 60,
+    "ballPossessionAway": 40,
+    "offsidesHome": 0,
+    "offsidesAway": 1,
+    "goalkeeperSavesHome": 1,
+    "goalkeeperSavesAway": 5,
+    "totalPassesHome": 624,
+    "totalPassesAway": 431,
+    "passesAccurateHome": 555,
+    "passesAccurateAway": 367,
+    "crossesHome": 21,
+    "crossesAway": 9,
+    "interceptionsHome": 8,
+    "interceptionsAway": 13,
+    "duelsWonHome": 48,
+    "duelsWonAway": 54,
+    "freeKicksHome": 7,
+    "freeKicksAway": 5,
+    "expectedGoalsHome": 1.8899999856948853,
+    "expectedGoalsAway": 1.2200000286102295,
+    "bigChancesHome": 5,
+    "bigChancesAway": 2
+  }
+}

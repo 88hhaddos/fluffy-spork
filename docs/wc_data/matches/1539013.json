@@ -1,0 +1,511 @@
+{
+  "id": 1539013,
+  "home": "Congo DR",
+  "away": "Uzbekistan",
+  "home_id": 1508,
+  "away_id": 1568,
+  "score": "3:1",
+  "score_h": 3,
+  "score_a": 1,
+  "date": "2026-06-28T02:30:00",
+  "status": 8,
+  "stage": "",
+  "round": "",
+  "venue": "Mercedes-Benz Stadium",
+  "referee": "Felix Zwayer, Germany",
+  "attendance": 0,
+  "events": [
+    {
+      "type": "goal cancelled",
+      "player": "N. Mbuku",
+      "minute": 17,
+      "team": "Congo DR",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "E. Shomurodov",
+      "minute": 10,
+      "team": "Uzbekistan",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "N. Sadiki",
+      "minute": 21,
+      "team": "Congo DR",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "A. Khusanov",
+      "minute": 43,
+      "team": "Uzbekistan",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "N. Mbuku",
+      "minute": 45,
+      "team": "Congo DR",
+      "assist": ""
+    },
+    {
+      "type": "yellow card",
+      "player": "S. Moutoussamy",
+      "minute": 62,
+      "team": "Congo DR",
+      "assist": ""
+    },
+    {
+      "type": "goal",
+      "player": "Y. Wissa",
+      "minute": 68,
+      "team": "Congo DR",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "J. Urozov",
+      "minute": 82,
+      "team": "Uzbekistan",
+      "assist": "I. Sergeev"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Mozgovoy",
+      "minute": 82,
+      "team": "Uzbekistan",
+      "assist": "J. Iskanderov"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Masuaku",
+      "minute": 83,
+      "team": "Congo DR",
+      "assist": "J. Kayembe"
+    },
+    {
+      "type": "goal",
+      "player": "Y. Wissa",
+      "minute": 90,
+      "team": "Congo DR",
+      "assist": "M. Elia"
+    },
+    {
+      "type": "yellow card",
+      "player": "S. Nasrullaev",
+      "minute": 48,
+      "team": "Uzbekistan",
+      "assist": ""
+    },
+    {
+      "type": "substitution",
+      "player": "C. Bakambu",
+      "minute": 51,
+      "team": "Congo DR",
+      "assist": "F. Mayele"
+    },
+    {
+      "type": "substitution",
+      "player": "O. Shukurov",
+      "minute": 59,
+      "team": "Uzbekistan",
+      "assist": "O. Khamrobekov"
+    },
+    {
+      "type": "substitution",
+      "player": "D. Khamdamov",
+      "minute": 59,
+      "team": "Uzbekistan",
+      "assist": "A. Ganiev"
+    },
+    {
+      "type": "substitution",
+      "player": "B. Cipenga",
+      "minute": 72,
+      "team": "Congo DR",
+      "assist": "T. Bongonda"
+    },
+    {
+      "type": "substitution",
+      "player": "S. Moutoussamy",
+      "minute": 72,
+      "team": "Congo DR",
+      "assist": "N. Mukau"
+    },
+    {
+      "type": "substitution",
+      "player": "A. Fayzullaev",
+      "minute": 73,
+      "team": "Uzbekistan",
+      "assist": "O. Urunov"
+    },
+    {
+      "type": "substitution",
+      "player": "N. Mbuku",
+      "minute": 72,
+      "team": "Congo DR",
+      "assist": "M. Elia"
+    },
+    {
+      "type": "goal",
+      "player": "F. Mayele",
+      "minute": 78,
+      "team": "Congo DR",
+      "assist": ""
+    }
+  ],
+  "lineups": [
+    {
+      "name": "F. Sayfiev",
+      "position": null,
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "L. Mpasi-Nzau",
+      "position": "G",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "A. Wan-Bissaka",
+      "position": "D",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "C. Mbemba",
+      "position": "D",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "A. Tuanzebe",
+      "position": "D",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "A. Masuaku",
+      "position": "D",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "N. Mbuku",
+      "position": "M",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "S. Moutoussamy",
+      "position": "M",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "N. Sadiki",
+      "position": "M",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "B. Cipenga",
+      "position": "M",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "Y. Wissa",
+      "position": "F",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "C. Bakambu",
+      "position": "F",
+      "sub": false,
+      "team": "Congo DR"
+    },
+    {
+      "name": "A. Nematov",
+      "position": "G",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "A. Khusanov",
+      "position": "D",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "J. Urozov",
+      "position": "D",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "R. Ashurmatov",
+      "position": "D",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "K. Alizhonov",
+      "position": "M",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "A. Mozgovoy",
+      "position": "M",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "O. Shukurov",
+      "position": "M",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "S. Nasrullaev",
+      "position": "M",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "D. Khamdamov",
+      "position": "F",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "A. Fayzullaev",
+      "position": "F",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "E. Shomurodov",
+      "position": "F",
+      "sub": false,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "M. Epolo",
+      "position": "G",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "T. Fayulu",
+      "position": "G",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "D. Batubinsika",
+      "position": "D",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "G. Kalulu",
+      "position": "D",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "J. Kayembe",
+      "position": "D",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "S. Kapuadi",
+      "position": "D",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "A. Tshibola",
+      "position": "M",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "C. Pickel",
+      "position": "M",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "G. Kakuta",
+      "position": "M",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "T. Bongonda",
+      "position": "M",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "E. Kayembe",
+      "position": "M",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "N. Mukau",
+      "position": "M",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "F. Mayele",
+      "position": "F",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "M. Elia",
+      "position": "F",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "S. Banza",
+      "position": "F",
+      "sub": true,
+      "team": "Congo DR"
+    },
+    {
+      "name": "B. Ergashev",
+      "position": "G",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "U. Yusupov",
+      "position": "G",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "A. Ulmasaliev",
+      "position": "D",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "U. Eshmurodov",
+      "position": "D",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "B. Karimov",
+      "position": "D",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "A. Amonov",
+      "position": "F",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "J. Iskanderov",
+      "position": "M",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "O. Urunov",
+      "position": "M",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "R. Jiyanov",
+      "position": "M",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "S. Esanov",
+      "position": "M",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "A. Abdullaev",
+      "position": "M",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "A. Ganiev",
+      "position": "M",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "O. Khamrobekov",
+      "position": "M",
+      "sub": true,
+      "team": "Uzbekistan"
+    },
+    {
+      "name": "I. Sergeev",
+      "position": "F",
+      "sub": true,
+      "team": "Uzbekistan"
+    }
+  ],
+  "stats": {
+    "shotsOnGoalHome": 4,
+    "shotsOnGoalAway": 1,
+    "shotsOffGoalHome": 14,
+    "shotsOffGoalAway": 3,
+    "totalShotsHome": 19,
+    "totalShotsAway": 4,
+    "blockedShotsHome": 1,
+    "blockedShotsAway": 0,
+    "cornerKicksHome": 2,
+    "cornerKicksAway": 4,
+    "foulsHome": 6,
+    "foulsAway": 16,
+    "yellowCardsHome": 3,
+    "yellowCardsAway": 2,
+    "ballPossessionHome": 58,
+    "ballPossessionAway": 42,
+    "offsidesHome": 3,
+    "offsidesAway": 1,
+    "goalkeeperSavesHome": 1,
+    "goalkeeperSavesAway": 1,
+    "totalPassesHome": 487,
+    "totalPassesAway": 355,
+    "passesAccurateHome": 401,
+    "passesAccurateAway": 269,
+    "crossesHome": 22,
+    "crossesAway": 16,
+    "interceptionsHome": 7,
+    "interceptionsAway": 12,
+    "duelsWonHome": 58,
+    "duelsWonAway": 63,
+    "freeKicksHome": 16,
+    "freeKicksAway": 6,
+    "expectedGoalsHome": 2.3499999046325684,
+    "expectedGoalsAway": 0.27000001072883606,
+    "bigChancesHome": 3,
+    "bigChancesAway": 0
+  }
+}

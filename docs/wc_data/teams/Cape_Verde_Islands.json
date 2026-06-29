@@ -1,0 +1,171 @@
+{
+  "name": "Cape Verde Islands",
+  "matches": [
+    {
+      "opponent": "Spain",
+      "score": "0:0",
+      "date": "2026-06-15",
+      "stage": "",
+      "home": false,
+      "result": "draw"
+    },
+    {
+      "opponent": "Uruguay",
+      "score": "2:2",
+      "date": "2026-06-22",
+      "stage": "",
+      "home": false,
+      "result": "draw"
+    },
+    {
+      "opponent": "Saudi Arabia",
+      "score": "0:0",
+      "date": "2026-06-27",
+      "stage": "",
+      "home": true,
+      "result": "draw"
+    }
+  ],
+  "wins": 0,
+  "draws": 3,
+  "losses": 0,
+  "scored": 2,
+  "conceded": 2,
+  "players": {
+    "Vozinha": {
+      "position": "G",
+      "matches": 3,
+      "subs": 0
+    },
+    "S. Moreira": {
+      "position": "D",
+      "matches": 3,
+      "subs": 1
+    },
+    "D. Borges": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0,
+      "yellow": 1
+    },
+    "R. Lopes": {
+      "position": "D",
+      "matches": 3,
+      "subs": 0
+    },
+    "S. Lopes Cabral": {
+      "position": "D",
+      "matches": 2,
+      "subs": 0,
+      "yellow": 2
+    },
+    "K. Lenini": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0,
+      "goals": 1
+    },
+    "L. Duarte": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "R. Mendes": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "J. Monteiro": {
+      "position": "M",
+      "matches": 3,
+      "subs": 0
+    },
+    "J. Cabral": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "D. Livramento": {
+      "position": "F",
+      "matches": 3,
+      "subs": 1
+    },
+    "M. Rosa": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "dos Santos CJ": {
+      "position": "G",
+      "matches": 3,
+      "subs": 3
+    },
+    "Stopira": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "L. Costa": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "W. Pina": {
+      "position": "D",
+      "matches": 3,
+      "subs": 2,
+      "yellow": 1
+    },
+    "K. Pires": {
+      "position": "D",
+      "matches": 3,
+      "subs": 3
+    },
+    "Joao Paulo": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "G. Rodrigues": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2
+    },
+    "D. Duarte": {
+      "position": "M",
+      "matches": 3,
+      "subs": 2
+    },
+    "Y. Semedo": {
+      "position": "M",
+      "matches": 3,
+      "subs": 3
+    },
+    "W. Semedo": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2
+    },
+    "T. Arcanjo": {
+      "position": "M",
+      "matches": 2,
+      "subs": 1
+    },
+    "H. Varela": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3,
+      "goals": 1
+    },
+    "N. Da Costa": {
+      "position": "F",
+      "matches": 3,
+      "subs": 3
+    },
+    "Benchimol": {
+      "position": "F",
+      "matches": 3,
+      "subs": 2
+    }
+  }
+}
