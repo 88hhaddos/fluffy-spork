@@ -1,0 +1,204 @@
+{
+  "updated": "2026-06-29T01:58:47.103530",
+  "finished": 73,
+  "upcoming": [
+    {
+      "home": "Brazil",
+      "away": "Japan",
+      "date": "2026-06-29T20:00:00",
+      "id": 1562344
+    },
+    {
+      "home": "Germany",
+      "away": "Paraguay",
+      "date": "2026-06-29T23:30:00",
+      "id": 1565176
+    },
+    {
+      "home": "Netherlands",
+      "away": "Morocco",
+      "date": "2026-06-30T04:00:00",
+      "id": 1562345
+    },
+    {
+      "home": "Ivory Coast",
+      "away": "Norway",
+      "date": "2026-06-30T20:00:00",
+      "id": 1564789
+    },
+    {
+      "home": "France",
+      "away": "Sweden",
+      "date": "2026-07-01T00:00:00",
+      "id": 1565177
+    },
+    {
+      "home": "Mexico",
+      "away": "Ecuador",
+      "date": "2026-07-01T04:00:00",
+      "id": 1567306
+    },
+    {
+      "home": "England",
+      "away": "Congo DR",
+      "date": "2026-07-01T19:00:00",
+      "id": 1567307
+    },
+    {
+      "home": "Belgium",
+      "away": "Senegal",
+      "date": "2026-07-01T23:00:00",
+      "id": 1567308
+    },
+    {
+      "home": "USA",
+      "away": "Bosnia & Herzegovina",
+      "date": "2026-07-02T03:00:00",
+      "id": 1562586
+    },
+    {
+      "home": "Spain",
+      "away": "Austria",
+      "date": "2026-07-02T22:00:00",
+      "id": 1567311
+    },
+    {
+      "home": "Portugal",
+      "away": "Croatia",
+      "date": "2026-07-03T02:00:00",
+      "id": 1567309
+    },
+    {
+      "home": "Switzerland",
+      "away": "Algeria",
+      "date": "2026-07-03T06:00:00",
+      "id": 1567312
+    },
+    {
+      "home": "Australia",
+      "away": "Egypt",
+      "date": "2026-07-03T21:00:00",
+      "id": 1565178
+    },
+    {
+      "home": "Argentina",
+      "away": "Cape Verde Islands",
+      "date": "2026-07-04T01:00:00",
+      "id": 1565179
+    },
+    {
+      "home": "Colombia",
+      "away": "Ghana",
+      "date": "2026-07-04T04:30:00",
+      "id": 1567310
+    }
+  ],
+  "results": [
+    "Mexico 2:0 South Africa (2026-06-11)",
+    "South Korea 2:1 Czechia (2026-06-12)",
+    "Canada 1:1 Bosnia & Herzegovina (2026-06-12)",
+    "USA 4:1 Paraguay (2026-06-13)",
+    "Qatar 1:1 Switzerland (2026-06-13)",
+    "Brazil 1:1 Morocco (2026-06-14)",
+    "Haiti 0:1 Scotland (2026-06-14)",
+    "Australia 2:0 Türkiye (2026-06-14)",
+    "Germany 7:1 Curaçao (2026-06-14)",
+    "Netherlands 2:2 Japan (2026-06-14)",
+    "Ivory Coast 1:0 Ecuador (2026-06-15)",
+    "Sweden 5:1 Tunisia (2026-06-15)",
+    "Spain 0:0 Cape Verde Islands (2026-06-15)",
+    "Belgium 1:1 Egypt (2026-06-15)",
+    "Saudi Arabia 1:1 Uruguay (2026-06-16)",
+    "Iran 2:2 New Zealand (2026-06-16)",
+    "France 3:1 Senegal (2026-06-16)",
+    "Iraq 1:4 Norway (2026-06-17)",
+    "Argentina 3:0 Algeria (2026-06-17)",
+    "Austria 3:1 Jordan (2026-06-17)"
+  ],
+  "top_scorers": [
+    [
+      "Lionel Messi",
+      3
+    ],
+    [
+      "F. Balogun",
+      2
+    ],
+    [
+      "K. Havertz",
+      2
+    ],
+    [
+      "Y. Ayari",
+      2
+    ],
+    [
+      "Elijah Just",
+      2
+    ],
+    [
+      "K. Mbappe",
+      2
+    ],
+    [
+      "E. Haaland",
+      2
+    ],
+    [
+      "A. Hussein",
+      2
+    ],
+    [
+      "J. Quinones",
+      1
+    ],
+    [
+      "R. Jimenez",
+      1
+    ]
+  ],
+  "top_assists": [
+    [
+      "J. Kimmich",
+      2
+    ],
+    [
+      "R. Gravenberch",
+      2
+    ],
+    [
+      "Hwang In-Beom",
+      1
+    ],
+    [
+      "Promise David",
+      1
+    ],
+    [
+      "S. Kolasinac",
+      1
+    ],
+    [
+      "M. Tillman",
+      1
+    ],
+    [
+      "A. Freeman",
+      1
+    ],
+    [
+      "B. Diaz",
+      1
+    ],
+    [
+      "Bruno Guimaraes",
+      1
+    ],
+    [
+      "N. Brown",
+      1
+    ]
+  ],
+  "standings": [],
+  "live": []
+}

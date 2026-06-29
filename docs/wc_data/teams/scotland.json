@@ -1,0 +1,226 @@
+{
+  "name": "Scotland",
+  "matches": [
+    {
+      "opponent": "Haiti",
+      "score": "0:1",
+      "date": "2026-06-14",
+      "stage": ""
+    }
+  ],
+  "wins": 1,
+  "draws": 0,
+  "loss": 0,
+  "scored": 1,
+  "missed": 0,
+  "players": {
+    "A. Gunn": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "A. Hickey": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "J. Hendry": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "G. Hanley": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "A. Robertson": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "B. Gannon-Doak": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "S. McTominay": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "L. Ferguson": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "J. McGinn": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "L. Shankland": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "C. Adams": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "L. Kelly": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "C. Gordon": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "K. Tierney": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "J. Souttar": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "D. Hyam": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "N. Patterson": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "A. Ralston": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "S. McKenna": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "T. Fletcher": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "R. Christie": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "K. McLean": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "F. Curtis": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "L. Dykes": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "R. Stewart": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "G. Hirst": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    }
+  }
+}

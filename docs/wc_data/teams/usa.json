@@ -1,0 +1,226 @@
+{
+  "name": "USA",
+  "matches": [
+    {
+      "opponent": "Paraguay",
+      "score": "4:1",
+      "date": "2026-06-13",
+      "stage": ""
+    }
+  ],
+  "wins": 1,
+  "draws": 0,
+  "loss": 0,
+  "scored": 4,
+  "missed": 1,
+  "players": {
+    "C. Pulisic": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "W. McKennie": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "H. Wright": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "T. Weah": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "T. Adams": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "T. Ream": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "A. Robinson": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "A. Zendejas": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "S. Dest": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "M. Freese": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "M. McKenzie": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "A. Trusty": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "B. Aaronson": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "J. Scally": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "M. Robinson": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "M. Turner": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "C. Roldan": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "R. Pepi": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "C. Richards": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "F. Balogun": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "G. Reyna": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "M. Tillman": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "S. Berhalter": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "C. Brady": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "A. Freeman": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "M. Arfsten": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    }
+  }
+}

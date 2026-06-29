@@ -1,0 +1,226 @@
+{
+  "name": "Morocco",
+  "matches": [
+    {
+      "opponent": "Brazil",
+      "score": "1:1",
+      "date": "2026-06-14",
+      "stage": ""
+    }
+  ],
+  "wins": 0,
+  "draws": 1,
+  "loss": 0,
+  "scored": 1,
+  "missed": 1,
+  "players": {
+    "A. Hakimi": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "S. Amrabat": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "N. Mazraoui": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "B. Diaz": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "Bono": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "Munir": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "A. Tagnaouti": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "A. El Kaabi": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "I. Diop": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "S. Rahimi": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "M. Saadane": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "A. Ounahi": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "Y. Belammari": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "I. Saibari": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "A. Salah-Eddine": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "A. Sbai": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "N. El Aynaoui": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "C. Riad": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "Z. El Ouahdi": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "R. Halhal": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "C. Talbi": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "B. El Khannouss": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "G. Yassine": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "S. El Mourabet": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "A. Bouaddi": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "A. Amaimouni": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    }
+  }
+}

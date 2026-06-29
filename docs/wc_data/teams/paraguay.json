@@ -1,0 +1,226 @@
+{
+  "name": "Paraguay",
+  "matches": [
+    {
+      "opponent": "USA",
+      "score": "4:1",
+      "date": "2026-06-13",
+      "stage": ""
+    }
+  ],
+  "wins": 0,
+  "draws": 0,
+  "loss": 1,
+  "scored": 1,
+  "missed": 4,
+  "players": {
+    "J. Alonso": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "Fabian Balbuena": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "G. Gomez": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "M. Almiron": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "Kaku": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "A. Sanabria": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "O. Alderete": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "A. Cubas": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "G. Avalos": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "G. Velazquez": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "G. Olveira": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "I. Pitta": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "J. Canale": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "J. Enciso": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "B. Ojeda": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "O. Gill": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "A. Arce": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "Mauricio": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "G. Caballero": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "D. Bobadilla": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "J. Caceres": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "R. Sosa": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "D. Gomez": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "M. Galarza": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "A. Maidana": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "R. Fernandez": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    }
+  }
+}

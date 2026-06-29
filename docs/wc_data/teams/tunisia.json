@@ -1,0 +1,226 @@
+{
+  "name": "Tunisia",
+  "matches": [
+    {
+      "opponent": "Sweden",
+      "score": "5:1",
+      "date": "2026-06-15",
+      "stage": ""
+    }
+  ],
+  "wins": 0,
+  "draws": 0,
+  "loss": 1,
+  "scored": 1,
+  "missed": 5,
+  "players": {
+    "H. Mahmoud": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "M. Ben Hamida": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "O. Rekik": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "H. Mejbri": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "A. Ben Slimane": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "I. Gharbi": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "E. Saad": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "H. Mastouri": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "M. Neffati": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "A. Arous": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "K. Ayari": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "R. Chikhaoui": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "A. Chamakh": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "R. Elloumi": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "D. Bronn": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "F. Chaouat": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "Y. Valery": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "E. Skhiri": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "R. Khedira": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "E. Achouri": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "S. Ben Hessen": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "A. Dahmen": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "M. Ben Ouanes": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "A. Abdi": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "M. Talbi": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    },
+    "S. Tounekti": {
+      "minutes": 0,
+      "goals": 0,
+      "assists": 0,
+      "yellow": 0,
+      "red": 0,
+      "matches": 1
+    }
+  }
+}
