@@ -82,6 +82,9 @@ _PK_MAP: dict[str, str] = {
     "settings": "key",
     "admins": "user_id",
     "chat_settings": "chat_id",
+    "user_relationships": "user_id",
+    "user_bans": "user_id",
+    "bot_balance": "chat_id",
 }
 
 
