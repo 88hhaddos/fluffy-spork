@@ -517,6 +517,11 @@ async def handle_group_message(
             "закури ставк", "закури экспресс", "на что ставишь",
             "что поставить", "посоветуй ставку", "дай экспресс",
             "ставочку", "сделай экспресс",
+            "дай ставки", "ставки на сегодня", "ставки на завтра",
+            "ставки на матч", "дай прогноз на ставк", "поставь ставку",
+            "закури ставку", "закури ставки", "дай ставки на",
+            "сделай ставки", "поставь ставки", "закури дай ставк",
+            "закури дай экспресс", "дай вариант ставк",
         ]
         text_lower = text.lower()
         if any(kw in text_lower for kw in BET_REQUEST_KEYWORDS):
@@ -768,6 +773,29 @@ async def _generate_and_send_response(
         football_context = await _get_football_context(msg_text, db, message.chat.id)
         if football_context:
             logger.info(f"Football context loaded for: {msg_text[:50]}")
+        elif _is_football_question(msg_text):
+            # Контекст пуст — загружаем хотя бы предстоящие матчи из Pari.ru
+            try:
+                from src.football_api import FootballAPI
+                pari_api = FootballAPI('sjzgn3bbco67pk8j')
+                pari_matches = await pari_api.get_pari_upcoming_matches(limit=20)
+                await pari_api.close()
+
+                if pari_matches:
+                    lines = []
+                    for m in pari_matches[:15]:
+                        home = (m.get("homeTeam") or {}).get("name", "?")
+                        away = (m.get("awayTeam") or {}).get("name", "?")
+                        w1 = m.get("winner1", 0)
+                        wx = m.get("winnerX", 0)
+                        w2 = m.get("winner2", 0)
+                        date = (m.get("date") or "")[:16]
+                        odds_str = f" | Кеф: {w1}/{wx}/{w2}" if w1 else ""
+                        lines.append(f"  {home} — {away} ({date}){odds_str}")
+                    football_context = f"### Предстоящие матчи (Pari.ru):\n" + "\n".join(lines)
+                    logger.info(f"Loaded {len(lines)} Pari.ru matches as context")
+            except Exception as e:
+                logger.error(f"Pari.ru fallback context error: {e}")
 
         system_prompt = await build_system_prompt(
             db, message.chat.id,
