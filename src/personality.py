@@ -140,10 +140,18 @@ async def build_system_prompt(db, chat_id: int = 0, user_id: int = 0, username: 
 
             finished = wc.get("matches", [])
             if finished:
-                recent = finished[-10:]
+                recent = finished[-15:]
                 results = []
                 for m in recent:
-                    results.append(f"  {m['home']} {m['score']} {m['away']} ({m['date'][:10]})")
+                    line = f"  {m['home']} {m['score']} {m['away']} ({m['date'][:10]})"
+                    # Добавляем голы
+                    goals = []
+                    for ev in m.get("events", []):
+                        if ev.get("type") == "goal":
+                            goals.append(f"{ev['player']} ({ev['minute']}')")
+                    if goals:
+                        line += f" | Голы: {', '.join(goals)}"
+                    results.append(line)
                 wc_lines.append("### Последние результаты ЧМ 2026:\n" + "\n".join(results))
 
             upcoming = wc.get("upcoming_matches", [])
@@ -157,20 +165,43 @@ async def build_system_prompt(db, chat_id: int = 0, user_id: int = 0, username: 
             if live:
                 live_lines = []
                 for m in live:
-                    live_lines.append(f"  🔴 {m['home']} {m['score']} {m['away']} (сейчас)")
+                    line = f"  🔴 {m['home']} {m['score']} {m['away']} (сейчас)"
+                    goals = []
+                    for ev in m.get("events", []):
+                        if ev.get("type") == "goal":
+                            goals.append(f"{ev['player']} ({ev['minute']}')")
+                    if goals:
+                        line += f" | Голы: {', '.join(goals)}"
+                    live_lines.append(line)
                 wc_lines.append("### Live матчи:\n" + "\n".join(live_lines))
 
             standings = wc.get("standings", [])
             if standings:
                 table_lines = []
                 for i, s in enumerate(standings[:8]):
-                    table_lines.append(f"  {i+1}. {s['team']} — {s['points']} очк")
+                    table_lines.append(f"  {i+1}. {s['team']} — {s['points']} очк, {s.get('wins',0)}В {s.get('draws',0)}Н {s.get('loss',0)}П, {s.get('scored',0)}-{s.get('missed',0)}")
                 wc_lines.append("### Таблица ЧМ (топ-8):\n" + "\n".join(table_lines))
 
             scorers = wc.get("top_scorers", [])
             if scorers:
-                scorer_lines = [f"  {name}: {goals} гол(ов)" for name, goals in scorers[:5]]
-                wc_lines.append("### Топ бомбардиры:\n" + "\n".join(scorer_lines))
+                scorer_lines = [f"  {name}: {goals} гол(ов)" for name, goals in scorers[:10]]
+                wc_lines.append("### Топ бомбардиры ЧМ:\n" + "\n".join(scorer_lines))
+
+            assists = wc.get("top_assists", [])
+            if assists:
+                assist_lines = [f"  {name}: {a} ассистов" for name, a in assists[:5]]
+                wc_lines.append("### Топ ассистенты:\n" + "\n".join(assist_lines))
+
+            # Список всех команд ЧМ
+            all_teams = set()
+            for m in finished:
+                all_teams.add(m["home"])
+                all_teams.add(m["away"])
+            for m in upcoming:
+                all_teams.add(m["home"])
+                all_teams.add(m["away"])
+            if all_teams:
+                wc_lines.append("### Команды на ЧМ 2026:\n" + ", ".join(sorted(all_teams)))
 
             if wc_lines:
                 parts.append("\n\n## Данные ЧМ 2026 (РЕАЛЬНЫЕ — используй их, не выдумывай):\n" + "\n\n".join(wc_lines))
