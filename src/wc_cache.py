@@ -595,55 +595,140 @@ def search_wc_data(query: str, data: dict) -> str:
     for m in data.get("matches", []):
         all_teams.add(m["home"])
         all_teams.add(m["away"])
+    for m in data.get("upcoming_matches", []):
+        all_teams.add(m["home"])
+        all_teams.add(m["away"])
 
+    # Also check upcoming + live for team names
     mentioned_teams = []
     for team in all_teams:
         if team.lower() in query_lower:
             mentioned_teams.append(team)
 
+    # Also fuzzy match common names
+    TEAM_ALIASES = {
+        "аргентин": "Argentina", "аргентины": "Argentina", "аргентина": "Argentina",
+        "герман": "Germany", "германии": "Germany", "немцы": "Germany",
+        "бразил": "Brazil", "бразилии": "Brazil",
+        "франц": "France", "франции": "France",
+        "испан": "Spain", "испании": "Spain",
+        "англ": "England", "англии": "England",
+        "португал": "Portugal", "португалии": "Portugal",
+        "мексик": "Mexico", "мексики": "Mexico",
+        "япон": "Japan", "японии": "Japan", "япошек": "Japan",
+        "парагв": "Paraguay", "парагвая": "Paraguay",
+        "эквадор": "Ecuador", "эквадора": "Ecuador",
+        "норвег": "Norway", "норвегии": "Norway",
+        "холанд": "Norway", "хааланд": "Norway",
+        "месси": "Argentina", "мбаппе": "France", "mbappe": "France",
+        "хаверц": "Germany", "havertz": "Germany",
+        "сша": "USA", "америк": "USA",
+        "кюрасао": "Curaçao", "курасао": "Curaçao",
+        "китай": "China PR",
+        "урогв": "Uruguay", "уругвая": "Uruguay",
+        "нидерланд": "Netherlands", "голланд": "Netherlands",
+        "бельг": "Belgium", "бельгии": "Belgium",
+        "хорват": "Croatia", "хорватии": "Croatia",
+        "марокк": "Morocco", "марокко": "Morocco",
+        "сенегал": "Senegal", "сенегала": "Senegal",
+        "иран": "Iran", "ирак": "Iraq",
+        "ка Nadа": "Canada", "канад": "Canada", "канады": "Canada",
+        "швец": "Sweden", "швеции": "Sweden",
+        "швейцар": "Switzerland", "швейцарии": "Switzerland",
+        "тунис": "Tunisia", "туниса": "Tunisia",
+        "австр": "Austria", "австрии": "Austria",
+        "австрали": "Australia", "австралии": "Australia",
+    }
+    for alias, team_name in TEAM_ALIASES.items():
+        if alias in query_lower and team_name in all_teams and team_name not in mentioned_teams:
+            mentioned_teams.append(team_name)
+
     if mentioned_teams:
-        for team in mentioned_teams[:3]:
-            team_matches = [m for m in data["matches"] if team in (m["home"], m["away"])]
-            if team_matches:
+        for team in mentioned_teams[:2]:
+            # ALL matches of this team (finished)
+            team_matches = [m for m in data.get("matches", []) if team in (m.get("home", ""), m.get("away", ""))]
+            # Upcoming
+            team_upcoming = [m for m in data.get("upcoming_matches", []) if team in (m.get("home", ""), m.get("away", ""))]
+            # Live
+            team_live = [m for m in data.get("live_matches", []) if team in (m.get("home", ""), m.get("away", ""))]
+
+            if team_matches or team_upcoming or team_live:
                 lines = []
+
+                # Finished matches with FULL details
                 for m in team_matches:
+                    is_home = m["home"] == team
                     lines.append(f"  {m['home']} {m['score']} {m['away']} ({m['date'][:10]})")
-                    if m.get("events"):
-                        for ev in m["events"]:
-                            if "goal" in ev["type"] or "гол" in ev["type"]:
-                                lines.append(f"    ⚽ Гол: {ev['player']} ({ev['minute']}')")
-                            elif "assist" in ev["type"] or "ассист" in ev["type"]:
-                                lines.append(f"    🅰️ Ассист: {ev['player']} ({ev['minute']}')")
-                            elif "yellow" in ev["type"] or "жёлт" in ev["type"]:
-                                lines.append(f"    🟨 Жёлтая: {ev['player']} ({ev['minute']}')")
-                            elif "red" in ev["type"] or "красн" in ev["type"]:
-                                lines.append(f"    🟥 Красная: {ev['player']} ({ev['minute']}')")
-                parts.append(f"### Матчи {team}:\n" + "\n".join(lines))
+                    # All events
+                    for ev in m.get("events", []):
+                        if ev.get("type") == "goal":
+                            lines.append(f"    ⚽ Гол: {ev['player']} ({ev['minute']}', {ev.get('team', '?')})")
+                        elif ev.get("type") == "red card":
+                            lines.append(f"    🟥 Красная: {ev['player']} ({ev['minute']}')")
+                        elif ev.get("type") == "yellow card":
+                            lines.append(f"    🟨 Жёлтая: {ev['player']} ({ev['minute']}')")
+                    # Lineups
+                    for lineup in m.get("lineups", []):
+                        if lineup.get("team") == team:
+                            starters = [p["name"] for p in lineup.get("players", []) if not p.get("sub")]
+                            subs = [p["name"] for p in lineup.get("players", []) if p.get("sub")]
+                            if starters:
+                                lines.append(f"    Основа: {', '.join(starters[:11])}")
+                            if subs:
+                                lines.append(f"    Замены: {', '.join(subs[:5])}")
+                    # Stats
+                    stats = m.get("stats", {})
+                    if stats:
+                        stat_lines = []
+                        for key, val in list(stats.items())[:8]:
+                            if isinstance(val, dict):
+                                stat_lines.append(f"{key}: {val.get('home', 0)}-{val.get('away', 0)}")
+                        if stat_lines:
+                            lines.append(f"    Стат: {', '.join(stat_lines)}")
 
-            # Игроки команды
-            team_players = {}
-            for m in team_matches:
-                for lineup in m.get("lineups", []):
-                    if lineup["team"] == team:
-                        for p in lineup["players"]:
-                            name = p["name"]
-                            if name not in team_players:
-                                team_players[name] = {"minutes": 0, "goals": 0, "assists": 0, "matches": 0, "subs": 0}
-                            team_players[name]["minutes"] += p.get("minutes", 0) or 0
-                            team_players[name]["goals"] += p.get("goals", 0) or 0
-                            team_players[name]["assists"] += p.get("assists", 0) or 0
-                            team_players[name]["matches"] += 1
-                            if p.get("sub"):
-                                team_players[name]["subs"] += 1
+                # Upcoming
+                for m in team_upcoming:
+                    lines.append(f"  Предстоит: {m['home']} — {m['away']} ({m.get('date', '')[:16]})")
 
-            if team_players:
-                sorted_players = sorted(team_players.items(), key=lambda x: x[1]["minutes"], reverse=True)[:10]
-                player_lines = []
-                for name, stats in sorted_players:
-                    mins = stats["minutes"]
-                    sub_text = f" ({stats['subs']} замен)" if stats["subs"] > 0 else ""
-                    player_lines.append(f"  {name}: {mins} мин, {stats['goals']} гол, {stats['assists']} ассист, {stats['matches']} матчей{sub_text}")
-                parts.append(f"### Игроки {team}:\n" + "\n".join(player_lines))
+                # Live
+                for m in team_live:
+                    lines.append(f"  🔴 {m['home']} {m['score']} {m['away']} (сейчас)")
+                    for ev in m.get("events", []):
+                        if ev.get("type") == "goal":
+                            lines.append(f"    ⚽ Гол: {ev['player']} ({ev['minute']}')")
+
+                # Team record
+                if team_matches:
+                    wins = sum(1 for m in team_matches if (m["home"] == team and m["score"].split(":")[0] > m["score"].split(":")[1]) or (m["away"] == team and m["score"].split(":")[1] > m["score"].split(":")[0]))
+                    draws = sum(1 for m in team_matches if m["score"].split(":")[0] == m["score"].split(":")[1])
+                    losses = len(team_matches) - wins - draws
+                    scored = sum(int(m["score"].split(":")[0]) if m["home"] == team else int(m["score"].split(":")[1]) for m in team_matches)
+                    conceded = sum(int(m["score"].split(":")[1]) if m["home"] == team else int(m["score"].split(":")[0]) for m in team_matches)
+                    lines.append(f"  ИТОГО: {len(team_matches)} матчей, {wins}В {draws}Н {losses}П, голы {scored}-{conceded}")
+
+                parts.append(f"### ВСЕ матчи {team} на ЧМ 2026:\n" + "\n".join(lines))
+
+                # ALL players of this team
+                team_players = {}
+                for m in team_matches:
+                    for lineup in m.get("lineups", []):
+                        if lineup.get("team") == team:
+                            for p in lineup.get("players", []):
+                                name = p["name"]
+                                if name not in team_players:
+                                    team_players[name] = {"matches": 0, "goals": 0, "subs": 0}
+                                team_players[name]["matches"] += 1
+                                team_players[name]["goals"] += p.get("goals", 0) or 0
+                                if p.get("sub"):
+                                    team_players[name]["subs"] += 1
+
+                if team_players:
+                    sorted_players = sorted(team_players.items(), key=lambda x: x[1]["matches"], reverse=True)
+                    player_lines = []
+                    for name, stats in sorted_players[:15]:
+                        sub_text = f" ({stats['subs']} замен)" if stats["subs"] > 0 else ""
+                        player_lines.append(f"  {name}: {stats['matches']} матчей, {stats['goals']} гол{sub_text}")
+                    parts.append(f"### Игроки {team}:\n" + "\n".join(player_lines))
 
     # ── Поиск по игрокам ──
     all_players = data.get("players", {})
