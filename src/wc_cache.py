@@ -784,6 +784,21 @@ def search_wc_data(query: str, data: dict) -> str:
         "ивуар": "Ivory Coast", "кот-д'ивуар": "Ivory Coast",
         "ливан": "Lebanon", "ливана": "Lebanon",
         "урал": "Uruguay",
+        "узбекистан": "Uzbekistan", "узбек": "Uzbekistan",
+        "конго": "Congo DR", "конго др": "Congo DR",
+        "гана": "Ghana", "ганы": "Ghana",
+        "пана": "Panama", "панам": "Panama", "панамы": "Panama",
+        "колумб": "Colombia", "колумбии": "Colombia",
+        "шотланд": "Scotland", "шотландии": "Scotland",
+        "новая зеланд": "New Zealand", "новой зеланд": "New Zealand",
+        "турц": "Türkiye", "турции": "Türkiye", "турец": "Türkiye",
+        "чех": "Czechia", "чехии": "Czechia",
+        "босн": "Bosnia & Herzegovina", "боснии": "Bosnia & Herzegovina",
+        "алжир": "Algeria", "алжира": "Algeria",
+        "егип": "Egypt", "египта": "Egypt",
+        "ка tar": "Qatar", "катар": "Qatar", "катара": "Qatar",
+        "гаити": "Haiti", "гаитя": "Haiti",
+        "иордан": "Jordan", "иордании": "Jordan",
     }
     for alias, team_name in TEAM_ALIASES.items():
         if alias in query_lower and team_name in all_teams and team_name not in mentioned_teams:
