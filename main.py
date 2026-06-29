@@ -154,9 +154,10 @@ async def main():
         asyncio.create_task(auto_betting_loop(bot, db, football_api, betting_chat_id, ai_manager))
         logger.info(f"Авто-ставки включены для chat {betting_chat_id}")
 
-    # Первичная загрузка кэша ЧМ + авто-обновление
+    # Первичная загрузка кэша ЧМ (обновление сразу при старте)
     async def wc_update_loop():
         from src.wc_cache import fetch_all_wc_data
+        wait_seconds = 900  # 15 мин между обновлениями
         while True:
             try:
                 logger.info("Обновление кэша ЧМ 2026...")
@@ -169,10 +170,11 @@ async def main():
                     logger.warning("Кэш ЧМ пуст после обновления!")
             except Exception as e:
                 logger.error(f"WC cache update error: {e}", exc_info=True)
-            await asyncio.sleep(900)
+            await asyncio.sleep(wait_seconds)
 
+    # Запускаем обновление сразу, не ждём 15 мин
     asyncio.create_task(wc_update_loop())
-    logger.info("Авто-обновление кэша ЧМ запущено (первичная загрузка + каждые 15 мин)")
+    logger.info("Авто-обновление кэша ЧМ запущено (обновление при старте + каждые 15 мин)")
 
     if betting_enabled and not betting_chat_id:
         logger.info("Авто-ставки включены но chat_id не задан — задайте через /admin → 🎰")
