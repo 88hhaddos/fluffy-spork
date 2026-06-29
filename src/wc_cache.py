@@ -398,7 +398,44 @@ async def fetch_all_wc_data(api: FootballAPI) -> dict:
         all_match_details.append(match_info)
 
     # ── Таблица ──
-    standings = await api.get_standings(WC_LEAGUE_ID, WC_YEAR)
+    raw_standings = await api.get_standings(WC_LEAGUE_ID, WC_YEAR)
+    standings = []
+    if isinstance(raw_standings, dict):
+        for team_id, t in raw_standings.items():
+            if isinstance(t, dict):
+                team_name = "?"
+                for m in matches:
+                    if (m.get("homeTeam") or {}).get("id") == int(team_id):
+                        team_name = (m.get("homeTeam") or {}).get("name", "?")
+                        break
+                    if (m.get("awayTeam") or {}).get("id") == int(team_id):
+                        team_name = (m.get("awayTeam") or {}).get("name", "?")
+                        break
+                standings.append({
+                    "team": team_name,
+                    "team_id": int(team_id),
+                    "points": t.get("points", 0),
+                    "wins": t.get("wins", 0),
+                    "draws": t.get("draws", 0),
+                    "loss": t.get("loss", 0),
+                    "scored": t.get("goalsScored", 0),
+                    "missed": t.get("goalsMissed", 0),
+                })
+    elif isinstance(raw_standings, list):
+        for t in raw_standings:
+            if isinstance(t, dict):
+                standings.append({
+                    "team": t.get("teamName", t.get("team", "?")),
+                    "team_id": t.get("teamId", 0),
+                    "points": t.get("points", 0),
+                    "wins": t.get("wins", 0),
+                    "draws": t.get("draws", 0),
+                    "loss": t.get("loss", 0),
+                    "scored": t.get("goalsScored", 0),
+                    "missed": t.get("goalsMissed", 0),
+                })
+    
+    standings.sort(key=lambda x: x["points"], reverse=True)
 
     # ── Сохраняем ──
     data = {
@@ -426,19 +463,7 @@ async def fetch_all_wc_data(api: FootballAPI) -> dict:
             }
             for m in live
         ],
-        "standings": [
-            {
-                "team": t.get("teamName", "?"),
-                "points": t.get("points", 0),
-                "wins": t.get("wins", 0),
-                "draws": t.get("draws", 0),
-                "loss": t.get("loss", 0),
-                "scored": t.get("goalsScored", 0),
-                "missed": t.get("goalsMissed", 0),
-                "rank": t.get("rank", 0),
-            }
-            for t in (standings or [])
-        ],
+        "standings": standings,
         "top_scorers": sorted(all_scorers.items(), key=lambda x: x[1], reverse=True)[:20],
         "top_assists": sorted(all_assists.items(), key=lambda x: x[1], reverse=True)[:20],
         "cards": all_cards,

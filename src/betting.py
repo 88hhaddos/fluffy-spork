@@ -86,6 +86,16 @@ class BettingManager:
 
         available = filtered
 
+        # Fallback: если нет матчей с коэффициентами, генерируем свои
+        if not available:
+            for m in wc_today + wc_upcoming + wc_all:
+                home = (m.get("homeTeam") or {}).get("name", "?")
+                away = (m.get("awayTeam") or {}).get("name", "?")
+                m["winner1"] = round(random.uniform(1.5, 3.5), 2)
+                m["winnerX"] = round(random.uniform(2.8, 4.0), 2)
+                m["winner2"] = round(random.uniform(1.5, 3.5), 2)
+                available.append(m)
+
         if not available:
             return None
 
