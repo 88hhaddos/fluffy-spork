@@ -502,19 +502,27 @@ async def handle_group_message(
 
     if addressed:
         from src.handlers.features import handle_translate, handle_reminder, handle_user_fact, handle_poll
+        from src.user_bets import handle_user_bet_request
+
+        # Сначала проверяем — юзер просит поставить ЗА НЕГО
+        from src.football_api import FootballAPI
+        bet_api = FootballAPI('sjzgn3bbco67pk8j')
+        user_bet_handled = await handle_user_bet_request(message, text, db, bet_api, bot)
+        await bet_api.close()
+        if user_bet_handled:
+            return
 
         BET_REQUEST_KEYWORDS = [
-            "дай ставку", "сделай ставку", "поставь", "собери экспресс",
+            "дай ставку", "сделай ставку", "собери экспресс",
             "закури ставк", "закури экспресс", "на что ставишь",
             "что поставить", "посоветуй ставку", "дай экспресс",
-            "закури поставь", "ставочку", "сделай экспресс",
+            "ставочку", "сделай экспресс",
         ]
         text_lower = text.lower()
         if any(kw in text_lower for kw in BET_REQUEST_KEYWORDS):
             from src.betting import BettingManager
-            from src.football_api import FootballAPI
-            bet_api = FootballAPI('sjzgn3bbco67pk8j')
-            betting = BettingManager(db, bet_api, ai_manager)
+            bet_api2 = FootballAPI('sjzgn3bbco67pk8j')
+            betting = BettingManager(db, bet_api2, ai_manager)
             try:
                 bet = await betting.generate_bet(message.chat.id)
                 if bet:
@@ -527,7 +535,7 @@ async def handle_group_message(
                 logger.error(f"Bet request error: {e}")
                 await message.reply(f"Закури не смог собрать ставку: {str(e)[:100]}")
             finally:
-                await bet_api.close()
+                await bet_api2.close()
             return
 
         if await handle_poll(message, text, bot):

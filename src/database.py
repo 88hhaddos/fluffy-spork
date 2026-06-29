@@ -122,6 +122,22 @@ CREATE TABLE IF NOT EXISTS bot_balance (
     wins_count INTEGER DEFAULT 0
 );
 
+CREATE TABLE IF NOT EXISTS user_bets (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    chat_id INTEGER NOT NULL,
+    user_id INTEGER NOT NULL,
+    username TEXT,
+    match_id TEXT,
+    match_info TEXT,
+    bet_on TEXT NOT NULL,
+    amount REAL NOT NULL,
+    odds REAL NOT NULL,
+    status TEXT NOT NULL DEFAULT 'pending',
+    potential_return REAL NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    settled_at TIMESTAMP
+);
+
 CREATE INDEX IF NOT EXISTS idx_messages_chat_id ON messages(chat_id);
 CREATE INDEX IF NOT EXISTS idx_key_events_chat_id ON key_events(chat_id);
 CREATE INDEX IF NOT EXISTS idx_gallery_chat_id ON photo_gallery(chat_id);
@@ -590,3 +606,60 @@ class Database:
             (new_balance, new_credit, chat_id)
         )
         await self.conn.commit()
+
+    # ─── User Bets (юзеры ставят через бота) ───
+
+    async def place_user_bet(self, chat_id: int, user_id: int, username: str,
+                             match_id: str, match_info: str, bet_on: str,
+                             amount: float, odds: float) -> int:
+        potential = amount * odds
+        cur = await self.conn.execute(
+            "INSERT INTO user_bets (chat_id, user_id, username, match_id, match_info, "
+            "bet_on, amount, odds, potential_return) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            (chat_id, user_id, username, match_id, match_info, bet_on, amount, odds, potential),
+        )
+        await self.conn.commit()
+        return cur.lastrowid
+
+    async def get_pending_user_bets(self, chat_id: int = 0) -> list[dict]:
+        if chat_id:
+            cur = await self.conn.execute(
+                "SELECT * FROM user_bets WHERE status = 'pending' AND chat_id = ? ORDER BY id DESC",
+                (chat_id,)
+            )
+        else:
+            cur = await self.conn.execute(
+                "SELECT * FROM user_bets WHERE status = 'pending' ORDER BY id DESC"
+            )
+        rows = await cur.fetchall()
+        return [dict(row) for row in rows]
+
+    async def settle_user_bet(self, bet_id: int, status: str):
+        await self.conn.execute(
+            "UPDATE user_bets SET status = ?, settled_at = CURRENT_TIMESTAMP WHERE id = ?",
+            (status, bet_id),
+        )
+        await self.conn.commit()
+
+    async def get_user_bets(self, user_id: int, limit: int = 15) -> list[dict]:
+        cur = await self.conn.execute(
+            "SELECT * FROM user_bets WHERE user_id = ? ORDER BY id DESC LIMIT ?",
+            (user_id, limit)
+        )
+        rows = await cur.fetchall()
+        return [dict(row) for row in rows]
+
+    async def get_user_bet_stats(self, user_id: int) -> dict:
+        cur = await self.conn.execute(
+            "SELECT COUNT(*) as total, "
+            "SUM(CASE WHEN status='won' THEN 1 ELSE 0 END) as wins, "
+            "SUM(CASE WHEN status='lost' THEN 1 ELSE 0 END) as losses, "
+            "SUM(CASE WHEN status='won' THEN potential_return - amount ELSE 0 END) as profit, "
+            "SUM(CASE WHEN status='lost' THEN amount ELSE 0 END) as lost_amount "
+            "FROM user_bets WHERE user_id = ? AND status != 'pending'",
+            (user_id,)
+        )
+        row = await cur.fetchone()
+        if row:
+            return dict(row)
+        return {"total": 0, "wins": 0, "losses": 0, "profit": 0, "lost_amount": 0}
