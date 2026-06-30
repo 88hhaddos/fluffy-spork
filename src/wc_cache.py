@@ -810,7 +810,15 @@ def search_wc_data(query: str, data: dict) -> str:
             if team_data:
                 lines = []
                 for m in team_data["matches"]:
-                    lines.append(f"  {m['date']}: vs {m['opponent']} {m['score']} — {m['result']} ({m.get('stage', '')})")
+                    score_parts = m["score"].split(":")
+                    sc_h, sc_a = int(score_parts[0]), int(score_parts[1])
+                    if m.get("home"):
+                        team_score = sc_h
+                        opp_score = sc_a
+                    else:
+                        team_score = sc_a
+                        opp_score = sc_h
+                    lines.append(f"  {m['date']}: {team} {team_score}:{opp_score} {m['opponent']} — {m['result']}")
 
                 lines.append(f"  ИТОГО: {len(team_data['matches'])} матчей, {team_data['wins']}В {team_data['draws']}Н {team_data['losses']}П, голы {team_data['scored']}-{team_data['conceded']}")
 

@@ -705,6 +705,30 @@ def _filter_ai_thoughts(text: str) -> str:
         "this is oliverbax", "this is drakelovc",
         "manzambi", "phoenileo", "oliverbax", "drakelovc",
         "miasanmiabayernmunchen",
+        "based on the data", "so the format", "if the format",
+        "that would be", "this is confusing", "let me re-read",
+        "so france", "so germany", "so netherlands",
+        "so argentina", "so brazil", "so england",
+        "so spain", "so portugal", "so mexico",
+        "so norway", "so japan", "so morocco",
+        "that's 6 goals", "that's 3 wins", "that would be",
+        "to total", "so far", "the format must be",
+        "is asking about", "is asking me to",
+        "i need to give", "i should give",
+        "let me look", "let me see", "let me find",
+        "let me analyze", "let me consider",
+        "i also need to", "i should also",
+        "also remember", "keep it short",
+        "don't use", "be sweet and kind",
+        "no markdown", "give concrete",
+        "wait, that says", "wait, let me",
+        "so the next", "so it seems",
+        "so they'd face", "so these two",
+        "i'm not sure", "let me just",
+        "i'll just give", "let me give",
+        "oliverbax is asking", "whitesoho is asking",
+        "nazar is asking", "arthur is asking",
+        "timoфеи is asking", "drake is asking",
     ]
 
     LEAK_LINE_PATTERNS = [
@@ -713,36 +737,33 @@ def _filter_ai_thoughts(text: str) -> str:
         "so phoenileo", "so oliver", "so drake",
         "now for", "also, drakelovc",
         "but actually", "re-reading",
+        "france's matches", "germany's matches",
+        "looking at the", "based on the",
+        "from my data", "in my data",
+        "the upcoming matches", "the last results",
     ]
 
     lines = text.split("\n")
     clean_lines = []
-    in_thoughts = True
 
     for line in lines:
         line_stripped = line.strip()
         if not line_stripped:
-            if not in_thoughts:
-                clean_lines.append(line)
+            clean_lines.append(line)
             continue
 
-        if in_thoughts:
-            line_lower = line_stripped.lower()
-            is_thought = any(p in line_lower for p in LEAK_PHRASES)
-            if not is_thought:
-                is_thought = any(line_stripped.startswith(p) or line_lower.startswith(p) for p in LEAK_LINE_PATTERNS)
-            if not is_thought:
-                cyrillic = sum(1 for c in line_stripped if '\u0400' <= c <= '\u04ff')
-                latin = sum(1 for c in line_stripped if c.isalpha() and ord(c) < 128)
-                if latin > 15 and cyrillic < 5:
-                    is_thought = True
-            if is_thought:
-                continue
-            else:
-                in_thoughts = False
-                clean_lines.append(line)
-        else:
-            clean_lines.append(line)
+        line_lower = line_stripped.lower()
+        is_thought = any(p in line_lower for p in LEAK_PHRASES)
+        if not is_thought:
+            is_thought = any(line_stripped.startswith(p) or line_lower.startswith(p) for p in LEAK_LINE_PATTERNS)
+        if not is_thought:
+            cyrillic = sum(1 for c in line_stripped if '\u0400' <= c <= '\u04ff')
+            latin = sum(1 for c in line_stripped if c.isalpha() and ord(c) < 128)
+            if latin > 15 and cyrillic < 5:
+                is_thought = True
+        if is_thought:
+            continue
+        clean_lines.append(line)
 
     result = "\n".join(clean_lines).strip()
 
