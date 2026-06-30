@@ -879,18 +879,18 @@ def search_wc_data(query: str, data: dict) -> str:
             parts.append(f"### Турнирная таблица:\n" + "\n".join(lines))
 
     # ── Результаты (если спрашивают) ──
-    if any(kw in query_lower for kw in ["результат", "счёт", "счет", "побед", "кто выиграл", "матч"]):
+    if any(kw in query_lower for kw in ["результат", "счёт", "счет", "побед", "кто выиграл"]) and not any(kw in query_lower for kw in ["ставк", "постав", "прогноз", "экспресс"]):
         matches = data.get("matches", [])
         if matches and not mentioned_teams and not mentioned_players:
             lines = [f"  {m['home']} {m['score']} {m['away']} ({m['date'][:10]})" for m in matches[-15:]]
             parts.append(f"### Последние результаты:\n" + "\n".join(lines))
 
     # ── Предстоящие ──
-    if any(kw in query_lower for kw in ["предстоит", "ближай", "следующ", "когда", "расписан", "upcoming", "завтра"]):
+    if any(kw in query_lower for kw in ["предстоит", "ближай", "следующ", "когда", "расписан", "upcoming", "завтра", "сегодня", "ставк", "постав", "прогноз", "экспресс", "матч"]):
         upcoming = data.get("upcoming_matches", [])
         if upcoming:
             lines = [f"  {m['home']} — {m['away']} ({m['date'][:16]})" for m in upcoming[:10]]
-            parts.append(f"### Предстоящие матчи:\n" + "\n".join(lines))
+            parts.append(f"### Предстоящие матчи ЧМ 2026:\n" + "\n".join(lines))
 
     # ── Live (с деталями) ──
     live = data.get("live_matches", [])

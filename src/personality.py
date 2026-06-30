@@ -131,80 +131,29 @@ async def build_system_prompt(db, chat_id: int = 0, user_id: int = 0, username: 
     if personality:
         parts.append(f"\n\n## Базовая личность\n{personality}")
 
-    # ── Всегда добавляем данные ЧМ из кэша ──
+    # ── Краткая справка ЧМ (не перегружаем контекст) ──
     try:
         from src.wc_cache import load_wc_data
         wc = load_wc_data()
         if wc:
             wc_lines = []
 
-            finished = wc.get("matches", [])
-            if finished:
-                recent = finished[-15:]
-                results = []
-                for m in recent:
-                    line = f"  {m['home']} {m['score']} {m['away']} ({m['date'][:10]})"
-                    # Добавляем голы
-                    goals = []
-                    for ev in m.get("events", []):
-                        if ev.get("type") == "goal":
-                            goals.append(f"{ev['player']} ({ev['minute']}')")
-                    if goals:
-                        line += f" | Голы: {', '.join(goals)}"
-                    results.append(line)
-                wc_lines.append("### Последние результаты ЧМ 2026:\n" + "\n".join(results))
-
             upcoming = wc.get("upcoming_matches", [])
             if upcoming:
                 up_lines = []
-                for m in upcoming[:10]:
+                for m in upcoming[:3]:
                     up_lines.append(f"  {m['home']} — {m['away']} ({m.get('date', '')[:16]})")
-                wc_lines.append("### Предстоящие матчи ЧМ:\n" + "\n".join(up_lines))
-
-            live = wc.get("live_matches", [])
-            if live:
-                live_lines = []
-                for m in live:
-                    line = f"  🔴 {m['home']} {m['score']} {m['away']} (сейчас)"
-                    goals = []
-                    for ev in m.get("events", []):
-                        if ev.get("type") == "goal":
-                            goals.append(f"{ev['player']} ({ev['minute']}')")
-                    if goals:
-                        line += f" | Голы: {', '.join(goals)}"
-                    live_lines.append(line)
-                wc_lines.append("### Live матчи:\n" + "\n".join(live_lines))
-
-            standings = wc.get("standings", [])
-            if standings:
-                table_lines = []
-                for i, s in enumerate(standings[:8]):
-                    table_lines.append(f"  {i+1}. {s['team']} — {s['points']} очк, {s.get('wins',0)}В {s.get('draws',0)}Н {s.get('loss',0)}П, {s.get('scored',0)}-{s.get('missed',0)}")
-                wc_lines.append("### Таблица ЧМ (топ-8):\n" + "\n".join(table_lines))
+                wc_lines.append("### Ближайшие матчи ЧМ:\n" + "\n".join(up_lines))
 
             scorers = wc.get("top_scorers", [])
             if scorers:
-                scorer_lines = [f"  {name}: {goals} гол(ов)" for name, goals in scorers[:10]]
+                scorer_lines = [f"  {name}: {goals} гол(ов)" for name, goals in scorers[:3]]
                 wc_lines.append("### Топ бомбардиры ЧМ:\n" + "\n".join(scorer_lines))
 
-            assists = wc.get("top_assists", [])
-            if assists:
-                assist_lines = [f"  {name}: {a} ассистов" for name, a in assists[:5]]
-                wc_lines.append("### Топ ассистенты:\n" + "\n".join(assist_lines))
-
-            # Список всех команд ЧМ
-            all_teams = set()
-            for m in finished:
-                all_teams.add(m["home"])
-                all_teams.add(m["away"])
-            for m in upcoming:
-                all_teams.add(m["home"])
-                all_teams.add(m["away"])
-            if all_teams:
-                wc_lines.append("### Команды на ЧМ 2026:\n" + ", ".join(sorted(all_teams)))
+            wc_lines.append("### Полные данные ЧМ (матчи, таблица, игроки) загружаются по запросу — не выдумывай счёт, имена, статистику.")
 
             if wc_lines:
-                parts.append("\n\n## Данные ЧМ 2026 (РЕАЛЬНЫЕ — используй их, не выдумывай):\n" + "\n\n".join(wc_lines))
+                parts.append("\n\n## ЧМ 2026 (краткая справка):\n" + "\n\n".join(wc_lines))
     except Exception:
         pass
 
