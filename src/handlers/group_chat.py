@@ -486,7 +486,10 @@ async def handle_group_message(
             AGREE_WORDS = ["давай", "да", "ок", "окей", "хочу", "го", "дава", "ладно", "попробуем", "согласен", "хорошо"]
             PHOTO_HINT_WORDS = ["нарисую", "нарисовать", "фото", "изображение", "картин", "сгенерир", "нарисовать тебе", "хочешь"]
 
-            if any(w in user_text for w in AGREE_WORDS) and any(w in reply_text for w in PHOTO_HINT_WORDS):
+            import re as _re_agree
+            user_words = _re_agree.findall(r'\b[а-яё]+\b', user_text)
+            has_agree = any(w in user_words for w in AGREE_WORDS)
+            if has_agree and any(w in reply_text for w in PHOTO_HINT_WORDS):
                 prompt = await _extract_photo_idea_from_bot_message(reply_msg.text or reply_msg.caption or "", ai_manager)
                 if prompt:
                     await handle_photo_generation(message, prompt, ai_manager, bot, context_manager, db)
