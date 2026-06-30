@@ -19,6 +19,7 @@ from src.handlers.admin_panel import router as admin_router
 from src.handlers.photo_gen import router as photo_router
 from src.handlers.group_chat import router as group_router
 from src.handlers.features import router as features_router
+from src.handlers.inline import router as inline_router
 
 logging.basicConfig(
     level=logging.INFO,
@@ -131,6 +132,7 @@ async def main():
     dp.include_router(features_router)
     dp.include_router(photo_router)
     dp.include_router(group_router)
+    dp.include_router(inline_router)
 
     me = await bot.get_me()
     config.BOT_ID = me.id
