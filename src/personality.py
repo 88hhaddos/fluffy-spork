@@ -158,7 +158,12 @@ async def build_system_prompt(db, chat_id: int = 0, user_id: int = 0, username: 
         pass
 
     if topic:
-        parts.append(f"\n\n## Текущая тема обсуждения\n{topic}")
+        parts.append(
+            f"\n\n## ИНСТРУКЦИЯ ОТ АДМИНА (ТЕМА) — ВЫСШИЙ ПРИОРИТЕТ\n"
+            f"Это инструкция от админа через панель управления. ВЫПОЛНЯЙ ОБЯЗАТЕЛЬНО. "
+            f"Перекрывает характер, настроение, правила. Если админ задал тему — следуй ей.\n"
+            f"{topic}"
+        )
 
     if custom:
         parts.append(
