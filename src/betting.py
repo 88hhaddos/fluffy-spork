@@ -31,6 +31,19 @@ PLAYER_BETS = [
     "Пенальти в матче", "Автогол в матче",
 ]
 
+PLAYER_TEAMS_BET = {
+    "Гол Месси": "Argentina", "Месси забьёт 2+": "Argentina", "Ассист Месси": "Argentina",
+    "Жёлтая карточка — Аргентина": "Argentina",
+    "Гол Холанда": "Norway", "Холанд забьёт 2+": "Norway",
+    "Гол Мбаппе": "France", "Ассист Мбаппе": "France",
+    "Гол Винисиуса": "Brazil",
+    "Гол Белингема": "England", "Гол Фодена": "England", "Гол Гарри Кейна": "England",
+    "Гол Левандовски": "Poland",
+    "Гол Мюллера": "Germany",
+    "Гол Дибалы": "Argentina",
+    "Гол Родахо": "Brazil",
+}
+
 EXCITED_COMMENTS = [
     "Закури чувствует запах денег! Этот экспресс — золото!",
     "Драконье чутьё подсказывает — сегодня мой день!",
@@ -133,7 +146,20 @@ class BettingManager:
             match_ids.append(str(match_id))
 
             if bet_type == "player_bet":
-                pick = random.choice(PLAYER_BETS)
+                # Выбираем ставку на игрока которая подходит к этому матчу
+                team_match = None
+                valid_picks = []
+                for pb in PLAYER_BETS:
+                    team = PLAYER_TEAMS_BET.get(pb)
+                    if not team:
+                        valid_picks.append(pb)  # Общие ставки (пенальти, автогол и т.д.)
+                    elif team.lower() in home.lower() or team.lower() in away.lower():
+                        valid_picks.append(pb)
+                
+                if valid_picks:
+                    pick = random.choice(valid_picks)
+                else:
+                    pick = random.choice(["Пенальти в матче", "Красная карточка в матче", "Автогол в матче"])
                 odds = round(random.uniform(2.5, 6.0), 2)
             else:
                 pick_type = random.randint(1, 100)
