@@ -1203,6 +1203,12 @@ async def _generate_and_send_response(
         # Фильтруем внутренние мысли AI (chain-of-thought leak)
         response = _filter_ai_thoughts(response)
 
+        # Убираем markdown разметку
+        response = response.replace("**", "").replace("__", "").replace("`", "")
+        while "##" in response and response[response.index("##"):response.index("##")+3] in ("## ", "##\n", "##"):
+            response = response.replace("## ", "").replace("##\n", "\n")
+        response = response.replace("##", "")
+
         await bot.send_chat_action(chat_id=message.chat.id, action=ChatAction.TYPING)
         try:
             await status_msg.edit_text(response[:4096])
