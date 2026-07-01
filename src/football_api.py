@@ -102,6 +102,41 @@ class FootballAPI:
             return data["data"]
         return None
 
+    async def get_match_scorers_odds(self, game_id: int) -> list[dict]:
+        """Получает кэфы на голы игроков (Anytime Goal Scorer) из SStats.
+        Возвращает [{player_name, odds}]."""
+        data = await self._get(f"/Odds/{game_id}", ttl=CACHE_TTL["match"])
+        if not data or "data" not in data:
+            return []
+
+        raw = data["data"]
+        odds_list = raw if isinstance(raw, list) else [raw] if raw else []
+        if not odds_list:
+            return []
+
+        for bk in odds_list:
+            markets = bk.get("odds") or []
+            for market in markets:
+                mname = str(market.get("marketName") or "").lower().strip()
+                if mname == "anytime goal scorer":
+                    choices = market.get("odds") or []
+                    scorers = []
+                    for c in choices:
+                        pname = str(c.get("name") or "").strip()
+                        if not pname or pname.lower() == "no goalscorer":
+                            continue
+                        v = c.get("value") or c.get("odds")
+                        if v is None:
+                            continue
+                        try:
+                            v = float(v)
+                        except (TypeError, ValueError):
+                            continue
+                        scorers.append({"player_name": pname[:60], "odds": round(v, 2)})
+                    if scorers:
+                        return scorers
+        return []
+
     async def get_match_prediction(self, game_id: int) -> Optional[dict]:
         data = await self._get(f"/games/glicko/{game_id}", ttl=CACHE_TTL["prediction"])
         if data and "data" in data:

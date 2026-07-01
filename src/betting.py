@@ -119,8 +119,11 @@ class BettingManager:
         elif r <= 40:
             bet_type = "express"
             num_matches = random.randint(2, 3)
-        else:
+        elif r <= 75:
             bet_type = "single"
+            num_matches = 1
+        else:
+            bet_type = "player_bet"
             num_matches = 1
 
         num_matches = min(num_matches, len(available))
@@ -142,57 +145,85 @@ class BettingManager:
             match_id = m.get("id", 0)
             match_ids.append(str(match_id))
 
-            pick_type = random.randint(1, 100)
-            if pick_type <= 6:
-                pick, odds = "П1", w1
-            elif pick_type <= 11:
-                pick, odds = "П2", w2
-            elif pick_type <= 15:
-                pick, odds = "Ничья", wx
-            elif pick_type <= 21:
-                dc_1x = m.get("dc_1X", 0)
-                pick, odds = ("Двойной шанс 1X", dc_1x) if dc_1x else ("П1", w1)
-            elif pick_type <= 26:
-                dc_x2 = m.get("dc_X2", 0)
-                pick, odds = ("Двойной шанс X2", dc_x2) if dc_x2 else ("П2", w2)
-            elif pick_type <= 32:
-                ov = m.get("over25", 0)
-                pick, odds = ("ТБ 2.5", ov) if ov else ("П1", w1)
-            elif pick_type <= 36:
-                un = m.get("under25", 0)
-                pick, odds = ("ТМ 2.5", un) if un else ("П2", w2)
-            elif pick_type <= 41:
-                by = m.get("btts_yes", 0)
-                pick, odds = ("Обе забьют — Да", by) if by else ("П1", w1)
-            elif pick_type <= 45:
-                bn = m.get("btts_no", 0)
-                pick, odds = ("Обе забьют — Нет", bn) if bn else ("П2", w2)
-            elif pick_type <= 56:
-                co = m.get("corners_over85", 0) or m.get("corners_over75", 0)
-                pick, odds = ("Угловые ТБ 8.5", co) if co else ("П1", w1)
-            elif pick_type <= 64:
-                cu = m.get("corners_under95", 0) or m.get("corners_under85", 0)
-                pick, odds = ("Угловые ТМ 9.5", cu) if cu else ("П2", w2)
-            elif pick_type <= 74:
-                yo = m.get("yellow_over25", 0) or m.get("yellow_over35", 0)
-                pick, odds = ("Жёлтые карточки ТБ 2.5", yo) if yo else ("П1", w1)
-            elif pick_type <= 84:
-                fo = m.get("fouls_over245", 0) or m.get("fouls_over255", 0)
-                pick, odds = ("Фолы ТБ 24.5", fo) if fo else ("П1", w1)
-            elif pick_type <= 92:
-                ah = m.get("ah_home_minus15", 0)
-                pick, odds = ("Ф1 -1.5", ah) if ah else ("П1", w1)
+            if bet_type == "player_bet":
+                # Реальные кэфы на голы игроков через SStats /Odds
+                # SStats и Pari.ru имеют разные ID — ищем матч по командам
+                scorers = []
+                try:
+                    wc_matches = await self.api.get_matches_by_league(1, 2026)
+                    for wm in wc_matches:
+                        wh = (wm.get("homeTeam") or {}).get("name", "").lower()
+                        wa = (wm.get("awayTeam") or {}).get("name", "").lower()
+                        if home.lower() in wh or away.lower() in wa or home.lower() in wa or away.lower() in wh:
+                            if wm.get("status") in (1, 2):
+                                scorers = await self.api.get_match_scorers_odds(wm["id"])
+                                if scorers:
+                                    break
+                except Exception:
+                    pass
+
+                if scorers:
+                    good = [s for s in scorers if 2.0 <= s["odds"] <= 12.0]
+                    if good:
+                        scorer = random.choice(good)
+                        pick = f"Гол: {scorer['player_name']}"
+                        odds = scorer["odds"]
+                    else:
+                        pick, odds = "П1", w1
+                else:
+                    pick, odds = "П1", w1
             else:
-                ah2 = m.get("ah_away_plus15", 0)
-                pick, odds = ("Ф2 +1.5", ah2) if ah2 else ("П2", w2)
-            # Командные тоталы (реальные кэфы)
-            if odds == w1 or odds == w2:
-                ho = m.get("home_over15", 0)
-                ao = m.get("away_over05", 0)
-                if pick_type % 3 == 0 and ho:
-                    pick, odds = f"Голы {home} ТБ 1.5", ho
-                elif pick_type % 3 == 1 and ao:
-                    pick, odds = f"Голы {away} ТБ 0.5", ao
+                pick_type = random.randint(1, 100)
+                if pick_type <= 6:
+                    pick, odds = "П1", w1
+                elif pick_type <= 11:
+                    pick, odds = "П2", w2
+                elif pick_type <= 15:
+                    pick, odds = "Ничья", wx
+                elif pick_type <= 21:
+                    dc_1x = m.get("dc_1X", 0)
+                    pick, odds = ("Двойной шанс 1X", dc_1x) if dc_1x else ("П1", w1)
+                elif pick_type <= 26:
+                    dc_x2 = m.get("dc_X2", 0)
+                    pick, odds = ("Двойной шанс X2", dc_x2) if dc_x2 else ("П2", w2)
+                elif pick_type <= 32:
+                    ov = m.get("over25", 0)
+                    pick, odds = ("ТБ 2.5", ov) if ov else ("П1", w1)
+                elif pick_type <= 36:
+                    un = m.get("under25", 0)
+                    pick, odds = ("ТМ 2.5", un) if un else ("П2", w2)
+                elif pick_type <= 41:
+                    by = m.get("btts_yes", 0)
+                    pick, odds = ("Обе забьют — Да", by) if by else ("П1", w1)
+                elif pick_type <= 45:
+                    bn = m.get("btts_no", 0)
+                    pick, odds = ("Обе забьют — Нет", bn) if bn else ("П2", w2)
+                elif pick_type <= 56:
+                    co = m.get("corners_over85", 0) or m.get("corners_over75", 0)
+                    pick, odds = ("Угловые ТБ 8.5", co) if co else ("П1", w1)
+                elif pick_type <= 64:
+                    cu = m.get("corners_under95", 0) or m.get("corners_under85", 0)
+                    pick, odds = ("Угловые ТМ 9.5", cu) if cu else ("П2", w2)
+                elif pick_type <= 74:
+                    yo = m.get("yellow_over25", 0) or m.get("yellow_over35", 0)
+                    pick, odds = ("Жёлтые карточки ТБ 2.5", yo) if yo else ("П1", w1)
+                elif pick_type <= 84:
+                    fo = m.get("fouls_over245", 0) or m.get("fouls_over255", 0)
+                    pick, odds = ("Фолы ТБ 24.5", fo) if fo else ("П1", w1)
+                elif pick_type <= 92:
+                    ah = m.get("ah_home_minus15", 0)
+                    pick, odds = ("Ф1 -1.5", ah) if ah else ("П1", w1)
+                else:
+                    ah2 = m.get("ah_away_plus15", 0)
+                    pick, odds = ("Ф2 +1.5", ah2) if ah2 else ("П2", w2)
+                # Командные тоталы (реальные кэфы)
+                if odds == w1 or odds == w2:
+                    ho = m.get("home_over15", 0)
+                    ao = m.get("away_over05", 0)
+                    if pick_type % 3 == 0 and ho:
+                        pick, odds = f"Голы {home} ТБ 1.5", ho
+                    elif pick_type % 3 == 1 and ao:
+                        pick, odds = f"Голы {away} ТБ 0.5", ao
 
             total_odds *= odds
             selections.append({
