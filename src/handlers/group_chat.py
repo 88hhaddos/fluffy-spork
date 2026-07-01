@@ -942,29 +942,25 @@ async def _get_football_context(text: str, db, chat_id: int = 0) -> str:
             live_block = "### Live матчи ЧМ 2026 (ПРЯМО СЕЙЧАС — реальный счёт):\n" + "\n".join(live_lines)
             relevant = (relevant + "\n\n" + live_block).strip() if relevant else live_block
 
-        # Поиск кэфов на гол конкретного игрока
+        # Поиск кэфов — на игроков И на команды
         text_lower = text.lower()
-        PLAYER_ODDS_KEYWORDS = ["коэффициент на гол", "кэф на гол", "кеф на гол",
-                                "ставка на гол", "гол джексон",
-                                "гол месси", "гол мбаппе", "гол холанд",
-                                "кэффициент на", "кэф на", "какой кэф",
-                                "коэффициент", "кэф", "скажи коэффициент",
-                                "гол джексона", "гол салаха", "гол кейна",
-                                "гол игрока", "коэффициент на гол"]
-        if any(kw in text_lower for kw in PLAYER_ODDS_KEYWORDS):
+        ODDS_KEYWORDS = ["коэффициент", "кэф", "кеф", "какой кэф",
+                         "скажи коэффициент", "кэф на", "кэффициент",
+                         "коэффициент на", "ставка на"]
+        if any(kw in text_lower for kw in ODDS_KEYWORDS):
             try:
                 from src.football_api import FootballAPI
                 odds_api = FootballAPI('sjzgn3bbco67pk8j')
-                
                 import re as _re_odds
+
+                # 1. Кэф на гол игрока
                 player_match = _re_odds.search(r'гол\s+([А-Яа-яЁё]+)', text)
-                team_match = _re_odds.search(r'(?:ворота|против|в\s+ворота)\s+([А-Яа-яЁё]+)', text)
-                
                 if player_match:
                     player_name = player_match.group(1)
+                    team_match = _re_odds.search(r'(?:ворота|против|в\s+ворота)\s+([А-Яа-яЁё]+)', text)
                     team_name = team_match.group(1) if team_match else ""
                     logger.info(f"Player odds search: player={player_name} team={team_name}")
-                    
+
                     result = await odds_api.find_player_odds(player_name, team_name)
                     if not result and team_name:
                         result = await odds_api.find_player_odds(player_name, "")
@@ -978,12 +974,68 @@ async def _get_football_context(text: str, db, chat_id: int = 0) -> str:
                         )
                         relevant = (relevant + "\n\n" + odds_block).strip() if relevant else odds_block
                         logger.info(f"Player odds found: {result}")
+
+                # 2. Кэф на команду (победа, ничья, тоталы)
+                # Извлекаем команду — "победу сенегала", "на бельгию", "франции"
+                team_patterns = [
+                    r'(?:побед|п1|п2)\s+([А-Яа-яЁё]+)',
+                    r'на\s+([А-Яа-яЁё]+)',
+                    r'(?:против|в\s+ворота)\s+([А-Яа-яЁё]+)',
+                    r'кэф\s+на\s+([А-Яа-яЁё]+)',
+                    r'коэффициент\s+на\s+([А-Яа-яЁё]+)',
+                ]
+                found_team = None
+                for pat in team_patterns:
+                    tm = _re_odds.search(pat, text_lower)
+                    if tm:
+                        candidate = tm.group(1)
+                        # Исключаем "гол", "победу", "ничью" и т.п.
+                        if candidate.lower() not in ("гол", "победу", "победа", "ничью", "ничья",
+                                                       "тотал", "угловые", "фолы", "жёлтые",
+                                                       "обе", "забьют", "ставку", "ставка"):
+                            found_team = candidate
+                            break
+
+                if found_team:
+                    logger.info(f"Team odds search: team={found_team}")
+                    team_result = await odds_api.find_team_odds(found_team)
+                    if team_result:
+                        lines = [
+                            f"### Коэффициенты на матч (РЕАЛЬНЫЕ из Pari.ru):",
+                            f"  Матч: {team_result['match']}",
+                            f"  Победа {team_result['home']} (П1): {team_result['w1']}",
+                            f"  Ничья: {team_result['wx']}",
+                            f"  Победа {team_result['away']} (П2): {team_result['w2']}",
+                        ]
+                        if team_result.get("over25"):
+                            lines.append(f"  ТБ 2.5: {team_result['over25']}")
+                        if team_result.get("under25"):
+                            lines.append(f"  ТМ 2.5: {team_result['under25']}")
+                        if team_result.get("btts_yes"):
+                            lines.append(f"  Обе забьют — Да: {team_result['btts_yes']}")
+                        if team_result.get("btts_no"):
+                            lines.append(f"  Обе забьют — Нет: {team_result['btts_no']}")
+                        if team_result.get("dc_1X"):
+                            lines.append(f"  Двойной шанс 1X: {team_result['dc_1X']}")
+                        if team_result.get("dc_X2"):
+                            lines.append(f"  Двойной шанс X2: {team_result['dc_X2']}")
+                        if team_result.get("corners_over85"):
+                            lines.append(f"  Угловые ТБ 8.5: {team_result['corners_over85']}")
+                        if team_result.get("yellow_over25"):
+                            lines.append(f"  ЖК ТБ 2.5: {team_result['yellow_over25']}")
+                        if team_result.get("fouls_over245"):
+                            lines.append(f"  Фолы ТБ 24.5: {team_result['fouls_over245']}")
+                        lines.append(f"  ОБЯЗАТЕЛЬНО назови нужный коэффициент из списка выше!")
+
+                        odds_block = "\n".join(lines)
+                        relevant = (relevant + "\n\n" + odds_block).strip() if relevant else odds_block
+                        logger.info(f"Team odds found: {team_result['match']}")
                     else:
-                        logger.warning(f"Player odds NOT FOUND for {player_name} / {team_name}")
-                
+                        logger.warning(f"Team odds NOT FOUND for {found_team}")
+
                 await odds_api.close()
             except Exception as e:
-                logger.error(f"Player odds fetch error: {e}", exc_info=True)
+                logger.error(f"Odds fetch error: {e}", exc_info=True)
 
         if relevant:
             _football_context_cache[chat_id] = {"context": relevant, "counter": 0}

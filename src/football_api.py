@@ -161,37 +161,38 @@ class FootballAPI:
         }
         # Маппинг русских названий команд в английские
         TEAM_RU_EN = {
-            "бельги": "Belgium", "бельгии": "Belgium", "бельгия": "Belgium",
-            "аргентин": "Argentina", "аргентины": "Argentina",
-            "франц": "France", "франции": "France",
-            "бразил": "Brazil", "бразилии": "Brazil",
-            "испан": "Spain", "испании": "Spain",
-            "англ": "England", "англии": "England",
-            "португал": "Portugal", "португалии": "Portugal",
-            "мексик": "Mexico", "мексики": "Mexico",
-            "япон": "Japan", "японии": "Japan",
-            "сенегал": "Senegal", "сенегала": "Senegal",
-            "егип": "Egypt", "египта": "Egypt",
-            "марокк": "Morocco", "марокко": "Morocco",
-            "хорват": "Croatia", "хорватии": "Croatia",
-            "австрали": "Australia", "австралии": "Australia",
-            "швец": "Sweden", "швеции": "Sweden",
-            "норвег": "Norway", "норвегии": "Norway",
-            "сша": "USA", "америк": "USA",
+            "бельг": "Belgium", "аргентин": "Argentina", "франц": "France",
+            "бразил": "Brazil", "испан": "Spain", "англ": "England",
+            "португал": "Portugal", "мексик": "Mexico", "япон": "Japan",
+            "сенегал": "Senegal", "егип": "Egypt", "марокк": "Morocco",
+            "хорват": "Croatia", "австрали": "Australia", "швец": "Sweden",
+            "норвег": "Norway", "сша": "USA", "америк": "USA",
+            "немец": "Germany", "герман": "Germany", "голланд": "Netherlands",
+            "нидерланд": "Netherlands", "швейцар": "Switzerland",
+            "тунис": "Tunisia", "австр": "Austria", "канад": "Canada",
+            "парагв": "Paraguay", "эквадор": "Ecuador", "урогв": "Uruguay",
+            "уругв": "Uruguay", "конго": "Congo", "ганы": "Ghana",
+            "ган": "Ghana", "пана": "Panama", "панам": "Panama",
+            "колумб": "Colombia", "шотланд": "Scotland", "турц": "Türkiye",
+            "чех": "Czechia", "босн": "Bosnia", "алжир": "Algeria",
+            "ливан": "Lebanon", "гаитя": "Haiti", "иордан": "Jordan",
+            "кабо": "Cape Verde", "саудов": "Saudi Arabia", "юар": "South Africa",
+            "африка": "South Africa", "ивуар": "Ivory Coast",
+            "китай": "China", "иран": "Iran", "ирак": "Iraq",
+            "зеланд": "New Zealand",
         }
-        
+
+        def _map_team(name):
+            name_lower = name.lower().strip()
+            for ru, en in TEAM_RU_EN.items():
+                if ru in name_lower or name_lower in ru:
+                    return en
+            return name
+
         player_lower = player_name.lower().strip()
         player_search = PLAYER_RU_EN.get(player_lower, player_lower)
-        
-        team_search = ""
-        if team_name:
-            team_lower = team_name.lower().strip()
-            for ru, en in TEAM_RU_EN.items():
-                if ru in team_lower or team_lower in ru:
-                    team_search = en
-                    break
-            if not team_search:
-                team_search = team_name
+
+        team_search = _map_team(team_name) if team_name else ""
 
         matches = await self.get_matches_by_league(1, 2026)
 
@@ -213,6 +214,85 @@ class FootballAPI:
                         "odds": s["odds"],
                         "match": f"{home} — {away}",
                     }
+        return None
+
+    async def find_team_odds(self, team_name: str) -> Optional[dict]:
+        """Ищет коэффициенты на матч команды (П1, П2, ничья, ТБ/ТМ) из Pari.ru.
+        Возвращает {team, match, w1, wx, w2, over25, under25, btts_yes, btts_no,
+                    corners_over, corners_under, yellow_over, fouls_over, dc_1X, dc_X2} или None."""
+        TEAM_RU_EN = {
+            "бельг": "Belgium", "аргентин": "Argentina", "франц": "France",
+            "бразил": "Brazil", "испан": "Spain", "англ": "England",
+            "португал": "Portugal", "мексик": "Mexico", "япон": "Japan",
+            "сенегал": "Senegal", "егип": "Egypt", "марокк": "Morocco",
+            "хорват": "Croatia", "австрали": "Australia", "швец": "Sweden",
+            "норвег": "Norway", "сша": "USA", "америк": "USA",
+            "немец": "Germany", "герман": "Germany", "голланд": "Netherlands",
+            "нидерланд": "Netherlands", "швейцар": "Switzerland",
+            "тунис": "Tunisia", "австр": "Austria", "канад": "Canada",
+            "парагв": "Paraguay", "эквадор": "Ecuador", "урогв": "Uruguay",
+            "уругв": "Uruguay", "конго": "Congo", "ган": "Ghana",
+            "пана": "Panama", "панам": "Panama", "колумб": "Colombia",
+            "шотланд": "Scotland", "турц": "Türkiye", "чех": "Czechia",
+            "босн": "Bosnia", "алжир": "Algeria", "ливан": "Lebanon",
+            "гаитя": "Haiti", "иордан": "Jordan", "кабо": "Cape Verde",
+            "саудов": "Saudi Arabia", "юар": "South Africa",
+            "африка": "South Africa", "ивуар": "Ivory Coast",
+            "китай": "China", "иран": "Iran", "ирак": "Iraq",
+            "зеланд": "New Zealand", "кот": "Ivory Coast",
+        }
+
+        team_search = team_name
+        team_lower = team_name.lower().strip()
+        for ru, en in TEAM_RU_EN.items():
+            if ru in team_lower or team_lower in ru:
+                team_search = en
+                break
+
+        matches = await self.get_pari_upcoming_matches(limit=200)
+
+        for m in matches:
+            if "WC 2026" not in (m.get("league") or "").upper():
+                continue
+            home = (m.get("homeTeam") or {}).get("name", "")
+            away = (m.get("awayTeam") or {}).get("name", "")
+
+            if team_search.lower() not in home.lower() and team_search.lower() not in away.lower():
+                continue
+
+            w1 = m.get("winner1", 0)
+            wx = m.get("winnerX", 0)
+            w2 = m.get("winner2", 0)
+            if not (w1 and wx and w2):
+                continue
+
+            is_home = team_search.lower() in home.lower()
+            return {
+                "team": team_search,
+                "match": f"{home} — {away}",
+                "is_home": is_home,
+                "home": home,
+                "away": away,
+                "w1": w1,
+                "wx": wx,
+                "w2": w2,
+                "team_win": w1 if is_home else w2,
+                "team_win_label": f"Победа {home}" if is_home else f"Победа {away}",
+                "over25": m.get("over25", 0),
+                "under25": m.get("under25", 0),
+                "btts_yes": m.get("btts_yes", 0),
+                "btts_no": m.get("btts_no", 0),
+                "dc_1X": m.get("dc_1X", 0),
+                "dc_12": m.get("dc_12", 0),
+                "dc_X2": m.get("dc_X2", 0),
+                "corners_over85": m.get("corners_over85", 0),
+                "corners_under95": m.get("corners_under95", 0),
+                "yellow_over25": m.get("yellow_over25", 0),
+                "fouls_over245": m.get("fouls_over245", 0),
+                "ah_home_minus15": m.get("ah_home_minus15", 0),
+                "ah_away_plus15": m.get("ah_away_plus15", 0),
+            }
+
         return None
 
     async def get_match_prediction(self, game_id: int) -> Optional[dict]:
