@@ -945,49 +945,45 @@ async def _get_football_context(text: str, db, chat_id: int = 0) -> str:
         # Поиск кэфов на гол конкретного игрока
         text_lower = text.lower()
         PLAYER_ODDS_KEYWORDS = ["коэффициент на гол", "кэф на гол", "кеф на гол",
-                                "ставка на гол", "одинdds на гол", "гол джексон",
+                                "ставка на гол", "гол джексон",
                                 "гол месси", "гол мбаппе", "гол холанд",
                                 "кэффициент на", "кэф на", "какой кэф",
-                                "коэффициент", "кэф"]
+                                "коэффициент", "кэф", "скажи коэффициент",
+                                "гол джексона", "гол салаха", "гол кейна",
+                                "гол игрока", "коэффициент на гол"]
         if any(kw in text_lower for kw in PLAYER_ODDS_KEYWORDS):
             try:
                 from src.football_api import FootballAPI
                 odds_api = FootballAPI('sjzgn3bbco67pk8j')
                 
-                # Извлекаем имя игрока и команду из текста
                 import re as _re_odds
-                # "гол Джексона в ворота Бельгии" → player=Джексона, team=Бельгии
                 player_match = _re_odds.search(r'гол\s+([А-Яа-яЁё]+)', text)
                 team_match = _re_odds.search(r'(?:ворота|против|в\s+ворота)\s+([А-Яа-яЁё]+)', text)
                 
                 if player_match:
                     player_name = player_match.group(1)
                     team_name = team_match.group(1) if team_match else ""
+                    logger.info(f"Player odds search: player={player_name} team={team_name}")
                     
                     result = await odds_api.find_player_odds(player_name, team_name)
+                    if not result and team_name:
+                        result = await odds_api.find_player_odds(player_name, "")
                     if result:
                         odds_block = (
                             f"### Коэффициент на гол игрока (РЕАЛЬНЫЙ из SStats/Bet365):\n"
                             f"  Игрок: {result['player']}\n"
                             f"  Матч: {result['match']}\n"
-                            f"  Коэффициент на гол: {result['odds']}"
+                            f"  Коэффициент на гол: {result['odds']}\n"
+                            f"  ОБЯЗАТЕЛЬНО назови этот коэффициент в ответе!"
                         )
                         relevant = (relevant + "\n\n" + odds_block).strip() if relevant else odds_block
+                        logger.info(f"Player odds found: {result}")
                     else:
-                        # Попробуем без привязки к команде
-                        result = await odds_api.find_player_odds(player_name, "")
-                        if result:
-                            odds_block = (
-                                f"### Коэффициент на гол игрока (РЕАЛЬНЫЙ):\n"
-                                f"  Игрок: {result['player']}\n"
-                                f"  Матч: {result['match']}\n"
-                                f"  Коэффициент на гол: {result['odds']}"
-                            )
-                            relevant = (relevant + "\n\n" + odds_block).strip() if relevant else odds_block
+                        logger.warning(f"Player odds NOT FOUND for {player_name} / {team_name}")
                 
                 await odds_api.close()
             except Exception as e:
-                logger.error(f"Player odds fetch error: {e}")
+                logger.error(f"Player odds fetch error: {e}", exc_info=True)
 
         if relevant:
             _football_context_cache[chat_id] = {"context": relevant, "counter": 0}
@@ -1130,6 +1126,37 @@ async def _generate_and_send_response(
                     logger.info(f"Loaded {len(lines)} Pari.ru matches (live+upcoming) as context")
             except Exception as e:
                 logger.error(f"Pari.ru fallback context error: {e}")
+
+        # Fallback: ищем кэф на игрока если основной контекст не нашёл
+        if not football_context or "Коэффициент на гол" not in (football_context or ""):
+            msg_lower = msg_text.lower()
+            if any(kw in msg_lower for kw in ["коэффициент", "кэф", "гол "]):
+                try:
+                    import re as _re_fallback
+                    from src.football_api import FootballAPI
+                    fb_api = FootballAPI('sjzgn3bbco67pk8j')
+                    player_match = _re_fallback.search(r'гол\s+([А-Яа-яЁё]+)', msg_text)
+                    if player_match:
+                        player_name = player_match.group(1)
+                        team_match = _re_fallback.search(r'(?:ворота|против|в\s+ворота)\s+([А-Яа-яЁё]+)', msg_text)
+                        team_name = team_match.group(1) if team_match else ""
+                        logger.info(f"Fallback player odds: {player_name} / {team_name}")
+                        result = await fb_api.find_player_odds(player_name, team_name)
+                        if not result and team_name:
+                            result = await fb_api.find_player_odds(player_name, "")
+                        if result:
+                            odds_block = (
+                                f"\n\n## Коэффициент на гол игрока (РЕАЛЬНЫЙ из SStats/Bet365):\n"
+                                f"  Игрок: {result['player']}\n"
+                                f"  Матч: {result['match']}\n"
+                                f"  Коэффициент на гол: {result['odds']}\n"
+                                f"  ОБЯЗАТЕЛЬНО назови этот коэффициент в ответе!"
+                            )
+                            football_context = (football_context or "") + odds_block
+                            logger.info(f"Fallback odds found: {result}")
+                    await fb_api.close()
+                except Exception as e:
+                    logger.error(f"Fallback odds error: {e}", exc_info=True)
 
         system_prompt = await build_system_prompt(
             db, message.chat.id,
