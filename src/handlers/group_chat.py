@@ -942,6 +942,53 @@ async def _get_football_context(text: str, db, chat_id: int = 0) -> str:
             live_block = "### Live матчи ЧМ 2026 (ПРЯМО СЕЙЧАС — реальный счёт):\n" + "\n".join(live_lines)
             relevant = (relevant + "\n\n" + live_block).strip() if relevant else live_block
 
+        # Поиск кэфов на гол конкретного игрока
+        text_lower = text.lower()
+        PLAYER_ODDS_KEYWORDS = ["коэффициент на гол", "кэф на гол", "кеф на гол",
+                                "ставка на гол", "одинdds на гол", "гол джексон",
+                                "гол месси", "гол мбаппе", "гол холанд",
+                                "кэффициент на", "кэф на", "какой кэф",
+                                "коэффициент", "кэф"]
+        if any(kw in text_lower for kw in PLAYER_ODDS_KEYWORDS):
+            try:
+                from src.football_api import FootballAPI
+                odds_api = FootballAPI('sjzgn3bbco67pk8j')
+                
+                # Извлекаем имя игрока и команду из текста
+                import re as _re_odds
+                # "гол Джексона в ворота Бельгии" → player=Джексона, team=Бельгии
+                player_match = _re_odds.search(r'гол\s+([А-Яа-яЁё]+)', text)
+                team_match = _re_odds.search(r'(?:ворота|против|в\s+ворота)\s+([А-Яа-яЁё]+)', text)
+                
+                if player_match:
+                    player_name = player_match.group(1)
+                    team_name = team_match.group(1) if team_match else ""
+                    
+                    result = await odds_api.find_player_odds(player_name, team_name)
+                    if result:
+                        odds_block = (
+                            f"### Коэффициент на гол игрока (РЕАЛЬНЫЙ из SStats/Bet365):\n"
+                            f"  Игрок: {result['player']}\n"
+                            f"  Матч: {result['match']}\n"
+                            f"  Коэффициент на гол: {result['odds']}"
+                        )
+                        relevant = (relevant + "\n\n" + odds_block).strip() if relevant else odds_block
+                    else:
+                        # Попробуем без привязки к команде
+                        result = await odds_api.find_player_odds(player_name, "")
+                        if result:
+                            odds_block = (
+                                f"### Коэффициент на гол игрока (РЕАЛЬНЫЙ):\n"
+                                f"  Игрок: {result['player']}\n"
+                                f"  Матч: {result['match']}\n"
+                                f"  Коэффициент на гол: {result['odds']}"
+                            )
+                            relevant = (relevant + "\n\n" + odds_block).strip() if relevant else odds_block
+                
+                await odds_api.close()
+            except Exception as e:
+                logger.error(f"Player odds fetch error: {e}")
+
         if relevant:
             _football_context_cache[chat_id] = {"context": relevant, "counter": 0}
             return relevant

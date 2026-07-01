@@ -137,6 +137,84 @@ class FootballAPI:
                         return scorers
         return []
 
+    async def find_player_odds(self, player_name: str, team_name: str = "") -> Optional[dict]:
+        """Ищет кэф на гол конкретного игрока в ближайшем матче его команды.
+        Возвращает {player, odds, match} или None."""
+        # Маппинг русских имён игроков в английские
+        PLAYER_RU_EN = {
+            "джексон": "jackson", "джексона": "jackson",
+            "месси": "messi", "месси.": "messi",
+            "мбаппе": "mbappe", "мбаппе.": "mbappe",
+            "холанд": "haaland", "холанда": "haaland",
+            "халанд": "haaland", "халанда": "haaland",
+            "салах": "salah", "салаха": "salah",
+            "кейн": "kane", "кейна": "kane",
+            "белингем": "bellingham", "белингема": "bellingham",
+            "фоден": "foden", "фодена": "foden",
+            "роналду": "ronaldo", "роналду.": "ronaldo",
+            "левандовски": "lewandowski", "левандовски.": "lewandowski",
+            "мюллер": "muller", "мюллера": "muller",
+            "винисиус": "vinicius", "винисиуса": "vinicius",
+            "дембеле": "dembele", "дембеле.": "dembele",
+            "дебрюйне": "de bruyne", "дебрюйне.": "de bruyne",
+            "гризманн": "griezmann", "гризманна": "griezmann",
+        }
+        # Маппинг русских названий команд в английские
+        TEAM_RU_EN = {
+            "бельги": "Belgium", "бельгии": "Belgium", "бельгия": "Belgium",
+            "аргентин": "Argentina", "аргентины": "Argentina",
+            "франц": "France", "франции": "France",
+            "бразил": "Brazil", "бразилии": "Brazil",
+            "испан": "Spain", "испании": "Spain",
+            "англ": "England", "англии": "England",
+            "португал": "Portugal", "португалии": "Portugal",
+            "мексик": "Mexico", "мексики": "Mexico",
+            "япон": "Japan", "японии": "Japan",
+            "сенегал": "Senegal", "сенегала": "Senegal",
+            "егип": "Egypt", "египта": "Egypt",
+            "марокк": "Morocco", "марокко": "Morocco",
+            "хорват": "Croatia", "хорватии": "Croatia",
+            "австрали": "Australia", "австралии": "Australia",
+            "швец": "Sweden", "швеции": "Sweden",
+            "норвег": "Norway", "норвегии": "Norway",
+            "сша": "USA", "америк": "USA",
+        }
+        
+        player_lower = player_name.lower().strip()
+        player_search = PLAYER_RU_EN.get(player_lower, player_lower)
+        
+        team_search = ""
+        if team_name:
+            team_lower = team_name.lower().strip()
+            for ru, en in TEAM_RU_EN.items():
+                if ru in team_lower or team_lower in ru:
+                    team_search = en
+                    break
+            if not team_search:
+                team_search = team_name
+
+        matches = await self.get_matches_by_league(1, 2026)
+
+        for m in matches:
+            if m.get("status") not in (1, 2):
+                continue
+            home = (m.get("homeTeam") or {}).get("name", "")
+            away = (m.get("awayTeam") or {}).get("name", "")
+
+            if team_search:
+                if team_search.lower() not in home.lower() and team_search.lower() not in away.lower():
+                    continue
+
+            scorers = await self.get_match_scorers_odds(m["id"])
+            for s in scorers:
+                if player_search in s["player_name"].lower():
+                    return {
+                        "player": s["player_name"],
+                        "odds": s["odds"],
+                        "match": f"{home} — {away}",
+                    }
+        return None
+
     async def get_match_prediction(self, game_id: int) -> Optional[dict]:
         data = await self._get(f"/games/glicko/{game_id}", ttl=CACHE_TTL["prediction"])
         if data and "data" in data:
