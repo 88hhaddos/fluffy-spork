@@ -263,6 +263,12 @@ class FootballAPI:
         1758: "fouls_under245",  # Фолы ТМ 24.5
         1606: "fouls_over255",   # Фолы ТБ 25.5
         1759: "fouls_under255",  # Фолы ТМ 25.5
+        # Индивидуальные тоталы команд (голы)
+        4372: "home_over20",    # Хозяева ТБ 2.0
+        4371: "home_over15",    # Хозяева ТБ 1.5
+        4370: "home_over10",    # Хозяева ТБ 1.0
+        6112: "away_over05",    # Гости ТБ 0.5
+        6114: "away_over15",    # Гости ТБ 1.5
     }
 
     async def get_pari_upcoming_matches(self, limit: int = 50) -> list[dict]:
